@@ -1,0 +1,8 @@
+autosubmit
+bin
+dist
+docker
+docs
+easybuild
+log
+test
