@@ -1,0 +1,9 @@
+ahdilaw/__init__.py,sha256=XCeWpoR4xFfwB2vqgGO6d0-eWcecpwZzgIHtAWGJBs8,792
+ahdilaw/conv2d.py,sha256=KjfTXLug36HQEcULmhTQxOpHr_-UrRYYpMDMaLPC-0A,1839
+ahdilaw/special/__init__.py,sha256=Q8eNnHQcIj_MbcXYl2gAKfYI4-QQFEI_eO3Dj3aOFyg,100
+ahdilaw/special/ctconv2d.py,sha256=et4BgODQTODNSh8COsCcC1VXSV1tz3NNnqUmFTQoUSE,1887
+ahdilaw/special/spconv2d.py,sha256=RSTjdFl5DR6grOZlYp40iB-3iPkwUyydVNRkNmn9g30,3480
+ahdilaw-0.0.1.1.dist-info/METADATA,sha256=QP4pK2Y2NDp16VESs15qXXJ7aIUbPQVjLSFh2eDiR2w,588
+ahdilaw-0.0.1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+ahdilaw-0.0.1.1.dist-info/top_level.txt,sha256=cJI2lr1nql4BrHG7xJsKrUZGcM9YPejEd0RUpGk2guQ,8
+ahdilaw-0.0.1.1.dist-info/RECORD,,
