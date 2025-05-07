@@ -1,0 +1,63 @@
+# mkdocs.yml
+site_name: PBDM Docs
+
+theme:
+  name: "material"
+  icon:
+    annotation: material/arrow-right-circle
+  features:
+    - content.tooltips
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - md_in_html
+  - abbr
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+- mkdocstrings:
+    handlers:
+      python:
+        options:
+          docstring_options:
+            ignore_init_summary: true
+          merge_init_into_class: false
+
+
+##### EDIT THIS SECTION! #####
+
+#Structure:
+#
+#Section1: 
+#  - Subsection1:
+#    - page1.md
+#    - Alternate Page Name: page2.md
+#  - Subsection2:
+#    - ...
+#Section2:
+#  - ...
+
+nav:
+  - Introduction: index.md
+  - Overview:
+    - Introduction: introduction_to_PBDM.md
+    - Age Structure: age_structure.md
+  - Tutorials: tutorials.md
+  - Reference:
+    - metabolic_pool.md
