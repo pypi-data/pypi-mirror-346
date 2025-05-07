@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "sentence-plagiarism"
+version = "0.6.0"
+description = "Compare sentences from input document with all sentences from reference documents - find very similar ones."
+authors = ["Krystian Safjan <ksafjan@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+keywords = ["plagiarism", "plagiarism-detection","text-similarity","sentence_similarity","sentence-plagiarism"]
+homepage = "https://github.com/izikeros/sentence-plagiarism"
+repository = "https://github.com/izikeros/sentence-plagiarism"
+documentation = "https://github.com/izikeros/sentence-plagiarism"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+beautifulsoup4 = "^4.13.4"
+markdown = "^3.8"
+
+[tool.poetry.scripts]
+sentence-plagiarism = 'sentence_plagiarism.cli:main'
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+ruff = "^0.11.7"
+black = "^25.1.0"
+isort = "^6.0.1"
+pytest-cov = "^6.1.1"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+target-version = ["py310"]
+line-length = 88
+extend-exclude = '\.json$'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
