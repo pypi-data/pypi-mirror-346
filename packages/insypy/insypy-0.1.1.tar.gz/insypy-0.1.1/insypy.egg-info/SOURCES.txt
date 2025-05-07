@@ -1,0 +1,6 @@
+pyproject.toml
+setup.py
+insypy.egg-info/PKG-INFO
+insypy.egg-info/SOURCES.txt
+insypy.egg-info/dependency_links.txt
+insypy.egg-info/top_level.txt
