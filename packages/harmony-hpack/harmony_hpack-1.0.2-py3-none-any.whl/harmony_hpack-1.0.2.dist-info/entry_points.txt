@@ -1,0 +1,2 @@
+[console_scripts]
+hpack = hpack.main:main
