@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-airoom = mcp_server_airoom.__main__:main
