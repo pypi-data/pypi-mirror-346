@@ -1,0 +1,42 @@
+name: Run Benchmarks
+
+on:
+    workflow_dispatch:
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os:
+          - "ubuntu-latest-16-cores"
+          - "ubuntu-latest-32-cores"
+          - "ubuntu-latest-64-cores"
+        python-version: ["3.10"]
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python 3
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install ".[test,lgb]"
+      - name: Benchmark
+        run: |
+          pytest -k "test_benchmark" -vv \
+            --benchmark-name=short \
+            --benchmark-group-by=param \
+            --benchmark-min-rounds=3 \
+            --benchmark-columns=min,max,mean,median,stddev,rounds,iterations \
+            --benchmark-json=docs/benchmarks/${{ matrix.os }}.json
+      - uses: actions/checkout@v3
+      - name: Commit results
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "docs: Update ${{ matrix.os }} benchmark"
