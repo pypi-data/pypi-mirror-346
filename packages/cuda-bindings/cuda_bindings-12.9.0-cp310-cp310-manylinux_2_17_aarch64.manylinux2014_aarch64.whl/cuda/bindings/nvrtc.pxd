@@ -1,0 +1,25 @@
+# Copyright 2021-2025 NVIDIA Corporation.  All rights reserved.
+#
+# Please refer to the NVIDIA end user license agreement (EULA) associated
+# with this source code for terms and conditions that govern your use of
+# this software. Any use, reproduction, disclosure, or distribution of
+# this software and related documentation outside the terms of the EULA
+# is strictly prohibited.
+#
+# This code was automatically generated with version 12.9.0. Do not modify it directly.
+cimport cuda.bindings.cynvrtc as cynvrtc
+cimport cuda.bindings._lib.utils as utils
+
+cdef class nvrtcProgram:
+    """ nvrtcProgram is the unit of compilation, and an opaque handle for a program.
+
+    To compile a CUDA program string, an instance of nvrtcProgram must be created first with nvrtcCreateProgram, then compiled with nvrtcCompileProgram.
+
+    Methods
+    -------
+    getPtr()
+        Get memory address of class instance
+
+    """
+    cdef cynvrtc.nvrtcProgram  _pvt_val
+    cdef cynvrtc.nvrtcProgram* _pvt_ptr
