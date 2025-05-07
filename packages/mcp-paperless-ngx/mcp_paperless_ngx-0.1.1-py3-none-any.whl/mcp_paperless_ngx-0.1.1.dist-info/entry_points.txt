@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-paperless-ngx = mcp_paperless_ngx:main
