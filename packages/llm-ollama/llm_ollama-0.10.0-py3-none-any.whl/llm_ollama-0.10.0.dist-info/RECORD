@@ -1,0 +1,9 @@
+llm_ollama/__init__.py,sha256=A8VVS6hRf9VQOwZwe1qB4WMUMqYdy_ccjxaxn0grYOo,14850
+llm_ollama/auth.py,sha256=BM1L23t3dHlZtzgLBRELo75Ip5HlB8rwzLfnFB9BX2Y,1977
+llm_ollama/cache.py,sha256=1Gw_kUQpbew7rUnL6K7h-g0OIdGlhxcizY279Jf-HB4,3658
+llm_ollama-0.10.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+llm_ollama-0.10.0.dist-info/METADATA,sha256=OxRfgxu7yPIXP8M-JMPkmhoc7OKxJ9qY6p3uyDjFjXQ,7378
+llm_ollama-0.10.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+llm_ollama-0.10.0.dist-info/entry_points.txt,sha256=NEv1ldTE_NM5jHjSAizHKNxy9Y-Tc6VmmFHbjbSGkBs,26
+llm_ollama-0.10.0.dist-info/top_level.txt,sha256=-5NI_OtjnVlp7Gunh0gm6nczezeFWUjJJ_Sd7HKrzhA,11
+llm_ollama-0.10.0.dist-info/RECORD,,
