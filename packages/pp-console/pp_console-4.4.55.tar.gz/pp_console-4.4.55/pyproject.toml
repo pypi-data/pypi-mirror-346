@@ -1,0 +1,20 @@
+[project]
+name = "pp-console"
+version = "4.4.55"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [
+    { name = "Philippe ENTZMANN", email = "philippe@arundo.tech" }
+]
+dependencies = [ "httpx>=0.28.1", "packaging>=24.2", "pp-shared", "pydantic>=2.11.0", "python-dotenv>=1.1.0", "pyyaml>=6.0.2", "toml>=0.10.2", "typer>=0.15.2",]
+
+[project.scripts]
+pp-console = "pp_console:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources.pp-shared]
+workspace = true
