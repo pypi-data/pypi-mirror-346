@@ -1,0 +1,3 @@
+[console_scripts]
+hyperdq=hyperdq:main
+
