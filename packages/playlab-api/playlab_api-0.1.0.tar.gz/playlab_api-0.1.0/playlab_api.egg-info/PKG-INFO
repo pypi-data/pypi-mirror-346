@@ -1,0 +1,157 @@
+Metadata-Version: 2.4
+Name: playlab-api
+Version: 0.1.0
+Summary: A Python client for the Playlab API
+Home-page: https://github.com/teaghan/playlab-python
+Author: Teaghan O'Briain
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.31.0
+Requires-Dist: ipython>=8.0.0
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Playlab Python Client
+
+A Python client for interacting with the Playlab API.
+
+## Requirements
+
+- Python 3.7 or later
+- Required Python packages (installed automatically):
+  - requests>=2.31.0
+  - readline (on non-Windows platforms)
+
+## Installation
+
+```bash
+pip install playlab-python
+```
+
+## Quick Start
+
+### Basic Usage
+
+```python
+from playlab_python import PlaylabClient
+
+# Initialize the client
+client = PlaylabClient(
+    api_key="your_api_key_here",
+    project_id="your_project_id_here"
+)
+
+# Create a new conversation
+conversation = client.create_conversation()
+conversation_id = conversation["conversation"]["id"]
+
+# Send a message and get the response
+response = client.send_message(conversation_id, "Hello, AI!")
+
+# Stream a response with real-time updates
+def on_chunk(chunk):
+    print(chunk, end="", flush=True)
+
+full_response = client.stream_message(
+    conversation_id,
+    "Tell me a story",
+    on_chunk=on_chunk
+)
+
+# List all messages in a conversation
+messages = client.list_messages(conversation_id)
+```
+
+### Interactive Chat Example
+
+The package includes an interactive chat example that you can run directly:
+
+```python
+from playlab_python import start_chat
+
+# Start an interactive chat session
+start_chat(
+    api_key="your_api_key_here",
+    project_id="your_project_id_here"
+)
+```
+
+Or run it from the command line:
+
+```bash
+# Set environment variables
+export PLAYLAB_API_KEY="your_api_key_here"
+export PLAYLAB_PROJECT_ID="your_project_id_here"
+
+# Run the interactive chat (either way works)
+playlab-chat
+# or
+python -m playlab_python
+```
+
+## Environment Variables
+
+You can set your API key and project ID using environment variables:
+
+```bash
+export PLAYLAB_API_KEY="your_api_key_here"
+export PLAYLAB_PROJECT_ID="your_project_id_here"
+```
+
+Then initialize the client without parameters:
+
+```python
+client = PlaylabClient()
+```
+
+## Features
+
+- Create new conversations
+- Send messages and receive responses
+- Stream responses in real-time
+- List conversation messages
+- Support for file attachments
+- Environment variable configuration
+- Interactive chat interface
+
+## API Reference
+
+### PlaylabClient
+
+The main client class for interacting with the Playlab API.
+
+#### Methods
+
+- `create_conversation(instruction_variables=None, use_form=False)`: Create a new conversation
+- `send_message(conversation_id, message, file_path=None, use_form=False)`: Send a message in a conversation
+- `list_messages(conversation_id)`: List all messages in a conversation
+- `stream_message(conversation_id, message, on_chunk=None, use_form=False)`: Send a message and stream the response
+
+### Interactive Chat
+
+The package provides an interactive chat interface through the `start_chat` function:
+
+```python
+from playlab_python import start_chat
+
+start_chat(api_key="your_api_key_here", project_id="your_project_id_here")
+```
+
+This will start an interactive session where you can:
+- Type messages and press Enter to send
+- See AI responses in real-time
+- Type "exit" to end the conversation
+
+## License
+
+MIT License
