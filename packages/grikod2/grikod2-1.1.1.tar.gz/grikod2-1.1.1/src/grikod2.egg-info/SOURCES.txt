@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/grikod2/__init__.py
+src/grikod2/_version.py
+src/grikod2/grikod2.py
+src/grikod2.egg-info/PKG-INFO
+src/grikod2.egg-info/SOURCES.txt
+src/grikod2.egg-info/dependency_links.txt
+src/grikod2.egg-info/top_level.txt
+tests/test_sample.py

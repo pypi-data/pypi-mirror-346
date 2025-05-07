@@ -1,0 +1,180 @@
+Metadata-Version: 2.4
+Name: grikod2
+Version: 1.1.1
+Summary: Converts binary numbers to Gray Code. grikod2 (Gray Code, Grey Code)
+Home-page: https://github.com/KuantumBS/grikod2
+Author: Mehmet Keçeci
+Author-email: Mehmet Keçeci <mkececi@yaani.com>
+License: MIT License
+        
+        Copyright (c) 2024 Mehmet Keçeci
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/KuantumBS/grikod2/
+Project-URL: Documentation, https://kuantumbs.github.io/grikod2/
+Project-URL: Repository, https://github.com/KuantumBS/grikod2/
+Project-URL: Issues, https://github.com/KuantumBS/grikod2/issues
+Keywords: Gri Kod,Gray Code,Binary,Encoding
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Typing :: Typed
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# grikod2 (Gri Kod, Gray Code)
+
+
+A Python library for converting binary numbers to Gray Code with ease.
+
+---
+
+## Tanım (Türkçe)
+Gri Kod: grikod2 İkili sayıları Gri Koda çevirir.
+
+## Description (English)
+Gri Kod: grikod2 converts binary numbers to Gray Code.
+
+---
+
+## Kurulum (Türkçe) / Installation (English)
+
+### Python ile Kurulum / Install with pip, conda, mamba
+```bash
+pip install grikod2 -U
+python -m pip install -U grikod2
+conda install bilgi::grikod2 -y
+mamba install bilgi::grikod2 -y
+```
+
+```diff
+- pip uninstall grikod2 -y
++ pip install -U grikod2
++ python -m pip install -U grikod2
+```
+
+[PyPI](https://pypi.org/project/grikod2/)
+
+### Test Kurulumu / Test Installation
+
+```bash
+pip install -i https://test.pypi.org/simple/ grikod2 -U
+```
+
+### Github Master Kurulumu / GitHub Master Installation
+
+**Terminal:**
+
+```bash
+pip install git+https://github.com/KuantumBS/grikod2.git
+```
+
+**Jupyter Lab, Notebook, Visual Studio Code:**
+
+```python
+!pip install git+https://github.com/KuantumBS/grikod2.git
+# or
+%pip install git+https://github.com/KuantumBS/grikod2.git
+```
+
+---
+
+## Kullanım (Türkçe) / Usage (English)
+
+```python
+import grikod2 # Restart Kernel veya/or Restart Kernel and Clear Outputs
+
+
+# Run this cell (Shift+Enter): Input: 100
+# Output example
+# 000:000
+# 001:001
+# 010:011
+# 011:010
+# 100:110
+# 101:111
+# 110:101
+# 111:100
+```
+```python
+import grikod2
+grikod2.__version__
+```
+---
+
+### Development
+```bash
+# Clone the repository
+git clone https://github.com/KuantumBS/grikod2.git
+cd grikod2
+
+# Install in development mode
+python -m pip install -ve . # Install package in development mode
+
+# Run tests
+pytest
+
+Notebook, Jupyterlab, Colab, Visual Studio Code
+!python -m pip install git+https://github.com/KuantumBS/grikod2.git
+```
+---
+
+## Citation
+
+If this library was useful to you in your research, please cite us. Following the [GitHub citation standards](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files), here is the recommended citation.
+
+### BibTeX
+
+
+### APA
+
+```
+Keçeci, M. (2025). Gri Kod 2: grikod2 converts binary numbers to Gray Code. (Version 1.1.1) [Computer software]. https://pypi.org/project/grikod2/
+
+
+```
+
+### Chicago
+
+```
+Keçeci, Mehmet. “grikod2”. PYPI, Python Package Index, Python Software Foundation, Anaconda, 06 May 2025. 
+
+
+```
+
+
+### Lisans (Türkçe) / License (English)
+
+```
+This project is licensed under the MIT License.
+```
