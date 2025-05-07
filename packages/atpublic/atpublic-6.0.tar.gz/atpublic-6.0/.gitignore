@@ -1,0 +1,13 @@
+*.so
+*.egg-info
+build
+.coverage
+dist
+htmlcov
+coverage.xml
+diffcov.html
+/.pdm.toml
+/__pypackages__/
+/.DS_Store
+/.pdm-python
+/.coverage.*
