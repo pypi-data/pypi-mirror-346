@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+alaspo = "alaspo:__main__.main"
+
+[tool.setuptools.dynamic]
+version = {attr = "alaspo.__version__.__version__"}
+
+[project]
+name = "alaspo"
+dynamic = ["version"]
+authors = [
+  { name="Tobias Geibinger", email="tobias.geibinger@tuwien.ac.at" },
+  { name="Thomas Eiter", email="thomas.eiter@tuwien.ac.at" },
+  { name="Johannes Oetsch", email="johannes.oetsch@tuwien.ac.at" },
+  { name="Nelson Higuera Ruiz", email="nelson.ruiz@tuwien.ac.at" },
+  { name="Nysret Musliu", email="nysret.musliu@tuwien.ac.at" },
+  { name="Daria Stepanova", email="daria.stepanova@de.bosch.com" },
+]
+description = "ALASPO: ASP + Large-Neighborhood Search"
+readme = "READMEPyPi.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "cffi>=1.15",
+  "clingo>=5.6", 
+  "clingo-dl>=1.4", 
+  "clingcon>=5.2",
+  "numpy>=2.0"
+]
+
+[project.optional-dependencies]
+tuning = [
+    "smac==2.3.0",
+    "dill>=0.3.8",
+    "jsonpath-ng>=1.6",
+]
+tuning-viz = [
+    "smac==2.3.0",
+    "dill>=0.3.8",
+    "jsonpath-ng>=1.6",
+    "matplotlib",
+    "pandas",
+    "plotly"
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.tuwien.ac.at/kbs/BAI/alaspo"
+"Bug Tracker" = "https://gitlab.tuwien.ac.at/kbs/BAI/alaspo/issues"
