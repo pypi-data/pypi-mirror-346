@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+henriupton99testuv.egg-info/PKG-INFO
+henriupton99testuv.egg-info/SOURCES.txt
+henriupton99testuv.egg-info/dependency_links.txt
+henriupton99testuv.egg-info/requires.txt
+henriupton99testuv.egg-info/top_level.txt

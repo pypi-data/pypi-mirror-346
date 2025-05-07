@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: henriupton99testuv
+Version: 0.0.1
+Summary: A small example package
+Author-email: Henri Upton <author@example.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=2.0.2
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: twine>=6.1.0
+
+# readmefile
