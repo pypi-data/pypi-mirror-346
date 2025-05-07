@@ -1,0 +1,4 @@
+[console_scripts]
+integration-test = iridauploader.tests_integration.start_integration_tests:main [TEST]
+irida-uploader = iridauploader.core.cli:main
+irida-uploader-gui = iridauploader.gui.gui:main [GUI]
