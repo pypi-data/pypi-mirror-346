@@ -1,0 +1,12 @@
+gene_fetch/__init__.py,sha256=vsxu3eRQDw7qJP7bwO-0VzNvECCSa_4NIqT9pwGveBA,418
+gene_fetch/core.py,sha256=uPjTVt3x3gzOTFhJlrzjIRci4vFuQwL7Z38-cozqq10,16032
+gene_fetch/entrez_handler.py,sha256=Ic6rGD9KqGjmXCOyVs5WUPpU6TbbjHWbcnvNyZcn_2M,38126
+gene_fetch/main.py,sha256=Uy6UJ6aCt08o_5Oo9431N1saLKJbuO-DBcjAWuOofeU,8003
+gene_fetch/output_manager.py,sha256=RHPgFCM8AuAEUfgLmaHBm2udIg4HWztBEpYxsmKu9U0,5884
+gene_fetch/processors.py,sha256=3sKNM_6TTnET91XLSs-Y3ngppeMkLOjEM8Bh2oT4wuQ,19330
+gene_fetch/sequence_processor.py,sha256=gNEgdC7HC5u4ryT1MK_EHKq3IMDcAxGkSWdzQDVFaTY,88353
+gene_fetch-1.0.9.dist-info/LICENSE,sha256=6Ac6crb8-v2DNEKndRAV1NRqL5Xg75BOkzgKw3XyddA,1078
+gene_fetch-1.0.9.dist-info/METADATA,sha256=secIU--04yK0a9zmmpKnWVd2rRh-6GK9U8EywpbQlc4,4683
+gene_fetch-1.0.9.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+gene_fetch-1.0.9.dist-info/entry_points.txt,sha256=GiewLLfQpiE9axP2yr1PTX0tVQr2sf_B0Ox_9KXoqcQ,51
+gene_fetch-1.0.9.dist-info/RECORD,,
