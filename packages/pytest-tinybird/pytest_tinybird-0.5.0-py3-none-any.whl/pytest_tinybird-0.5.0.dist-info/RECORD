@@ -1,0 +1,9 @@
+pytest_tinybird/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_tinybird/plugin.py,sha256=_c4neyXAOvRJ0VhOhhKXTsLK3ePxROLh6x5AbTm7lzg,704
+pytest_tinybird/tinybird.py,sha256=G8iqexvjUGMMo26wNw6jwdup4wy4kln4k3gumrrRaUo,4942
+pytest_tinybird-0.5.0.dist-info/licenses/LICENSE,sha256=3nW72K_Vu4jw764ga6DNniNFaUVvZ7j6uEVVBPjk2io,1065
+pytest_tinybird-0.5.0.dist-info/METADATA,sha256=m4x0Sow2MAvzULjgwIXgb-hy9zEzSfcctGc4VK0BJoE,4969
+pytest_tinybird-0.5.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+pytest_tinybird-0.5.0.dist-info/entry_points.txt,sha256=26TZqShjp4V-cxOcrxkgCRWU3ZG9jN07gSKp_AnmM2U,52
+pytest_tinybird-0.5.0.dist-info/top_level.txt,sha256=r2GAkFCL5Vo94VrFk-Q_UlHqWXVvqb-awHDW6YI8EQs,16
+pytest_tinybird-0.5.0.dist-info/RECORD,,
