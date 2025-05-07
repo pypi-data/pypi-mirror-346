@@ -1,0 +1,2 @@
+[console_scripts]
+no-use-tools = mcp_yahoo_finance:main
