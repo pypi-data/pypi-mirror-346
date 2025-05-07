@@ -1,0 +1,11 @@
+google_benchmark/_benchmark.pyi,sha256=cmEj39Lg450n6axcWOMcLh3DpuaWGAOMmmxi-5_m7s4,7101
+google_benchmark/__init__.py,sha256=jOCH9BilfNoEH8GCBV_OWBc9zBtvc-PkkoXT2NpRvek,4411
+google_benchmark/example.py,sha256=t8qrhPNhhgyepapcenw37IY77_lMcHpwle3XllyJqIU,3891
+google_benchmark/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+google_benchmark/_benchmark.so,sha256=TnAHvVnkZVqTHVqAjTtAw0yoLuipquNTuUdnyV-g4f8,375928
+google_benchmark-1.9.3.dist-info/RECORD,,
+google_benchmark-1.9.3.dist-info/WHEEL,sha256=yCPffj3YaCK6bG26T7VcMThhI5X6mWiXeesnF5Rurdg,111
+google_benchmark-1.9.3.dist-info/top_level.txt,sha256=Cy-NqfgaD1XqpQwE9czm2fxEFK4F99WMj1NtIonvWpE,17
+google_benchmark-1.9.3.dist-info/METADATA,sha256=mVITNcDP5Q_nm_U_oeZ9IfEE0HauGycH8UdUkmUCqUg,22015
+google_benchmark-1.9.3.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+google_benchmark-1.9.3.dist-info/licenses/AUTHORS,sha256=ATgfwKQQJtY7aXWT3N75Ptb-RALwL2N46cO3Oaylku0,2676
