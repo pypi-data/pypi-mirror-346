@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: statcoderrb
+Version: 0.1
+Summary: A collection of statistical analysis code blocks
+Home-page: https://github.com/Ritik-Raj-Bhaskar/statcoderrb
+Author: Ritik Raj Bhaskar
+Author-email: ritikraj5442rr@gmail.com.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scipy
+Requires-Dist: pandas
+
