@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+src/virtualmin_dns_authenticator/__init__.py
+src/virtualmin_dns_authenticator/authenticator.py
+src/virtualmin_dns_authenticator.egg-info/PKG-INFO
+src/virtualmin_dns_authenticator.egg-info/SOURCES.txt
+src/virtualmin_dns_authenticator.egg-info/dependency_links.txt
+src/virtualmin_dns_authenticator.egg-info/entry_points.txt
+src/virtualmin_dns_authenticator.egg-info/requires.txt
+src/virtualmin_dns_authenticator.egg-info/top_level.txt
