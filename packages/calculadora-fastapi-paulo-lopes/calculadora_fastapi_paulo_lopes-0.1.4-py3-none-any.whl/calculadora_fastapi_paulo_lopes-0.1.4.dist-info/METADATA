@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: calculadora-fastapi-paulo-lopes
+Version: 0.1.4
+Summary: A simple calculator API using FastAPI
+Author: Paulo Lopes
+License: MIT
+Requires-Python: >=3.9
+Requires-Dist: fastapi==0.95.2
+Requires-Dist: pydantic==1.10.7
+Requires-Dist: uvicorn==0.22.0
+Dynamic: author
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
