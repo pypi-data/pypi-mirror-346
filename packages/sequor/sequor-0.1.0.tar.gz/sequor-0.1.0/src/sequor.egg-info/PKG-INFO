@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: sequor
+Version: 0.1.0
+Summary: SQL-centric integration platform for connecting applications and APIs
+Project-URL: repository, https://github.com/paloaltodatabases/sequor
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: ruamel.yaml>=0.18.10
+Requires-Dist: sqlalchemy>=2.0.40
+Requires-Dist: typer>=0.15.2
+Requires-Dist: requests>=2.32.3
+Requires-Dist: requests-toolbelt>=1.0.0
+Requires-Dist: authlib>=1.5.2
+Requires-Dist: psycopg2-binary>=2.9.10
+Requires-Dist: duckdb-engine>=0.17.0
+Requires-Dist: posthog>=4.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.3.1; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: responses>=0.23.1; extra == "dev"
+Requires-Dist: black>=23.3.0; extra == "dev"
+Requires-Dist: build>=0.10.0; extra == "dev"
+Requires-Dist: twine>=4.0.2; extra == "dev"
+Dynamic: license-file
