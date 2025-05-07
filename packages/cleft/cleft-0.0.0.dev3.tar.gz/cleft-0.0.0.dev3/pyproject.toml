@@ -1,0 +1,49 @@
+[project]
+name = "cleft"
+version = "0.0.0dev3"
+description = "A package made for corner-cutting."
+readme = "README.md"
+license = "AGPL-3.0"
+authors = [
+    { name = "K. LeBryce", email = "k.lebryce@pm.me" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.48.0",
+    "beautifulsoup4>=4.13.3",
+    "click>=8.1.8",
+    "cryptography>=44.0.1",
+    "httpx>=0.28.1",
+    "openai>=1.66.0",
+    "platformdirs>=4.3.6",
+    "psutil>=7.0.0",
+    "python-dotenv>=1.0.1",
+    "watchdog>=6.0.0",
+]
+packages = [
+    { includes = "cleft", from = "src" }
+]
+
+[project.scripts]
+cleft = "cleft:main"
+claude = "cleft:claude.main"
+chatgpt = "cleft:chatgpt.main"
+replacer = "cleft:replacer.main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "mypy>=1.15.0",
+    "sphinx>=8.2.1",
+]
+optional = [
+    "ipython>=8.32.0",
+]
+
+[uv.tool]
+managed = true
+package = true
