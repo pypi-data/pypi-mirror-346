@@ -1,0 +1,108 @@
+Metadata-Version: 2.4
+Name: spectrochempy-omnic
+Version: 0.2.1
+Summary: SpectroChemPy OMNIC file reader
+Author-email: Arnaud Travert <contact@spectrochempy.fr>, Christian Fernandez <contact@spectrochempy.fr>
+License: CeCILL-B FREE SOFTWARE LICENSE AGREEMENT
+Project-URL: issues, https://github.com/spectrochempy/spectrochempy-omnic/issues
+Project-URL: repository, https://github.com/spectrochempy/spectrochempy-omnic
+Keywords: spectroscopy
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Utilities
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: CeCILL-B Free Software License Agreement (CECILL-B)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: build
+Requires-Dist: setuptools; extra == "build"
+Requires-Dist: setuptools_scm; extra == "build"
+Requires-Dist: toml; extra == "build"
+Requires-Dist: jinja2; extra == "build"
+Requires-Dist: anaconda-client; extra == "build"
+Provides-Extra: dev
+Requires-Dist: spectrochempy[dev]; extra == "dev"
+Provides-Extra: plugin
+Requires-Dist: pluggy; extra == "plugin"
+Requires-Dist: spectrochempy; extra == "plugin"
+Provides-Extra: test
+Requires-Dist: requests; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-doctestplus; extra == "test"
+Requires-Dist: pytest-ruff; extra == "test"
+Dynamic: license-file
+
+# SpectroChemPy OMNIC Reader
+
+A standalone reader (and soon a plugin for SpectroChemPy) that enables
+reading Thermo Scientific™ OMNIC™ spectroscopy files (*.spa,*.spg, *.srs) and Surface Optics Corp. Files (*.hdr, *.sdr,*.ddr)
+
+## Installation
+
+```bash
+pip install spectrochempy-omnic
+```
+
+## Usage
+
+```python
+from spectrochempy_omnic import OMNICReader as read
+
+# Read an OMNIC file
+res = read("path/to/your/file.spg")
+
+# get results numpy arrays
+data = res.data  # array of data
+shape = data.shape
+
+# get axis
+x = res.x
+y = res.y
+
+xunits, xtitle = res.x_units, res.x_title
+yunits, ytitle = res.y_units, res.y_title
+
+```
+
+## Requirements
+
+- Python >=3.10
+- NumPy
+
+## License
+
+This project is licensed under the CeCILL-B FREE SOFTWARE LICENSE AGREEMENT.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Issues
+
+If you encounter any problems, please [file an issue](https://github.com/spectrochempy/spectrochempy-omnic/issues) along with a detailed description.
+
+## Authors
+
+- Arnaud Travert (<contact@spectrochempy.fr>)
+- Christian Fernandez (<contact@spectrochempy.fr>)
+
+## Citation
+
+If you use this software in your research, please cite:
+
+```bibtex
+@software{spectrochempy_omnic,
+    title = {SpectroChemPy OMNIC Reader},
+    author = {Travert, Arnaud and Fernandez, Christian},
+    url = {https://github.com/spectrochempy/spectrochempy-omnic},
+    version = {0.1.0},
+    year = {2025}
+}

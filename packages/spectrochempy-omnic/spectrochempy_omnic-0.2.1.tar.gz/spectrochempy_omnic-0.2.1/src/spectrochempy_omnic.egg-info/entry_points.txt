@@ -1,0 +1,2 @@
+[spectrochempy.readers]
+omnic = spectrochempy_omnic.plugin.omnicreaderplugin:OMNICReaderPlugin
