@@ -1,0 +1,13 @@
+hugo_nbconvert/collapse_postprocessor.py,sha256=bFDF-oq6BlPIV288Pirt32h8rzTb9MuQyQDuijo1JTA,1209
+hugo_nbconvert/collapse_preprocessor.py,sha256=F_ARvAjP9ETykRg9D2h9sIleEy35pJEP0ql2TwlRV4Q,3261
+hugo_nbconvert/date.py,sha256=WUuZ5uhT4vlNp-NZotxk_sSaxhFhW0-h8GZtQDbvlWM,132
+hugo_nbconvert/glob_hugo_ipynb.py,sha256=OHCs2NeQSU6pogCwtpkDn3OB9BuKOdsVjd5UipKgxJc,595
+hugo_nbconvert/main.py,sha256=Y_P6bilwRxf16LxY2njltjUY-pWVRnN2jOjHUQyvZ7U,611
+hugo_nbconvert/nbconvert_config.py,sha256=YN2gO-N41kOn1tfvOEDne4FHBnv4bDhhSY6DISf0OzM,609
+hugo_nbconvert/new.py,sha256=OLVrJRcMEDZOLhVhvoLaw8TSGPsop2mUHQwKehu3lA8,942
+hugo_nbconvert/resource.py,sha256=WgtOZrtgnB_1psudKu0TYX1aNz85Laz5O-rQdVxdVrA,327
+soda_hugo_nbconvert-2025.5.7.0.dist-info/METADATA,sha256=8p_HlCMAU_CWtPMrlBIdF3fYmmXsje7X6JIDsno0sAU,598
+soda_hugo_nbconvert-2025.5.7.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+soda_hugo_nbconvert-2025.5.7.0.dist-info/entry_points.txt,sha256=WFiw6v-DsegDkYQalif3pVL6o6c66PrO6skGV1CgLpw,97
+soda_hugo_nbconvert-2025.5.7.0.dist-info/licenses/LICENSE,sha256=F96EzotgWhhpnQTW2TcdoqrMDir1jyEo6H915tGQ-QE,11524
+soda_hugo_nbconvert-2025.5.7.0.dist-info/RECORD,,

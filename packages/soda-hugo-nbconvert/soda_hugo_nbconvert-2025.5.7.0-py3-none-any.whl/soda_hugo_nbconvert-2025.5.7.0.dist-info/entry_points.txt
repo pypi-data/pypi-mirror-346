@@ -1,0 +1,3 @@
+[console_scripts]
+hugo_nbconvert = hugo_nbconvert.main:main
+hugo_nbnew = hugo_nbconvert.new:main
