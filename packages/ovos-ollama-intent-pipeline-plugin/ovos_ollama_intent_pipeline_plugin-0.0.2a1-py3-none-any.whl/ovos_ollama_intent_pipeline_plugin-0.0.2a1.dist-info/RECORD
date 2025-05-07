@@ -1,0 +1,12 @@
+ovos_ollama_intent_pipeline/__init__.py,sha256=QYWycDbdENsYGkdo2IOF-hFS0ZIGmrJJ3bhOuzh2mYo,14620
+ovos_ollama_intent_pipeline/version.py,sha256=tnwL6H7F2rKiYfzZqG80Wt82MT0mHbzZ38RjwaJcsgs,114
+ovos_ollama_intent_pipeline/locale/ca-es/few_shot_examples.txt,sha256=D0GkAHsW4RD5qJCTfoX8fFmcxdFQK0CjhKiEWZtMy_Q,768
+ovos_ollama_intent_pipeline/locale/en-us/few_shot_examples.txt,sha256=Q5fbXdWrx_sd5Phzox7Je0MASh_ltDaobjMKjvDGX78,678
+ovos_ollama_intent_pipeline/locale/mul/few_shot_examples.txt,sha256=0cNn-06FJFDcEjSaHoybfiYddzILRjZPO0tTRWlP1WQ,808
+ovos_ollama_intent_pipeline/locale/mul/prompt_template.txt,sha256=0w8OchkiUuoV9bB4fT7occ0LQ9N006MMdcTcO0rj2r8,787
+ovos_ollama_intent_pipeline/locale/mul/system_prompt.txt,sha256=ia20An-cm12iRgoQwdLwXi-SmcQ7RhiQBVRJT2R2LDI,1126
+ovos_ollama_intent_pipeline_plugin-0.0.2a1.dist-info/METADATA,sha256=JsBHcKi1NNR203jJVFpDJEPFS1zuW--XrBPuzMZleig,937
+ovos_ollama_intent_pipeline_plugin-0.0.2a1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+ovos_ollama_intent_pipeline_plugin-0.0.2a1.dist-info/entry_points.txt,sha256=EV3qtaekokRI8STB76QOywMrEXFGcHmOzB2knDDYExI,98
+ovos_ollama_intent_pipeline_plugin-0.0.2a1.dist-info/top_level.txt,sha256=ucK5QUSPdTcyhmly4XD9in6pGXmoQEqexxjTLun7MEA,28
+ovos_ollama_intent_pipeline_plugin-0.0.2a1.dist-info/RECORD,,

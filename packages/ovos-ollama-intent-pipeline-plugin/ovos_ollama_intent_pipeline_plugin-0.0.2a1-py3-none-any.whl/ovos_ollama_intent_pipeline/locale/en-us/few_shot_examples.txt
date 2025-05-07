@@ -1,0 +1,36 @@
+User: "stop stop stop"
+Language: en  
+Label: stop:stop
+
+User: "what is the speed of light"
+Language: en
+Label: common-query:general_question
+
+User: "play metallica"
+Language: en
+Label: common-play:play
+
+User: "what does chatgpt think about AI"
+Language: en
+Label: persona:ask
+
+User: "enable ready on boot notification sound"
+Language: en  
+Label: boot-finished:enable_ready_notification
+
+User: "list scheduled alarms"
+Language: en
+Label: alerts:listalerts
+
+User: "did i miss any alerts"
+Language: en
+Label: alerts:missed_alerts
+
+User: "how much time left in rice timer"
+Language: en
+Label: alerts:timerstatus
+
+User: "disable parrot mode"
+Language: en
+Label: parrot:stop_parrot
+
