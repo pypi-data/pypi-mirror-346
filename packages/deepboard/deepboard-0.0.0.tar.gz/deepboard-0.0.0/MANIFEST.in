@@ -1,0 +1,1 @@
+recursive-include deepboard *.css *.js *.html
