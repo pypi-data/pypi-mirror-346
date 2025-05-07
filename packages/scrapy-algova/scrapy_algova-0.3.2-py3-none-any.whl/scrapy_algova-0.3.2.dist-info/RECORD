@@ -1,0 +1,11 @@
+scrapy_algova/extensions/error_logger.py,sha256=gWfEDi6E7Upo7pa8713PHLH4DXuigpw_fLDXp4M_1nk,2825
+scrapy_algova/middlewares/request_error_logger.py,sha256=k5Era2--Xi7Ikb10EmhysekW2FV9POfAzfuRQPjusCY,3555
+scrapy_algova/notify/base.py,sha256=QAPpZ3QxwSM56AbosorHSlTcPsrC31iNaNNGxJOO5KU,233
+scrapy_algova/notify/slack.py,sha256=AEq9tCh-sY0Ob2limCKs2YmZp6-F9vpudlvvnsmMrG8,337
+scrapy_algova/notify/twilio.py,sha256=Pe37_wyFGnNkul7OdjB6ruSibAvgF0-6xQUhqlg0Jxs,614
+scrapy_algova/sender/sender.py,sha256=U3g4FEWAbQnhlN76Z6wlXDPWUwZ-Ih8yilBESsBPrzk,1539
+scrapy_algova/wait_request.py,sha256=X9VyrJj1jfnlSm3pCfKHSOOj8vQIAj1eHwxVCUZ1zyg,5298
+scrapy_algova-0.3.2.dist-info/LICENSE,sha256=eF0q6EaHNjNnRPZ9LZLgYuI9zZ2zOhC4DpgOOWIfm8M,1072
+scrapy_algova-0.3.2.dist-info/METADATA,sha256=yjXh5hneUP9PtAUKpHJTUKrFVNYw8K-f-MhZ5DI17_Q,3142
+scrapy_algova-0.3.2.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+scrapy_algova-0.3.2.dist-info/RECORD,,
