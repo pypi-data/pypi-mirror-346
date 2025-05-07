@@ -1,0 +1,16 @@
+[project]
+name = "mcp-pokemon-server-csdemo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.7.1",
+]
+
+[project.scripts]
+mcp-pokemon-server-csdemo = "mcp_pokemon_server_csdemo:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
