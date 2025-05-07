@@ -1,0 +1,100 @@
+[project]
+name = "tafel"
+version = "2025.5.6"
+description = "A python package to extract Tafel slope"
+authors = [
+    { name = "Koki Muraoka", email = "muraok_k@chemsys.t.u-tokyo.ac.jp" },
+]
+requires-python = ">=3.11"
+readme = "README.md"
+dependencies = [
+    "optuna==4.2.1",
+    "pandas==2.2.3",
+    "plotly==6.0.0",
+    "scipy==1.15.1",
+    "scikit-learn==1.6.1",
+    "kaleido==0.2.1",
+]
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+tafel = "tafel.app.cli:main"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.scripts]
+pyright = "pyright ."
+black_format = "black ."
+ruff_lint = "ruff check ."
+ruff_format = "ruff format ."
+ruff_fix = "ruff check --fix-only ."
+test = "pytest tests --cov=tafel.core --cov-report=term --cov-report=xml --junitxml=junit.xml -o junit_family=legacy"
+
+[tool.pdm.scripts.format]
+composite = [
+    "black_format",
+    "ruff_fix",
+    "ruff_format",
+]
+
+[tool.pdm.scripts.lint]
+composite = [
+    "ruff_lint",
+    "pyright",
+]
+
+[tool.pdm.scripts.check]
+composite = [
+    "format",
+    "lint",
+    "test",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 119
+
+[tool.ruff.lint]
+select = [
+    "ALL",
+]
+ignore = [
+    "D",
+    "COM812",
+    "ISC001",
+    "T201",
+    "ANN401",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "S101",
+    "PLR2004",
+    "PT009",
+    "S106",
+    "ANN101",
+    "ANN201",
+]
+
+[tool.ruff.lint.pylint]
+max-args = 10
+
+[dependency-groups]
+dev = [
+    "flake8==7.1.1",
+    "mypy==1.15.0",
+    "black==25.1.0",
+    "isort==6.0.0",
+    "pytest-cov==6.0.0",
+    "ruff==0.9.6",
+    "pyright==1.1.394",
+]
