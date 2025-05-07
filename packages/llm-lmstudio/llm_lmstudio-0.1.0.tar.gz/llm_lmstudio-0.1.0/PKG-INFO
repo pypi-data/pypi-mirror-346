@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: llm-lmstudio
+Version: 0.1.0
+Summary: LLM plugin for models served by LMStudio (local LLM studio HTTP API)
+Author: Agusti
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: llm>=0.23
+Requires-Dist: requests>=2.0
+Requires-Dist: httpx>=0.20
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-asyncio; extra == "test"
+Requires-Dist: pytest-mock; extra == "test"
+Requires-Dist: pytest-vcr; extra == "test"
+Dynamic: license-file
