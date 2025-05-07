@@ -1,0 +1,10 @@
+ngiab_cal/__main__.py,sha256=R5yQvGFjKm3GYPQvybJgE2p5U2voLH2iZ0t-SBoKMrY,12449
+ngiab_cal/arguments.py,sha256=ZIcKAatiJPLBP6KIWysdUFtoMjlTNJ6Dob_FBbVmafA,2101
+ngiab_cal/custom_logging.py,sha256=vG4zbxLi3v-WpFrYSl389www1lzYpRKo34Yc32mfj-g,1851
+ngiab_cal/file_paths.py,sha256=bxxZRICmNa1UpmeWt8NCkojSuN1C9Q7Rhy8Lt_XzoZU,4408
+ngiab_cal/ngiab_cal_template.yaml,sha256=7Pk-tUH56uSicoIub6HcazDkwQyqjYyRa9PrX4GYcJc,2338
+ngiab_cal-0.2.2.dist-info/METADATA,sha256=jAKyVdb5HT_iDdtd023UUGZtnsJyi7H83lNr7_X3sAw,9944
+ngiab_cal-0.2.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+ngiab_cal-0.2.2.dist-info/entry_points.txt,sha256=gdVbE9cG38VNGAbjgd3_xf-IQalDxT6_7lp2lZzaenE,54
+ngiab_cal-0.2.2.dist-info/top_level.txt,sha256=Sgiit1DIXnZ7es-ava1JbOJrNVRTpWjNYXtpKgenl8c,10
+ngiab_cal-0.2.2.dist-info/RECORD,,
