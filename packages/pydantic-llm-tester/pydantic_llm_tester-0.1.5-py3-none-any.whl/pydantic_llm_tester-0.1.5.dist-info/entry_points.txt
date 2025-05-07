@@ -1,0 +1,2 @@
+[console_scripts]
+llm-tester = src.cli.main:app
