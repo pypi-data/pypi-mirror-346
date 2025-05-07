@@ -1,0 +1,14 @@
+cli_telemetry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli_telemetry/__main__.py,sha256=Ro1VglXffiC2LzILn_o0Hhzq3fVJC96R724UGk-e5eM,139
+cli_telemetry/cli.py,sha256=-BkkemdpA_goGFrJ1rdrjv2ffPBY5-5wDPBaxCsEVGk,4185
+cli_telemetry/telemetry.py,sha256=LrQocEQbIKOLI8uAlJae7JXinGHeWGQ-agdXhxfxn_Y,8149
+cli_telemetry/exporters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli_telemetry/exporters/speedscope.py,sha256=RzGYZqS97lHGtXqtHF9HBeBsJNFEQ5FTwa1VCyd2vTI,3200
+cli_telemetry/exporters/view_flame.py,sha256=qhZ69yHlKG0alV66tHHnE67-lp_yA60VKMXI32jUMY4,3811
+cli_telemetry-0.0.1.dist-info/licenses/LICENSE,sha256=2KSpxTmQ4tcS-BoE8l2_eC7oLrGvCh1kaB7wjFfJMhU,1503
+tests/test_telemetry.py,sha256=R5uezYBFoXlAGw3RRR7OQ5DBx0SQC7CaqjJDHh9Mfvc,2504
+cli_telemetry-0.0.1.dist-info/METADATA,sha256=-bmzt2Inf8Q5az34bd-HDZhMyCiKDegFpVZLH-mR5R8,2586
+cli_telemetry-0.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+cli_telemetry-0.0.1.dist-info/entry_points.txt,sha256=PiuA4a7CjEYnIETcMxbiDsxZ4JJvP2Onf2t8aDAVME0,57
+cli_telemetry-0.0.1.dist-info/top_level.txt,sha256=aZnE1khtVPmBHAlya6omW4DRXWaSOfrii3ZcZAEX6ng,20
+cli_telemetry-0.0.1.dist-info/RECORD,,
