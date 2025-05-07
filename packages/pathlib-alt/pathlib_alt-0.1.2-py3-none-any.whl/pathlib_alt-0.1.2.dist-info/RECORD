@@ -1,0 +1,13 @@
+pathlib_/__init__.py,sha256=x4if560dzOkbl7nwIEIcxvcjGHqDI3EeYe6Z_hl6XII,1416
+pathlib_/__main__.py,sha256=n_rFTCCfENTxRkKZq2k-WdXq-YZk4_NdULyixA7GQ44,737
+pathlib_/_base.py,sha256=Mj5e4mDr0QQT-86Iw1RMPOluEH4knY8JsSHYvhxj1yU,31340
+pathlib_/_local.py,sha256=ldTFSpepUw8yyAvGlcM3ymwivWBD-Esi8QIgq6oR7TQ,13573
+pathlib_/fnmatch_.py,sha256=chYQ-wKrrkCWvFKeoY4uYnq1kyYrwnJe5FDCiLXU2M0,3061
+pathlib_/glob_.py,sha256=FGxVonLOmQpH6thFuCJUT9GHtEGV6Lp_Tqc9JYFChV4,2048
+pathlib_/posix.py,sha256=9szFQMtZhUiGvL1ixP2AVSPVK5xANQkoQY7BW_jJdUU,5386
+pathlib_/windows.py,sha256=F23BseBDi_MvYrwCuwgvAacxQgT_f56dYgS5R2OY90Q,8185
+pathlib_alt-0.1.2.dist-info/licenses/LICENSE,sha256=95sekhOnnFvqPz2ZXyF2zipWDiFvJ3Ktyw7Fat2XGCE,1501
+pathlib_alt-0.1.2.dist-info/METADATA,sha256=D58uc7UMGJddzgMYFEfUVqsXmZF3AbFnUeADSuqBAaY,1598
+pathlib_alt-0.1.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+pathlib_alt-0.1.2.dist-info/top_level.txt,sha256=B8UxqV0ls7jCdeB5ltqWyVWyMvTlvtCD-lWFW16EVVk,9
+pathlib_alt-0.1.2.dist-info/RECORD,,
