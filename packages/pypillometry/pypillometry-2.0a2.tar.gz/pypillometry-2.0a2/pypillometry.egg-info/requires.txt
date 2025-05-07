@@ -1,0 +1,12 @@
+numpy
+scipy
+cmdstanpy
+matplotlib
+pandas
+typing
+requests
+loguru
+tqdm
+pytest
+pytest-cov
+h5py

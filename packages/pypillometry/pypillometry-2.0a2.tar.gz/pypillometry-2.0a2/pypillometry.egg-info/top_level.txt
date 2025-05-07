@@ -1,0 +1,7 @@
+data
+docs
+external
+logo
+paper
+pypillometry
+tests
