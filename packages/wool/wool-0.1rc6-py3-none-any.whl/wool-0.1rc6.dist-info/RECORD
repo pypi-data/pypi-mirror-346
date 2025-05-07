@@ -1,0 +1,17 @@
+wool/__init__.py,sha256=0W39YauJFvADmbkgaESmlCnhVMGPfvipf2cYSwrBh7w,1599
+wool/_cli.py,sha256=_XnD-pPRIZcjUl3zsTAx9mrOI_Vusmt_45wDjrMNr4Y,5418
+wool/_client.py,sha256=PY1hYar1XcUuhIhXIYWeAAbI08XKRBxvZKZOWqf_dgY,5754
+wool/_future.py,sha256=HDLEarPpIMpGbyclkGHeCK-uk1_QwGzcjP37Cow7Dug,2823
+wool/_logging.py,sha256=r__hUA8wnYfLwxUAMSgX6QTCkZB3XZsrjthfMkg0sMk,1028
+wool/_manager.py,sha256=ZE0nKz-kzk-fSfrVNVCkeVFFWCPKSjG2p76R6aXBRzU,3758
+wool/_pool.py,sha256=pYV10zSszB8CbFoe0yvs4X37V5ZpKi5Xn1l8oXfSX4A,9538
+wool/_queue.py,sha256=V_xlY95ba7jDuEzFTOvsizLp4bXCEpaDKw3e4sfXISM,960
+wool/_task.py,sha256=sIUO5RIT26-mXueyFMYzSdURSVmttcruzA7XoeThQIY,8569
+wool/_typing.py,sha256=-ScOIf14D_l8HYG_QZ3NgzsTeRLZvpiQ1txWef2-taU,325
+wool/_utils.py,sha256=hx9v6p1LV3-SkR_pH0jfqAVtjOzMKLuZLoLd8e7GnfU,1831
+wool/_worker.py,sha256=Tkhbu6eTcDNZ1LYgb0fGNDuSVKbl5ZTdWQHAGfRzAUo,4734
+wool-0.1rc6.dist-info/METADATA,sha256=9Mhnqdu7uGqvWd19rGGMv4BbSnDT6J1WUeFQlvr62vM,3748
+wool-0.1rc6.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+wool-0.1rc6.dist-info/entry_points.txt,sha256=ybzb5TYXou-2cKC8HP5p0X8bw6Iyv7UMasqml6zlO1k,39
+wool-0.1rc6.dist-info/top_level.txt,sha256=K0EPaZfk825mzy0W1dOkRkitbqFdtiacj3GQfnI9_-E,5
+wool-0.1rc6.dist-info/RECORD,,
