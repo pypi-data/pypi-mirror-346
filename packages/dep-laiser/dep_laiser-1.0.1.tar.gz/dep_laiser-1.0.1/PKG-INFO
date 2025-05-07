@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: dep_laiser
+Version: 1.0.1
+Summary: Skill-extraction pipeline with Gemini + ESCO mapping
+Author-email: Your Name <you@example.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: sentence-transformers
+Requires-Dist: google-generativeai
+Requires-Dist: torch
+Requires-Dist: numpy

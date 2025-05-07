@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dep_laiser"
+version = "1.0.1"
+description = "Skill-extraction pipeline with Gemini + ESCO mapping"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+dependencies = [
+  "pandas",
+  "sentence-transformers",
+  "google-generativeai",
+  "torch",
+  "numpy"
+]
+
+
+[project.scripts]
+dep-laiser = "dep_laiser.main:extract_skills"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dep_laiser = ["public/*.pkl"]
