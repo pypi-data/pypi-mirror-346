@@ -1,0 +1,23 @@
+perigramma/__init__.py,sha256=0CXaF9IZ6jR7tfDnMqh21GrLzseQDcSrT9Yx5fj-U5k,172
+perigramma/cli.py,sha256=zX-TRoZ4xtodIwUl42_cg9terCOwBDhaRdRg-zTyTwM,3025
+perigramma/properties.py,sha256=6Uxr6KDc9OUsp8ArcQ8uFWJ5cMk3RZ2d48smUFd22jU,341
+perigramma/registry.py,sha256=TgHNSRLB7wyHi16xOgXmZ74TZNRAwGrOpdO4W78T7YU,2224
+perigramma/scaffold.py,sha256=6cOCanrPF1DsOwWCrvipMcveDIZTuPxStI_pdRigE-E,7828
+perigramma/template_classes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+perigramma/template_classes/_none.py,sha256=5UyheoNXwUYTDiffb_InjLvCZ111tQBfB31w99b4pjo,175
+perigramma/template_classes/base.py,sha256=X5fdP1eNqb1wh7OoTsdMiMWn_FzjlYhRjjfFo_Ekzlg,1029
+perigramma/template_classes/dict_template.py,sha256=cEGjUpxrcq5QlV7RTfqZkbetW6r_ZmkEboGaZi2JRiI,564
+perigramma/template_classes/filesystem_template.py,sha256=xJEkCVEslhj9wteiWPKjulJ220YAA5CcRKMKGdi2g4Q,1774
+perigramma/template_classes/git_template.py,sha256=Q8DmQG07kQuclFN7V_LFYaGoXF2UDOtcc6wCGK0d2gE,2052
+perigramma/template_lib/setuptools_pyproject/template/src/{{ project_name }}/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+perigramma/template_lib/setuptools_pyproject/template/src/{{ project_name }}/main.py,sha256=GY8_mwZiMByZyJkrAnHupUwXK4j1953L2CRFW0Ssdws,114
+perigramma/templaters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+perigramma/templaters/base.py,sha256=xJVyM7KNqKwT7FHhTKf_8GeBq_qPliSZBgpFyz4xmGw,612
+perigramma/templaters/jinja.py,sha256=fo7MRZh1CALScwt3pvZD_VRCXF-iqS7MgHlSDH0XOPw,888
+perigramma/templaters/pystring.py,sha256=bJmChfu1hBlXLK-GrTQNELpJopYReLVaZGqLenLvP7E,737
+perigramma/templaters/registry.py,sha256=36LUscRSrcDY2YuoSGF9rnFiFfFl6EmJYHFU1GZbx-8,701
+perigramma-0.1.1.dist-info/METADATA,sha256=u_CDNzFT-TX_MMnKT2jeDdNP-quZmmAGpoenC_mT31M,5623
+perigramma-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+perigramma-0.1.1.dist-info/entry_points.txt,sha256=V6KdTeISZ7hPVQzrXqpWn89dnm7vSF_AI2Nvw_UH1s4,129
+perigramma-0.1.1.dist-info/top_level.txt,sha256=PJxvmj70-tF9knQx4K4Sz-j2yxaUTNellbgXcISe_r8,11
+perigramma-0.1.1.dist-info/RECORD,,
