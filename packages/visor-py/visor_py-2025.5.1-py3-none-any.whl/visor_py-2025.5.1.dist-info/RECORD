@@ -1,0 +1,10 @@
+visor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+visor/image/__init__.py,sha256=xtusik_Vy-IlOxNV1ZATVJ_SKfNqRwFMZpGRnD731N4,49
+visor/image/core.py,sha256=_3lt6RaKn-w01XsK4_d8DQ0Yyb9MxQpOrpWhB1LjPE0,10572
+visor/image/tests/test_core.py,sha256=wKJFzSPUB1B8PnclmkBNnq4zQC3EqanQbeyz0lKVn5M,9155
+visor/transform/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+visor_py-2025.5.1.dist-info/licenses/LICENSE,sha256=9qeaqqUhpJSuQx1bhRFO7fgfbSVjjIqEJDMWGOKZyY8,1519
+visor_py-2025.5.1.dist-info/METADATA,sha256=BKQ2Z_ltT6_5vLtvgNKXz77qCry5wn0BZe5yjBXetiA,3916
+visor_py-2025.5.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+visor_py-2025.5.1.dist-info/top_level.txt,sha256=kRFlZLaw06RIdOKDlZGMFBwZFKSatJ67hvW7_bKzoso,6
+visor_py-2025.5.1.dist-info/RECORD,,
