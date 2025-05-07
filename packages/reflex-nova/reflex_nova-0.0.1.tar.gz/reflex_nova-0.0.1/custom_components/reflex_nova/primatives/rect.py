@@ -1,0 +1,153 @@
+from reflex_nova.primatives.open_interval import OpenInterval
+from reflex_nova.primatives.point import Point
+from reflex_nova.primatives.polygon import Polygon
+from reflex_nova.primatives.size import Size
+
+
+class Rect:
+    """
+    Rectangle defined by an origin point and size.
+
+    Instances of this class represent rectangles whose sides are
+    aligned with the horizontal and vertical axes. A rectangle
+    not aligned in this way may be represented with the `Polygon`
+    class.
+    """
+
+    def __init__(self, origin: Point, size: Size):
+        self.origin = origin
+        self.size = size
+
+    @property
+    def left(self):
+        """
+        Min x value for the rectangle.
+
+        :return: `float`
+        """
+        return self.origin.x
+
+    @property
+    def right(self):
+        """
+        Max x value for the rectangle.
+
+        :return: `float`
+        """
+        return self.origin.x + self.size.width
+
+    @property
+    def bottom(self):
+        """
+        Min y value for the rectangle.
+
+        :return: `float`
+        """
+        return self.origin.y
+
+    @property
+    def top(self):
+        """
+        Max y value for the rectangle.
+
+        :return: `float`
+        """
+        return self.origin.y + self.size.height
+
+    @property
+    def area(self):
+        """
+        Area of the rectangle.
+
+        :return: `float`
+        """
+        return self.size.width * self.size.height
+
+    @property
+    def perimeter(self):
+        """
+        Length of the length of all sides of the rectangle.
+
+        :return: `float`
+        """
+        return 2 * self.size.width + 2 * self.size.height
+
+    def contains_point(self, point: Point):
+        """
+        Tests whether `point` is inside the rectangle or not.
+
+        :param point: `Point`
+        :return: `bool`
+        """
+        return self.left < point.x < self.right and self.bottom < point.y < self.top
+
+    def intersection_with(self, other):
+        """
+        Computes the intersection between this rectangle and
+        another rectangle `other`.
+
+        The intersection result may be a `Rect` or `None`.
+
+        :param other: `Rect`
+        :return: `bool`
+        """
+        h_overlap = self.__horizontal_overlap_with(other)
+        if h_overlap is None:
+            return None
+
+        v_overlap = self.__vertical_overlap_with(other)
+        if v_overlap is None:
+            return None
+
+        return Rect(
+            Point(h_overlap.start, v_overlap.start),
+            Size(h_overlap.length, v_overlap.length),
+        )
+
+    def __horizontal_overlap_with(self, other):
+        self_interval = OpenInterval(self.left, self.right)
+        other_interval = OpenInterval(other.left, other.right)
+
+        return self_interval.compute_overlap_with(other_interval)
+
+    def __vertical_overlap_with(self, other):
+        self_interval = OpenInterval(self.bottom, self.top)
+        other_interval = OpenInterval(other.bottom, other.top)
+
+        return self_interval.compute_overlap_with(other_interval)
+
+    def to_polygon(self):
+        """
+        Creates a `Polygon` equivalent to this rectangle.
+        The polygon is made of the rectangle vertices in the
+        following order:
+            - (left, bottom) ≡ origin
+            - (right, bottom)
+            - (right, top)
+            - (left, top)
+
+        :return: `Polygon`
+        """
+        return Polygon(
+            [
+                self.origin,
+                Point(self.right, self.bottom),
+                Point(self.right, self.top),
+                Point(self.left, self.top),
+            ]
+        )
+
+    def __eq__(self, other):
+        """
+        Two rects are equal if their origins and sizes are equal.
+
+        :param other: `Rect`
+        :return: are the rects equal?
+        """
+        if self is other:
+            return True
+
+        if not isinstance(other, Rect):
+            return False
+
+        return self.origin == other.origin and self.size == other.size

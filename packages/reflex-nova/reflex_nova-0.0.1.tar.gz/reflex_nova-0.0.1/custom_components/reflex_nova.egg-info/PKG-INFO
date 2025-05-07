@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: reflex-nova
+Version: 0.0.1
+Summary: Reflex custom component nova
+Author-email: Tyler <tn3wman@icloud.com>
+License: Apache-2.0
+Keywords: reflex,reflex-custom-components
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: reflex>=0.7.5
+Requires-Dist: numpy>=2.2.3
+Requires-Dist: sympy>=1.13.3
+Requires-Dist: pint>=0.24.4
+Requires-Dist: dill>=0.3.9
+Requires-Dist: sortedcontainers>=2.4.0
+Requires-Dist: reflex-mathjax>=0.0.1
+Requires-Dist: reflex-mafs>=0.0.1
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# nova
+
+A Reflex custom component reflex-nova (Numerical & Optimization Variants for Applied Science) is a powerful computational library designed to solve complex engineering, physics, and mathematical problems. Built to integrate seamlessly with Reflex as a frontend, it provides robust numerical methods and optimization algorithms for solving equations, simulating physical systems, and optimizing designs. Whether tackling heat transfer, structural analysis, fluid dynamics, or control systems, reflex-nova delivers precise, scalable, and efficient solutions for applied science and engineering.
+
+## Installation
+
+```bash
+pip install reflex-nova
+```
