@@ -1,0 +1,8 @@
+shipstation_sdk/__init__.py,sha256=mAT8bOGFuu_a7wcXmRQfpftv8PEanLsMpF5WLNhxic4,99
+shipstation_sdk/client.py,sha256=AArCfiKqdd850xIo6QfnpGgvuZb1EczzxhF185Zly-4,1701
+shipstation_sdk/models.py,sha256=yGY0jCa7li3PCU7uQXzY-PYVDRNkpE4-faVlJVuP4co,3265
+shipstation_sdk/py.typed,sha256=bWew9mHgMy8LqMu7RuqQXFXLBxh2CRx0dUbSx-3wE48,27
+idi_shipstation_sdk-0.1.0.dist-info/METADATA,sha256=gnyma_Mo41Rc83AqRdfiDYGrfRDXNVaaIKnP-6-2Bsk,895
+idi_shipstation_sdk-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+idi_shipstation_sdk-0.1.0.dist-info/licenses/LICENSE,sha256=iUXiHwH56WiccJQvoEK4WXznBsWU9kbvPFfogFblk7Q,1072
+idi_shipstation_sdk-0.1.0.dist-info/RECORD,,
