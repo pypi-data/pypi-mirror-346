@@ -1,0 +1,16 @@
+{
+  "lib/python3.10/site-packages/numpy": true,
+  "lib/python3.10/site-packages/pandas": true,
+  "lib/python3.10/site-packages/xarray/tests/datatree": true,
+  "lib64/python3.10/site-packages/h5py/tests": true,
+  "lib64/python3.10/site-packages/numpy": true,
+  "lib64/python3.10/site-packages/pandas": true,
+  "lib64/python3.10/site-packages/xarray/tests": true,
+  "tests/test_api.py::test_exceptions": true,
+  "tests/test_save.py::test_zarr": true,
+  "tests/test_save.py::test_xarray2hdf5": true,
+  "tests/test_save.py::test_xarray2hdf5_archive_starttime": true,
+  "tests/test_save.py::test_xarray2hdf5_resolution": true,
+  "tests/test_save.py::test_xarray2hdf5_with_gaps": true,
+  "tests/test_group.py::test_rolling_window": true
+}
