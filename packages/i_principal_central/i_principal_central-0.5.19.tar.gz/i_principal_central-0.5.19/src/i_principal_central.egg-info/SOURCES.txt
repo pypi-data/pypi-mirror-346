@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/i_principal_central/__init__.py
+src/i_principal_central/core.py
+src/i_principal_central.egg-info/PKG-INFO
+src/i_principal_central.egg-info/SOURCES.txt
+src/i_principal_central.egg-info/dependency_links.txt
+src/i_principal_central.egg-info/top_level.txt
