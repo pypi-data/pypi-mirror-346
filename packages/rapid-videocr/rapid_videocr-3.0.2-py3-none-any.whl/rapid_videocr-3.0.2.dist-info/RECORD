@@ -1,0 +1,16 @@
+rapid_videocr/__init__.py,sha256=sQkxrTRzrdSWlVBsU3rjAi_eZg5y44brC-Um2V-jHw0,196
+rapid_videocr/export.py,sha256=1PeNKMj3nWUcS4PRLE0-hNGlYWd8bnlTVKxajSDIziI,1966
+rapid_videocr/main.py,sha256=3Zl9TO_WcFS14gVys02KjaP8geXnLO7ik5GhsJSvFlk,4397
+rapid_videocr/ocr_processor.py,sha256=OFOdPfNEN6pwfk5fAS7ktD2yS_OCjn7wUzQGCjghdwM,8168
+rapid_videocr/vsf_cli.py,sha256=0t-dwKZtckSmk76vK3PJhvIKaTOpC7_wZxXfpB3lLIc,1637
+rapid_videocr/vsf_ocr_cli.py,sha256=jBVTibH42OSRPel4j4RA2_-eFElo-WMEvjxKVketfKc,8380
+rapid_videocr/utils/__init__.py,sha256=Jn4eJfIHH2BXLD8IfW-AfXRqPKsF00w0ZguUWHetFk4,101
+rapid_videocr/utils/crop_by_project.py,sha256=ocjziWXkuW6O_aMgnK28vbhHLeV4NZIqeQzd1bf1lDE,1473
+rapid_videocr/utils/logger.py,sha256=mCF0qCb-R9YOKFEIKdVbdRMofFnHnmi0gv0ivQr-BbQ,1102
+rapid_videocr/utils/utils.py,sha256=ualRuOpZO2RBCJ01QM9UdrIGwbQOwIiYGlQmft20orU,4228
+rapid_videocr-3.0.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+rapid_videocr-3.0.2.dist-info/METADATA,sha256=NXRhWUSsSuIHaJE23LoyFo0qIY40ZQ6tf39nQ0BcKk4,935
+rapid_videocr-3.0.2.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+rapid_videocr-3.0.2.dist-info/entry_points.txt,sha256=VRJQu32dFhVQpU6d6rjdtJnSbtaJaXhgwi-pBBuWF-U,58
+rapid_videocr-3.0.2.dist-info/top_level.txt,sha256=uPQbJQ346YJVTUi4CqGP2OZUrUSsUn57eiRiNtpe97E,14
+rapid_videocr-3.0.2.dist-info/RECORD,,
