@@ -1,0 +1,28 @@
+numpy
+pillow
+tqdm
+
+[dev]
+black
+flake8
+flake8-black
+isort
+pre-commit
+pylance
+
+[dist]
+build
+pip-tools
+pipdeptree
+requests
+twine
+
+[dist:sys_platform == "darwin"]
+delocate
+
+[dist:sys_platform == "linux"]
+auditwheel
+
+[test]
+pytest
+pytest-coverage
