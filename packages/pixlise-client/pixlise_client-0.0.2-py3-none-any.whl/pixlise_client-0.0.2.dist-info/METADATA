@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pixlise_client
+Version: 0.0.2
+Summary: PIXLISE client library for Python
+Project-URL: Homepage, https://github.com/pixlise/client-python
+Project-URL: Issues, https://github.com/pixlise/client-python/issues
+Author-email: Peter Nemere <peter.nemere@qut.edu.au>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: protobuf
+Description-Content-Type: text/markdown
+
+# PIXLISE Client Library for Python
+
+This python package contains what's needed to communicate directly with the PIXLISE back-end and download, manipulate and upload data.
