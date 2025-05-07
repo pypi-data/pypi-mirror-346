@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+terrakio_api/__init__.py
+terrakio_api/api.py
+terrakio_api/auth.py
+terrakio_api/client.py
+terrakio_api/config.py
+terrakio_api/exceptions.py
+terrakio_api.egg-info/PKG-INFO
+terrakio_api.egg-info/SOURCES.txt
+terrakio_api.egg-info/dependency_links.txt
+terrakio_api.egg-info/requires.txt
+terrakio_api.egg-info/top_level.txt
