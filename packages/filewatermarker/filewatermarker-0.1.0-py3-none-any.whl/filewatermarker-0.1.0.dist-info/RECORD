@@ -1,0 +1,11 @@
+watermarker/__init__.py,sha256=-l41wfKuO0wplJvtOpIwsKGMNXR7fnqD2nlzHjmYnG0,743
+watermarker/cli.py,sha256=6LCHbZufCdjsERv163OYxFjwKwAbD9ynTv6q9zu3Kuk,2969
+watermarker/core.py,sha256=zkh4L9lpMQ9ds3ff_yMloLay8t0lWZJNuE2tQcbgZf0,22626
+watermarker/utils.py,sha256=31NYM_TDHeIOQmQPMQdHg0ix-ObDRDByVqoWKguvXkY,2608
+watermarker/gui/__init__.py,sha256=dQ1VFR5h7h7IOFFu53ViMv9WkdcRENJvirDDUo1qo5s,135
+watermarker/gui/server.py,sha256=0rYh3fb6iObcnwgbrRkNLn_eCO3m29P_wo5GxCJHegU,2211
+filewatermarker-0.1.0.dist-info/METADATA,sha256=d0A-8cXa9pATUxwvMG4G49kvrTRq9q4ksvQcDEzqqqY,13036
+filewatermarker-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+filewatermarker-0.1.0.dist-info/entry_points.txt,sha256=vxmav0T3ksHdaH8P67gQFOnRJET_iZpIqjZCS0V4FkE,53
+filewatermarker-0.1.0.dist-info/top_level.txt,sha256=lXuBbo9_H1tws-XitiolL4V8i-5g430CXphijP_ZRXk,12
+filewatermarker-0.1.0.dist-info/RECORD,,
