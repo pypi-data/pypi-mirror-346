@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: hippotrainer
+Version: 1.0.0
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: numpy
+Provides-Extra: docs
+Requires-Dist: sphinx>=7.0; extra == "docs"
+Requires-Dist: furo>=2024.1.29; extra == "docs"
+Requires-Dist: sphinx-copybutton>=0.5.2; extra == "docs"
+Requires-Dist: sphinx_copybutton; extra == "docs"
+Requires-Dist: sphinx_design; extra == "docs"
+Requires-Dist: sphinx_inline_tabs; extra == "docs"
+Requires-Dist: sphinx_toolbox; extra == "docs"
+Requires-Dist: myst_parser; extra == "docs"
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: coverage; extra == "tests"
+Requires-Dist: scikit-learn; extra == "tests"
+Dynamic: license-file

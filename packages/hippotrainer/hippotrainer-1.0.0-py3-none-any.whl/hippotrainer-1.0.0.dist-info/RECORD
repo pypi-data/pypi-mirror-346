@@ -1,0 +1,11 @@
+hippotrainer/__init__.py,sha256=f7h4vs16Wi0sL5wLOh9tdkKu3gIftJnEbnAcRr8qRR0,146
+hippotrainer/dr_mad.py,sha256=9i0ldyAW9J5KEeT7xPiAV0Xkdfs7Bz9SnccNhIyx2bY,3984
+hippotrainer/hoag.py,sha256=Rvrq0Z6lPnkH6jOmlKIASUfApRAXUtzePFOJsv1l8fA,8004
+hippotrainer/hyper_optimizer.py,sha256=hvswL5oGk8G6nZbl2EJ5nwVUbR6-lijv8STm_ZOZryQ,5214
+hippotrainer/neumann.py,sha256=WikGik6b2UmSejCj-__3nfrtNBGdGx1VSnuFT_2Nh38,2645
+hippotrainer/t1_t2.py,sha256=nqFHq1Aw5U5f36IyNoeNGqRiSMqKu0zMgDIhJG_dwIU,1456
+hippotrainer-1.0.0.dist-info/licenses/LICENSE,sha256=QRbeVbk0yD0VDm1yYiVwNO9eiS73JV9-p6_U1nAEgc4,1076
+hippotrainer-1.0.0.dist-info/METADATA,sha256=p01viT9WZozuRzdTXhGuNu9ZfY3nKCljoWkZTwBqSeI,724
+hippotrainer-1.0.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+hippotrainer-1.0.0.dist-info/top_level.txt,sha256=zSPUCfyHOoJl6ooKRwPnDcBJTg4ZevZGCiu0PM7D8ME,13
+hippotrainer-1.0.0.dist-info/RECORD,,
