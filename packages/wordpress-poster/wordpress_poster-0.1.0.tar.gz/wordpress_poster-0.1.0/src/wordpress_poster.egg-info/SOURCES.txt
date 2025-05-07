@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+src/wordpress_poster/client.py
+src/wordpress_poster/exceptions.py
+src/wordpress_poster/utils.py
+src/wordpress_poster.egg-info/PKG-INFO
+src/wordpress_poster.egg-info/SOURCES.txt
+src/wordpress_poster.egg-info/dependency_links.txt
+src/wordpress_poster.egg-info/requires.txt
+src/wordpress_poster.egg-info/top_level.txt
