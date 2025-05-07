@@ -1,0 +1,16 @@
+odoo/addons/stock_landed_costs_priority/README.rst,sha256=M8QEBh9kLrRyBPF6dworsdYiYIBpQXIq4Yspd4h30Wo,3238
+odoo/addons/stock_landed_costs_priority/__init__.py,sha256=Al_FB4oULnMgBctSEBUhvoBloZHtOTPz_GdexXWmQ0M,151
+odoo/addons/stock_landed_costs_priority/__manifest__.py,sha256=LHBcN3kxmBwodYXaED0ph0WjuMGwLiVNYKckX7owpJg,549
+odoo/addons/stock_landed_costs_priority/i18n/es.po,sha256=yo2zY7q_jrrK_-ymaKwO-nkML6OLBnafu9Xs2d4baoE,1458
+odoo/addons/stock_landed_costs_priority/i18n/stock_landed_costs_priority.pot,sha256=c86iLJKcBz7OQuRRWZ0Bf3Ef_tkGQKIWI0iZh65RHIQ,1305
+odoo/addons/stock_landed_costs_priority/models/__init__.py,sha256=UTgP1EcuIuS-ZrmFVPHXwS1xIX_cS8QVlPngutQzF4k,162
+odoo/addons/stock_landed_costs_priority/models/stock_landed_cost.py,sha256=bIYDC7kL8QSyP-4TJyjnXMVgyiiuqe0lOW5CfREsF6w,442
+odoo/addons/stock_landed_costs_priority/readme/CONTRIBUTORS.md,sha256=O7svdFt5W7MZOXjrwXc_XWoCJ7syURwuo1DDGhAJWVQ,172
+odoo/addons/stock_landed_costs_priority/readme/DESCRIPTION.md,sha256=5KnzcLXUAZ9d1htnq9KatYaImk3VMe56RbW34FcHbYg,144
+odoo/addons/stock_landed_costs_priority/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/stock_landed_costs_priority/static/description/index.html,sha256=UroI3tkR3fJq0EM7bO8bov-U-t35qNu6BqAy8aOv7PQ,12661
+odoo/addons/stock_landed_costs_priority/views/stock_landed_cost_views.xml,sha256=R85l304eciCZtiUnrmMBV_iSK1Ejx6uz9d-5LmpAdTY,3386
+odoo_addon_stock_landed_costs_priority-18.0.1.0.0.2.dist-info/METADATA,sha256=KQ1oEuNH0sqakPU5BPhKtCu6WCFEguAimiqQQypIOoo,3773
+odoo_addon_stock_landed_costs_priority-18.0.1.0.0.2.dist-info/WHEEL,sha256=9fEMia4zL7ZuZbnCOrcYogUhmn4XFIVaJ8G4YGI31xc,81
+odoo_addon_stock_landed_costs_priority-18.0.1.0.0.2.dist-info/top_level.txt,sha256=QE6RBQ0QX5f4eFuUcGgU5Kbq1A_qJcDs-e_vpr6pmfU,4
+odoo_addon_stock_landed_costs_priority-18.0.1.0.0.2.dist-info/RECORD,,
