@@ -1,0 +1,3 @@
+[console_scripts]
+test_data = tonik.utils:main
+tonik_api = tonik.api:main

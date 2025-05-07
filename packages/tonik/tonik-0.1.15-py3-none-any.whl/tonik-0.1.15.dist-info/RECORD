@@ -1,0 +1,12 @@
+tonik/__init__.py,sha256=dov-nMeGFBzLspmj4rWKjC4r736vmaPDgMEkHSUfP98,523
+tonik/api.py,sha256=XDKiz1AzYNBOwYfaRxpMgqGRDAPJEE6wWJyBxuYPRLc,7751
+tonik/storage.py,sha256=vFxIrY92cSYOYOpNXHxCAjdXgkrRytaRDpudtK0glmg,10608
+tonik/utils.py,sha256=9eSVKIbs8TIZlJCz_-B7FrvOUQCQHO3K52v4Heus-uE,6135
+tonik/xarray2netcdf.py,sha256=gDNT6nxnRbXPeRqZ3URW5oXY3Nfh3TCrfueE-eUrIoY,5181
+tonik/xarray2zarr.py,sha256=RhCnS6g3yqe8mrEXhD_4PCN0EI3QPhp5X7ui_wvb_jY,2445
+tonik/package_data/index.html,sha256=ZCZ-BtGRERsL-6c_dfY43qd2WAaggH7xereennGL6ww,4372
+tonik-0.1.15.dist-info/METADATA,sha256=fgLopxgfF1ooNHl2DEYN3dFivpSknlfRrAL2eledYKo,2143
+tonik-0.1.15.dist-info/WHEEL,sha256=KGYbc1zXlYddvwxnNty23BeaKzh7YuoSIvIMO4jEhvw,87
+tonik-0.1.15.dist-info/entry_points.txt,sha256=mT3B4eBE8SHlAeMhFnZGor9-YkVtoWM1NVHVuypJ-uY,74
+tonik-0.1.15.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+tonik-0.1.15.dist-info/RECORD,,
