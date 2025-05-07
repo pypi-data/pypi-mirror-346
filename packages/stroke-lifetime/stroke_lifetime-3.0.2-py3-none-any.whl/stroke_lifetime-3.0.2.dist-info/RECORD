@@ -1,0 +1,9 @@
+stroke_lifetime/__init__.py,sha256=yh7Id2hENFEZYU332weUHEuSxu_fn1YW-ZWrqABHISk,125
+stroke_lifetime/fixed_params.py,sha256=qlvnXkxevGfiIyjbmw0VIW7ByoatPOhZP3eGSKMTSs4,21547
+stroke_lifetime/main_calculations.py,sha256=EpXlkVJwKEQX5iEN9rCAsnaJG3G7aTajN4v5O6jIomA,29693
+stroke_lifetime/models.py,sha256=I5ZwrdzCJilKxZHn7mJvTB6M5be6AVZHBNMz_VSv4kg,23036
+stroke_lifetime-3.0.2.dist-info/LICENSE,sha256=725PLWh4O94BEo8zg4lqbTnKPxXOwRmrZzIpakFaQg4,1066
+stroke_lifetime-3.0.2.dist-info/METADATA,sha256=z8VUofyjf-Ry5cxZfJsFunylhjDsgSq4VKsE9FUxsIo,4831
+stroke_lifetime-3.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+stroke_lifetime-3.0.2.dist-info/top_level.txt,sha256=FZ0gmMzTsMqp39G2X7z1XMtaHTZENmIdaFBqaltPBqg,16
+stroke_lifetime-3.0.2.dist-info/RECORD,,
