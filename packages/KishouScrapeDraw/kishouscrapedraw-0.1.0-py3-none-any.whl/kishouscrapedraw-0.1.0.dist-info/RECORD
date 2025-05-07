@@ -1,0 +1,13 @@
+KishouScrapeDraw/__init__.py,sha256=QfY1c8Drvw5ldylpeaGrGhg7mf-wSym1CWzNoLaTKDw,262
+KishouScrapeDraw/createpdf.py,sha256=J3jF_dcpof566tR2k20Vz9wbrFet1f6vSXLwZ-CpN70,10235
+KishouScrapeDraw/drawgraph.py,sha256=c8D273A-wKy-gMTPxM8-pR4V4E_6jm8eUm5Nl096WNQ,10027
+KishouScrapeDraw/drowweathersymbol.py,sha256=-wpAYuDuUfnS37Py-BgNqNdPIPb2WczQWJxPmgSQAHw,13601
+KishouScrapeDraw/fetchweathermap.py,sha256=riNe6jDWtX8mjeuffzoY4_CgsK_-aQVat9j3urolXa4,13976
+KishouScrapeDraw/scraping.py,sha256=sKvXEz0zdEd7QdffRhC_CkUcqNsxSxXNkWdm4BejhBs,6986
+KishouScrapeDraw/utils.py,sha256=NMnPxlkmFFkRmdbU7kPzugL1o3LxP1-PuHG-jhCG7Gg,1183
+kishouscrapedraw-0.1.0.dist-info/licenses/LICENSE,sha256=I_bF9q-tNU_n0SNFw0Jx5GkCSRv27YY8YJA5um70Ww8,1171
+kishouscrapedraw-0.1.0.dist-info/licenses/NOTICE,sha256=cC3F9DXQxxEk72r5qbskxmoGJ5d2BZ9928thjfvsF80,682
+kishouscrapedraw-0.1.0.dist-info/METADATA,sha256=lP3khxm7dAVIMHCpwiw3K4bDlxBpKlMcWZoiiTcEerQ,4223
+kishouscrapedraw-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+kishouscrapedraw-0.1.0.dist-info/top_level.txt,sha256=2nYqY06ESxviEYCjnG5e0Z5GXZe6jAAIRn7UoAX45c0,17
+kishouscrapedraw-0.1.0.dist-info/RECORD,,
