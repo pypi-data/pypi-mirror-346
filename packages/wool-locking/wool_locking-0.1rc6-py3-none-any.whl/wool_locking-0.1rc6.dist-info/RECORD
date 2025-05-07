@@ -1,0 +1,10 @@
+wool/locking/__init__.py,sha256=tRI1SO_FdbzY8yKGe2zjkF63CjRFypdaZekCG86DSkQ,634
+wool/locking/_cli.py,sha256=YGftVpFJOLh2zaQz1WWyAFD1AxrGv55hfTzBlVBX0Eg,1026
+wool/locking/_client.py,sha256=q7yBk8b--ASDtD_GjgYrGEhUurUYubSgPmPG9baw5gw,300
+wool/locking/_lock.py,sha256=t7UR7vTN7xsKlpFf_iuP5fPlKF9ScvRLQi0UrdU6hK8,314
+wool/locking/_pool.py,sha256=W0IJfKGvIMICRn8-P-kG7I3ddVLvIPcA0SZnFtK1yUs,350
+wool_locking-0.1rc6.dist-info/METADATA,sha256=LBNauk2ZlBQ8scYkVwjnPMVH5vcEhGoM7623ntTS5aY,430
+wool_locking-0.1rc6.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+wool_locking-0.1rc6.dist-info/entry_points.txt,sha256=repSf3OuxwybiJCfJ7fMJJIxiJIN3BEmmq7cKjWOTZ8,47
+wool_locking-0.1rc6.dist-info/top_level.txt,sha256=K0EPaZfk825mzy0W1dOkRkitbqFdtiacj3GQfnI9_-E,5
+wool_locking-0.1rc6.dist-info/RECORD,,
