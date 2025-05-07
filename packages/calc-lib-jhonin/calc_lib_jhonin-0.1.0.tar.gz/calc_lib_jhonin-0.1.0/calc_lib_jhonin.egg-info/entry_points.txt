@@ -1,0 +1,2 @@
+[console_scripts]
+calc_lib_jhonin = app.main:main

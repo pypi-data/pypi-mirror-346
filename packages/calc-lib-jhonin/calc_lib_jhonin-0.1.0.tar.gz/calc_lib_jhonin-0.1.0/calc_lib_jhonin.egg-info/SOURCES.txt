@@ -1,0 +1,14 @@
+pyproject.toml
+setup.py
+application/__init__.py
+application/main.py
+application/models.py
+application/teste_lib.py
+calc_lib/__init__.py
+calc_lib/funcoes.py
+calc_lib_jhonin.egg-info/PKG-INFO
+calc_lib_jhonin.egg-info/SOURCES.txt
+calc_lib_jhonin.egg-info/dependency_links.txt
+calc_lib_jhonin.egg-info/entry_points.txt
+calc_lib_jhonin.egg-info/requires.txt
+calc_lib_jhonin.egg-info/top_level.txt
