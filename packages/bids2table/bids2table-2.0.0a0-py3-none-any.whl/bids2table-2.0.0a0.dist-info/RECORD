@@ -1,0 +1,13 @@
+bids2table/__init__.py,sha256=DFc-B_CUqrYBs1uHmX7mK3UXFlQ9H4EQW2Qrhmyop24,472
+bids2table/__main__.py,sha256=EJRfQoRz-7ZJCNptesZ2B9_CLzzu5gbrsfcC7Wa3-NE,5210
+bids2table/_entities.py,sha256=GjLTn1O5DhUnMVjIK1spEbd-aagHuj-KF9ecL9VuVh4,8632
+bids2table/_indexing.py,sha256=NZ-bTWnowrN1Yhcx-aOwGh36Dgqty9xgFW4eul8jJcQ,17273
+bids2table/_logging.py,sha256=tSXWF1maHoR1cOiQjU-UlC4vxYeom9l9tI0sSWB5jzM,1548
+bids2table/_pathlib.py,sha256=jFEE1cJve7bS6zhLLZreJXQXYl3xAPPymZebu1cNakc,573
+bids2table/_version.py,sha256=6YkVzq_2eIaOEDgtb_wyU371ZUMlq0Wd4UVpn0_5ZTI,519
+bids2table-2.0.0a0.dist-info/licenses/LICENSE,sha256=eZNOqT7eD0VLCDZZlxK3z8WjqwJlOtee6J739_s8SpI,1068
+bids2table-2.0.0a0.dist-info/METADATA,sha256=IX9cD6dA6yWhk8sTydox7TGnmXgkwT7sJuzanNIoGmw,5302
+bids2table-2.0.0a0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+bids2table-2.0.0a0.dist-info/entry_points.txt,sha256=hIhs_7vUKwNCFB6vPb0UPqPGQU5hT05hSY8HqdlfE3w,88
+bids2table-2.0.0a0.dist-info/top_level.txt,sha256=t7kHZxFs_CObPLFWzn-LXuXzr3nJ7dmpQH4rXTaX4VY,11
+bids2table-2.0.0a0.dist-info/RECORD,,
