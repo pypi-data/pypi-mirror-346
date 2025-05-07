@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+reddit_scraper/__init__.py
+reddit_scraper/reddit_scraper.py
+reddit_scraper_tool.egg-info/PKG-INFO
+reddit_scraper_tool.egg-info/SOURCES.txt
+reddit_scraper_tool.egg-info/dependency_links.txt
+reddit_scraper_tool.egg-info/requires.txt
+reddit_scraper_tool.egg-info/top_level.txt
+tests/test_reddit_scraper.py
