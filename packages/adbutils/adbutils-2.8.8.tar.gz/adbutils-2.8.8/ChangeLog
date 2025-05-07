@@ -1,0 +1,11 @@
+CHANGES
+=======
+
+2.8.8
+-----
+
+* fix bug, close #165
+* make apkutils optional
+* add apkutils to parse APK, make it simple to install
+* make apkutils2 as optional
+* remove useless print
