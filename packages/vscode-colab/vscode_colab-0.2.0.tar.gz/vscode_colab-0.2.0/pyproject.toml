@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "vscode-colab"
+version = "0.1.0"
+description = "A library to set up a VS Code server in Google Colab."
+authors = ["Agustín Sellanes <essence.sentry@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+loguru = "^0.7.2"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"

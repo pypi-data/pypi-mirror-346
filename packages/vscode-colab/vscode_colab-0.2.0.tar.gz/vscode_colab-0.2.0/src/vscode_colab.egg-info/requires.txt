@@ -1,0 +1,6 @@
+requests
+ipython
+
+[testing]
+pytest
+pytest-cov

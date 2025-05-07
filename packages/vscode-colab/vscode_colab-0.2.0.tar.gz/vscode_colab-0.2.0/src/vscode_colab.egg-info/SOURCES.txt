@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/vscode_colab/__init__.py
+src/vscode_colab/logger_config.py
+src/vscode_colab/server.py
+src/vscode_colab/setup_env.py
+src/vscode_colab.egg-info/PKG-INFO
+src/vscode_colab.egg-info/SOURCES.txt
+src/vscode_colab.egg-info/dependency_links.txt
+src/vscode_colab.egg-info/entry_points.txt
+src/vscode_colab.egg-info/requires.txt
+src/vscode_colab.egg-info/top_level.txt
+tests/test_server.py
+tests/test_setup_env.py

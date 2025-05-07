@@ -1,0 +1,2 @@
+[console_scripts]
+vscode-colab = vscode_colab.server:setup_vscode_server
