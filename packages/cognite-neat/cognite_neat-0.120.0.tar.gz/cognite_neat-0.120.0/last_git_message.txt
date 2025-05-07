@@ -1,0 +1,18 @@
+[NEAT-923] ⏱ Read timeseries (#1148)
+
+# Description
+
+Open question, what to do about timeseries with `assetId`. Do we look it
+up or just skip that field?
+
+## Bump
+
+- [ ] Patch
+- [x] Minor
+- [ ] Skip
+
+## Changelog
+### Added
+
+- Support for reading time series.
+`neat.read.cdf.classic.time_series(...)`.
