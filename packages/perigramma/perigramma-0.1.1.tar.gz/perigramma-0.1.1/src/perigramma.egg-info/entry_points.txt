@@ -1,0 +1,5 @@
+[console_scripts]
+perigramma = perigramma.cli:main
+
+[perigramma.template]
+none = perigramma.template_classes._none:none_template
