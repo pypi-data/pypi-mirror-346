@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: xldparser
+Version: 0.1.4
+Summary: Parse the X Lossless Decoder a.k.a. XLD app log files
+Project-URL: Homepage, https://github.com/rinsuki/python-xldparser
+Project-URL: Repository, https://github.com/rinsuki/python-xldparser.git
+Project-URL: Issues, https://github.com/rinsuki/python-xldparser/issues
+Project-URL: Changelog, https://github.com/rinsuki/python-xldparser/releases
+Author-email: rinsuki <428rinsuki+pypi@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.12.6
+Description-Content-Type: text/markdown
+
+# python-xldparser
+
+![GitHub branch check runs](https://img.shields.io/github/check-runs/rinsuki/python-xldparser/main)
+![PyPI - Version](https://img.shields.io/pypi/v/xldparser)
+![PyPI - License](https://img.shields.io/pypi/l/xldparser)
+
+Parse the [X Lossless Decoder](https://tmkk.undo.jp/xld/) (a.k.a. XLD) log file.
+
+Combine this library with another library like [mutagen](https://github.com/quodlibet/mutagen), you can easily add ripping status (e.g. AccurateRip status, failing sector information) to your ripped audio file, as a metadata.
