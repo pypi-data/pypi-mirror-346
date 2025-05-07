@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: ocelot_api
+Version: 0.2
+Author: Ai, Qianxiang
+Author-email: qai222@uky.edu
+Keywords: ocelot
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: keywords
+Dynamic: license-file
