@@ -1,0 +1,9 @@
+README.md
+setup.py
+playlab_api/__init__.py
+playlab_api/client.py
+playlab_api.egg-info/PKG-INFO
+playlab_api.egg-info/SOURCES.txt
+playlab_api.egg-info/dependency_links.txt
+playlab_api.egg-info/requires.txt
+playlab_api.egg-info/top_level.txt
