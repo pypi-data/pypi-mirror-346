@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-allthetools
+Version: 0.1.0
+Summary: Add your description here
+Home-page: 
+Author: mseep
+Author-email: TerminalMan <84923604+SecretiveShell@users.noreply.github.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.6.0
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# mcp-allthetools
+
+all the tools from glama api in one place. 
+
+THIS IS A TEST SERVER AND DOES NOT ACTUALLY IMPLEMENT ANY TOOLS. THIS SERVER HAS ~8000 TOOLS AND CAN CRASH CLIENTS. DO NOT USE THIS IN PRODUCTION.
