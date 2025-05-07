@@ -1,0 +1,25 @@
+[build-system]
+# setup-hooks requires setuptools>=64
+# some deps are required for setup.py
+requires = ["setuptools>=64", "requests", "tomli", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+namespaces = false
+include = ["setuptools_rust_bundled"]
+
+[project]
+name = "setuptools-rust-bundled"
+authors = [{ name = "Yasuo Ozu", email = "opensource@qunasys.com" }]
+description = "Rust extension builder shipped with rust toolchain"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["setuptools", "rust", "build-backend"]
+license = { text = "MIT" }
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = ["requests", 'importlib-metadata; python_version<"3.10"']
+version = "0.1.0"

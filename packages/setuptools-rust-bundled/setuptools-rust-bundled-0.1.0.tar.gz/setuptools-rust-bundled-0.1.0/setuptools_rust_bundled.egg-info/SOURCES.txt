@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+channel-rust-stable.toml
+pyproject.toml
+setup.py
+setuptools_rust_bundled/__init__.py
+setuptools_rust_bundled/maturin.py
+setuptools_rust_bundled/setuptools.py
+setuptools_rust_bundled.egg-info/PKG-INFO
+setuptools_rust_bundled.egg-info/SOURCES.txt
+setuptools_rust_bundled.egg-info/dependency_links.txt
+setuptools_rust_bundled.egg-info/requires.txt
+setuptools_rust_bundled.egg-info/top_level.txt

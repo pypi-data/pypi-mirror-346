@@ -1,0 +1,2 @@
+include channel-rust-stable.toml
+exclude data temp
