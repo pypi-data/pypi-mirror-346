@@ -1,0 +1,15 @@
+dockerflow>=2018.4.0
+pyhive
+requests
+sqlparse
+
+[dev]
+watchdog[watchmedo]
+
+[test]
+flake8==3.5.0
+importlib-metadata<5.0.0,>=1.6
+mock
+pytest
+pytest-cov
+pytest-flake8>=1.0.5
