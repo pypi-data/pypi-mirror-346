@@ -1,0 +1,2 @@
+[console_scripts]
+weather-c = weather_c:weather_c.py
