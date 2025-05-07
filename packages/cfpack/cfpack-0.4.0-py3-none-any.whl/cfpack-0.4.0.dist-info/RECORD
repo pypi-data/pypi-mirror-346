@@ -1,0 +1,13 @@
+cfpack/__init__.py,sha256=x--TO64bqlSBXQBDMBDQN7sD6j03ytoqbq4YTeJTv24,78904
+cfpack/automator.py,sha256=OoNwuYG09ayLYsRnGOYVBqf93V3q5qCU6CKpzOOtw0A,6531
+cfpack/browser_control.py,sha256=Nlx2zqwZRZz86GfsrYvrWZYl9MeAnRcRpbpFUXrW25w,5236
+cfpack/constants.py,sha256=Xo4P0NdNwbNLAMRh17DM1pkPL4EpsxmAs_fY9_bt6u4,903
+cfpack/defaults.py,sha256=9cAmoxMS822K5Pv3nsEV7NeEuBxmQYr0ckxMljKJSJs,474
+cfpack/hdfio.py,sha256=24irH2SVHQb4RXdB7YhLMB_Lgu58jXzWIATcnK8H1ug,7047
+cfpack/matplotlibrc.py,sha256=3dAiZmmOx6J3hfKJAABoM9Bhhr4O_xsvr8b-Hej_F9A,1331
+cfpack/tests.py,sha256=F_1b2smXoK8RjhV4dJbJpZ6rxOYkWI5J3eY33F2v3rM,3507
+cfpack-0.4.0.dist-info/licenses/LICENSE,sha256=ygvfGXPrM5aZ5OiPnqcpUjVZ1f3NDzx0zkb4IlWRuk0,1076
+cfpack-0.4.0.dist-info/METADATA,sha256=Os9319g4_2BJezDhinHEUQ_C1P8UxU2hGV7Ua_01eRs,1418
+cfpack-0.4.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+cfpack-0.4.0.dist-info/top_level.txt,sha256=pLBlVdvCe7sN8VLK3OQqo-kMJm-WrxuJTcWv8QpM2PY,7
+cfpack-0.4.0.dist-info/RECORD,,
