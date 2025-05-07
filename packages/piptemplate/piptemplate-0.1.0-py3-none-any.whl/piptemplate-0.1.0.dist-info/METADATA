@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: piptemplate
+Version: 0.1.0
+Summary: A simple pip template by Abdullah Adeeb
+Author-email: Abdullah Adeeb <abdullah@abdullahadeeb.xyz>
+License-Expression: MIT
+Project-URL: Repository, https://github.com/abdullahadeebx/piptemplate
+Project-URL: Bug Tracker, https://github.com/abdullahadeebx/piptemplate/issues
+Project-URL: Homepage, https://www.abdullahadeeb.xyz
+Keywords: pip,template,cli
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# piptemplate
+
+A simple "hello world" project that can be installed with pip and run from the command line. 

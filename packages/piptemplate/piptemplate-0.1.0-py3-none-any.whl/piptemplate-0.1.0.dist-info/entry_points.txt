@@ -1,0 +1,2 @@
+[console_scripts]
+piptemplate = piptemplate.main:run
