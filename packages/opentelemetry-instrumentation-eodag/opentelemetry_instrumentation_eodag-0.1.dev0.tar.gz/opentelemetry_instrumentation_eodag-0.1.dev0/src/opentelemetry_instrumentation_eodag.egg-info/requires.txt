@@ -1,0 +1,17 @@
+eodag
+stac-fastapi.types
+opentelemetry-api
+opentelemetry-sdk
+
+[dev]
+pre-commit
+pytest
+pytest-cov
+pytest-html
+pytest-xdist
+pytest-socket
+pytest-instafail
+tox
+tox-uv
+twine
+wheel
