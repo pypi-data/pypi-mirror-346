@@ -1,0 +1,16 @@
+defaults:
+  - cfg
+  - mode: train
+  - model: llava-7b
+  - trainer: pretrain
+  - inference: default
+  - dataset: llava_pretrain
+  - override hydra/job_logging: rich
+  - _self_
+
+hydra:
+  job:
+    chdir: true
+  job_logging:
+    root:
+      level: INFO
