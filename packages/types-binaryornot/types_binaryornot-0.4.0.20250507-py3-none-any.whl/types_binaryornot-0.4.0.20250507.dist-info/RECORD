@@ -1,0 +1,10 @@
+binaryornot-stubs/METADATA.toml,sha256=i_cQ_0-pnrvSJWQpjDFvNB1APxZVdi2fZX0P8JyDw1E,85
+binaryornot-stubs/__init__.pyi,sha256=HjTwZ17T2gmTnOda2qr4hAEvBnCQIutovdpbYbpdr6M,95
+binaryornot-stubs/check.pyi,sha256=xYi9o8KxImckxUOLNVcg8yJijLttkb459oqvhBNTmS0,91
+binaryornot-stubs/helpers.pyi,sha256=bih-jaizzgPOFK6j0Ms506uHinpCI5iy3XAhKhJCJP8,228
+binaryornot-stubs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+types_binaryornot-0.4.0.20250507.dist-info/licenses/LICENSE,sha256=KV-FOMlK5cMEMwHPfP8chS2ranhqjd7kceBhtA1eyr4,12657
+types_binaryornot-0.4.0.20250507.dist-info/METADATA,sha256=53HRcIV1HhYtruveVxJkmp441my8hNoVPStS0L642Ww,1857
+types_binaryornot-0.4.0.20250507.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+types_binaryornot-0.4.0.20250507.dist-info/top_level.txt,sha256=fjTKhvSFQ_OhVx4Xv_hKsFrA5qjRix3cU27Ar355l9w,18
+types_binaryornot-0.4.0.20250507.dist-info/RECORD,,
