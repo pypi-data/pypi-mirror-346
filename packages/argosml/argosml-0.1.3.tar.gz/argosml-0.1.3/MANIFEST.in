@@ -1,0 +1,13 @@
+include README.md
+include LICENSE
+
+# Include all built frontend files
+recursive-include argosml/reports_dashboard/dist/spa *
+
+# Exclude temporary or dev files
+recursive-exclude * __pycache__ *.py[cod] *.so .DS_Store
+recursive-exclude .git *
+recursive-exclude .ipynb_checkpoints *
+recursive-exclude temp_* *
+recursive-exclude mlruns *
+recursive-exclude mlartifacts *

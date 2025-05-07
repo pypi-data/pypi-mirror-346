@@ -1,0 +1,2 @@
+[console_scripts]
+argosml = argosml.cli:main
