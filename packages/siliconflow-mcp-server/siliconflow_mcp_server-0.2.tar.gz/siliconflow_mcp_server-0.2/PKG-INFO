@@ -1,0 +1,6 @@
+Metadata-Version: 2.2
+Name: siliconflow-mcp-server
+Version: 0.2
+Requires-Dist: mcp>=1.4.1
+Requires-Dist: requests>=2.32.3
+Dynamic: requires-dist
