@@ -1,0 +1,16 @@
+langchain>=0.1.0
+langchain-google-genai>=0.0.5
+langchain-community>=0.0.13
+beautifulsoup4>=4.12.2
+requests>=2.31.0
+python-dotenv>=1.0.0
+lxml>=4.9.3
+pypdf>=3.17.0
+python-docx>=0.8.11
+markdown>=3.4.3
+mistune>=2.0.5
+striprtf>=0.0.22
+pandas>=2.0.0
+openpyxl>=3.1.2
+ezodf>=0.3.2
+pyyaml>=6.0
