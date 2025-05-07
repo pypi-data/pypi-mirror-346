@@ -1,0 +1,13 @@
+toyrl/__init__.py,sha256=_m_Mw1MHfu0CEFtGgPgYr_D-t-FvrlzBuo6tD5yag4I,425
+toyrl/a2c.py,sha256=ye69b5TzhLF8856cUIg_JjjHkW0oxHabvEKvAeP20pA,9792
+toyrl/dqn.py,sha256=lye2OD1BqT2BHRQkdh3YTEkfMfZ6fUTpCXvHSz1btaA,11453
+toyrl/ppo.py,sha256=9yCIWKGs_NAUhN5JQryo6rKJBy0OaOFx-N6JuKvtwfc,12918
+toyrl/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+toyrl/reinforce.py,sha256=mae1TpVJygmAk4dAxmcoIm-FCG3obIU1G70ZCzyqB-8,6638
+toyrl/sarsa.py,sha256=xh2xTpb12T2lLUnMd1hNW-Dep3mqdcJFcAGKhRAbY3o,8310
+toyrl-0.3.0.dist-info/licenses/LICENSE,sha256=MN_NLL6T3BJplDXWJdZA2IR_E2ho-eyXbsZj2g5csNU,11346
+toyrl-0.3.0.dist-info/METADATA,sha256=-rvUOfEc63gd_WgRiRvjldGXEimBLDh5fp0DusSkrXw,3720
+toyrl-0.3.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+toyrl-0.3.0.dist-info/top_level.txt,sha256=RnioNUYLqZ1uB6BCJ81Zke3sTwpNeygv--gugD8_tnY,6
+toyrl-0.3.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+toyrl-0.3.0.dist-info/RECORD,,
