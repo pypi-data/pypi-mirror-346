@@ -1,0 +1,11 @@
+Iris/Codec.pyi,sha256=syjazUH07Oy1Yzj3pVSUYEjjA9TLa3EI626LxWSlfH0,8240
+Iris/Iris.cpython-311-aarch64-linux-gnu.so,sha256=P1Zc6nj2g6yx4bgwkjZ-V4oMdkSGh5R5iY-tbEONfFY,8829880
+Iris/__init__.py,sha256=GN_2e85AEyMXy8oRtfCfejvcFIYMg32wMfVLIovJL6E,181
+Iris/__init__.pyi,sha256=PQWe-e8MkhhZh9lM_6gtTGwXqtTC7V0PGngkQOb0lgw,5623
+Iris/Encoder/Encoder.cpython-311-aarch64-linux-gnu.so,sha256=WnQkuJKmgvK2dCFcG3c2JOPUCz1W-Ts-68_zy3-n7to,8698912
+Iris/Encoder/Encoder.pyi,sha256=TKzI9X18m3axaoc_xObNriDOaUpKH13IhYJsxnemdkY,1134
+Iris/Encoder/__init__.py,sha256=H8QWmoa3KbEWb7fGqh39LR6E-lw0Sxs7O7-cHwXiglY,3228
+iris_codec-2025.2.0a1.dist-info/METADATA,sha256=QXANUDppzis3Kdh-OlTWN4xrBPCReVMPhC75t6Ptn2g,39631
+iris_codec-2025.2.0a1.dist-info/WHEEL,sha256=OytgW6oyrFrUPpdMgBir55AUSY6ZBoT3L7sk1MJKgb4,119
+iris_codec-2025.2.0a1.dist-info/RECORD,,
+iris_codec-2025.2.0a1.dist-info/licenses/LICENSE,sha256=vGKLNGZeuPLy3p5ZrlGX1xDtBvENYVCwxE-W4mMRwow,27655
