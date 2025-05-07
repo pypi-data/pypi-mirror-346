@@ -1,0 +1,48 @@
+from typing import Any, Dict, List
+
+from trustwise.sdk.types import HelpfulnessRequest, HelpfulnessResponse
+
+
+class HelpfulnessMetric:
+    """Helpfulness metric for evaluating response helpfulness."""
+    def __init__(self, client) -> None:
+        self.client = client
+        self.base_url = client.config.get_alignment_url("v1")
+
+    def evaluate(
+        self,
+        *,
+        query: str,
+        response: str,
+        **kwargs
+    ) -> HelpfulnessResponse:
+        """
+        Evaluate the helpfulness of a response to the query.
+
+        Args:
+            query: The query string (required)
+            response: The response string (required)
+
+        Returns:
+            HelpfulnessResponse containing the evaluation results
+        """
+        req = HelpfulnessRequest(query=query, response=response)
+        result = self.client._post(
+            endpoint=f"{self.base_url}/helpfulness",
+            data=req.model_dump() if hasattr(req, "model_dump") else req.dict()
+        )
+        return HelpfulnessResponse(**result)
+
+    def batch_evaluate(
+        self,
+        inputs: List[HelpfulnessRequest]
+    ) -> List[HelpfulnessResponse]:
+        """Evaluate multiple inputs for helpfulness."""
+        raise NotImplementedError("Batch evaluation not yet supported")
+
+    def explain(
+        self,
+        request: HelpfulnessRequest
+    ) -> Dict[str, Any]:
+        """Get detailed explanation of the helpfulness evaluation."""
+        raise NotImplementedError("Explanation not yet supported") 
