@@ -1,0 +1,19 @@
+[project]
+name = "mcp-data-analzyer"
+version = "0.1.5"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "pandas>=2.2.3",
+    "seaborn>=0.13.2",
+    "twine>=6.1.0",
+    "openpyxl>=3.1.5",
+]
+[project.scripts]
+mcp-data-analzyer = "mcp_data_analzyer:main"
+
+
+[tool.setuptools.packages.find]
+include = ["mcp_data_analzyer"]
