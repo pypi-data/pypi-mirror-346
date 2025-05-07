@@ -1,0 +1,3 @@
+[console_scripts]
+spatialsnvtools = spatialsnvtools.cli:main
+
