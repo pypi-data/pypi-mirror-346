@@ -1,0 +1,8 @@
+setup.py
+calculadora/__init__.py
+calculadora/operacoes.py
+calculadora_liblivia.egg-info/PKG-INFO
+calculadora_liblivia.egg-info/SOURCES.txt
+calculadora_liblivia.egg-info/dependency_links.txt
+calculadora_liblivia.egg-info/top_level.txt
+tests/test_operacoes.py
