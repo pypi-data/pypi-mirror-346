@@ -1,0 +1,18 @@
+[project]
+name = "weather-c"
+version = "0.1.9"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.7.1",
+]
+
+[project.scripts]
+weather-c = "weather_c:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
