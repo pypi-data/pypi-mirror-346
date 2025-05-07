@@ -1,0 +1,3 @@
+[console_scripts]
+calendar-mcp = calendar_sse_mcp.__main__:main
+server = calendar_sse_mcp.__main__:server_cli_main
