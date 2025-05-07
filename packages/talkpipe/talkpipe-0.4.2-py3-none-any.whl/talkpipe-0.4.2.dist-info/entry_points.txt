@@ -1,0 +1,3 @@
+[console_scripts]
+chatterlang_server = talkpipe.app.scriptendpoint:main
+talkpipe_ref = talkpipe.app.unit_documentation_analyzer:go
