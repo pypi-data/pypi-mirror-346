@@ -1,0 +1,8 @@
+bake/__init__.py,sha256=RAXiIF8PQ3bXu5qMJLbeXDQyq1xfYZBuCCVwJIIa2y0,25
+bake/bake_cli.py,sha256=GrChyhZOSlbxKtO3cwUz5PmrFEpXIKjNX0uAllBINyw,357
+bake/core.py,sha256=V91rs2HQkldzuSVVuRKbvGFLNOyBwu-LDKRL7uETPp8,4432
+bakery_build-1.0.4.dist-info/METADATA,sha256=LwZB2Omql2S3mNSt9nbn7gKA_EIN1mD6Aqvmn6mK8v0,889
+bakery_build-1.0.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+bakery_build-1.0.4.dist-info/entry_points.txt,sha256=8n6v49kU_j4KjwdtUN8jNk_p1HZS4Bm377jrdlxxfog,44
+bakery_build-1.0.4.dist-info/top_level.txt,sha256=JfzAM794-cNFnVhac0J8EYg8Xka-cq9oi42s2-S4wbM,5
+bakery_build-1.0.4.dist-info/RECORD,,
