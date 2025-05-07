@@ -1,0 +1,10 @@
+hdf5storage/__init__.py,sha256=tR04QmvGyTjBCfYHz174LjOs2m6atgHOz3cg3OQtn-w,102966
+hdf5storage/exceptions.py,sha256=RMZ9yLFqEc-LaV_7dgfa1NDnJHLiWjAu3Rr2d8btz7E,2101
+hdf5storage/marshallers.py,sha256=_WEtrf77-zTneXsSWkEu86vmipxIU1iIZwUXQlzBYEw,100143
+hdf5storage/pathesc.py,sha256=6GuvQrYQ2ktPIlL5G9vX-f8RBmeZz5MYOraxtL69E7g,10431
+hdf5storage/plugins.py,sha256=hJYkUdiyZxwO3OBLholJcl1PKUBaREkhEwQtOC6ksE4,3323
+hdf5storage/utilities.py,sha256=exE67-J0wx33vFFkm-vnxDiblEDzqHdQAwMg7pA6-tE,54039
+hdf5storage-0.2.0.dist-info/COPYING.txt,sha256=GqG0YYkzrY-P-bRD7CY97WAdRA1h7v1WHWcmaUDsVNU,1322
+hdf5storage-0.2.0.dist-info/METADATA,sha256=PQLjTl0GnMcwUJjr7eSI-3_4sEaUzBGIchx5X7UspM0,44082
+hdf5storage-0.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+hdf5storage-0.2.0.dist-info/RECORD,,
