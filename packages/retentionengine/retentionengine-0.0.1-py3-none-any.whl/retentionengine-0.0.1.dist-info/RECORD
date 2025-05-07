@@ -1,0 +1,8 @@
+retentionengine/__init__.py,sha256=8zsXp8lQ6MKjcHMhS4lStLr0HNdt_nygXsVcOPvzncw,183
+retentionengine/adapters/__init__.py,sha256=FmppbXLBeGcZyjaJaqDnIBNIIspowU0A8ZJVXwg4e0k,37
+retentionengine/adapters/engine.py,sha256=1yHFmMTa8zJh7reg1JNfKngcMGLiY4GIhQI6d0Q4k3w,1814
+retentionengine/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+retentionengine-0.0.1.dist-info/licenses/LICENSE,sha256=xAOpp6R4MhyHC4bh9NjOoRo9iozGKoOvSmbp89AnBxU,1091
+retentionengine-0.0.1.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+retentionengine-0.0.1.dist-info/METADATA,sha256=g-QrEDCJkxJtnsV9DlH0avQJ5rTGRkmSBNkO0tAXY-c,2929
+retentionengine-0.0.1.dist-info/RECORD,,
