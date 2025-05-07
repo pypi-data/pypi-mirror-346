@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling >= 1.26", "numpy"]
+build-backend = "hatchling.build"
+
+[project]
+name = "frexpy"
+version = "1.0.0"
+authors = [
+    { name="Guilherme da Silva Frainer", email="guilherme.sfrainer@gmail.com" },
+]
+description = "A translation of the R function that calculates the FREX metric for topic modelling"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E"]
+
+[project.urls]
+Homepage = "https://github.com/GuilhermeFrainer/frexpy"
+Issues = "https://github.com/GuilhermeFrainer/frexpy/issues"
