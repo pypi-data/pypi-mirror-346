@@ -1,0 +1,2 @@
+[console_scripts]
+mcpserver-zyq = mcpserver_zyq:main
