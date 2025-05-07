@@ -1,0 +1,44 @@
+[project]
+name = "cloud_aitools"
+version = "1.1.0"
+description = "cloud_aitools is a CLI tool for managing AI models on Tencent Cloud, providing high-performance upload, download and model management capabilities."
+readme = "README_EN.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.11.18",
+    "alive-progress>=3.2.0",
+    "anyio>=4.9.0",
+    "blake3>=1.0.4",
+    "build>=1.2.2.post1",
+    "cos-python-sdk-v5>=1.9.36",
+    "minio>=7.2.15",
+    "pydantic>=2.11.3",
+    "tqdm>=4.67.1",
+    "twine>=6.1.0",
+    "typer>=0.15.2",
+]
+
+[[tool.uv.index]]
+url = "http://mirrors.tencentyun.com/pypi/simple"
+
+[tool.uv.sources]
+aitools = { workspace = true }
+
+[tool.uv]
+package = true
+
+[project.scripts] 
+aitools = "cloud_aitools.main:app"
+
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[dependency-groups]
+dev = [
+    "cloud_aitools",
+]
