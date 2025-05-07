@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/diffeal/__init__.py
+src/diffeal/models.py
+src/diffeal/toolbox.py
+src/diffeo_elasticity.egg-info/PKG-INFO
+src/diffeo_elasticity.egg-info/SOURCES.txt
+src/diffeo_elasticity.egg-info/dependency_links.txt
+src/diffeo_elasticity.egg-info/requires.txt
+src/diffeo_elasticity.egg-info/top_level.txt
