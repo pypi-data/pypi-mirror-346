@@ -1,0 +1,3 @@
+[console_scripts]
+volttron-ilc=ilc.ilc_agent:main
+
