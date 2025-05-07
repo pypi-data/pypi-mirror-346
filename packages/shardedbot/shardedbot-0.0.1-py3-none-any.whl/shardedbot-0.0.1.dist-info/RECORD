@@ -1,0 +1,13 @@
+sharded/__init__.py,sha256=H7iMMYDSiEOZQm-dpA5zGFkaJZARgQyLT2hbPVClLTc,320
+sharded/__main__.py,sha256=D9qJ6mvKDm8FgVyJy2OjYdZZe2CO0NxMDI78qsOauE8,55
+sharded/config.py,sha256=ouVlns-s48FEt6dwmayzihP6n-yEtpY1Ck82DMVmed8,5572
+sharded/main.py,sha256=OoFZ0_oEnj7MQsfmMyIYJuY86ksYYIGpnGwCihmnptE,8400
+sharded/services.py,sha256=BYjE9xhOt0IKdhGPXYgKrAxX-QrUgKs_XIHE7y5HmeA,1960
+sharded/CLI/addons.py,sha256=Em_1ptEQ-askbwmSoZnrouxGeXClvuPnbCmT-hARIWk,6327
+sharded/CLI/main.py,sha256=250A3zXmlL5z9-Y_NuB1R--7bY01XPtGfYjuVjG3_w4,2318
+sharded/cogs/moderation.py,sha256=rXQ69he4lGTRHiSdLeKJSbBxEOWMgYMZMm7gzerM0R4,4107
+shardedbot-0.0.1.dist-info/METADATA,sha256=idpPWG_gDuElnB33l18_30ifeC5Qvqk4aLqpdpgKdxs,1654
+shardedbot-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+shardedbot-0.0.1.dist-info/entry_points.txt,sha256=-B75IYvJRg1pjTDlWhlRUKtiTsVk0LPy8nLNFQ8xZpg,49
+shardedbot-0.0.1.dist-info/licenses/LICENSE,sha256=4hrxgbmJOb2egdhDitlbPZ6Bfp6J371ULwTuYQDJG5Y,1064
+shardedbot-0.0.1.dist-info/RECORD,,

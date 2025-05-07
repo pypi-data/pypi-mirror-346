@@ -1,0 +1,2 @@
+[console_scripts]
+sharded = sharded.CLI.main:app
