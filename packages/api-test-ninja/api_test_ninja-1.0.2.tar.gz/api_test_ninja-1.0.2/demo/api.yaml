@@ -1,0 +1,145 @@
+api_base_url: "http://localhost:8000"
+openapi_spec: "http://localhost:8000/openapi.json"
+flows:
+  user_management:
+  - goal: "Create, fetch, update, list, and delete users in a mock user management system."
+    background_info: |
+      Use the User CRUD API to create a user, retrieve that user, update their data, list all users, and delete the user.
+    expected_result: |
+      Each step should return 2xx on success. Final delete should return 204 or 200.
+    variables: {}
+    test_type: "integration"
+    metadata:
+      collection: "User Management"
+      priority: 1
+
+  - goal: "Delete a user with user_id that is not in the system"
+    background_info: |
+      DELETE to /users/{user_id} with a user_id that does not exist in the system. that could be a random UUID for the user
+    expected_result: |
+      Expect a 404 Not Found response with a relevant error message.
+    variables: {}
+    test_type: "negative"
+    metadata:
+      collection: "User Management"
+      priority: 2
+
+  - goal: "Create multiple users, fetch one, delete the user"
+    background_info: |
+      - Use the /batch endpoint to create multiple users.
+      - Use the GET /users endpoint to retrieve all users.
+      - Use DELETE on /user/{user_id} to delete that user. Remember to resolve the user_id using one of the users created in the batch.
+    expected_result: |
+      All operations should succeed with 2xx responses.
+    variables: {}
+    test_type: "integration"
+    metadata:
+      collection: "User Management"
+      priority: 3
+
+  - goal: "Search for users by name and city"
+    background_info: |
+      Use the GET /users/search endpoint to find users by name and city.
+    expected_result: |
+      Should return filtered users with 200 status.
+    variables: {}
+    test_type: "integration"
+    metadata:
+      collection: "User Search"
+      priority: 2
+
+  - goal: "Try updating user email to invalid format"
+    background_info: |
+      - Retreive all users using GET /users.
+      - Update a user's email to an invalid format with PATCH /users/{user_id} endpoint. Resolve the user_id using one of the users retrieved previously.
+    expected_result: |
+      Should return 422 Unprocessable Entity or 400 Bad Request.
+    variables: {}
+    test_type: "negative"
+    metadata:
+      collection: "Validation"
+      priority: 2
+
+  - goal: "Create user with missing required fields"
+    background_info: |
+      Omit required fields like email during user creation to test schema validation.
+    expected_result: |
+      Should return 422 or 400 with clear validation error.
+    variables: {}
+    test_type: "negative"
+    metadata:
+      collection: "Validation"
+      priority: 2
+
+  - goal: "Deactivate a user using the soft delete endpoint"
+    background_info: |
+      First create a user using POST /users.
+      Then, use the PATCH /users/{user_id}/deactivate endpoint to mark the user as inactive. Remember to resolve user_id.
+    expected_result: |
+      Should return updated user with 'inactive' tag.
+    variables: {}
+    test_type: "integration"
+    metadata:
+      collection: "User Deactivation"
+      priority: 3
+
+  - goal: "Add tags to an existing user"
+    background_info: |
+      - First create a fake user using POST to /users endpoint.
+      - Use the GET /users endpoint to retrieve all the users.
+      - Then, use the PATCH /users/{user_id}/tags endpoint with using the proper payload and one of the user_id. Resolve the parameterized {user_id} using the user_id created previously.
+    expected_result: |
+      Should return 2xx success and updated user with new tags.
+    variables: {}
+    test_type: "integration"
+    metadata:
+      collection: "User Tags"
+      priority: 2
+
+  - goal: "Fetch user statistics summary"
+    background_info: |
+      First add batch of users, using POST /batch.
+      Then, use GET /stats to retrieve user statistics.
+    expected_result: |
+      Should return counts and a tag breakdown.
+    variables: {}
+    test_type: "integration"
+    metadata:
+      collection: "User Stats"
+      priority: 1
+
+  - goal: "Access user profile without authentication"
+    background_info: |
+      - First create a user using POST /users.
+      - Goto /login/{user_id}/profile endpoint after resolving the user created earlier
+    expected_result: |
+      Should return 200.
+    variables: {}
+    test_type: "integration"
+    metadata:
+      collection: "Security"
+      priority: 4
+
+  - goal: "Access protected user info with missing token"
+    background_info: |
+      - Create a user using POST /users.
+      - Call GET /login without setting an token.
+    expected_result: |
+      Should return 401 Unauthorized.
+    variables: {}
+    test_type: "negative"
+    metadata:
+      collection: "Security"
+      priority: 1
+
+  - goal: "Access protected user info with valid token"
+    background_info: |
+      - Create a user using POST /users.
+      - Call GET /login with x-token as `secrettoken` in the header.
+    expected_result: |
+      Should return 200 OK with message payload.
+    variables: {}
+    test_type: "integration"
+    metadata:
+      collection: "Security"
+      priority: 2

@@ -1,0 +1,59 @@
+api:
+  base_url: "http://localhost:8000"
+  openapi_spec: "http://localhost:8000/openapi.json"
+
+defaults:
+  - All endpoints are accessible unless otherwise protected.
+  - User IDs are UUIDs.
+  - Token `secrettoken` is valid when used in the `x-token` header.
+  - Assume a clean database state unless stated.
+  - If you need a user_id, create a user first or use the one from the previous step if applicable.
+  - Dynamic variables need to be resolved before use so try to plan accordingly when creating the list of actions in the flow.
+
+collections:
+  user_management:
+    description: "Basic user CRUD operations."
+    flows:
+      - get_users_happy_path
+      - get_users_error_handling
+      - put_users_user_id_boundary_value
+
+flows:
+  get_users_happy_path:
+      description:
+        Perform a GET request to /users to retrieve a list of users. No setup
+        is required as it fetches existing data.
+      expectations: 200 OK with an array of user objects.
+      notes: Ensure response matches the User schema and contains array of User objects.
+  get_users_error_handling:
+      description:
+        "Perform a GET request to /users with incorrect header 'Accept:
+        text/plain'."
+      expectations: An error response with 422 Validation Error.
+      notes: This is testing if the system handles unsupported media types correctly.
+  put_users_user_id_boundary_value:
+      description:
+        Create a user using POST /users, then attempt a PUT request to /users/{user_id}
+        with age set to 130 (boundary value).
+      expectations:
+        An error response with 422 Validation Error due to exclusive maximum
+        age constraint.
+      notes:
+        User ID should be dynamically fetched from the created user. Age should
+        trigger validation error due to exclusive limit.
+  get_users_schema_validation:
+      description:
+        Perform a GET request to /users and validate the response schema
+        against multiple users to ensure all objects conform to the User model.
+      expectations: 200 OK with correct schema for all user objects.
+      notes:
+        Validate all User object fields such as 'id', 'name', 'age', etc., to ensure
+        they follow the defined schema.
+  get_protected_info_login_authentication:
+      description: Perform a GET request to /login/ without the 'x-token' header.
+      expectations:
+        200 OK and returns a successful response given no authentication
+        mechanisms are suggested in the OpenAPI spec.
+      notes:
+        The request tests information retrieval without explicit authentication
+        as suggested by the missing authentication requirement.
