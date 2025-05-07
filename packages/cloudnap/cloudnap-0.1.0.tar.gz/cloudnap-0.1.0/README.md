@@ -1,0 +1,204 @@
+# `cloudnap` - Cost Optimization for AWS Services
+
+`cloudnap` is a Python package that provides an easy-to-use solution for automating the scaling and management of AWS infrastructure to reduce costs. With this package, you can automatically scale down resources during idle times (e.g., weekends) and scale up prior to load tests, ensuring cost savings across multiple AWS environments.
+
+---
+
+## 📦 Table of Contents
+
+1. [Overview](#overview)
+2. [Installation](#installation)
+3. [Configuration](#configuration)
+4. [Usage](#usage)
+
+   * [CLI Usage](#cli-usage)
+   * [GitHub Actions Integration](#github-actions-integration)
+5. [Supported Services](#supported-services)
+6. [Sample Configuration](#sample-configuration)
+7. [License](#license)
+8. [Contributing](#contributing)
+
+---
+
+## 🚀 Overview
+
+### Problem
+
+In many organizations, cloud resources (like ECS, Aurora, RDS) remain running even during off-peak times, leading to unnecessary costs. These resources may be idle over weekends, after working hours, or when no load tests are being performed.
+
+### Solution
+
+`cloudnap` helps solve this problem by automating the scaling of AWS services. The package allows you to:
+
+* Scale ECS services up or down (change desired task counts).
+* Stop or start Aurora Serverless databases based on schedules.
+* Manage RDS and EC2 services (optional extensions).
+* Integrate easily with GitHub Actions for automation.
+
+### Features
+
+* **Cost Savings**: Reduce AWS costs by automating infrastructure scaling.
+* **Modular**: Supports ECS, Aurora, and can be extended for other services like EC2, RDS, and Lambda.
+* **Easy Integration**: Easily integrate with your existing workflows, GitHub repositories, and cloud environments.
+* **CLI Support**: Manual scaling of resources directly from the terminal.
+
+---
+
+## 💻 Installation
+
+To install `cloudnap`, you can simply use `pip`:
+
+```bash
+pip install cloudnap
+```
+
+Or, you can clone the repository and install it manually:
+
+```bash
+git clone https://github.com/your-username/cloudnap.git
+cd cloudnap
+pip install .
+```
+
+---
+
+## 🛠️ Configuration
+
+Before you can use the package, you need to provide a configuration file (`aws_infra_config.yaml`) that contains your AWS resource ARNs and environment details.
+
+### Example Configuration (`aws_infra_config.yaml`)
+
+```yaml
+region: "eu-west-2"  # AWS Region
+
+environments:
+  dev:
+    ecs_clusters:
+      - "arn:aws:ecs:eu-west-2:123456789012:cluster/dev-ecs-cluster-1"
+      - "arn:aws:ecs:eu-west-2:123456789012:cluster/dev-ecs-cluster-2"
+    aurora_db: "arn:aws:rds:eu-west-2:123456789012:cluster:dev-aurora-db"
+    rds_instances:
+      - "arn:aws:rds:eu-west-2:123456789012:db:dev-db-instance"
+  stage:
+    ecs_clusters:
+      - "arn:aws:ecs:eu-west-2:123456789012:cluster/stage-ecs-cluster-1"
+    aurora_db: "arn:aws:rds:eu-west-2:123456789012:cluster:stage-aurora-db"
+    rds_instances:
+      - "arn:aws:rds:eu-west-2:123456789012:db:stage-db-instance"
+```
+
+### What to include:
+
+* **Region**: Your AWS region (e.g., `eu-west-2`).
+* **Environments**: A section for each environment (e.g., `dev`, `stage`).
+
+  * **ECS Clusters**: List of ECS clusters that should be scaled.
+  * **Aurora DB**: The ARN of the Aurora database (for Aurora Serverless).
+  * **RDS Instances**: List of RDS instance ARNs (optional).
+
+---
+
+## 🎮 Usage
+
+### CLI Usage
+
+Once the package is installed and the configuration is set up, you can scale your resources manually using the CLI.
+
+#### Scaling ECS Services:
+
+```bash
+aws-infra scale ecs dev down --config aws_infra_config.yaml  # Scale down ECS in dev environment
+aws-infra scale ecs dev up --config aws_infra_config.yaml    # Scale up ECS in dev environment
+```
+
+#### Scaling Aurora Databases:
+
+```bash
+aws-infra scale aurora dev down --config aws_infra_config.yaml  # Stop Aurora in dev environment
+aws-infra scale aurora dev up --config aws_infra_config.yaml    # Start Aurora in dev environment
+```
+
+### GitHub Actions Integration
+
+You can automate this process by adding the following GitHub Action to your repository.
+
+#### Example GitHub Action (`.github/workflows/scale.yml`):
+
+```yaml
+name: Scale ECS and Aurora
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  scale:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: "eu-west-2"
+
+      - name: Scale ECS and Aurora
+        run: |
+          pip install cloudnap
+          aws-infra scale ecs dev up --config aws_infra_config.yaml
+          aws-infra scale aurora dev up --config aws_infra_config.yaml
+```
+
+This will automatically scale your ECS and Aurora resources when the `main` branch is updated, or manually when triggered via GitHub Actions.
+
+---
+
+## ✅ Supported Services
+
+* **ECS**: Automate scaling of ECS tasks (desired count).
+* **Aurora Serverless**: Start/Stop Aurora Serverless clusters.
+* **RDS**: (Optional) Scale RDS instances (coming soon).
+* **EC2**: (Optional) Start/Stop EC2 instances (coming soon).
+
+---
+
+## 📄 Sample Configuration
+
+Here’s a sample `aws_infra_config.yaml`:
+
+```yaml
+region: "eu-west-2"
+
+environments:
+  dev:
+    ecs_clusters:
+      - "arn:aws:ecs:eu-west-2:123456789012:cluster/dev-ecs-cluster-1"
+    aurora_db: "arn:aws:rds:eu-west-2:123456789012:cluster:dev-aurora-db"
+  stage:
+    ecs_clusters:
+      - "arn:aws:ecs:eu-west-2:123456789012:cluster/stage-ecs-cluster-1"
+    aurora_db: "arn:aws:rds:eu-west-2:123456789012:cluster:stage-aurora-db"
+```
+
+This file defines the AWS resources (ARNs) for each environment.
+
+---
+
+## 📝 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! To contribute to this package, please fork the repository, make your changes, and submit a pull request. You can also open issues for suggestions or bug fixes.
+
+---
+
+Let me know if you need any additional sections or refinements!

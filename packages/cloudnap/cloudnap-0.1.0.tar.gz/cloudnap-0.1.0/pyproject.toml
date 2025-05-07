@@ -1,0 +1,20 @@
+[project]
+name = "cloudnap"
+version = "0.1.0"
+description = "A Python package to automate AWS resource scaling for cost optimization."
+authors = [
+    {name="Dilnawaz Warisi", email= "dilnawaz07@gmail.com"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+homepage = "https://github.com/dilnawazwarisi/cloudnap"
+repository = "https://github.com/dilnawazwarisi/cloudnap"
+dependencies = [
+    "boto3 (>=1.38)",
+    "pyyaml (>6.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
