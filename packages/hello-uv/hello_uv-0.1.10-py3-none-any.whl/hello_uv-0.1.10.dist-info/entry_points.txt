@@ -1,0 +1,2 @@
+[console_scripts]
+hello-uv = hello_uv.main:main

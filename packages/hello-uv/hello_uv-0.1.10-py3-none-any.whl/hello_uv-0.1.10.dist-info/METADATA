@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: hello-uv
+Version: 0.1.10
+Summary: Add your description here
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# Hello World Example
+
+A simple hello world package.
