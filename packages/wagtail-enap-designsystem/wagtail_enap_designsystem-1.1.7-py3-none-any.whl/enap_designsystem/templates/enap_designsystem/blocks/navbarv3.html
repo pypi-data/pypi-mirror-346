@@ -1,0 +1,135 @@
+{% extends "enap_designsystem/base.html" %}
+{% load wagtailimages_tags %}
+{% block content %}
+<style>
+
+    .wrapper-fix {
+        background-color: #E6FFFA;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .navbarv3 {
+        background-color: #FFFFFF;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        padding: 1rem 0;
+        border-radius: 12px;
+        margin: 0rem 2rem;
+        max-width: 1142px;
+        margin: auto;
+    }
+    
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        max-width: 1142px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: {{ value.primary_color }};
+    }
+    
+    .logo img {
+        max-height: 40px;
+        width: auto;
+    }
+    
+    .nav-linksv3 {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: auto;
+    }
+    
+    .nav-linksv3 a {
+        text-decoration: none;
+        color: #1A202C;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    .nav-linksv3 a:hover {
+        color: {{ value.accent_color }};
+    }
+    
+    .nav-linksv3 a.active {
+        color: {{ value.accent_color }};
+    }
+    
+    .auth-buttons {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .btn_hero {
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    .btn_hero-outline {
+        border: 2px solid {{ value.button_color }};
+        color: {{ value.button_color }};
+        background: transparent;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .btn_hero-primary {
+        background-color: {{ value.button_color }};
+        color: {{ value.button_text_color }};
+        border: none;
+    }
+    
+    .btn_hero:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+        .nav-linksv3 {
+            display: none;
+        }
+    }
+</style>
+<section class="wrapper-fix">
+<div class="navbarv3">
+    <nav class="nav-container">
+        <div class="logo">
+            {% image value.logo_image width-200 as logo %}
+            <img src="{{ logo.url }}" alt="{{ logo.alt }}">
+        </div>
+        
+        <ul class="nav-linksv3">
+            {% for item in value.nav_items %}
+                <li>
+                    <a href="{{ item.link_url }}" {% if item.is_active %}class="active"{% endif %}>
+                        {{ item.link_text }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        
+        <div class="auth-buttons">
+            <a href="{{ value.login_button_url }}" class="btn_hero btn_hero-outline">{{ value.login_button_text }}</a>
+            <a href="{{ value.cta_button_url }}" class="btn_hero btn_hero-primary">{{ value.cta_button_text }}</a>
+        </div>
+    </nav>
+</div>
+</section>
+{% endblock %}
