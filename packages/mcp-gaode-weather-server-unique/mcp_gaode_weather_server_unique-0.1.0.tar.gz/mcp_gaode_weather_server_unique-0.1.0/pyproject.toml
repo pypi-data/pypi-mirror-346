@@ -1,0 +1,11 @@
+[project]
+name = "mcp-gaode-weather-server-unique"
+version = "0.1.0"
+description = "输入Gaode api_key，获取天气信息"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.28.1","mcp>=1.6.0", "numpy>=2.2.5"]
+
+
+[project.scripts]
+mcp-gaode-weather-server-unique = "main:main"
