@@ -1,0 +1,6 @@
+echo ___ls_/___
+
+ls /
+echo ___Workspaces___
+cd /workspaces
+ls

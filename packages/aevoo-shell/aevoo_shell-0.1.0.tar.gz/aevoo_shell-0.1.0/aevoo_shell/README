@@ -1,0 +1,10 @@
+# export aevoo_cid=superadmin
+
+_DIR=/var/aevoo/aevoo/dev/py/clients/aevoo-shell
+cd $_DIR
+export PYTHONPATH=${_DIR}/configshell-fb/:${_DIR}/../aevoo-pyclient/:${_DIR}/../../aevoo-lib/:${_DIR}/../aevoo-pycontrol/:${_DIR}
+export PATH=$PATH:${_DIR}/bin
+source /var/aevoo/.virtualenvs/aevoo/bin/activate
+
+
+./bin/aevooshell
