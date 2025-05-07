@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+create_package_workshop.egg-info/PKG-INFO
+create_package_workshop.egg-info/SOURCES.txt
+create_package_workshop.egg-info/dependency_links.txt
+create_package_workshop.egg-info/requires.txt
+create_package_workshop.egg-info/top_level.txt
+workshop/__init__.py
+workshop/workshop.py
