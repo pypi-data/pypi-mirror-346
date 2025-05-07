@@ -1,0 +1,8 @@
+aa_whisper-0.1.0.dist-info/licenses/LICENSE,sha256=PI4CJUQ6AuyBkBeUlfFcRCw43tUcdlri2Ps8Az6twEI,1091
+whisper/__init__.py,sha256=n2CQPiRpaznjzVKGT0iN3co8I5MOjHFYkppLYLPYo68,58
+whisper/main.py,sha256=oELuvrmgpv8vNnBsFGnDLXItUIQ9ffrbsyS154hYWRo,28580
+aa_whisper-0.1.0.dist-info/METADATA,sha256=YOdefSknvyNju2bcrU7Pnf8dg8shvsmJoC_M18RJvhE,3920
+aa_whisper-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+aa_whisper-0.1.0.dist-info/entry_points.txt,sha256=BsNZjeC2J9uZU9HU8rHT5imOMjzV6l8_Ra-7S0PcIPM,46
+aa_whisper-0.1.0.dist-info/top_level.txt,sha256=e73_hD7PzIrqq5Qkj8xc0C3FVPiu7AOQae35YeSGDfQ,8
+aa_whisper-0.1.0.dist-info/RECORD,,
