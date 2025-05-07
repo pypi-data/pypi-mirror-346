@@ -1,0 +1,2 @@
+[console_scripts]
+cli-telemetry = cli_telemetry.cli:main
