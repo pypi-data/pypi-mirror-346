@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: smart-meeting-agent
+Version: 0.1.2
+Summary: A FastMCP-based smart agent for managing enterprise meeting room reservations.
+Author: rhythmli
+Author-email: rhythmli.scu@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: mcp
+
+# Smart Meeting Agent
+
+A FastMCP-based smart agent for managing enterprise meeting room reservations.
+
+## Features
+
+- Automatically books and manages meeting rooms using FastMCP APIs
+- Simple command-line interface
+- Easy to integrate into enterprise systems
+
+## Installation
+
+```bash
+pip install smart-meeting-agent
