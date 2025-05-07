@@ -1,0 +1,2 @@
+[console_scripts]
+trelby = trelby:trelby.main
