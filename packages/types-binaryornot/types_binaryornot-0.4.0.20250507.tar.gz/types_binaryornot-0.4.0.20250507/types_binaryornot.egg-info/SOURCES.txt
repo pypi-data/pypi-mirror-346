@@ -1,0 +1,15 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+binaryornot-stubs/METADATA.toml
+binaryornot-stubs/__init__.pyi
+binaryornot-stubs/check.pyi
+binaryornot-stubs/helpers.pyi
+binaryornot-stubs/py.typed
+types_binaryornot.egg-info/PKG-INFO
+types_binaryornot.egg-info/SOURCES.txt
+types_binaryornot.egg-info/dependency_links.txt
+types_binaryornot.egg-info/top_level.txt
