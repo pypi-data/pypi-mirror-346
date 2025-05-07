@@ -1,0 +1,8 @@
+include README.md
+include CONTRIBUTING.md
+include LICENSE
+include .env.example
+include config.json.example
+include README_PYPI.md
+include CHANGELOG.md
+include SECURITY.md
