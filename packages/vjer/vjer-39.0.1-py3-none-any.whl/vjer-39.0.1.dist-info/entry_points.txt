@@ -1,0 +1,3 @@
+[console_scripts]
+vjer=vjer.vjer:main
+
