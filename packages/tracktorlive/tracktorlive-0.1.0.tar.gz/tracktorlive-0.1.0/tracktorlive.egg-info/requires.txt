@@ -1,0 +1,5 @@
+opencv-python
+numpy<2.0
+platformdirs
+python-ulid
+scikit-learn
