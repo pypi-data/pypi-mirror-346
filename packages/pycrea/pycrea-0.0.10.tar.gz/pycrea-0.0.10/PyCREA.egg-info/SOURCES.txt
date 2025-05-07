@@ -1,0 +1,15 @@
+MANIFEST.in
+pyproject.toml
+setup.py
+PyCREA/__init__.py
+PyCREA/crea.py
+PyCREA.egg-info/PKG-INFO
+PyCREA.egg-info/SOURCES.txt
+PyCREA.egg-info/dependency_links.txt
+PyCREA.egg-info/requires.txt
+PyCREA.egg-info/top_level.txt
+pycrea.egg-info/PKG-INFO
+pycrea.egg-info/SOURCES.txt
+pycrea.egg-info/dependency_links.txt
+pycrea.egg-info/requires.txt
+pycrea.egg-info/top_level.txt
