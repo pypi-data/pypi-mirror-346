@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "hyku-ingest"
+version = "0.0.9"
+description = ""
+authors = ["Weston49 <weston.agreda@gmail.com>"]
+readme = "README.md"
+include = ["hyku_ingest/*.py"]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+ingest = "hyku_ingest.main:start"
