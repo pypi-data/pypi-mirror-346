@@ -1,0 +1,3 @@
+[console_scripts]
+linear = src.linear_interpolation:main
+spline = src.spline_interpolation:main

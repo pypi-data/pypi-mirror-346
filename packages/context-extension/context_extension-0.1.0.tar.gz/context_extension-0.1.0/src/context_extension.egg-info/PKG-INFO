@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: context-extension
+Version: 0.1.0
+Summary: Zero-Training Context Extension for Transformer Encoders via Nonlinear Absolute Positional Embeddings Interpolation
+Author: Ivan Danylenko
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/Kowd-PauUh
+Project-URL: Repository, https://github.com/Kowd-PauUh/encoders-context-extension
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: torch
+Requires-Dist: sentence-transformers
+Requires-Dist: scipy
+Dynamic: license-file
+
+# Zero-Training Context Extension for Transformer Encoders via Nonlinear Absolute Positional Embeddings Interpolation
+Official implementation of "Zero-Training Context Extension for Transformer Encoders via Nonlinear Absolute Positional Embeddings Interpolation". Paper preprint is coming soon.
+
+## Models
+
+Models are available at HuggingFace:
+
+|Model|Context length|Language|
+|-|-|-|
+|[idanylenko/e5-large-v2-ctx1024](https://huggingface.co/idanylenko/e5-large-v2-ctx1024)|1024|English|
