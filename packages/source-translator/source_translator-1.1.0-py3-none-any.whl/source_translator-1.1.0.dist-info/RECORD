@@ -1,0 +1,14 @@
+source_translator/__init__.py,sha256=AlRYw40xwkiWBw92TKQ2uO5GebwmwCovBKJYnSZMOfs,400
+source_translator/c_like.py,sha256=U53ukSxQ6y9ICGMsy9N08B5HF6PYKJtQaP-8of0A0k0,6336
+source_translator/language_slug.py,sha256=hQH5-2KCgimRLXxpvq6qoJ9RdeLqZgkGnsTxDRlq-qw,1210
+source_translator/naming.py,sha256=VlFlBfKolB-heOiz5kt_r7NVsf2nbFrDyFD-kf1Vrbw,161
+source_translator/python_source.py,sha256=CZHkt_CmakzAqvQzIfPrVb5rghsUdVWOg1o7h2gyUmQ,23996
+source_translator/langs/cpp.py,sha256=ypQFh0yiZuQdhVheE85RJkOvVZWZpP4ggz59Ae9b-TU,4662
+source_translator/langs/php.py,sha256=81qQufoLiqUlwI36zhes2kNy_FzR9gr9sAQkw0CT984,4419
+source_translator/langs/ts.py,sha256=17UfGB9SyBRaexDfNtRI7mAGmNDNsjiopZaasRxsQ_A,6631
+source_translator-1.1.0.data/scripts/source_translate.py,sha256=2UFdsxMY6MODsHtNCOqja4R6iZYQiVf3ftypFC9-jjk,1501
+source_translator-1.1.0.dist-info/licenses/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+source_translator-1.1.0.dist-info/METADATA,sha256=TYgNFJjnVwmvj4kJFAr8pGQU3VfzNwKbkeUo0ZTuhNU,5372
+source_translator-1.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+source_translator-1.1.0.dist-info/top_level.txt,sha256=oam7P3v7XBmZXQmsdayV_YfeNe69cHlgrBV7__0RSPY,18
+source_translator-1.1.0.dist-info/RECORD,,
