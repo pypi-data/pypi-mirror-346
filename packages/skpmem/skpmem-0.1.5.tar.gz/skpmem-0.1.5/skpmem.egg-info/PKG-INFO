@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: skpmem
+Version: 0.1.5
+Summary: Persistent Memory
+Home-page: https://github.com/sugarkwork/skpmem
+Author: sugarkwork
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: aiosqlite
+Requires-Dist: setuptools
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# install
+
+    pip install skpmem
+
