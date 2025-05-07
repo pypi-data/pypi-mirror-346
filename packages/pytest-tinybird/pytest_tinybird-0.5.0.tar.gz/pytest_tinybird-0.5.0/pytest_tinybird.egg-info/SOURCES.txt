@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pytest_tinybird/__init__.py
+pytest_tinybird/plugin.py
+pytest_tinybird/tinybird.py
+pytest_tinybird.egg-info/PKG-INFO
+pytest_tinybird.egg-info/SOURCES.txt
+pytest_tinybird.egg-info/dependency_links.txt
+pytest_tinybird.egg-info/entry_points.txt
+pytest_tinybird.egg-info/requires.txt
+pytest_tinybird.egg-info/top_level.txt
+tests/test_tinybird.py
