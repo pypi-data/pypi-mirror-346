@@ -1,0 +1,8 @@
+hyku_ingest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hyku_ingest/main.py,sha256=mJwEj6JD503zAQvvD_JOeiPzoMu7tMblQY1bHofoOjU,20666
+hyku_ingest/tmp.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hyku_ingest/tmp2.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hyku_ingest-0.0.11.dist-info/METADATA,sha256=kl00Ihnp1YMeMR1j9JiyXL8wj92oKhyrnF0NPouIA38,1106
+hyku_ingest-0.0.11.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+hyku_ingest-0.0.11.dist-info/entry_points.txt,sha256=9DrG02x5BrKZCdyGo6hAzOUzaaGeXui2r_ddoJsToXs,49
+hyku_ingest-0.0.11.dist-info/RECORD,,
