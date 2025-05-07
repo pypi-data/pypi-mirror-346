@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diffeo-elasticity"
+version = "0.1.0"
+description = "Simple implementation of 2D and 3D diffeo-elastic models"
+authors = [
+  { name="Alain Trouve et al.", email="alain.trouve@ens-paris-saclay.fr" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "torch>=2.4.1",
+  "pytest",
+  "numpy>=2.2.0",
+  "matplotlib",
+  "pykeops",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "black",
+  "isort",
+]
