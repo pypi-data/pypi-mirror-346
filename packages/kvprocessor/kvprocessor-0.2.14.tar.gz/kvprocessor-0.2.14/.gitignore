@@ -1,0 +1,6 @@
+dist
+.pypirc
+struct
+*.log
+versions
+.mypy_cache
