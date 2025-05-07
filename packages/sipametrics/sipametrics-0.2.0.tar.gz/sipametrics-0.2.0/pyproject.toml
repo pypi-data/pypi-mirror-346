@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "sipametrics"
+version = "0.2.0"
+description = "Scientific Infra & Private Assets"
+authors = ["SIPA <support@sipametrics.com>"]
+license = "Apache"
+readme = "README.md"
+packages = [{ include = "sipametrics", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aiohttp = "*"
+python-dateutil = "*"
+pydantic = "*"
+pandas = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
