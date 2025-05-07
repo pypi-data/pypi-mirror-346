@@ -1,0 +1,14 @@
+[redash.bundles]
+datasource_details = redash_stmo.data_sources.details
+
+[redash.extensions]
+datasource_details = redash_stmo.data_sources.details.extension:extension
+datasource_health = redash_stmo.data_sources.health:extension
+dockerflow = redash_stmo.dockerflow:extension
+handler_queryresults = redash_stmo.handlers.query_results.extension:extension
+handler_remote_user_auth = redash_stmo.handlers.authentication.remote_user_auth:extension
+queryrunner_big_query = redash_stmo.query_runner.big_query:extension
+queryrunner_presto = redash_stmo.query_runner.presto:extension
+
+[redash.scheduled_jobs]
+update_health_status = redash_stmo.data_sources.health:scheduled_job
