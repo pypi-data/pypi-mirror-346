@@ -1,0 +1,219 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pas.plugins.oidc"
+dynamic = ["version"]
+description = "OIDC support for Plone sites"
+readme = "README.md"
+license = "GPL-2.0-only"
+requires-python = ">=3.10"
+authors = [
+    { name = "Mauro Amico", email = "mauro.amico@gmail.com" },
+    { name = "Érico Andrei", email = "ericof@plone.org" },
+]
+keywords = [
+    "CMS",
+    "Plone",
+    "Python",
+    "PAS",
+    "Authentication",
+    "OAuth",
+    "OIDC",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: Plone",
+    "Framework :: Plone :: Addon",
+    "Framework :: Plone :: 6.0",
+    "Framework :: Plone :: 6.1",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+]
+dependencies = [
+    "Products.CMFPlone>=6.0",
+    "Zope",
+    "Products.CMFCore",
+    "plone.api",
+    "plone.app.registry",
+    "plone.base",
+    "plone.protect",
+    "plone.restapi>=9.10.0",
+    "oic",
+    "requests",
+    "z3c.form",
+]
+
+[project.optional-dependencies]
+test = [
+    "plone.app.contenttypes",
+    "plone.app.testing",
+    "plone.restapi[test]",
+    "plone.testing",
+    "pytest-cov",
+    "pytest-plone>=0.5.0",
+    "pytest-docker",
+    "pytest-mock",
+    "pytest",
+    "pytest-mock",
+    "requests-mock",
+    "zest-releaser[recommended]>=9.5.0",
+    "zestreleaser-towncrier>=1.3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/collective/pas.plugins.oidc"
+PyPI = "https://pypi.org/project/pas.plugins.oidc"
+Source = "https://github.com/collective/pas.plugins.oidc"
+Tracker = "https://github.com/collective/pas.plugins.oidc/issues"
+
+[project.entry-points."z3c.autoinclude.plugin"]
+target = "plone"
+
+[tool.uv]
+managed = false
+
+[tool.hatch.build]
+strict-naming = true
+
+[tool.hatch.version]
+path = "src/pas/plugins/oidc/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/*.md",
+    "/*.yaml",
+    "/*.yml",
+    "/docs",
+    "/src",
+    "/tests",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pas",]
+
+[tool.towncrier]
+package = "pas.plugins.oidc"
+directory = "news/"
+filename = "CHANGELOG.md"
+start_string = "<!-- towncrier release notes start -->\n"
+title_format = "## {version} ({project_date})"
+template = "news/.changelog_template.jinja"
+issue_format = "[#{issue}](https://github.com/collective/pas.plugins.oidc/issues/{issue})"
+underlines = ["", "", ""]
+
+[[tool.towncrier.type]]
+directory = "breaking"
+name = "Breaking changes:"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "feature"
+name = "New features:"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "bugfix"
+name = "Bug fixes:"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "internal"
+name = "Internal:"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "documentation"
+name = "Documentation:"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "tests"
+name = "Tests"
+showcontent = true
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+fix = true
+lint.select = [
+    # flake8-2020
+    "YTT",
+    # flake8-bandit
+    "S",
+    # flake8-bugbear
+    "B",
+    # flake8-builtins
+    "A",
+    # flake8-comprehensions
+    "C4",
+    # flake8-debugger
+    "T10",
+    # flake8-simplify
+    "SIM",
+    # mccabe
+    "C90",
+    # pycodestyle
+    "E", "W",
+    # pyflakes
+    "F",
+    # pygrep-hooks
+    "PGH",
+    # pyupgrade
+    "UP",
+    # ruff
+    "RUF",
+]
+lint.ignore = [
+    # DoNotAssignLambda
+    "E731",
+]
+
+[tool.ruff.lint.isort]
+case-sensitive = false
+no-sections = true
+force-single-line = true
+from-first = true
+lines-after-imports = 2
+lines-between-types = 1
+order-by-type = false
+
+[tool.ruff.format]
+preview = true
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501", "RUF001", "S101"]
+
+[tool.check-manifest]
+ignore = [
+    ".editorconfig",
+    ".flake8",
+    "dependabot.yml",
+    "mx.ini",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source_pkgs = ["pas.plugins.oidc", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/pas/plugins/oidc/locales/*",
+]
+
+[tool.bandit]
+targets = "src"
+exclude_dirs = ["tests", "src/pas/plugins/oidc/locales"]
+
+[tool.zest-releaser]
+upload-pypi = false # Build and upload with uv
+python-file-with-version = "src/pas/plugins/oidc/__init__.py"
