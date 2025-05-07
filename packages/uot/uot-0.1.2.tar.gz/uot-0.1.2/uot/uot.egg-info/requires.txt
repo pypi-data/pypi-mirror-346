@@ -1,0 +1,5 @@
+numpy
+tqdm
+jax
+jaxlib
+scikit-learn
