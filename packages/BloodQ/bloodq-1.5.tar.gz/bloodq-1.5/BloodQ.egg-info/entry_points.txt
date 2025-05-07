@@ -1,0 +1,11 @@
+[console_scripts]
+BLooDNiNjA = BLooDNiNjA.__main__:main
+BLooDNiNjA-run = BLooDNiNjA.__main__:main
+
+[distutils.commands]
+bdist_BLooDNiNjA = BLooDNiNjA.distutils.DistutilCommands:bdist_BLooDNiNjA
+build_BLooDNiNjA = BLooDNiNjA.distutils.DistutilCommands:build
+install_BLooDNiNjA = BLooDNiNjA.distutils.DistutilCommands:install
+
+[distutils.setup_keywords]
+build_with_BLooDNiNjA = BLooDNiNjA.distutils.DistutilCommands:setupBloodQDistutilsCommands
