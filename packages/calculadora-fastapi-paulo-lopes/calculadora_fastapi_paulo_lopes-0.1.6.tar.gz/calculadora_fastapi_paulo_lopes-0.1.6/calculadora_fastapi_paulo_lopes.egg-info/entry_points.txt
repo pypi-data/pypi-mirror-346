@@ -1,0 +1,2 @@
+[console_scripts]
+calculadora-fastapi-paulo-lopes = app.main:main
