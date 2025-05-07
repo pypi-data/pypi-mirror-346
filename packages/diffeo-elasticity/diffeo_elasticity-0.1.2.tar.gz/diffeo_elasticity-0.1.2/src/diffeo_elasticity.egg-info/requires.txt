@@ -1,0 +1,10 @@
+torch>=2.4.1
+pytest
+numpy
+matplotlib
+pykeops
+
+[dev]
+pytest
+black
+isort

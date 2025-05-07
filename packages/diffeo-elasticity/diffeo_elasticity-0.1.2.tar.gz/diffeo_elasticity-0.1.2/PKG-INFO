@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: diffeo-elasticity
+Version: 0.1.2
+Summary: Simple implementation of 2D and 3D diffeo-elastic models
+Author-email: "Alain Trouve et al." <alain.trouve@ens-paris-saclay.fr>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.4.1
+Requires-Dist: pytest
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pykeops
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Dynamic: license-file
+
+# DiffeoElasticity
+Diffeo-Elacticity
+
+## Installation
+
+```bash
+pip install -r requirements.txt
