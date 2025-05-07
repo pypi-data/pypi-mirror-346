@@ -1,0 +1,11 @@
+pytest_codeblock/__init__.py,sha256=fF2svza4AAHQTpgi484Em3V2d4rrTSvtrPSe0Zj2HLs,824
+pytest_codeblock/collector.py,sha256=-Xg-9cjyXyptcvIzH8iY1YEVsn3yIF-WEL8olrXeDHE,1385
+pytest_codeblock/constants.py,sha256=Bpr0B0uHAJOaOmoSO9v_xr1FkV_8KJ0-TfP3hEmmdbw,326
+pytest_codeblock/md.py,sha256=ZqR9XClacMucbpjW-Pumy_5Efpk9GxM_mzWQyAcTQX0,5676
+pytest_codeblock/rst.py,sha256=aIrNeF_9FAhakbmSmVK4wO8cIw8r053vX1sXhDmT32s,10714
+pytest_codeblock-0.1.5.dist-info/licenses/LICENSE,sha256=dOWhRtenNzp0haV2LO9YRYb_-GCmPdwVJeTZ4MarauY,1073
+pytest_codeblock-0.1.5.dist-info/METADATA,sha256=16Ic09GZXOmKd5W8rQokKe06y2p-NxGa3Z7IsDZ638E,14565
+pytest_codeblock-0.1.5.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+pytest_codeblock-0.1.5.dist-info/entry_points.txt,sha256=jWxHxGWLzT4XZBSUMZ0aUnyDzOaDyjf-KnAIsYgObm0,47
+pytest_codeblock-0.1.5.dist-info/top_level.txt,sha256=H2HyfKDFEj_5vWkbB6qITEjB-YgKfDxCPpIt_983K4g,17
+pytest_codeblock-0.1.5.dist-info/RECORD,,
