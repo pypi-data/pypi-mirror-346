@@ -1,0 +1,7 @@
+README.md
+setup.py
+pyzuoraencode.egg-info/PKG-INFO
+pyzuoraencode.egg-info/SOURCES.txt
+pyzuoraencode.egg-info/dependency_links.txt
+pyzuoraencode.egg-info/requires.txt
+pyzuoraencode.egg-info/top_level.txt
