@@ -1,0 +1,156 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "fotoobo"
+version = "2.3.0"
+description = "The awesome Fortinet Toolbox"
+authors = ["Patrik Spiess <patrik.spiess@mgb.ch>", "Lukas Murer-Jäckle <lukas.murer@mgb.ch>"]
+readme = "README.md"
+license = "LGPL-3.0-only"
+repository = "https://github.com/migros/fotoobo"
+classifiers = [
+    "Framework :: Pytest",
+    "Framework :: Sphinx",
+    "Framework :: Sphinx :: Extension",
+    "Framework :: Sphinx :: Theme",
+    "Framework :: tox",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Telecommunications Industry",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Natural Language :: English",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Unix",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: System :: Networking",
+    "Topic :: System :: Networking :: Firewalls",
+    "Topic :: System :: Networking :: Monitoring",
+    "Topic :: System :: Systems Administration"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9.0, <4"
+typer = "~0.15.2"
+rich = "~13.9.0"
+PyYAML = "~6.0.0"
+requests = ">=2.32.3"
+Jinja2 = "~3.1.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "~8.3.0"
+black = "~24.03.0"
+mypy = "~1.15"
+tox = "~4.24.2"
+pylint = "~3.3.5"
+pytest-cov = "~6.0.0"
+types-requests = "~2.32.0"
+isort = "~6.0.1"
+types-PyYAML = "~6.0.12"
+pygount = ">=2.0.0"
+
+[tool.poetry.group.docs.dependencies]
+Sphinx = "~6.2.0"
+sphinx-rtd-theme = "~1.2.0"
+
+[tool.poetry.scripts]
+fotoobo = "fotoobo.main:main"
+
+# isort is used to organize-imports
+[tool.isort]
+sections = ['FUTURE', 'STDLIB', 'THIRDPARTY', 'FIRSTPARTY', 'LOCALFOLDER']
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = [
+    "import-error",
+    "similarities",
+    "too-few-public-methods"
+]
+enable = [ "useless-suppression" ]
+
+[tool.black]
+line-length = 100
+
+[tool.mypy]
+strict=true
+warn_unused_ignores=true
+ignore_missing_imports=true
+disallow_untyped_decorators=false
+
+
+# here we define the tox settings
+# we do it inline because we don't want to have another tox.ini in the project root
+# package management is done as described in option 3 on the following FAQ
+#  - https://python-poetry.org/docs/master/faq/
+[tool.tox]
+legacy_tox_ini = """[tox]
+
+isolated_build = True
+envlist = pylint, mypy, black, pytest, coverage, docs, stats
+testpaths = "tests"
+
+[testenv:pylint]
+description = Code analysis with pylint
+skip_install = true
+allowlist_externals = poetry, pylint
+commands_pre = poetry install
+commands = pylint {posargs} fotoobo 
+
+[testenv:mypy]
+description = Check typing with mypy
+skip_install = true
+allowlist_externals = poetry, mypy
+commands_pre = poetry install
+commands = mypy fotoobo tests {posargs}
+
+[testenv:black]
+description = Check formatting with black
+skip_install = true
+allowlist_externals = poetry, black
+commands_pre = poetry install
+commands = black --check --diff {posargs} .
+
+[testenv:pytest]
+description = do unit tests with pytest
+skip_install = true
+allowlist_externals = poetry, pytest
+commands_pre = poetry install
+commands = pytest --basetemp=tests/temp/ {posargs}
+
+[testenv:coverage-integration]
+description = check pytest coverage for integration tests (which are under tests/cli)
+skip_install = true
+allowlist_externals = poetry, pytest
+commands_pre = poetry install
+commands = pytest --cov-report term-missing --cov-fail-under 90 --cov=fotoobo/cli tests/cli {posargs}
+
+[testenv:coverage]
+description = check pytest coverage for unit tests (without cli because these are unit-tests)
+skip_install = true
+allowlist_externals = poetry, pytest
+commands_pre = poetry install
+commands = pytest --cov-report term-missing --cov-fail-under 90 --cov=fotoobo --cov-config=.coverage_unittests_rc --ignore=tests/cli tests/ {posargs}
+
+[testenv:docs]
+description = Create the documentation with sphinx
+skip_install = True
+allowlist_externals = poetry, sphinx-build
+commands_pre = poetry install
+commands = sphinx-build -aEW -b html docs/source docs/build
+
+[testenv:stats]
+description = display pygount statistics
+skip_install = true
+allowlist_externals = poetry, pygount
+commands_pre = poetry install
+commands = pygount -f summary -s py,toml,json,yaml,md,rst -d -F [...],data
+"""
