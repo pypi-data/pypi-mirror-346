@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: qinglong-app-sdk
+Version: 0.1.0.6
+Summary: QingLong App SDK
+Home-page: https://github.com/xx299x/qinglong-app-sdk
+Author: xx299x
+Author-email: xx299x@gmail.com
+License: BSD
+Keywords: QingLong
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: loguru
+Requires-Dist: requests
