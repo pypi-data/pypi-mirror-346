@@ -1,0 +1,2 @@
+[console_scripts]
+mcp_remote_macos_use = mcp_remote_macos_use:main
