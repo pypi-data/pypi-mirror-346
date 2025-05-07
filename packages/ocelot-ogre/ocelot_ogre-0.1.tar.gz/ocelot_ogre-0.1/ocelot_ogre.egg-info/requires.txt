@@ -1,0 +1,11 @@
+numpy
+matplotlib
+pymatgen
+scikit-learn
+torch
+scipy
+pymongo
+pandas
+networkx
+tqdm
+ase
