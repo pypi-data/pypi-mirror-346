@@ -1,0 +1,107 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vjer"
+description = "CI/CD Toolkit"
+authors = [{ name = "Jeffery G. Smith", email = "web@pobox.com" }]
+readme = "DOCUMENTATION.md"
+license-files = ["LICENSE"]
+dynamic = ["version"]
+
+requires-python = "~=3.12"
+keywords = ["programming", "utilities"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Natural Language :: English",
+]
+
+dependencies = [
+    "BatCave",
+    "build",
+    "bumpver",
+    "junitparser",
+    "flake8",
+    "flake8-annotations",
+    "flake8-pyproject",
+    "flit",
+    "mypy",
+    "pylint",
+    "twine",
+    "unittest-xml-reporting",
+]
+
+[project.optional-dependencies]
+# dev = []
+test = ["types-PyYAML", "types-requests"]
+# doc = []
+
+[project.scripts]
+vjer = "vjer.vjer:main"
+
+[project.urls]
+homepage = "https://github.com/arisilon/vjer/"
+documentation = "https://vjer.readthedocs.io"
+repository = "https://github.com/arisilon/vjer/"
+changelog = "https://github.com/arisilon/vjer/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+packages = ["vjer"]
+
+[tool.setuptools.dynamic]
+version = { attr = "vjer.__version__" }
+
+[tool.flake8]
+max-line-length = 200
+ignore = ["ANN002", "ANN003", "ANN101", "ANN204", "ANN401"]
+
+[tool.pylint.format]
+max-line-length = 200
+
+[tool.pylint.design]
+max-attributes = 10
+max-args = 10
+
+[tool.pylint.messages_control]
+disable = ["duplicate-code", "fixme"]
+
+[[tool.mypy.overrides]]
+module = "bumpver.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "docker.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "dotmap.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "flit.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "xmlrunner.*"
+ignore_missing_imports = true
+
+[tool.bumpver]
+current_version = "39.0.1rc0"
+version_pattern = "MAJOR.MINOR.PATCH[PYTAGNUM]"
+commit_message = "bump version {old_version} -> {new_version} [skip ci]"
+commit = true
+tag = false
+push = true
+
+[tool.bumpver.file_patterns]
+"vjer/__init__.py" = ["__version__ = '{pep440_version}'"]
+
+# cSpell:ignore buildapi pytagnum bumpver junitparser pyproject xmlrunner

@@ -1,0 +1,16 @@
+BatCave
+build
+bumpver
+junitparser
+flake8
+flake8-annotations
+flake8-pyproject
+flit
+mypy
+pylint
+twine
+unittest-xml-reporting
+
+[test]
+types-PyYAML
+types-requests
