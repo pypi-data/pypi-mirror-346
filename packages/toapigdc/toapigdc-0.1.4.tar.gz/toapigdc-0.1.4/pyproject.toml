@@ -1,0 +1,28 @@
+[project]
+name = "toapigdc"
+version = "0.1.4"
+description = "A package for migrating data to on-prem servers from T1 via API"
+authors = [
+    {name = "Mikey Ramsay",email = "mikey.ramsay@gdc.govt.nz"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "pyodbc (>=5.2.0,<6.0.0)",
+    "pandas (>=2.2.3,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "toapigdc", from = "src"}]
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+pyodbc = "^5.2.0"
+pandas = "^2.2.3"
+requests-mock = "^1.12.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
