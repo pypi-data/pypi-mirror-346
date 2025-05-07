@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/filewatermarker.egg-info/PKG-INFO
+src/filewatermarker.egg-info/SOURCES.txt
+src/filewatermarker.egg-info/dependency_links.txt
+src/filewatermarker.egg-info/entry_points.txt
+src/filewatermarker.egg-info/requires.txt
+src/filewatermarker.egg-info/top_level.txt
+src/watermarker/__init__.py
+src/watermarker/cli.py
+src/watermarker/core.py
+src/watermarker/utils.py
+src/watermarker/gui/__init__.py
+src/watermarker/gui/server.py
+tests/test_basic.py

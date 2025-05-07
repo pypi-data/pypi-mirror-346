@@ -1,0 +1,2 @@
+[console_scripts]
+watermarker = watermarker.cli:main
