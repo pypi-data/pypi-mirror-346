@@ -1,0 +1,6 @@
+recursive-include docdown *.html
+
+include CONTRIBUTING.rst
+include HISTORY.rst
+include LICENSE
+include README.rst
