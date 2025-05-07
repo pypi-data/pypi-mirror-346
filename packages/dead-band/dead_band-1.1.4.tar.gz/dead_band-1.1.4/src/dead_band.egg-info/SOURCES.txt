@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/dead_band/__init__.py
+src/dead_band/deadband.py
+src/dead_band.egg-info/PKG-INFO
+src/dead_band.egg-info/SOURCES.txt
+src/dead_band.egg-info/dependency_links.txt
+src/dead_band.egg-info/requires.txt
+src/dead_band.egg-info/top_level.txt
+src/dead_band/cython_modules/c_deadband.c
+src/dead_band/cython_modules/c_deadband.pyx
+tests/test_0.py

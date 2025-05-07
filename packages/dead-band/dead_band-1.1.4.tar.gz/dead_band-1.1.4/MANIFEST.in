@@ -1,0 +1,1 @@
+include src/dead_band/cython_modules/*.pyx
