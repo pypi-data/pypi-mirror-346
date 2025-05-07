@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: lactopy
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Simon Dierickx <simon.dierickx@ugent.be>
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: numpy>=2.2.5
+Requires-Dist: scikit-learn>=1.6.1
+Requires-Dist: scipy>=1.15.2
+Description-Content-Type: text/markdown
+
+# Lactopy
+
+A python package to analyse lactate based tresholds.
+
+docs can be found: https://dierickxsimon.github.io/lactopy/
+
+Still a work in progress...
