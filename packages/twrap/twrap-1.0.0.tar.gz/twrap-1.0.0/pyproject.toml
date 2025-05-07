@@ -1,0 +1,32 @@
+[project]
+name = "twrap"
+version = "1.0.0"
+description = "A CLI tool to wrap text"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+]
+license = "MIT"
+authors = [
+  {name="Mohammad Mohsen", email="kuro.ece@gmail.com"}
+]
+
+dependencies = []
+license-files = ["LICENSE"]
+
+scripts = { twrap = "twrap.cli:main" }
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-xdist = "^3.6.1"
+pytest-sugar = "^1.0.0"
+twine = "^6.1.0"
+tox = "^4.25.0"
+pytest-cov = "^6.1.1"
