@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/fixr/__init__.py
+src/fixr.egg-info/PKG-INFO
+src/fixr.egg-info/SOURCES.txt
+src/fixr.egg-info/dependency_links.txt
+src/fixr.egg-info/top_level.txt
