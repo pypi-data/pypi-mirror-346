@@ -1,0 +1,16 @@
+mcmath/__init__.py,sha256=XPNF3VZztdg0E4mEXo3Xpl-7O_IrSXB-rgpN2UbCR6o,20
+mcmath/eighth.py,sha256=EAxSAXVCYrVJWLJeQ0zIDxt-9KSOeqc6fdarMlpYsqs,1167
+mcmath/eleventh.py,sha256=jk2xQpf3DhiGkD9wBF8w2tFXGoBjdsXEPBm-Nk5oitY,1774
+mcmath/first.py,sha256=prtx0cnQZS98dYvT6ON45TbE7cDE0elcsupRkskErEg,2422
+mcmath/fourth.py,sha256=RbFe28ArPykp-6e4Z6cfrz2BlcX14_H-2L8Vh3tW8AM,1598
+mcmath/ninth.py,sha256=7DR-1qXnZV_CNC--zt-9n1py6XSQFe7POhV985zlLEg,1494
+mcmath/second.py,sha256=AlYBiCZweTGLvVnbMTBnEsjttpFE-o_eYak5dp_U-Sg,1405
+mcmath/seventh.py,sha256=3nJLnRZpQNK6GoV5z6wpvHwW3Uk7v_PQXULJ1L4WMDM,505
+mcmath/sixth.py,sha256=o2m9T3cmZCJvR3DrfocMayQwnRb4qjJxFn_UVBsGjiI,1374
+mcmath/third.py,sha256=nmyYdbO3X6T0Rh2m1vphsFF6dBpsIUWyjRPSQ0QlVhA,2121
+mcmath/thirteen.py,sha256=lY1fQp_og8TwvADPj66uokYVXk8IeeArEcj9cbFDHe8,2304
+mcmath/twelve.py,sha256=NYjO9p1aCd8yeWQaMLgXfPT1Eqafq8YiO9-BR-GwUmw,975
+mcmath-0.0.1.dist-info/METADATA,sha256=J5ccqb1LQuuCI-Ooz532XuUiuVUgnlGoHha-IkzHBiU,617
+mcmath-0.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+mcmath-0.0.1.dist-info/top_level.txt,sha256=FE4QybnNc-TRcKa247KPqb9mWVxrwfuHkEw7KdbSQEs,7
+mcmath-0.0.1.dist-info/RECORD,,
