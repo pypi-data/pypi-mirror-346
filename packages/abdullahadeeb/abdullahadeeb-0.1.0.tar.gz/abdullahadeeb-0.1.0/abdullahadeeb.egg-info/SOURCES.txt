@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+abdullahadeeb/__init__.py
+abdullahadeeb/main.py
+abdullahadeeb.egg-info/PKG-INFO
+abdullahadeeb.egg-info/SOURCES.txt
+abdullahadeeb.egg-info/dependency_links.txt
+abdullahadeeb.egg-info/entry_points.txt
+abdullahadeeb.egg-info/top_level.txt

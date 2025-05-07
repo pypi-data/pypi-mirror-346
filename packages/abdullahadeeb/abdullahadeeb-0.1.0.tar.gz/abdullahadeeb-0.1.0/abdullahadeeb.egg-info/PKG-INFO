@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: abdullahadeeb
+Version: 0.1.0
+Summary: A simple pip template by Abdullah Adeeb
+Author-email: Abdullah Adeeb <abdullah@abdullahadeeb.xyz>
+License-Expression: MIT
+Project-URL: Repository, https://github.com/abdullahadeebx/pypi-abdullahadeeb
+Project-URL: Bug Tracker, https://github.com/abdullahadeebx/pypi-abdullahadeeb/issues
+Project-URL: Homepage, https://www.abdullahadeeb.xyz
+Keywords: pip,template,cli
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# abdullahadeeb
+
+ simple project that can be installed with pip and run from the command line. 
+
+## Installation
+
+```bash
+pip install abdullahadeeb
+```
+
+## Usage
+
+```bash
+abdullahadeeb
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+[Website](https://www.abdullahadeeb.xyz)
+[X](https://x.com/abdullahadeebx)
+[Instagram](https://www.instagram.com/abdullahadeebx)
+[GitHub](https://github.com/abdullahadeebx)
+[YouTube](https://www.youtube.com/@abdullahadeebx)
