@@ -1,0 +1,77 @@
+# File and I/O support used with async Flask
+aiofiles==24.1.0
+
+# DNS resolution strategy to support Happy Eyeballs algorithm
+aiohappyeyeballs==2.6.1
+
+# Asynchronous HTTP client (used by Flask's async features)
+aiohttp==3.11.18
+
+# Signal support for aiohttp
+aiosignal==1.3.2
+
+# Metadata validation and attribute handling (used internally by aiohttp)
+attrs==25.3.0
+
+# Flask signal support for template events
+blinker==1.9.0
+
+# Used to build Python packages (invoked by release scripts)
+build==1.2.2.post1
+
+# Command line utility used by Flask and other tools
+click==8.1.8
+
+# Cross-platform colored terminal text (used in CLI outputs)
+colorama==0.4.6
+
+# Core web framework
+Flask==3.1.0
+
+# Frozen list support required by aiohttp
+frozenlist==1.6.0
+
+# Internationalized domain name support
+idna==3.10
+
+# Secure string utilities used by Flask
+itsdangerous==2.2.0
+
+# Flask templating engine
+Jinja2==3.1.6
+
+# MAC vendor lookup using IEEE OUI database
+mac-vendor-lookup==0.1.12
+
+# Parses MAC prefixes for vendor info
+manuf==1.1.5
+
+# Jinja2 dependency for safe escaping in templates
+MarkupSafe==3.0.2
+
+# Multi-dictionary support used by aiohttp
+multidict==6.4.3
+
+# Required to interpret pyproject.toml metadata
+packaging==25.0
+
+# Simple object property cache utility (used in vendor lookups)
+propcache==0.3.1
+
+# System and network interface statistics (used for subnet detection)
+psutil==7.0.0
+
+# Enables build backends to interact with frontends (used in build process)
+pyproject_hooks==1.2.0
+
+# Wrapper around nmap for Python
+python-nmap==0.7.1
+
+# Python packaging and installation tools
+setuptools==80.3.0
+
+# WSGI utility library used by Flask
+Werkzeug==3.1.3
+
+# URL handling and manipulation (used by aiohttp)
+yarl==1.20.0
