@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: post-analysis-clustering
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ipykernel>=6.29.5
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: plotly>=6.0.1
+Requires-Dist: scikit-learn>=1.6.1
+Requires-Dist: seaborn>=0.13.2
+Dynamic: license-file
+
+# post-analysis-clustering
