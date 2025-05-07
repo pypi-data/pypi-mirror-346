@@ -1,0 +1,3 @@
+[console_scripts]
+franCalc = fran_calc.fran_calc:main
+franCalc-terminal = fran_calc.fran_calc_terminal:main
