@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+inquiry/__init__.py
+inquiry/server.py
+inquiry_mcp_server.egg-info/PKG-INFO
+inquiry_mcp_server.egg-info/SOURCES.txt
+inquiry_mcp_server.egg-info/dependency_links.txt
+inquiry_mcp_server.egg-info/entry_points.txt
+inquiry_mcp_server.egg-info/requires.txt
+inquiry_mcp_server.egg-info/top_level.txt
