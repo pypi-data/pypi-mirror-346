@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kali_driver"
+dynamic = ["version"]
+authors = [
+    { name = "stupidfish001", email = "shovel@hscsec.cn" }
+]
+description = "A driver of kali for al-1s project."
+dependencies = [
+    "pwntools==4.14.0",
+    "docker==7.1.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.6"
+
+[tool.setuptools]
+packages = { find = {} }
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
