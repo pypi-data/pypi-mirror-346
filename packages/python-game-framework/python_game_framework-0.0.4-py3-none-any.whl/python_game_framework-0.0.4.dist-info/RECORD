@@ -1,0 +1,14 @@
+python_game_framework/AnimatedSprite2D.py,sha256=7Z_j3V2RlATPClDBq6U4VKr69vM909pRFafBcPerUrk,122
+python_game_framework/Camera2D.py,sha256=HMmwL0sV07S5sd9MrVwhhgULeJqLXUkHDaeljVMO6g8,1741
+python_game_framework/ClippedTexture2D.py,sha256=Huzoxic2fBLF2QLAThJKL3qC1qf7HPtldaPAtXkWjKg,1170
+python_game_framework/GameObject2D.py,sha256=95MWyou1kLJDuJxOwM0netgg97sORqpTUPPsx_Gq_0A,1211
+python_game_framework/Gui.py,sha256=7w9002kLu7w4dyOe-AkLK8uYjyjdVKkV1MRZUL_u50M,361
+python_game_framework/RigidBody2D.py,sha256=wpZN1be9IE9J6TLvW2xEjzVfClqskPkFoOftbTRPcQM,2253
+python_game_framework/Sprite2D.py,sha256=JbnkIThtN0xHozJSxjKEbAxdvJJcPvKYpDYEgkp2MO4,500
+python_game_framework/Utils.py,sha256=3sn0mZ7RsDdxLcX6KoIz78CIIUIjfxeLrvaY-evH1dY,355
+python_game_framework/Vars.py,sha256=oXADvDJVVip_EdcTqUT-csGwWEL63IluZQ0mRAVblsA,34
+python_game_framework/__init__.py,sha256=pg2RDLrmQUKru-OOG3V-T7pUEhaq_rfCEnJIfHQrsgc,298
+python_game_framework-0.0.4.dist-info/METADATA,sha256=fg5W-p2bNTHRt4w8QZVKxM5pXnBrW-o_rczymIqLYjk,359
+python_game_framework-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+python_game_framework-0.0.4.dist-info/licenses/LICENSE,sha256=c-QDYR8q9N7XG7nPzkIKRMTbgWRVLuyEwlZSI65yD9U,1071
+python_game_framework-0.0.4.dist-info/RECORD,,
