@@ -1,0 +1,11 @@
+dep_laiser/__init__.py,sha256=_gRO-nIXaLRDji6BmzAlHMEBz7ZJI79vgJpt1Ec7VK0,156
+dep_laiser/main.py,sha256=yqBCBAJxjMm_9k_JIY8RbbIQWWcNTAoEAPRFhZWncww,4770
+dep_laiser/matching.py,sha256=X7GP8Iwf2DJ7ABW9KQXBzSw-PLVh9tP4zFiaCDLInSA,6868
+dep_laiser/run_gemini.py,sha256=T5GGNt9hYMezBbj60Vg9Bb9lv_9xPsNwuLqoMLwaW1E,6463
+dep_laiser/public/esco_embeds old.pkl,sha256=nB7ID5cl3KXQMyKSp_uWUR6brths1FdhFiBhgS5UYEg,42820772
+dep_laiser/public/esco_embeds.pkl,sha256=9xJZevljIfpxzH-1sOiH3D6vrQlCrfVeiMTiGD9Z2x4,42820772
+dep_laiser-1.0.1.dist-info/METADATA,sha256=rj7YbWliSuzeMLw1ibFFlsn_ShUwXVd_GGBnwfljptE,357
+dep_laiser-1.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+dep_laiser-1.0.1.dist-info/entry_points.txt,sha256=we61G95LGkKiNFrR7wBm-Bl4OlVAeKfEmWXMLkYsjdM,62
+dep_laiser-1.0.1.dist-info/top_level.txt,sha256=bOfiu_cRUXSkKWLSz3JX28E0skM3hOsWNAQw5j8bhu4,11
+dep_laiser-1.0.1.dist-info/RECORD,,
