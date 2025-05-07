@@ -1,0 +1,8 @@
+eventsourcing_kurrentdb/__init__.py,sha256=YCSR5XdqkZVrrTLUV-O7eoWOJaFE6RAAyAL-i5Ox7aY,70
+eventsourcing_kurrentdb/factory.py,sha256=Msuuj59ZBnIK1YUOm-NVFK0xr_s0_664E82LLQyWzFg,2088
+eventsourcing_kurrentdb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eventsourcing_kurrentdb/recorders.py,sha256=49EP66SXsIAYn_8rnMsx-5rhfPHfn2J5jCpGgWD0G-M,11702
+eventsourcing_kurrentdb-1.2.0.dist-info/LICENSE,sha256=hVDEX940sSPeCBTf8fR6j5OlVK7p7SJvCLo1JipLhcg,1520
+eventsourcing_kurrentdb-1.2.0.dist-info/METADATA,sha256=VAVWQXSScOPhrfSra1lrrzVL-8yNi1YH8Gxk_X0PWR0,15596
+eventsourcing_kurrentdb-1.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+eventsourcing_kurrentdb-1.2.0.dist-info/RECORD,,
