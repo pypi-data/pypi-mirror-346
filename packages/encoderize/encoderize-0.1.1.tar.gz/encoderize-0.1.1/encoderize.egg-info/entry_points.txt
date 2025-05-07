@@ -1,0 +1,2 @@
+[console_scripts]
+encoderize = encoderize.cli:main
