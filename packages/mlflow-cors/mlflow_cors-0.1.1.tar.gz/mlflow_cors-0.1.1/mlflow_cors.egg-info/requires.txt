@@ -1,0 +1,2 @@
+flask-cors
+mlflow<2.18.0,>=2.15.0
