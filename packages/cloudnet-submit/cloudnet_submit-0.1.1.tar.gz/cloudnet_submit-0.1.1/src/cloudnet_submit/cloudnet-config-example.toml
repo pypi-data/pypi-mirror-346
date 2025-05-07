@@ -1,0 +1,29 @@
+[user_account]
+username = "alice"
+password = "alicesSecretPassword"
+
+# Possible values for `site` are listed here: https://cloudnet.fmi.fi/api/sites
+# You can only upload to sites your user account has permissions for.
+
+# Possible values for `instrument` are listed here:
+# https://docs.cloudnet.fmi.fi/api/upload-file-types.html
+
+# Possible values for `instrument_pid` are listed here:
+# https://instrumentdb.out.ocp.fmi.fi/
+
+[[instrument]]
+site           = "hyytiala"
+instrument     = "rpg-fmcw-94"
+instrument_pid = "https://hdl.handle.net/21.12132/3.191564170f8a4686"
+path_fmt       = "/data/hyytiala/rpg-fmcw-94/%Y/%m/%y%m%d_*_P10_ZEN.LV1"
+
+[[instrument]]
+site           = "granada"
+instrument     = "chm15k"
+instrument_pid = "https://hdl.handle.net/21.12132/3.77a75f3b32294855"
+path_fmt       = "/data/granada/chm/%Y-%m/%Y%m%d_Granada_CHM170119_*.nc"
+
+[[model]]
+site           = "hyytiala"
+model          = "ecmwf"
+path_fmt       = "/data/hyytiala/ecmwf/%Y/%Y%m%d_hyytiala_ecmwf.nc"
