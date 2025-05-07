@@ -1,0 +1,8 @@
+include *.rst
+include LICENSE
+include upgrade_check/py.typed
+recursive-include upgrade_check *.html
+recursive-include upgrade_check *.txt
+recursive-include upgrade_check *.po
+global-exclude __pycache__
+global-exclude *.py[co]
