@@ -1,0 +1,102 @@
+Metadata-Version: 2.4
+Name: avnst_util
+Version: 0.1
+Summary: Avansight Python utility package
+Home-page: https://github.com/avansightinc/avnst_util
+Author: Eric Liu
+Author-email: eric.liu@avansightinc.com
+Keywords: clinical trials,data analysis,time alignment,TEAE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Avnst Util
+
+A Python utility package for clinical trial data analysis
+
+## Features
+
+- **Time Alignment**: Tools for aligning and comparing clinical trial event timings
+- **TEAE Flag Derivation**: Utilities for determining Treatment Emergent Adverse Events
+- **Data Validation**: Functions for checking missing or unknown values in clinical data
+
+## Installation
+
+```bash
+pip install avnst_util
+```
+
+## Usage
+
+### Time Alignment
+
+```python
+from avnst_util.time_alignment import align_time
+
+# Align time for an event
+start_time, end_time = align_time(
+    date="2023-01-01",
+    time="14:30",
+    event_name="First Dose"
+)
+```
+
+### TEAE Flag Derivation
+
+```python
+from avnst_util.teae_flag_deriver import derive_teae_flag
+
+# Determine if an AE occurred after first dose
+teae_flag = derive_teae_flag(
+    first_dose_date="2023-01-01",
+    first_dose_time="14:30",
+    ae_start_date="2023-01-02",
+    ae_start_time="09:00",
+    opID="SUBJ001"
+)
+```
+
+The TEAE flag returns:
+
+- `1`: AE definitely occurred after first dose
+- `0`: AE definitely occurred before first dose
+- `2`: AE timing overlaps with first dose timing or timing uncertain
+- `None`: Unable to determine timing
+
+## Requirements
+
+- Python >= 3.6
+- pandas >= 1.0.0
+
+## Development
+
+To set up the development environment:
+
+1. Clone the repository
+2. Install development dependencies:
+
+```bash
+pip install -e .
+```
+
+## Contact
+
+- Author: Eric Liu
+- Email: txender4@gmail.com
