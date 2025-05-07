@@ -1,0 +1,2 @@
+[console_scripts]
+zimy-demo-weather = __main__:main
