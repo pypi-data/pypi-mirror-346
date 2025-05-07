@@ -1,0 +1,223 @@
+{% load i18n %}
+<script>
+
+    //check that variable exists
+    if (typeof djangoAdminResumableFieldListenerSetUp == "undefined") {
+        {#  var is used instead of let to provide expected scope of view #}
+        var djangoAdminResumableFieldListenerSetUp = false;
+    }
+
+
+    (function ($) {
+    function setupField(elementId) {
+
+        console.log('setting up ' + elementId);
+
+        // Store the file globally so we can access it when overwrite button is clicked
+        let currentFile = null;
+
+        $('form').submit(function () {
+            if ($(this).hasClass(elementId + '_disabled')) {
+                alert("File upload is still in progress.")  //FIXME: fires several alerts for each file
+                return false;
+            }
+        });
+
+        if (!(new Resumable().support)) {
+            alert("No uploader support");
+        }
+        var r = new Resumable({
+            target: '{% url 'contentor_video_processor' %}',
+            chunkSize: {{ chunk_size }},
+            query: {
+                csrfmiddlewaretoken: $("input[name='csrfmiddlewaretoken']").val(),
+                field_name: '{{ field_name }}',
+                content_type_id: '{{ content_type_id }}'
+            },
+            simultaneousUploads: {{ simultaneous_uploads }},
+            testChunks: false  // Disable the default behavior of testing chunks
+        });
+        r.assignBrowse($('#' + elementId + '_input_file'));
+
+        // Function to start the upload process
+        function startUpload(file) {
+            r.upload();
+            $("#" + elementId + "_uploaded_status").html(file.fileName + ' ⏳ Uploading... ');
+            $("form").addClass(elementId + "_disabled");
+            // Hide the overwrite button when upload starts
+            $('#' + elementId + '_overwrite_btn');
+        }
+
+        // Function to handle the overwrite button click - use direct binding
+        $('body').on('click', '#' + elementId + '_overwrite_btn', function(e) {
+            e.preventDefault();
+            console.log('Overwrite button clicked for ' + elementId);
+            if (currentFile) {
+                // Add overwrite flag to the query
+                r.opts.query.overwrite = true;
+                startUpload(currentFile);
+            }
+        });
+
+        r.on('fileAdded', function (file) {
+            // Store the file for later use with overwrite button
+            currentFile = file;
+
+            // First check if file already exists with same name and size
+            $.ajax({
+                url: '{% url 'contentor_file_exists' %}',
+                type: 'GET',
+                data: {
+                    resumableFilename: file.fileName,
+                    resumableTotalSize: file.size,
+                    csrfmiddlewaretoken: $("input[name='csrfmiddlewaretoken']").val(),
+                    field_name: '{{ field_name }}',
+                    content_type_id: '{{ content_type_id }}'
+                },
+                success: function(response) {
+                    // Check if response is a JSON object or a string
+                    let responseData;
+                    try {
+                        responseData = typeof response === 'string' ? JSON.parse(response) : response;
+
+                        // If response is JSON with exists=false, start upload
+                        if (responseData.exists === false) {
+                            startUpload(file);
+                            return;
+                        }
+                    } catch (e) {
+                        // Not JSON, treat as the filename if file exists
+                        responseData = response;
+                    }
+
+                    // If we get here, file exists (either string filename or JSON with exists=true)
+                    const filename = typeof responseData === 'string' ? responseData : responseData.filename;
+
+                    $('#' + elementId).val(filename);
+
+                    // Clear the status container first
+                    $("#" + elementId + "_uploaded_status").empty();
+
+                    // Add the text and button as separate elements
+                    $("#" + elementId + "_uploaded_status")
+                        .append(file.fileName + ' ✅ File already exists ')
+                        .append($('<button>', {
+                            id: elementId + '_overwrite_btn',
+                            type: 'button',
+                            class: 'button',
+                            text: 'Overwrite',
+                            css: {
+                                'margin-left': '10px',
+                                'background-color': '#d9534f',
+                                'color': 'white',
+                                'border': 'none',
+                                'padding': '5px 10px',
+                                'border-radius': '3px',
+                                'cursor': 'pointer'
+                            }
+                        }));
+
+                    $('#' + elementId + '_progress').val(1); // Set progress to complete
+                    $("form").removeClass(elementId + "_disabled");
+                },
+                error: function() {
+                    // Handle error - shouldn't happen with our updated view
+                    console.error("Error checking if file exists");
+                    // Start upload anyway
+                    startUpload(file);
+                }
+            });
+        });
+        r.on('fileSuccess', function (file, message) {
+            console.log("File success event fired", file, message);
+
+            // Add timeout to ensure all processing completes
+            setTimeout(function () {
+                if (message.toLowerCase().includes("chunk uploaded")) {
+                    $('#' + elementId).val("");
+                    $("#" + elementId + "_uploaded_status").html(message + ' ❌ Error while uploading - please re-upload this file');
+                } else {
+                    $('#' + elementId).val(message);
+                    $("#" + elementId + "_uploaded_status").html(message + ' ✅ Uploaded');
+                }
+
+                $("form").removeClass(elementId + "_disabled");
+                // Reset the overwrite flag
+                if (r.opts.query.overwrite) {
+                    delete r.opts.query.overwrite;
+                }
+                // Hide the overwrite button
+                $('#' + elementId + '_overwrite_btn').hide();
+            }, 500);
+        });
+        r.on('fileError', function (file, message) {
+            $("#" + elementId + "_uploaded_status").html(message);
+            // Hide the overwrite button
+            $('#' + elementId + '_overwrite_btn').hide();
+            // Reset the overwrite flag
+            if (r.opts.query.overwrite) {
+                delete r.opts.query.overwrite;
+            }
+        });
+        r.on('progress', function (file, message) {
+            let progress = r.progress();
+            if (progress == 0) {
+                //don't show 0 if there is any progress but server does not report actual progress
+                //show something at least so user won't be confused
+                progress = 0.05;
+            }
+            $('#' + elementId + '_progress').val(progress);
+        });
+    }
+
+    //fire on DOMReady
+    $(function () {
+        setupField('{{ id }}');
+    });
+
+    //should be set up once
+    if (!djangoAdminResumableFieldListenerSetUp) {
+        //setup admin inline creation listener so we can get the id of created fields instead
+        // of a placeholder stored in { id } for new fields
+        $(document).on('formset:added', function (event, $row, formsetName) {
+            //check if there are resumable fields and set them up with their actual ids
+            $row.find('input.django-admin-resumable-file').each(
+                function () {
+                    let el = $(this);
+                    let strippedId = el.attr('id').replace('_input_file', '');
+                    setupField(strippedId)
+                }
+            )
+        });
+
+        djangoAdminResumableFieldListenerSetUp = true;
+    }
+
+})(typeof django !== "undefined" ? django.jQuery : jQuery);
+
+
+</script>
+<div id="container">
+    <p class="file-upload">
+        {% if value %}
+            {% trans 'Currently' %}:
+            {% if file_url %}
+                <a id="{{ id }}_link" target="_new" href="{{ file_url }}">{{ file_name }}</a>
+                {% if show_thumb %}
+                    <img src="{{ file_url }}" style="width:250px;">
+                {% endif %}
+            {% else %}
+                {{ value }}
+            {% endif %}
+            {{ clear_checkbox }}
+            <br>
+            {% trans 'Change' %}:
+        {% endif %}
+
+        <span id="{{ id }}_uploaded_status"></span>
+        <input type="file" id="{{ id }}_input_file" class="django-admin-resumable-file">
+    </p>
+    <progress id="{{ id }}_progress" value="0" max="1" style="width:500px"></progress>
+</div>
+
+<input type="hidden" name="{{ name }}" id="{{ id }}" value="{{ value }}">
