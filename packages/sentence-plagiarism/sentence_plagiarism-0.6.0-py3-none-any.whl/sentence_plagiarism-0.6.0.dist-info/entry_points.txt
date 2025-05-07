@@ -1,0 +1,3 @@
+[console_scripts]
+sentence-plagiarism=sentence_plagiarism.cli:main
+
