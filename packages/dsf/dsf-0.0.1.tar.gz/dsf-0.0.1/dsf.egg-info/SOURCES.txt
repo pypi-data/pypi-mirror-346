@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+dsf/__init__.py
+dsf.egg-info/PKG-INFO
+dsf.egg-info/SOURCES.txt
+dsf.egg-info/dependency_links.txt
+dsf.egg-info/top_level.txt
