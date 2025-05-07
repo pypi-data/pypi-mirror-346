@@ -1,0 +1,18 @@
+[NEAT-924] 🗒Read Files (#1153)
+
+# Description
+
+In addition, added skipping of files that have `instanceId` set. These
+have a counterpart in DMS that should be ingested instead.
+
+## Bump
+
+- [ ] Patch
+- [x] Minor
+- [ ] Skip
+
+## Changelog
+### Added
+
+- Support for reading file metadata.
+`neat.read.cdf.classic.file_metdata(...)`
