@@ -1,0 +1,10 @@
+polyframe/__init__.py,sha256=w9fapmwHiXhYwh9GXrxTodp-QuOcJwE3x2R7o8a9SLE,306
+polyframe/direction.py,sha256=zqrin9uj7K_TypWZEaFLqlfUaZBWlsl2-2CvavAij0c,159
+polyframe/frame_registry.py,sha256=OrpfZM4qtAicktA_e9j7wdpgI9_89vDEdsoS-HZrDD4,5072
+polyframe/transform.py,sha256=d0m6Vzb2vFkhqJeRxdkd0sRc7Gdk21NwXGCRadNtPIM,22196
+polyframe/utils.py,sha256=7wWXyQNzxrWhMnzWL0yPdD7rV2L48kqlNCP4BScI_QM,12644
+polyframe-0.1.4.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+polyframe-0.1.4.dist-info/METADATA,sha256=8uLP7CzgfzbT3CDOK-gjR1-qAcDLtu5J6ikD-91Xp34,19250
+polyframe-0.1.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+polyframe-0.1.4.dist-info/top_level.txt,sha256=Txd39yCiS_Sx1FqsVjWiYn0GWXWUkIUqmFWd63loD_M,10
+polyframe-0.1.4.dist-info/RECORD,,
