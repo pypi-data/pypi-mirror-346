@@ -1,0 +1,10 @@
+README.md
+setup.py
+promptly/__init__.py
+promptly/image_fetcher.py
+promptly/main.py
+promptly_whatsapp.egg-info/PKG-INFO
+promptly_whatsapp.egg-info/SOURCES.txt
+promptly_whatsapp.egg-info/dependency_links.txt
+promptly_whatsapp.egg-info/requires.txt
+promptly_whatsapp.egg-info/top_level.txt
