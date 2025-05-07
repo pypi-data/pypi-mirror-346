@@ -1,0 +1,1 @@
+from Operacoes import soma, subs, mult, divs, powX, pow2, raiz, rzqd
