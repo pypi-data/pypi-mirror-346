@@ -1,0 +1,4 @@
+[console_scripts]
+plagiarism-visualizer=sentence_plagiarism.plagiarism_visualizer:main
+sentence-plagiarism=sentence_plagiarism.cli:main
+
