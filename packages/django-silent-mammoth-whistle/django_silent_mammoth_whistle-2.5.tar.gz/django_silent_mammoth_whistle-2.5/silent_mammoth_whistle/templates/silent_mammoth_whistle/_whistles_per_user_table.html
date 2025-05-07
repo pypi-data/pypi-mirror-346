@@ -1,0 +1,52 @@
+{% load static whistle_helpers %}
+
+<div id='sessions-table-container' class="container-padding">
+	<h2 class="little-title">{% if is_authenticated %}Logged in{% else %}Unauthenticated{% endif %}</h2>
+	<table class="clickable-rows primary{% if is_authenticated %} authed{% else %} unauthed{% endif %}">
+		<thead>
+			<tr>
+				<td class='main-cell'>User</td>
+				<td class='number-cell'>Whistles</td>
+				<td class='number-cell'>Duration</td>
+				<td class='small-cell actions'></td>
+			</tr>
+		</thead>
+		<tbody>
+			{% for row in whistles_per_user %}
+				<tr class='nav-row' onclick="window.location='{% url 'silent_mammoth_whistle:session' row.user_id date %}'">
+					{% comment %} <td class='main-cell'>
+						<div class='user-id-link'>
+							<a class="button" href="{% url 'silent_mammoth_whistle:user_sessions' row.user_id %}">
+								<sl-icon name="person"></sl-icon>
+							</a>
+							{{ row.user_id }}
+						</div>
+					</td> {% endcomment %}
+					<td class='main-cell'>
+						<a href="{% url 'silent_mammoth_whistle:user_sessions' row.user_id %}">{{ row.user_id }}</a>
+					</td>
+					<td class='number-cell nowrap'>
+						{{ row.num_whistles }}
+						{% if autolog_response_code %}
+							{% for code, count in row.status_counts.items %}
+								{% if count > 0 %}
+									<div class='status-code-count {% if code == "500" %}danger{% else %}warning{% endif %}'>{{ code }} · {{ count }}</div>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+					</td>
+					<td class='number-cell duration-cell nowrap'>
+						<div>{% time_duration row.min_time row.max_time %}</div>
+						<div class='support-data'>{{ row.min_time|date:"H:i" }} to {{ row.max_time|date:"H:i" }}</div>
+					</td>
+					<td class='small-cell actions'>
+						<sl-icon-button
+							name='chevron-right'
+							label='Session details'
+							href="{% url 'silent_mammoth_whistle:session' row.user_id date %}"></sl-icon-button>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>

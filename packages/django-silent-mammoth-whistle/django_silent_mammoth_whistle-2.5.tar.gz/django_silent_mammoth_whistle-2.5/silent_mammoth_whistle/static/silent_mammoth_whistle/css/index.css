@@ -1,0 +1,147 @@
+#body {
+	max-width: fit-content;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	gap: var(--sl-spacing-x-large);
+	/* flex-wrap: wrap; */
+}
+#chart-container {
+	padding: var(--sl-spacing-large);
+	padding-bottom: var(--sl-spacing-small);
+}
+
+#monthly-stats-content {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
+.monthly-stats-container-row {
+	display: flex;
+}
+.monthly-stats-container-row .monthly-stats-section {
+	flex: 1;
+}
+.monthly-stats-container-row .monthly-stats-section:not(:last-of-type) {
+	border-right: 1px solid var(--blue-gray-200);
+}
+#monthly-stats-content .monthly-stats-container-row {
+	flex-wrap: wrap;
+}
+
+
+#top-lists {
+	display: flex;
+	flex-direction: row;
+	gap: var(--sl-spacing-medium);
+	margin-top: var(--sl-spacing-medium);
+}
+#tops-section {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sl-spacing-x-large);
+}
+
+.table-container-group {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#daily-stats {
+	/* Set size of daily stats container so next/previous buttons stay in same place when there are no whistles/sessions.
+	Monthly stats width is defined by the chart width as the chart is the widest element in #monthly-stats */
+	min-width: 660px;
+}
+
+#lhs-section {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sl-spacing-x-small);
+}
+
+#monthly-stats {
+	width: 800px;
+}
+
+table.small thead tr {
+	border-bottom: 1px solid var(--blue-gray-100);
+}
+table.small tr td:first-of-type {
+	padding-left: 0px;
+}
+table.small tr td:last-of-type {
+	padding-right: 0px;
+}
+table.small thead td {
+	color: var(--blue-gray-700);
+}
+.monthly-stats-section {
+	padding: var(--sl-spacing-large);
+	border-top: 1px solid var(--blue-gray-200)
+}
+
+#no-whistles-message {
+	text-align: center;
+	color: var(--blue-gray-600);
+	padding: var(--sl-spacing-3x-large);
+	font-style: italic;
+}
+#no-new-users-message {
+	font-size: var(--sl-font-size-small);
+}
+
+#whistles-per-user-tables {
+	display: flex;
+	flex-direction: column;
+}
+#whistles-per-user-tables #sessions-table-container:nth-child(2) {
+	border-top: 1px solid var(--blue-gray-200);
+}
+
+.main-cell {
+	width: 100%;
+}
+
+#sessions-table-container {
+	padding-bottom: var(--sl-spacing-x-small);
+}
+#sessions-table-container h2 {
+	margin: 0px 0px var(--sl-spacing-small) 0px;
+	font-weight: normal;
+	font-size: var(--sl-font-size-small);
+  	color: var(--blue-gray-700);
+}
+
+#django-invitations-section .little-title {
+	display: flex;
+	gap: var(--sl-spacing-x-small);
+}
+#django-invitations-section .main-cell {
+	width: auto;
+}
+
+
+@media screen and (max-width: 1520px) {
+	/* Basic style changes for smaller screens */
+	#body {
+		flex-direction: column;
+	}
+	table {
+		width: 100%;
+	}
+	#monthly-stats {
+		width: auto;
+		max-width: 740px;
+	}
+	#daily-stats {
+		min-width: auto;
+	}
+	#sessions-table-container .nowrap {
+		white-space: initial;
+	}
+}
+@media screen and (max-width: 600px) {
+	.monthly-stats-container-row .monthly-stats-section:not(:last-of-type) {
+		border-right: 0px;
+	}
+}
