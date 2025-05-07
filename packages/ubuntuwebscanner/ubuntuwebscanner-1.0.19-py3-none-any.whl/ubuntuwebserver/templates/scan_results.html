@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Scan Results</title>
+
+    <!-- Auto-refresh page every 15 seconds -->
+    <meta http-equiv="refresh" content="15">
+
+    <!-- Inline CSS styling for layout and appearance -->
+    <style>
+        /* General layout and background */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Page heading */
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Search input styling */
+        input[type="text"] {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 60%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            z-index: 1;
+        }
+
+        tr:nth-child(even) { background-color: #f2f2f2; }
+
+        /* Vendor badge color styles */
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 5px;
+            font-size: 12px;
+            color: white;
+        }
+
+        .badge.cisco     { background-color: #0078D7; }
+        .badge.yealink   { background-color: #28a745; }
+        .badge.ubiquiti  { background-color: #17a2b8; }
+        .badge.polycom   { background-color: #6f42c1; }
+        .badge.default   { background-color: #6c757d; }
+
+        /* Footer styling */
+        tfoot td {
+            text-align: center;
+            font-size: 12px;
+            padding: 10px;
+            color: #666;
+        }
+
+        /* Manual refresh button styling */
+        .refresh-button {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .refresh-button button {
+            background-color: #0078D7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .refresh-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Optional icon next to vendor badge (not currently used) */
+        .vendor-icon {
+            height: 16px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+
+    <!-- JavaScript function to filter rows based on search input -->
+    <script>
+        function filterTable() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let rows = document.querySelectorAll("table tbody tr");
+
+            rows.forEach(row => {
+                let text = row.innerText.toLowerCase();
+                row.style.display = text.includes(input) ? "" : "none";
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Page heading -->
+    <h2>🛁 Network Scan Results</h2>
+
+    <!-- Search bar -->
+    <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search by IP, MAC, Hostname, or Vendor">
+
+    <!-- Main results table -->
+    <table>
+        <thead>
+            <tr>
+                <th>IP Address</th>
+                <th>Hostname</th>
+                <th>MAC Address</th>
+                <th>Vendor</th>
+                <th>OS</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for host in results %}
+            <tr>
+                <td>{{ host.ip }}</td>
+                <td>{{ host.hostname }}</td>
+                <td>{{ host.mac }}</td>
+                <td>
+                    <!-- Add dynamic badge styling based on vendor name -->
+                    <span class="badge {{ host.vendor|lower|replace(' ', '') }}">
+                        {{ host.vendor }}
+                    </span>
+                </td>
+                <td>{{ host.os }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <!-- Footer row showing timestamp from the Flask backend -->
+                <td colspan="5">Auto-refreshes every 15 seconds — Last scanned: {{ timestamp }}</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Manual refresh button -->
+    <div class="refresh-button">
+        <form method="get" action="/">
+            <button type="submit">Refresh Now</button>
+        </form>
+    </div>
+</body>
+</html>
+<!-- End of scan_results.html -->
+
+
+
+<!-- This HTML template is designed to display the results of a network scan in a user-friendly format. It includes features like auto-refresh, search functionality, and vendor-specific styling for better readability. The template is structured to be responsive and visually appealing, making it easy for users to interpret the scan results quickly. -->
+<!-- The template uses Jinja2 syntax for dynamic content rendering, allowing the Flask backend to pass data such as scan results and timestamps directly into the HTML. The JavaScript function enables real-time filtering of the displayed results based on user input, enhancing the user experience. -->
+<!-- The CSS styles are designed to create a clean and modern look, with a focus on usability and accessibility. The table layout is responsive, ensuring that it displays well on various screen sizes. The use of badges for vendor identification adds a visual element that helps users quickly recognize different device types. -->
+<!-- The template is part of a larger Flask application that performs network scanning and displays the results in a web interface. It is designed to be easily maintainable and extendable, allowing for future enhancements and features as needed. -->
+<!-- The HTML structure is semantic, using appropriate tags for headings, tables, and forms. This ensures that the content is accessible to screen readers and other assistive technologies, promoting inclusivity in web design. -->
+<!-- The template is also designed to be easily customizable, allowing developers to modify styles, layouts, and functionalities as needed. This flexibility makes it suitable for various use cases and environments, from personal projects to enterprise-level applications. -->
+<!-- The overall design philosophy emphasizes clarity, simplicity, and efficiency, making it a valuable tool for network administrators and users alike. The combination of HTML, CSS, JavaScript, and Jinja2 creates a powerful and interactive web application that meets the needs of its users effectively. -->
+<!-- The template is part of a larger Flask application that performs network scanning and displays the results in a web interface. It is designed to be easily maintainable and extendable, allowing for future enhancements and features as needed. -->
+<!-- The HTML structure is semantic, using appropriate tags for headings, tables, and forms. This ensures that the content is accessible to screen readers and other assistive technologies, promoting inclusivity in web design. -->
