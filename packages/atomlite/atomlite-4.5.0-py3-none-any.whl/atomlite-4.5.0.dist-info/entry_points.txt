@@ -1,0 +1,2 @@
+[console_scripts]
+atomlite = atomlite._internal.scripts.atomlite:main
