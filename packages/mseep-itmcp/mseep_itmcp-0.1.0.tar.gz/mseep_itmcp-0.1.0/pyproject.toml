@@ -1,0 +1,25 @@
+[project]
+name = "mseep-itmcp"
+version = "0.1.0"
+description = "MCP server enabling AI assistants to execute terminal commands through a secure shell interface"
+authors = [
+    { name = "Christian Hägg", email = "zelaron@gmail.com" },
+    { name = "Andrew Hopper" },
+]
+license = "MIT"
+dependencies = [
+    "mcp>=1.0.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets]

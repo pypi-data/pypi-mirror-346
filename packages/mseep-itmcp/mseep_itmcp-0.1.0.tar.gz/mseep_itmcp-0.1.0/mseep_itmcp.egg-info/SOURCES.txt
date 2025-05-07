@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mseep_itmcp.egg-info/PKG-INFO
+mseep_itmcp.egg-info/SOURCES.txt
+mseep_itmcp.egg-info/dependency_links.txt
+mseep_itmcp.egg-info/requires.txt
+mseep_itmcp.egg-info/top_level.txt
