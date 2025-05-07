@@ -1,0 +1,3 @@
+[console_scripts]
+stltovoxel=stltovoxel.__main__:main
+
