@@ -1,0 +1,2 @@
+[console_scripts]
+dbt-sqlx = dbt_sqlx.cli:cli
