@@ -1,0 +1,357 @@
+[
+  {
+    "test_case_name": "Basic Numeric Types",
+    "data_payload": [
+      {
+        "user_id": 42,
+        "account_balance": 2456.78,
+        "temperature": -12.5
+      },
+      {
+        "user_id": 103,
+        "account_balance": 0.0,
+        "temperature": 37.2
+      },
+      {
+        "user_id": 9999,
+        "account_balance": 1000000.01,
+        "temperature": 98.6
+      }
+    ],
+    "expected_types": {
+      "user_id": "integer",
+      "account_balance": "decimal",
+      "temperature": "float"
+    }
+  },
+  {
+    "test_case_name": "Boolean and String Types",
+    "data_payload": [
+      {
+        "is_active": true,
+        "username": "johndoe123",
+        "description": "Senior software engineer with 10+ years of experience"
+      },
+      {
+        "is_active": false,
+        "username": "janedoe456",
+        "description": "Data scientist specializing in NLP"
+      }
+    ],
+    "expected_types": {
+      "is_active": "bool",
+      "username": "string",
+      "description": "string"
+    }
+  },
+  {
+    "test_case_name": "UUID and IP Address Types",
+    "data_payload": [
+      {
+        "session_id": "1f71acbf-59fc-427d-a634-1679b48029a9",
+        "source_ip": "116.253.40.133",
+        "destination_ip": "2a02:aa08:e000:3100::2"
+      },
+      {
+        "session_id": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+        "source_ip": "192.168.1.1",
+        "destination_ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+      }
+    ],
+    "expected_types": {
+      "session_id": "uuid",
+      "source_ip": "ipv4",
+      "destination_ip": "ipv6"
+    }
+  },
+  {
+    "test_case_name": "Date and Time Types",
+    "data_payload": [
+      {
+        "registration_date": "2022-05-16",
+        "last_login": "2022-05-16 11:01:02",
+        "last_transaction": "2022-05-16 11:01:02.345"
+      },
+      {
+        "registration_date": "2021-12-25",
+        "last_login": "2022-05-17 08:30:45",
+        "last_transaction": "2022-05-17 08:30:45.123"
+      }
+    ],
+    "expected_types": {
+      "registration_date": "date",
+      "last_login": "datetime",
+      "last_transaction": "datetime64"
+    }
+  },
+  {
+    "test_case_name": "Array Type",
+    "data_payload": [
+      {
+        "product_id": 1001,
+        "categories": ["Electronics", "Computers", "Laptops"],
+        "tags": ["sale", "new", "featured", "premium"]
+      },
+      {
+        "product_id": 1002,
+        "categories": ["Clothing", "Men"],
+        "tags": ["clearance"]
+      }
+    ],
+    "expected_types": {
+      "product_id": "integer",
+      "categories": "array",
+      "tags": "array"
+    }
+  },
+  {
+    "test_case_name": "Map Type",
+    "data_payload": [
+      {
+        "order_id": "ORD-12345",
+        "metadata": {"created_by": "system", "priority": "high", "region": "west"},
+        "status": "processing"
+      },
+      {
+        "order_id": "ORD-67890",
+        "metadata": {"created_by": "user", "priority": "normal", "region": "east"},
+        "status": "shipped"
+      }
+    ],
+    "expected_types": {
+      "order_id": "string",
+      "metadata": "map",
+      "status": "string"
+    }
+  },
+  {
+    "test_case_name": "Tuple Type",
+    "data_payload": [
+      {
+        "coordinate": [40.7128, -74.0060],
+        "location_name": "New York City",
+        "population": 8336817
+      },
+      {
+        "coordinate": [34.0522, -118.2437],
+        "location_name": "Los Angeles",
+        "population": 3979576
+      }
+    ],
+    "expected_types": {
+      "coordinate": "tuple",
+      "location_name": "string",
+      "population": "integer"
+    }
+  },
+  {
+    "test_case_name": "Mixed Numeric Types",
+    "data_payload": [
+      {
+        "small_count": 127,
+        "large_count": 9223372036854775807,
+        "percentage": 99.99
+      },
+      {
+        "small_count": -128,
+        "large_count": -9223372036854775808,
+        "percentage": 0.01
+      }
+    ],
+    "expected_types": {
+      "small_count": "int8",
+      "large_count": "int64",
+      "percentage": "decimal(4,2)"
+    }
+  },
+  {
+    "test_case_name": "Complex Data Combination",
+    "data_payload": [
+      {
+        "device_id": "d8f3a42e-7e36-4f52-b9a0-95c1c4f6ca4e",
+        "readings": [23.5, 24.1, 22.8, 23.9, 24.2],
+        "device_config": {"sampling_rate": "1m", "threshold": 30.0, "alert": true}
+      }
+    ],
+    "expected_types": {
+      "device_id": "uuid",
+      "readings": "array",
+      "device_config": "map"
+    }
+  },
+  {
+    "test_case_name": "Fixed String and Float Types",
+    "data_payload": [
+      {
+        "country_code": "US",
+        "exchange_rate": 1.0,
+        "metric_values": [12.345, 67.89, 123.456, 7.89]
+      },
+      {
+        "country_code": "CA",
+        "exchange_rate": 0.75,
+        "metric_values": [11.11, 22.22]
+      },
+      {
+        "country_code": "MX",
+        "exchange_rate": 0.05,
+        "metric_values": [99.99]
+      }
+    ],
+    "expected_types": {
+      "country_code": "fixed_string(2)",
+      "exchange_rate": "float64",
+      "metric_values": "array"
+    }
+  },
+  {
+    "test_case_name": "Basic Numeric Types with Nullables",
+    "data_payload": [
+      {
+        "user_id": 42,
+        "account_balance": 2456.78,
+        "temperature": -12.5
+      },
+      {
+        "user_id": 103,
+        "account_balance": null,
+        "temperature": 37.2
+      },
+      {
+        "user_id": 9999,
+        "account_balance": 1000000.01,
+        "temperature": null
+      }
+    ],
+    "expected_types": {
+      "user_id": "integer",
+      "account_balance": "nullable(decimal)",
+      "temperature": "nullable(float)"
+    }
+  },
+  {
+    "test_case_name": "Boolean and String Types with Nullables",
+    "data_payload": [
+      {
+        "is_active": true,
+        "username": "johndoe123",
+        "description": null
+      },
+      {
+        "is_active": null,
+        "username": "janedoe456",
+        "description": "Data scientist specializing in NLP"
+      }
+    ],
+    "expected_types": {
+      "is_active": "nullable(bool)",
+      "username": "string",
+      "description": "nullable(string)"
+    }
+  },
+  {
+    "test_case_name": "UUID and IP Address Types with Nullables",
+    "data_payload": [
+      {
+        "session_id": "1f71acbf-59fc-427d-a634-1679b48029a9",
+        "source_ip": null,
+        "destination_ip": "2a02:aa08:e000:3100::2"
+      },
+      {
+        "session_id": null,
+        "source_ip": "192.168.1.1",
+        "destination_ip": null
+      }
+    ],
+    "expected_types": {
+      "session_id": "nullable(uuid)",
+      "source_ip": "nullable(ipv4)",
+      "destination_ip": "nullable(ipv6)"
+    }
+  },
+  {
+    "test_case_name": "Date and Time Types with Nullables",
+    "data_payload": [
+      {
+        "registration_date": "2022-05-16",
+        "last_login": null,
+        "last_transaction": "2022-05-16 11:01:02.345"
+      },
+      {
+        "registration_date": null,
+        "last_login": "2022-05-17 08:30:45",
+        "last_transaction": null
+      }
+    ],
+    "expected_types": {
+      "registration_date": "nullable(date)",
+      "last_login": "nullable(datetime)",
+      "last_transaction": "nullable(datetime64)"
+    }
+  },
+  {
+    "test_case_name": "Mixed Numeric Types with Nullables",
+    "data_payload": [
+      {
+        "small_count": 127,
+        "large_count": null,
+        "percentage": 99.99
+      },
+      {
+        "small_count": null,
+        "large_count": -9223372036854775808,
+        "percentage": 0.01
+      }
+    ],
+    "expected_types": {
+      "small_count": "nullable(int8)",
+      "large_count": "nullable(int64)",
+      "percentage": "decimal(4,2)"
+    }
+  },
+  {
+    "test_case_name": "Complex Data Combination with Primitive Nullables",
+    "data_payload": [
+      {
+        "device_id": "d8f3a42e-7e36-4f52-b9a0-95c1c4f6ca4e",
+        "readings": [23.5, 24.1, 22.8, 23.9, 24.2],
+        "device_config": {"sampling_rate": "1m", "threshold": 30.0, "alert": true}
+      },
+      {
+        "device_id": null,
+        "readings": [19.8, 20.3],
+        "device_config": {"sampling_rate": "5m", "threshold": null, "alert": false}
+      }
+    ],
+    "expected_types": {
+      "device_id": "nullable(uuid)",
+      "readings": "array",
+      "device_config": "map"
+    }
+  },
+  {
+    "test_case_name": "Fixed String and Float Types with Nullables",
+    "data_payload": [
+      {
+        "country_code": "US",
+        "exchange_rate": 1.0,
+        "metric_values": [12.345, 67.89, 123.456, 7.89]
+      },
+      {
+        "country_code": null,
+        "exchange_rate": null,
+        "metric_values": [11.11, 22.22]
+      },
+      {
+        "country_code": "MX",
+        "exchange_rate": 0.05,
+        "metric_values": [99.99]
+      }
+    ],
+    "expected_types": {
+      "country_code": "nullable(fixed_string(2))",
+      "exchange_rate": "nullable(float64)",
+      "metric_values": "array"
+    }
+  }
+]
