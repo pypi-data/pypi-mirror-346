@@ -1,0 +1,10 @@
+tafel-2025.5.6.dist-info/METADATA,sha256=i9lVDRqPaTDQ87VTFUEK9q1JND8k2pF6wzbx639ZSTY,2037
+tafel-2025.5.6.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+tafel-2025.5.6.dist-info/entry_points.txt,sha256=6GyJBaeADqyb4z8Ub8p4CYUsBHxWnQauvbky7umRW0g,61
+tafel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tafel/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tafel/app/cli.py,sha256=j0IGqPTRZTBJr7962xWmUHHVcVCqmkpM9Hkq_J9jjps,2889
+tafel/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tafel/core/bo.py,sha256=XW_kyYZLBBjXUaXvpNjcGrZ5Ohjr5B0_8zI2jsnL3WI,11996
+tafel/core/reader.py,sha256=m5PcNfSPqZLxy7Ghd5140kG2TFNVRiA7goscH-UYWUE,6207
+tafel-2025.5.6.dist-info/RECORD,,
