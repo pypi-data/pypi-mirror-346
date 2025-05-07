@@ -1,0 +1,10 @@
+gds_fdtd/__init__.py,sha256=IJKrg0FvxvXwmHYPbW5T8Ckc4mmNAeZc2dDA_2kY6qU,179
+gds_fdtd/core.py,sha256=Q-WtVfLpTXD654qdR5z2aV2c8bqs2mu_5V2SacvPQGw,18199
+gds_fdtd/lum_tools.py,sha256=kyQIbefrU8YjlvjrzGFpVAAMz9qwb0k_iKK9ncDQx0I,7692
+gds_fdtd/lyprocessor.py,sha256=G_FbCw8VMjb9vEscANnE7qqCs3Lgd-LIMpkY_V6hID4,11379
+gds_fdtd/simprocessor.py,sha256=KvwTNC_BROML8tbOPEP5Ju2N-KZxENUDIwhfS9x0PgY,20847
+gds_fdtd/t3d_tools.py,sha256=8YG_GHQUavMcAk5IEeLJbf9D_goIEXR2-wgVIN3BfkI,5557
+gds_fdtd-0.3.2.dist-info/licenses/LICENSE,sha256=EfJ8x_ytyd0suoaPVe0I1KJt1NLDc1GTS4_7qwn1xiw,1074
+gds_fdtd-0.3.2.dist-info/WHEEL,sha256=Dyt6SBfaasWElUrURkknVFAZDHSTwxg3PaTza7RSbkY,100
+gds_fdtd-0.3.2.dist-info/METADATA,sha256=cr40YtbPXO4vwFqVZi_sZlyZGE5QA7Qcg3j2fg5NH8Y,3366
+gds_fdtd-0.3.2.dist-info/RECORD,,
