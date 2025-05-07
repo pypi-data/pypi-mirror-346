@@ -1,0 +1,16 @@
+unstructured_expanded/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unstructured_expanded/tools.py,sha256=7-JBuO2e2lBUPP6tpsGSSR_U48xWvDm7UEBzUOlHt9o,2672
+unstructured_expanded/partition/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unstructured_expanded/partition/docx/__init__.py,sha256=ZqNskkZMEQ398UFBwfwPeTalPw6qByKIbfNafx9Yhzc,42
+unstructured_expanded/partition/docx/partition_docx.py,sha256=OcFwPoU-BvCpPRdb8EdiN2t7YqBnLgcGzvFezWRkkRs,1160
+unstructured_expanded/partition/docx/partition_picture.py,sha256=x5OVfi7lDSNwz0PcAp032-b1peBvxGQ0ewmjT7k12vw,1836
+unstructured_expanded/partition/pdf/__init__.py,sha256=Lh7B9Fi_BRwzkdYdVzwoitXKPQj3-Z0FTk5LYHh8AJM,40
+unstructured_expanded/partition/pdf/partition_pdf.py,sha256=3rsPhsvaIEqLoVB4Ono82rquJRlQCZDDTV1Sc72ddQA,817
+unstructured_expanded/partition/pptx/__init__.py,sha256=2V-tCWUi6ZXGx2xdlaVPejJvwAKx5juwacWjM4aKCns,42
+unstructured_expanded/partition/pptx/partition_picture.py,sha256=dbX7GHNrF7pYiRW0mNZLh8WlwPoqBLbZGDTQHzlyLD4,2900
+unstructured_expanded/partition/pptx/partition_pptx.py,sha256=xB9nKAs-Jwb-AkWYXjZ3d6ub9JuqEpcUyYmv_yzH03A,1380
+unstructured_expanded-0.17.2.dist-info/licenses/LICENSE,sha256=_b5ZsKt5JOYSF7ViDxecpX5MfYY0JriVERgQTyl06hk,1068
+unstructured_expanded-0.17.2.dist-info/METADATA,sha256=Vd0LaH5jUoWhCFG8sdeXnNTBX7GHjrXkyZ5hhL-2azw,2447
+unstructured_expanded-0.17.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+unstructured_expanded-0.17.2.dist-info/top_level.txt,sha256=gq1kXd18cF8jNLW2IQRnZy451Ru4w2trwW5Y140zWkY,22
+unstructured_expanded-0.17.2.dist-info/RECORD,,
