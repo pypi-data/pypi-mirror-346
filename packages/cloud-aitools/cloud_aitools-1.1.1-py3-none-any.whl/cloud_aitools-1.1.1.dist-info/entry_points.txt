@@ -1,0 +1,2 @@
+[console_scripts]
+aitools = cloud_aitools.main:app
