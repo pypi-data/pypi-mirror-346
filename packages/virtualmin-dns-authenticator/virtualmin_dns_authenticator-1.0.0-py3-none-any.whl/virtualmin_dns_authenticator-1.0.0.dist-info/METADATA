@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: virtualmin-dns-authenticator
+Version: 1.0.0
+Summary: DNS Authenticator plugin for Certbot using Virtualmin API.
+Author: Gri_89
+Author-email: gri.chernikov@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: certbot>=1.0
+Requires-Dist: requests>=2.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Virtualmin DNS Authenticator for Certbot
+
+This plugin allows Certbot to use Virtualmin's HTTP API to perform DNS-01 challenges.

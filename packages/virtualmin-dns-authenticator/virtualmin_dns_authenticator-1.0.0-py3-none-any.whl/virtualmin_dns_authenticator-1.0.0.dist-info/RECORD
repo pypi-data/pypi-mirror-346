@@ -1,0 +1,7 @@
+virtualmin_dns_authenticator/__init__.py,sha256=N8huaB5zyoNrKLdDFnp3wqtYFgcaOIag8JpvsjhJuqM,40
+virtualmin_dns_authenticator/authenticator.py,sha256=bplWYXTrJnhf3n_1nB8gwUc4-eyTE5Oi3OJSByxBeYs,4027
+virtualmin_dns_authenticator-1.0.0.dist-info/METADATA,sha256=q0-jhOZG_0wfCVdOZLfHpnNbwlcRjtgvGrMM6jtMoJU,825
+virtualmin_dns_authenticator-1.0.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+virtualmin_dns_authenticator-1.0.0.dist-info/entry_points.txt,sha256=4XOwljG_t6-VISBjMEqN_Z3Bpn1P-bUAdBpxeyvnMbU,92
+virtualmin_dns_authenticator-1.0.0.dist-info/top_level.txt,sha256=w0OeFWKJwSFT5FF3pc9SgtyBZxwhc-rqYMixwpiDkpE,29
+virtualmin_dns_authenticator-1.0.0.dist-info/RECORD,,

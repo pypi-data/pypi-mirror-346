@@ -1,0 +1,2 @@
+[certbot.plugins]
+virtualmin-dns = virtualmin_dns_authenticator.authenticator:Authenticator
