@@ -1,0 +1,14 @@
+# Ignore all files with prefix "."...
+.*
+# ...except for
+!/.gitignore
+!/.github
+
+# /.github/.githubrc
+*.code-workspace
+*.egg-info
+*.task.json
+__pycache__
+build
+dist
+generated
