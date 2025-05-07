@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+calculadora_fastapi_paulo_lopes.egg-info/PKG-INFO
+calculadora_fastapi_paulo_lopes.egg-info/SOURCES.txt
+calculadora_fastapi_paulo_lopes.egg-info/dependency_links.txt
+calculadora_fastapi_paulo_lopes.egg-info/entry_points.txt
+calculadora_fastapi_paulo_lopes.egg-info/requires.txt
+calculadora_fastapi_paulo_lopes.egg-info/top_level.txt
