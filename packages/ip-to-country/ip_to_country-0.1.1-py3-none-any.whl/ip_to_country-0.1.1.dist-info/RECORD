@@ -1,0 +1,10 @@
+data/ipv4_ranges.pkl,sha256=67jHveCeMuNYZwyGyxinUQFtZZzlIIYaWOLQQTuvjwU,7833300
+data/ipv6_ranges.pkl,sha256=5LRcdNoCsfXw7Zgv2AlSYNgK7GmbGxkouxCJrFU0NRs,2075132
+data/iso3166.csv,sha256=uRlq7sY1FhsqXQ5HahYGLAmFKDvUsvYW7m_CtGa0LUU,4282
+ip_to_country/__init__.py,sha256=QCE63e-6wXCpImWjhZX0welZs4-jDeP0xZP452gNZZc,38
+ip_to_country/ip_to_country.py,sha256=NKyQfQW8FH9ic3JJanI4K20ql1uwP2hlf6smurwVN7w,3762
+ip_to_country-0.1.1.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ip_to_country-0.1.1.dist-info/METADATA,sha256=78gwoPUhW0oSav3hC4c-iC-JE48yrDoITjhQvWLCTOI,344
+ip_to_country-0.1.1.dist-info/WHEEL,sha256=lTU6B6eIfYoiQJTZNc-fyaR6BpL6ehTzU3xGYxn2n8k,91
+ip_to_country-0.1.1.dist-info/top_level.txt,sha256=K2_klUlttz-iPb29Eu9VtRLZEYaFk5LEy5Ze2OjHE_g,14
+ip_to_country-0.1.1.dist-info/RECORD,,
