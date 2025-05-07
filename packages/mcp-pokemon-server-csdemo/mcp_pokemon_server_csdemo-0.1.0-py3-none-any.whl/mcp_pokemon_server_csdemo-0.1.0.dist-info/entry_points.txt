@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-pokemon-server-csdemo = mcp_pokemon_server_csdemo:main
