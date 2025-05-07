@@ -1,0 +1,13 @@
+README.md,sha256=WW1PgiyR6tTHmFMf5UZIBcijU9RQyFFHugz5X98o7gU,9195
+REUSE.toml,sha256=ljbHzVM9Z91Q8auPjSnbxpUQvbS5MRcFWIQRMcoKDDY,298
+reuse.spdx,sha256=ho4NZL4F-nE7Hi8A9K3RcbGncQkxQ36BT3fPUzFqKwE,3625
+zypper_changelog_lib/__init__.py,sha256=K-Yyu1uTvoB1worHOEIS-AYqKm3U4Y1X0VRdcxHaT74,261
+zypper_changelog_lib/zyppchangelog.py,sha256=ECaYbASjJp_GYhWgNTJ4_eC7-rJUDuw185eiI6onyug,28986
+zypper_changelog_lib-0.7.7.dist-info/LICENSES/CC-BY-SA-4.0.txt,sha256=zeeIO5BQoRBPSsGaFXKq_W5dcyO2g1Gq9R-_S-ulSWY,18375
+zypper_changelog_lib-0.7.7.dist-info/LICENSES/CC0-1.0.txt,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+zypper_changelog_lib-0.7.7.dist-info/LICENSES/GPL-3.0-or-later.txt,sha256=-5gWaMGKJ54oX8TYP7oeg2zITdTapzyWl9PP0tispuA,34674
+zypper_changelog_lib-0.7.7.dist-info/LICENSES/LGPL-2.1-only.txt,sha256=IOUP56rj5WN46_BBfZ3pBPVaDmHk3zFTM-YypNNVXZU,26419
+zypper_changelog_lib-0.7.7.dist-info/METADATA,sha256=aITTyh9a9MbahgGdG47GJytO_692CPdZ4IdeHKeIMlA,10540
+zypper_changelog_lib-0.7.7.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+zypper_changelog_lib-0.7.7.dist-info/entry_points.txt,sha256=6tXJC71OFI-wMN-yP2LVJ1t3-xdQnJ0Z40IFLODf7Ac,73
+zypper_changelog_lib-0.7.7.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+zyppchangelog=zypper_changelog_lib.zyppchangelog:main
+
