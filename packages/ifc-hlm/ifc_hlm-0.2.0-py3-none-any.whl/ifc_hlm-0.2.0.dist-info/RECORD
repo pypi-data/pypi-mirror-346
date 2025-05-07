@@ -1,0 +1,10 @@
+ifc_hlm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ifc_hlm/hlm.py,sha256=smDTXVBYnU43MvAph5C2BeTKc6wmiJ785kDVs6kVVc4,18136
+ifc_hlm/hlm_bmi.py,sha256=PonAA1EAoSGstcSp9NlI1lTtdVGb0hxtoFsjxE2fJj4,9643
+ifc_hlm/models/__init__.py,sha256=FnuGJUeBv3aWsW2kPgxjZw8cfFvBNyJfS56c58iOe-s,131
+ifc_hlm/models/model252.py,sha256=QWc_5EREamyXD7Dl44fjqqRzSGadB2Ig4J9RYemFxwY,9164
+ifc_hlm/models/model254.py,sha256=FIIeSZ6hZbZrgZSEoYdvIGftZK48qdOZpWrbci8bBbs,10891
+ifc_hlm-0.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ifc_hlm-0.2.0.dist-info/METADATA,sha256=sN67YIJxRqHOVvSIhjtId6mI9qwVw0pETvTWIpl1rL8,912
+ifc_hlm-0.2.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+ifc_hlm-0.2.0.dist-info/RECORD,,
