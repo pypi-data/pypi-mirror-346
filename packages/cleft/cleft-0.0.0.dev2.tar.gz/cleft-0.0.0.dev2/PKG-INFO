@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: cleft
+Version: 0.0.0.dev2
+Summary: A package made for corner-cutting.
+Author-email: "K. LeBryce" <k.lebryce@pm.me>
+License-Expression: AGPL-3.0
+Requires-Python: >=3.12
+Requires-Dist: anthropic>=0.48.0
+Requires-Dist: beautifulsoup4>=4.13.3
+Requires-Dist: click>=8.1.8
+Requires-Dist: cryptography>=44.0.1
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: openai>=1.66.0
+Requires-Dist: platformdirs>=4.3.6
+Requires-Dist: psutil>=7.0.0
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: watchdog>=6.0.0
+Description-Content-Type: text/markdown
+
+# Cleft 
+
+**Cleft** is a lightweight package designed to make cutting corners _much_ easier.
+
+### Project Status
+
+This project is a work-in-progress. It is currently in its earliest days of development, so documentation is sparse at the moment, but be sure to check back soon! :)
