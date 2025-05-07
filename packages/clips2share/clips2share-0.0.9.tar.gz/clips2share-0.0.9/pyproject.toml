@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools >= 61.0", "wheel", "setuptools-git-versioning"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools-git-versioning]
+enabled = true
+
+[project]
+name = "clips2share"
+dynamic = ["version"]
+dependencies = [
+    "beautifulsoup4",
+    "Jinja2",
+    "platformdirs",
+    "requests",
+    "torf",
+    "vcsi",
+]
+requires-python = ">=3.8"
+authors = [
+    {name = "c2s"},
+]
+description = "Helper for creating adult torrents"
+readme = "README.md"
+keywords = ["torrent", "clips4sale", "thumbnail"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Environment :: Console",
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/c2s/clips2share"
+Repository = "https://codeberg.org/c2s/clips2share.git"
+"Bug Tracker" = "https://codeberg.org/c2s/clips2share/issues"
+Changelog = "https://codeberg.org/c2s/clips2share/raw/branch/main/CHANGELOG.md"
+
+[project.scripts]
+clips2share = "clips2share.clips2share:main"
+
+[tool.setuptools.package-data]
+clips2share = ["fonts/*.ttf", "templates/*.jinja"]
