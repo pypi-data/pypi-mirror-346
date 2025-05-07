@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/fastmcp_mount/__init__.py
+src/fastmcp_mount/middleware.py
+src/fastmcp_mount/py.typed
+src/fastmcp_mount.egg-info/PKG-INFO
+src/fastmcp_mount.egg-info/SOURCES.txt
+src/fastmcp_mount.egg-info/dependency_links.txt
+src/fastmcp_mount.egg-info/requires.txt
+src/fastmcp_mount.egg-info/top_level.txt
+tests/test_middleware.py

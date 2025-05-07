@@ -1,0 +1,154 @@
+Metadata-Version: 2.4
+Name: fastmcp-mount
+Version: 0.1.0
+Summary: ASGI Middleware to fix FastMCP endpoint paths when mounted under a sub-path.
+Author-email: Dwayn Matthies <dwayn.matthies@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Dwayn Matthies
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/dwayn/fastmcp-mount
+Project-URL: Repository, https://github.com/dwayn/fastmcp-mount
+Project-URL: Issues, https://github.com/dwayn/fastmcp-mount/issues
+Keywords: asgi,middleware,fastmcp,mcp,sse,fastapi,starlette,mount,subpath,path,fix
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: FastAPI
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: starlette>=0.30.0
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Requires-Dist: pytest-asyncio>=0.18.0; extra == "test"
+Requires-Dist: httpx>=0.25.0; extra == "test"
+Requires-Dist: uvicorn[standard]>=0.20.0; extra == "test"
+Provides-Extra: dev
+Requires-Dist: fastmcp-mount[test]; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Requires-Dist: build>=0.10.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Dynamic: license-file
+
+# FastMCP Mount
+
+[![CI](https://github.com/dwayn/fastmcp-mount/actions/workflows/ci.yml/badge.svg)](https://github.com/dwayn/fastmcp-mount/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+ASGI Middleware to fix [FastMCP](https://github.com/modelcontextprotocol/python-sdk?tab=readme-ov-file#mounting-to-an-existing-asgi-server) endpoint paths when mounted under a sub-path in frameworks like FastAPI or Starlette.
+
+## The Problem
+
+When using the official MCP SDK, the `FastMCP` server generates an SSE `event: endpoint` message containing the path for the client to post messages back (e.g., `/messages/`). However, if you mount the `FastMCP().sse_app()` ASGI application under a sub-path in your main framework (like FastAPI), for example at `/mcp/my-server`, the endpoint path sent to the client remains `/messages/` instead of the correct, fully qualified path `/mcp/my-server/messages/`. This causes client post requests to fail with a 404 Not Found error.
+
+## The Solution
+
+This library provides a simple ASGI middleware, `MountFastMCP`, that intercepts the SSE response stream. It specifically looks for the `event: endpoint` message and automatically prepends the correct `root_path` (the path where the app is mounted) to the endpoint before sending it to the client.
+
+## Installation
+
+```bash
+pip install fastmcp-mount
+```
+Or using UV:
+```bash
+uv pip install fastmcp-mount
+```
+
+You will also need the official [MCP python SDK](https://github.com/modelcontextprotocol/python-sdk) and a compatible ASGI framework like `fastapi` or `starlette`.
+
+```bash
+pip install mcp[cli] fastapi uvicorn[standard]
+# or
+uv pip install mcp[cli] fastapi uvicorn[standard]
+```
+
+## Usage
+
+Simply wrap the `FastMCP().sse_app()` with `MountFastMCP` before mounting it in your main application.
+
+```python
+from fastapi import FastAPI
+from mcp.server.fastmcp import FastMCP
+from fastmcp_mount import MountFastMCP # Import the middleware
+import uvicorn
+
+# 1. Create your FastMCP instance and define tools (as usual)
+mcp_server = FastMCP(title="My Mounted Server")
+
+@mcp_server.tool()
+def my_tool(param: str) -> str:
+    return f"Processed: {param}"
+
+# 2. Get the raw SSE ASGI app
+sse_app = mcp_server.sse_app()
+
+# 3. Create your main FastAPI/Starlette app
+app = FastAPI(title="Main API")
+
+# 4. Mount the *wrapped* app at your desired sub-path
+app.mount("/mcp/my-server", app=MountFastMCP(app=sse_app), name="my_mcp_server")
+
+@app.get("/")
+def read_root():
+    return {"message": "Main API running"}
+
+# Run with: uvicorn your_module:app --reload
+# Connect your MCP client to: http://localhost:8000/mcp/my-server/sse
+```
+
+Now, when an MCP client connects to `/mcp/my-server/sse`, the endpoint it receives from the server will be correctly prefixed with `/mcp/my-server/...`, allowing the client to post back successfully.
+
+## Compatibility
+
+*   **Python:** 3.8+
+*   **Frameworks:** Starlette, FastAPI (and likely other Starlette-based ASGI frameworks)
+*   **Dependencies:** `starlette`
+
+## Contributing
+
+Contributions are welcome! Please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/dwayn/fastmcp-mount).
+
+1.  Fork the repository.
+2.  Create a virtual environment: `python -m venv .venv && source .venv/bin/activate`
+3.  Install development dependencies: `pip install -e ".[dev,test]"`
+4.  Make your changes and add tests.
+5.  Run tests: `pytest`
+6.  Format, lint, and type check: `ruff format . && ruff check . && mypy .`
+7.  Commit and push your changes.
+8.  Open a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

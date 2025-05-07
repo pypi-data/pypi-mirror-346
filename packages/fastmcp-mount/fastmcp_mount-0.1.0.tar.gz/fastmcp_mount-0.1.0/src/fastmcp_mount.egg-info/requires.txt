@@ -1,0 +1,14 @@
+starlette>=0.30.0
+
+[dev]
+fastmcp-mount[test]
+ruff>=0.1.0
+build>=0.10.0
+twine>=4.0.0
+mypy>=1.0.0
+
+[test]
+pytest>=7.0.0
+pytest-asyncio>=0.18.0
+httpx>=0.25.0
+uvicorn[standard]>=0.20.0
