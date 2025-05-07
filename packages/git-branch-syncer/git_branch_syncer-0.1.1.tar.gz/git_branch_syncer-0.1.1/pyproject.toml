@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-branch-syncer"
+version = "0.1.1"
+description = "Automatically sync git branches matching a pattern with a base branch"
+readme = "README.md"
+authors = [
+    { name = "Mohammad Rdbri", email = "youremail@example.com" }
+]
+license = {text = "MIT"}
+requires-python = ">=3.7"
+dependencies = []
+
+[project.scripts]
+git-branch-syncer = "git_branch_syncer.syncer:main"
