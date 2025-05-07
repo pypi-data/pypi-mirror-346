@@ -1,0 +1,7 @@
+pyModbusTCP
+
+[test]
+python-dotenv
+clickhouse-connect
+influxdb-client
+matplotlib
