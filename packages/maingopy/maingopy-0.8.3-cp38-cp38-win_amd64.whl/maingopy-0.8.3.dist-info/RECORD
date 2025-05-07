@@ -1,0 +1,15 @@
+maingopy/__init__.py,sha256=drPfuMPV6_uJqKeF9zFdt_EukKFuGxOGo3_ZXg5tHCk,5295
+maingopy/_maingopy.cp38-win_amd64.pyd,sha256=YsWShwwHfP0sjzGoBeaWNtiqb5Gh4_hSubO9_l7fxeo,10813952
+maingopy/melonpy.cp38-win_amd64.pyd,sha256=It3LpMQZ4-cxwJa63dj1vk-65VAI8PTqEeLZFFY7n0U,1105920
+maingopy/include/tinyxml2.h,sha256=DzxuWpG21lyso8xyOZJkVfIeSIz_gKw9J8dPUmL9JgI,74466
+maingopy/lib/cmake/tinyxml2/tinyxml2-config-version.cmake,sha256=1Qxj9qOp7iZp-qk73vsmLxGGw5W3R8O0gAehTGPoohU,2830
+maingopy/lib/cmake/tinyxml2/tinyxml2-config.cmake,sha256=O6NZ-SYt04mA3ZLzmMGJ7rSlqxR5vxWqg-ZGj15tqkM,2045
+maingopy/lib/cmake/tinyxml2/tinyxml2-static-targets-release.cmake,sha256=QcnqmZ2_VWK2kjPOkJmCbTHFZmir_Jeo_4lgpjxGFWo,884
+maingopy/lib/cmake/tinyxml2/tinyxml2-static-targets.cmake,sha256=4tSykiLFP0Wpkbi3jc8zPXXdvr365Ei2uy_FnbM6yzc,4373
+maingopy/lib/pkgconfig/tinyxml2.pc,sha256=mW9ZiP_vApWSlT3dQdfBOCRjw-ZKY5mb_IFjQTsUMY0,310
+maingopy-0.8.3.dist-info/AUTHORS,sha256=HkC1WHKqm_kvd52KNAxGIgei8BXMlAQcy9VSAfMpvbM,1729
+maingopy-0.8.3.dist-info/LICENSE,sha256=vZlmKQqJsixd1dkMvNVQqT0hv10NQPPBqNNZcGvlq3k,95195
+maingopy-0.8.3.dist-info/METADATA,sha256=LmRYc4NZaexiq4CiOjV7O0GV3SU-yFqEkvCZ3Au3tEU,3596
+maingopy-0.8.3.dist-info/WHEEL,sha256=fE_NFyeaM8vcDHEZHjUwuIwCfAX272sKvaz9mWJ3HC4,94
+maingopy-0.8.3.dist-info/top_level.txt,sha256=alt1N1RINhZO7dBpd8wE3tgYCSDB-KTPVxZ-msAcJgY,9
+maingopy-0.8.3.dist-info/RECORD,,
