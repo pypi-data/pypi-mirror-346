@@ -1,0 +1,3 @@
+[console_scripts]
+meeting-agent-list = meeting_agent.agent:get_meeting_room_list
+meeting-agent-reserve = meeting_agent.agent:create_meeting_reservation
