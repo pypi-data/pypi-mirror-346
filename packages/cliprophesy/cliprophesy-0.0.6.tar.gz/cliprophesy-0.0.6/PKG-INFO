@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: cliprophesy
+Version: 0.0.6
+Summary: Get command line suggestions
+Project-URL: Homepage, https://github.com/cliseer/cliprophesy
+Project-URL: Issues, https://github.com/cliseer/cliprophesy/issues
+Author-email: Yaron Greif <ygreif@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# cliprophesy
+
+A CLI tool that suggests commands based on your shell history.
+
+## Local development
+
+* Deploying
+** rm -rf build/
+** python -m build
+** python3 -m twine upload --repository testpypi dist/* --verbose
+
+* Developing
+** PYTHONPATH=. python cliprophesy/main.py <command> # run from /src
+** Use absolute imports
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

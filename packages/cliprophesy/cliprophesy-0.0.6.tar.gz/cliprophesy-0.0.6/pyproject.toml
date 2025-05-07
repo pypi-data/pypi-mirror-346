@@ -1,0 +1,30 @@
+[project]
+name = "cliprophesy"
+version = "0.0.6"
+authors = [
+  { name="Yaron Greif", email="ygreif@gmail.com" },
+]
+description = "Get command line suggestions"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+packages = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/cliseer/cliprophesy"
+Issues = "https://github.com/cliseer/cliprophesy/issues"
+
+[build-system]
+requires = ["hatchling >= 1.26", "requests"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cliprophesy"]
+
+[project.scripts]
+cliprophesy = "cliprophesy.main:run"
