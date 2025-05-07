@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: bgp_data_interface
+Version: 0.1.2
+Summary: A python library for accessing internal and public data e.g. PI, AMR, openmeteo, etc.
+Project-URL: Homepage, https://gitlab.com/bgrimm/bgp_data_interface
+Author-email: Anurat Chapanond <anurat@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# B.Grimm Power Data Interface
+
+
+## Introduction
+
+This is a python library for accessing internal and public data e.g. PI, AMR, openmeteo, etc.
+
+
