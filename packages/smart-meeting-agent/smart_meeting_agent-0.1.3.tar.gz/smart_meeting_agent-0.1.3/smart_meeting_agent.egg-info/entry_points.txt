@@ -1,0 +1,2 @@
+[console_scripts]
+smart-meeting-agent-serve = smart_meeting_agent.agent:main
