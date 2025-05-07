@@ -1,0 +1,274 @@
+:root {
+	--teal-100: #effcf6;
+	--teal-200: #C6F7E2;
+	--teal-300: #8EEDC7;
+	--teal-500: #3ebd93;
+	--teal-600: #199473;
+
+	--purple-100: #EAE2F8;
+	--purple-200: #CFBCF2;
+	--purple-300: #A081D9;
+	--purple-400: #8662C7;
+	--purple-500: #724BB7;
+	--purple-600: #653CAD;
+
+	--blue-gray-100: #f0f4f8;
+	--blue-gray-200: #D9E2EC;
+	--blue-gray-300: #bcccdc;
+	--blue-gray-400: #9fb3c8;
+	--blue-gray-500: #829AB1;
+	--blue-gray-600: #627d98;
+	--blue-gray-700: #486581;
+	--blue-gray-1000: #102a43;
+
+	--yellow-300: #f8e3a3;
+	
+}
+
+.hidden {
+	display:none;
+}
+
+body {
+	color: var(--blue-gray-1000);
+	font-family: var(--sl-font-sans);
+	background-color: var(--blue-gray-100);
+}
+#body {
+	margin: var(--sl-spacing-medium);
+	padding: var(--sl-spacing-x-large);
+}
+#title-bar {
+	display: flex;
+	align-items: center;
+}
+
+.container {
+	background-color: white;
+	border-radius: 8px;
+	border: 1px solid var(--blue-gray-200);
+	margin-top: var(--sl-spacing-small);
+}
+.container-padding {
+	padding: var(--sl-spacing-large);
+}
+
+h1, h2 {
+	margin: 0;
+	font-weight: normal;
+}
+.heading.title {
+	font-size: var(--sl-font-size-large);
+	font-weight: bold;
+}
+.little-title {
+	text-transform: uppercase;
+	font-size: var(--sl-font-size-small);
+	color: var(--blue-gray-700);
+	margin-bottom: var(--sl-spacing-medium);
+}
+.date-selection-heading .little-title {
+	margin-bottom: 0px;
+}
+
+.date-selection-heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.support-data {
+	font-size: var(--sl-font-size-small);
+	color: var(--blue-gray-600)
+}
+
+.time-total sl-icon {
+	vertical-align: text-top;
+}
+.time-fromto {
+	font-size: small;
+	color: var(--sl-color-gray-600);
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+
+table {
+	border-collapse: collapse;
+}
+table tr {
+	font-size: var(--sl-font-size-small);
+}
+table.primary thead tr {
+	text-align: left;
+	color: white;
+}
+table.authed thead tr { background-color: var(--purple-500); }
+table.authed.clickable-rows tbody tr:hover { background-color: var(--purple-100); }
+table.unauthed thead tr { background-color: var(--blue-gray-500); }
+table.unauthed.clickable-rows tbody tr:hover { background-color: var(--blue-gray-100); }
+
+th,
+td {
+	vertical-align: baseline;
+	padding: var(--sl-spacing-x-small) var(--sl-spacing-medium);
+}
+table.primary tbody tr {
+	border-bottom: 1px solid var(--blue-gray-100);
+}
+table.primary  tbody tr:last-of-type {
+	border-bottom: none;
+}
+
+table a,
+.subtle-link {
+	color: var(--blue-gray-1000);
+	text-decoration: none;
+}
+table a:hover,
+.subtle-link:hover {
+	color: var(--sl-color-primary-600);
+	text-decoration: underline;
+}
+
+tr.nav-row {
+	cursor: default;
+}
+
+
+.number-cell {
+	text-align: right;
+}
+.small-cell {
+	width: 1%;
+	white-space: nowrap;
+}
+td.actions {
+	vertical-align: middle;
+	padding-left: 0px;
+	padding-right: 8px;
+}
+.duration-cell {
+	/* This extra padding compensates for the slight text overflow caused by `vertical-align: baseline` on all td's. */
+	padding-bottom: var(--sl-spacing-medium);
+}
+
+.status-code-count {
+	font-size: var(--sl-font-size-x-small);
+	text-align: right;
+}
+.warning {
+	color: var(--sl-color-warning-600);
+}
+.danger {
+	color: var(--sl-color-danger-500);
+}
+
+
+@media screen and (max-width: 500px) {
+	#body {
+		padding: 0px;
+		max-width: 100%;
+	}
+	td {
+		padding: var(--sl-spacing-x-small);
+	}
+	td.actions {
+		width: 35px;
+	}
+	#whistles-per-user-tables table {
+		table-layout: fixed;
+  		width: 100%;
+	}
+	.main-cell {
+		width: auto;
+		overflow-wrap: break-word;
+	}
+	#chart-container,
+	.monthly-stats-section,
+	.container-padding {
+		padding: var(--sl-spacing-small);
+	}
+}
+
+
+/* A pattern of having a little button link next to a user id that takes the user to a page with a list of the selected user's sessions */
+.user-id-link {
+	display: flex;
+	align-items: center;
+	gap: var(--sl-spacing-x-small);
+}
+.user-id-link > .button {
+	padding: 6px;
+}
+
+/* Buttons */
+.button-group {
+	display: flex;
+	gap: var(--sl-spacing-2x-small);
+}
+.button {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+
+  display: flex;
+  width: fit-content;
+  border-radius: 80px;
+  /* padding: .75rem; */
+  padding: var(--sl-spacing-x-small);
+  color: var(--blue-gray-700);
+}
+
+.button:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.button:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button:focus {
+  outline: 1px transparent;
+}
+
+.button:before {
+  display: none;
+}
+
+.button:-webkit-details-marker {
+  display: none;
+}
