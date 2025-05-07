@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+cqlib_adapter/VERSION.txt
+cqlib_adapter/__init__.py
+cqlib_adapter/_version.py
+cqlib_adapter.egg-info/PKG-INFO
+cqlib_adapter.egg-info/SOURCES.txt
+cqlib_adapter.egg-info/dependency_links.txt
+cqlib_adapter.egg-info/requires.txt
+cqlib_adapter.egg-info/top_level.txt
