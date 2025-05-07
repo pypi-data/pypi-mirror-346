@@ -1,0 +1,82 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<div class="{{ block.value.type }}">
+    {% if block.value.type == 'card-bgimage' %}
+        {% if self.image %}
+            {% image self.image fill-800x450 format-webp as card_bg_img %}
+            <div class="card-bgimage" style="background-image: url('{{ card_bg_img.url }}');">
+                <div class="wrapper-text-card-bgimage">
+                    {% if self.title %}
+                        <h2 class="h2-card">{{ self.title }}</h2>
+                    {% endif %}
+                    
+                    {% if self.description %}
+                        <div class="p-card">{{ self.description|richtext }}</div>
+                    {% endif %}
+                    
+                    {% if self.link %}
+                        <div class="wrapper-button-right">
+                            {% include_block self.link %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+    {% elif block.value.type == 'card-horizontal' %}
+        <div class="card-horizontal-container">
+            <div class="card-horizontal-image-container">
+                {% if self.image %}
+                    {% image self.image fill-800x450 format-webp preserve-svg as card_img %}
+                    <div class="img-card" style="background-image: url('{{ card_img.url }}');"></div>
+                {% endif %}
+            </div>
+            
+            <div class="wrapper-text-card-horizontal">
+                {% if self.title %}
+                    <h2 class="h2-card">{{ self.title }}</h2>
+                {% endif %}
+                
+                {% if self.description %}
+                    <div class="p-card">{{ self.description|richtext }}</div>
+                {% endif %}
+                
+                {% if self.link %}
+                    <div class="wrapper-button-left">
+                        {% include_block self.link %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    {% else %}
+        {% if self.image %}
+            {% image self.image fill-800x450 format-webp preserve-svg as card_img %}
+            <div class="img-card" style="background-image: url('{{ card_img.url }}');"></div>
+        {% endif %}
+        
+        <div class="wrapper-text-card">
+            {% if self.title %}
+                <h2 class="h2-card {% if block.value.type == 'card-secondary' %}text-center{% endif %} {% if block.value.type != 'card-primary' %}white{% endif %}">{{ self.title }}</h2>
+            {% endif %}
+            
+            {% if self.description %}
+                <div class="p-card {% if block.value.type == 'card-secondary' %}text-center{% endif %} {% if block.value.type != 'card-primary' %}white{% endif %}">{{ self.description|richtext }}</div>
+            {% endif %}
+        </div>
+        
+        {% if self.link %}
+            {% if block.value.type == 'card-secondary' %}
+                <div class="wrapper-button-center">
+                    {% include_block self.link %}
+                </div>
+            {% elif block.value.type == 'card-terciary' %}
+                <div class="wrapper-button-right">
+                    {% include_block self.link %}
+                </div>
+            {% else %}
+                <div class="wrapper-button-left">
+                    {% include_block self.link %}
+                </div>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+</div>
