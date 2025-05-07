@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: pyds-sum
+Version: 0.1.5
+Summary: Summarize python datascience code into natural language
+License: MIT
+Author: Joseph Lucas
+Author-email: joe@joetl.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: torch (>=2.2.1,<3.0.0)
+Requires-Dist: transformers (>=4.51.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+# pyds_sum
+
+A wrapper for [pyds_sum](https://huggingface.co/jtlucas/pyds_sum) to get lightweight english-language summaries of `.ipynb`s used for data science.
