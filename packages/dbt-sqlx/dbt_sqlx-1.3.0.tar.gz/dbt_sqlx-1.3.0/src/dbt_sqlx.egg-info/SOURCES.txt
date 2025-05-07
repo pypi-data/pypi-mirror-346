@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/dbt_sqlx/__init__.py
+src/dbt_sqlx/cli.py
+src/dbt_sqlx/config.py
+src/dbt_sqlx/dbt_utils.py
+src/dbt_sqlx/support.py
+src/dbt_sqlx/translator.py
+src/dbt_sqlx.egg-info/PKG-INFO
+src/dbt_sqlx.egg-info/SOURCES.txt
+src/dbt_sqlx.egg-info/dependency_links.txt
+src/dbt_sqlx.egg-info/entry_points.txt
+src/dbt_sqlx.egg-info/requires.txt
+src/dbt_sqlx.egg-info/top_level.txt
