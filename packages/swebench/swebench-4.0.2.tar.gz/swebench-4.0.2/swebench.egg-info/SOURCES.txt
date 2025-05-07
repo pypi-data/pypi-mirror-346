@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+swebench/__init__.py
+swebench.egg-info/PKG-INFO
+swebench.egg-info/SOURCES.txt
+swebench.egg-info/dependency_links.txt
+swebench.egg-info/requires.txt
+swebench.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_collect_cli.py
+tests/test_evaluation.py
+tests/test_harness_utils.py
