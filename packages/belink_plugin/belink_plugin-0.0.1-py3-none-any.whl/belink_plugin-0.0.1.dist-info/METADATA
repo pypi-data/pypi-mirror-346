@@ -1,0 +1,51 @@
+Metadata-Version: 2.3
+Name: belink_plugin
+Version: 0.0.1
+Summary: Belink Plugin SDK
+License: Apache2.0
+Keywords: dify,plugin,sdk
+Author: shenmq
+Author-email: shenmq@belink.com
+Requires-Python: >=3.11
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: Flask (>=3.0.3,<3.1.0)
+Requires-Dist: Werkzeug (>=3.0.3,<3.1.0)
+Requires-Dist: dpkt (>=1.9.8,<1.10.0)
+Requires-Dist: gevent (>=24.11.1,<24.12.0)
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: pydantic (>=2.8.2)
+Requires-Dist: pydantic_settings (>=2.5.0,<3.0.0)
+Requires-Dist: pydub (>=0.25.1,<0.26.0)
+Requires-Dist: pyyaml (>=6.0.1,<6.1.0)
+Requires-Dist: requests (>=2.32.3,<2.33.0)
+Requires-Dist: socksio (==1.0.0)
+Requires-Dist: tiktoken (>=0.8.0,<0.9.0)
+Requires-Dist: yarl (>=1.9.4,<2.0)
+Project-URL: Homepage, https://github.com/mqshen/belink-plugin.git
+Description-Content-Type: text/markdown
+
+# Belink Plugin SDK
+
+A Python SDK for building plugins for Belink Agent.
+
+## Version Management
+
+This SDK follows Semantic Versioning (a.b.c):
+
+- a: Major version - Indicates significant architectural changes or incompatible API modifications
+- b: Minor version - Indicates new feature additions while maintaining backward compatibility
+- c: Patch version - Indicates backward-compatible bug fixes
+
+### For SDK Users
+
+When depending on this SDK, it's recommended to specify version constraints that:
+- Allow patch and minor updates for bug fixes and new features
+- Prevent major version updates to avoid breaking changes
+
+Example in your project's dependency management:
+
+
