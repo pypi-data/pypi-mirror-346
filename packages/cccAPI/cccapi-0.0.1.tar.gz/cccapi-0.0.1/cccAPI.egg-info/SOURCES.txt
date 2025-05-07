@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+cccAPI.egg-info/PKG-INFO
+cccAPI.egg-info/SOURCES.txt
+cccAPI.egg-info/dependency_links.txt
+cccAPI.egg-info/requires.txt
+cccAPI.egg-info/top_level.txt
