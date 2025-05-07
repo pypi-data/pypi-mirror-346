@@ -1,0 +1,2 @@
+[console_scripts]
+spectrax = spectrax.__main__:main
