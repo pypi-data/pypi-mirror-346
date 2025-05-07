@@ -1,0 +1,13 @@
+README.md
+license
+setup.cfg
+setup.py
+SafeCode/__init__.py
+SafeCode/safecode.py
+SafeCode/test.py
+SafeCode/type.py
+SafeCode.egg-info/PKG-INFO
+SafeCode.egg-info/SOURCES.txt
+SafeCode.egg-info/dependency_links.txt
+SafeCode.egg-info/requires.txt
+SafeCode.egg-info/top_level.txt
