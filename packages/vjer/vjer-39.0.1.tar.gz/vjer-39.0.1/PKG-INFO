@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: vjer
+Version: 39.0.1
+Summary: CI/CD Toolkit
+Keywords: programming,utilities
+Author-email: "Jeffery G. Smith" <web@pobox.com>
+Requires-Python: ~=3.12
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Natural Language :: English
+License-File: LICENSE
+Requires-Dist: BatCave
+Requires-Dist: build
+Requires-Dist: bumpver
+Requires-Dist: junitparser
+Requires-Dist: flake8
+Requires-Dist: flake8-annotations
+Requires-Dist: flake8-pyproject
+Requires-Dist: flit
+Requires-Dist: mypy
+Requires-Dist: pylint
+Requires-Dist: twine
+Requires-Dist: unittest-xml-reporting
+Requires-Dist: types-PyYAML ; extra == "test"
+Requires-Dist: types-requests ; extra == "test"
+Project-URL: changelog, https://github.com/arisilon/vjer/blob/main/CHANGELOG.md
+Project-URL: documentation, https://vjer.readthedocs.io
+Project-URL: homepage, https://github.com/arisilon/vjer/
+Project-URL: repository, https://github.com/arisilon/vjer/
+Provides-Extra: test
+
+# Vjer Python Module
+
+A command line tool for automating CI/CD tasks.
+

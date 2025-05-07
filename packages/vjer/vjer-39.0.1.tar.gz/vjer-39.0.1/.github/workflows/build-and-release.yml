@@ -1,0 +1,31 @@
+name: Vjer Build and Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      skip-pypi-test:
+        type: boolean
+  push:
+    branches:
+      - main
+      - feature/*
+      - release/*
+  pull_request:
+    branches:
+      - main
+      - feature/*
+      - release/*
+
+permissions:
+  checks: write
+  contents: write
+  id-token: write
+
+jobs:
+  ci-cd:
+    uses: arisilon/shared-actions/.github/workflows/python-cicd.yaml@released
+    with:
+      skip-pypi-test: ${{ inputs.skip-pypi-test || false }}
+      test-action: "vjer test build release"
+      vjer-local: true
+    secrets: inherit
