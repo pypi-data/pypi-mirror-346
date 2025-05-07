@@ -1,0 +1,12 @@
+pbp_batch/__init__.py,sha256=FfoNqmYJ3er4q35Q-3rizmOAWgngqu1Ys4b0AtaPVr8,68
+pbp_batch/_deploy.py,sha256=w9Huqte_Y9Z6a-kxcviehysck7lxBbFaSLQ8kNG7rDE,1279
+pbp_batch/cli.py,sha256=KzWfuSbbbbkdeVGHHdgHVMW7wkPJmGETBtPLtjdqcOo,1271
+pbp_batch/cli_bkp.py,sha256=LhJDwXf02Zu3rLEvuqdn0WLHULG1iZbXd_mgE_0TC4E,887
+pbp_batch/core.py,sha256=p5I97AqIF2rBuZaj2Rpa3HP-Z-GOGKFdDQqC0rj1hY0,12400
+pbp_batch/prefect_script.py,sha256=U7aDUjlP5hoiun09yDJloDCn725QqAP_LGCoZz42Ljk,390
+pbp_batch-0.0.1.dist-info/licenses/LICENSE,sha256=QTDrvp9o_gSfnLNDK2VSfJsYHclORsr3fLCd0W-RWqk,1526
+pbp_batch-0.0.1.dist-info/METADATA,sha256=rS9oChWC8QV9MVAJDmIwLRCQCGm-MEh2DNlJEARc3vc,313
+pbp_batch-0.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+pbp_batch-0.0.1.dist-info/entry_points.txt,sha256=aSP2-ph8VSSALF6D04JotlXKjI-7nzdct0eHeNOVCVE,49
+pbp_batch-0.0.1.dist-info/top_level.txt,sha256=3Vr2wBsZm0vzj9XaUj_M50wV_nrUBvem7jCxVOZ4eZ4,10
+pbp_batch-0.0.1.dist-info/RECORD,,
