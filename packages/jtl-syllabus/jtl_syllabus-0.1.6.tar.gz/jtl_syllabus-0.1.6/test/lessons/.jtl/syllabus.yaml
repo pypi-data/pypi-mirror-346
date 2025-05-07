@@ -1,0 +1,91 @@
+name: Your First Lessons in Python
+description: A first course in Python
+module_dir: ..
+uuid: aef79271-1faa-47a6-8ac4-9817520524e7
+modules:
+- name: Loops
+  description: All about Loops
+  uuid: 83f36609-e985-46a9-9880-315dc7c2bfac
+  lessons:
+  - name: Iteration
+    description: Loops and Iteration, For the Win, from the notebook metadata
+    uuid: 04d340f1-24da-4566-9180-ee44d485ec85
+    exercise: 100_Loops/100_Iteration.ipynb
+    terminal: true
+  - name: Crazy Tina
+    uuid: 82287df3-b6cd-4f15-825c-0149e6bddc09
+    lesson: 100_Loops/200_Crazy_Tina/README.md
+    exercise: 100_Loops/200_Crazy_Tina/Crazy_Tina.py
+    display: true
+  - name: List Story
+    uuid: 380a0210-78f8-46b9-b133-5c49ea3234b5
+    lesson: 100_Loops/300_List_Story/README.md
+    exercise: 100_Loops/300_List_Story/List_Story.py
+  - name: Strings
+    uuid: 781b3cb6-6fcb-4975-958b-e5a8ea6acc66
+    exercise: 100_Loops/400_Strings.ipynb
+  - name: Fizz Buzz Badgers
+    uuid: 049751e7-846f-4e63-a7ec-0e36c8bb9658
+    lesson: 100_Loops/500_Fizz_Buzz_Badgers/Fizz_Buzz_Badgers.md
+    exercise: 100_Loops/500_Fizz_Buzz_Badgers/Fizz_Buzz_Badgers.py
+  - name: For Loop Gauntlet
+    uuid: c3e4a400-300c-49ed-914b-16c19a3c77b2
+    exercise: 100_Loops/600_For_Loop_Gauntlet.ipynb
+- name: Turtles
+  description: All about those crafty turtles
+  uuid: df1291a1-dd1e-41c9-8845-1a6203779a45
+  lessons:
+  - name: First
+    uuid: 74780c15-aba1-44ef-9012-69124a221412
+    lessons:
+    - name: Get Started
+      uuid: ca8d1eca-f4e9-4ad0-8868-2dd69dec9cd2
+      exercise: 200_Turtles/100_First/100_Get_Started.ipynb
+      display: true
+    - name: Meet Tina
+      description: the best of tina
+      uuid: 3ed968a2-ea7d-43b9-b4b8-5c5660d3da5e
+      lesson: 200_Turtles/100_First/200_Meet_Tina/README.md
+      exercise: 200_Turtles/100_First/200_Meet_Tina/Meet_Tina.py
+      display: true
+  - name: Second
+    uuid: 89f1a0c8-fa28-4b54-9f53-38979c389217
+    lessons:
+    - name: Check In Your Code
+      uuid: ef50b68b-116e-4854-a13c-6fb8f13c5920
+      exercise: 200_Turtles/200_Second/100_Check_In_Your_Code.ipynb
+    - name: Turtle Tricks
+      uuid: 41d2fe72-2a6d-4fd3-9f0b-79a65e505ff3
+      exercise: 200_Turtles/200_Second/200_Turtle_Tricks.py
+      display: true
+    - name: Variables and Functions
+      uuid: bb1a6bd6-9c80-4ff3-a2b7-54ed43a369cc
+      exercise: 200_Turtles/200_Second/300_Variables_and_Functions.ipynb
+      display: true
+    - name: Variables and Functions
+      uuid: 7ae11983-622a-4222-b701-48f934068900
+      exercise: 200_Turtles/200_Second/400_Variables_and_Functions.ipynb
+      display: true
+    - name: Efficient Turtle
+      uuid: eb8b7cfa-5cbe-4bd5-a529-d9c29c5edfde
+      exercise: 200_Turtles/200_Second/500_Efficient_Turtle.py
+      display: true
+  - name: Third
+    uuid: 41e09dde-596d-4f06-80f6-a9d27d653ae4
+    lessons:
+    - name: More Turtle Programs
+      uuid: 1e0f3850-97e0-4682-b4b1-0eab9cefb322
+      exercise: 200_Turtles/300_Third/100_More_Turtle_Programs.ipynb
+      display: true
+    - name: More Turtle programs
+      uuid: 803a4710-3dc9-4f59-ae72-cbbcb706f56c
+      exercise: 200_Turtles/300_Third/200_More_Turtle_programs.py
+      display: true
+    - name: More Turtle Programs
+      uuid: dd893ac8-472b-4abb-94fb-e6fbd487e083
+      exercise: 200_Turtles/300_Third/300_More_Turtle_Programs.py
+      display: true
+    - name: More Turtle Programs
+      uuid: f50d1345-7c72-4c07-9916-dd5c68a862ce
+      exercise: 200_Turtles/300_Third/400_More_Turtle_Programs.py
+      display: true
