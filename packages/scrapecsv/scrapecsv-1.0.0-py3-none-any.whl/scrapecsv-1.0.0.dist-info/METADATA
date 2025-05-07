@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: scrapecsv
+Version: 1.0.0
+Summary: Scrape web content using Selenium and BeautifulSoup and export grouped data to CSV.
+Project-URL: Homepage, https://github.com/OG-Mendez/scrapecsv
+Project-URL: Issues, https://github.com/OG-Mendez/scrapecsv
+Author-email: David Chinenye Uchenna <chinenyedavid781@gmail.com>
+License: MIT
+License-File: LICENSE.txt
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# scrapecsv
+
+Scrape data from multiple web pages using Selenium and BeautifulSoup and export grouped results to CSV.
+
+## Features
+
+- Works with JavaScript-rendered pages
+- Groups scraped tags by URL with option of writing data into a csv file
+- Optional structured Python data return
+
+## Installation
+
+```bash
+pip install scrapecsv
