@@ -1,0 +1,10 @@
+happydev/__init__.py,sha256=a_RjDY2MGIqMXmDjavTdsZpUe9-MNi5wSw4rrRLyHlc,52
+happydev/__main__.py,sha256=EnPFUAM6Ex9XlZnBTMyGnilpyoRKl4Wv5CLGnJO9aS8,181
+happydev/dynamic_object_proxy.py,sha256=wVyfjO9Zmj1eQ0Y5a26lE4t1EBcbaCsDb0BDTLEUk_8,1728
+happydev/logging_setup.py,sha256=x27Za-PZ6Pc1nDzvJqqEZePZ8culvDIgaK2L0xiLo_c,4987
+happydev/main.py,sha256=spyBEW9OFbrQaNklgxB9nXBeI6-bGVrF0TnipuMRj1Q,914
+happydev/tools.py,sha256=nOb0Thrq1p9_Av8FJs-ZjJoZRx5mlQPY9FYCSMxNCZo,6913
+happydev/utils/df_comparator.py,sha256=2ccBT_p4n5PH0faTjGukUhY8TbfEkhWuHLB08oGH7Vw,14021
+happydev-0.1.0.dist-info/METADATA,sha256=plYPNmGz9sqnofffXdP6lDVzC67kGy4dN6aoTzdWqzM,225
+happydev-0.1.0.dist-info/WHEEL,sha256=9MIigYJ7D5sOqAPqr0-o6tSMY_nQ7c6kvtvyeUB99YQ,87
+happydev-0.1.0.dist-info/RECORD,,
