@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+tytodb_client/__init__.py
+tytodb_pyclient.egg-info/PKG-INFO
+tytodb_pyclient.egg-info/SOURCES.txt
+tytodb_pyclient.egg-info/dependency_links.txt
+tytodb_pyclient.egg-info/requires.txt
+tytodb_pyclient.egg-info/top_level.txt
