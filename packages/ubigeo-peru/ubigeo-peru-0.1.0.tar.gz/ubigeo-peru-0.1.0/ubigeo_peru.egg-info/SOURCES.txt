@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+ubigeo_peru/__init__.py
+ubigeo_peru/builder.py
+ubigeo_peru/loader.py
+ubigeo_peru.egg-info/PKG-INFO
+ubigeo_peru.egg-info/SOURCES.txt
+ubigeo_peru.egg-info/dependency_links.txt
+ubigeo_peru.egg-info/top_level.txt

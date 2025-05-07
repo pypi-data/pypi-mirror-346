@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ubigeo-peru
+Version: 0.1.0
+Summary: Paquete para acceder a datos de UBIGEO de Perú
+Home-page: https://github.com/tuusuario/ubigeo-peru
+Author: Elmer Yujra Condori
+Author-email: elmerjk.20@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Ubigeo Peru
+
+Este paquete proporciona acceso a los datos de los UBIGEO de Perú, permitiendo consultas por código de UBIGEO y devolviendo información sobre distritos, provincias y departamentos.
+
+## Instalación
+
+Puedes instalar el paquete usando pip:
+
+```bash
+pip install ubigeo-peru
