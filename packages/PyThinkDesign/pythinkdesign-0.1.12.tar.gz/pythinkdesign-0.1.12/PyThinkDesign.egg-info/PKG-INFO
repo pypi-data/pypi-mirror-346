@@ -1,0 +1,153 @@
+Metadata-Version: 2.4
+Name: PyThinkDesign
+Version: 0.1.12
+Summary: python sdk for thinkdesign
+Author: cscad
+Author-email: cscad@cscad.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: pywin32
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PyThinkDesign
+
+python sdk for thinkdesign
+
+## install
+
+```bash
+pip install PyThinkDesign
+```
+
+## usage
+
+### 1. Get active TD application
+if the TD application is not running, it will be created.
+
+```python
+from PyThinkDesign import Application
+app = Application.GetActiveApplication()
+```
+
+### 2. Create a TD application
+
+```python
+from PyThinkDesign import Application
+app = Application.Application();
+
+# Set up interactive and visibility mode if necessary.
+app.PutVisible(True);
+app.PutInteractive(True);
+app.Quit();
+```
+
+
+
+### 3. Create lines and arcs in a document
+
+```python
+from PyThinkDesign import Application
+from PyThinkDesign import Geo3d
+
+app = Application.Application();
+doc=app.GetActiveDocument();
+
+# get creators
+curveCreator=doc.GetCurveCreator();
+
+# add lines
+p1 = Geo3d.Point(0,0,0)
+p2 = Geo3d.Point(1,0,0)
+p3 = Geo3d.Point(1,1,0)
+p4 = Geo3d.Point(0,1,0)
+curveCreator.AddLine(p1,p2)
+curveCreator.AddLine(p2,p3)
+curveCreator.AddLine(p3,p4)
+curveCreator.AddLine(p4,p1)
+
+# add arc
+pCenter = Geo3d.Point(10,0,0)
+pXDir = Geo3d.Vector(1,0,0)
+pYDir = Geo3d.Vector(0,1,0) 
+radius = 10
+startAng = 0
+endAng = 60
+curveCreator.AddArc(pCenter, pXDir, pYDir, radius, startAng, endAng)
+
+# save if necessary.
+#doc.SaveAs("d:\\tdApp.e3")
+app.Quit();
+```
+
+### 4. List entities information in a document
+
+```python
+from PyThinkDesign import Application
+from PyThinkDesign import Geo3d
+
+app = Application.Application();
+doc=app.GetActiveDocument();
+
+# get creators
+curveCreator=doc.GetCurveCreator();
+
+# add lines
+p1 = Geo3d.Point(0,0,0)
+p2 = Geo3d.Point(1,0,0)
+p3 = Geo3d.Point(1,1,0)
+curveCreator.AddLine(p1,p2)
+curveCreator.AddLine(p2,p3)
+
+# add arc
+pCenter = Geo3d.Point(10,0,0)
+pXDir = Geo3d.Vector(1,0,0)
+pYDir = Geo3d.Vector(0,1,0) 
+radius = 10
+startAng = 0
+endAng = 60
+curveCreator.AddArc(pCenter, pXDir, pYDir, radius, startAng, endAng)
+
+# get entities information
+jsonStr=doc.ListInfo()
+print(jsonStr)
+app.Quit();
+```
+
+### 5. how to use AddProfile?
+
+```python
+from PyThinkDesign import Application
+from PyThinkDesign import Geo3d
+
+app = Application.GetActiveApplication()
+doc=app.GetActiveDocument()
+
+# get creators
+curveCreator=doc.GetCurveCreator()
+profileCreator = doc.GetProfileCreator()
+
+# add lines
+p1 = Geo3d.Point(0,0,0)
+p2 = Geo3d.Point(1,0,0)
+p3 = Geo3d.Point(1,1,0)
+p4 = Geo3d.Point(0,1,0)
+line1 = curveCreator.AddLine(p1,p2)
+line2 = curveCreator.AddLine(p2,p3)
+line3 = curveCreator.AddLine(p3,p4)
+line4 = curveCreator.AddLine(p4,p1)
+
+lines = [line1.ToSmartId(),line2.ToSmartId(),line3.ToSmartId(),line4.ToSmartId()]
+spProfile =profileCreator.AddProfile(lines, False)
+```
+
