@@ -1,0 +1,14 @@
+[project]
+name = "textflow-rs"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "wangmengdi06", email = "wangmengdi06@58.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
