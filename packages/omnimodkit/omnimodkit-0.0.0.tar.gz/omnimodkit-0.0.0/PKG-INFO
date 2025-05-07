@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: omnimodkit
+Version: 0.0.0
+Summary: Get structured output from multimodal AI models and integrate them into multitool agents
+Author: Anton Potapov
+Author-email: fgreyeducation@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: PyYAML (==6.0)
+Requires-Dist: langchain (==0.3.14)
+Requires-Dist: langchain-community (==0.3.14)
+Requires-Dist: langchain-openai (==0.3.0)
+Requires-Dist: openai (>=1.40.0,<2.0.0)
+Requires-Dist: pydantic (>=2.7.4,<3.0.0)
+Requires-Dist: python-decouple
+Requires-Dist: tenacity (==8.2.2)
+Requires-Dist: tiktoken (>=0.7.0,<0.8.0)
