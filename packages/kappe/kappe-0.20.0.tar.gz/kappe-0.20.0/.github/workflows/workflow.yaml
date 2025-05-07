@@ -1,0 +1,76 @@
+name: Lint
+
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Jobs"
+        required: true
+        default: "lint"
+        type: choice
+        options:
+          - lint
+          - build
+  push:
+    branches:
+      - master
+  release:
+    types: [published]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - uses: pre-commit/action@v3.0.1
+        id: pre_commit
+
+  smoke_test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+      matrix:
+        version: ["3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
+      - run: uv run -p ${{ matrix.version }} ./src/kappe/cli.py version
+
+  build:
+    if: github.event_name == 'release' || github.event.inputs.job == 'build'
+    needs:
+      - lint
+      - smoke_test
+
+    runs-on: ubuntu-latest
+
+    environment: release
+    permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Building
+        run: uv build
+
+      - name: Publish package distributions to PyPI
+        run: uv publish
