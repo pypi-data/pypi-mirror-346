@@ -1,0 +1,24 @@
+[tool.black]
+line-length = 100
+skip-string-normalization = true
+
+[project]
+name = "wordpress_poster"
+version = "0.1.1"
+description = "A Python library for posting content, uploading media, and interacting with the WordPress REST API."
+authors = [
+    { name = "Ihor Tykhonenko", email = "tykhonenkoigor@email.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "python-dotenv",
+    "httpx"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
