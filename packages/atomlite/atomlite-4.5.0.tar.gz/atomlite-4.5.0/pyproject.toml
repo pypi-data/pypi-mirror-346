@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atomlite"
+maintainers = [
+  { name = "Lukas Turcani", email = "lukasturcani93@gmail.com" },
+]
+
+dependencies = [
+  "polars",
+  "rdkit>=2024.9.6",
+]
+requires-python = ">=3.11"
+dynamic = ["version"]
+readme = "README.rst"
+description = "A SQLite chemical database."
+
+[project.optional-dependencies]
+dev = [
+  "ruff",
+  "mypy",
+  "numpy",
+  "pytest",
+  "pytest-cov",
+  "sphinx",
+  "sphinx-copybutton",
+  "build",
+  "twine",
+  "furo",
+]
+
+[project.urls]
+github = "https://github.com/lukasturcani/atomlite"
+documentation = "https://atomlite.readthedocs.io"
+
+[project.scripts]
+atomlite = "atomlite._internal.scripts.atomlite:main"
+
+[tool.setuptools_scm]
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["COM812", "ISC001", "A005"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+  "D100",
+  "D101",
+  "D102",
+  "D103",
+  "D104",
+  "D105",
+  "D106",
+  "D107",
+  "S101",
+  "INP001",
+]
+"docs/source/conf.py" = ["D100", "INP001"]
+
+[tool.mypy]
+show_error_codes = true
+implicit_optional = false
+warn_no_return = true
+strict_optional = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+warn_unreachable = true
+disallow_any_generics = true
+
+[[tool.mypy.overrides]]
+module = "rdkit.*"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "--cov=src --cov-report term-missing"

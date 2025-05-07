@@ -1,0 +1,14 @@
+polars
+rdkit>=2024.9.6
+
+[dev]
+ruff
+mypy
+numpy
+pytest
+pytest-cov
+sphinx
+sphinx-copybutton
+build
+twine
+furo
