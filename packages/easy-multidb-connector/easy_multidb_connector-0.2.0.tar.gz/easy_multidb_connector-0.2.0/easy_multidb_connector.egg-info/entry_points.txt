@@ -1,0 +1,2 @@
+[console_scripts]
+dbconnector-cli = dbconnector.cli:main
