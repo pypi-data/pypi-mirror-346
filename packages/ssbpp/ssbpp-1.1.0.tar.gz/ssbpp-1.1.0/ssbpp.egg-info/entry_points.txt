@@ -1,0 +1,2 @@
+[console_scripts]
+ssbpp = ssbpp.case:main
