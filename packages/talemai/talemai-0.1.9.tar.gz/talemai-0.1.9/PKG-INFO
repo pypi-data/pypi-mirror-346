@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: talemai
+Version: 0.1.9
+Summary: Administrative tool for RAG apps
+Author: Hemit Patel
+Requires-Python: >=3.8
