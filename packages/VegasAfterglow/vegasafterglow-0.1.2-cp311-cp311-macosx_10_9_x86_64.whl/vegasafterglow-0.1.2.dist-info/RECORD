@@ -1,0 +1,13 @@
+vegasafterglow-0.1.2.data/data/LICENSE,sha256=CnVLTiKzfYyzzR3uJMSftuTJXmeovVE-EexSvp9Fvew,1094
+vegasafterglow-0.1.2.data/data/assets/logo_small.svg,sha256=BbP5L9jeOpBjv47_mStzVIN4Dkr2lj2g1RrNNYPL7gc,4690
+vegasafterglow-0.1.2.data/data/assets/logo.svg,sha256=BbP5L9jeOpBjv47_mStzVIN4Dkr2lj2g1RrNNYPL7gc,4690
+vegasafterglow-0.1.2.dist-info/RECORD,,
+vegasafterglow-0.1.2.dist-info/WHEEL,sha256=RgjxKJn3L36bk2qeLcHjA354N7c6TovM04pRbYHBbcg,137
+vegasafterglow-0.1.2.dist-info/top_level.txt,sha256=Llhvjj3o5WiCJgmGUHoihE-66BbzmHvundp11FAOC0Q,15
+vegasafterglow-0.1.2.dist-info/METADATA,sha256=5h_4wZkzteORWKjd6T1oKm5_9WVtiVptYWzjTWjh2xQ,21683
+vegasafterglow-0.1.2.dist-info/licenses/LICENSE,sha256=CnVLTiKzfYyzzR3uJMSftuTJXmeovVE-EexSvp9Fvew,1094
+VegasAfterglow/runner.py,sha256=kVmoeX0ZC0lJJXuyBkJ5PD4hV3-Nfw1-mMjoHLoPx4o,5972
+VegasAfterglow/__init__.py,sha256=r2ZgqLibSIzEIP0iR1lbIfQsmyruiCtnB26O14C5Dgo,249
+VegasAfterglow/types.py,sha256=Uhh42RXb6qgW6Z0buIoJ4qymQo7tz4STvC_54Gp8Xrw,846
+VegasAfterglow/VegasAfterglowC.cpython-311-darwin.so,sha256=bMkHmslmzzNi39zlhcHREsXYmt49VvYH6WvCRdE91DQ,446184
+VegasAfterglow/sampler.py,sha256=PnYzMF0nrjeTygiVWPdCH7-BsyLCiX_4eGV6AQRbgUI,6694
