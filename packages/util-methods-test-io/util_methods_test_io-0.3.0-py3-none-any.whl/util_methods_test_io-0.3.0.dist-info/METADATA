@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: util-methods-test-io
+Version: 0.3.0
+Summary: Reusable utility methods
+Requires-Python: >=3.6
+
