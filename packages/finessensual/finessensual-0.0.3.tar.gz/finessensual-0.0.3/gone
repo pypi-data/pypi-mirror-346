@@ -1,0 +1,2 @@
+convert /home/wdaems/mnt/bartok/lab/finessensual/tests/2025-05/UB-DMW.xml as a Calc document -> /home/wdaems/mnt/bartok/lab/finessensual/UB-DMW.xlsx using filter : Calc Office Open XML
+Overwriting: /home/wdaems/mnt/bartok/lab/finessensual/UB-DMW.xlsx
