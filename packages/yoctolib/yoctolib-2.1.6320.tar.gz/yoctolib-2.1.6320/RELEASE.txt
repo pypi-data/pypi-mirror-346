@@ -1,0 +1,4 @@
+TypedPython v2.1.6320
+
+- Add documentation of YHub class
+- Fix description of pip package
