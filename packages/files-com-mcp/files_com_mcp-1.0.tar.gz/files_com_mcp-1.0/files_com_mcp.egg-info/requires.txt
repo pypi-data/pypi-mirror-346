@@ -1,0 +1,5 @@
+fastmcp>=2.2.0
+mcp
+files-com
+requests>=2.31.0
+fastapi
