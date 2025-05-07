@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "corstream"
+version = "0.1.0a1"
+description = "A coroutine composition framework for declarative async pipelines in Python"
+authors = ["Shiv <shiv@zerobytes.fr>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/shivkun/corstream"
+repository = "https://github.com/shivkun/corstream"
+documentation = "https://github.com/shivkun/corstream#readme"
+keywords = ["asyncio", "streams", "pipelines", "functional", "coroutines", "declarative"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+    "Typing :: Typed"
+]
+packages = [{ include = "corstream" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.23.0"
+mypy = "^1.9.0"
+black = "^24.3.0"
+ruff = "^0.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
