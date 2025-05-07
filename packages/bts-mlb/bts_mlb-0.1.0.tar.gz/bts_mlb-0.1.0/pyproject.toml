@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bts-mlb"
+version = "0.1.0"
+description = "This is a package used to beat the streak of the one and only Joe DiMaggio"
+authors = [
+    { name="Ned Hulseman", email="ned.hulseman@gmail.com" },
+    { name="Jabari Myles", email="jabari.a.myles@gmail.com" }
+]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.3"
+dependencies = [
+    "numpy>=1.13.0",
+    "pandas>=0.20.2",
+    "beautifulsoup4>=4.4.0",
+    "requests>=2.18.1",
+    "lxml>=4.2.1",
+    "selenium>=4.0.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest"
+]
+
+[tool.setuptools.packages.find]
+include = ["bts-mlb"]
+exclude = ["EXAMPLES"]
+
