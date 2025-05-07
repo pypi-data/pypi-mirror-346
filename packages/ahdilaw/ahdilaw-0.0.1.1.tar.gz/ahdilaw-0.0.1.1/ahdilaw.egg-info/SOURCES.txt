@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+ahdilaw/__init__.py
+ahdilaw/conv2d.py
+ahdilaw.egg-info/PKG-INFO
+ahdilaw.egg-info/SOURCES.txt
+ahdilaw.egg-info/dependency_links.txt
+ahdilaw.egg-info/requires.txt
+ahdilaw.egg-info/top_level.txt
+ahdilaw/special/__init__.py
+ahdilaw/special/ctconv2d.py
+ahdilaw/special/spconv2d.py
