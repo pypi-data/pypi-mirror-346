@@ -1,0 +1,108 @@
+Metadata-Version: 2.4
+Name: retentionengine
+Version: 0.0.1
+Summary: A simple adapter implementation to transform pretrained Transformer-family models into the Titans architecture.
+Author-email: RetentionLabs <retentionlabs.ai@gmail.com>
+Requires-Python: >=3.9, <3.14
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: torch>=2.0.0
+Requires-Dist: transformers>=4.30.0
+Requires-Dist: pytest>=7.0.0 ; extra == "dev"
+Requires-Dist: black>=23.0.0 ; extra == "dev"
+Requires-Dist: isort>=5.12.0 ; extra == "dev"
+Requires-Dist: mypy>=1.0.0 ; extra == "dev"
+Requires-Dist: sphinx>=6.0.0 ; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.2.0 ; extra == "docs"
+Project-URL: Bug Tracker, https://github.com/retentionlabs/retentionengine/issues
+Project-URL: Documentation, https://retentionengine.github.io
+Project-URL: Homepage, https://github.com/retentionlabs/retentionengine
+Provides-Extra: dev
+Provides-Extra: docs
+
+# RetentionEngine
+A simple adapter implementation to transform pretrained Transformer-family models into the Titans architecture.
+
+## Experiments Setup
+### Exp 1: Comparison with Base Models [3B]
+#### Baseline
+- Titans 4B (Gemma3 4B IT)
+- Llama3.2 3B Instruct
+- Qwen3 4B
+- Gemma3 4B IT
+- RAG + Llama3.2 3B Instruct
+- RAG + Qwen3 4B
+- RAG + Gemma3 4B IT
+
+#### Suggested
+- Atlas-L 3B (Llama3.2 3B Instruct)
+- Atlas-Q 4B (Qwen3 4B)
+- Atlas-G 4B (Gemma3 4B IT)
+
+### Exp 2: Comparison with Base Models [8B]
+#### Baseline
+- Titans 9B (Gemma2 9B IT)
+- Llama3.1 8B Instruct
+- Qwen3 8B
+- Gemma3 9B IT
+- RAG + Llama3.1 8B Instruct
+- RAG + Qwen3 8B
+- RAG + Gemma3 9B IT
+
+#### Suggested
+- Atlas-L 8B (Llama3.1 8B Instruct)
+- Atlas-Q 8B (Qwen3 8B)
+- Atlas-G 9B (Gemma3 9B IT)
+
+### Exp 3: Comparison with Recurrent Models [8B]
+#### Baseline
+- Titans 9B (Gemma2 9B IT)
+- Mamba2 8B
+- RWKV6 7B
+
+#### Suggested
+- Atlas-L 3B (Llama3.2 3B Instruct)
+- Atlas-Q 4B (Qwen3 4B)
+- Atlas-G 4B (Gemma3 4B IT)
+- Atlas-L 8B (Llama3.1 8B Instruct)
+- Atlas-Q 8B (Qwen3 8B)
+- Atlas-G 9B (Gemma3 9B IT)
+
+
+## Build
+```bash
+git clone https://github.com/retentionlabs/RetentionEngine.git
+cd RetentionEngine
+uv pip sync
+```
+
+## Usage
+- See `usage.ipynb` for usage examples.
+
+## Deploy
+```bash
+rm -rf dist/
+rm -rf build/
+rm -rf *.egg-info
+
+python -m pip install --upgrade pip
+pip install flit
+python -m flit build
+
+echo "Uploading..."
+python -m flit publish
+
+echo "Deployment complete!"
+```
+
