@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Orbaplaw
+Version: 1.0.2
+Summary: Orbital alignment analysis for plane wave basis sets
+Home-page: https://github.com/FreemanTheMaverick/Orbaplaw.git
+Author: FreemanTheMaverick
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
