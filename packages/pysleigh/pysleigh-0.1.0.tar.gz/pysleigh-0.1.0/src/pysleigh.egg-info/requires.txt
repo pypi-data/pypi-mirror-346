@@ -1,0 +1,12 @@
+beautifulsoup4
+markdownify
+requests
+typer[all]
+toml
+pytest
+
+[dev]
+black
+ruff
+mypy
+pytest-cov
