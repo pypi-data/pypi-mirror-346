@@ -1,0 +1,10 @@
+nonebot_plugin_aitalk/__init__.py,sha256=vQzl2jtgSE5I8zuMLAlNM7M9zmcYc_wf-SGQAgE8GVo,30613
+nonebot_plugin_aitalk/api.py,sha256=v_kLkaj7ZbTVfLebMVsBqflHFs0W5EswGlgp4bPK01A,1563
+nonebot_plugin_aitalk/cd.py,sha256=K5SYzYg2FXlkYTcf6lfzOvJygkzp3t5UwAEiWKzMxdE,252
+nonebot_plugin_aitalk/config.py,sha256=nwjnMTcHSWcSdyyTZSWWmoit8Vm9fQFkD2fOSKwYeqo,3923
+nonebot_plugin_aitalk/data.py,sha256=2ncffA3Fe1VOvy5XMYjVX0cMD2FUmpneFTXDnetbOzE,2258
+nonebot_plugin_aitalk/utils.py,sha256=Nwj01-e734ENT0UxuWGm1B4VlZllpOJtKISZXneaPhE,8992
+nonebot_plugin_aitalk-2.4.21.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+nonebot_plugin_aitalk-2.4.21.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+nonebot_plugin_aitalk-2.4.21.dist-info/METADATA,sha256=iJurB6TF0e3f5C1bRL1AnjPDv9RSoGM735t2toRUGNA,13836
+nonebot_plugin_aitalk-2.4.21.dist-info/RECORD,,
