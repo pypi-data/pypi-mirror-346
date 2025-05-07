@@ -1,0 +1,18 @@
+"""The base class for a feature."""
+
+from typing import TypedDict
+
+FEATURE_TYPE_LAG = "lag"
+FEATURE_TYPE_ROLLING = "rolling"
+
+VALUE_TYPE_INT = "int"
+VALUE_TYPE_DAYS = "days"
+VALUE_TYPE_NONE = "none"
+
+
+class Feature(TypedDict):
+    """A description of a feature to use."""
+
+    feature_type: str
+    value1: str | int | None
+    value2: str | int | None
