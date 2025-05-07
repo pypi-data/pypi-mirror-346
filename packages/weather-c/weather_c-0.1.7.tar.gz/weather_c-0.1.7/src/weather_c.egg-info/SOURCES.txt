@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/weather_c/__init__.py
+src/weather_c/weather_c.py
+src/weather_c.egg-info/PKG-INFO
+src/weather_c.egg-info/SOURCES.txt
+src/weather_c.egg-info/dependency_links.txt
+src/weather_c.egg-info/entry_points.txt
+src/weather_c.egg-info/requires.txt
+src/weather_c.egg-info/top_level.txt
