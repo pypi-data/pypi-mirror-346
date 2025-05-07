@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: compas-lcmtypes
+Version: 0.2.0
+Summary: CoMPAS LCM types
+Project-URL: Repository, https://github.com/CoMPASLab/compas_lcmtypes
+Project-URL: Issue Tracker, https://github.com/CoMPASLab/compas_lcmtypes/issues
+Author: CoMPAS Lab
+Maintainer-email: Kevin Barnard <kbarnard@mbari.org>
+Keywords: communication,compas,lcm,messaging,robotics
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8

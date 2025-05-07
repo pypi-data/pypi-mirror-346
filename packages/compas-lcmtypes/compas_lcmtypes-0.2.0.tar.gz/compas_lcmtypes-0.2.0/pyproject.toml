@@ -1,0 +1,41 @@
+[project]
+name = "compas-lcmtypes"
+version = "0.2.0"
+description = "CoMPAS LCM types"
+requires-python = ">=3.8"
+dependencies = []
+authors = [
+    { name = "CoMPAS Lab" },
+]
+maintainers = [
+    { name = "Kevin Barnard", email = "kbarnard@mbari.org" },
+]
+keywords = ["lcm", "robotics", "communication", "messaging", "compas"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Repository = "https://github.com/CoMPASLab/compas_lcmtypes"
+"Issue Tracker" = "https://github.com/CoMPASLab/compas_lcmtypes/issues"
+
+[build-system]
+requires = ["hatchling", "lcm"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = ["compas_lcmtypes"]
+
+[tool.hatch.build.hooks.custom]
+path = "hatch_build.py"
+dependencies = ["lcm"]
