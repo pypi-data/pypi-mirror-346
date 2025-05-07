@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yandex_aiobot_py"
+version = "25.05.07-beta2"
+authors = [
+  { name="demkinkv", email="demkinkv92@yandex.com" },
+]
+description = "Асинхронный бот для работы с API Yandex Chat"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = {text = "MIT"}
+dependencies = [
+    "aiofiles>=24.1.0",
+    "aiohttp>=3.11.17",
+    "requests>=2.32.3"
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/demkinkv/yandex_aiobot_py"
+Repository = "https://gitlab.com/demkinkv/yandex_aiobot_py.git"
+
+[tool.setuptools.packages.find]
+include = ["yandex_aiobot_py*"]
+exclude = ["files*", "tmp*", "doc*", "venv*", "__pycache__*"]
