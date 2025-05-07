@@ -1,0 +1,6 @@
+click
+wool
+
+[dev]
+pytest
+ruff

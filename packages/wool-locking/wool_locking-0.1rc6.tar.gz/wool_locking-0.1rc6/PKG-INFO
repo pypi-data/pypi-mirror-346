@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: wool-locking
+Version: 0.1rc6
+Summary: A Wool plugin for distributed locking.
+Author-email: Conrad Bzura <conrad@wool.io>
+Maintainer-email: maintainers@wool.io
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: wool
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
