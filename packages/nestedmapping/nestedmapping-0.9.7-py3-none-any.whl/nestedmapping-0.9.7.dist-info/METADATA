@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: nestedmapping
+Version: 0.9.7
+Summary: The package to work with nested dictionaries supporing list/set as keys
+Author-email: Gonchar Maxim <gonchar@jinr.ru>, Vitalii Zavadskyi <zavadskiy.vs@phystech.edu>, Tsegelnik Nikita <tsegelnik@jinr.ru>
+Maintainer-email: Gonchar Maxim <gonchar@jinr.ru>, Vitalii Zavadskyi <zavadskiy.vs@phystech.edu>, Tsegelnik Nikita <tsegelnik@jinr.ru>
+License-Expression: MIT
+Project-URL: homepage, https://github.com/dagflow-team/nestedmapping
+Project-URL: repository, https://github.com/dagflow-team/nestedmapping
+Project-URL: documentation, https://github.com/dagflow-team/nestedmapping/wiki
+Project-URL: Bug Tracker, https://github.com/dagflow-team/nestedmapping/issues
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: ordered-set
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Dynamic: license-file
+
+# Summary
+
+[![python](https://img.shields.io/badge/python-3.11-purple.svg)](https://www.python.org/)
+[![pipeline](https://git.jinr.ru/dag-computing/dictwrapper.py/badges/master/pipeline.svg)](https://git.jinr.ru/dag-computing/dictwrapper.py/commits/master)
+[![coverage report](https://git.jinr.ru/dag-computing/dictwrapper.py/badges/master/coverage.svg)](https://git.jinr.ru/dag-computing/dictwrapper.py/-/commits/master)
+<!--- Uncomment here after adding docs!
+[![pages](https://img.shields.io/badge/pages-link-white.svg)](http://dag-computing.pages.jinr.ru/dictwrapper.py)
+-->
+
+* `NestedMapping` is a package to work with nested dictionaries
