@@ -1,0 +1,2 @@
+[console_scripts]
+weather-yq-c = weather_yq_c:main
