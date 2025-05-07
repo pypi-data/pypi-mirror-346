@@ -1,0 +1,29 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"allOf" : [
+		{ "$ref": "https://progression.dti.crosemont.quebec/schemas/question_base" }
+	],
+	"properties": {
+		"ébauches": {
+			"type": "object",
+			"minProperties": 1,
+			"patternProperties": {
+				"^.*$": {
+					"type": ["string", "null"]
+				}
+			}
+		},
+		"tests": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"allOf": [
+					{ "$ref": "https://progression.dti.crosemont.quebec/schemas/test_prog" }
+				]
+			}
+		}
+	},
+	"required": ["ébauches", "tests"]
+}

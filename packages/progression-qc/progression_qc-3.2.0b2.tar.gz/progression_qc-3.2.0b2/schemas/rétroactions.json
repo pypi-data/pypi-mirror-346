@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "positive": {
+      "type": "string",
+      "nullable": false
+    },
+    "négative": {
+      "type": "string",
+      "nullable": false
+    },
+    "erreur": {
+      "type": "string",
+      "nullable": false
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "nom": {
+      "type": "string"
+    },
+    "sortie": {
+	    "type": ["string", "integer" ]
+    },
+    "rétroactions": {
+      "$ref": "https://progression.dti.crosemont.quebec/schemas/rétroactions"
+    },
+    "caché": {
+      "type": "boolean"
+    }
+  }
+}
