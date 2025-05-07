@@ -1,0 +1,8 @@
+{
+  "columns": [
+    {
+      "name": "row_id",
+      "type": "double"
+    }
+  ]
+}
