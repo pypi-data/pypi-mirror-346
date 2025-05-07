@@ -1,0 +1,2 @@
+[console_scripts]
+acab = acab.acab:cli_entry
