@@ -1,0 +1,14 @@
+spin_phonon_suite/__init__.py,sha256=ZU7KUgQv1p5jf-lgmbvJ-tM-AtGznyHOcRUTOwupvWU,152
+spin_phonon_suite/__version__.py,sha256=TxehMpCnoxG82vFPBSJgfKWBDldY-sL-j-4FNm_9b2I,105
+spin_phonon_suite/cli.py,sha256=4LDkuMN0tkzwX8U-V5Ghb_cfuNb_oqlLqrMJkCt6IHs,33027
+spin_phonon_suite/derivative.py,sha256=CboiWMc7TX0zPFZVfSnT1-G_BdAp8tnZEzhOJAxhk4I,1309
+spin_phonon_suite/experiments.py,sha256=Q8nHczhhL7qmCL_6c8aRaz9_5g1-HzHMJ3smvnaEY48,2960
+spin_phonon_suite/lvc.py,sha256=3qMaVCH_VoBRPDsYU2LNng6TYEFC_OrfFdCMyr0zg_s,23033
+spin_phonon_suite/polarisation_derivatives.py,sha256=7EqLbCcooxIwRqU1xAQ0TwcslsGUxvagHYy1bfYjulQ,1819
+spin_phonon_suite/vibrations.py,sha256=Te2EBwNVUaLzfzER7iGBTLarn46OqSw2d3tOm9-vF8Q,25893
+spin_phonon_suite-1.9.0.dist-info/licenses/LICENSE,sha256=w9_JIVBsyrO01R7CnRkGmD_yQcWWBZTLi-Xxwjc4ms8,35085
+spin_phonon_suite-1.9.0.dist-info/METADATA,sha256=VyFlE35bhA-aZTTw4lQGQqUT-FsaEaP98cwRy5AYtOk,4413
+spin_phonon_suite-1.9.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+spin_phonon_suite-1.9.0.dist-info/entry_points.txt,sha256=sK4vQ-Ah78_oLQizVdqWTsqaJdi9RMuYU11VcQhqvqY,65
+spin_phonon_suite-1.9.0.dist-info/top_level.txt,sha256=PZUsRSsrf8lFHO6Y4I7NT2PXDn7wU3qNbugPDbmuQe8,18
+spin_phonon_suite-1.9.0.dist-info/RECORD,,
