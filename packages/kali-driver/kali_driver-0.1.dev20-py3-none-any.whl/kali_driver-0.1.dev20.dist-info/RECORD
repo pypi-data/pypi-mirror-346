@@ -1,0 +1,8 @@
+al1s/drivers/kali/__init__.py,sha256=DCYgmshuxjs2TOjV7D9JM0HotopM29UsGQfhBgoEy6A,47
+al1s/drivers/kali/driver.py,sha256=1OtepDKQEiahFUuH0jvIQwZxlGFegc5VNWLX4D7js7Q,3350
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/main.py,sha256=Av-0I1y6YEKmZuJKsx5X8c7pPYQhLrYUVLhBixz9odY,346
+kali_driver-0.1.dev20.dist-info/METADATA,sha256=_yeVZnnIH3FEst8tR7QsCMXVpdRqR7ykZIvO6bKfCew,381
+kali_driver-0.1.dev20.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+kali_driver-0.1.dev20.dist-info/top_level.txt,sha256=rK1DZPBd6754bJeUrHlrNB3MBlVVfU0HJsBpa-ru2d4,15
+kali_driver-0.1.dev20.dist-info/RECORD,,
