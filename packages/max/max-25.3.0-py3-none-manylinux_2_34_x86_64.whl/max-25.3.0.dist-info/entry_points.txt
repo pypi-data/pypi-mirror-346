@@ -1,0 +1,5 @@
+[console_scripts]
+max = max.entrypoints.pipelines:main
+max-pipelines = max.entrypoints.pipelines:main
+max-serve = max.entrypoints.pipelines:main
+mojo = max.entrypoints.mojo:exec_mojo
