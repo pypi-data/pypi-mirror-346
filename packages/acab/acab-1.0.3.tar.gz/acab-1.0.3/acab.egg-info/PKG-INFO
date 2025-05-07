@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: acab
+Version: 1.0.3
+Summary: Alignments Comparing and Benchmarking (ACAB): инструмент для сравнения множественных выравниваний
+Author: pirat
+Author-email: piratvanek@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
+
+# ACAB
+
+Alignments Comparing and Benchmarking
+Инструмент для сравнения множественных выравниваний в формате FASTA.
+
+## Установка
+
+pip install acab
+
+## Пример использование
+
+acab aln1.fasta aln2.fasta -o result.tsv
