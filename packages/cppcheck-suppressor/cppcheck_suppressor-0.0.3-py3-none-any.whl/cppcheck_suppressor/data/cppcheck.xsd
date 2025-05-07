@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="results">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="cppcheck">
+          <xs:complexType>
+            <xs:attribute name="version" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="errors">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="error">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="location">
+                      <xs:complexType>
+                        <xs:attribute name="file" type="xs:string" use="required" />
+                        <xs:attribute name="line" type="xs:integer" use="required" />
+                        <xs:attribute name="column" type="xs:integer" use="required" />
+                        <xs:attribute name="info" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required" />
+                  <xs:attribute name="severity" type="xs:string" use="required" />
+                  <xs:attribute name="msg" type="xs:string" use="required" />
+                  <xs:attribute name="verbose" type="xs:string" use="required" />
+                  <xs:attribute name="inconclusive" type="xs:boolean" />
+                  <xs:attribute name="cwe" type="xs:integer" />
+                  <xs:attribute name="file0" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:unsignedByte" use="required" />
+    </xs:complexType>
+  </xs:element>
+   <xs:element name="suppressions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="suppress">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:string" />
+              <xs:element name="fileName" type="xs:string" minOccurs="0" />
+              <xs:element name="lineNumber" type="xs:integer" minOccurs="0" />
+              <xs:element name="symbolName" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
