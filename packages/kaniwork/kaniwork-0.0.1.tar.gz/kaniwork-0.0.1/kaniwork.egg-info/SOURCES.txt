@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+kaniwork/__init__.py
+kaniwork/operations.py
+kaniwork.egg-info/PKG-INFO
+kaniwork.egg-info/SOURCES.txt
+kaniwork.egg-info/dependency_links.txt
+kaniwork.egg-info/top_level.txt
