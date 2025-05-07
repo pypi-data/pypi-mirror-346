@@ -1,0 +1,4 @@
+[console_scripts]
+agentmap=agentmap.cli:app
+agentmap-server=uvicornagentmap.fastapi_server:app--reload
+
