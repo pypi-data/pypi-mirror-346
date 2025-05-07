@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: django-rq-cron
+Version: 0.1.0
+Summary: A Django app for running cron jobs with django-rq
+Home-page: https://github.com/buttondown/django-rq-cron
+Author: Buttondown
+Author-email: hello@buttondown.email
+License: MIT
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: Django>=3.2
+Requires-Dist: django-rq>=2.5.0
+Requires-Dist: python-crontab>=2.6.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
