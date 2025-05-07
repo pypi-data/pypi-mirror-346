@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+henriupton99_hello.egg-info/PKG-INFO
+henriupton99_hello.egg-info/SOURCES.txt
+henriupton99_hello.egg-info/dependency_links.txt
+henriupton99_hello.egg-info/top_level.txt

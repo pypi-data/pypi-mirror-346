@@ -1,0 +1,12 @@
+[project]
+name = "henriupton99-hello"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.uv.workspace]
+members = [
+    "henriupton99_hello",
+]
