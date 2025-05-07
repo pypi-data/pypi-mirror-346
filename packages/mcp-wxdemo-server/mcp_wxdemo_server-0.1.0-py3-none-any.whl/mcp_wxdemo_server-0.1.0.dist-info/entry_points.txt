@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-wxdemo-server = mcp_wxdemo_server:main
