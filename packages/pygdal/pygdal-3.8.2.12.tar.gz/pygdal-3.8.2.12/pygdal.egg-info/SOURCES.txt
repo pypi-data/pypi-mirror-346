@@ -1,0 +1,12 @@
+GDAL_VERSION
+MANIFEST.in
+README.md
+setup.py
+./osgeo/__init__.py
+./osgeo/gdalnumeric.py
+pygdal.egg-info/PKG-INFO
+pygdal.egg-info/SOURCES.txt
+pygdal.egg-info/dependency_links.txt
+pygdal.egg-info/not-zip-safe
+pygdal.egg-info/requires.txt
+pygdal.egg-info/top_level.txt
