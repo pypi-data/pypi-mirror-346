@@ -1,0 +1,77 @@
+---
+- block:
+    - name: Import common vars
+      ansible.builtin.include_vars:
+        file: ../group_vars.yml
+
+    - name: Create a test folders
+      vmware.vmware.folder:
+        validate_certs: false
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        relative_path: "{{ test_folder }}"
+        folder_type: vm
+        datacenter: "{{ vcenter_datacenter }}"
+
+    - name: Create Virtual Machine From OVF Template
+      vmware.vmware.deploy_content_library_ovf:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: false
+        library_item_name: "{{ rhel9_content_library_ovf }}"
+        vm_name: "{{ vm_name }}"
+        datacenter: "{{  vcenter_datacenter }}"
+        datastore: "{{ shared_storage_02 }}"
+        cluster: "{{ vcenter_cluster_name }}"
+        folder: "{{ test_folder }}"
+
+    - name: VM portgroup information
+      vmware.vmware.vm_portgroup_info:
+        validate_certs: false
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        port: "{{ vcenter_port }}"
+        vm_names:
+          - "{{ vm_name }}"
+      register: __res
+
+    - name: Print result
+      ansible.builtin.debug:
+        var: __res
+
+    - name: Assert values
+      ansible.builtin.assert:
+        that:
+          - __res.changed == False
+          - __res.vm_portgroup_info[vm_name] | length == 1
+          - __res.vm_portgroup_info[vm_name][0]['portgroup_name'] == "Management Network"
+          - __res.vm_portgroup_info[vm_name][0]['nic_type'] == "VMXNET3"
+          - __res.vm_portgroup_info[vm_name][0]['type'] == "DISTRIBUTED_PORTGROUP"
+
+  always:
+    - name: "Test teardown: Destroy VM guest {{ vm_name }}"
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        cluster: "{{ vcenter_cluster_name }}"
+        datacenter: "{{  vcenter_datacenter }}"
+        folder: "{{ test_folder }}"
+        state: absent
+        force: true
+        name: "{{ vm_name }}"
+
+    - name: Create a test folders
+      vmware.vmware.folder:
+        validate_certs: false
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        relative_path: "{{ test_folder }}"
+        folder_type: vm
+        datacenter: "{{ vcenter_datacenter }}"
+        state: absent
