@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tbd-api"
+dynamic = ["version"]
+description = "Unofficial API for TorrentBD"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [
+    {name = "TanmoyTheBoT", email = "tanmoysarkershuvo@gmail.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "python-dotenv>=0.9.9",
+    "fastapi>=0.115.12",
+    "pyotp>=2.9.0",
+    "requests>=2.32.3",
+    "uvicorn>=0.34.2",
+    "v3cap>=0.0.2",
+    "beautifulsoup4>=4.13.4",
+]
+
+[project.scripts]
+tbd-api = "torrentbd_api.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["torrentbd_api"] 
+
+[tool.setuptools.dynamic]
+version = { attr = "torrentbd_api.version.__version__" }
