@@ -1,0 +1,25 @@
+import os
+from functools import partial
+from textx import generator
+from textx.generators import gen_file, get_output_filename
+
+__version__ = "0.1.0.dev"
+
+
+@generator('{{language}}', '{{target}}')
+def {{language}}_generate_{{target}}(metamodel, model, output_path, overwrite, debug, **custom_args):
+    "Generator for generating {{target}} from {{language}} descriptions"
+
+    output_file = get_output_filename(model._tx_filename, output_path, '{{extension}}')
+    gen_file(model._tx_filename, output_file,
+             partial(generator_callback, model, output_file),
+             overwrite,
+             success_message='Done.'
+             .format(os.path.basename(output_file)))
+
+
+def generator_callback(model, output_file):
+    """
+    A generator function that produce output_file from model.
+    """
+    # TODO: Write here code that produce generated output
