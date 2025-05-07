@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: simple-arithmatic-ops
+Version: 0.1.0
+Summary: A simple Python package for integer arithmetic operations
+Home-page: 
+Author: Zilberguy
+Author-email: Some_random_email@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Simple Arithmatic Ops
+
+A simple Python package for integer arithmetic operations.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install simple-arithmatic-ops
+```
+
+## Usage
+
+```python
+from arithmatic import add, subtract
+
+# Addition
+result = add(5, 3)  # Returns 8
+
+# Subtraction
+result = subtract(10, 4)  # Returns 6
+```
+
+## Features
+
+- Simple integer addition
+- Simple integer subtraction
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
