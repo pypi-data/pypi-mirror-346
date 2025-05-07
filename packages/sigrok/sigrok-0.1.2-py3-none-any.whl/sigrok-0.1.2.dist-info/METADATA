@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: sigrok
+Version: 0.1.2
+Summary: Python-API for libsigrok
+Project-URL: Homepage, https://github.com/stefanhoelzl/python-sigrok
+Project-URL: Repository, https://github.com/stefanhoelzl/python-sigrok.git
+Author-email: Stefan Hoelzl <stefan.hoelzl@posteo.de>
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Requires-Dist: pkgconfig>=1.5.5
+Requires-Dist: platformdirs>=4.3.7
+Requires-Dist: pyclibrary>=0.2.2
+Requires-Dist: typing-extensions>=4.13.2
+Description-Content-Type: text/markdown
+
+# python-sigrok
+
+Python-API for [libsigrok](https://sigrok.org/wiki/Libsigrok)
+
+## Installation
+```bash
+pip install sigrok
+```
+
+### Requirements
+#### Ubuntu
+```bash
+apt install libsigrok4 libsigrok-dev
+```
+
+### Fedora
+```bash
+dnf install libsigrok libsigrok-devel
+```
+
+#### macOS
+```bash
+brew install libsigrok
+```
+
+#### Windows
+pre-built libsigrok dlls are shipped with this package.
+
+## Usage
+```python
+from sigrok import Sigrok, ConfigKey
+
+with (
+    Sigrok() as sr,
+    sr.get_driver("demo") as driver,
+    driver.get_device() as device,
+):
+    device.set_config_uint64(ConfigKey.SR_CONF_SAMPLERATE, 1_000)
+    device.set_config_uint64(ConfigKey.SR_CONF_LIMIT_SAMPLES, 10)
+    device.enable_channels("D0")
+
+    with sr.session(devices=[device]) as session:
+        print(session.next_packet(timeout=1.0))
+        print(session.next_packet(timeout=1.0))
+        print(session.next_packet(timeout=1.0))
+```
