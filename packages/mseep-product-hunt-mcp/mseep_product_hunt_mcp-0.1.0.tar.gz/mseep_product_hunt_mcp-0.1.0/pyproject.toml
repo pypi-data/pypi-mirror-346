@@ -1,0 +1,77 @@
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "mseep-product-hunt-mcp"
+version = "0.1.0"
+description = "Product Hunt MCP Server - A FastMCP implementation for the Product Hunt API"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Jai Pandya" },
+]
+keywords = [
+    "mcp",
+    "product-hunt",
+    "fastmcp",
+    "api",
+    "ai",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Natural Language :: English",
+]
+dependencies = [
+    "fastmcp>=0.3.0",
+    "requests>=2.31.0",
+]
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.0.270",
+    "black>=23.0.0",
+]
+
+[project.scripts]
+product-hunt-mcp = "product_hunt_mcp.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/jaipandya/producthunt-mcp-server"
+"Bug Tracker" = "https://github.com/jaipandya/producthunt-mcp-server/issues"
+Documentation = "https://github.com/jaipandya/producthunt-mcp-server#readme"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = [
+    "E",
+    "F",
+    "B",
+    "I",
+]
+
+[tool.black]
+line-length = 100
+target-version = [
+    "py310",
+    "py311",
+    "py312",
+]
+
+[tool.hatch.build.targets]
