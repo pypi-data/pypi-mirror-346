@@ -1,0 +1,160 @@
+Metadata-Version: 2.4
+Name: groupdocs-redaction-net
+Version: 25.5
+Summary: GroupDocs.Redaction for Python via .NET provides a reliable solution for redacting sensitive and confidential information across a wide range of document formats.
+Home-page: https://products.groupdocs.com/redaction
+Author: GroupDocs
+License: Other/Proprietary License
+Keywords: redactor,redact,file,document,pdf,docx,xlsx,pptx,html,png,word,excel,powerpoint
+Platform: win_amd64,win32,macos_x86_64,macos_arm64
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9,<3.13
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: platform
+Dynamic: requires-python
+Dynamic: summary
+
+# Document Redaction API
+
+[Product Page](https://products.groupdocs.com/redaction/python-net/) | [Docs](https://docs.groupdocs.com/redaction/python-net/) | [Demos](https://products.groupdocs.app/redaction/family) | [API Reference](https://reference.groupdocs.com/redaction/) | [Blog](https://blog.groupdocs.com/category/redaction/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/redaction) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
+
+GroupDocs.Redaction for Python via .NET is a powerful redaction API that enables you to remove sensitive and confidential information from a wide range of document formats, including PDF, Microsoft Office files, images, and more. It supports text, metadata, annotation, and image redactions with advanced options like regular expressions.
+
+## Features
+
+- **Comprehensive Redaction Options**: Redact text, metadata, annotations, images, and more across supported formats.
+- **OCR Integration**: Redact text from scanned documents and image-based content using built-in OCR support.
+- **Format-Agnostic Interface**: Apply redaction operations consistently across multiple document types.
+
+## Supported File Formats
+
+GroupDocs.Redaction supports a wide variety of file formats. For a complete list, see the [full list of supported formats](https://docs.groupdocs.com/redaction/python-net/supported-document-formats/).
+
+* **Microsoft Office** (Word, Excel, PowerPoint)
+* **PDF** (Standard PDFs, PDF/A)
+* **OpenDocument** (ODT, ODS, ODP)
+* **Images** (JPEG, PNG, TIFF, BMP, GIF, WEBP)
+* **eBook** (DJVU)
+* **Text/Markdown** (TXT, CSV, RTF, MD)
+* **HTML/Web** (HTML, MHTML)
+
+## Get Started
+
+Ensure that [Python 3.9](https://www.python.org/downloads/) and the [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) runtime (or higher) are installed on your system.
+
+To install the package, run:
+
+```bash
+pip install groupdocs-redaction-net
+```
+
+If you already have the package installed and want to update to the latest version, run:
+
+```bash
+pip install --upgrade groupdocs-redaction-net
+```
+
+Here are some common use cases to get started.
+
+### Example 1: Redact a Phrase in a Document
+
+The following example shows how to redact a phrase in a DOCX file:
+
+```python
+import groupdocs.redaction as gr
+import groupdocs.redaction.options as gro
+import groupdocs.redaction.redactions as grr
+
+def run():
+    # Specify the redaction options
+    repl_opt = grr.ReplacementOptions("[personal]")
+    ex_red = grr.ExactPhraseRedaction("John Doe", repl_opt)
+
+    # Load the document to be redacted
+    with gr.Redactor("source.docx") as redactor:
+
+        # Apply the redaction
+        result = redactor.apply(ex_red);
+        
+        # Save the redacted document
+        so = gro.SaveOptions()
+        so.add_suffix = True
+        so.rasterize_to_pdf = False
+        result_path = redactor.save(so)
+```
+
+### Example 2: Redact Using Regular Expressions
+
+This example demonstrates how to redact in PDF sensitive patterns like credit card numbers:
+
+```python
+import groupdocs.redaction as gr
+import groupdocs.redaction.options as gro
+import groupdocs.redaction.redactions as grr
+import groupdocs.pydrawing as grd
+
+def run():
+    # Specify the redaction options
+    color = grd.Color.from_argb(255, 220, 20, 60);
+    repl_opt = grr.ReplacementOptions(color)
+    reg_red = grr.RegexRedaction(r"\b\d{4}-\d{4}-\d{4}-\d{4}\b", repl_opt)
+
+    # Load the document to be redacted
+    with gr.Redactor("source.pdf") as redactor:
+
+        # Apply the redaction
+        result = redactor.apply(reg_red);
+        
+        # Save the redacted document
+        redactor.save()
+```
+
+### Example 3: Redact Metadata from a Document
+
+The following example demonstrates how to clean all metadata in a document:
+
+```python
+import groupdocs.redaction as gr
+import groupdocs.redaction.redactions as grr
+
+def run():
+    # Specify the redaction options
+    met_red = grr.EraseMetadataRedaction(grr.MetadataFilters.ALL)
+
+    # Load the document to be redacted
+    with gr.Redactor("source.pdf") as redactor:
+
+        # Apply the redaction
+        result = redactor.apply(met_red);
+        
+        # Save the redacted document
+        redactor.save()
+```
+
+## More Resources
+
+Find more details and examples in the [GroupDocs.Redaction for Python via .NET documentation](http://docs.groupdocs.com/redaction/python-net/).
+
+We also provide **GroupDocs.Redaction** packages for other platforms:
+* [**GroupDocs.Redaction for .NET**](https://products.groupdocs.com/redaction/net/)
+* [**GroupDocs.Redaction for Java**](https://products.groupdocs.com/redaction/java/)
+
+---
+
+[Product Page](https://products.groupdocs.com/redaction/python-net/) | [Docs](https://docs.groupdocs.com/redaction/python-net/) | [Demos](https://products.groupdocs.app/redaction/family) | [API Reference](https://reference.groupdocs.com/redaction/) | [Blog](https://blog.groupdocs.com/category/redaction/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/redaction) | [Temporary License](https://purchase.groupdocs.com/temporary-license)

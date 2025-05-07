@@ -1,0 +1,5 @@
+setup.py
+groupdocs_redaction_net.egg-info/PKG-INFO
+groupdocs_redaction_net.egg-info/SOURCES.txt
+groupdocs_redaction_net.egg-info/dependency_links.txt
+groupdocs_redaction_net.egg-info/top_level.txt
