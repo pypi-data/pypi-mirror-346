@@ -1,0 +1,23 @@
+[package]
+name = "otlp-proto"
+version = "0.10.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+prost = "0.13"
+prost-types = "0.13"  # Only if using Timestamp or Any
+pyo3 = { version = "0.24.2", features = ["extension-module"] }
+
+[build-dependencies]
+prost-build = "0.13"
+
+# Optimize for minimal size in release builds
+[profile.release]
+lto = true
+panic = "abort"
+opt-level = "z"
+strip = "symbols"
+codegen-units = 1
