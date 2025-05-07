@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: bakery-build
+Version: 1.0.4
+Summary: a simple build automation library and CLI tool
+Author: Bradley Hutchings
+Author-email: Bradley Hutchings <bkhnapa@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 2 - Pre-Alpha
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: requires-python
+
+# bake (cli tool)
+
+`bake` is a cli build tool to replace most simple use cases of GNU
+`make`. It was not build with things like cache, speed, etc in mind. It was
+created to simplify `Makefile` systems with a lot of `bash` conditional
+statements. Most of the complex functions of a `Makefile` are deferred to the
+shell, therefore it should be capable of the same things `make` can do.
+
+[PyPI Website](https://pypi.org/project/bakery-build/)
+
+[GitHub Website](https://github.com/Breadleaf/bake-cli)

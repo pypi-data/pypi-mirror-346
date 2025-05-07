@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+bake/__init__.py
+bake/bake_cli.py
+bake/core.py
+bakery_build.egg-info/PKG-INFO
+bakery_build.egg-info/SOURCES.txt
+bakery_build.egg-info/dependency_links.txt
+bakery_build.egg-info/entry_points.txt
+bakery_build.egg-info/top_level.txt

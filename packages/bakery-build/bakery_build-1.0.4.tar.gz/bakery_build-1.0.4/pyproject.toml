@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=79.0.1", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bakery-build"
+version = "1.0.4"
+description = "a simple build automation library and CLI tool"
+authors = [
+{ name="Bradley Hutchings", email="bkhnapa@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+	"Programming Language :: Python :: 3",
+	"Development Status :: 2 - Pre-Alpha",
+]
+
+[project.scripts]
+bake = "bake.bake_cli:main"
