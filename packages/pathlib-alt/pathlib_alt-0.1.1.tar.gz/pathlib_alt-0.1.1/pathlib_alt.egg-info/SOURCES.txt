@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pathlib_/__init__.py
+pathlib_/__main__.py
+pathlib_/_base.py
+pathlib_/_local.py
+pathlib_/fnmatch_.py
+pathlib_/glob_.py
+pathlib_/posix.py
+pathlib_/windows.py
+pathlib_alt.egg-info/PKG-INFO
+pathlib_alt.egg-info/SOURCES.txt
+pathlib_alt.egg-info/dependency_links.txt
+pathlib_alt.egg-info/top_level.txt
