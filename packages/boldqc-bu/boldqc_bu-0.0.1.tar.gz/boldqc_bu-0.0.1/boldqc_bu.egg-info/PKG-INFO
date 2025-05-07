@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: boldqc-bu
+Version: 0.0.1
+Summary: BOLD QC
+Home-page: https://github.com/kakurk/boldqc
+Author: Kyle Kurkela
+Author-email: kkurkela@bu.edu
+License-File: LICENSE
+Requires-Dist: selfie
+Requires-Dist: executors
+Requires-Dist: yaxil
+Requires-Dist: matplotlib
+Requires-Dist: nibabel
+Requires-Dist: scipy
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
