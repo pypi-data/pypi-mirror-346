@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-dr = mcp_server_dr:main
