@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+piptemplate/__init__.py
+piptemplate/main.py
+piptemplate.egg-info/PKG-INFO
+piptemplate.egg-info/SOURCES.txt
+piptemplate.egg-info/dependency_links.txt
+piptemplate.egg-info/entry_points.txt
+piptemplate.egg-info/top_level.txt
