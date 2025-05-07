@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: toapigdc
+Version: 0.1.6
+Summary: A package for migrating data to on-prem servers from T1 via API
+Author: Mikey Ramsay
+Author-email: mikey.ramsay@gdc.govt.nz
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: pyodbc (>=5.2.0,<6.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+
