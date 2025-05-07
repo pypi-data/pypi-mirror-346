@@ -1,0 +1,10 @@
+[Unit]
+Description=OpenHydroponics daemon
+
+[Service]
+ExecStart={path}
+Restart=on-failure
+User={user}
+
+[Install]
+WantedBy=default.target
