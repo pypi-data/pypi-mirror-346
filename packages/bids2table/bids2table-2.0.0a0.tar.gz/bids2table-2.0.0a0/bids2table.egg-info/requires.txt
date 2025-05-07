@@ -1,0 +1,6 @@
+bidsschematools>=1.0
+pyarrow>=14.0.2
+tqdm>=4.66.2
+
+[s3]
+cloudpathlib[s3]==0.17.0
