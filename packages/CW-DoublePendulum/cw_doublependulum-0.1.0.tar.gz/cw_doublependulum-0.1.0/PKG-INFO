@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: CW-DoublePendulum
+Version: 0.1.0
+Summary: A Python package that uses NumPy and Matplotlib to simulate an interactive double pendulum.
+Author-email: Chase Worsley <your_email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Worsleychase/InteractiveDoublePendulum
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Dynamic: license-file
+
+# Interactive Double Pendulum
+
+Final project for Mathematical & Computational Physics II

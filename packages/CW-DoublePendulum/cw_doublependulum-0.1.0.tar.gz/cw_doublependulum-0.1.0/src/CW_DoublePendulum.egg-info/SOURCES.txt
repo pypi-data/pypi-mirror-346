@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/main.py
+src/CW_DoublePendulum.egg-info/PKG-INFO
+src/CW_DoublePendulum.egg-info/SOURCES.txt
+src/CW_DoublePendulum.egg-info/dependency_links.txt
+src/CW_DoublePendulum.egg-info/requires.txt
+src/CW_DoublePendulum.egg-info/top_level.txt
