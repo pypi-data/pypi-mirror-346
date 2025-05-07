@@ -1,0 +1,2 @@
+[console_scripts]
+string_upper = test_python_project.functions:string_upper
