@@ -1,0 +1,2 @@
+[console_scripts]
+barium = barium.cli:main

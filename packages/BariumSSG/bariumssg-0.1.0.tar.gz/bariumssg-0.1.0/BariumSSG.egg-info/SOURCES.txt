@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+BariumSSG.egg-info/PKG-INFO
+BariumSSG.egg-info/SOURCES.txt
+BariumSSG.egg-info/dependency_links.txt
+BariumSSG.egg-info/entry_points.txt
+BariumSSG.egg-info/requires.txt
+BariumSSG.egg-info/top_level.txt
+barium/__init__.py
+barium/cli.py
