@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: avalAgent
+Version: 1.0.0
+Summary: An AI agent wrapper using LangChain and OpenAI with retry and logging support.
+Author: Amirhossein Derhami
+Author-email: Amirhossein Derhami <D3rhami@gmail.com>
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic~=2.11.4
+Requires-Dist: requests~=2.32.3
+Requires-Dist: langchain-core~=0.3.58
+Requires-Dist: langchain-openai~=0.3.16
+Requires-Dist: openai~=1.77.0
+Dynamic: author
+Dynamic: requires-python
