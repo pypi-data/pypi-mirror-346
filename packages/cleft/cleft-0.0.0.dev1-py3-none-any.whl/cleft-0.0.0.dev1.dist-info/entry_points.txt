@@ -1,0 +1,5 @@
+[console_scripts]
+amp = cleft:main
+chatgpt = cleft:chatgpt.main
+claude = cleft:claude.main
+replacer = cleft:replacer.main
