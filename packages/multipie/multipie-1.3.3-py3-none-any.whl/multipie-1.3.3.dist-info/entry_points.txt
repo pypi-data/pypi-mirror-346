@@ -1,0 +1,4 @@
+[console_scripts]
+create_binary = multipie.scripts.create_binary:cmd
+create_plot = multipie.scripts.create_plot:cmd
+create_samb = multipie.scripts.create_samb:cmd
