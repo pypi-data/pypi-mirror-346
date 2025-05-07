@@ -1,0 +1,2 @@
+[babel.extractors]
+underscore = enmerkar_underscore:extract
