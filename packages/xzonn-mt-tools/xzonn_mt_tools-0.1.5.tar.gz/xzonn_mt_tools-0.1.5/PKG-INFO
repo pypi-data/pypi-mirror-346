@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: xzonn-mt-tools
+Version: 0.1.5
+Author-email: Xzonn <Xzonn@outlook.com>
+License: MIT License
+        
+        Copyright (c) 2024- Xzonn
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# 机翻工具箱
+## 思路
+[见此](https://xzonn.top/posts/Paranormasight-Translation.html#%E5%BF%AB%E9%80%9F%E6%9C%BA%E7%BF%BB)。
+
+## 安装
+```bash
+python -m pip install xzonn-mt-tools
+```
+
+## 用法
+请参考 `example/` 文件夹下的脚本。

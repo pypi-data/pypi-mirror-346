@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools >= 40.8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xzonn-mt-tools"
+version = "0.1.5"
+requires-python = ">= 3.10"
+authors = [
+  {name = "Xzonn", email = "Xzonn@outlook.com"},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
