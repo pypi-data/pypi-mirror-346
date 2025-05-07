@@ -1,0 +1,6 @@
+numpy
+tqdm
+jax
+jaxlib
+scikit-learn
+pot
