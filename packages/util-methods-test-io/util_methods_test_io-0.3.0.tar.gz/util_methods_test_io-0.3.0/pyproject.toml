@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "util-methods-test-io"
+version = "0.3.0"
+description = "Reusable utility methods"
+requires-python = ">=3.6"
+dependencies = []
