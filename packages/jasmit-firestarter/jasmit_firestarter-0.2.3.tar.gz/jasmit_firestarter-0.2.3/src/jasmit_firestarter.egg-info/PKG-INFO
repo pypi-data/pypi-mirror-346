@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: jasmit_firestarter
+Version: 0.2.3
+Summary: Artifacts often useful when starting a new project
+Author-email: jasmit <jasmit@swbell.net>
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# jasmit_firestarter Package
+
+"Artifacts often useful when starting a new project"
+
+
+
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
