@@ -1,0 +1,16 @@
+[project]
+name = "weather-yq-c"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.7.1",
+]
+
+[project.scripts]
+weather-yq-c = "weather_yq_c:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
