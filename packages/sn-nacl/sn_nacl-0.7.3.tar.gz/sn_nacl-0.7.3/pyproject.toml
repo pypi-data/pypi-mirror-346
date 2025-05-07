@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "sn-nacl"
+dynamic = ["version"]
+description = "SN modeling package"
+readme = "README.md"
+authors = [
+        { name = "Nicolas Regnault", email = "nicolas.regnault@lpnhe.in2p3.fr" },
+        { name = "Guy Augarde" },
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Physics"
+]
+keywords = ["astronomy", "astrophysics"]
+license = { file = "LICENSE" }
+
+requires-python = ">=3.9"
+dependencies = [
+  "dill",
+  "astropy",
+  "dust_extinction",
+  "extinction",
+  "keyring",
+  "numba",
+  "numpy<2",
+  "pandas",
+  "pyarrow",
+  "scipy",
+  "sncosmo",   # for now we must rely on https://github.com/nregnault/sncosmo
+  "tables",
+  # lemaitre packages
+  "bbf>=0.5.1",
+  "lemaitre-bandpasses>=0.3.3",
+  "saltworks>=0.0.3",
+]
+
+[project.urls]
+Homepage = "https://gitlab.in2p3.fr/lemaitre/sn-nacl"
+Repository = "https://gitlab.in2p3.fr/lemaitre/sn-nacl"
+Changelog = "https://gitlab.in2p3.fr/lemaitre/sn-nacl/-/blob/main/CHANGELOG.md"
+
+
+[project.optional-dependencies]
+test = ["pytest>=6.0", "pytest-cov"]
+doc = ["sphinx_gallery", "sphinx_rtd_theme", "sphinxemoji", "m2r2"]
+
+[tool.setuptools.dynamic]
+version = {attr = "nacl.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["nacl*"]
+
+[tool.setuptools.package-data]
+nacl = ["data/*"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = [
+  "tests",
+  "nacl"]
+# configures doctests and coverage
+addopts = """\
+  --import-mode=importlib \
+  --doctest-modules --doctest-continue-on-failure \
+  --cov=nacl --cov-report term --cov-report xml:coverage.xml --junitxml=report.xml \
+  """
+filterwarnings = [
+  # ignore a PerformanceWarning issued by pandas
+  "ignore::pandas.errors.PerformanceWarning:.*nacl.dataset.*",
+  ]
