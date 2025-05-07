@@ -1,0 +1,2 @@
+[console_scripts]
+OTSO.clean = OTSO:clean
