@@ -1,0 +1,4 @@
+[console_scripts]
+neorick=neorick.__init__:main
+neorick-create=neorick.__main__:create_pdf
+
