@@ -1,0 +1,21 @@
+
+### 📄 `pyproject.toml`
+
+[project]
+name = "calc-lib-jonathancastrosilva"
+version = "0.1.0"
+description = "Biblioteca de calculadora com operações básicas, potência e raiz."
+authors = [{ name="Jonathan Castro Silva", email="jonathancastrosilva@gmail.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["calculadora", "math", "operacoes", "python"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+requires-python = ">=3.7"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
