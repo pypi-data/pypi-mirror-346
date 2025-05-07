@@ -1,0 +1,2 @@
+[console_scripts]
+knowledge-base-builder = knowledge_base_builder.cli:main
