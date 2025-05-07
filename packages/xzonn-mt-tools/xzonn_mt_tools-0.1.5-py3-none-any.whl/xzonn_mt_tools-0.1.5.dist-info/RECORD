@@ -1,0 +1,15 @@
+xzonn_mt_tools/__init__.py,sha256=-m99u9pWB8F5moRSyfB_E65oXI4h9iGC0Sg48nKZuFs,404
+xzonn_mt_tools/config.py,sha256=9CIHCUl3MaO4NFkddsKoQD1NtQFOJkzre38RVo8Hgrk,7570
+xzonn_mt_tools/helper.py,sha256=zDAW-P3RAWyOzGoQc6u51ujLLaHW1axgun9-IRjkk-s,3436
+xzonn_mt_tools/actions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xzonn_mt_tools/actions/compare_mt.py,sha256=_Z8zQwMkwoGRwQ5gPI0Dx6hnN6bF5eHF2mBfOyWYBPQ,2989
+xzonn_mt_tools/actions/export_all_lines.py,sha256=7MKK2v7c1viIUzTQxtFuVoHKy9EVGVnBD-QswC_83vo,615
+xzonn_mt_tools/actions/split_texts.py,sha256=YDlv4SVf_1sbbgoiChhXjz4QQPPd4ARedvGBTQcH28s,3870
+xzonn_mt_tools/actions/update_checked_mt.py,sha256=rp19h3PJ34FPlZWAyts7pw8kDR4x634NNtY7RJMDNio,2341
+xzonn_mt_tools/actions/update_mt_database.py,sha256=70MvEQRstnClcteg-jfFb6iJj9T9J_-9IREtv-3TbdU,1637
+xzonn_mt_tools/actions/update_translations.py,sha256=iWtMKwuRY1iSSpPIiOpNd5jWyab4xfgS0Gx9vSyZYqM,2601
+xzonn_mt_tools-0.1.5.dist-info/licenses/LICENSE,sha256=Q8aGH7HOHiQSnN5a31EEXgz1hICgz79VYkTLWp4fvYQ,1063
+xzonn_mt_tools-0.1.5.dist-info/METADATA,sha256=SZFC68prTJKBiafu7_0t8CoeItxcBzb_BfuAl8dlq_M,1699
+xzonn_mt_tools-0.1.5.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+xzonn_mt_tools-0.1.5.dist-info/top_level.txt,sha256=PcXs0z8jAuwAGxs1106-xIQY8qOmZGSiAaxSgeH1_Qo,15
+xzonn_mt_tools-0.1.5.dist-info/RECORD,,
