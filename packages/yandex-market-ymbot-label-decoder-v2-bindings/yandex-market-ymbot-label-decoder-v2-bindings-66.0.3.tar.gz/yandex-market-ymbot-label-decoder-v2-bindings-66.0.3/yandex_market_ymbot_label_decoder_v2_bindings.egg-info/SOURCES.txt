@@ -1,0 +1,6 @@
+README.md
+setup.py
+yandex_market_ymbot_label_decoder_v2_bindings.egg-info/PKG-INFO
+yandex_market_ymbot_label_decoder_v2_bindings.egg-info/SOURCES.txt
+yandex_market_ymbot_label_decoder_v2_bindings.egg-info/dependency_links.txt
+yandex_market_ymbot_label_decoder_v2_bindings.egg-info/top_level.txt
