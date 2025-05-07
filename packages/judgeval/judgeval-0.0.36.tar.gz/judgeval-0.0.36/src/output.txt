@@ -1,0 +1,276 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.4, pytest-8.3.5, pluggy-1.5.0 -- /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/joe/Desktop/Work/judgeval
+configfile: pytest.ini
+plugins: langsmith-0.3.41, anyio-4.9.0, repeat-0.9.3, deepeval-2.1.8, asyncio-0.25.0, mock-3.14.0, xdist-3.6.1
+asyncio: mode=Mode.STRICT, asyncio_default_fixture_loop_scope=None
+collecting ... collected 2 items
+
+e2etests/test_all_scorers.py::test_text2sql_scorer FAILED                [ 50%]
+e2etests/test_eval_operations.py::TestEvalOperations::test_run_eval_append FAILED [100%]Running teardown with pytest sessionfinish...
+
+
+=================================== FAILURES ===================================
+_____________________________ test_text2sql_scorer _____________________________
+
+client = <judgeval.judgment_client.JudgmentClient object at 0x11f5168d0>
+
+    def test_text2sql_scorer(client: JudgmentClient):
+    
+        table_schema = """CREATE TABLE Artists (
+        artist_id VARCHAR(50) PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        genre VARCHAR(100),
+        followers INT,
+        popularity INT,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    
+    CREATE TABLE Albums (
+        album_id VARCHAR(50) PRIMARY KEY,
+        title VARCHAR(255) NOT NULL,
+        artist_id VARCHAR(50) NOT NULL,
+        release_date DATE,
+        total_tracks INT,
+        album_type VARCHAR(50) CHECK (album_type IN ('album', 'single', 'compilation')),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (artist_id) REFERENCES Artists(artist_id) ON DELETE CASCADE
+    );
+    
+    CREATE TABLE Tracks (
+        track_id VARCHAR(50) PRIMARY KEY,
+        title VARCHAR(255) NOT NULL,
+        album_id VARCHAR(50) NOT NULL,
+        artist_id VARCHAR(50) NOT NULL,
+        duration_ms INT NOT NULL,
+        explicit BOOLEAN DEFAULT FALSE,
+        popularity INT DEFAULT 0,
+        preview_url VARCHAR(255),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (album_id) REFERENCES Albums(album_id) ON DELETE CASCADE,
+        FOREIGN KEY (artist_id) REFERENCES Artists(artist_id) ON DELETE CASCADE
+    );
+    
+    CREATE TABLE Users (
+        user_id VARCHAR(50) PRIMARY KEY,
+        username VARCHAR(100) NOT NULL UNIQUE,
+        email VARCHAR(255) NOT NULL UNIQUE,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    
+    CREATE TABLE Playlists (
+        playlist_id VARCHAR(50) PRIMARY KEY,
+        user_id VARCHAR(50) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+        description TEXT,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+    );
+    
+    CREATE TABLE PlaylistTracks (
+        playlist_id VARCHAR(50),
+        track_id VARCHAR(50),
+        added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (playlist_id, track_id),
+        FOREIGN KEY (playlist_id) REFERENCES Playlists(playlist_id) ON DELETE CASCADE,
+        FOREIGN KEY (track_id) REFERENCES Tracks(track_id) ON DELETE CASCADE
+    );
+    
+    CREATE TABLE UserListeningHistory (
+        history_id SERIAL PRIMARY KEY,
+        user_id VARCHAR(50) NOT NULL,
+        track_id VARCHAR(50) NOT NULL,
+        listened_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+        FOREIGN KEY (track_id) REFERENCES Tracks(track_id) ON DELETE CASCADE
+    );
+    """
+    
+        all_tracks_one_artist_correct = Example(
+            input="Find all tracks by the artist 'Drake', sorted by popularity.",
+            actual_output="""SELECT t.track_id, t.title, t.popularity, a.name AS artist_name
+    FROM Tracks t
+    JOIN Artists a ON t.artist_id = a.artist_id
+    WHERE a.name = 'Drake'
+    ORDER BY t.popularity DESC;
+    """,
+            retrieval_context=[table_schema]
+        )
+    
+        most_listened_to_one_user_correct = Example(
+            input="Find the most listened to track by user 'user123'.",
+            actual_output="""SELECT t.track_id, t.title, COUNT(uh.history_id) AS play_count
+    FROM UserListeningHistory uh
+    JOIN Tracks t ON uh.track_id = t.track_id
+    WHERE uh.user_id = 'user123'
+    GROUP BY t.track_id, t.title
+    ORDER BY play_count DESC
+    LIMIT 1;
+    """,
+            retrieval_context=[table_schema]
+        )
+    
+        highest_num_playlists_correct = Example(
+            input="Find the 5 users with the highest number of playlists.",
+            actual_output="""SELECT u.user_id, u.username, COUNT(p.playlist_id) AS total_playlists
+    FROM Users u
+    JOIN Playlists p ON u.user_id = p.user_id
+    GROUP BY u.user_id, u.username
+    ORDER BY total_playlists DESC
+    LIMIT 5;
+    """,
+            retrieval_context=[table_schema]
+        )
+    
+        most_popular_tracks_all_users_correct = Example(
+            input="Find the 10 most popular tracks across all users.",
+            actual_output="""SELECT t.track_id, t.title, COUNT(uh.history_id) AS total_listens
+    FROM Tracks t
+    JOIN UserListeningHistory uh ON t.track_id = uh.track_id
+    GROUP BY t.track_id, t.title
+    ORDER BY total_listens DESC
+    LIMIT 10;
+    """,
+            retrieval_context=[table_schema]
+        )
+    
+        most_popular_tracks_all_users_incorrect = Example(
+            input="Find the 10 most popular tracks across all users.",
+            actual_output="""SELECT t.track_user, t.title, COUNT(uh.history_id) AS total_listens
+    FROM Tracks t
+    JOIN UserHistory uh ON t.track_user = uh.track_user
+    GROUP BY t.track_user, t.title
+    ORDER BY total_listens DESC
+    LIMIT 10;
+    """,
+            retrieval_context=[table_schema]
+        )
+    
+    
+        res = client.run_evaluation(
+            examples=[
+                all_tracks_one_artist_correct,
+                most_listened_to_one_user_correct,
+                highest_num_playlists_correct,
+                most_popular_tracks_all_users_correct,
+                most_popular_tracks_all_users_incorrect
+            ],
+            scorers=[Text2SQLScorer],
+            model="gpt-4o-mini",
+            project_name="text2sql",
+            eval_run_name="text2sql_test",
+            override=True
+        )
+    
+>       assert print_debug_on_failure(res[0])
+E       assert False
+E        +  where False = print_debug_on_failure(ScoringResult(success=False, scorers_data=[ScorerData(name='Text to SQL', threshold=1.0, success=False, score=None, reason=None, strict_mode=None, evaluation_model='gpt-4o-mini', error='User ID cannot be empty.', evaluation_cost=None, verbose_logs=None, additional_metadata=None)], name=None, data_object=Example(input="Find all tracks by the artist 'Drake', sorted by popularity.", actual_output="SELECT t.track_id, t.title, t.popularity, a.name AS artist_name\nFROM Tracks t\nJOIN Artists a ON t.artist_id = a.artist_id\nWHERE a.name = 'Drake'\nORDER BY t.popularity DESC;\n", expected_output=None, context=None, retrieval_context=["CREATE TABLE Artists (\n    artist_id VARCHAR(50) PRIMARY KEY,\n    name VARCHAR(255) NOT NULL,\n    genre VARCHAR(100),\n    followers INT,\n    popularity INT,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\nCREATE TABLE Albums (\n    album_id VARCHAR(50) PRIMARY KEY,\n    title VARCHAR(255) NOT NULL,\n    artist_id VARCHAR(50) NOT NULL,\n    release_date DATE,\n    total_tracks INT,\n    album_type VARCHAR(50) CHECK (album_type IN ('album', 'single', 'compilation')),\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    FOREIGN KEY (artist... PRIMARY KEY,\n    user_id VARCHAR(50) NOT NULL,\n    name VARCHAR(255) NOT NULL,\n    description TEXT,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE\n);\n\nCREATE TABLE PlaylistTracks (\n    playlist_id VARCHAR(50),\n    track_id VARCHAR(50),\n    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    PRIMARY KEY (playlist_id, track_id),\n    FOREIGN KEY (playlist_id) REFERENCES Playlists(playlist_id) ON DELETE CASCADE,\n    FOREIGN KEY (track_id) REFERENCES Tracks(track_id) ON DELETE CASCADE\n);\n\nCREATE TABLE UserListeningHistory (\n    history_id SERIAL PRIMARY KEY,\n    user_id VARCHAR(50) NOT NULL,\n    track_id VARCHAR(50) NOT NULL,\n    listened_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,\n    FOREIGN KEY (track_id) REFERENCES Tracks(track_id) ON DELETE CASCADE\n);\n"], additional_metadata=None, tools_called=None, expected_tools=None, name=None, example_id='2e80374f-86f1-44e2-80ae-15205887e3a3', example_index=None, timestamp='20250502_163927', trace_id=None, sequence_order=0), trace_id=None, run_duration=None, evaluation_cost=None))
+
+e2etests/test_all_scorers.py:511: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+Successfully initialized JudgmentClient!
+----------------------------- Captured stdout call -----------------------------
+Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /                     Logging Results: |Logging Results: /Logging Results: -Logging Results: \Logging Results: |Logging Results: /Logging Results: -Logging Results: \Logging Results: |Logging Results: /Logging Results: -Logging Results: \Logging Results: |                  
+🔍 You can view your evaluation results here: View Results
+
+
+=== Test Failure Details ===
+Input: Find all tracks by the artist 'Drake', sorted by popularity.
+Output: SELECT t.track_id, t.title, t.popularity, a.name AS artist_name
+FROM Tracks t
+JOIN Artists a ON t.artist_id = a.artist_id
+WHERE a.name = 'Drake'
+ORDER BY t.popularity DESC;
+
+Success: False
+Retrieval Context: ["CREATE TABLE Artists (\n    artist_id VARCHAR(50) PRIMARY KEY,\n    name VARCHAR(255) NOT NULL,\n    genre VARCHAR(100),\n    followers INT,\n    popularity INT,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\nCREATE TABLE Albums (\n    album_id VARCHAR(50) PRIMARY KEY,\n    title VARCHAR(255) NOT NULL,\n    artist_id VARCHAR(50) NOT NULL,\n    release_date DATE,\n    total_tracks INT,\n    album_type VARCHAR(50) CHECK (album_type IN ('album', 'single', 'compilation')),\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    FOREIGN KEY (artist_id) REFERENCES Artists(artist_id) ON DELETE CASCADE\n);\n\nCREATE TABLE Tracks (\n    track_id VARCHAR(50) PRIMARY KEY,\n    title VARCHAR(255) NOT NULL,\n    album_id VARCHAR(50) NOT NULL,\n    artist_id VARCHAR(50) NOT NULL,\n    duration_ms INT NOT NULL,\n    explicit BOOLEAN DEFAULT FALSE,\n    popularity INT DEFAULT 0,\n    preview_url VARCHAR(255),\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    FOREIGN KEY (album_id) REFERENCES Albums(album_id) ON DELETE CASCADE,\n    FOREIGN KEY (artist_id) REFERENCES Artists(artist_id) ON DELETE CASCADE\n);\n\nCREATE TABLE Users (\n    user_id VARCHAR(50) PRIMARY KEY,\n    username VARCHAR(100) NOT NULL UNIQUE,\n    email VARCHAR(255) NOT NULL UNIQUE,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n\nCREATE TABLE Playlists (\n    playlist_id VARCHAR(50) PRIMARY KEY,\n    user_id VARCHAR(50) NOT NULL,\n    name VARCHAR(255) NOT NULL,\n    description TEXT,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE\n);\n\nCREATE TABLE PlaylistTracks (\n    playlist_id VARCHAR(50),\n    track_id VARCHAR(50),\n    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    PRIMARY KEY (playlist_id, track_id),\n    FOREIGN KEY (playlist_id) REFERENCES Playlists(playlist_id) ON DELETE CASCADE,\n    FOREIGN KEY (track_id) REFERENCES Tracks(track_id) ON DELETE CASCADE\n);\n\nCREATE TABLE UserListeningHistory (\n    history_id SERIAL PRIMARY KEY,\n    user_id VARCHAR(50) NOT NULL,\n    track_id VARCHAR(50) NOT NULL,\n    listened_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,\n    FOREIGN KEY (track_id) REFERENCES Tracks(track_id) ON DELETE CASCADE\n);\n"]
+
+Scorer Details:
+- Name: Text to SQL
+- Score: None
+- Threshold: 1.0
+- Success: False
+- Reason: None
+- Error: User ID cannot be empty.
+___________________ TestEvalOperations.test_run_eval_append ____________________
+
+self = <test_eval_operations.TestEvalOperations object at 0x11f5149d0>
+client = <judgeval.judgment_client.JudgmentClient object at 0x11f5168d0>
+
+    def test_run_eval_append(self, client: JudgmentClient):
+        """Test evaluation append behavior."""
+        PROJECT_NAME = "OutreachWorkflow"
+        EVAL_RUN_NAME = "ColdEmailGenerator-Improve-BasePrompt"
+    
+        self.run_eval_helper(client, PROJECT_NAME, EVAL_RUN_NAME)
+        results = client.pull_eval(project_name=PROJECT_NAME, eval_run_name=EVAL_RUN_NAME)
+        assert results, f"No evaluation results found for {EVAL_RUN_NAME}"
+    
+>       assert len(results) == 2
+E       assert 1 == 2
+E        +  where 1 = len([{'created_at': '2025-05-02T23:39:39.056423+00:00', 'examples': [{'actual_output': "Dear Ms. Chen,\n\nI noticed TechCorp's recent launch of your AI analytics platform and was impressed by its enterprise-focused approach. Your experience from Google clearly shines through in building scalable solutions, as evidenced by your impressive 50+ enterprise client base.\n\nWould you be open to a brief call to discuss how we could potentially collaborate?\n\nBest regards,\nAlex", 'additional_metadata': None, 'context': None, 'created_at': '2025-05-02T23:39:39.146294+00:00', ...}, {'actual_output': "Dear GreenEnergy Solutions team,\n\nCongratulations on your 2023 sustainability award! Your innovative solar panel technology with 30% higher efficiency is exactly what the European market needs right now.\n\nI'd love to discuss how we could support your European expansion plans.\n\nBest regards,\nAlex", 'additional_metadata': None, 'context': ['Business Development'], 'created_at': '2025-05-02T23:39:39.338415+00:00', ...}], 'id': '7c5ddfba-0b74-493a-bd64-06bd3a6d9603', 'is_sequence': False, ...}])
+
+e2etests/test_eval_operations.py:75: AssertionError
+----------------------------- Captured stdout call -----------------------------
+Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /Running Evaluation: -Running Evaluation: \Running Evaluation: |Running Evaluation: /                     Logging Results: |Logging Results: /Logging Results: -Logging Results: \Logging Results: |Logging Results: /Logging Results: -Logging Results: \Logging Results: |Logging Results: /Logging Results: -                  
+🔍 You can view your evaluation results here: View Results
+
+=============================== warnings summary ===============================
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:275
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:275: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:362
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:362: PydanticDeprecatedSince20: `pydantic.config.Extra` is deprecated, use literal values instead (e.g. `extra='allow'`). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    extra = Extra.allow  # Allow extra fields
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:365
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:365: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:399
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:399: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:446
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:446: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:515
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:515: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:539
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:539: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:579
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:579: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:629
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:629: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:698
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:698: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:1059
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:1059: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:1086
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:1086: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+../../../../.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:1107
+  /Users/joe/.local/share/virtualenvs/judgeval-JrQ-jo5P/lib/python3.11/site-packages/litellm/proxy/_types.py:1107: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(pre=True)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED e2etests/test_all_scorers.py::test_text2sql_scorer - assert False
+FAILED e2etests/test_eval_operations.py::TestEvalOperations::test_run_eval_append
+======================= 2 failed, 13 warnings in 16.34s ========================
