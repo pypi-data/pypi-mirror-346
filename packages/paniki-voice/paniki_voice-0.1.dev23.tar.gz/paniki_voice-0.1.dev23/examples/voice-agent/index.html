@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voice Visualizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { 
+            margin: 0;
+            background: #000;
+            overflow: hidden;
+        }
+        #container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+        }
+        .btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            min-width: 120px;
+            transition: all 0.3s ease;
+        }
+        .btn.connecting { 
+            background: #FFA000; 
+            pointer-events: none;
+        }
+        .btn.disconnect { background: #f44336; }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="controls">
+        <button id="connectBtn" class="btn">Connect</button>
+    </div>
+    <audio id="audio" autoplay></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        let scene, camera, renderer, particles;
+        let audioContext, analyser, dataArray;
+        let isConnected = false;
+        let peerConnection = null;
+        const originalPositions = [];
+
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 3;
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.getElementById('container').appendChild(renderer.domElement);
+
+            // Create particles
+            const geometry = new THREE.BufferGeometry();
+            const vertices = [];
+            const colors = [];
+
+            // Use more particles for better density
+            for (let i = 0; i < 5000; i++) {
+                const theta = Math.random() * Math.PI * 2;
+                const phi = Math.acos(2 * Math.random() - 1);
+                const radius = 1.5;
+
+                const x = radius * Math.sin(phi) * Math.cos(theta);
+                const y = radius * Math.sin(phi) * Math.sin(theta);
+                const z = radius * Math.cos(phi);
+
+                vertices.push(x, y, z);
+                originalPositions.push(x, y, z);
+                colors.push(1, 1, 1);
+            }
+
+            geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+            geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+
+            const material = new THREE.PointsMaterial({
+                size: 0.02,
+                vertexColors: true,
+                blending: THREE.AdditiveBlending,
+                transparent: true,
+                opacity: 0.8,
+                sizeAttenuation: true
+            });
+
+            particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+
+            animate();
+        }
+
+        let time = 0;
+        
+        // Simplex noise function untuk pergerakan yang lebih natural
+        function noise(x, y, z) {
+            const p = new THREE.Vector3(x, y, z);
+            return Math.sin(p.x * 0.3 + time) * Math.sin(p.y * 0.4 + time) * Math.sin(p.z * 0.5 + time);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            time += 0.01;
+
+            const positions = particles.geometry.attributes.position.array;
+            const colors = particles.geometry.attributes.color.array;
+
+            if (analyser) {
+                analyser.getByteFrequencyData(dataArray);
+                
+                // Get different frequency ranges
+                const bassSum = dataArray.slice(0, 4).reduce((a, b) => a + b, 0);
+                const midSum = dataArray.slice(4, 12).reduce((a, b) => a + b, 0);
+                const bassLevel = bassSum / (4 * 256);
+                const midLevel = midSum / (8 * 256);
+                
+                for (let i = 0; i < positions.length; i += 3) {
+                    const originalX = originalPositions[i];
+                    const originalY = originalPositions[i + 1];
+                    const originalZ = originalPositions[i + 2];
+
+                    // Calculate base scale and noise
+                    const scale = 1 + bassLevel * 0.5;
+                    const noiseFactor = noise(originalX, originalY, originalZ) * 0.2;
+                    
+                    // Add some randomness to movement
+                    const randomOffset = (Math.random() - 0.5) * 0.01;
+                    
+                    // Combine regular scaling with noise and audio reactivity
+                    const dynamicNoise = noiseFactor * (1 + bassLevel + midLevel);
+                    positions[i] = (originalX * scale) + (dynamicNoise + randomOffset) * scale;
+                    positions[i + 1] = (originalY * scale) + (dynamicNoise + randomOffset) * scale;
+                    positions[i + 2] = (originalZ * scale) + (dynamicNoise + randomOffset) * scale;
+
+                    // Dynamic color based on position and audio
+                    const distanceFromCenter = Math.sqrt(
+                        positions[i] * positions[i] + 
+                        positions[i + 1] * positions[i + 1] + 
+                        positions[i + 2] * positions[i + 2]
+                    );
+
+                    const brightness = 0.6 + 
+                                     bassLevel * 0.3 + 
+                                     midLevel * 0.2 + 
+                                     (Math.sin(time + distanceFromCenter) * 0.1);
+
+                    colors[i] = brightness;
+                    colors[i + 1] = brightness * 0.9;
+                    colors[i + 2] = brightness * 1.1;
+                }
+            } else {
+                // Animasi default tanpa audio
+                for (let i = 0; i < positions.length; i += 3) {
+                    const originalX = originalPositions[i];
+                    const originalY = originalPositions[i + 1];
+                    const originalZ = originalPositions[i + 2];
+
+                    const noiseFactor = noise(originalX, originalY, originalZ) * 0.1;
+                    const randomOffset = (Math.random() - 0.5) * 0.005;
+
+                    positions[i] = originalX + noiseFactor + randomOffset;
+                    positions[i + 1] = originalY + noiseFactor + randomOffset;
+                    positions[i + 2] = originalZ + noiseFactor + randomOffset;
+
+                    const distanceFromCenter = Math.sqrt(
+                        positions[i] * positions[i] + 
+                        positions[i + 1] * positions[i + 1] + 
+                        positions[i + 2] * positions[i + 2]
+                    );
+
+                    const brightness = 0.6 + Math.sin(time + distanceFromCenter) * 0.1;
+                    colors[i] = brightness;
+                    colors[i + 1] = brightness * 0.9;
+                    colors[i + 2] = brightness * 1.1;
+                }
+            }
+
+            particles.geometry.attributes.position.needsUpdate = true;
+            particles.geometry.attributes.color.needsUpdate = true;
+
+            // Subtle rotation
+            particles.rotation.y += 0.001;
+            particles.rotation.x = Math.sin(time * 0.2) * 0.1;
+
+            renderer.render(scene, camera);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        window.addEventListener('resize', onWindowResize);
+
+        // WebRTC functions
+        async function waitForIceGatheringComplete(pc, timeoutMs = 2000) {
+            if (pc.iceGatheringState === 'complete') return;
+            console.log("Waiting for ICE gathering to complete. Current state:", pc.iceGatheringState);
+            return new Promise((resolve) => {
+                let timeoutId;
+                const checkState = () => {
+                    if (pc.iceGatheringState === 'complete') {
+                        cleanup();
+                        resolve();
+                    }
+                };
+                const onTimeout = () => {
+                    console.warn(`ICE gathering timed out after ${timeoutMs} ms.`);
+                    cleanup();
+                    resolve();
+                };
+                const cleanup = () => {
+                    pc.removeEventListener('icegatheringstatechange', checkState);
+                    clearTimeout(timeoutId);
+                };
+                pc.addEventListener('icegatheringstatechange', checkState);
+                timeoutId = setTimeout(onTimeout, timeoutMs);
+                checkState();
+            });
+        }
+
+        async function createSmallWebRTCConnection(audioTrack) {
+            const config = {
+                iceServers: [{"urls":"stun:stun.l.google.com:19302"}],
+            };
+            const pc = new RTCPeerConnection(config);
+            
+            pc.oniceconnectionstatechange = () => {
+                console.log("ICE connection state:", pc.iceConnectionState);
+            };
+            
+            pc.onconnectionstatechange = () => {
+                console.log("Connection state:", pc.connectionState);
+                if (pc.connectionState === 'disconnected') {
+                    disconnect();
+                }
+            };
+
+            pc.ontrack = e => document.getElementById('audio').srcObject = e.streams[0];
+            
+            pc.addTransceiver(audioTrack, { direction: 'sendrecv' });
+            pc.addTransceiver('video', { direction: 'sendrecv' });
+            
+            await pc.setLocalDescription(await pc.createOffer());
+            await waitForIceGatheringComplete(pc);
+            
+            const offer = pc.localDescription;
+            const response = await fetch('/api/offer', {
+                body: JSON.stringify({ sdp: offer.sdp, type: offer.type }),
+                headers: { 'Content-Type': 'application/json' },
+                method: 'POST',
+            });
+            
+            const answer = await response.json();
+            await pc.setRemoteDescription(answer);
+            return pc;
+        }
+
+        function disconnect() {
+            if (peerConnection) {
+                peerConnection.close();
+                peerConnection = null;
+            }
+            if (audioContext) {
+                audioContext.close();
+                audioContext = null;
+            }
+            connectBtn.textContent = 'Connect';
+            connectBtn.classList.remove('disconnect', 'connecting');
+            isConnected = false;
+        }
+
+        const connectBtn = document.getElementById('connectBtn');
+        connectBtn.addEventListener('click', async () => {
+            if (!isConnected) {
+                try {
+                    connectBtn.textContent = 'Connecting...';
+                    connectBtn.classList.add('connecting');
+
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    analyser = audioContext.createAnalyser();
+                    analyser.fftSize = 256;
+                    dataArray = new Uint8Array(analyser.frequencyBinCount);
+                    
+                    const source = audioContext.createMediaStreamSource(stream);
+                    source.connect(analyser);
+
+                    // Setup WebRTC
+                    peerConnection = await createSmallWebRTCConnection(stream.getAudioTracks()[0]);
+
+                    connectBtn.textContent = 'Disconnect';
+                    connectBtn.classList.remove('connecting');
+                    connectBtn.classList.add('disconnect');
+                    isConnected = true;
+                } catch (error) {
+                    console.error('Error:', error);
+                    disconnect();
+                }
+            } else {
+                disconnect();
+            }
+        });
+
+        init();
+    </script>
+</body>
+</html>

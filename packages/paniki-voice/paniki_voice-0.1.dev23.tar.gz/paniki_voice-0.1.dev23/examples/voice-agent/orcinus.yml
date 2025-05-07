@@ -1,0 +1,12 @@
+stack: "orcinus"
+services:
+  voice-ai:
+    image: voice-ai
+    #auth: true
+    #ports:
+    #  - "5000:5000"
+    #environment:
+    #commands: ["sh","run.sh", "server", "production"]
+    labels:
+      traefik.frontend.rule: "Host:paniki.ringkas.id"
+      traefik.port: "8080"
