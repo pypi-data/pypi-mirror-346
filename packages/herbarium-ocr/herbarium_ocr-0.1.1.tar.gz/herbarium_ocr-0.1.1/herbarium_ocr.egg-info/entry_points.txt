@@ -1,0 +1,5 @@
+[console_scripts]
+herbarium-ocr = Main.herbarium_ocr:main
+herbarium-ocr-check-layout = Main.check_layout_model:main_check
+herbarium-ocr-convert = Main.convert:main
+herbarium-ocr-preprocess = Main.image_processer:main_test
