@@ -1,0 +1,8 @@
+README.md
+setup.py
+zeroshot_database/__init__.py
+zeroshot_database/main.py
+zeroshot_database.egg-info/PKG-INFO
+zeroshot_database.egg-info/SOURCES.txt
+zeroshot_database.egg-info/dependency_links.txt
+zeroshot_database.egg-info/top_level.txt
