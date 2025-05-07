@@ -1,0 +1,10 @@
+amqp_fabric/__init__.py,sha256=uJiASr-mVVot56F-kDoafWiKoWhMkTy223dNZNQ0sQc,582
+amqp_fabric/abstract_service_api.py,sha256=N-jZLZD1hdtsn1b5gaWJiz-xrNBCCE0UOIyNSq3AAqQ,74
+amqp_fabric/amq_broker_connector.py,sha256=zFyTntkmHf1v9eZzlxRv0Bwve736lGdqyiJNNjRZ1Lw,12587
+amqp_fabric/logging_amqp_handler.py,sha256=1EbjJAfqogC1lTNBRzzGVXjXrvUkcoSdY5J-KwBXNiM,1913
+amqp_fabric-0.2.2.dist-info/licenses/AUTHORS.md,sha256=QNOlHV2zjcvZrbVXngeY92SrCBmE6M-SluKX3I27_GU,32
+amqp_fabric-0.2.2.dist-info/licenses/LICENSE.txt,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+amqp_fabric-0.2.2.dist-info/METADATA,sha256=z-f0ZW9O19Dae6AN7JJ2EyhTTK0PKGaLcRaF76GEm-0,5746
+amqp_fabric-0.2.2.dist-info/WHEEL,sha256=oSJJyWjO7Z2XSScFQUpXG1HL-N0sFMqqeKVVbZTPkWc,109
+amqp_fabric-0.2.2.dist-info/top_level.txt,sha256=MJsWuk2eyXvH7W6Bi9OknhWwEcu1qy3UtVyJc1fUutI,12
+amqp_fabric-0.2.2.dist-info/RECORD,,
