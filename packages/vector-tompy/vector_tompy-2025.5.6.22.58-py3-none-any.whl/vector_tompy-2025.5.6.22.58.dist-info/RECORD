@@ -1,0 +1,7 @@
+vector_tompy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vector_tompy/exceptions.py,sha256=nW14D16fVRtqZV-MFo2qEVjmqV29GmVZQAMX-EAYvkk,474
+vector_tompy/line2.py,sha256=Hjzj_a6A6Bw0CvmhfUQXcGxrUrn8xT2c-rsLdupfauQ,3131
+vector_tompy/vector2.py,sha256=5yt7IgSvkei3wYf7iyJ33erk75vmRLPRZDdGJyZyn44,12836
+vector_tompy-2025.5.6.22.58.dist-info/METADATA,sha256=LppZ5vXmB-AeTxwxuns6H1OWUbt9VLXS7_tqMPbtQKM,584
+vector_tompy-2025.5.6.22.58.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vector_tompy-2025.5.6.22.58.dist-info/RECORD,,
