@@ -1,0 +1,10 @@
+gds_fdtd/__init__.py,sha256=cYqoVI3xzER7CPp-atSTTsGPWRn_Q4anceNW1rmZz7E,179
+gds_fdtd/core.py,sha256=Q-WtVfLpTXD654qdR5z2aV2c8bqs2mu_5V2SacvPQGw,18199
+gds_fdtd/lum_tools.py,sha256=lGg4vCi4S21KFbnf3iyO-i0wIvArd999V-b8W-16TzM,6672
+gds_fdtd/lyprocessor.py,sha256=G_FbCw8VMjb9vEscANnE7qqCs3Lgd-LIMpkY_V6hID4,11379
+gds_fdtd/simprocessor.py,sha256=KvwTNC_BROML8tbOPEP5Ju2N-KZxENUDIwhfS9x0PgY,20847
+gds_fdtd/t3d_tools.py,sha256=8YG_GHQUavMcAk5IEeLJbf9D_goIEXR2-wgVIN3BfkI,5557
+gds_fdtd-0.3.1.dist-info/licenses/LICENSE,sha256=EfJ8x_ytyd0suoaPVe0I1KJt1NLDc1GTS4_7qwn1xiw,1074
+gds_fdtd-0.3.1.dist-info/WHEEL,sha256=Dyt6SBfaasWElUrURkknVFAZDHSTwxg3PaTza7RSbkY,100
+gds_fdtd-0.3.1.dist-info/METADATA,sha256=NQQ0T3ODoQwwp5uEDqPTE31lxoyv2JWYZthkNeTRMKo,3366
+gds_fdtd-0.3.1.dist-info/RECORD,,
