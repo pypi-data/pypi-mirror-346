@@ -1,0 +1,8 @@
+numpy
+scipy
+torch
+torchani
+scikit-learn==1.6.1
+ase
+joblib
+setuptools
