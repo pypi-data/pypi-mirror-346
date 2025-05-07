@@ -1,0 +1,7 @@
+ibslib
+ibslib/analysis
+ibslib/calculators
+ibslib/io
+ibslib/structures
+ogre
+ogre/utils

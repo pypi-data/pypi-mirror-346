@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: ocelot-ogre
+Version: 0.1
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pymatgen
+Requires-Dist: scikit-learn
+Requires-Dist: torch
+Requires-Dist: scipy
+Requires-Dist: pymongo
+Requires-Dist: pandas
+Requires-Dist: networkx
+Requires-Dist: tqdm
+Requires-Dist: ase
+Dynamic: license-file
+Dynamic: requires-dist
