@@ -1,0 +1,17 @@
+[build-system]
+requires = [ "poetry-core",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "bapp-framework-sdk"
+version = "2.0.12264"
+description = "The APi client to be used for the BApp Framework"
+license = "MIT"
+authors = [ "Cristi Boboc <cristi@cbsoft.ro>",]
+readme = "Readme.md"
+[[tool.poetry.packages]]
+include = "bapp_framework_sdk"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+requests = "^2.32.3"

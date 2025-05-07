@@ -1,0 +1,37 @@
+Metadata-Version: 2.3
+Name: bapp-framework-sdk
+Version: 2.0.12264
+Summary: The APi client to be used for the BApp Framework
+License: MIT
+Author: Cristi Boboc
+Author-email: cristi@cbsoft.ro
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Bapp Framework Python SDK
+
+This is the Python SDK for the Bapp Framework. It provides a simple way to interact with the Bapp Framework API.
+
+## Installation
+To install the SDK, run the following command:
+```bash
+pip install bapp-framework-sdk
+```
+
+# Example
+```python
+from bapp_framework_sdk import BappFrameworkApiClient
+
+client = BappFrameworkApiClient(token='your_token_here')
+client.get_available_tasks()
+```
+
