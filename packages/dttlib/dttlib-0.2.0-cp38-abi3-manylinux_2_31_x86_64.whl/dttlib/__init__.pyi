@@ -1,0 +1,326 @@
+from typing import Callable, Sequence, Optional, List, Dict, Tuple, Union
+from gps_pip import PipInstant, PipDuration
+from enum import Enum
+import numpy as np
+
+def init(callback: Callable["ResponseToUser"]) -> DTT: ...
+def default_fft_params() -> "TestParams": ...
+
+class ViewSet:
+    @staticmethod
+    def from_channels(channels: Sequence[Channel]) -> ViewSet: ...
+    @staticmethod
+    def from_channel_names(channel_names: Sequence[str]) -> ViewSet: ...
+
+class Channel:
+    def __init__(self, channel_name: str, data_type: NDSDataType, rate_hz: float):
+        self.channel_name: str = ...
+        self.rate_hz: float = ...
+        self.data_type: NDSDataType = ...
+    @property
+    def name(self) -> str: ...
+    @property
+    def data_type(self) -> NDSDataType: ...
+    @property
+    def rate_hz(self) -> float: ...
+    @property
+    def online(self) -> bool: ...
+    @property
+    def testpoint(self) -> bool: ...
+    @property
+    def units(self) -> str: ...
+
+class NDSDataType(Enum):
+    Int16 = 1
+    Int32 = 2
+    Int64 = 3
+    Float32 = 4
+    Float64 = 5
+    Complex64 = 6
+    UInt32 = 7
+    Complex128 = 8
+    UInt64 = 9
+    UInt16 = 10
+    Int8 = 11
+    UInt8 = 12
+
+class Severity(Enum):
+    Debug = 1
+    Notice = 2
+    ConfigurationWarning = 3
+    Warning = 4
+    Error = 5
+    ConfigurationError = 6
+    FatalError = 7
+    SystemError = 8
+
+class UserMessage:
+    def __init__(self):
+        self.severity: Severity = ...
+        self.message: str = ...
+
+class MessageJob:
+    class SetMessage:
+        def __init__(self):
+            self.tag: str = ...
+            self.msg: UserMessage = ...
+
+    class ClearMessage:
+        def __init__(self):
+            self.tag: str = ...
+
+class ResponseToUser:
+    class AllMessages(Tuple[Dict[str, str]]): ...
+
+    class ScopeViewResult:
+        def __init__(self):
+            self.id: int = ...
+            self.result: "AnalysisResult" = ...
+
+    class ChannelQueryResult:
+        def __init__(self):
+            self.channels: List[Channel] = ...
+
+    class UpdateMessages:
+        def __init__(self):
+            self.message_job: MessageJob = ...
+
+class AnalysisResult:
+    class TimeHistoryReal:
+        def __init__(self):
+            self.channel: Channel = ...
+            self.value: Union[
+                "TimeDomainArray", Tuple["TimeDomainArray, TimeDomainArray"]
+            ] = ...
+
+    class ASD:
+        def __init__(self):
+            self.channel: Channel = ...
+            self.value: "FreqDomainArray" = ...
+
+class TimeDomainArray:
+    def __init__(self):
+        self.start_gps_pip: PipInstant = ...
+        self.rate_hz: float = ...
+        self.accumulation_stats: "AccumulationStats" = ...
+        self.data: np.array = ...
+
+    def end_gps_pip(self) -> PipInstant: ...
+    def index_to_gps_pip(self, index: int) -> PipInstant: ...
+
+class FreqDomainArray:
+    def __init__(self):
+        self.start_gps_pip: PipInstant = ...
+        self.start_hz: float = ...
+        self.bucket_width_hz: float = ...
+        self.data: np.array = ...
+        self.overlap: float = ...
+        self.n: float = ...
+        self.sequence_index: int = ...
+        self.sequence_size: int = ...
+
+class NDS2Cache:
+    def __init__(self, size_bytes: int, default_file_path: str): ...
+    def as_ref(self) -> DataSourceRef: ...
+
+class DataSourceRef:
+    def now(self) -> PipInstant: ...
+
+class DataFlow(Enum):
+    Unordered = 1
+    Ordered = 2
+
+class ScopeViewHandle:
+    @property
+    def id(self) -> int: ...
+    def set_fft_params(self, params: "InlineFFTParams"): ...
+    def update(
+        self,
+        data_source: DataSourceRef,
+        span_pip: PipDuration = None,
+        start_pip: PipInstant = None,
+        end_pip: PipInstant = None,
+    ): ...
+
+class DTT:
+    def set_data_source(self, data_source: DataSourceRef) -> None: ...
+    def set_test_params(self, params: "TestParams") -> None: ...
+    def run_test(self) -> None: ...
+    def no_op(self) -> None: ...
+    def new_fixed_scope_view(
+        self, view_set: ViewSet, start_pip: PipInstant, end_pip: PipInstant
+    ) -> ScopeViewHandle: ...
+    def new_online_scope_view(
+        id: int, view_set: ViewSet, span_pip: PipDuration
+    ) -> ScopeViewHandle: ...
+    def find_channels(self, query: ChannelQuery) -> None: ...
+
+class ChannelQuery:
+    def __init__(
+        self,
+        pattern: Optional[str] = None,
+        channel_types: Optional[List[ChannelType]] = None,
+        data_types: Optional[List[NDSDataType]] = None,
+        min_sample_rate: Optional[float] = None,
+        max_sample_rate: Optional[float] = None,
+        gps_start: Optional[int] = None,
+        gps_end: Optional[int] = None,
+    ):
+        self.pattern = pattern
+        self.channel_types: List[ChannelType] = ...
+        self.data_types: List[NDSDataType] = ...
+        self.min_sample_rate = min_sample_rate
+        self.max_sample_rate = max_sample_rate
+        self.gps_start = gps_start
+        self.gps_end = gps_end
+
+class ChannelType(Enum):
+    Unknown = 1
+    Online = 2
+    Raw = 3
+    RDS = 4
+    STrend = 5
+    MTrend = 6
+    TestPoint = 7
+    Static = 8
+
+class InlineFFTParams:
+    def __init__(self):
+        self.bandwidth_hz: float = ...
+        self.overlap: float = ...
+        self.start_pip: PipInstant = ...
+        self.end_pip: PipInstant = ...
+        self.window: FFTWindow = ...
+
+class FFTWindow(Enum):
+    Uniform = 0
+    Hann = 1
+    FlatTop = 2
+    Welch = 3
+    Bartlett = 4
+    BlackmanHarris = 5
+    Hamming = 6
+
+class TestParams:
+    def __init__(self):
+        # # Version
+        # increment this number if releasing a new version of the struct
+        self.version: int = ...
+
+        # # Test Type
+        self.test_type: "TestType" = ...
+
+        # # Start Time
+        self.start_time_pip: StartTime = ...
+
+        # # time constraints
+        # if both time and cycles are set to true,value
+        # then the measurement span will be
+        # the least time that satisfies both.
+        # minimum time span of a single segment
+        self.measurement_time_pip: PipDuration = ...
+        self.use_measurement_time: bool = ...
+
+        # minimum number of cycles
+        self.measurement_cycles: int = ...
+        self.use_measurement_cycles: bool = ...
+
+        # # ramps and settling
+        # fraction of measurement time needed to "settle" the system
+        self.settling_time_frac: float = ...
+
+        # time to ramp down excitations
+        self.ramp_down_pip: PipDuration = ...
+        # time to ramp up excitations
+        self.ramp_up_pip: PipDuration = ...
+
+        # # sine_options config
+        # Whether to calculate power spectrum
+        # Needed for sine response and swept sine
+        self.calc_power_spectrum: bool = ...
+
+        # Maximum harmonic order to calculate
+        self.max_harmonic_order: int = ...
+
+        # # Averaging
+        # Total number of segments to average
+        self.average_size: int = ...
+        self.average_type: "AverageType" = ...
+
+        # ## channel parameters
+        self.measurement_channels: List["ChannelSettingsParams"] = ...
+
+        self.excitations: List["ExcitationSettingsParams"] = ...
+
+        # # FFT Tools params
+        self.start_hz: float = ...
+        self.stop_hz: float = ...
+        self.band_width_hz: float = ...
+
+        # as a fraction of the length of one segment
+        self.overlap: float = ...
+
+        # when true, subtract out the mean
+        self.remove_mean: bool = ...
+
+        # time of from end of excitation to end of measurement
+        # purpose is to prevent correlation from one segment to the next
+        # due to time delay when using a random input
+        self.quiet_time_pip: PipDuration = ...
+
+        # when false, don't remove the delay incurred by decimation filters
+        # this should maybe always be true!
+        self.remove_decimation_delay: bool = ...
+
+        # Attenuation window to use on FFT input
+        self.fft_window: FFTWindow = ...
+
+        # Custom pipelines
+        # User-provided pipelines written in python.
+        self.custom_pipelines: List["CustomPipeline"] = ...
+
+    @staticmethod
+    def default_fft_params() -> "TestParams": ...
+    @staticmethod
+    def with_measurement_channels(
+        self, channels: List["ChannelParams"]
+    ) -> "TestParams": ...
+
+class ChannelParams:
+    def __init__(self):
+        self.active: bool = ...
+        self.channel: Channel = ...
+
+class CustomPipeline: ...
+class ChannelSettingsParams: ...
+class ExcitationSettingsParams: ...
+
+class AverageType(Enum):
+    # average n values
+    Fixed = 0
+    # average at a fixed rate of 1/lambda
+    Exponential = 1
+    # average n values continuously (?)
+    Accumulative = 2
+    # average at max(1/n, 1/lambda).
+    # like exponential but converges faster at the start
+    ConvergingExponential = 3
+
+class TestType(Enum):
+    FFTTools = 0
+    SweptSine = 1
+    SineResponse = 3
+    TimeSeries = 4
+
+class StartTime:
+    class Unbound: ...
+
+    class Bound:
+        def __init__(self):
+            self.start_pip: PipInstant = ...
+
+class AccumulationStats:
+    def __init__(self):
+        self.n: float = ...
+        self.sequence_index = ...
+        self.sequence_size = ...
