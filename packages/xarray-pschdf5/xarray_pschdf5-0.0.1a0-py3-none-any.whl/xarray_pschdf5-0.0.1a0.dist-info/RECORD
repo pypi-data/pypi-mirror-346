@@ -1,0 +1,16 @@
+xarray_pschdf5/__init__.py,sha256=y1dSP5TtFg8fvEwIw0wx5xCkGxW0V6mbp3P2oyR40LE,310
+xarray_pschdf5/_core.pyi,sha256=PAar0XyI9cewmnsQO_usWyS7qihZVn3jO64LZ_1Fo7c,117
+xarray_pschdf5/_version.py,sha256=q_9xwc_hscR5bc3YqTCc3FjYJfyrONnQuaw_RmdFed0,519
+xarray_pschdf5/_version.pyi,sha256=j5kbzfm6lOn8BzASXWjGIA1yT0OlHTWqlbyZ8Si_o0E,118
+xarray_pschdf5/pschdf5_backend.py,sha256=ua6htc1s5FdNjP65s7s7eXPf2eeTaVJx1ytFprwCzbk,9044
+xarray_pschdf5/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xarray_pschdf5/sample/sample_xdmf.iof.004020.xdmf,sha256=Pb3ShJxLs4gJYJn-khzsBvuhoHQh5P3B149Cn1aXWKg,409702
+xarray_pschdf5/sample/sample_xdmf.iof.004020_p000000.h5,sha256=DqQgEAgBz2xXWE8j2kmc96yPgx4dqFAhpo4M7Dv46Co,1281760
+xarray_pschdf5/sample/sample_xdmf.iof.004040.xdmf,sha256=SjbEFipsfklaXltv7WupCxYsWm5dq0jl2evTUcO0wT8,409702
+xarray_pschdf5/sample/sample_xdmf.iof.xdmf,sha256=T44-f8OZdNEFJCiSQdLa4_lIfOppeKW_gHWmvtlUJcs,371
+xarray_pschdf5-0.0.1a0.dist-info/licenses/LICENSE,sha256=uSEsCx282qHwp33zh7HdWEQiSDb7sn4ebVssDTKSmfY,1527
+xarray_pschdf5-0.0.1a0.dist-info/METADATA,sha256=J7lFaJmVD3kX2-6XBKQRFT9ygcqULe-QTjZcsyE2cQc,5064
+xarray_pschdf5-0.0.1a0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+xarray_pschdf5-0.0.1a0.dist-info/entry_points.txt,sha256=fj6nrS0Ox03iSlVOHhrlRUlu4kl5tkYj9vXo2p77iI4,77
+xarray_pschdf5-0.0.1a0.dist-info/top_level.txt,sha256=OnpScFcZuZD0cULKtWM48skTkvC86UCf2NMYUFaWhV0,15
+xarray_pschdf5-0.0.1a0.dist-info/RECORD,,

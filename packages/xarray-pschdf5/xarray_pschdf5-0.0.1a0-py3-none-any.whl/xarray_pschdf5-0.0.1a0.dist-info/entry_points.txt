@@ -1,0 +1,2 @@
+[xarray.backends]
+pschdf5 = xarray_pschdf5.pschdf5_backend:PscHdf5Entrypoint
