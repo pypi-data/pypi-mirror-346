@@ -1,0 +1,7 @@
+include asb_pl_template/*.py
+include tests/*.py
+include README.md
+include requirements.txt
+include MANIFEST.in
+recursive-include asb_pl_template *.py
+recursive-include tests *.py
