@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+arithmatic/__init__.py
+arithmatic/core.py
+simple_arithmatic_ops.egg-info/PKG-INFO
+simple_arithmatic_ops.egg-info/SOURCES.txt
+simple_arithmatic_ops.egg-info/dependency_links.txt
+simple_arithmatic_ops.egg-info/top_level.txt
+tests/test_core.py
