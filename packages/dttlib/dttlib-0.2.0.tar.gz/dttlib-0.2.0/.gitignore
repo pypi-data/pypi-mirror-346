@@ -1,0 +1,25 @@
+
+# cargo
+/target
+/target_*
+pipelines/target*
+user_messages/target*
+pipeline_macros/target*
+dtt_macros/target*
+nds_test/target*
+scope_view_test/target*
+/Cargo.lock
+
+# editors
+.idea/
+
+# python
+.venv/
+__pycache__/
+uv.lock
+*.egg-info/
+perf.data*
+flamegraph.svg
+
+# local scripts
+setup.sh

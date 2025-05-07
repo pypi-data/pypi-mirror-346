@@ -1,0 +1,15 @@
+[project]
+name = "dttlib"
+version = "0.2.0"
+description = "A frequency domain analysis tool for LIGO data"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+#    "maturin>=1.8.2",
+#    "patchelf>=0.17.2.1",
+#    "pytest>=8.3.4",
+]
+
+[build-system]
+requires = ["setuptools", "wheel>0.36.2", "patchelf", "maturin>=1.8,<2.0"]
+build-backend = "maturin"

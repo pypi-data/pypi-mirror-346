@@ -1,0 +1,63 @@
+workspace = { members = [ "dtt_macros", "nds_test", "pipeline_macros", "pipelines", "scope_view_test", "user_messages"] }
+[package]
+name = "dttlib"
+version = "0.2.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = [
+    "cdylib",
+    "lib"
+]
+
+[dependencies]
+tokio = {version = "1", features = ["full"]}
+tokio-util = {version = "0.7"}
+futures = {version = "0.3"}
+num-traits = {version = "0.2"}
+thiserror = {version = "2"}
+num = {version = "0.4"}
+pipeline_macros = {path = "pipeline_macros"}
+pipelines = {path = "pipelines"}
+user_messages = {path="user_messages"}
+#nds2_client_rs = { git="https://git.ligo.org/nds/nds_client_rs" }
+#nds2_client_rs = { git="https://git.ligo.org/jonathan-hanks/nds_client_rs" }
+nds2_client_rs = { git="https://git.ligo.org/erik.vonreis/nds_client_rs", tag = "dev_b" }
+#nds2_client_rs = {path="../nds_client_rs"}
+lazy_static = "1.5"
+rand = "0.9"
+pyo3 = { version="0.24", features=["num-complex", "abi3-py38", "macros"], optional = true}
+numpy = {version="0.24", optional = true}
+petgraph = { version = "0.8" }
+#nds-cache-rs = { path = "../nds-cache-rs"}
+nds-cache-rs = { git = "https://git.ligo.org/cds/software/cr_tools/nds-cache-rs", tag = "dev_g"}
+#nds-cache-rs = { git = "https://git.ligo.org/cds/software/cr_tools/nds-cache-rs", branch = "iterate"}
+
+# gps_pip = {path = "../gps_pip"}
+gps_pip = {git = "https://git.ligo.org/cds/software/cr_tools/gps_pip.git", tag = "0.4.4", features=["all"]}
+dtt_macros = {path = "dtt_macros"}
+
+[build-dependencies]
+#cxx-build = { version = "1.0" }
+bindgen = { version = "0.71" }
+
+[features]
+#extension-module = ["pyo3/extension-module"]
+#default = ["extension-module"]
+# python interface
+python = ["dep:pyo3",
+    "pyo3/num-complex", "pyo3/abi3-py38", "pyo3/macros",
+    "gps_pip/python", "pipelines/python",
+    "pyo3/extension-module",
+
+    "user_messages/python",  ]
+# python custom pipeline
+python-pipe = ["dep:pyo3", "pipelines/python",
+    "pyo3/abi3-py38", "pyo3/macros", "pyo3/num-complex",
+    "dep:numpy",
+    "gps_pip/python",
+    "pipelines/python"]
+all = ["python", "python-pipe"]
+#full = ["all"]
