@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ragfl_memory"
+version = "0.1.0"
+description = "RAGFL Memory"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/oraichain/ragfl-memory"
+
+[tool.setuptools.packages.find]
+where = ["."]
