@@ -1,0 +1,17 @@
+adaptive_cards_python/Py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adaptive_cards_python/__init__.py,sha256=RgpSK-4xbcQRJsadg4qzHlaV92Ti1Z7wTMs01Vexwtw,568
+adaptive_cards_python/_version.pyi,sha256=GxQ4ZGLPQObN92QW_Hb8IJPEuYINNn186FjrRovM09g,13
+adaptive_cards_python/msteams.py,sha256=3-PjQD6wkzHNPnBCsQu3iR-_UD6uxmKsao_spPcuLQ4,928
+adaptive_cards_python/validation.py,sha256=GBqnPU1CLclhi0ZKZPPjRHefGmeMLPbQ5RjhKI7J7VI,480
+adaptive_cards_python/adaptive_card/Action.py,sha256=hIaFZKaxD-CaORBEgZXN0JlT9kKC7EM-KnlsuyTpoy4,7724
+adaptive_cards_python/adaptive_card/AdaptiveCard.py,sha256=wYzPlhQ-dobsGZ3vfpSrrOmbRRZOAXB38NVqdSa-Wzs,9394
+adaptive_cards_python/adaptive_card/BackgroundImage.py,sha256=8nBP2TkmktqUXys83CIqNiFkxXL1d4S1JadiJcsuL74,1316
+adaptive_cards_python/adaptive_card/Element.py,sha256=omJsjD-Psd2tlrtRPGf38siePycHOlSVx64nrkK1zOo,37111
+adaptive_cards_python/adaptive_card/Extendable.py,sha256=Zfd8o3bW1i2uaEWJsljdT3ZByCtoW_whZYWMcI3pZOo,1271
+adaptive_cards_python/adaptive_card/__init__.py,sha256=tXAsj3cnQ4gbI3AncCn45q_0xmJ-bz1xt-7bHs-bbtE,102
+adaptive_cards_python/adaptive_card/adaptive-card.json,sha256=1CEH46CPPR7Fw1-C5Jel40mBK7DYbpDVuFgImZrlKho,97034
+adaptive_cards_python/adaptive_card/config.py,sha256=6Mb0NGgLJggoKm6AGKCJCOM26u2vRgTYJJ2o4PJqa1Q,1064
+adaptive_cards_python-0.1.7.dist-info/METADATA,sha256=U0-ZEn57jVSmRwOWKDQjxq1i-e1aZct42wLnlqiPVmA,6599
+adaptive_cards_python-0.1.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+adaptive_cards_python-0.1.7.dist-info/licenses/LICENSE,sha256=KoaNwjI3d-2RggNxdSM28bCg8umw4BsV6C1-4fbeXHU,1076
+adaptive_cards_python-0.1.7.dist-info/RECORD,,
