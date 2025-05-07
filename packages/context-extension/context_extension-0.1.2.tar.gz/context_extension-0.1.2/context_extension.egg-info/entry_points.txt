@@ -1,0 +1,3 @@
+[console_scripts]
+extend-context-linear = context_extension.linear_interpolation:main
+extend-context-spline = context_extension.spline_interpolation:main
