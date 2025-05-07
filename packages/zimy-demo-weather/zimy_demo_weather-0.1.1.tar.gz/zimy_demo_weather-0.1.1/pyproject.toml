@@ -1,0 +1,12 @@
+[project]
+name = "zimy-demo-weather"
+version = "0.1.1"
+description = "输入地址查天气"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=1.6.0",
+]
+[project.scripts]
+zimy-demo-weather="weather:main"
