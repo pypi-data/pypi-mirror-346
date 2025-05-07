@@ -1,0 +1,13 @@
+# requirements.txt
+
+colorlogging
+kscale
+mujoco
+mujoco-scenes
+kmv
+numpy
+omegaconf
+pykos
+onnxruntime
+scipy
+mediapy
