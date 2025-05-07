@@ -1,0 +1,12 @@
+aiobotocore
+boto3
+botocore
+fastapi
+loguru
+pydantic
+pydantic-settings
+python-dateutil
+pytest
+starlette
+typing_extensions
+uvicorn
