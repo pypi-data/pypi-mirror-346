@@ -1,0 +1,2 @@
+[console_scripts]
+importtime-convert = importtime_convert.__main__:_cli_main
