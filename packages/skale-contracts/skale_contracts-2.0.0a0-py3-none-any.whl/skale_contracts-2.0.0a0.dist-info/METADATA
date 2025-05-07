@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: skale-contracts
+Version: 2.0.0a0
+Summary: A tool for access to SKALE smart contracts
+Home-page: https://github.com/skalenetwork/skale-contracts
+Author: Dmytro Stebaiev
+Author-email: dmytro@skalelabs.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: parver
+Requires-Dist: semver
+Requires-Dist: web3<8,>=7
+
+# skale-contracts
+
+A tool for access to SKALE smart contracts
