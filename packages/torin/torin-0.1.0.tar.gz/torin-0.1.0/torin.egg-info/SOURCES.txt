@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+torin/__init__.py
+torin/core.py
+torin.egg-info/PKG-INFO
+torin.egg-info/SOURCES.txt
+torin.egg-info/dependency_links.txt
+torin.egg-info/requires.txt
+torin.egg-info/top_level.txt
