@@ -1,0 +1,11 @@
+mysharelib/__init__.py,sha256=2iQlaBGhtwfsbQtHpIDTqYQutp0nLep14tsUutk7OiA,244
+mysharelib/ak_data.py,sha256=VFFKcyE2u_Ls3d7FVWJC2BdyGNtpEKPpCQdGWmvvTaI,10577
+mysharelib/ak_eastmoney.py,sha256=cuGhh-gcaK4wdyzuPzZ--JeYoWKRd9IeAmVSdoZjn3I,1839
+mysharelib/ak_xq.py,sha256=VkfxYNPstBzu1nFAQ_ULem3E5qSza6LbHUW-6CFMGKE,2597
+mysharelib/akshare_data.py,sha256=6XpegobMe_i5L3yARAnb3Gq8Wx1WoODltbbFcOgUi1I,1385
+mysharelib/interfaces.py,sha256=6jJcp2M1v50O87pGcKo8rHVcBsopinpw2n6PivZbANs,2287
+mysharelib/utils.py,sha256=x6AotDiOjU95dW8_jYC06iwaN7bKBW2LP2urIYg2Y2k,4148
+mysharelib/yahoo_data.py,sha256=bxKsSK9P50Ngwznu1PlnZ9ryGP09Fp5eU4pQkysNABo,2566
+mysharelib-0.2.1.dist-info/METADATA,sha256=fu72Uu9Ux5hM2IOqLCRNp46CtZs7QiY0qJ_KEIXd1Xs,3855
+mysharelib-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mysharelib-0.2.1.dist-info/RECORD,,
