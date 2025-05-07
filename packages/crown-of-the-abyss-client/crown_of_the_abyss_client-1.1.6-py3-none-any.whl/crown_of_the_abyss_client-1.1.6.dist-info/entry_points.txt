@@ -1,0 +1,3 @@
+[console_scripts]
+crown-of-the-abyss-client = client:main
+
