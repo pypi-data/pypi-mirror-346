@@ -1,0 +1,289 @@
+Metadata-Version: 2.4
+Name: polars-features
+Version: 0.1.5
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: cloudpickle
+Requires-Dist: flaml>=2.0.2
+Requires-Dist: holidays
+Requires-Dist: numpy
+Requires-Dist: polars>=0.20.8
+Requires-Dist: scikit-learn>=1.2.2
+Requires-Dist: scipy==1.14.1
+Requires-Dist: tqdm
+Requires-Dist: kaleido==0.2.1 ; extra == 'plot'
+Requires-Dist: pandas ; extra == 'plot'
+Requires-Dist: plotly ; extra == 'plot'
+Requires-Dist: catboost ; extra == 'cat'
+Requires-Dist: lightgbm ; extra == 'lgb'
+Requires-Dist: pyarrow ; extra == 'xgb'
+Requires-Dist: xgboost ; extra == 'xgb'
+Requires-Dist: pyarrow ; extra == 'ann'
+Requires-Dist: pylance ; extra == 'ann'
+Requires-Dist: catboost ; extra == 'tree'
+Requires-Dist: lightgbm ; extra == 'tree'
+Requires-Dist: pyarrow ; extra == 'tree'
+Requires-Dist: xgboost ; extra == 'tree'
+Requires-Dist: openai ; extra == 'llm'
+Requires-Dist: pandas ; extra == 'llm'
+Requires-Dist: tenacity ; extra == 'llm'
+Requires-Dist: tiktoken ; extra == 'llm'
+Requires-Dist: pyarrow ; extra == 'all'
+Requires-Dist: pylance ; extra == 'all'
+Requires-Dist: catboost ; extra == 'all'
+Requires-Dist: lightgbm ; extra == 'all'
+Requires-Dist: xgboost ; extra == 'all'
+Requires-Dist: kaleido==0.2.1 ; extra == 'all'
+Requires-Dist: pandas ; extra == 'all'
+Requires-Dist: plotly ; extra == 'all'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: jupyterlab ; extra == 'dev'
+Requires-Dist: mkdocs ; extra == 'dev'
+Requires-Dist: mkdocs-jupyter ; extra == 'dev'
+Requires-Dist: mkdocs-material ; extra == 'dev'
+Requires-Dist: mkdocstrings-python ; extra == 'dev'
+Requires-Dist: pytest-cov>=5.0.0 ; extra == 'dev'
+Requires-Dist: pytest-benchmark ; extra == 'dev'
+Requires-Dist: pyarrow ; extra == 'dev'
+Requires-Dist: pylance ; extra == 'dev'
+Requires-Dist: catboost ; extra == 'dev'
+Requires-Dist: lightgbm ; extra == 'dev'
+Requires-Dist: xgboost ; extra == 'dev'
+Requires-Dist: kaleido==0.2.1 ; extra == 'dev'
+Requires-Dist: pandas ; extra == 'dev'
+Requires-Dist: plotly ; extra == 'dev'
+Requires-Dist: jupyterlab ; extra == 'doc'
+Requires-Dist: mkdocs ; extra == 'doc'
+Requires-Dist: mkdocs-jupyter ; extra == 'doc'
+Requires-Dist: mkdocs-material ; extra == 'doc'
+Requires-Dist: mkdocstrings-python ; extra == 'doc'
+Requires-Dist: pytest-cov>=5.0.0 ; extra == 'test'
+Requires-Dist: pytest-benchmark ; extra == 'test'
+Requires-Dist: pyarrow ; extra == 'test'
+Requires-Dist: pylance ; extra == 'test'
+Requires-Dist: catboost ; extra == 'test'
+Requires-Dist: lightgbm ; extra == 'test'
+Requires-Dist: xgboost ; extra == 'test'
+Requires-Dist: kaleido==0.2.1 ; extra == 'test'
+Requires-Dist: pandas ; extra == 'test'
+Requires-Dist: plotly ; extra == 'test'
+Requires-Dist: aeon<0.5.0 ; extra == 'benchmark'
+Requires-Dist: joblib ; extra == 'benchmark'
+Requires-Dist: mlforecast==0.8.1 ; extra == 'benchmark'
+Requires-Dist: pandas ; extra == 'benchmark'
+Requires-Dist: pyarrow ; extra == 'benchmark'
+Requires-Dist: pytest ; extra == 'benchmark'
+Requires-Dist: pytest-memray ; extra == 'benchmark'
+Requires-Dist: pytest-timeout ; extra == 'benchmark'
+Requires-Dist: statsmodels ; extra == 'benchmark'
+Requires-Dist: tsfresh ; extra == 'benchmark'
+Requires-Dist: pytest-cov>=5.0.0 ; extra == 'benchmark'
+Requires-Dist: pytest-benchmark ; extra == 'benchmark'
+Requires-Dist: pyarrow ; extra == 'benchmark'
+Requires-Dist: pylance ; extra == 'benchmark'
+Requires-Dist: catboost ; extra == 'benchmark'
+Requires-Dist: lightgbm ; extra == 'benchmark'
+Requires-Dist: xgboost ; extra == 'benchmark'
+Requires-Dist: kaleido==0.2.1 ; extra == 'benchmark'
+Requires-Dist: pandas ; extra == 'benchmark'
+Requires-Dist: plotly ; extra == 'benchmark'
+Provides-Extra: plot
+Provides-Extra: cat
+Provides-Extra: lgb
+Provides-Extra: xgb
+Provides-Extra: ann
+Provides-Extra: tree
+Provides-Extra: llm
+Provides-Extra: all
+Provides-Extra: dev
+Provides-Extra: doc
+Provides-Extra: test
+Provides-Extra: benchmark
+License-File: LICENSE
+Summary: Time-series machine learning at scale.
+Author-email: Derek Snow <d.snow@sov.ai>
+Maintainer-email: Derek Snow <d.snow@sov.ai>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+<div align="center">
+    <h1>Time-series machine learning at scale</h1>
+<br />
+
+![functime](docs/img/banner_dark_bg.png)
+[![Python](https://img.shields.io/pypi/pyversions/functime)](https://pypi.org/project/functime/)
+[![PyPi](https://img.shields.io/pypi/v/functime?color=blue)](https://pypi.org/project/functime/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Discord](https://img.shields.io/discord/1145819725276917782)](https://discord.com/invite/JKMrZKjEwN)
+
+</div>
+
+---
+**functime** is a powerful [Python library](https://pypi.org/project/functime/) for production-ready **global forecasting** and **time-series feature extraction** on **large panel datasets**.
+
+**functime** also comes with time-series [preprocessing](https://docs.functime.ai/ref/preprocessing/) (box-cox, differencing etc), cross-validation [splitters](https://docs.functime.ai/ref/cross-validation/) (expanding and sliding window), and forecast [metrics](https://docs.functime.ai/ref/metrics/) (MASE, SMAPE etc). All optimized as [lazy Polars](https://pola-rs.github.io/polars-book/user-guide/lazy/using/) transforms.
+
+Join us on [Discord](https://discord.com/invite/JKMrZKjEwN)!
+
+## Highlights
+- **Fast:** Forecast and extract features (e.g. tsfresh, Catch22) across 100,000 time series in seconds *on your laptop*
+- **Efficient:** Embarrassingly parallel feature engineering for time-series using [`Polars`](https://pola.rs/)
+- **Battle-tested:** Machine learning algorithms that deliver real business impact and win competitions
+- **Exogenous features:** supported by every forecaster
+- **Backtesting** with expanding window and sliding window splitters
+- **Automated lags and hyperparameter tuning** using [`FLAML`](https://github.com/microsoft/FLAML)
+
+## Additional Highlights
+`functime` comes with a specialized LLM agent to analyze, describe, and compare your forecasts. Check out the walkthrough [here](https://docs.functime.ai/notebooks/llm/).
+
+## Getting Started
+Install `functime` via the [pip](https://pypi.org/project/functime/) package manager.
+```bash
+pip install functime
+```
+
+`functime` comes with extra options. For example, to install `functime` with large-language model (LLM) and lightgbm features:
+
+```bash
+pip install "functime[llm,lgb]"
+```
+
+- `cat`: To use `catboost` forecaster
+- `xgb`: To use `xgboost` forecaster
+- `lgb`: To use `lightgbm` forecaster
+- `llm`: To use the LLM-powered forecast analyst
+
+### Forecasting
+
+```python
+import polars as pl
+from functime.cross_validation import train_test_split
+from functime.seasonality import add_fourier_terms
+from functime.forecasting import linear_model
+from functime.preprocessing import scale
+from functime.metrics import mase
+
+# Load commodities price data
+y = pl.read_parquet("data/commodities.parquet")
+entity_col, time_col = y.columns[:2]
+
+# Time series split
+y_train, y_test = y.pipe(train_test_split(test_size=3))
+
+# Fit-predict
+forecaster = linear_model(freq="1mo", lags=24)
+forecaster.fit(y=y_train)
+y_pred = forecaster.predict(fh=3)
+
+# functime ❤️ functional design
+# fit-predict in a single line
+y_pred = linear_model(freq="1mo", lags=24)(y=y_train, fh=3)
+
+# Score forecasts in parallel
+scores = mase(y_true=y_test, y_pred=y_pred, y_train=y_train)
+
+# Forecast with target transforms and feature transforms
+forecaster = linear_model(
+    freq="1mo",
+    lags=24,
+    target_transform=scale(),
+    feature_transform=add_fourier_terms(sp=12, K=6)
+)
+
+# Forecast with exogenous regressors!
+# Just pass them into X
+X = (
+    y.select([entity_col, time_col])
+    .pipe(add_fourier_terms(sp=12, K=6)).collect()
+)
+X_train, X_future = y.pipe(train_test_split(test_size=3))
+forecaster = linear_model(freq="1mo", lags=24)
+forecaster.fit(y=y_train, X=X_train)
+y_pred = forecaster.predict(fh=3, X=X_future)
+```
+
+View the full walkthrough on forecasting [here](https://docs.functime.ai/forecasting/).
+
+### Feature Extraction
+
+`functime` comes with over 100+ [time-series feature extractors](https://docs.functime.ai/feature-extraction/).
+Every feature is easily accessible via `functime`'s custom `ts` (time-series) namespace, which works with any `Polars` Series or expression. To register the custom `ts` `Polars` namespace, you must first import `functime` in your module.
+
+To register the custom `ts` `Polars` namespace, you must first import `functime`!
+
+```python
+import polars as pl
+import numpy as np
+from functime.feature_extractors import FeatureExtractor, binned_entropy
+
+# Load commodities price data
+y = pl.read_parquet("data/commodities.parquet")
+
+# Get column names ("commodity_type", "time", "price")
+entity_col, time_col, value_col = y.columns
+
+# Extract a single feature from a single time-series
+binned_entropy = binned_entropy(
+    pl.Series(np.random.normal(0, 1, size=10)),
+    bin_count=10
+)
+
+# 🔥 Also works on LazyFrames with query optimization
+features = (
+    pl.LazyFrame({
+        "index": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        "value": np.random.normal(0, 1, size=10)
+    })
+    .select(
+        binned_entropy=pl.col("value").ts.binned_entropy(bin_count=10),
+        lempel_ziv_complexity=pl.col("value").ts.lempel_ziv_complexity(threshold=3),
+        longest_streak_above_mean=pl.col("value").ts.longest_streak_above_mean(),
+    )
+    .collect()
+)
+
+# 🚄 Extract features blazingly fast on many
+# stacked time-series using `group_by`
+features = (
+    y.group_by(entity_col)
+    .agg(
+        binned_entropy=pl.col(value_col).ts.binned_entropy(bin_count=10),
+        lempel_ziv_complexity=pl.col(value_col).ts.lempel_ziv_complexity(threshold=3),
+        longest_streak_above_mean=pl.col(value_col).ts.longest_streak_above_mean(),
+    )
+)
+
+# 🚄 Extract features blazingly fast on windows
+# of many time-series using `group_by_dynamic`
+features = (
+    # Compute rolling features at yearly intervals
+    y.group_by_dynamic(
+        time_col,
+        every="12mo",
+        by=entity_col,
+    )
+    .agg(
+        binned_entropy=pl.col(value_col).ts.binned_entropy(bin_count=10),
+        lempel_ziv_complexity=pl.col(value_col).ts.lempel_ziv_complexity(threshold=3),
+        longest_streak_above_mean=pl.col(value_col).ts.longest_streak_above_mean(),
+    )
+)
+
+```
+
+## Related Projects
+
+If you are interested in general data-science related plugins for `Polars`, you must check out `polars-ds`. `polars-ds` is a project created by one of `functime`'s core maintainers and is the easiest way to extend your `Polars` pipelines with commonly used data-science operations made blazing fast with Rust!
+
+## License
+`functime` is distributed under [Apache-2.0](LICENSE).
+
