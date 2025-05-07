@@ -1,0 +1,8 @@
+dsw/storage/__init__.py,sha256=okElJ2yrAceGuwqdX_N6Gcv8btAiXX9OQqyQMZQnfSk,58
+dsw/storage/build_info.py,sha256=fsOCvOwpUnU8c3ZhfjHwvTFGSczelw6-Dd05o5NPVlc,381
+dsw/storage/s3storage.py,sha256=yu2y-ABGfxxepNMExHnOp0xazLgPqiibS4w115vVrE0,4294
+dsw_storage-4.18.0.dist-info/licenses/LICENSE,sha256=rDtJ4LdsXvf_euOpGD0Q86P78K4JyM5m4yfYz9wZ750,11346
+dsw_storage-4.18.0.dist-info/METADATA,sha256=Jrmg5727IZG_14QPspR03VgFzpcTG2Ee4SpA2o4KQko,1871
+dsw_storage-4.18.0.dist-info/WHEEL,sha256=oSJJyWjO7Z2XSScFQUpXG1HL-N0sFMqqeKVVbZTPkWc,109
+dsw_storage-4.18.0.dist-info/top_level.txt,sha256=7SfbsHFoJ_vlAgG6C-xzETETwYO71dBrGnod8uMFnjw,4
+dsw_storage-4.18.0.dist-info/RECORD,,
