@@ -1,0 +1,9 @@
+recursive-include patriotlib *.py
+
+include README.md
+include LICENSE
+
+global-exclude __pycache__ *.py[cod] *.pyo
+prune tests
+prune .venv
+prune .git
