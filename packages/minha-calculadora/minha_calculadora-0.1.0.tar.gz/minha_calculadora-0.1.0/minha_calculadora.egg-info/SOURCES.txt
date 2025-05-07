@@ -1,0 +1,9 @@
+README.md
+setup.py
+calculadora/__init__.py
+calculadora/operacoes.py
+minha_calculadora.egg-info/PKG-INFO
+minha_calculadora.egg-info/SOURCES.txt
+minha_calculadora.egg-info/dependency_links.txt
+minha_calculadora.egg-info/requires.txt
+minha_calculadora.egg-info/top_level.txt

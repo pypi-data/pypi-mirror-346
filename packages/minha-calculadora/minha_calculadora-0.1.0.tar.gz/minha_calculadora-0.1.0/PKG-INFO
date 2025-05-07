@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: minha_calculadora
+Version: 0.1.0
+Summary: Uma biblioteca de operações matemáticas com FastAPI exceptions.
+Author: Seu Nome
+Author-email: seu@email.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
