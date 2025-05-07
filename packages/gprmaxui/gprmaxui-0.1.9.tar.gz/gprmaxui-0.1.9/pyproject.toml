@@ -1,0 +1,65 @@
+[project]
+name = "gprmaxui"
+version = "0.1.9"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "cython>=3.0.11",
+    "h5py>=3.12.1",
+    "httpcore>=1.0.6",
+    "more-itertools>=10.5.0",
+    "opencv-python>=4.10.0.84",
+    "pillow>=10.4.0",
+    "psutil>=6.0.0",
+    "pydantic>=2.9.2",
+    "pyside6>=6.8.0.1",
+    "pyvista>=0.44.1",
+    "pyvistaqt>=0.11.1",
+    "rich>=13.9.2",
+    "scipy>=1.14.1",
+    "terminaltables>=3.1.10",
+    "tqdm>=4.66.5",
+    "xmltodict>=0.14.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+exclude = [
+    "tests/",
+    "docs/",
+    "examples/",
+    "assets/",
+    "keys/",
+    ".git/",
+    ".github/",
+    "scripts/",
+    "configs/",
+    "README.md",
+    ".env",
+    "config.json",
+    "*/**/.sh",
+    "Makefile",
+    "cloudbuild.yaml",
+    "*/**/Dockerfile",
+    "Dockerfile",
+    "requirements.txt",
+    "*.sh",
+    "*.yml",
+]
+
+[project.optional-dependencies]
+gpu = [
+    "pycuda>=2024.1.2",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "black>=24.10.0",
+    "mkdocs-glightbox>=0.4.0",
+    "mkdocs-material>=9.5.40",
+    "mkdocs-video>=1.5.0",
+]
