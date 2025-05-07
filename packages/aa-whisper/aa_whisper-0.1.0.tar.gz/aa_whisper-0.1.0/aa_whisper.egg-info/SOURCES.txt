@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+aa_whisper.egg-info/PKG-INFO
+aa_whisper.egg-info/SOURCES.txt
+aa_whisper.egg-info/dependency_links.txt
+aa_whisper.egg-info/entry_points.txt
+aa_whisper.egg-info/requires.txt
+aa_whisper.egg-info/top_level.txt
+whisper/__init__.py
+whisper/main.py
