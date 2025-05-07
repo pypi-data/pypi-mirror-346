@@ -1,0 +1,17 @@
+django_upgrade_check-1.1.0.dist-info/licenses/LICENSE,sha256=V_m6aDLaOjqUQdoxr8XtEK4Zu0DVJPKKQldQuHXAD34,1052
+upgrade_check/__init__.py,sha256=P5omesFzCpEImfzH7DrCjBx5IbilfWqVlbZHKG5V90M,149
+upgrade_check/admin.py,sha256=fh3emFxpMk8-Pll2ueV7clacZsdRHrZ9kHT6WkqLty4,294
+upgrade_check/apps.py,sha256=9nYQ15i__iGDHpi48axg3MV8ez8FspqwVxP3ceSjjW8,298
+upgrade_check/checks.py,sha256=HQNJkT5b81yyzV-l48NuLmShU-TxLaDgUrEF2LHgvII,2127
+upgrade_check/constraints.py,sha256=XpIibSM9Hen3Qg4N8wugKfUOxgXhrxBFPY2lOwfe4kI,7480
+upgrade_check/models.py,sha256=TOKgCgIkde5VihNBMZK-G2xBqwbHAZSHUJxx-8N2Gp8,2150
+upgrade_check/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+upgrade_check/recorder.py,sha256=047nUmTSDRZjE5wzO6kzvuBId9lrln7oasRLQqtj40o,2100
+upgrade_check/signals.py,sha256=sJN_UiWfrrymHUbOJ-jkYL6xJkW2eVI11tDKfyJtZ-U,287
+upgrade_check/upgrade_checks.py,sha256=4kpiLg1Cmx833Xhb1DaRJSvDdsq0vWUs4LYLrJKNV00,2616
+upgrade_check/migrations/0001_initial.py,sha256=-1WdUgiLscuCMrreEyJL8Kti8CW76lEJBu5QjJxuIQI,2550
+upgrade_check/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_upgrade_check-1.1.0.dist-info/METADATA,sha256=e4rz6uOlDndKfhnUV2P6TMFvv19jQkZ_9FwGHKba4gk,5827
+django_upgrade_check-1.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+django_upgrade_check-1.1.0.dist-info/top_level.txt,sha256=WbTvqVRA1tHYRp6nEqo7_mWftUjbtGzQ05w2IWO5l9g,14
+django_upgrade_check-1.1.0.dist-info/RECORD,,
