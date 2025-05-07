@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+calculadora_fastapi.egg-info/PKG-INFO
+calculadora_fastapi.egg-info/SOURCES.txt
+calculadora_fastapi.egg-info/dependency_links.txt
+calculadora_fastapi.egg-info/entry_points.txt
+calculadora_fastapi.egg-info/requires.txt
+calculadora_fastapi.egg-info/top_level.txt
