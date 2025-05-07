@@ -1,0 +1,2 @@
+[console_scripts]
+synthesizer-download = synthesizer.downloader.downloader:download
