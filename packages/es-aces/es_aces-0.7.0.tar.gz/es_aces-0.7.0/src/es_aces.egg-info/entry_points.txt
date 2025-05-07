@@ -1,0 +1,3 @@
+[console_scripts]
+aces-cli = aces.run:cli
+expand_shards = aces.expand_shards:main
