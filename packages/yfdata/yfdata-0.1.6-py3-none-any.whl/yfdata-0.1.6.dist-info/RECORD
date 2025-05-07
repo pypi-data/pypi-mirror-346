@@ -1,0 +1,10 @@
+yfdata/__init__.py,sha256=Rxr53OhEbAgHE1hf01R6aDo5XYZgNyqcamAYp3uL00Y,61
+yfdata/constants.py,sha256=7RfEE39jqMgXdydMno4nlx08dEQT1nAL3rkBUSe8LR8,4579
+yfdata/parsing.py,sha256=wzM1p3Xj3FB-7YfqIvCDgz_-CyXv3mjfKdKjRdgXLy0,4218
+yfdata/provider.py,sha256=UuBA_geMhxXQjD1aJLoAJK-Ek6x1YcEJW2OzRYQwh0Q,7044
+yfdata/urls.py,sha256=ScF6I4o7L0DIfCJbQerYSDSQTpJ2I0dJ_R3Ha9nDtD8,3983
+yfdata/utils.py,sha256=Cu-yBX3L4NudiTU-tGnfPQaDIg8syb6iB4A1OdZHHnM,1362
+yfdata-0.1.6.dist-info/LICENSE,sha256=jM4Q-pHIkhVHWnExfZpoJ0u3AJ0FgEIOX8qCJtMMEvA,1065
+yfdata-0.1.6.dist-info/METADATA,sha256=134saUdaDY4wHfGnyASHAYKhPXDLZar4qt3eYMZz-sA,4168
+yfdata-0.1.6.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+yfdata-0.1.6.dist-info/RECORD,,
