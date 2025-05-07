@@ -1,0 +1,16 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+src/cppcheck_suppressor/__init__.py
+src/cppcheck_suppressor/__main__.py
+src/cppcheck_suppressor/results.py
+src/cppcheck_suppressor/suppressions.py
+src/cppcheck_suppressor.egg-info/PKG-INFO
+src/cppcheck_suppressor.egg-info/SOURCES.txt
+src/cppcheck_suppressor.egg-info/dependency_links.txt
+src/cppcheck_suppressor.egg-info/entry_points.txt
+src/cppcheck_suppressor.egg-info/requires.txt
+src/cppcheck_suppressor.egg-info/top_level.txt
+src/cppcheck_suppressor/data/cppcheck.xsd
+tests/test_cppcheck_suppressor.py

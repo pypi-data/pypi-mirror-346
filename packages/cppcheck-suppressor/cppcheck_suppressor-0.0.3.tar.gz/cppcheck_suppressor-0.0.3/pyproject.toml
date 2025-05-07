@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools"]
+
+[project]
+name = "cppcheck-suppressor"
+dynamic = ["version"]
+description = "Tool to create suppression files for Cppcheck from its results."
+readme = "README.md"
+keywords = ["Cppcheck", "suppressions"]
+license = "MIT"
+license-files = ["LICENSE.md"]
+authors = [
+  { name="Bugproduction", email="bugproduction@outlook.com" }
+]
+dependencies = ["xmlschema"]
+
+[project.urls]
+Repository = "https://gitlab.com/bugproduction/cppcheck-suppressor.git"
+
+[project.scripts]
+cppcheck-suppressor = "cppcheck_suppressor.__main__:cli"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "build",
+    "pylint",
+    "pytest",
+    "pytest-cov",
+    "setuptools",
+    "twine"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cppcheck_suppressor = ["data/cppcheck.xsd"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "--cov=src --cov-report term"
