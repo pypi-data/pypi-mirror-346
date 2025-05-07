@@ -1,0 +1,13 @@
+spectrochempy_omnic/__init__.py,sha256=FZ1ZQFY_M-hT8W3BfKBgUK7Mapk1WI16GIyjE1Dpdbk,160
+spectrochempy_omnic/__version__.py,sha256=HfjVOrpTnmZ-xVFCYSVmX50EXaBQeJteUHG-PD6iQs8,22
+spectrochempy_omnic/plugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectrochempy_omnic/plugin/omnicreaderplugin.py,sha256=i0dIRhzvsd4s5v5_5vmbaF1aGn8ICP5Gw7w9Ybp-d88,1342
+spectrochempy_omnic/plugin/utils.py,sha256=UTTLVTPiOTRg-qNXgqOHXnXsKt_IG5EwulekxzB_ooY,1563
+spectrochempy_omnic/reader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectrochempy_omnic/reader/read_omnic.py,sha256=P23WbNQ7HTF5SubajDiC_YYxJM4GclCCV8Bt-3mHCR4,55724
+spectrochempy_omnic-0.2.1.dist-info/licenses/LICENSE,sha256=-1uJyEh5YnoxSfPJTzYg2p_YeZQZ5vj_2BeQZq8e-2o,21393
+spectrochempy_omnic-0.2.1.dist-info/METADATA,sha256=rQ6ctem4sznybbGM0kzwE5pHqJcZNUQk3p3mUCVGLpM,3176
+spectrochempy_omnic-0.2.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+spectrochempy_omnic-0.2.1.dist-info/entry_points.txt,sha256=Pt5hDGPFoZo2Bw6X4EgRpRWqO2MiGeHAY7ge77koUIU,95
+spectrochempy_omnic-0.2.1.dist-info/top_level.txt,sha256=LYP83bUbM2Oa2rgZyHpluJBqazbVHUcIvRNSddR5E-Q,20
+spectrochempy_omnic-0.2.1.dist-info/RECORD,,
