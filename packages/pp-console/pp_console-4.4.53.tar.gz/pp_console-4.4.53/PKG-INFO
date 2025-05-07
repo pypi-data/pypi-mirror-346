@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: pp-console
+Version: 4.4.53
+Summary: Add your description here
+Author-email: Philippe ENTZMANN <philippe@arundo.tech>
+Requires-Python: >=3.13
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: packaging>=24.2
+Requires-Dist: pydantic>=2.11.0
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: toml>=0.10.2
+Requires-Dist: typer>=0.15.2
