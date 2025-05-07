@@ -1,0 +1,18 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"allOf": [
+		{ "$ref": "https://progression.dti.crosemont.quebec/schemas/test_base" }
+	],
+	"properties": {
+		"validation": {
+			"type": "string",
+			"minLength": 1
+		},
+		"utilisateur": {
+			"type": "string",
+			"pattern": "^[a-z][-a-z0-9_]*$"
+		}
+	},
+	"required": ["validation"]
+}

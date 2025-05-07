@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+	    "pattern": "(?i)^(prog|sys|seq)$"
+    },
+    "niveau": {
+      "type": "string"
+    },
+    "titre": {
+      "type": "string"
+    },
+    "objectif": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "énoncé": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["texte"],
+            "properties": {
+              "titre": { "type": "string" },
+              "texte": { "type": "string" }
+            }
+          }
+        }
+      ]
+    },
+    "auteur": {
+      "type": "string"
+    },
+    "licence": {
+      "type": "string"
+    },
+    "rétroactions": {
+      "$ref": "https://progression.dti.crosemont.quebec/schemas/rétroactions"
+    },
+    "ttl": {
+      "type": "integer"
+    }
+  },
+  "required": ["type"]
+}

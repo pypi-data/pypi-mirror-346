@@ -1,0 +1,15 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"allOf": [
+		{ "$ref": "https://progression.dti.crosemont.quebec/schemas/test_base" }
+	],
+	"properties": {
+		"entrée": {
+			"type": ["string", "integer" ]
+		},
+		"params": {
+			"type": ["string", "integer" ]
+		}
+	}
+}
