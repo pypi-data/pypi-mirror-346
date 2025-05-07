@@ -1,0 +1,62 @@
+name: Build and Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-publish-release:
+    environment:
+      name: PyPI
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install build deps
+        run: pip install setuptools build twine
+      - name: Build release
+        run: python -m build
+      - name: Publish release
+        env:
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+          PYPI_REPOSITORY: ${{ vars.PYPI_REPOSITORY }}
+        run: python -m twine upload -r $PYPI_REPOSITORY dist/*
+
+  build-docs:
+    needs: build-and-publish-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pdoc
+        run: pip install pdoc3
+      - name: Build docs
+        run: pdoc --html --output-dir docs src/fputils
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/fputils
+
+  publish-docs:
+    needs: build-docs
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
