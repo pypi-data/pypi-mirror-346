@@ -1,0 +1,12 @@
+buicap_py/__init__.py,sha256=hvgl8xwEDuFgpiaMxBfNC0lIfGynDCCv4oVk-z21ULQ,544
+buicap_py/_core.py,sha256=zApZScO5fyBRbCSTGmgCaktPa1kZaczUjBDAy8ZANT8,2865
+buicap_py/api.py,sha256=eAjLwAvZu-FVYnjnR945-KOAp9oYJ6jwP3bmZd23jb4,13029
+buicap_py/const.py,sha256=L3jtNkE59JIAuVKGDv4aJe8AzCGM__KHcgoyCwRtEGw,4834
+buicap_py/error_codes.py,sha256=cCaLPzm4FtWcV9bPO5D1OA8ORe8HSHiXWbS7xyS_qZI,6708
+buicap_py/exceptions.py,sha256=Bz7g2cBKT15wcX47Hp3jQfrcgEDjjMIg42NWqAusCNI,95
+buicap_py/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+buicap_py-0.1.2.dist-info/licenses/LICENSE,sha256=T9BI45BPTtq3WD1egrs2xnB9rx44TiZ0mdMI71kHhkM,1087
+buicap_py-0.1.2.dist-info/METADATA,sha256=6ahPqcYFBPSl4vFwwu6kjuX9vhqi7l0npLEEUzEZeMg,5144
+buicap_py-0.1.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+buicap_py-0.1.2.dist-info/top_level.txt,sha256=CCcoj7waPFZV9XuoEUqL-ZnRK_B7qKZqtSDaqleYRLI,10
+buicap_py-0.1.2.dist-info/RECORD,,
