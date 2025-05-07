@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+dsfr_structure/__init__.py
+dsfr_structure/test_runner.py
+dsfr_structure.egg-info/PKG-INFO
+dsfr_structure.egg-info/SOURCES.txt
+dsfr_structure.egg-info/dependency_links.txt
+dsfr_structure.egg-info/entry_points.txt
+dsfr_structure.egg-info/requires.txt
+dsfr_structure.egg-info/top_level.txt
+dsfr_structure/extension/all_extensions.py
+dsfr_structure/extension/accordion/__init__.py
+dsfr_structure/extension/blockquote/__init__.py
+dsfr_structure/extension/table/__init__.py
+dsfr_structure/tests/test_accordion.py
+dsfr_structure/tests/test_blockquote.py
+dsfr_structure/tests/test_table.py
