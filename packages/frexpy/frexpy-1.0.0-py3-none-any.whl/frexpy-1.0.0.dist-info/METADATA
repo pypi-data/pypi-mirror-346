@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: frexpy
+Version: 1.0.0
+Summary: A translation of the R function that calculates the FREX metric for topic modelling
+Project-URL: Homepage, https://github.com/GuilhermeFrainer/frexpy
+Project-URL: Issues, https://github.com/GuilhermeFrainer/frexpy/issues
+Author-email: Guilherme da Silva Frainer <guilherme.sfrainer@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
