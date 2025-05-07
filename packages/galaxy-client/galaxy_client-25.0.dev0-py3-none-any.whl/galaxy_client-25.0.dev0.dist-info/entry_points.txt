@@ -1,0 +1,2 @@
+[console_scripts]
+galaxy-client-install = galaxy.client.install:main
