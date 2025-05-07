@@ -1,0 +1,11 @@
+genreq/__init__.py,sha256=LwzK081Fg2q60VA-ie8hq5c7bUnQkCMFFFs_XtnWK24,132
+genreq/cli.py,sha256=yQR8UL4q1N2r_y9yxFS6zaTQy2I2wUaquyswZIWD5I0,70
+genreq/genreq.py,sha256=wCEX6vSdPZWcSgU3dl5KK-DiI3sB2F2C6wqM9SPbTus,6355
+genreq/requirements.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+genreq-1.1.0.dist-info/licenses/AUTHORS.rst,sha256=DmG2Z4jClU6EbFiLdJ0WN7TAx6WwQnZUtIeWUEpGMeA,163
+genreq-1.1.0.dist-info/licenses/LICENSE,sha256=NeeqLbt3WJoEUK9kWKkD4BrpyVS4-Ppb97oCOgdmeXk,1508
+genreq-1.1.0.dist-info/METADATA,sha256=4FpqiETxFOKm157fjKSyhoMfcvsK6rvp9xojMlL14UM,1350
+genreq-1.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+genreq-1.1.0.dist-info/entry_points.txt,sha256=Wan4HCtHexOM23DAxLdRm12YFULmSfi_t1HEt2yKFw8,46
+genreq-1.1.0.dist-info/top_level.txt,sha256=OzeWjfPNe3RFmMUE7ahyNBkdsaPCe6O10ItgXg407cI,7
+genreq-1.1.0.dist-info/RECORD,,
