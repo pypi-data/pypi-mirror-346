@@ -1,0 +1,55 @@
+from typing import Any, Dict, List
+
+from trustwise.sdk.types import (
+    Context,
+    PromptInjectionRequest,
+    PromptInjectionResponse,
+)
+
+
+class PromptInjectionMetric:
+    """Prompt injection detection metric."""
+    
+    def __init__(self, client) -> None:
+        self.client = client
+        self.base_url = client.config.get_safety_url("v3")
+    
+    def evaluate(
+        self,
+        *,
+        query: str,
+        response: str,
+        context: Context,
+        **kwargs
+    ) -> PromptInjectionResponse:
+        """
+        Evaluate the prompt injection risk of a response.
+
+        Args:
+            query: The query string (required)
+            response: The response string (required)
+            context: The context information (required)
+
+        Returns:
+            PromptInjectionResponse containing the evaluation results
+        """
+        req = PromptInjectionRequest(query=query, response=response, context=context)
+        result = self.client._post(
+            endpoint=f"{self.base_url}/prompt_injection",
+            data=req.model_dump() if hasattr(req, "model_dump") else req.dict()
+        )
+        return PromptInjectionResponse(**result)
+    
+    def batch_evaluate(
+        self,
+        inputs: List[PromptInjectionRequest]
+    ) -> List[PromptInjectionResponse]:
+        """Evaluate multiple inputs for prompt injection attempts."""
+        raise NotImplementedError("Batch evaluation not yet supported")
+    
+    def explain(
+        self,
+        request: PromptInjectionRequest
+    ) -> Dict[str, Any]:
+        """Get detailed explanation of the prompt injection detection."""
+        raise NotImplementedError("Explanation not yet supported") 
