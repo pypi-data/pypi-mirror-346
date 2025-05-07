@@ -1,0 +1,9 @@
+commitmessagegenerator/__init__.py,sha256=Wsl1vaSI5fWuK3B9MfZnPp1PxnRfTmnvW_20vgswgT0,45
+commitmessagegenerator/cli.py,sha256=gphgdzVb21LLWIUuGSfeWxSjVwM436oZfuo0cQsZJjw,97
+commitmessagegenerator/generator.py,sha256=NuXJk5tZ_PAOOa4lLJbcR-uwveq-pLcn5p37X3UF78I,860
+commitmessagegenerator-0.1.4.dist-info/licenses/LICENSE,sha256=q7KJbcPCqUAvkBuI1QNc8Kg9XPfBfnNkLN9WKwudO8U,11
+commitmessagegenerator-0.1.4.dist-info/METADATA,sha256=NiiC7X0o9y1Qj3XMvwzgbhXoXOBIsPHJcm1uxszAsYc,1564
+commitmessagegenerator-0.1.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+commitmessagegenerator-0.1.4.dist-info/entry_points.txt,sha256=VmVQY00e0SuHsTFZmOCcyN0VYCQlVnZrdZNJdUGLCVo,62
+commitmessagegenerator-0.1.4.dist-info/top_level.txt,sha256=G8wUZw8MTtvYs1WgehFVTPKqw5Td7gGedZZIQbZH1Co,23
+commitmessagegenerator-0.1.4.dist-info/RECORD,,
