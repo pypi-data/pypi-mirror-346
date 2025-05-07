@@ -1,0 +1,9 @@
+LICENCE.txt
+README.md
+setup.py
+squarefunction/__init__.py
+squarefunction/operation.py
+squarefunction.egg-info/PKG-INFO
+squarefunction.egg-info/SOURCES.txt
+squarefunction.egg-info/dependency_links.txt
+squarefunction.egg-info/top_level.txt
