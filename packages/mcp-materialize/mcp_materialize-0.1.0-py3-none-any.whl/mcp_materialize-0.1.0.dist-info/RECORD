@@ -1,0 +1,7 @@
+mcp_materialize/__init__.py,sha256=QoNDd6Q-QWtFLfaDfwsxmMJwDBMq1zn-5ItwzORR8d0,7696
+mcp_materialize/config.py,sha256=84yppeCwG7YiCP51kfZrq7oarrj8ABEM5rxGXzuAnsM,2675
+mcp_materialize/mz_client.py,sha256=CU5h0A0f_HNtLBXjniU5D4QneZxM5uSChAPmQfShJCY,13036
+mcp_materialize-0.1.0.dist-info/METADATA,sha256=oDkk7vrvzEC9UN58EQj6fNH2-bEurr_QhJxa-TpGYMU,4754
+mcp_materialize-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_materialize-0.1.0.dist-info/entry_points.txt,sha256=uMHHPFhsOULLPYeZFdCKBhK5oeOssr5SYsQLeSrbpyI,57
+mcp_materialize-0.1.0.dist-info/RECORD,,
