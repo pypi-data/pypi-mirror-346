@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: JsonDot
+Version: 0.7.0
+Summary: Load JSON files and use the data with dot notation then dump to the file
+Home-page: https://github.com/Mits-Soft/JsonDot.git
+Author: Marco Antonio Calviño Coira
+Author-email: mits.soft.main@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+# JsonDot
+Python library for loading JSON files and use them with dot notation then dump to the file again
+
+## Description
+JsonDot is a lightweight and intuitive Python library designed to simplify working with JSON data. It allows you to load JSON files and access their contents using dot notation, providing a more natural and readable way to interact with nested JSON structures. The library also supports saving modifications back to the original file, ensuring seamless data manipulation and persistence.
+
+Key Features:
+- Access JSON data using dot notation.
+- Modify and update JSON content with ease.
+- Save changes back to the original file.
+- Simple and user-friendly API for developers.
+- Ideal for projects requiring frequent JSON data manipulation.
+- Compatible with Python 3.x.
+
+JsonDot is perfect for developers looking for a straightforward solution to handle JSON data in their Python projects.
