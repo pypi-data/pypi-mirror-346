@@ -1,0 +1,2 @@
+[console_scripts]
+doris-mcp = doris_mcp_server.mcp_core:run_stdio
