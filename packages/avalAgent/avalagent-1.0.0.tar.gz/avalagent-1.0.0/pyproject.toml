@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=75.8.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "avalAgent"
+version = "1.0.0"
+description = "An AI agent wrapper using LangChain and OpenAI with retry and logging support."
+authors = [
+    { name = "Amirhossein Derhami", email = "D3rhami@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+
+dependencies = [
+    "pydantic~=2.11.4",
+    "requests~=2.32.3",
+    "langchain-core~=0.3.58",
+    "langchain-openai~=0.3.16",
+    "openai~=1.77.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["avalAgent"]
