@@ -1,0 +1,8 @@
+kf_filter/__init__.py,sha256=HA5TwZxB2z0jIiBpNC_pSAyvx46aLfMe_9Y2PTrctAQ,140
+kf_filter/consts.py,sha256=pLVOBopZCgK8-8wqdkxyzGsv4mMngagnv-_68Fi40bU,1982
+kf_filter/kf_filter.py,sha256=yqqTfAalYh2eRLpytI7e4WpTpR03MXozjRNxamK55Kw,17815
+kf_filter/util.py,sha256=BiZhHPhtFM1TFFPJFVKi8m8jsWq3F05RedxzFxR4sLY,11838
+kf_filter-0.0.5.post2.dist-info/LICENSE,sha256=ThffCEQmbC8Kuvs7pqnM23GJXMZiNL3KDe6eOGn0QkM,1082
+kf_filter-0.0.5.post2.dist-info/METADATA,sha256=0U07L17xpG3GNImo_9KgI-0wEpmWBAcBn_2h1sLMHc8,1842
+kf_filter-0.0.5.post2.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+kf_filter-0.0.5.post2.dist-info/RECORD,,
