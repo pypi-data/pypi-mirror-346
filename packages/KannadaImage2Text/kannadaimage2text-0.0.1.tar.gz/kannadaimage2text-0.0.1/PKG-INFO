@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: KannadaImage2Text
+Version: 0.0.1
+Summary: A Kannada Image to text package
+Project-URL: Homepage, https://github.com/pypa/KannadaImage2Text
+Project-URL: Issues, https://github.com/pypa/KannadaImage2Text/issues
+Author-email: Aisiri Patil <patil.aisiri@google.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+KannadaImage2Text is a package which uses tesseract ocr in the backend to convert the kannada text in jpg/pdf files to editable format. A Special feature of this is it can separate columns in the page and thus making it easier to read and edit. Do consider using this package if necessary and feel free to mail me for any clarifications.
+
