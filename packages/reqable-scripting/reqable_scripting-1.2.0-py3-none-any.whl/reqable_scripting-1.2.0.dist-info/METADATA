@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: reqable-scripting
+Version: 1.2.0
+Home-page: https://reqable.com/docs/capture/addons
+Author: MegatronKing
+Author-email: coding@reqable.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Reqable Scripting Framework
+
+This is the Python scripting framework for Reqable.
+
+# Installation
+```
+pip3 install reqable-scripting
+```
+
+# Documentation
+
+https://reqable.com/docs/capture/addons
