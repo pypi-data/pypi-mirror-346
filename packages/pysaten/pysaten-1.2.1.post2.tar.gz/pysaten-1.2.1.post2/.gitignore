@@ -1,0 +1,29 @@
+# directory
+*venv
+.mypy_cache
+__pycache__
+pysaten.egg-info
+build
+dist
+
+# extension
+*.wav
+*.txt
+*.lab
+*.csv
+*.pdf
+*.zip
+
+# file
+/**/blue.py
+/**/pink.py
+
+# macOS
+.DS_Store
+._*
+
+# keep
+!requirements*.txt
+!/**/tuning_*.csv
+!/**/test_*.csv
+!/image/*

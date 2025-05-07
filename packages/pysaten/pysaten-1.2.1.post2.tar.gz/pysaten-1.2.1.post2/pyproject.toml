@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pysaten"
+description = "Detect silence segment from speech signal."
+dynamic = ["version"]
+requires-python = ">=3"
+dependencies = [
+    "numpy>=1.20",  # for numpy.typing
+    "noisereduce",
+    "librosa",
+    "soundfile",
+    "scipy",
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"
+]
+
+[project.scripts]
+pysaten_trim = "pysaten.pysaten:cli_runner"
+
+[tool.hatch.version]
+path = "src/pysaten/__init__.py"
