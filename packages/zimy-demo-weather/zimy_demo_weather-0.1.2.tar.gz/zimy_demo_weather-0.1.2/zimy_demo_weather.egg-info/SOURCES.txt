@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+weather.py
+zimy_demo_weather.egg-info/PKG-INFO
+zimy_demo_weather.egg-info/SOURCES.txt
+zimy_demo_weather.egg-info/dependency_links.txt
+zimy_demo_weather.egg-info/entry_points.txt
+zimy_demo_weather.egg-info/requires.txt
+zimy_demo_weather.egg-info/top_level.txt
