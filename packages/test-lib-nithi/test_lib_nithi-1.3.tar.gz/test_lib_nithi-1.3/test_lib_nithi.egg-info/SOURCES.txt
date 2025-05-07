@@ -1,0 +1,6 @@
+setup.py
+test/test-lib-nithi.py
+test_lib_nithi.egg-info/PKG-INFO
+test_lib_nithi.egg-info/SOURCES.txt
+test_lib_nithi.egg-info/dependency_links.txt
+test_lib_nithi.egg-info/top_level.txt
