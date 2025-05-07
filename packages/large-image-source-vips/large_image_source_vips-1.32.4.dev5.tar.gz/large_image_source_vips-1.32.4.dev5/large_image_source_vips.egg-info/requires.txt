@@ -1,0 +1,7 @@
+large-image>=1.32.4.dev5
+numpy
+packaging
+pyvips
+
+[girder]
+girder-large-image
