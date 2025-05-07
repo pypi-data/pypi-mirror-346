@@ -1,0 +1,17 @@
+
+[dev]
+pytest
+coverage
+pytest-cov
+ujson
+orjson
+
+[dev:python_version >= "3.12"]
+setuptools
+
+[doc]
+mkdocs
+mkdocs-material
+
+[linter]
+ruff

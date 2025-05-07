@@ -1,0 +1,183 @@
+Metadata-Version: 2.4
+Name: py-jsonl
+Version: 1.3.11
+Summary: A lightweight Python library for handling jsonlines files.
+Author-email: rmoralespp <rmoralespp@gmail.com>
+Project-URL: Source, https://github.com/rmoralespp/jsonl
+Project-URL: Homepage, https://github.com/rmoralespp/jsonl
+Project-URL: Changelog, https://github.com/rmoralespp/jsonl/blob/main/CHANGELOG.md
+Project-URL: Issues, https://github.com/rmoralespp/jsonl/issues
+Project-URL: Documentation, https://rmoralespp.github.io/jsonl/
+Keywords: jsonlines,ndjson,jsonl,json,gzip,bzip2,xz,utilities,serialization,deserialization
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet
+Classifier: Topic :: Utilities
+Classifier: Topic :: File Formats :: JSON
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: doc
+Requires-Dist: mkdocs; extra == "doc"
+Requires-Dist: mkdocs-material; extra == "doc"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: setuptools; python_version >= "3.12" and extra == "dev"
+Requires-Dist: ujson; extra == "dev"
+Requires-Dist: orjson; extra == "dev"
+Provides-Extra: linter
+Requires-Dist: ruff; extra == "linter"
+Dynamic: license-file
+
+# jsonl
+
+[![CI](https://github.com/rmoralespp/jsonl/workflows/CI/badge.svg)](https://github.com/rmoralespp/jsonl/actions?query=event%3Arelease+workflow%3ACI)
+[![pypi](https://img.shields.io/pypi/v/py-jsonl.svg)](https://pypi.python.org/pypi/py-jsonl)
+[![versions](https://img.shields.io/pypi/pyversions/py-jsonl.svg)](https://github.com/rmoralespp/jsonl)
+[![codecov](https://codecov.io/gh/rmoralespp/jsonl/branch/main/graph/badge.svg)](https://app.codecov.io/gh/rmoralespp/jsonl)
+[![license](https://img.shields.io/github/license/rmoralespp/jsonl.svg)](https://github.com/rmoralespp/jsonl/blob/main/LICENSE)
+[![Linter: ruff](https://img.shields.io/badge/linter-_ruff-orange)](https://github.com/charliermarsh/ruff)
+[![Downloads](https://pepy.tech/badge/py-jsonl)](https://pepy.tech/project/py-jsonl)
+
+## About
+
+**jsonl** is a lightweight Python library designed to simplify working with JSON Lines data, adhering to
+the [JSON Lines format](https://jsonlines.org/).
+
+### Features
+
+- 🌎 Provides an API similar to Python's standard `json` module.
+- 🚀 Supports custom serialization/deserialization callbacks, with the standard `json` module as the default.
+- 🗜️ Supports compression and decompression using `gzip`, `bzip2`, and `xz` formats.
+- 🔧 Can load files with broken lines, skipping any malformed entries.
+- 📦 Includes an easy-to-use utility for writing to multiple JSON Lines files.
+
+## Installation
+
+To install **jsonl** using `pip`, run the following command:
+
+```bash
+pip install py-jsonl
+```
+
+## Getting Started
+
+**Dumping data to a JSON Lines File**
+
+Use `jsonl.dump` to incrementally write an iterable of dictionaries to a JSON Lines file:
+
+```python
+import jsonl
+
+data = [
+    {"name": "Gilbert", "wins": [["straight", "7♣"], ["one pair", "10♥"]]},
+    {"name": "May", "wins": []},
+]
+
+jsonl.dump(data, "file.jsonl")
+```
+
+**Loading data from a JSON Lines File**
+
+Use `jsonl.load` to incrementally load a JSON Lines file into an iterable of objects:
+
+```python
+import jsonl
+
+iterable = jsonl.load("file.jsonl")
+print(tuple(iterable))
+```
+
+**Dumping data to Multiple JSON Lines Files**
+
+Use `jsonl.dump_fork` to incrementally write structured data to multiple **.jsonl** files—one per key (in this case, player name). 
+This helps organize and efficiently store data for separate entities.
+This example creates individual JSON Lines files for each player, storing their respective wins.
+
+```python
+import jsonl
+
+
+def generate_win_data():
+    """Yield player wins data for multiple players."""
+
+    data = (
+        {
+            "name": "Gilbert",
+            "wins": [
+                {"hand": "straight", "card": "7♣"},
+                {"hand": "one pair", "card": "10♥"},
+            ]
+        },
+        {
+            "name": "May",
+            "wins": [
+                {"hand": "two pair", "card": "9♠"},
+            ]
+        },
+        {
+            "name": "Gilbert",
+            "wins": [
+                {"hand": "three of a kind", "card": "A♦"},
+            ]
+        }
+    )
+    for player in data:
+        name = player["name"]
+        yield (f"{name}.jsonl", player["wins"])
+
+
+# Write the generated data to files in JSON Lines format
+jsonl.dump_fork(generate_win_data())
+```
+
+## Documentation
+
+For more detailed information and usage examples, refer to the
+project [documentation](https://rmoralespp.github.io/jsonl/)
+
+## Development
+
+To contribute to the project, you can run the following commands for testing and documentation:
+
+### Running Unit Tests
+
+Install the development dependencies and run the tests:
+
+```
+pip install ".[dev]"  # Skip if already installed
+pytest tests/ # Run all tests
+pytest --cov jsonl # Run tests with coverage
+```
+
+### Running Linter
+
+```
+pip install ".[linter]"  # Skip if already installed
+ruff check . # Run linter
+```
+
+### Building the Documentation
+
+To build the documentation locally, use the following commands:
+
+```
+pip install ".[doc]"  # Skip if already installed
+mkdocs serve # Start live-reloading docs server
+mkdocs build # Build the documentation site
+```
+
+## License
+
+This project is licensed under the [MIT license](LICENSE).
