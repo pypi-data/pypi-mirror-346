@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/obslib/__init__.py
+src/obslib/__main__.py
+src/obslib/exception.py
+src/obslib/obslib.py
+src/obslib.egg-info/PKG-INFO
+src/obslib.egg-info/SOURCES.txt
+src/obslib.egg-info/dependency_links.txt
+src/obslib.egg-info/requires.txt
+src/obslib.egg-info/top_level.txt
