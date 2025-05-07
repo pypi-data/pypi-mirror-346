@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+PM/__init__.py
+PMteam.egg-info/PKG-INFO
+PMteam.egg-info/SOURCES.txt
+PMteam.egg-info/dependency_links.txt
+PMteam.egg-info/top_level.txt

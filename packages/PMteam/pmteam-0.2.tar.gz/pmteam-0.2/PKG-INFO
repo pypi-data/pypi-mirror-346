@@ -1,0 +1,213 @@
+Metadata-Version: 2.4
+Name: PMteam
+Version: 0.2
+Summary: Powerful encryption library for securing Python data by Team PM
+Home-page: https://t.me/NexiaHelpers
+Author: NASR
+Author-email: nasr2python@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security :: Cryptography
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# UltraCrypt Documentation
+
+**UltraCrypt** is a custom Python encryption library designed to obfuscate and secure code/data through multiple complex and layered encryption techniques. This documentation outlines each function and its behavior.
+
+---
+
+## Base64 Encoding
+
+### `encode_base64(text)`
+
+* Encodes input text using Base64.
+
+### `decode_base64(encoded)`
+
+* Decodes Base64-encoded text.
+
+---
+
+## XOR Encryption
+
+### `encrypt_xor(text, key)`
+
+* Encrypts text using XOR with a given key.
+
+### `decrypt_xor(cipher, key)`
+
+* Decrypts XOR-encrypted text using the same key.
+
+---
+
+## AES Encryption (CBC Mode)
+
+### `encrypt_aes(text, key)`
+
+* Encrypts the text using AES encryption in CBC mode.
+* Key is hashed using SHA-256.
+
+### `decrypt_aes(enc_text, key)`
+
+* Decrypts AES-encrypted text.
+
+---
+
+## Reversed Text
+
+### `encrypt_reverse(text)`
+
+* Reverses the string.
+
+### `decrypt_reverse(text)`
+
+* Reverses the string back to original.
+
+---
+
+## Caesar Cipher
+
+### `caesar(text, shift)`
+
+* Shifts characters in the alphabet by `shift` positions.
+
+### `decaesar(text, shift)`
+
+* Reverses the Caesar cipher shift.
+
+---
+
+## ROT13
+
+### `rot13(text)`
+
+* Applies the ROT13 cipher, shifting letters 13 positions. Reversible.
+
+---
+
+## Marshal + Zlib + Base64 + Hex Encoding
+
+### `encrypt_layer1(code)`
+
+* Compresses, marshals, encodes in Base64, then hex.
+
+### `decrypt_layer1(data)`
+
+* Decodes hex, Base64, unmarshal, decompress.
+
+---
+
+## Zlib Compression
+
+### `encrypt_zlib(text)`
+
+* Compresses and encodes the text.
+
+### `decrypt_zlib(encoded)`
+
+* Decodes and decompresses the text.
+
+---
+
+## Marshal Encoding
+
+### `encrypt_marshal(code)`
+
+* Marshals and Base64-encodes the code.
+
+### `decrypt_marshal(data)`
+
+* Decodes and unmarshals the code.
+
+---
+
+## Pro Marshal Encoding (With Hash Check)
+
+### `encrypt_marshal_pro(code)`
+
+* Hashes, compresses, marshals, and encodes the code.
+
+### `decrypt_marshal_pro(data)`
+
+* Decodes, checks hash, decompresses, and unmarshals.
+
+---
+
+## Substitution Cipher
+
+### `encrypt_substitute(text)`
+
+* Randomizes substitution key and applies it to text.
+
+### `decrypt_substitute(ciphertext, key)`
+
+* Reverses substitution cipher using provided key.
+
+---
+
+## Block Encryption (Shuffled Blocks)
+
+### `encrypt_blocks(text)`
+
+* Splits text into blocks, shuffles with index.
+
+### `decrypt_blocks(ciphertext)`
+
+* Restores original text based on block index.
+
+---
+
+## Dynamic XOR
+
+### `encrypt_dynamic_key(text)`
+
+* Generates key from MD5 of text and applies XOR.
+
+### `decrypt_dynamic_key(ciphertext)`
+
+* Decrypts using generated MD5-based key.
+
+---
+
+## Advanced Multi-Layer Encryption
+
+### `encrypt_advanced(text)`
+
+* Compresses, Base64-encodes, reverses, then hex-encodes text.
+
+### `decrypt_advanced(encrypted)`
+
+* Reverses hex, un-reverses, decodes Base64, decompresses.
+
+---
+
+## All-In-One Encryption
+
+### `encrypt_all(text)`
+
+* Splits input into chunks, adds checksum, applies XOR + Base64.
+
+### `decrypt_all(data)`
+
+* Verifies checksum, applies XOR, decodes Base64, recombines.
+
+---
+
+## Summary
+
+**UltraCrypt** provides powerful obfuscation techniques that make reverse engineering significantly more difficult. Each function can be used independently or combined to increase the complexity of protection.
+
+---
+
+For best results, use multiple layers of encryption for sensitive scripts or intellectual property.
