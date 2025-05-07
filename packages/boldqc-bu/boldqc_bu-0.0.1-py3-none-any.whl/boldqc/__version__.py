@@ -1,0 +1,6 @@
+__title__ = 'boldqc-bu'
+__description__ = 'BOLD QC'
+__url__ = 'https://github.com/kakurk/boldqc'
+__version__ = '0.0.1'
+__author__ = 'Kyle Kurkela'
+__author_email__ = 'kkurkela@bu.edu'
