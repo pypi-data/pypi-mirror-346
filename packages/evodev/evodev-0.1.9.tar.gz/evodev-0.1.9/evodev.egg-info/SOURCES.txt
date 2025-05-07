@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+evodev.egg-info/PKG-INFO
+evodev.egg-info/SOURCES.txt
+evodev.egg-info/dependency_links.txt
+evodev.egg-info/top_level.txt
