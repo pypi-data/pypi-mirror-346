@@ -1,0 +1,16 @@
+ip6_access_control-0.0.1.dist-info/licenses/LICENCE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+shared/logging_config.py,sha256=PccDSWvtja77wGlom_Qh90ugrCqltN1B95V7M-SG53o,852
+supervisor/supervisor.py,sha256=reog3ONb37_BPNrc7Dqth0eNwja5SjNuBS2kiJH-BAI,7959
+tests/test_policy_manager.py,sha256=Z8PS2zA7JY2WpxPlKFwWI2u7i4iCxlAwN9qJ96gVksE,13020
+tests/test_supervisor.py,sha256=FUTaiaAfx136ypqJWanKVbzv-3PuuiyoI-I5bgN2kHs,1980
+tests/test_user_interaction.py,sha256=KZexLgYIb9SOwYS159V-6nTZ_o2kJ8zqcbdQCs7TXQM,2624
+tests/test_user_tool_main.py,sha256=eqBVE3z9FBdFpP0_puKaSQkGq1ZCTav9XhBlhlSMe2M,11360
+user_tool/group_selector.py,sha256=xYfXKdZi8-aMcupeFBXdQq-AvNxlvv2VIweDiU7Z_AY,4293
+user_tool/policy_manager.py,sha256=E9cuVXGoMahL6OxdCmy_sIMWhi4ifS8HybyVnwjhsb0,4928
+user_tool/user_interaction.py,sha256=brSkMH7jZ0IuKTFxlkha3R-3_CKMF2GlOBEeJLDReOs,4420
+user_tool/user_tool_main.py,sha256=JEzagUT2IGhwGY7rImNgkyQo6xfRb6rAjWMBtgB-tws,9337
+ip6_access_control-0.0.1.dist-info/METADATA,sha256=NlTsDhuDtCdOm411oiFEy3oIBVGLjEkyGPtI9qmmqnw,2408
+ip6_access_control-0.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+ip6_access_control-0.0.1.dist-info/entry_points.txt,sha256=v-4KyAu2fvzOK2tF45Se4RZXObT3MLQD6wsrOyNjg3A,100
+ip6_access_control-0.0.1.dist-info/top_level.txt,sha256=cGL5xeoPOgiumwGGTh5y-sauc_z7wlJBMgsdq6L14D8,34
+ip6_access_control-0.0.1.dist-info/RECORD,,
