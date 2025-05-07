@@ -1,0 +1,3 @@
+babel>=1.3
+django
+enmerkar==0.7.1
