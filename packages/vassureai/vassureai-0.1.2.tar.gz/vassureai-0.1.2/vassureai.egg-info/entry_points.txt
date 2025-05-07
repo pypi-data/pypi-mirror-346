@@ -1,0 +1,2 @@
+[console_scripts]
+vassure = vassureai.cli.main:main
