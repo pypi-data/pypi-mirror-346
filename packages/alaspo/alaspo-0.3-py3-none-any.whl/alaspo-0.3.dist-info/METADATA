@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: alaspo
+Version: 0.3
+Summary: ALASPO: ASP + Large-Neighborhood Search
+Author-email: Tobias Geibinger <tobias.geibinger@tuwien.ac.at>, Thomas Eiter <thomas.eiter@tuwien.ac.at>, Johannes Oetsch <johannes.oetsch@tuwien.ac.at>, Nelson Higuera Ruiz <nelson.ruiz@tuwien.ac.at>, Nysret Musliu <nysret.musliu@tuwien.ac.at>, Daria Stepanova <daria.stepanova@de.bosch.com>
+Project-URL: Homepage, https://gitlab.tuwien.ac.at/kbs/BAI/alaspo
+Project-URL: Bug Tracker, https://gitlab.tuwien.ac.at/kbs/BAI/alaspo/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cffi>=1.15
+Requires-Dist: clingo>=5.6
+Requires-Dist: clingo-dl>=1.4
+Requires-Dist: clingcon>=5.2
+Requires-Dist: numpy>=2.0
+Provides-Extra: tuning
+Requires-Dist: smac==2.3.0; extra == "tuning"
+Requires-Dist: dill>=0.3.8; extra == "tuning"
+Requires-Dist: jsonpath-ng>=1.6; extra == "tuning"
+Provides-Extra: tuning-viz
+Requires-Dist: smac==2.3.0; extra == "tuning-viz"
+Requires-Dist: dill>=0.3.8; extra == "tuning-viz"
+Requires-Dist: jsonpath-ng>=1.6; extra == "tuning-viz"
+Requires-Dist: matplotlib; extra == "tuning-viz"
+Requires-Dist: pandas; extra == "tuning-viz"
+Requires-Dist: plotly; extra == "tuning-viz"
+Dynamic: license-file
+
+# ALASPO
+
+An (adaptive) LNS framework for the for ASP systems. Currently, the system only supports solvers based on [clingo](https://potassco.org/). 
+
+## Installation
+
+It should work out-of-the-box in a conda env after running the following commands:
+```
+conda create -n alaspo python=3.9
+conda activate alaspo
+conda install -c potassco clingo clingo-dl clingcon
+python -m pip install alaspo
+```
+
+The command-line options of the problem-independent LNS can be shown as follows:
+```
+alaspo -h
+```
+
+Examples for portfolio config files can be found in the [git repository](https://gitlab.tuwien.ac.at/kbs/BAI/alaspo).
