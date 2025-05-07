@@ -1,0 +1,2 @@
+[console_scripts]
+wa-leg-mcp = wa_leg_mcp.server:main
