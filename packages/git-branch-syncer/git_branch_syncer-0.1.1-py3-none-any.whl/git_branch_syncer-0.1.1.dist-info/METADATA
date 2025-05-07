@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: git-branch-syncer
+Version: 0.1.1
+Summary: Automatically sync git branches matching a pattern with a base branch
+Home-page: https://github.com/MhmdRdbri/git-branch-syncer
+Author: Mohammad R.
+Author-email: Mohammad Rdbri <youremail@example.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Git Branch Syncer
+
+A simple CLI tool to automatically sync git branches based on a pattern.
