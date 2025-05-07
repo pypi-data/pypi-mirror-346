@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+meeting-agent/__init__.py
+meeting-agent/agent.py
+meeting_agent.egg-info/PKG-INFO
+meeting_agent.egg-info/SOURCES.txt
+meeting_agent.egg-info/dependency_links.txt
+meeting_agent.egg-info/entry_points.txt
+meeting_agent.egg-info/requires.txt
+meeting_agent.egg-info/top_level.txt
+tests/test_dummy.py
