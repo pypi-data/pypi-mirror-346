@@ -1,0 +1,7 @@
+mcp[cli]>=1.6.0
+pillow>=11.1.0
+aranet4>=2.5.1
+matplotlib>=3.10.1
+pandas>=2.2.3
+tzlocal>=5.3.1
+pyyaml>=6.0.2
