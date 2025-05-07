@@ -1,0 +1,17 @@
+notebook>=6.5.7
+numpy>=1.26.0
+pydantic>=2.10.4
+langchain>=0.3.19
+openai>=1.62.0
+requests>=2.32.3
+pillow>=10.4.0
+pandas>=2.2.2
+markdown>=3.6
+colorama>=0.4.6
+mcp>=1.6.0
+fastmcp>=2.2.5
+matplotlib>=3.9.2
+chardet>=5.2.0
+bs4>=0.0.2
+beautifulsoup4>=4.12.3
+scikit-image>=0.25.2
