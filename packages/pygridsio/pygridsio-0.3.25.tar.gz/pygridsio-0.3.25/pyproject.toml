@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pygridsio"
+version = "0.3.25"
+description = "This is a utility package to enable IO and plotting for .nc, .tif, .zmap, .asc grid files or xarray objects"
+readme = "README.md"
+authors = [
+    { name = "Hen Brett", email = "hen.brett@tno.nl" }
+]
+requires-python = ">=3.6"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pykrige",
+    "xarray",
+    "rioxarray",
+    "netCDF4",
+    "plotly",
+    "geopandas",
+    "matplotlib"
+]
+license-files= ["LICENSE"]
+
+[project.urls]
+Homepage = "https://ci.tno.nl/gitlab/AGS/pygridsio.git"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pygridsio*"]  # Ensure all submodules are included
+
+[tool.setuptools.package-data]
+"pygridsio" = ["resources/netherlands_shapefile/*"]  # Ensure all files inside 'lib/' are included
