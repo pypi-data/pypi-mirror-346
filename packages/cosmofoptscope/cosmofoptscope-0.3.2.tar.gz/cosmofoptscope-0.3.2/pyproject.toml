@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cosmofoptscope"
+version = "0.3.2"
+authors = [
+  { name="yeji PARK", email="yeji.park.yeji@gmail.com" },
+]
+description = "A tool for detecting and analyzing First Order Phase Transitions (FOPT) in cosmic evolution using the cosmoTransitions library."
+readme = "README.md"
+requires-python = "==3.12.7"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "cosmotransitions>=2.0.7",
+    "numpy>=2.1.3",
+    "ray>=2.38.0",
+    "scipy>=1.14.1",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/hiilynn/cosmoT-FOPTscope"
