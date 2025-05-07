@@ -1,0 +1,6 @@
+this:
+  isa:
+    key: 42
+and:
+  another:
+    key: 43
