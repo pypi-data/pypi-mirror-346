@@ -1,0 +1,14 @@
+[project]
+name = "diemsim"
+version = "0.0.2"
+description = "A Python Library Implementing Dimension Insensitive Euclidean Metric (DIEM)"
+authors = [
+    {name = "Boddu Sri Pavan"},
+    {name = "Chandrasheker Thummanagoti"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy (>=2.2.5,<3.0.0)",
+]
