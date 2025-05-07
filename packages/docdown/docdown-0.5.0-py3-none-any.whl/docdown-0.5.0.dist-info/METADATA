@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: docdown
+Version: 0.5.0
+Summary: DocDown is a Markdown extension for source code documentation.
+Project-URL: Homepage, https://github.com/livio/DocDown-Python
+Project-URL: Issues, https://github.com/livio/DocDown-Python/issues
+Project-URL: Changelog, https://github.com/livio/DocDown-Python/blob/master/HISTORY.rst
+Author: Justin Michalicek, Jason Emerick, Erin Kirby, A. Lloyd Flanagan, Dave MacNamara
+License-Expression: BSD-3-Clause
+Keywords: docdown,documentation,markdown
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.11
+Requires-Dist: htmlmin2>=0.1.13
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: markdown
+Requires-Dist: pygments>=2.19.1
+Requires-Dist: pystache
+Description-Content-Type: text/x-rst
+
+===============================
+Python DocDown
+===============================
+
+Python DocDown is a suite of extensions for `Python Markdown`_.
+
+.. image:: https://travis-ci.org/livio/DocDown-Python.svg?branch=master
+    :target: https://travis-ci.org/livio/DocDown-Python
+
+
+Documentation
+----------------
+
+Run ``make docs`` to build the HTML documentation for Python DocDown
+
+Credits
+---------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _`Python Markdown`: https://pypi.python.org/pypi/Markdown
