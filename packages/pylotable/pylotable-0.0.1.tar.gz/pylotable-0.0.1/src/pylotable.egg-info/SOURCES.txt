@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+src/pylotable/__init__.py
+src/pylotable.egg-info/PKG-INFO
+src/pylotable.egg-info/SOURCES.txt
+src/pylotable.egg-info/dependency_links.txt
+src/pylotable.egg-info/requires.txt
+src/pylotable.egg-info/top_level.txt
+src/pylotable/ts/ts_coprocessor.py
+src/pylotable/ts/win_ts_coprocessor.py
+test/test_pylotable.py
