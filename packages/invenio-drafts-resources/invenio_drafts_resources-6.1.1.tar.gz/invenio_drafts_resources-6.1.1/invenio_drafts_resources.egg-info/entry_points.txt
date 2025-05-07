@@ -1,0 +1,11 @@
+[invenio_audit_logs.actions]
+record = invenio_drafts_resources.auditlog_actions:record_actions
+
+[invenio_celery.tasks]
+invenio_drafts_resources = invenio_drafts_resources.services.records.tasks
+
+[invenio_db.models]
+invenio_drafts_resources = invenio_drafts_resources.records.models
+
+[invenio_i18n.translations]
+messages = invenio_drafts_resources
