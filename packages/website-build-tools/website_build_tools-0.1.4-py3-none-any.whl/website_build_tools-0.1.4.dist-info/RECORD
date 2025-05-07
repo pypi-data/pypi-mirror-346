@@ -1,0 +1,13 @@
+website_build_tools-0.1.4.dist-info/licenses/LICENSE,sha256=u2GGq5cNiWn6FVWQLc_8rgzXFCCA1yt7qfrEMjLtR8Q,1106
+webtools/__init__.py,sha256=9JVSaTzQZ6SnynBzt16kEs2w_8TL5ZAOuGjzV2_z8QA,30
+webtools/citations.py,sha256=wAqhsnSdaoJWZ_Z5KMoAT7TO1bSpUw_XOfkpt2sF6lE,4329
+webtools/code_markup.py,sha256=dOH16sFcKT9s9Gesvf-Whi0jIgWK_UBRsjfMBMJsyeo,3919
+webtools/html.py,sha256=yXJymv6Q5LD896k3AJti4sjlqg0RSeQ8GeBdanisQ94,1545
+webtools/markup.py,sha256=lMMq1n25pM1qq_IIe6e2e2h9VfRFVgt1Ugk43IYgv5U,17271
+webtools/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+webtools/settings.py,sha256=EBgb8ppiuA7m2zvLH70-4DbF6JueMxLb2D2VpKiX27Q,642
+webtools/tools.py,sha256=y1pNkc5yRy72f0x_s_5RemZugrW0lKs14XpDMn81znI,2166
+website_build_tools-0.1.4.dist-info/METADATA,sha256=yoIEXNL5MlURCv7gn2P4q4crenbkczOmxzfcij90PGs,2567
+website_build_tools-0.1.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+website_build_tools-0.1.4.dist-info/top_level.txt,sha256=jV4uiEQ7e7-BbtlbTSRdG_X5iO9p5kwej33e8ChGcTY,9
+website_build_tools-0.1.4.dist-info/RECORD,,
