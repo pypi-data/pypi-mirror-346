@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: zuu
+Version: 8.5.0
+Summary: Zack's Useful Utilities
+Author-email: ZackaryW <36378555+ZackaryW@users.noreply.github.com>
+License-File: LICENSE
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# zuu
+Zack's Useful Utilities
+
+## Installation
+
+```bash
+pip install zuu
+```
+
+## Structure
+- `api` - for `zu` bridge
+- `main`- persistent utilities 
+
+
+
