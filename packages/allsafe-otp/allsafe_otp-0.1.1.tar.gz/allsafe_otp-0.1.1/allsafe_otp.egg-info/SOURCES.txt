@@ -1,0 +1,10 @@
+README.md
+setup.py
+allsafe-otp/__init__.py
+allsafe-otp/generate_qr.py
+allsafe-otp/totp.py
+allsafe_otp.egg-info/PKG-INFO
+allsafe_otp.egg-info/SOURCES.txt
+allsafe_otp.egg-info/dependency_links.txt
+allsafe_otp.egg-info/requires.txt
+allsafe_otp.egg-info/top_level.txt
