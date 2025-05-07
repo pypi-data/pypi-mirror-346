@@ -1,0 +1,2 @@
+[console_scripts]
+inquiry-mcp-server = inquiry.server:main
