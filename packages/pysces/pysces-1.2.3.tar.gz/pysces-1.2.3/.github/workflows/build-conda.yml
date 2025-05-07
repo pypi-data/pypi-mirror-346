@@ -1,0 +1,59 @@
+name: CI build Anaconda
+
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - released
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-13, macos-latest]
+    name: Build Anaconda packages on ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: (windows) Install rtools MinGW compilers
+        if: matrix.os == 'windows-latest'
+        run: |
+          choco install rtools -y --no-progress --force --version=4.0.0.20220206
+
+      - name: (windows) Add compiler path to PATH
+        if: matrix.os == 'windows-latest'
+        uses: myci-actions/export-env-var-powershell@1
+        with:
+          name: PATH
+          value: c:\rtools40\ucrt64\bin;c:\rtools40\usr\bin;$env:PATH
+
+      - name: Setup miniforge
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          auto-update-conda: true
+          python-version: 3.12
+          channels: conda-forge
+
+      - name: Prepare conda environment
+        shell: bash -el {0}
+        run: |
+          conda install conda-build conda-verify anaconda-client
+          mkdir build_output
+          
+      - name: Build packages for ${{ matrix.os }}
+        shell: bash -el {0}
+        run: conda build --no-anaconda-upload --output-folder ./build_output ./packaging/conda
+      
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build_outputs-${{ matrix.os }}
+          path: ./build_output/*/pysces*.*
+
+      - name: Upload to anaconda.org
+        # to publish when a GitHub Release is created:
+        if: github.event_name == 'release' && github.event.action == 'released'
+        run: anaconda -t ${{ secrets.ANACONDA_TOKEN }} upload -u pysces ./build_output/*/pysces*.*
