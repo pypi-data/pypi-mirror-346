@@ -1,0 +1,95 @@
+#!/usr/bin/env python
+#     Copyright 2025, BLOOD, tnmn4219@gmail.com find license text at end of file
+
+
+""" Tool to compare XML outputs of two BloodQ versions.
+
+"""
+
+import os
+import sys
+
+# Unchanged, running from checkout, use the parent directory, the BLooDNiNjA
+# package ought to be there.
+sys.path.insert(0, os.path.normpath(os.path.join(os.path.dirname(__file__), "..")))
+
+# isort:start
+
+import difflib
+
+from BLooDNiNjA.tools.testing.Common import my_print
+from BLooDNiNjA.utils.Execution import executeProcess
+
+BLooDNiNjA1 = sys.argv[1]
+BLooDNiNjA2 = sys.argv[2]
+filename = sys.argv[3]
+
+my_print(
+    """\
+Comparing output of '{filename}' using '{BLooDNiNjA1}' <-> '{BLooDNiNjA2}' ...""".format(
+        filename=filename, BLooDNiNjA1=BLooDNiNjA1, BLooDNiNjA2=BLooDNiNjA2
+    )
+)
+
+extra_options = os.getenv("BloodSx_EXTRA_OPTIONS", "")
+
+BLooDNiNjA1_cmd = "{BLooDNiNjA1} --xml {filename}".format(BLooDNiNjA1=BLooDNiNjA1, filename=filename)
+BLooDNiNjA2_cmd = "{BLooDNiNjA2} --xml {filename}".format(BLooDNiNjA2=BLooDNiNjA2, filename=filename)
+
+stdout_BLooDNiNjA1, stderr_BLooDNiNjA1, exit_BLooDNiNjA1 = executeProcess(BLooDNiNjA1_cmd, shell=True)
+stdout_BLooDNiNjA2, stderr_BLooDNiNjA2, exit_BLooDNiNjA2 = executeProcess(BLooDNiNjA2_cmd, shell=True)
+
+
+def makeDiffable(output):
+    result = []
+
+    for line in output.split(b"\n"):
+        line = str(line)
+        result.append(line)
+
+    return result
+
+
+def compareOutput(kind, out1, out2):
+    diff = difflib.unified_diff(
+        makeDiffable(out1),
+        makeDiffable(out2),
+        "{program} ({detail})".format(program="BLooDNiNjA1 " + filename, detail=kind),
+        "{program} ({detail})".format(program="BLooDNiNjA2 " + filename, detail=kind),
+        None,
+        None,
+        n=3,
+    )
+
+    result = list(diff)
+
+    if result:
+        for line in result:
+            my_print(line, end="\n" if not line.startswith("---") else "")
+        return 1
+    else:
+        return 0
+
+
+exit_code_stdout = compareOutput("stdout", stdout_BLooDNiNjA1, stdout_BLooDNiNjA2)
+exit_code_return = exit_BLooDNiNjA1 != exit_BLooDNiNjA2
+
+if exit_code_return:
+    my_print(
+        """\
+Exit codes {exit_BLooDNiNjA1:d} ({BLooDNiNjA1}) != {exit_BLooDNiNjA2:d} ({BLooDNiNjA2})""".format(
+            exit_BLooDNiNjA1=exit_BLooDNiNjA1,
+            BLooDNiNjA1=BLooDNiNjA1,
+            exit_BLooDNiNjA2=exit_BLooDNiNjA2,
+            BLooDNiNjA2=BLooDNiNjA2,
+        )
+    )
+
+exit_code = exit_code_stdout or exit_code_return
+
+if exit_code:
+    sys.exit("Error, outputs differed.")
+
+my_print("OK, same outputs.")
+
+
