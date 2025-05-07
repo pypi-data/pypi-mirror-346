@@ -1,0 +1,16 @@
+cloudnet_submit/__init__.py,sha256=eiqK1TNFKQppU4dJO2dfISbQBbJQ5kbu39tZ8-lKCKc,63
+cloudnet_submit/__main__.py,sha256=vBQ82334kX06ImDbFlPFgiBRiLIinwNk3z8Khs6hd74,31
+cloudnet_submit/cfg.py,sha256=ggFRM981GQtebAAijdSBZPhBHAv7FN-WpIP2p3xKNV4,7456
+cloudnet_submit/cloudnet-config-example.toml,sha256=i8JDFEyOPQPGCU8_pKZOgg8akGz5x4A2cpRr3JlaL8k,988
+cloudnet_submit/generate_config.py,sha256=juHXzKGhS1l7uVfzXwwQ2etrHK3vBhohmtlNpKefVwU,586
+cloudnet_submit/main.py,sha256=r8Gls31o0v33GZEoknAFyZrLSCYfMBxFLB7ue58K1Cg,555
+cloudnet_submit/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudnet_submit/submission.py,sha256=IUFPgAWoT9xehpDRusPWoqgIs8ENLLL4an9u3Yg-IDI,5741
+cloudnet_submit/utils.py,sha256=61GmKRaJ-vaM3s-QKaiPP7GTfhWgkH-CZSVa4qsfvDo,4063
+cloudnet_submit/version.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+cloudnet_submit-0.1.1.dist-info/licenses/LICENSE,sha256=pFJQOo-ItUXMRIox0OaeNWy059-HIFns3vqus3uFaig,1089
+cloudnet_submit-0.1.1.dist-info/METADATA,sha256=6jd8oZkw4ev5H1q2nIuU6V1SDnqIBgTnyI5egQvqD30,8848
+cloudnet_submit-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+cloudnet_submit-0.1.1.dist-info/entry_points.txt,sha256=jq49RyE0bzv7ZwLMGn8RhP2Va3-F-Rq0SfD6LMsi5KA,62
+cloudnet_submit-0.1.1.dist-info/top_level.txt,sha256=9EdqaVqs7rDLS8FkABzaMZL4kj3wIElDRI8tmOROZOw,16
+cloudnet_submit-0.1.1.dist-info/RECORD,,
