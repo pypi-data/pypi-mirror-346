@@ -1,0 +1,17 @@
+LICENSE
+NOTICE
+README.md
+pyproject.toml
+setup.py
+KishouScrapeDraw/__init__.py
+KishouScrapeDraw/createpdf.py
+KishouScrapeDraw/drawgraph.py
+KishouScrapeDraw/drowweathersymbol.py
+KishouScrapeDraw/fetchweathermap.py
+KishouScrapeDraw/scraping.py
+KishouScrapeDraw/utils.py
+KishouScrapeDraw.egg-info/PKG-INFO
+KishouScrapeDraw.egg-info/SOURCES.txt
+KishouScrapeDraw.egg-info/dependency_links.txt
+KishouScrapeDraw.egg-info/requires.txt
+KishouScrapeDraw.egg-info/top_level.txt

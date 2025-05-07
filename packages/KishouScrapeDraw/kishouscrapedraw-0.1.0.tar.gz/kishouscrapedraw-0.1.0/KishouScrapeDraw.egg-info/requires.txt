@@ -1,0 +1,10 @@
+matplotlib
+japanize_matplotlib
+pandas
+numpy
+fpdf
+requests
+pdf2image
+opencv-python-headless
+PyPDF2
+qrcode[pil]
