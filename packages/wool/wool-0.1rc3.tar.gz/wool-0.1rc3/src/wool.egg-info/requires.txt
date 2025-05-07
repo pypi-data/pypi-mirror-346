@@ -1,0 +1,10 @@
+annotated-types
+click
+debugpy
+
+[dev]
+pytest
+ruff
+
+[locking]
+wool-locking
