@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "metrics-dash-backend-tools"
+version = "0.1.3"
+description = "Backend tools for the DSACMS OSPO metrics dashboard"
+authors = ["Isaac Milarsky <isaac.milarsky@hhs.cms.gov>"]
+license = "CC0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.32.3"
+pygal = "^3.0.5"
+pandas = "^2.2.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.3.2"
+pytest = "^8.3.4"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
