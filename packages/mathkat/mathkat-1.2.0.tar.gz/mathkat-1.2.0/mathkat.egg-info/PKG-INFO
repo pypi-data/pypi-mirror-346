@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: mathkat
+Version: 1.2.0
+Summary: Una librería de gradientes para Python con impresión bonita en terminal.
+Author: Fernando Leon Franco
+Requires-Python: >=3.10
+Requires-Dist: numpy>=2.0.0
+Requires-Dist: rich>=13.0.0
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

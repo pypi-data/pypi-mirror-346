@@ -1,0 +1,8 @@
+setup.py
+mathkat/__init__.py
+mathkat/main.py
+mathkat.egg-info/PKG-INFO
+mathkat.egg-info/SOURCES.txt
+mathkat.egg-info/dependency_links.txt
+mathkat.egg-info/requires.txt
+mathkat.egg-info/top_level.txt
