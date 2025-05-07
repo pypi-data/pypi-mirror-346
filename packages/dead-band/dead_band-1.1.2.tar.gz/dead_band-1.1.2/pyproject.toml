@@ -1,0 +1,44 @@
+[project]
+name = "dead-band"
+version = "1.1.2"
+description = "Python library for implementing dead band"
+authors = [
+    {name = "glauco.filho",email = "glaucolmf@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9,<4"
+dependencies = [
+    "cython (>=3.0.12,<4.0.0)",
+    "setuptools (>=80.3.1,<81.0.0)"
+]
+
+
+[build-system]
+requires = ["wheel", "setuptools>=80.0.0", "cython>=3.0.12,<4.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.1"
+flake8 = "^7.2.0"
+mypy = "^1.15.0"
+tox = "^4.25.0"
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+coverage = "^7.8.0"
+toml = "^0.10.2"
+matplotlib = "<3.10"
+
+[tool.poetry]
+packages = [
+    { include = "dead_band", from = "src" }
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.poetry.scripts]
+build-cython = "scripts.build_cython:build"
+
+[tool.setuptools.package-data]
+dead_band = ["cython_modules/*.pyx"]
