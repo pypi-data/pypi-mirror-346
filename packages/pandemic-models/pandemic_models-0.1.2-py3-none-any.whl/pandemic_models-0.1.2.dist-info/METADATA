@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: pandemic-models
+Version: 0.1.2
+Summary: 
+Author: Khokhlov Nickolai
+Author-email: hohlovkola@gmail.com
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: geneticalgorithm (>=1.0.2)
+Requires-Dist: matplotlib (>=3.9)
+Requires-Dist: numpy (>=1.26)
+Requires-Dist: pandas (>=2.2)
+Requires-Dist: pyswarm (>=0.6)
+Requires-Dist: scipy (>=1.12)
+Description-Content-Type: text/markdown
+
+
