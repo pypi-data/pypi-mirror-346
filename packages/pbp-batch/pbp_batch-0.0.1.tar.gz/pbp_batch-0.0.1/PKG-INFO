@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: pbp-batch
+Version: 0.0.1
+Summary: Running mbari-pbp library for full deployments
+Author-email: Xavier Mouy <xavier.mouy@whoi.edu>
+License: BSD-3-Clause
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: mbari-pbp==1.6.3
+Requires-Dist: prefect
+Dynamic: license-file

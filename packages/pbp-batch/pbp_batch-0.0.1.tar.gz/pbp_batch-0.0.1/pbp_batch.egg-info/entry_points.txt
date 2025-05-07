@@ -1,0 +1,2 @@
+[console_scripts]
+pbp-batch = pbp_batch.cli:main
