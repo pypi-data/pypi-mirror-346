@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-netsuite
+Version: 0.1.0
+Summary: NetSuite MCP Server
+Home-page: 
+Author: mseep
+Author-email: support@skydeck.ai
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: pydantic
+Requires-Dist: httpx
+Requires-Dist: sqlparse>=0.5.3
+Requires-Dist: timeout-decorator>=0.5.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+
+[![MseeP Badge](https://mseep.net/pr/kkartik14-mcp-netsuite-badge.jpg)](https://mseep.ai/app/kkartik14-mcp-netsuite)
+
+# MCP-Netsuite
+This is an mock MCP server for Oracle Netsuite
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Kkartik14/MCP-Netsuite
+   cd MCP-Netsuite
+   ```
+2. Create a virtual environment with uv
+   ```bash
+   uv venv
+   source .venv/bin/activate
+   ```
+3. Install Dependencies
+    ```bash
+    uv sync
+    ```
+4. Testing the Server
+    ```bash
+    uv run python tests/test_client.py
+    ```
