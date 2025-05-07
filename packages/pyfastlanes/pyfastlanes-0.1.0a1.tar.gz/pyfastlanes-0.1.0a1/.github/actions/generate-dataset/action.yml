@@ -1,0 +1,13 @@
+name: Generate Synthetic Dataset
+description: Generate synthetic data using Makefile target
+
+runs:
+  using: "composite"
+  steps:
+    - name: Ensure make is available
+      run: make --version
+      shell: bash
+
+    - name: Generate synthetic data via Makefile
+      run: make generate_syntethic_data
+      shell: bash
