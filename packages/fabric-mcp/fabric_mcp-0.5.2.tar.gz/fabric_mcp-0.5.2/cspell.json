@@ -1,0 +1,37 @@
+{
+	"words": [
+		"autouse",
+		"caplog",
+		"danielmiessler",
+		"excinfo",
+		"fastmcp",
+		"forcelist",
+		"isort",
+		"levelname",
+		"listmodels",
+		"listpatterns",
+		"liststrategies",
+		"Miessler",
+		"Miessler's",
+		"modelcontextprotocol",
+		"ollama",
+		"pylint",
+		"pyproject",
+		"pyright",
+		"pytest",
+		"restapi",
+		"toupper",
+		"usefixtures",
+		"venv"
+	],
+	"ignorePaths": [
+		".flake8",
+		"uv.lock",
+		"pyproject.toml",
+		"cspell.json",
+		".gitignore",
+		".github/workflows/*.yml",
+		".ruff.toml",
+		".pylintrc"
+	]
+}
