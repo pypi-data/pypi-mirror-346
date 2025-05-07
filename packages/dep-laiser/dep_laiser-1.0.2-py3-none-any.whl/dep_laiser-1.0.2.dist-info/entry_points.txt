@@ -1,0 +1,2 @@
+[console_scripts]
+dep-laiser = dep_laiser.main:extract_skills
