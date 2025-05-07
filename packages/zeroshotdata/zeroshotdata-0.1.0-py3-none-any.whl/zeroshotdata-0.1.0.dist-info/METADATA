@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: zeroshotdata
+Version: 0.1.0
+Summary: Stream zeroshot dataset
+Author: Sheel Taksar
+Author-email: sheel@zeroshotdata.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
