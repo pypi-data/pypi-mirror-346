@@ -1,0 +1,9 @@
+LICENCE.md
+README.md
+pyproject.toml
+src/Operacoes.py
+src/__init__.py
+src/nicolascalclib.egg-info/PKG-INFO
+src/nicolascalclib.egg-info/SOURCES.txt
+src/nicolascalclib.egg-info/dependency_links.txt
+src/nicolascalclib.egg-info/top_level.txt

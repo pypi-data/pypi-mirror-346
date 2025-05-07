@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: nicolascalclib
+Version: 0.1.0
+Summary: Biblioteca de operações matemáticas básicas
+Author-email: Nicolas Botelho <nicolasbotelho2005@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/Nicolas-Botelho/NicolasCalcLib
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENCE.md
+Dynamic: license-file
+
+# Nicolas Calc Lib
+Biblioteca com as Operações de uma Calculadora em Python
+
+## Operações Suportadas
+- soma: Soma
+- subs: Subtração
+- mult: Multiplicação
+- divs: Divisão
+- powX: Potência
+- pow2: Potência de 2
+- raiz: Raiz
+- rzqd: Raiz Quadrada

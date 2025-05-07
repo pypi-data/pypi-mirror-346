@@ -1,0 +1,18 @@
+[project]
+name = "nicolascalclib"
+version = "0.1.0"
+authors = [
+  { name="Nicolas Botelho", email="nicolasbotelho2005@gmail.com" },
+]
+description = "Biblioteca de operações matemáticas básicas"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*", "LICENCE.md"]
+
+[project.urls]
+Homepage = "https://github.com/Nicolas-Botelho/NicolasCalcLib"
