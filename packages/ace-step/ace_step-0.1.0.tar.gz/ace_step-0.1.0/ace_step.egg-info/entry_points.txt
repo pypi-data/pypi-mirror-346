@@ -1,0 +1,2 @@
+[console_scripts]
+acestep = acestep.gui:main
