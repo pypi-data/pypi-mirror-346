@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: kali_driver
+Version: 0.0.0
+Summary: A driver of kali for al-1s project.
+Author-email: stupidfish001 <shovel@hscsec.cn>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: pwntools==4.14.0
+Requires-Dist: docker==7.1.0
