@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+mcko2025from1501/__init__.py
+mcko2025from1501/main.py
+mcko2025from1501.egg-info/PKG-INFO
+mcko2025from1501.egg-info/SOURCES.txt
+mcko2025from1501.egg-info/dependency_links.txt
+mcko2025from1501.egg-info/not-zip-safe
+mcko2025from1501.egg-info/top_level.txt
