@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[project]
+name = "nucdraw"
+version = "0.1.1"
+description = "Draw nucleic acid structures"
+authors = [
+    {name = "Marco Todisco", email = "marco.todisco.92@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "viennarna"
+]
+
+[project.urls]
+Homepage = "https://github.com/mtod92/NucDraw"
