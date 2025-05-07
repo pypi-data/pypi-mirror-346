@@ -1,0 +1,18 @@
+include LICENCE
+include README.md
+include CONTRIBUTING.md
+include requirements.txt
+include pyproject.toml
+
+recursive-include ugropy *.py *.csv
+
+exclude tox.ini
+exclude requirements-dev.txt
+exclude *.svg *.png
+exclude binder.ipynb
+exclude reminder.md
+exclude _build
+
+recursive-exclude dist *
+recursive-exclude tests *
+recursive-exclude docs *

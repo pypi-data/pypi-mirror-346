@@ -1,0 +1,62 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "wheel"]
+
+[tool.black]
+line-length = 79
+target-version = ["py310"]
+
+[tool.pytest.ini_options]
+markers = [
+    # Models markers
+    "unifac: classic UNIFAC model tests",
+    "dortmund: Dortmund UNIFAC model tests",
+    "psrk: predictive SRK model tests",
+    "joback: Joback-Reid contribution model tests",
+    "agani: Abdulelah-Gani contribution model tests",
+    # Tests cases markers
+    "acids: tests cases for acids",
+    "alcohols: tests cases for alcohols",
+    "aldehydes: tests cases for aldehydes",
+    "aromatics: tests cases for aromatics",
+    "complex: tests cases for complex compounds",
+    "epoxides: tests cases for epoxides",
+    "esters: tests cases for esters",
+    "ethers: tests cases for ethers",
+    "halogens: tests cases for halogens",
+    "hydrocarbons: tests cases for hydrocarbons",
+    "unsaturated_hydrocarbons: tests cases for insaturated hydrocarbons",
+    "ketones: tests cases for ketones",
+    "nitrogen: tests cases for nitrogen compounds",
+    "particulars: tests cases for particular compounds",
+    "silicon: tests cases for silicon compounds",
+    "sulfur: tests cases for sulfur compounds",
+]
+
+[project]
+name = "ugropy"
+version = "3.1.0"
+authors = [{name = "Brandolín, Salvador Eduardo", email = "salvadorebrandolin@mi.unc.edu.ar"}]
+license = {text = "The MIT License"}
+readme = "README.md"
+description = "Get UNIFAC functional groups of PubChem compounds or SMILES representation."
+keywords = ["UNIFAC", "functional group", "thermodynamics", "chemical engineering"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering",
+]
+
+urls = {Homepage = "https://github.com/ipqa-research/ugropy"}
+
+dependencies = [
+    "rdkit >= 2023.9.5",
+    "pandas >= 2.0.3",
+    "pubchempy >= 1.0.4",
+    "pint >= 0.22",
+    "pulp >= 2.9.0; sys_platform != 'darwin'",
+    "pulp == 2.9.0; sys_platform == 'darwin'",
+]
