@@ -1,0 +1,10 @@
+app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/main.py,sha256=r2cPr9ZQi-GQounGDYj2itwDkT8yc2hWK_qjIAQvqY0,1421
+app/models.py,sha256=NBGRjED9GoUmtqrr8LkLh4GIs0m37BVhF3OgRHz-Wiw,154
+lib/__init__.py,sha256=kA8uq4Rr4_1HI3O600QcRdn9nCKI5t1uiUaPv_QRRh0,75
+lib/operations.py,sha256=bBxxjegs3UUEjMmjMDCmzdbIAGfZMiYvMgW3yxwC8m4,523
+calculadora_fastapi_paulo_lopes-0.1.6.dist-info/METADATA,sha256=Q7Ib5bmiao9-Rt2sOZZ-G1No5hrUrnM0q-7vFj8aLm8,393
+calculadora_fastapi_paulo_lopes-0.1.6.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+calculadora_fastapi_paulo_lopes-0.1.6.dist-info/entry_points.txt,sha256=jBsuXnctHvDl43Qp5z1FbUQeI5gNmqopZTwm84IPM7g,66
+calculadora_fastapi_paulo_lopes-0.1.6.dist-info/top_level.txt,sha256=vn6540vXZyBNvIy7FkQE4BxpmFb9ZFP-OqFI0P2m3uk,8
+calculadora_fastapi_paulo_lopes-0.1.6.dist-info/RECORD,,
