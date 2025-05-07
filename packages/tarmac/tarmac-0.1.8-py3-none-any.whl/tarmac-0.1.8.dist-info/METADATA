@@ -1,0 +1,77 @@
+Metadata-Version: 2.3
+Name: tarmac
+Version: 0.1.8
+Summary: Reliable deployments, repeatable workflows
+License: The MIT License (MIT)
+         
+         Copyright (c) Merlin Zimmerman
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+         
+         The above copyright notice and this permission notice shall be included in all
+         copies or substantial portions of the Software.
+         
+         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
+Requires-Dist: dotmap>=1.3.30
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: uv>=0.6.10
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# 🛫 Tarmac
+
+**Reliable deployments, repeatable workflows**
+
+Tarmac is a library and command-line tool for running
+repeatable workflows.
+It uses Python scripts combined with a Github-Actions-esque workflow definition
+to execute idempotent workflow runs.
+
+This library is useful for setting up
+and deploying code to production servers.
+You can define your workflow, using custom scripts if needed,
+then simply run `tarmac` every time you want to push out an update.
+
+## Usage
+
+(Recommended) Install the tool using the [uv](https://github.com/astral-sh/uv) package manager:
+
+```bash
+uv tool install tarmac
+```
+
+This will make the tool available as the `tarmac` command in the shell.
+
+### Command options
+
+```bash
+tarmac WORKFLOW [OPTIONS]
+```
+
+| Option | Description |
+|-|-|
+| `-h`, `--help` | Show the command usage and exit. |
+| `--version` | Show the version and exit. |
+| `WORKFLOW` | The name of the workflow (or script if `--script` is given) to run. |
+| `--script` | Run a script directly instead of a workflow. |
+| `-i`, `--input` | Define an input for the workflow. |
+| `--output-format` | Define the output format for the workflow. Default is `colored-text` |
+| `-b`, `--base-path` | Define the base path for the workflow, containing workflows and scripts. Defaults to `TARMAC_BASE_PATH` environment variable or the current directory. |
+| `-o`, `--output-file` | Define the output file for the workflow. Defaults to stdout. |
+
+
+## License
+
+Tarmac is available under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information.
