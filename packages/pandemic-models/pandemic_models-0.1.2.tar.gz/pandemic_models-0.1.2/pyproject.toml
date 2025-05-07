@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "pandemic-models"
+version = "0.1.2"
+description = ""
+authors = ["Khokhlov Nickolai <hohlovkola@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+numpy = ">=1.26"
+scipy = ">=1.12"
+pandas = ">=2.2"
+pyswarm = ">=0.6"
+geneticalgorithm = ">=1.0.2"
+matplotlib = ">=3.9"
+
+[tool.poetry.group.dev.dependencies]
+ruff = ">=0.8"
+black = ">=24.4"
+
+[tool.black]
+line-length = 88
+skip-string-normalization = true
+
+[tool.ruff]
+# Same as Black.
+line-length = 88
+indent-width = 4
+target-version = "py312"
+
+[tool.ruff.lint]
+ignore = ["E741"]
+extend-select = ["Q"]
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "single"
+multiline-quotes = "single"
+
+[tool.ruff.format]
+quote-style = "single"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
