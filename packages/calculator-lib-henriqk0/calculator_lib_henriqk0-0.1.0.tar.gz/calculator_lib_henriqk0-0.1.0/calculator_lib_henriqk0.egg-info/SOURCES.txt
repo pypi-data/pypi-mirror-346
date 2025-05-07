@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+calculator_lib/__init__.py
+calculator_lib/operations.py
+calculator_lib_henriqk0.egg-info/PKG-INFO
+calculator_lib_henriqk0.egg-info/SOURCES.txt
+calculator_lib_henriqk0.egg-info/dependency_links.txt
+calculator_lib_henriqk0.egg-info/top_level.txt

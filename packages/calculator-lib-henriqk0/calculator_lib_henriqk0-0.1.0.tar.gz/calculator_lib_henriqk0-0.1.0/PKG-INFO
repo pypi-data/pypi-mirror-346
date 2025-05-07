@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: calculator-lib-henriqk0
+Version: 0.1.0
+Summary: Biblioteca de operações matemáticas básicas em Python.
+Home-page: https://github.com/henriqk0/calculator-fastapi-lib
+Author: Henrique de Souza Lima
+Author-email: henriquedeslima2811@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+A simple calculator lib
+
+published with:
+
+`python -m pip install build twine wheel`
+
+`python -m build`
+
+`python -m twine upload dist/*`
