@@ -1,0 +1,72 @@
+{
+    "agent_parameters" :
+    {
+        "num_agents" : 100,
+        "new_machines_after_mutation": 25,
+
+        "machine_parameters" :
+        {
+            "behavior" : "selfish",
+            "observed_span" : 300,
+            "observation_type" : "previous_agents_plus_start_time"
+        },
+
+        "human_parameters" :
+        {
+            "model" : "culo",
+            "alpha_j": 0.5,
+            "alpha_zero": 0.5,
+            "beta" : -1.5,
+            "beta_randomness" : 0.1,
+            "remember" : 3
+        },
+
+        "simulation_timesteps" : "${simulator_parameters.simulation_timesteps}",
+        "origins" : "${path_generation_parameters.origins}",
+        "destinations" : "${path_generation_parameters.destinations}",
+        "action_space_size" : "${path_generation_parameters.number_of_paths}",
+        "records_folder" : "${plotter_parameters.records_folder}"
+    },
+
+    "environment_parameters":
+    {
+        "number_of_days" : 1,
+
+        "action_space_size" : "${path_generation_parameters.number_of_paths}"
+    },
+
+    "simulator_parameters":
+    {
+        "network_name" : "csomor",
+        "simulation_timesteps" : 180,
+        "sumo_type" : "sumo",
+
+        "number_of_paths" : "${path_generation_parameters.number_of_paths}",
+        "plots_folder": "${plotter_parameters.plots_folder}",
+        "records_folder" : "${plotter_parameters.records_folder}"
+    },
+        
+    "path_generation_parameters":
+    {
+        "number_of_paths" : 3,
+        "beta" : -3,
+        "weight" : "time",
+        "num_samples" : 100,
+
+        "origins" : "default",
+        "destinations" : "default"
+    }, 
+
+    "plotter_parameters":
+    {
+        "records_folder": "training_records",
+        "plots_folder": "plots",
+
+        "smooth_by" : 50,
+        "phases" : [0, 100],
+        "phase_names" : [
+            "Human learning", 
+            "Mutation - Machine learning"
+        ]
+    }
+}
