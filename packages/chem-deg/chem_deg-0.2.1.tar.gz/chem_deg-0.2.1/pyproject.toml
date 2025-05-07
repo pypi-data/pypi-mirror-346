@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chem-deg"
+version = "0.2.1"
+authors = [
+    { name = "David Kuter" },
+]
+description = "Chemical Degradation Simulation"
+readme = "README.md"
+license = "CC-BY-NC-4.0"
+license-files = ["LICEN[CS]E*"]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.10.1",
+    "networkx>=3.4.2",
+    "pandas>=2.2.3",
+    "rdkit>=2024.9.6",
+    "scipy>=1.15.2",
+    "seaborn>=0.13.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff",
+    "twine",
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q -v --cov=src --cov-report=term-missing"
+testpaths = [
+    "test",
+]
+norecursedirs = [
+    "contrib",
+]
+
+[tool.ruff.lint]
+# Enable the pycodestyle (`E`) and Pyflakes (`F`) rules by default
+select = ["E", "F"]
+
+[tool.ruff]
+# Set maximum line length
+line-length = 100  # Change this number to your preferred length
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+ [tool.setuptools.package-data]
+ "chem_deg" = ["assets/*"]
