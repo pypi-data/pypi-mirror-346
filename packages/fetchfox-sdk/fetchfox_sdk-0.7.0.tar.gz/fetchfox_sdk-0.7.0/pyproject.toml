@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dependencies = [
+    "requests>=2.22.0"
+]
+name = "fetchfox-sdk"
+version = "0.7.0"
+authors = [
+  { name="FetchFox", email="dev@fetchfoxai.com" },
+]
+description = "Python SDK for the FetchFox API."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://fetchfox.ai"
+Documentation = "https://github.com/fetchfox/fetchfox-sdk-python/tree/main/documentation"
+Source = "https://github.com/fetchfox/fetchfox-sdk-python"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.4",
+    "responses>=0.25.6"
+]
