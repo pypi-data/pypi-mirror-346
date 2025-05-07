@@ -1,0 +1,2 @@
+[console_scripts]
+mcp_yiqijian = mcp_yiqijian.main:main
