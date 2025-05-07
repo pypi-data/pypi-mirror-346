@@ -1,0 +1,5 @@
+sentence-transformers
+faiss-cpu
+typer
+pyyaml
+prompt_toolkit
