@@ -1,0 +1,11 @@
+aio-pika>=9.3.0
+apscheduler
+cachetools
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+pytest
+pytest-cov
+pytest-asyncio
