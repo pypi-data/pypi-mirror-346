@@ -1,0 +1,5 @@
+[console_scripts]
+bella-file-memory=client.file_memory_client:main
+bella-github-workflows=client.github_workflow_generator:main
+bella-issues-bot=client.terminal:run_workflow_from_terminal
+
