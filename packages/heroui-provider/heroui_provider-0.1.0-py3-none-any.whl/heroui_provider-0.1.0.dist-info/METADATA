@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: heroui-provider
+Version: 0.1.0
+Summary: Hero UI Provider For Reflex Web Framework.
+Author-email: Adarsh Gourab Mahalik <gourabmahalikadarsh@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.13
+Requires-Dist: reflex>=0.7.9
+Provides-Extra: alert
+Requires-Dist: reflex>=0.7.9; extra == 'alert'
+Provides-Extra: button
+Requires-Dist: reflex>=0.7.9; extra == 'button'
+Provides-Extra: dev
+Requires-Dist: rtoml>=0.9.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# HeroUI Provider For Reflex
+Run `pip install heroui-provider[<components>]`
+I will update the docs later.
