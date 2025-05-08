@@ -1,0 +1,13 @@
+jerkup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jerkup/__main__.py,sha256=O8YwcQojO_MaqcSXxUwxaOdyIOD8VTD-6e5oPxxZHvY,6087
+jerkup/configuration.py,sha256=gcqrqJECv-Duar4iOhWUZ9bUaOyFTtySKepq0Gg0D9Q,861
+jerkup/formatter.py,sha256=vBKgZeJPtEdGE0Vga1fLe75TZJ62Bk-AZuZzinDux1k,767
+jerkup/iso8601.py,sha256=xevrk4h7R5-EExhjXR0g9qeILVf2V8MrDFN-O8ivvqM,794
+jerkup/messages.py,sha256=CieCBUuY2ZOoqmmSSzkKsZ4p6d1mke5PVAIuM3_SImk,492
+jerkup/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jerkup/session.py,sha256=94jiNiTtuw8krKekMwL8unnhiZluUh8E_ODQxWohODc,621
+jerkup/uploader.py,sha256=L6jaO3tpUs42AsyBvMTN7z1faKZ4Ek888PtefMeo9Y0,2695
+jerkup-2.0.0.dist-info/METADATA,sha256=bNc_C_qn1GgdVhUCmNLwP04dGB-RY3lm_7Q5wwJmkFM,1304
+jerkup-2.0.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+jerkup-2.0.0.dist-info/entry_points.txt,sha256=g-aZvs0YUf6B3DMG2QXwwIMadOoA1iWxECfVspqpyp8,47
+jerkup-2.0.0.dist-info/RECORD,,
