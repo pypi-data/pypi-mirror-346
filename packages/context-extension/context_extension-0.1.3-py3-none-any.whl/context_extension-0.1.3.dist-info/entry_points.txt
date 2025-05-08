@@ -1,0 +1,2 @@
+[console_scripts]
+extend-context = context_extension.interpolate_embeddings:main
