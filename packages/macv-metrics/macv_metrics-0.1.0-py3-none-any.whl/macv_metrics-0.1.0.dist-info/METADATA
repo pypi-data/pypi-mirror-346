@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: macv-metrics
+Version: 0.1.0
+Summary: Shared Prometheus metrics for MACV CV modules
+Author-email: MacV AI <krithik@macv.ai>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: prometheus-client>=0.14.1
+Dynamic: license-file
+
+# macv-metrics
+
+Shared Prometheus metrics for MACV CV modules.
+
