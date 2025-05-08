@@ -1,0 +1,11 @@
+holocal/__init__.py,sha256=mqFDatIxkunSkgSZH-8-xUzfWFvoa65N0UZUI2kMkwE,3785
+holocal/__main__.py,sha256=bY4j24WQF7PqzGgfckRiiFXyaTuzg_BJX26_n4gpkko,880
+holocal/errors.py,sha256=TP2GciYALrBODEaP5AQLeMSk8o8_YQKkKoIbq1_qWkA,245
+holocal/event.py,sha256=VwMuuObAd2_Q0Rl8kphdymAHarinj78mREAvmyO_4pA,4032
+holocal/parser.py,sha256=61c3cM_-pEDEUl-b-Mfv-kqoafzQzPxsVM8XxyRCyQ0,5361
+holocal/schedule.py,sha256=HX5QcMNOVslHSlPBqsyPEMFLBqkhWUc_VzmNnX8fa38,1360
+holocal/site.py,sha256=FtGTuZrS3rpgGFWxwVzURHnjntD_0wI_fJ8Y_cpxRys,822
+holocal-0.3.2.dist-info/LICENSE,sha256=ZqXX6byHGiE7BO8tWOyd07fVJoddBUIGs-fK0euhrkA,1091
+holocal-0.3.2.dist-info/METADATA,sha256=4h0PPzskTuu3ezE5vNUnSDHsjjUrtxdKmMVf19q43ek,3714
+holocal-0.3.2.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+holocal-0.3.2.dist-info/RECORD,,
