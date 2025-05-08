@@ -1,0 +1,11 @@
+sdswrapper/__init__.py,sha256=xPa6FjHENOI2-wFWREd_Zoxnj21Dt4iYpbtwAEEsdR4,134
+sdswrapper/models.py,sha256=unlqn4Xt2zde4NA63UgzDFkHC_xCw5JAWlMTONBqIT0,22639
+sdswrapper/ordinarykriginginterface.py,sha256=fypORJYltSpy9Y9Sy4o3ogYz92uPKvOsfSnc-RGEPVE,2185
+sdswrapper/parameters.py,sha256=jUIWZvzRut207Ys8T0pfm07B71oo_chdJ8XRJTZvLfI,1311
+sdswrapper/sampler.py,sha256=-eZis7zwyIiiCNvlW5uWov6ktPin9aqB2Pttjg0YvDI,9144
+sdswrapper/wrapper.py,sha256=9y9-xUDpPV91gWiJ4nEhtR2xp_QsytTNzjoVZcLg3lM,15430
+sdswrapper/utils/utils.py,sha256=dDFMDpW_YnM1MFzf-EN-D4xSBturxu2bWD3_qFh3FUQ,1568
+sdswrapper-0.2.8.dist-info/METADATA,sha256=NwuBA7c8sRC7j_46Jka58g81EJ2LuScLFq6VMUQAyLM,1043
+sdswrapper-0.2.8.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+sdswrapper-0.2.8.dist-info/top_level.txt,sha256=MFPWR2SwtUbAip1FZpgoOv4mUTIPg1tu7IoNX_v1dkY,11
+sdswrapper-0.2.8.dist-info/RECORD,,
