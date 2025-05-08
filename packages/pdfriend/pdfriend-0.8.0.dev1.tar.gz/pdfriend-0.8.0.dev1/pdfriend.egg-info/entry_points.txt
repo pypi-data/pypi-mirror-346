@@ -1,0 +1,2 @@
+[console_scripts]
+pdfriend = pdfriend.main:main
