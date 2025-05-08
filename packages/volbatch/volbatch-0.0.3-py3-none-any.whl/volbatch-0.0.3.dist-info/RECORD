@@ -1,0 +1,11 @@
+volbatch/__init__.py,sha256=k5tJXhBQJ4l9fKHJ76K5w98zBHoYvNk9r-UNH6eQ2-k,21
+volbatch/data.py,sha256=m4E-WaKg_6zuWiAFT0bcO8Z5rOWcP8KSVtbHkpx3S9M,6296
+volbatch/transform.py,sha256=eacMre-RwGSsjpUTwp1BTkSR1BA8tcHyajdo_grjr-k,3898
+volbatch/utils.py,sha256=j_JYpVNt6L_MlvQg-xmpKqFiKELxtBaawC2QOkfdaf8,7330
+volbatch/vol_params.py,sha256=8-lYgSgBvRta-2tjf1lRaHkma27nrJO31mdLKwfqZRI,21380
+volbatch/volbatch.py,sha256=F-Qe4uYIskvFKchQ8fE3-D28mLa9J3yNb0WbPzvDDHc,5411
+volbatch-0.0.3.dist-info/licenses/LICENSE,sha256=lk8g9lHsRWXnmOXouRFZX1xTi0vlAicp8wS824c_esE,1089
+volbatch-0.0.3.dist-info/METADATA,sha256=9FzbRB9wOR3T76rX-2mKuJRtpMA3isCTK7eOVi9TG7M,684
+volbatch-0.0.3.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+volbatch-0.0.3.dist-info/top_level.txt,sha256=3Fu2bLmzFHpx11UCmkcGzI5Nc4Awp24D2V7vijheXgo,9
+volbatch-0.0.3.dist-info/RECORD,,
