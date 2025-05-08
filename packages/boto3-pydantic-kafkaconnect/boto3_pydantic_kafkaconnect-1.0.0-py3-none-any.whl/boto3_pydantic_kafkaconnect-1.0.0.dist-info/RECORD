@@ -1,0 +1,7 @@
+boto3_pydantic_kafkaconnect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_kafkaconnect/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_kafkaconnect/kafkaconnect_classes.py,sha256=GOZTkVAp35lBcCsG1Ac_Ka0ZGs8qJd1nIMyTQ4cxzno,17263
+boto3_pydantic_kafkaconnect/kafkaconnect_constants.py,sha256=T6xMLx8KSL_pQ3eO5Z6zAIA6IZvfVFUbg_tByJhrmfI,8258
+boto3_pydantic_kafkaconnect-1.0.0.dist-info/METADATA,sha256=kEm-3L2rtSmW66VgopxcLFDaeGnR3I5aZxI88ZvXmH0,1425
+boto3_pydantic_kafkaconnect-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_kafkaconnect-1.0.0.dist-info/RECORD,,
