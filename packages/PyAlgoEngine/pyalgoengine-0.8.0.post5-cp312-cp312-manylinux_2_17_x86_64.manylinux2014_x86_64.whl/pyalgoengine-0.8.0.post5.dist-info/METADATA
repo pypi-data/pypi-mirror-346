@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: PyAlgoEngine
+Version: 0.8.0.post5
+Summary: Basic algo engine
+Home-page: https://github.com/BolunHan/PyAlgoEngine
+Author: Bolun.Han
+Author-email: Han Bolun <Bolun.Han@outlook.com>
+License: MIT
+Project-URL: Homepage, https://github.com/BolunHan/PyAlgoEngine
+Project-URL: Repository, https://github.com/BolunHan/PyAlgoEngine
+Project-URL: Issues, https://github.com/BolunHan/PyAlgoEngine/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: exchange_calendars
+Requires-Dist: PyEventEngine
+Requires-Dist: cython
+Provides-Extra: webapps
+Requires-Dist: flask; extra == "webapps"
+Requires-Dist: waitress; extra == "webapps"
+Requires-Dist: bokeh; extra == "webapps"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# PyAlgoEngine
+python algo trading engine
