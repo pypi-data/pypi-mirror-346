@@ -1,0 +1,166 @@
+Metadata-Version: 2.1
+Name: codaicli
+Version: 1.0.0
+Summary: AI-powered CLI assistant for code projects
+Home-page: https://codai.app/cli
+Author: Codai
+Author-email: codaicli.wrist796@passmail.net
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich>=10.0.0
+Requires-Dist: click>=8.0.0
+Requires-Dist: python-dotenv>=0.19.0
+Provides-Extra: openai
+Requires-Dist: openai>=1.0.0; extra == "openai"
+Provides-Extra: gemini
+Requires-Dist: google-generativeai>=0.1.0; extra == "gemini"
+Provides-Extra: claude
+Requires-Dist: anthropic>=0.5.0; extra == "claude"
+Provides-Extra: all
+Requires-Dist: openai>=1.0.0; extra == "all"
+Requires-Dist: google-generativeai>=0.1.0; extra == "all"
+Requires-Dist: anthropic>=0.5.0; extra == "all"
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Requires-Dist: pytest-cov>=4.0.0; extra == "test"
+Requires-Dist: pytest-mock>=3.10.0; extra == "test"
+
+# Codaicli
+
+[![PyPI version](https://badge.fury.io/py/CodaiCLI.svg)](https://badge.fury.io/py/CodaiCLI)
+[![Python Versions](https://img.shields.io/pypi/pyversions/CodaiCLI.svg)](https://pypi.org/project/CodaiCLI/)
+[![Tests](https://github.com/chafficui/CodaiCLI/actions/workflows/test.yml/badge.svg)](https://github.com/chafficui/CodaiCLI/actions/workflows/test.yml)
+[![codecov](https://codecov.io/gh/chafficui/CodaiCLI/branch/main/graph/badge.svg)](https://codecov.io/gh/chafficui/CodaiCLI)
+
+An AI-powered CLI assistant for managing and editing software projects using natural language.
+
+## Features
+
+- 🤖 Multi-provider AI support:
+  - OpenAI
+  - Google Gemini
+  - Anthropic Claude
+- ⚙️ Interactive configuration system
+- 🔒 Command confirmation for safety
+- 📁 Smart file analysis
+- 🎯 Natural language project management
+
+## Installation
+
+```bash
+# Basic installation
+pip install codaicli
+
+# Install with all dependencies
+pip install "codaicli[all]"
+```
+
+## Quick Start
+
+1. Navigate to your project directory:
+```bash
+cd your-project
+```
+
+2. Run Codaicli:
+```bash
+codaicli
+```
+
+3. Start interacting with your project using natural language!
+
+## Configuration
+
+Run the configuration wizard:
+```bash
+codaicli configure
+```
+
+### API Keys
+
+You'll need API keys for the AI providers you want to use:
+
+- [OpenAI API Key](https://platform.openai.com/api-keys)
+- [Google AI Studio API Key](https://makersuite.google.com/app/apikey)
+- [Anthropic API Key](https://console.anthropic.com/settings/keys)
+
+### Interactive Configuration
+
+The configuration wizard will guide you through:
+1. Setting up API keys
+2. Selecting default AI provider
+3. Choosing models for each provider
+4. Managing configuration profiles
+
+## Commands
+
+Within Codaicli:
+- `use openai/gemini/claude` - Switch AI provider
+- `help` - Show help information
+- `clear` - Clear screen
+- `exit` (or `quit`, `q`) - Exit CodaiCLI
+
+## Ignored Files
+
+Create a `.codaiignore` file to specify files and directories to ignore:
+```
+# Ignore specific files
+secrets.txt
+*.env
+
+# Ignore directories
+node_modules/
+venv/
+```
+
+## Troubleshooting
+
+### Common Issues
+
+1. **API Key Errors**
+   - Verify your API keys are correctly configured
+   - Check provider status pages:
+     - [OpenAI Status](https://status.openai.com)
+     - [Google AI Status](https://status.cloud.google.com)
+     - [Anthropic Status](https://status.anthropic.com)
+
+2. **Model Not Found**
+   - Ensure you have access to the selected model
+   - Check model availability in your region
+
+3. **Installation Issues**
+   - Ensure Python 3.8+ is installed
+   - Try installing in a virtual environment
+
+4. **Permission Errors**
+   - Check file permissions
+   - Run with appropriate privileges
+
+## Security Note
+
+- All changes and command executions require user confirmation
+- API keys are stored locally in your user directory
+- Use `.codaiignore` to protect sensitive files
+- No sensitive data is collected or transmitted
+
+## Dependencies
+
+- Python 3.7+
+- OpenAI Python SDK
+- Google Generative AI SDK
+- Anthropic Python SDK
+- Rich (for terminal formatting)
+- Typer (for CLI interface)
+- PyYAML (for configuration)
+
+## License
+
+MIT License - See LICENSE file for details
