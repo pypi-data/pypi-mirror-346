@@ -1,0 +1,815 @@
+[
+    {
+        "type": "header",
+        "text": {
+            "type": "plain_text",
+            "text": "This is a 1st level heading"
+        }
+    },
+    {
+        "type": "divider"
+    },
+    {
+        "type": "rich_text",
+        "elements": [
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "Okay, here's a demo output to test my markdown capabilities.\n\n"
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_list",
+                "style": "ordered",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ordered List:",
+                                "style": {
+                                    "bold": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_list",
+                "style": "ordered",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "First item"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Second item"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 1
+            },
+            {
+                "type": "rich_text_list",
+                "style": "ordered",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Nested item 1"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Nested item 2"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 2
+            },
+            {
+                "type": "rich_text_section",
+                "elements": []
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Bullet inside ordered list"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Another bullet"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 3
+            },
+            {
+                "type": "rich_text_section",
+                "elements": []
+            },
+            {
+                "type": "rich_text_list",
+                "style": "ordered",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Third item"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 1
+            },
+            {
+                "type": "rich_text_section",
+                "elements": []
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Bulleted List:"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "First bullet"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Second bullet"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 1
+            },
+            {
+                "type": "rich_text_section",
+                "elements": []
+            },
+            {
+                "type": "rich_text_list",
+                "style": "ordered",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Numbered list inside bullet"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Another numbered item"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 2
+            },
+            {
+                "type": "rich_text_section",
+                "elements": []
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Third bullet"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 1
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Nested Lists (Mixed):"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Level 1"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 1
+            },
+            {
+                "type": "rich_text_section",
+                "elements": []
+            },
+            {
+                "type": "rich_text_list",
+                "style": "ordered",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Level 2 (Numbered)"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 2
+            },
+            {
+                "type": "rich_text_section",
+                "elements": []
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Level 3 (Bullet)"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 3
+            },
+            {
+                "type": "rich_text_section",
+                "elements": []
+            },
+            {
+                "type": "rich_text_list",
+                "style": "ordered",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Level 4 (Numbered)"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 4
+            },
+            {
+                "type": "rich_text_section",
+                "elements": []
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Level 5 (Bullet)\n- Level 6 (Bullet)"
+                            }
+                        ]
+                    }
+                ],
+                "indent": 5
+            },
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "\n\nCode:\n\n\n",
+                        "style": {
+                            "italic": true
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": "Here is an example of inline "
+                    },
+                    {
+                        "type": "text",
+                        "text": "code",
+                        "style": {
+                            "code": true
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": "."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "header",
+        "text": {
+            "type": "plain_text",
+            "text": "Code block (second level heading)"
+        }
+    },
+    {
+        "type": "divider"
+    },
+    {
+        "type": "rich_text",
+        "elements": [
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "Code Block:\n\n",
+                        "style": {
+                            "italic": true
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_preformatted",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "def hello_world():\n    print(\"Hello, world!\")\n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "header",
+        "text": {
+            "type": "plain_text",
+            "text": "This is another heading (3rd level)"
+        }
+    },
+    {
+        "type": "rich_text",
+        "elements": [
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "Bold, Italics, Strikethrough, and Underline:\n\n",
+                        "style": {
+                            "italic": true
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is bold text.",
+                                "style": {
+                                    "bold": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is italicized text.",
+                                "style": {
+                                    "italic": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is strikethrough text.",
+                                "style": {
+                                    "strike": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "<u>This is underlined text.</u>"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "\n\nLinks:\n\n",
+                        "style": {
+                            "italic": true
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "text": "Mistune Website",
+                                "url": "https://mistune.lepture.com/en/latest/plugins.html"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "link",
+                                "text": "Slack Formatting",
+                                "url": "https://api.slack.com/reference/surfaces/formatting"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "\n\nBlockquotes:\n\n",
+                        "style": {
+                            "italic": true
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_quote",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "This is a blockquote. It can span multiple lines and is used to highlight a section of text."
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "\n"
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_quote",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "Nested blockquote"
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_quote",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "Even deeper!"
+                    }
+                ],
+                "border": 1
+            },
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "\n\n\nMentions:",
+                        "style": {
+                            "bold": true,
+                            "italic": true
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": " (4th level)\n\n\n",
+                        "style": {
+                            "bold": true
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": "Hey "
+                    },
+                    {
+                        "type": "user",
+                        "user_id": "UC123123"
+                    },
+                    {
+                        "type": "text",
+                        "text": ", check this out!\n\n\n"
+                    },
+                    {
+                        "type": "text",
+                        "text": "Preformatted text:\n\n",
+                        "style": {
+                            "italic": true
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_preformatted",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "This is a preformatted text block.\nIt preserves whitespace and newlines.\nUseful for displaying code or configuration.\n"
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "\n\nHorizontal Rule:\n\n",
+                        "style": {
+                            "italic": true
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "divider"
+    },
+    {
+        "type": "rich_text",
+        "elements": [
+            {
+                "type": "rich_text_section",
+                "elements": []
+            },
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "\nTables (Note: Tables are not directly supported in Slack markdown, but here's how you might format it with spacing):\n\n\n",
+                        "style": {
+                            "italic": true
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": "| Column 1 | Column 2 | Column 3 |\n| -------- | -------- | -------- |\n| Row 1    | Value 1  | Data 1   |\n| Row 2    | Value 2  | Data 2   |\n\n\n"
+                    },
+                    {
+                        "type": "text",
+                        "text": "Emojis:\n",
+                        "style": {
+                            "italic": true
+                        }
+                    },
+                    {
+                        "type": "emoji",
+                        "name": "smile"
+                    },
+                    {
+                        "type": "text",
+                        "text": " "
+                    },
+                    {
+                        "type": "emoji",
+                        "name": "rocket"
+                    },
+                    {
+                        "type": "text",
+                        "text": " "
+                    },
+                    {
+                        "type": "emoji",
+                        "name": "tada"
+                    },
+                    {
+                        "type": "text",
+                        "text": "\n\n\n\nTask Lists:",
+                        "style": {
+                            "bold": true,
+                            "italic": true
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": " (5-th level)\n\n",
+                        "style": {
+                            "bold": true
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\u2705 "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Completed task"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\u274c "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Incomplete task"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "\n\nCombination:\n\n\n",
+                        "style": {
+                            "italic": true
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": "This is bold and italicized.\n\n\n",
+                        "style": {
+                            "bold": true,
+                            "italic": true
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": "More code examples:\n\n",
+                        "style": {
+                            "italic": true
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_preformatted",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "function anotherExample() {\n  return \"JavaScript code\";\n}\n"
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "\n"
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_preformatted",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "SELECT * FROM stuff WHERE thing = TRUE;\n"
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_section",
+                "elements": [
+                    {
+                        "type": "text",
+                        "text": "\n\nFinal bullet to make sure it's really long!\n\n",
+                        "style": {
+                            "italic": true
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "rich_text_list",
+                "style": "bullet",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Last one!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
