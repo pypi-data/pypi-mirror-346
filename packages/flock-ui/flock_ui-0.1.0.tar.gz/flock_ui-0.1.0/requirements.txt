@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+jinja2
+python-multipart
+# flock-core (install separately or via editable install if developing)
+# PyYAML (likely a flock-core dependency)
+# python-dotenv (if you want to load .env automatically without FastAPI's built-in, usually not needed)
