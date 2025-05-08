@@ -1,0 +1,10 @@
+mistune_slack/__init__.py,sha256=1gqhrFwl7qMCzQa_bNTA2zBU93-KfHQX3XhGwfCMBgU,380
+mistune_slack/plugin.py,sha256=x74a2QUmKyEkcJHx61LILsyPJ9A5YDTKlI6j023Wcu0,2019
+mistune_slack/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mistune_slack/renderer.py,sha256=i9GZjp1MjM595wYeuM8OBcJbn7edFsZI8d6E4aJ6bF8,18775
+mistune_slack/util.py,sha256=Z7Ezru1MsFniQYnN96pSoBvXB7Q1UzVABu4t9f_Uexg,557
+mistune_slack-0.1.3.dist-info/METADATA,sha256=fycPJKX9KgQP7QnLdy-U5cqax4oeBBw6XhidzHdhSKY,15792
+mistune_slack-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mistune_slack-0.1.3.dist-info/entry_points.txt,sha256=OCa-jHksk3TXMUoMHjx32R0KhmdamMNpDFbTYABSlWs,37
+mistune_slack-0.1.3.dist-info/licenses/LICENSE,sha256=KewEi4OewGkCXKaXU4RCSstOvSa5rphL-m760z3yXS0,1067
+mistune_slack-0.1.3.dist-info/RECORD,,
