@@ -1,0 +1,9 @@
+VegasAfterglow/__init__.py,sha256=cDgSU9kUdWjZxv8hooq-DA3Sqk0c9PFwGs6KBeP1Shw,261
+VegasAfterglow/runner.py,sha256=1ltmhTGWNR89i0eO70Hvhg5IYC56lIgBaaw05xNzpTc,6170
+VegasAfterglow/sampler.py,sha256=Y_ZKkOCG1-ywe1z9Ej_gDDLxhWYk_yI4PMftz8Z6Z1Y,6881
+VegasAfterglow/types.py,sha256=ogA7bObWTYO7qqjP34cvtDYUOlNKkccMJHVUVZNJV-k,878
+VegasAfterglow/VegasAfterglowC.cp310-win_amd64.pyd,sha256=dhCbEjSCxe0QBVvI088pKaBnNGRxB5nMkfbhS7Pflyg,264704
+vegasafterglow-0.1.3.dist-info/METADATA,sha256=dIg-tBCH7cAcxo5SmJ2hETPHiVzvHUkMZz2MA-50qPs,19525
+vegasafterglow-0.1.3.dist-info/WHEEL,sha256=s6R_ywaDPPQta2yEZovx7NyzLw9gO311Rvo17Uuqp0k,106
+vegasafterglow-0.1.3.dist-info/licenses/LICENSE,sha256=E9hH71ChRM0ALSU1hLncJXXDCSml9fWILfiBKpuibyk,1572
+vegasafterglow-0.1.3.dist-info/RECORD,,
