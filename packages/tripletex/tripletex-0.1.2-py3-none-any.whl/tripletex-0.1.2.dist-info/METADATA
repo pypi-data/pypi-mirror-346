@@ -1,0 +1,49 @@
+Metadata-Version: 2.3
+Name: tripletex
+Version: 0.1.2
+Summary: An efficient and user-friendly Python library crafted specifically for seamless integration with Tripletex's accounting and financial management APIs.
+License: Proprietary
+Keywords: crud,api,client,rest,tripletex,accounting,financial,management
+Author: Leikaab
+Author-email: nordavindltd@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: crudclient (==0.6.1)
+Project-URL: Bug Tracker, https://github.com/Leikaab/tripletex/issues
+Project-URL: Documentation, https://github.com/Leikaab/tripletex#readme
+Project-URL: Homepage, https://github.com/Leikaab/tripletex
+Project-URL: Repository, https://github.com/Leikaab/tripletex
+Description-Content-Type: text/markdown
+
+# tripletex
+
+An efficient and user-friendly Python library crafted specifically for seamless integration with [Tripletex](https://www.tripletex.no)'s accounting and financial management APIs.
+
+## Features
+
+- Easy authentication with the Tripletex API
+- Access to invoices, customers, projects, and more
+- Clean and extensible design for integration into your own systems
+
+## Installation
+
+```bash
+pip install tripletex
+```
+
+
+## Usage
+```python
+from tripletex import TripletexClient
+
+client = TripletexClient(token="your_token_here")
+customers = client.customers.list()
+```
+
+
