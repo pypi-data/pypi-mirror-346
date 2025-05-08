@@ -1,0 +1,12 @@
+clyngor>=0.3.18
+pytest>=4.4.0
+biseau>=0.0.16
+cobra
+clyngor-with-clingo
+clingo-lpx
+pyyaml
+menetools
+padmet
+
+[tests]
+pytest
