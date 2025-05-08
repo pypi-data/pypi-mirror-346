@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: make4db-api
+Version: 0.1.2
+Summary: API for providers of make4db tool
+Author-email: Paresh Adhia <padhia+github@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# make4db-api
+
+API for providers of make4db tool
+
+See [make4db](https://github.com/padhia/make4db) for more information
