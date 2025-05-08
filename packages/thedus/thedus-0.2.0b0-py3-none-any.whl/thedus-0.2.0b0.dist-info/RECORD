@@ -1,0 +1,14 @@
+thedus/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thedus/base_migration.py,sha256=-bX6qCLo1SyBLG7r887NEV5OVa_Ob-U3K5jL_C6jOBc,315
+thedus/env_manager.py,sha256=3fJ1gl5yJZOcEZY8ZRa4SyrMW8psbpqZcIk2T466pCM,1091
+thedus/migration_file_manager.py,sha256=XTE1keL2yetjMk5S7fVaGlieRSFn4r9DnexlywzbwJQ,1262
+thedus/run.py,sha256=fkeokMKOqYid_gpNU7uW-WsElrhd_r94Wfv2ZCNKmi8,6038
+thedus/cmd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thedus/cmd/abstract_cmd.py,sha256=98ow-ifwZu9A4LCaBC2OPb6os9ON4xwedNm_XPzIq5M,111
+thedus/cmd/clickhouse_cmd.py,sha256=aO3wAz6l4WNgQEVKoHcp-j9aNPw9ghruCRxYysy61yQ,11187
+thedus-0.2.0b0.dist-info/licenses/LICENSE,sha256=Xh4kw-YGxuEcgLztqNi9V5biTQiu0KZo0x-_YtzXjiA,1071
+thedus-0.2.0b0.dist-info/METADATA,sha256=tfA3ePukHAcasrQKKyFGejPvnaxg6Xn-ZO9sbIKuc8U,2366
+thedus-0.2.0b0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+thedus-0.2.0b0.dist-info/entry_points.txt,sha256=sY-983PXYa4ChWRDVOgX4WMVQTi3THiuZYaawzzA7k8,42
+thedus-0.2.0b0.dist-info/top_level.txt,sha256=ZGAsYxUC4wfGDGabLVyrt_LDUd3PyKZ9jIhd8r3AjfY,7
+thedus-0.2.0b0.dist-info/RECORD,,
