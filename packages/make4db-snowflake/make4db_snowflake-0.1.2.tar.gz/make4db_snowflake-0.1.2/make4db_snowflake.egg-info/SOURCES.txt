@@ -1,0 +1,8 @@
+README.md
+make4db_snowflake.py
+pyproject.toml
+make4db_snowflake.egg-info/PKG-INFO
+make4db_snowflake.egg-info/SOURCES.txt
+make4db_snowflake.egg-info/dependency_links.txt
+make4db_snowflake.egg-info/requires.txt
+make4db_snowflake.egg-info/top_level.txt
