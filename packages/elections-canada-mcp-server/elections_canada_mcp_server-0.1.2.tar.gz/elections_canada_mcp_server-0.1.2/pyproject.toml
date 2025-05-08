@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elections_canada_mcp_server"
+version = "0.1.2"
+description = "MCP server for Elections Canada data"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [
+    {name = "Rohan Sampath"}
+]
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "fastapi==0.110.0",
+    "uvicorn>=0.21.1",
+    "pydantic>=1.10.7",
+    "python-dotenv>=1.0.0",
+    "pandas>=2.0.0",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ThreeFortyThree-Canada/elections-canada-mcp-server"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "pytest",
+    "mypy",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+include = '\.pyi?$'
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203"
+exclude = [".git", "__pycache__", "build", "dist"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+
+[tool.setuptools]
+py-modules = []
+packages = ["elections_canada_mcp"]
+
+[project.scripts]
+elections_canada_server = "elections_canada_mcp.server:main"

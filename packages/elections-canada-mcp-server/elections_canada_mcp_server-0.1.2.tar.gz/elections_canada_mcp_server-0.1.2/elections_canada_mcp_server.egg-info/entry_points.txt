@@ -1,0 +1,2 @@
+[console_scripts]
+elections_canada_server = elections_canada_mcp.server:main

@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+datafiles/2021_riding_vote_redistributed_ElectionsCanada.json
+elections_canada_mcp/__init__.py
+elections_canada_mcp/constants.py
+elections_canada_mcp/server.py
+elections_canada_mcp/utils.py
+elections_canada_mcp_server.egg-info/PKG-INFO
+elections_canada_mcp_server.egg-info/SOURCES.txt
+elections_canada_mcp_server.egg-info/dependency_links.txt
+elections_canada_mcp_server.egg-info/entry_points.txt
+elections_canada_mcp_server.egg-info/requires.txt
+elections_canada_mcp_server.egg-info/top_level.txt
+test/test_script.py
