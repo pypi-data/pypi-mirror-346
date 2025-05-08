@@ -1,0 +1,7 @@
+fastcore
+pandas
+envyaml
+python_dotenv
+black
+
+[dev]
