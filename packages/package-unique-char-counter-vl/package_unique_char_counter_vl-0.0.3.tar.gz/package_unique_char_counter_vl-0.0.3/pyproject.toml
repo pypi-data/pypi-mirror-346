@@ -1,0 +1,28 @@
+[project]
+name = "package_unique_char_counter_vl"
+version = "0.0.3"
+authors = [
+  { name="Valeriia", email="valerialisovec606@gmail.com" },
+]
+description = "A package for counting unique characters in text"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+
+[tool.hatch.build.targets.wheel]
+
+[tool.hatch.build.targets.wheel.sources]
+"src/symbol_counter" = "symbol_counter"
+
+[tool.hatch.build]
+include = [
+    "README.md",
+    "LICENSE",
+    "src/symbol_counter/**.py"
+]
+[project.scripts]
+symbol-counter = "symbol_counter.counter:main"

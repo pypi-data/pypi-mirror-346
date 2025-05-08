@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/package_unique_char_counter_vl.egg-info/PKG-INFO
+src/package_unique_char_counter_vl.egg-info/SOURCES.txt
+src/package_unique_char_counter_vl.egg-info/dependency_links.txt
+src/package_unique_char_counter_vl.egg-info/entry_points.txt
+src/package_unique_char_counter_vl.egg-info/top_level.txt
+src/symbol_counter/__init__.py
+src/symbol_counter/cli.py
+src/symbol_counter/counter.py
+tests/test_counter.py
