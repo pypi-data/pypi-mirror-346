@@ -1,0 +1,6 @@
+mcp_server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcp_server/server.py,sha256=qDX9DRbDwasHJtyYB4bMyFePkM0D6DHXamXTWmncMpQ,4089
+test_mcp_server-0.1.0.dist-info/METADATA,sha256=ziFmkfpdur5EPmWaP-XDnghVLM-yAxxAWoTs_oVt260,184
+test_mcp_server-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+test_mcp_server-0.1.0.dist-info/top_level.txt,sha256=R49ZBwHkJvJ-AJ8o9wy6MuCs0rvZpyCEuvdwhI4PpHs,11
+test_mcp_server-0.1.0.dist-info/RECORD,,
