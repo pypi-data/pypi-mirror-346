@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: llm_bhasa
+Version: 0.1
+Summary: LLM trainer
+Home-page: https://github.com/pankajr141/llm_bhasa
+Author: Pankaj Rawat
+Author-email: pankajr141@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torch==2.6.0
+Requires-Dist: torchaudio==2.6.0
+Requires-Dist: torchvision==0.21.0
+Requires-Dist: matplotlib==3.10.1
+Requires-Dist: tiktoken==0.9.0
+Requires-Dist: huggingface-hub==0.30.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# llm Large Language Model
+
+This repository contains code and resources related to Large Language Models (LLMs).

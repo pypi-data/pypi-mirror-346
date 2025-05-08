@@ -1,0 +1,17 @@
+llm_bhasa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_bhasa/harmony/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_bhasa/harmony/attention.py,sha256=AkWS7fX62Ym26T-vu5iH1kBsSGsKOtAAyrkmlyKFZVI,4610
+llm_bhasa/harmony/config.py,sha256=VmxXTIRs4zXLYpmBs3MIZJ-1uJ94HPpJTBDhpdVUwEY,684
+llm_bhasa/harmony/data.py,sha256=qexyA8FWv-Quw8-Y6A5_F6UdPI5DJ58df-KuVRHfFU4,4759
+llm_bhasa/harmony/dataset.py,sha256=GW5qnyr09XpeQLVfk0k7WbAohx42dFQQ3kgGEthr37U,5655
+llm_bhasa/harmony/generator.py,sha256=5pmvnT6_2V-KJyoa-gBKvrwY82NhZ6vwvhgYewTVB3Q,4184
+llm_bhasa/harmony/model.py,sha256=Y6LDQjf9uaPq7cobtiLDwPcNW1lgEcKHsWGAii8VvBI,11933
+llm_bhasa/harmony/tokenizer.py,sha256=r0umOSPRAHBtiHxqSoL4dKigYwq0-uQQ2Pid-jdWnSo,5247
+llm_bhasa/harmony/training.py,sha256=8f09_4ytXgfaj7Uj7ah4KGsSvyhx8jM8rr674byjzVQ,12514
+llm_bhasa/harmony/tasks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_bhasa/harmony/tasks/classify.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_bhasa/harmony/tasks/instruction_finetune.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_bhasa-0.1.dist-info/METADATA,sha256=xeXQWT_ZsHGhcLthQXzXVi5Mha1LDp8ru7lsHNZPNi8,929
+llm_bhasa-0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+llm_bhasa-0.1.dist-info/top_level.txt,sha256=epQLwsSNhOzU3RMiuheHLlNH_u335OVEbgL6ctDDa-s,10
+llm_bhasa-0.1.dist-info/RECORD,,
