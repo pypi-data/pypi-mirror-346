@@ -1,0 +1,2 @@
+[console_scripts]
+usfm2dict = usfm2dict.cli:main
