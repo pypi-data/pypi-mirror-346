@@ -1,0 +1,10 @@
+google_news_api/__init__.py,sha256=GtJJiX0CfmDU2AOJlY9dUa-UqpwHB8Qnqf5uYP3qlcQ,778
+google_news_api/client.py,sha256=9OueY3sY3OoWxjuIOq0I_6lqMHlkNvRTkfVgnPDLx90,31928
+google_news_api/config.py,sha256=n3SE4G1hjsZPWAjid_CdV1lC2_tH8cHYg6yaQScpT70,3303
+google_news_api/exceptions.py,sha256=jE-T99M7IBYsol6kvlZ0DIC57gAqLHw6XFWBRF5Zrt8,3245
+google_news_api/logging.py,sha256=oX4x-LWM4IqRJGAJN0jukWykmkWMPRH125ok8yBFqEk,4181
+google_news_api/utils.py,sha256=u9769mIFofkhpXu81DxwX6so5obby8omEOUnSXFgqEc,10182
+google_news_api-0.0.6.dist-info/LICENSE,sha256=zEyADmsw6IvgeBLFhdke2OfTf1gR-4ewtJcK0eXF0TE,1068
+google_news_api-0.0.6.dist-info/METADATA,sha256=duvCqFIR1vqeUCQy7dFLjQmKHJvLhEN7yqnM4-IZFO0,10797
+google_news_api-0.0.6.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+google_news_api-0.0.6.dist-info/RECORD,,
