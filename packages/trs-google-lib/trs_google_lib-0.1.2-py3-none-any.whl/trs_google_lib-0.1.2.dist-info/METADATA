@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: trs_google_lib
+Version: 0.1.2
+Summary: Асинхронная библиотека для перевода через Google с поддержкой прокси
+Author: Ivan Khomich
+Requires-Dist: httpx
+Requires-Dist: loguru
