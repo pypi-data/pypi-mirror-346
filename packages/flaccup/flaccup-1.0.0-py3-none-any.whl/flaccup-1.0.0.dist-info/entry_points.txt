@@ -1,0 +1,3 @@
+[console_scripts]
+flaccup = flaccup.cli:main
+flaccup.scheduler = flaccup.scheduler:main_cli

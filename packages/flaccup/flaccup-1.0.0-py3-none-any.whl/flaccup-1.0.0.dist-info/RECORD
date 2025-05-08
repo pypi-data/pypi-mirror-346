@@ -1,0 +1,11 @@
+flaccup/__init__.py,sha256=YT1Dm98eBviCSfBQw2BJwF-nE-4ayPQUPzkoUzIs6-s,45
+flaccup/cli.py,sha256=Khn1-HaiOCCiJlUEuJgbla9U6qCaN5vvPML-R1YVeTQ,1052
+flaccup/core.py,sha256=vP7nPOl306wUoAjQmqHaJ_k_rHFtcelglcFsNr2vnN8,20807
+flaccup/scheduler.py,sha256=InbXTLLJVqdBRxRYxHJX0iNu03NFyaVo6P7RaJO5l0U,12672
+flaccup/wizard.py,sha256=zptPUzSAbzpAGRJBrbI7Gv2pL7UB-izdoocLQtU046w,5562
+flaccup-1.0.0.dist-info/licenses/LICENSE,sha256=EX_kBC52Vbf4AQJPiQcz6PFu9bAqPv-6h7U0V8fllME,1071
+flaccup-1.0.0.dist-info/METADATA,sha256=1lqjyrGjJKnyXgAwbLaE4yfiwgBZR5Bf8wEaPp6ER2Q,6623
+flaccup-1.0.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+flaccup-1.0.0.dist-info/entry_points.txt,sha256=qbOe4VIpcBnTOLSK0Gx86Twb1oSIo12SM0IWlhQa53U,92
+flaccup-1.0.0.dist-info/top_level.txt,sha256=MHLJ0u8jBoSSGsanYNBvOAQU52YA_OloUXn3sumkVR4,8
+flaccup-1.0.0.dist-info/RECORD,,
