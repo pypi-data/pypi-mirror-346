@@ -1,0 +1,2 @@
+[console_scripts]
+aippt-mcp = aippt_mcp.server:main
