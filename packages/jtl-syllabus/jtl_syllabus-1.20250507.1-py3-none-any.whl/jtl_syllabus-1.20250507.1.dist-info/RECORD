@@ -1,0 +1,11 @@
+syllabus/__init__.py,sha256=od6s8b3ei0nZ6N0drtWYn6LMmR-ZyrOEQDIlgip_2so,1380
+syllabus/models.py,sha256=wVNI9PRwfe9jX5kkl2zYDI7FBYJaHsblON_i0bYomaE,7412
+syllabus/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+syllabus/sync.py,sha256=TngyBU2iu9GcSPMUakr8Wgn6CVAQiO3zMHkh8NGhQo4,13339
+syllabus/util.py,sha256=hxOx4kxZGqNM7Xkc-OSHoofvZqNDkGCknm_tNvEX8QY,3368
+syllabus/where.py,sha256=OvxuVg26bPJaghZS3ggWthMLm5eAoVq3iQr7SAKzcik,1272
+syllabus/cli/main.py,sha256=MXuYt6ALiMula-2ZCl2ERTkOLjbHgd5hujS9BH3BIrQ,5125
+jtl_syllabus-1.20250507.1.dist-info/METADATA,sha256=Ld2rMxONynduQbRaV-BRUfwuK9-01-9Fn6Swl3i_hgE,311
+jtl_syllabus-1.20250507.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jtl_syllabus-1.20250507.1.dist-info/entry_points.txt,sha256=4JJ2fvDsXB3IV8DtfwagLcX-KLG1f8sVpy3VBQoRPv8,46
+jtl_syllabus-1.20250507.1.dist-info/RECORD,,
