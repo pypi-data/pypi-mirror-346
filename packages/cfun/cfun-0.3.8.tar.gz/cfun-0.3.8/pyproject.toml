@@ -1,0 +1,54 @@
+[project]
+name = "cfun"
+version = "0.3.8"
+description = "my function library"
+readme = "README.md"
+authors = [
+    { name = "zoushucai", email = "zoushucai@users.noreply.github.com" }
+]
+requires-python = ">=3.10"
+#尽可能的使用较低版本， 因为自用，在导入别人的包的时候，可能会有版本冲突
+dependencies = [
+    "char-similar-z>=0.2.0",
+    "pandas>=1.5.0",
+    "pyarrow>=17.0.0",
+    "requests>=2.0.0",
+    "scikit-learn>=1.1.0",
+    "pillow>= 10.0.0",
+    "opencv-python>=4.5.0",
+    "jsonpath>=0.6.0",
+]
+
+[dependency-groups]
+dev = [
+    "mkdocs>=1.6.1",
+    "mkdocs-autorefs>=1.4.1",
+    "mkdocs-material>=9.6.12",
+    "mkdocstrings[python]>=0.29.1",
+    "pytest>=8.3.5",
+    "ruff>=0.11.8",
+]
+
+dev2 = [
+    "ultralytics>=8.3.126",
+    "pycorrector>=1.1.2",
+    "cfundata>=0.2.1",
+    "ddddocr>=1.5.6",
+]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+
+
+[tool.ruff.lint]
+extend-select = ["B"]  
+
+[project.scripts]
+testing-demo = "cfun:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
