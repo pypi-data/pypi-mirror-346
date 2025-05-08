@@ -1,0 +1,15 @@
+ricgraph/__init__.py,sha256=YvoQ-AvzYm4WF3DbKJss6B3zKtl_r7veFyFzoGDu20c,2089
+ricgraph/ricgraph.py,sha256=Yl--jU_bDPQnSvlSkL5sdboA0CDlXsMZLPxanHkqG5s,16737
+ricgraph/ricgraph_cache.py,sha256=_QPmXA1MBsBpe81fE5MP-LtULnE3jTb5pwo7_OAHVMo,6422
+ricgraph/ricgraph_constants.py,sha256=tZss7Lgd4oWjuRWT0qrrJXMoZTM8PQoVrNMyQ1cOUZ0,6824
+ricgraph/ricgraph_file.py,sha256=jKYTED8gVmmf5PoVNVmMZTJWhwkpph4G5wrg9oElMig,6376
+ricgraph/ricgraph_graphdb.py,sha256=cbxj8wiLmJQDZELUGfGekwdMAaTaQT4bQUzXKF8QFq0,87797
+ricgraph/ricgraph_harvest.py,sha256=Ca2LBpHLmI_qKUoFerOw-zlaza7o6G7lZ-uV6pHkwJM,6977
+ricgraph/ricgraph_researchinfo.py,sha256=verMVM2bQXBhQHcb0o7N5b-673qgUcygorJBsz963iE,10824
+ricgraph/ricgraph_restapi.py,sha256=jKQFMpvFIczWIyaFJ87gD9AvsPDxVH9bR38o-Ake2jk,3105
+ricgraph/ricgraph_utils.py,sha256=7KWOeE5EKqaY8rrYqmZnZEBiewJk49_6sakS-XywpRY,13769
+ricgraph-2.12.dist-info/licenses/LICENSE,sha256=xeZHhFTbyvBlrmT2rfeycVutctkv52-3gY7qeOf9_MI,1080
+ricgraph-2.12.dist-info/METADATA,sha256=qiDt9rJv69sXKknIu-Q_KjSzAmQbCxmhPBcxF_ElCd4,12488
+ricgraph-2.12.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+ricgraph-2.12.dist-info/top_level.txt,sha256=-S2CIwSfau-lubWEReCtTrqtB9ZmxP9D80rSNZMI2JQ,9
+ricgraph-2.12.dist-info/RECORD,,
