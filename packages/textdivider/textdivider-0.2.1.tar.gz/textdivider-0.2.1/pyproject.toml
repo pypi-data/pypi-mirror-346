@@ -1,0 +1,13 @@
+[project]
+name = "textdivider"
+version = "0.2.1"
+description = "Split long text into parts without breaking words"
+authors = [{ name = "Jean Caiza", email = "caiza58@gmail.com" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["text", "split", "word", "chunk", "string", "divide"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
