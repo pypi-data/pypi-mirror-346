@@ -1,0 +1,7 @@
+README.md
+hello.py
+pyproject.toml
+unsub.egg-info/PKG-INFO
+unsub.egg-info/SOURCES.txt
+unsub.egg-info/dependency_links.txt
+unsub.egg-info/top_level.txt
