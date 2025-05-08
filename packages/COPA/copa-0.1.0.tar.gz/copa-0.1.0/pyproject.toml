@@ -1,0 +1,47 @@
+[project]
+name = "COPA"
+version = "0.1.0"
+description = "Configure/Orchestrate/Provision Applications"
+readme = "README.md"
+authors = [
+  { name="Ian Edwards", email="ian@myacorn.com" },
+]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+  # your runtime deps
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target-version = ['py36', 'py37', 'py38']
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | (.*)/migrations
+    | dist
+  )/
+)
+'''
+[tool.commitizen]
+tag_format = "v$major.$minor.$patch"
