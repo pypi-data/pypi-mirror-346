@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+alfred/__init__.py
+alfred/core.py
+alfredynhoacg_dev.egg-info/PKG-INFO
+alfredynhoacg_dev.egg-info/SOURCES.txt
+alfredynhoacg_dev.egg-info/dependency_links.txt
+alfredynhoacg_dev.egg-info/top_level.txt
+test/__init__.py
+test/test_core.py
