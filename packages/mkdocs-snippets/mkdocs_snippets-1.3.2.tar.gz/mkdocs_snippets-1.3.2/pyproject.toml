@@ -1,0 +1,44 @@
+[project]
+name = "mkdocs-snippets"
+version = "1.3.2"
+authors = [
+    { name="CyberOtter", email="contact@betonquest.org" },
+]
+description = "Snippets for MkDocs"
+readme = "README.md"
+requires-python = ">=3.8"
+
+license = "MIT"
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Information Technology',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3 :: Only',
+]
+dynamic = ["dependencies", "optional-dependencies"]
+
+[project.urls]
+"Homepage" = "https://github.com/BetonQuest/mkdocs-snippets"
+"Bug Tracker" = "https://github.com/BetonQuest/mkdocs-snippets/issues"
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.in"] }
+
+[pytest]
+testpaths = ["tests"]
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+pythonpath = "src"
+
+[project.entry-points."mkdocs.plugins"]
+snippets = "mkdocs_snippets.plugin:Snippets"
+
+[tool.pip-tools]
+generate-hashes = true
