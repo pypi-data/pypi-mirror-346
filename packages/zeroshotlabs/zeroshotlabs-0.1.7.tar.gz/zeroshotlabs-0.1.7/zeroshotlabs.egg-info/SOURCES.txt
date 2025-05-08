@@ -1,0 +1,9 @@
+README.md
+setup.py
+zeroshotlabs/__init__.py
+zeroshotlabs/main.py
+zeroshotlabs.egg-info/PKG-INFO
+zeroshotlabs.egg-info/SOURCES.txt
+zeroshotlabs.egg-info/dependency_links.txt
+zeroshotlabs.egg-info/requires.txt
+zeroshotlabs.egg-info/top_level.txt
