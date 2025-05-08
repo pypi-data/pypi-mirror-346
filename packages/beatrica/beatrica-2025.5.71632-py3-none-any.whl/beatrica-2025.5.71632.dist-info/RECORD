@@ -1,0 +1,11 @@
+beatrica/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beatrica/beatrica.py,sha256=fLfQEEDv9qYCF6imKBj7sFlenBz6GAljf2hBNoI4yys,8486
+beatrica/prompts.py,sha256=Ekuv0FYHnhUG3-Vlj4Ctt34Q6rwqwimHEGaWjdGLD_0,1641
+beatrica-2025.5.71632.dist-info/licenses/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_beatrica.py,sha256=i6FiV4951S0fTrlNiQrVextgEcBU1LuiwUHf5H7pp68,1074
+beatrica-2025.5.71632.dist-info/METADATA,sha256=8RfbDvnoPOKN0LE9pjAHFUb5_0N_oXmQ2TPl7EQ2EkQ,15202
+beatrica-2025.5.71632.dist-info/WHEEL,sha256=lTU6B6eIfYoiQJTZNc-fyaR6BpL6ehTzU3xGYxn2n8k,91
+beatrica-2025.5.71632.dist-info/entry_points.txt,sha256=odQdyL4Rw2Ggb_HJSfeFSBcU02dn5TneJFMSP_6uHao,52
+beatrica-2025.5.71632.dist-info/top_level.txt,sha256=Ntqda1H0cWPoLZ-QtWwJcUW0ymEoGz-eGRIuWuO6pl4,15
+beatrica-2025.5.71632.dist-info/RECORD,,
