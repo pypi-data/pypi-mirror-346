@@ -1,0 +1,2 @@
+[console_scripts]
+tinno-mcp-git = tinno_mcp_git:main
