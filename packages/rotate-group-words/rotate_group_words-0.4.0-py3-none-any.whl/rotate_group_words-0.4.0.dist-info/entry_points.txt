@@ -1,0 +1,4 @@
+[console_scripts]
+main=rotate_group_words.rotate_group_words:main
+rgw=main:main
+
