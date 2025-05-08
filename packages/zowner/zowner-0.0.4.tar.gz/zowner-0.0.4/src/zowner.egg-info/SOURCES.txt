@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/Zowner/__init__.py
+src/zowner/__init__.py
+src/zowner/zownertest.py
+src/zowner.egg-info/PKG-INFO
+src/zowner.egg-info/SOURCES.txt
+src/zowner.egg-info/dependency_links.txt
+src/zowner.egg-info/top_level.txt
