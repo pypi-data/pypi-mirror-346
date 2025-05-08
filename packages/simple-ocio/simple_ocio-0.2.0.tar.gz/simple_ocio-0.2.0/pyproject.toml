@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-ocio"
+version = "0.2.0"
+authors = [{ name = "NCJ", email = "me@ncj.wiki" }]
+description = "Simple NumPy-first OpenColorIO Tone-mapping Toolkit"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.22",
+    "opencolorio>=2"
+]
+
+[project.urls]
+Source = "https://github.com/iamNCJ/simple-ocio"
+
+[tool.setuptools.package-data]
+"simple_ocio.ocio_data" = ["**/*"]
