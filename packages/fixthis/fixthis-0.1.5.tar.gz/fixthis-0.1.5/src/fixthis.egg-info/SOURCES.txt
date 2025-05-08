@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/fixthis/__init__.py
+src/fixthis/core.py
+src/fixthis_internal/__init__.py
+src/fixthis_internal/interpreter.py
+src/fixthis_internal/name_utils.py
