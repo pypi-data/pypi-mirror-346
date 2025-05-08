@@ -1,0 +1,28 @@
+[project]
+name = "char-similar-z"
+version = "0.2.0"
+description = "计算两个字符的相似度"
+readme = "README.md"
+authors = [
+    { name = "zoushucai", email = "zoushucai@users.noreply.github.com" }
+]
+
+
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5"
+]
+[project.scripts]
+char-similar-z = "char_similar_z:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]          #将测试发现路径设置为tests目录。
+python_files = "test_*.py"    #指定测试文件应以test_开头。
+python_functions = "test_*"   #指定测试函数应以test_开头。
