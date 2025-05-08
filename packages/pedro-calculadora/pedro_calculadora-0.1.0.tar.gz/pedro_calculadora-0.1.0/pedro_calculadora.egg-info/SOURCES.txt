@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+calculadora/__init__.py
+pedro_calculadora.egg-info/PKG-INFO
+pedro_calculadora.egg-info/SOURCES.txt
+pedro_calculadora.egg-info/dependency_links.txt
+pedro_calculadora.egg-info/top_level.txt
