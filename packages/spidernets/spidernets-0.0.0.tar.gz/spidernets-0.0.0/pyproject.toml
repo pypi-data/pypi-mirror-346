@@ -1,0 +1,43 @@
+[project]
+name = "spidernets"
+version = "0.0.0"
+authors = [{ name = "NeverLocal" }]
+description = "Data structures for spider nets."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.23",
+    "euler>=1.0.2.post0",
+    "typing-validation>=1.2.12",
+]
+license = "LGPL-3.0"
+license-files = ["LICENSE"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.10",
+    "Natural Language :: English",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Repository = "https://github.com/neverlocal/spidernets"
+Issues = "https://github.com/neverlocal/spidernets/issues"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[tool.black]
+target-version = ["py313"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
