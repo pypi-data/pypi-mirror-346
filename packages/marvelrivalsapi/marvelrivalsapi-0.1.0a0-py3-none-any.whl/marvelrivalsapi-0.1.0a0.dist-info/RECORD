@@ -1,0 +1,9 @@
+marvelrivalsapi/__init__.py,sha256=lLurp9tkZFCJpIBeF-Mpn7KuviRr06IAcSP8mebVolM,1256
+marvelrivalsapi/async_client.py,sha256=RnTet2t0QZleUkI96zvDMPWYAGOM7eN3G8n8wcaCZkY,12942
+marvelrivalsapi/client.py,sha256=3cL8WZGUqv87l1iTMSl8Tl8KjtW9Dph7r2OpzQhGPJ0,11100
+marvelrivalsapi/models.py,sha256=cdhpkGZhOlnu3EuMKLYue1Q3_QOdNVi_rz61BK7lz24,23464
+marvelrivalsapi/utility.py,sha256=LQxy3lgvIOeHvabGSIR54pNgfwl5JHT7lNsAbHn7QNE,6097
+marvelrivalsapi-0.1.0a0.dist-info/LICENSE,sha256=KPcZPh9Y-i9_aPRNYCbSxUPcD80E7ZtFfamdh1T4BxE,1085
+marvelrivalsapi-0.1.0a0.dist-info/METADATA,sha256=okiunfmv_xytW2HrWDiE5qqhzynLUlTx7eyxuyV-yqk,2757
+marvelrivalsapi-0.1.0a0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+marvelrivalsapi-0.1.0a0.dist-info/RECORD,,
