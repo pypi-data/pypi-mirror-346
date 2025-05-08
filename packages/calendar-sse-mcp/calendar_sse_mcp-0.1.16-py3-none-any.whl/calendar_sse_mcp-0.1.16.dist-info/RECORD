@@ -1,0 +1,13 @@
+calendar_sse_mcp/__init__.py,sha256=vgdDf-Vjc5CI8Xiqk3JSgSwDUnsTUKoVL-jWwAYVSI0,291
+calendar_sse_mcp/__main__.py,sha256=FSNJEs5JNiBDf-NqPOM5snkIOoT5trqZhTnjJMHdDy8,31774
+calendar_sse_mcp/calendar_store.py,sha256=Hiyhi3U5TcAaeL6qqiyORi1dq2zkXBfkaz0DVsmXd-0,19931
+calendar_sse_mcp/date_utils.py,sha256=kZULvHJNzq8id2dGDT0upWpttBtHhH2ZQseVN9jMOA8,3361
+calendar_sse_mcp/launch_agent.py,sha256=ruUExeaXGyk_obJAwbjzOhs8sjW7HhtggTgB9rJOa-I,12264
+calendar_sse_mcp/models.py,sha256=nbRDRlwOF8TrbQYhEXbokQqNxAnqHVHneCffaVOJ6Ow,4821
+calendar_sse_mcp/server.py,sha256=BrNKMYC8kydK1aMgzPxCl6nwsBtH7I-fnWeHqEB9ZFU,29821
+calendar_sse_mcp-0.1.16.dist-info/licenses/LICENSE,sha256=2K-_taG3FcM4LewVc_CBFQRju86U3StHUVClny-YsmM,1066
+calendar_sse_mcp-0.1.16.dist-info/METADATA,sha256=5BR79ljZnQmJ8nMjYWTnC4WIQPbCa7QXiNZ0KFPwVeY,12518
+calendar_sse_mcp-0.1.16.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+calendar_sse_mcp-0.1.16.dist-info/entry_points.txt,sha256=MA9ddkT-Hq9uiXRzZ-2jxlufHgEtNlgU2G6IbfmvJBs,68
+calendar_sse_mcp-0.1.16.dist-info/top_level.txt,sha256=LRXD6lfzjWaxcQoGU1_tbBogm6NIKpKuyfTSVF3SC1M,17
+calendar_sse_mcp-0.1.16.dist-info/RECORD,,
