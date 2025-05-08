@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+anv.exe
+setup.py
+anv.egg-info/PKG-INFO
+anv.egg-info/SOURCES.txt
+anv.egg-info/dependency_links.txt
+anv.egg-info/top_level.txt
