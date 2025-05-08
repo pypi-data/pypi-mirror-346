@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+chatosaurus_embedder.egg-info/PKG-INFO
+chatosaurus_embedder.egg-info/SOURCES.txt
+chatosaurus_embedder.egg-info/dependency_links.txt
+chatosaurus_embedder.egg-info/entry_points.txt
+chatosaurus_embedder.egg-info/top_level.txt
+embed_providers/__init__.py
+embed_providers/base_embedder.py
+embed_providers/factory.py
+embed_providers/openai_embedder.py
+utils/__init__.py
+utils/api_communication.py
+utils/file_loader.py
+utils/json_saver.py
