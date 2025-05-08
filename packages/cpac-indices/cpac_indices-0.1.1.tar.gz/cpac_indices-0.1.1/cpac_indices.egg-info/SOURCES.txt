@@ -1,0 +1,10 @@
+COPYING
+COPYING.LESSER
+README.md
+pyproject.toml
+sort_nodes.py
+cpac_indices.egg-info/PKG-INFO
+cpac_indices.egg-info/SOURCES.txt
+cpac_indices.egg-info/dependency_links.txt
+cpac_indices.egg-info/entry_points.txt
+cpac_indices.egg-info/top_level.txt

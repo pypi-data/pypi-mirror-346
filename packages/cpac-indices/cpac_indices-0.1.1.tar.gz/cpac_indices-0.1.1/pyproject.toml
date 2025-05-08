@@ -1,0 +1,83 @@
+# Copyright (C) 2025  C-PAC Developers
+
+# This file is part of C-PAC.
+
+# C-PAC is free software: you can redistribute it and/or modify it under
+# the terms of the GNU Lesser General Public License as published by the
+# Free Software Foundation, either version 3 of the License, or (at your
+# option) any later version.
+
+# C-PAC is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public
+# License for more details.
+
+# You should have received a copy of the GNU Lesser General Public
+# License along with C-PAC. If not, see <https://www.gnu.org/licenses/>.
+[project]
+name = "cpac_indices"
+version = "0.1.1"
+description = "Sort C-PAC working directory subdirectories by index."
+authors = [
+    { name = "Child Mind Institute C-PAC Team", email = "CMI_CPAC@childmind.org"},
+    { name = "Jon Cluce", email = "jon.clucas@childmind.org" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+keywords = ["C-PAC", "indices", "sorting"]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS"
+]
+dependencies = [
+]
+requires-python = ">=3.10"
+
+[project.scripts]
+cpac-indices = "sort_nodes:main"
+
+[dependency-groups]
+lint = [
+    "mypy>=1.15.0",
+    "pre-commit>=4.2.0",
+    "ruff>=0.11.8",
+]
+packaging = [
+    "build>=1.2.2.post1",
+    "pip>=25.1.1",
+    "twine>=6.1.0",
+]
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.format]
+line-ending = "auto"  # proposed setting to add next release: line-ending = "lf"
+
+[tool.ruff.lint]
+extend-select = ["A", "B904", "C4", "D", "EM", "F541", "G", "I", "ICN", "LOG007", "NPY", "PL", "RET", "RSE", "RUF", "Q", "T20", "TRY002", "TRY201", "TRY400", "TRY401", "UP032", "W"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-sort-within-sections = true
+known-first-party = ["CPAC"]
+no-lines-before = ["collab", "other-first-party", "local-folder"]
+order-by-type = false
+section-order = ["future", "standard-library", "third-party", "collab", "other-first-party", "first-party", "local-folder"]
+
+[tool.ruff.lint.isort.sections]
+"collab" = ["nibabel", "nilearn", "nipype", "PyBASC", "pybids", "scipy", "spython"]
+"other-first-party" = ["flowdump", "indi_aws", "indi_schedulers", "PyPEER"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.pylint]
+max-args = 10
+max-branches = 50
+max-returns = 12
+max-statements = 100
