@@ -1,0 +1,2 @@
+[console_scripts]
+obs-dev = obs_dev.__init__:obs_dev

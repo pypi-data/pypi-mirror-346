@@ -1,0 +1,16 @@
+obs_dev/__init__.py,sha256=OXtJPy1Q0qbxbbHkAG5QQTSG_MzgGsJbuoEAevGH9mE,228
+obs_dev/consts.py,sha256=fTkZzbXB_eA_XlR-_Vi-zPMX5sTM5aokTS0jb6GS7Lk,305
+obs_dev/cmds/plugin.py,sha256=1GLadl0Ya4rT__J2kTByW-0z-Z9TzvPvog8IpVqhX8g,11352
+obs_dev/cmds/vault.py,sha256=9QEGEmbl91T5oRb9AWSbGYObwyqWvAhpMMI3q606YRg,4209
+obs_dev/data/manifest_json.py,sha256=ybi6_rHx80dUSOUuTD1xZm17yvprDZI4OjIofEvaGM4,228
+obs_dev/data/package_json.py,sha256=aT6I_NZjf5wsavJ-M6mggKZ6AXtCIjJvTR9MUi9i9R8,594
+obs_dev/data/plugin-template.zip,sha256=OZItIqnkgaTWfDODBFDXeqaw0Yghv01h5GqD0xjNwIg,2088
+obs_dev/data/sample_code.ts,sha256=pMPhEAkvXAhNv2x_5-7J0jJJfM0hF_RyK1z2WaZgR2c,3876
+obs_dev/data/vault.zip,sha256=yNUZib6ggTe00XKmT-tay8QjSObu5j6kY9qkJz4d4Eg,973
+obs_dev/utils/__init__.py,sha256=A3tL05g1E-s6wx3qi6WkVnmytsmaofh4Hw6cXbW4ssQ,17643
+obs_dev/utils/plugin.py,sha256=Qy9iIz3LV0sWdvUwKfp6r6VqrCtUrBjY3vo9cUxQNO8,2968
+obs_dev-0.1.0.dist-info/METADATA,sha256=r5XZQso0GIj2kB5P8_j3aDcT1Dddvdf1qnRCeJVp4N0,3431
+obs_dev-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+obs_dev-0.1.0.dist-info/entry_points.txt,sha256=n5goV7bUankC1qxJKiqVTsB2HOJUrgXV3fDgS56_Oog,53
+obs_dev-0.1.0.dist-info/licenses/LICENSE,sha256=iASY0MiZDdNzCJkvvAlzw_DrI-R-xf3SjeIx1deS9Pw,1065
+obs_dev-0.1.0.dist-info/RECORD,,
