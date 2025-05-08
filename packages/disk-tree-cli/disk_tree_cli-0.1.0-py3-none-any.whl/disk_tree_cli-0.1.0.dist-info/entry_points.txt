@@ -1,0 +1,2 @@
+[console_scripts]
+disk-tree = disk_tree:main
