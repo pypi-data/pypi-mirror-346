@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: git-made-simple
+Version: 0.1.0
+Summary: A clean, intuitive desktop application to manage Git repositories using Python and PySide6.
+Author-email: potterheadk <kulkarninachiket3699@gmail.com>
+Project-URL: Homepage, https://github.com/potterheadk/git-made-simple
+Project-URL: Repository, https://github.com/potterheadk/git-made-simple
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: Desktop Environment
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: PySide6>=6.0.0
+Requires-Dist: GitPython>=3.1.0

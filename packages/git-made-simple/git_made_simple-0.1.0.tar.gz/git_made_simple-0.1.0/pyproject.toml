@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-made-simple"
+version = "0.1.0" # You can change this as you release new versions
+authors = [
+  { name="potterheadk", email="kulkarninachiket3699@gmail.com" }, # Ensure this is your correct info
+]
+
+
+description = "A clean, intuitive desktop application to manage Git repositories using Python and PySide6."
+readme = "README.md" # Assumes README.md is in the same directory as pyproject.toml
+license = { file="LICENSE" } # Assumes LICENSE is in the same directory
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Desktop Environment"
+]
+
+
+dependencies = [
+    "PySide6>=6.0.0",
+    "GitPython>=3.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/potterheadk/git-made-simple" # From your previous README
+Repository = "https://github.com/potterheadk/git-made-simple"
+# Issues = "https://github.com/potterheadk/git-made-simple/issues" # Optional
+
+# This creates a command-line executable named 'git-made-simple'
+# It will call the main() function in the git_made_simple_app.main module
+[project.scripts]
+git-made-simple = "git_made_simple_app.main:main"
+
+# Setuptools configuration
+[tool.setuptools.packages.find]
+# Look for packages in the current directory (project root)
+where = ["."]
+# Include the main package and any sub-packages found within it
+include = ["git_made_simple_app*"]
+namespaces = false
