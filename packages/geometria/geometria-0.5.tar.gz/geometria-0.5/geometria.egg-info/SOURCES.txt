@@ -1,0 +1,12 @@
+README.md
+setup.py
+geometria/__init__.py
+geometria/retangulo.py
+geometria/triangulo.py
+geometria.egg-info/PKG-INFO
+geometria.egg-info/SOURCES.txt
+geometria.egg-info/dependency_links.txt
+geometria.egg-info/top_level.txt
+tests/__init__.py
+tests/test_retangulo.py
+tests/test_triangulo.py
