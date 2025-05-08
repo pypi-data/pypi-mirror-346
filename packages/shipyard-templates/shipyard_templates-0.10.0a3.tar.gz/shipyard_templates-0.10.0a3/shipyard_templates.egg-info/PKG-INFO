@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: shipyard-templates
+Version: 0.10.0a3
+Summary: Super classes for blueprint development
+Author-email: wrp801 <wespoulsen@gmail.com>
+License: Apache License 2.0
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown

@@ -1,0 +1,14 @@
+[project]
+name = "shipyard-templates"
+version = "0.10.0a3"
+description = "Super classes for blueprint development"
+authors = [
+    { name = "wrp801", email = "wespoulsen@gmail.com" }
+]
+license = { text = "Apache License 2.0" }
+readme = "README.md"
+requires-python = ">=3.11"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
