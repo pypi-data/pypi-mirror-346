@@ -1,0 +1,89 @@
+Metadata-Version: 2.4
+Name: mistune-slack
+Version: 0.1.3
+Summary: Convert Markdown to Slack blocks - useful for chatbots
+Project-URL: Homepage, https://github.com/Submersible/python-mistune-slack
+Project-URL: Repository, https://github.com/Submersible/python-mistune-slack
+Project-URL: Documentation, https://github.com/Submersible/python-mistune-slack#readme
+Project-URL: Bug Tracker, https://github.com/Submersible/python-mistune-slack/issues
+Author-email: Ryan Munro <500774+munro@users.noreply.github.com>
+License: MIT
+License-File: LICENSE
+Keywords: block-kit,markdown,mistune,renderer,slack
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Text Processing :: Markup
+Requires-Python: <4,>=3.11
+Requires-Dist: mistune<4,>=3
+Requires-Dist: typing-extensions>=4.13.2
+Description-Content-Type: text/markdown
+
+# Mistune Slack Renderer
+
+Convert Markdown into Slack Block Kit format using Mistune. Useful for LLM-powered chatbots!
+
+## Kitchen sink demo
+
+* **View Kitchen Sink Markdown:** [test/testdata/kitchen_sink.md.txt](https://github.com/Submersible/python-mistune-slack/blob/main/test/testdata/kitchen_sink.md)
+* **View Output in Block Kit Builder:** [https://app.slack.com/block-kit-builder/#...](https://app.slack.com/block-kit-builder/T043RAJPN#%7B%22blocks%22:%5B%7B%22type%22:%22header%22,%22text%22:%7B%22type%22:%22plain_text%22,%22text%22:%22This%20is%20a%201st%20level%20heading%22%7D%7D,%7B%22type%22:%22divider%22%7D,%7B%22type%22:%22rich_text%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Okay,%20here's%20a%20demo%20output%20to%20test%20my%20markdown%20capabilities.%5Cn%5Cn%22%7D%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22ordered%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Ordered%20List:%22,%22style%22:%7B%22bold%22:true%7D%7D%5D%7D%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22ordered%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22First%20item%22%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Second%20item%22%7D%5D%7D%5D,%22indent%22:1%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22ordered%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Nested%20item%201%22%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Nested%20item%202%22%7D%5D%7D%5D,%22indent%22:2%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Bullet%20inside%20ordered%20list%22%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Another%20bullet%22%7D%5D%7D%5D,%22indent%22:3%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22ordered%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Third%20item%22%7D%5D%7D%5D,%22indent%22:1%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Bulleted%20List:%22%7D%5D%7D%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22First%20bullet%22%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Second%20bullet%22%7D%5D%7D%5D,%22indent%22:1%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22ordered%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Numbered%20list%20inside%20bullet%22%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Another%20numbered%20item%22%7D%5D%7D%5D,%22indent%22:2%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Third%20bullet%22%7D%5D%7D%5D,%22indent%22:1%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Nested%20Lists%20(Mixed):%22%7D%5D%7D%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Level%201%22%7D%5D%7D%5D,%22indent%22:1%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22ordered%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Level%202%20(Numbered)%22%7D%5D%7D%5D,%22indent%22:2%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Level%203%20(Bullet)%22%7D%5D%7D%5D,%22indent%22:3%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22ordered%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Level%204%20(Numbered)%22%7D%5D%7D%5D,%22indent%22:4%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Level%205%20(Bullet)%5Cn-%20Level%206%20(Bullet)%22%7D%5D%7D%5D,%22indent%22:5%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%5Cn%5CnCode:%5Cn%5Cn%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D,%7B%22type%22:%22text%22,%22text%22:%22Here%20is%20an%20example%20of%20inline%20%22%7D,%7B%22type%22:%22text%22,%22text%22:%22code%22,%22style%22:%7B%22code%22:true%7D%7D,%7B%22type%22:%22text%22,%22text%22:%22.%22%7D%5D%7D%5D%7D,%7B%22type%22:%22header%22,%22text%22:%7B%22type%22:%22plain_text%22,%22text%22:%22Code%20block%20(second%20level%20heading)%22%7D%7D,%7B%22type%22:%22divider%22%7D,%7B%22type%22:%22rich_text%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Code%20Block:%5Cn%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D%5D%7D,%7B%22type%22:%22rich_text_preformatted%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22def%20hello_world():%5Cn%20%20%20%20print(%5C%22Hello,%20world!%5C%22)%5Cn%22%7D%5D%7D%5D%7D,%7B%22type%22:%22header%22,%22text%22:%7B%22type%22:%22plain_text%22,%22text%22:%22This%20is%20another%20heading%20(3rd%20level)%22%7D%7D,%7B%22type%22:%22rich_text%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Bold,%20Italics,%20Strikethrough,%20and%20Underline:%5Cn%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22This%20is%20bold%20text.%22,%22style%22:%7B%22bold%22:true%7D%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22This%20is%20italicized%20text.%22,%22style%22:%7B%22italic%22:true%7D%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22This%20is%20strikethrough%20text.%22,%22style%22:%7B%22strike%22:true%7D%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%3Cu%3EThis%20is%20underlined%20text.%3C/u%3E%22%7D%5D%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%5Cn%5CnLinks:%5Cn%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22link%22,%22text%22:%22Mistune%20Website%22,%22url%22:%22https://mistune.lepture.com/en/latest/plugins.html%22%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22link%22,%22text%22:%22Slack%20Formatting%22,%22url%22:%22https://api.slack.com/reference/surfaces/formatting%22%7D%5D%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%5Cn%5CnBlockquotes:%5Cn%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D%5D%7D,%7B%22type%22:%22rich_text_quote%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22This%20is%20a%20blockquote.%20It%20can%20span%20multiple%20lines%20and%20is%20used%20to%20highlight%20a%20section%20of%20text.%22%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%5Cn%22%7D%5D%7D,%7B%22type%22:%22rich_text_quote%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Nested%20blockquote%22%7D%5D%7D,%7B%22type%22:%22rich_text_quote%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Even%20deeper!%22%7D%5D,%22border%22:1%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%5Cn%5Cn%5CnMentions:%22,%22style%22:%7B%22bold%22:true,%22italic%22:true%7D%7D,%7B%22type%22:%22text%22,%22text%22:%22%20(4th%20level)%5Cn%5Cn%5Cn%22,%22style%22:%7B%22bold%22:true%7D%7D,%7B%22type%22:%22text%22,%22text%22:%22Hey%20%22%7D,%7B%22type%22:%22user%22,%22user_id%22:%22UC123123%22%7D,%7B%22type%22:%22text%22,%22text%22:%22,%20check%20this%20out!%5Cn%5Cn%5Cn%22%7D,%7B%22type%22:%22text%22,%22text%22:%22Preformatted%20text:%5Cn%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D%5D%7D,%7B%22type%22:%22rich_text_preformatted%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22This%20is%20a%20preformatted%20text%20block.%5CnIt%20preserves%20whitespace%20and%20newlines.%5CnUseful%20for%20displaying%20code%20or%20configuration.%5Cn%22%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%5Cn%5CnHorizontal%20Rule:%5Cn%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D%5D%7D%5D%7D,%7B%22type%22:%22divider%22%7D,%7B%22type%22:%22rich_text%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%5CnTables%20(Note:%20Tables%20are%20not%20directly%20supported%20in%20Slack%20markdown,%20but%20here's%20how%20you%20might%20format%20it%20with%20spacing):%5Cn%5Cn%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D,%7B%22type%22:%22text%22,%22text%22:%22%7C%20Column%201%20%7C%20Column%202%20%7C%20Column%203%20%7C%5Cn%7C%20--------%20%7C%20--------%20%7C%20--------%20%7C%5Cn%7C%20Row%201%20%20%20%20%7C%20Value%201%20%20%7C%20Data%201%20%20%20%7C%5Cn%7C%20Row%202%20%20%20%20%7C%20Value%202%20%20%7C%20Data%202%20%20%20%7C%5Cn%5Cn%5Cn%22%7D,%7B%22type%22:%22text%22,%22text%22:%22Emojis:%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D,%7B%22type%22:%22emoji%22,%22name%22:%22smile%22%7D,%7B%22type%22:%22text%22,%22text%22:%22%20%22%7D,%7B%22type%22:%22emoji%22,%22name%22:%22rocket%22%7D,%7B%22type%22:%22text%22,%22text%22:%22%20%22%7D,%7B%22type%22:%22emoji%22,%22name%22:%22tada%22%7D,%7B%22type%22:%22text%22,%22text%22:%22%5Cn%5Cn%5Cn%5CnTask%20Lists:%22,%22style%22:%7B%22bold%22:true,%22italic%22:true%7D%7D,%7B%22type%22:%22text%22,%22text%22:%22%20(5-th%20level)%5Cn%5Cn%22,%22style%22:%7B%22bold%22:true%7D%7D%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%E2%9C%85%20%22%7D,%7B%22type%22:%22text%22,%22text%22:%22Completed%20task%22%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%E2%9D%8C%20%22%7D,%7B%22type%22:%22text%22,%22text%22:%22Incomplete%20task%22%7D%5D%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%5Cn%5CnCombination:%5Cn%5Cn%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D,%7B%22type%22:%22text%22,%22text%22:%22This%20is%20bold%20and%20italicized.%5Cn%5Cn%5Cn%22,%22style%22:%7B%22bold%22:true,%22italic%22:true%7D%7D,%7B%22type%22:%22text%22,%22text%22:%22More%20code%20examples:%5Cn%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D%5D%7D,%7B%22type%22:%22rich_text_preformatted%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22function%20anotherExample()%20%7B%5Cn%20%20return%20%5C%22JavaScript%20code%5C%22;%5Cn%7D%5Cn%22%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%5Cn%22%7D%5D%7D,%7B%22type%22:%22rich_text_preformatted%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22SELECT%20*%20FROM%20stuff%20WHERE%20thing%20=%20TRUE;%5Cn%22%7D%5D%7D,%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22%5Cn%5CnFinal%20bullet%20to%20make%20sure%20it's%20really%20long!%5Cn%5Cn%22,%22style%22:%7B%22italic%22:true%7D%7D%5D%7D,%7B%22type%22:%22rich_text_list%22,%22style%22:%22bullet%22,%22elements%22:%5B%7B%22type%22:%22rich_text_section%22,%22elements%22:%5B%7B%22type%22:%22text%22,%22text%22:%22Last%20one!%22%7D%5D%7D%5D%7D%5D%7D%5D%7D)
+
+
+## Features
+
+- Produces Slack Block Kit JSON for posting messages to Slack
+- Renders Slack users, channels, broadcasts, and emojis
+- Supports strikethrough, task lists, URLs, and code blocks
+- Headings, paragraphs, block quotes, and dividers
+- Ordered and bullet lists (with nesting and task-list support)
+- Inline code and fenced code-block rendering
+- Link conversion into Slack link elements
+- Note: images not supported. It should be easy to add by subclassing `mistune_slack.renderer.SlackRenderer`
+  and adding your own logic (such as you may want to upload the image somewhere as well)
+
+## Install
+
+```bash
+uv add mistune-slack
+```
+
+## Usage
+
+```python
+from mistune_slack import render_slack_blocks_from_markdown
+
+markdown = "# Hello, *world*!"
+blocks = render_slack_blocks_from_markdown(markdown)
+print(blocks)  # post `blocks` to Slack
+```
+
+### Advanced usage
+
+```python
+import mistune
+from mistune.plugins.formatting import strikethrough
+from mistune.plugins.task_lists import task_lists
+from mistune.plugins.url import url
+
+from mistune_slack import SlackRenderer, slack_pluginSlackRenderer
+
+markdown = "# Hello, *world*!"
+renderer = mistune.create_markdown(renderer=SlackRenderer(), plugins=[slack_plugin, strikethrough, url, task_lists])
+blocks: list[dict] = renderer(markdown)  # type: ignore
+print(blocks)  # post `blocks` to Slack
+```
+
+## Testing
+
+```bash
+uv run test
+```
+
+## License
+
+MIT
