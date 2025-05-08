@@ -1,0 +1,4 @@
+conda<=25.3.1,>=22.9.0
+
+[executorlib]
+executorlib==1.2.0
