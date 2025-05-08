@@ -1,0 +1,92 @@
+# windll.pyi
+import ctypes
+from typing import List
+
+class _WindowsDLLManager:
+    _supported_dlls: List
+    @classmethod
+    def list_supported_dlls(cls): ...
+
+class _DLLProxy:
+    user32: ctypes.WinDLL
+    kernel32: ctypes.WinDLL
+    gdi32: ctypes.WinDLL
+    shell32: ctypes.WinDLL
+    advapi32: ctypes.WinDLL
+    ole32: ctypes.WinDLL
+    ws2_32: ctypes.WinDLL
+    winmm: ctypes.WinDLL
+    comctl32: ctypes.WinDLL
+    shlwapi: ctypes.WinDLL
+    version: ctypes.WinDLL
+    oleaut32: ctypes.WinDLL
+    d2d1: ctypes.WinDLL
+    dwrite: ctypes.WinDLL
+    d3d11: ctypes.WinDLL
+    dxgi: ctypes.WinDLL
+    dwmapi: ctypes.WinDLL
+    mfplat: ctypes.WinDLL
+    msimg32: ctypes.WinDLL
+    wlanapi: ctypes.WinDLL
+    winhttp: ctypes.WinDLL
+    ncrypt: ctypes.WinDLL
+    secur32: ctypes.WinDLL
+    crypt32: ctypes.WinDLL
+    iphlpapi: ctypes.WinDLL
+    setupapi: ctypes.WinDLL
+    hid: ctypes.WinDLL
+    winusb: ctypes.WinDLL
+    cfgmgr32: ctypes.WinDLL
+    xinput1_4: ctypes.WinDLL
+    dinput8: ctypes.WinDLL
+    psapi: ctypes.WinDLL
+    dbghelp: ctypes.WinDLL
+    powrprof: ctypes.WinDLL
+    wtsapi32: ctypes.WinDLL
+    taskeng: ctypes.WinDLL
+    winsta: ctypes.WinDLL
+    amsi: ctypes.WinDLL
+    bcrypt: ctypes.WinDLL
+    cryptnet: ctypes.WinDLL
+    rasapi32: ctypes.WinDLL
+    credui: ctypes.WinDLL
+    textinputframework: ctypes.WinDLL
+    twinapi: ctypes.WinDLL
+    directml: ctypes.WinDLL
+    vulkan: ctypes.WinDLL
+    dxcompiler: ctypes.WinDLL
+    mfreadwrite: ctypes.WinDLL
+    avrt: ctypes.WinDLL
+    msacm32: ctypes.WinDLL
+    dxva2: ctypes.WinDLL
+    wmcodecdspuuid: ctypes.WinDLL
+    sensorsapi: ctypes.WinDLL
+    websocket: ctypes.WinDLL
+    ntdll: ctypes.WinDLL
+    shcore: ctypes.WinDLL
+    propsys: ctypes.WinDLL
+    msctf: ctypes.WinDLL
+    inputhost: ctypes.WinDLL
+    windowsudk: ctypes.WinDLL
+    wldap32: ctypes.WinDLL
+    dnsapi: ctypes.WinDLL
+    odbc32: ctypes.WinDLL
+    gdiplus: ctypes.WinDLL
+    msvcrt: ctypes.WinDLL
+    comdlg32: ctypes.WinDLL
+    winspool: ctypes.WinDLL
+    wintrust: ctypes.WinDLL
+    sensapi: ctypes.WinDLL
+    imm32: ctypes.WinDLL
+    netapi32: ctypes.WinDLL
+    msi: ctypes.WinDLL
+    d3d12: ctypes.WinDLL
+    d3dcompiler_47: ctypes.WinDLL
+    wininet: ctypes.WinDLL
+    urlmon: ctypes.WinDLL
+    oleacc: ctypes.WinDLL
+    uiautomationcore: ctypes.WinDLL
+
+    def __getattr__(self, name: str) -> ctypes.WinDLL: ...
+
+windll: _DLLProxy
