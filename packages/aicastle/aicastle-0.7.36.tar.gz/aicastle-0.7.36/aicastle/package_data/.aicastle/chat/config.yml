@@ -1,0 +1,22 @@
+platform: "openai" # "openai" or "azure_openai"
+chat_type: "assistant"   # "chat" or "assistant"
+api_version: "2024-02-01"   # azure_openai
+model: "gpt-4o"
+assistant_id: null       # (optional) only chat_type: "assistant"
+assistant_update: false  # (optional) only assistant_id is provided
+
+function_call: true
+temperature: 0
+top_p: 1
+stream: true
+
+incontext:
+  in_text: true
+  in_image: false    # Must be false if chat_type is "assistant"
+  max_tokens: 50000
+  modified: true
+  resolution: "auto" # "auto", "high", "low"
+
+finetuning:
+  in_text: true
+  in_image: false

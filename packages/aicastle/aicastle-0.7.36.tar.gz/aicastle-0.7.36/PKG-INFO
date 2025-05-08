@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: aicastle
+Version: 0.7.36
+Summary: AI Castle Package
+Home-page: https://github.com/ai-castle/aicastle
+Author: aicastle
+Author-email: dev@aicastle.io
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.6
+Requires-Dist: tqdm
+Requires-Dist: click
+Requires-Dist: pillow
+Requires-Dist: python-dotenv
+Requires-Dist: pyyaml
+Provides-Extra: chat
+Requires-Dist: streamlit; extra == "chat"
+Requires-Dist: openai; extra == "chat"
+Requires-Dist: tiktoken; extra == "chat"
+Requires-Dist: pathspec; extra == "chat"
+Requires-Dist: pymupdf; extra == "chat"
+Provides-Extra: deepracer-vehicle
+Requires-Dist: tensorflow; extra == "deepracer-vehicle"
+Requires-Dist: opencv-python; extra == "deepracer-vehicle"
+Requires-Dist: requests-toolbelt; extra == "deepracer-vehicle"
+Requires-Dist: beautifulsoup4; extra == "deepracer-vehicle"
+Requires-Dist: lxml; extra == "deepracer-vehicle"
+Requires-Dist: pynput; extra == "deepracer-vehicle"
+Requires-Dist: paramiko; extra == "deepracer-vehicle"
+Provides-Extra: deepracer-drfc
+Requires-Dist: boto3; extra == "deepracer-drfc"
+Requires-Dist: paramiko; extra == "deepracer-drfc"
+Requires-Dist: pandas; extra == "deepracer-drfc"
