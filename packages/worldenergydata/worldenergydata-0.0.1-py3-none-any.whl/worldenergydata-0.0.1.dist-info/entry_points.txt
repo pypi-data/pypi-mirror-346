@@ -1,0 +1,2 @@
+[console_scripts]
+energy_data = worldenergydata:__main__
