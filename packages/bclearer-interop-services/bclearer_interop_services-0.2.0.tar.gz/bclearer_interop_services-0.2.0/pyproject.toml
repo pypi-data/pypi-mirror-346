@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "bclearer-interop-services"
+version = "0.2.0"
+description = "\"A set of interop services to integrate and transfer data between different applications, model and storage technologies for the bclearer framework.\""
+authors = ["Mesbah Khan <khanm@ontoledgy.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+bclearer-orchestration-services = "^0.1.0"
+
+[tool.poetry.group.dev.dependencies]
+bclearer_core = "^0.1.0"
+bclearer_orchestration_services = "^0.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
