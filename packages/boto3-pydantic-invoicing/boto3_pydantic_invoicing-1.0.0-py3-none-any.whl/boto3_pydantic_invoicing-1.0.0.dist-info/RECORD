@@ -1,0 +1,7 @@
+boto3_pydantic_invoicing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_invoicing/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_invoicing/invoicing_classes.py,sha256=oFp-ohWbThSk1R2uU1Rc9frbT82StDdqzHXB0j2GHg8,4708
+boto3_pydantic_invoicing/invoicing_constants.py,sha256=XNwfWmFFUTj8HRX_6fXAmoiPCF_UfGHX1cetX7SQ86o,6684
+boto3_pydantic_invoicing-1.0.0.dist-info/METADATA,sha256=vRkm-gkn8E7kek7QT05LR_Hwkkz5-ojRlNjgzQ2kZ8o,1410
+boto3_pydantic_invoicing-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_invoicing-1.0.0.dist-info/RECORD,,
