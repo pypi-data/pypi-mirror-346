@@ -1,0 +1,8 @@
+seqchromloader/__init__.py,sha256=aVuwPbzlwX7cxwH40ChCoeTZSxFb1Z5u-efSB8R3MI0,553
+seqchromloader/loader.py,sha256=IadI7FMxG6YflYssF2fC12e51UgGOrfGJG8I-F8cIHk,14242
+seqchromloader/utils.py,sha256=qLRfKPWmwy5YKsmVXBuDyOG1LcXWxcXsIeJIlcGSiMs,21730
+seqchromloader/writer.py,sha256=GNjcNiyKHZ_WHHGhll1aVxOQ9zvhfFWdZ3h5DizvnOc,9703
+seqchromloader-0.8.4.dist-info/METADATA,sha256=YoGjHd2R_9vr0byUovXJos-1Ay9nmmsBNcyyaxbPTi0,1379
+seqchromloader-0.8.4.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+seqchromloader-0.8.4.dist-info/top_level.txt,sha256=lCEscedZhVEQ0ZIQL_s7xJ_y05-ZIKc3tBbHwgNaLDo,15
+seqchromloader-0.8.4.dist-info/RECORD,,
