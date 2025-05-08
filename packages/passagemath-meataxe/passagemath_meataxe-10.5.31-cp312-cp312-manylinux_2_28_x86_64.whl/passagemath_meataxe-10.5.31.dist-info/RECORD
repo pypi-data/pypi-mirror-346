@@ -1,0 +1,12 @@
+passagemath_meataxe.libs/libmtx-7b2de67b.so.0.0.0,sha256=0Y-n2kp-lgudcoqe6XbupM404XGX0BMhhiKC1O0Vx0M,840193
+sage/all__sagemath_meataxe.py,sha256=isUgdlh6SqmFirYA2LvA-IFIJXW-fyhZrXsbt3PifDY,46
+sage/libs/all__sagemath_meataxe.py,sha256=isUgdlh6SqmFirYA2LvA-IFIJXW-fyhZrXsbt3PifDY,46
+sage/libs/meataxe.cpython-312-x86_64-linux-gnu.so,sha256=QtxXADeNq086_4feYpm9AFN0z-6WdS5TX0N_V3teuf4,293497
+sage/libs/meataxe.pxd,sha256=FqAwBUCWeeJpp4UjeWxWWhRgStywZP8jmCK0tTvxhTs,6643
+sage/matrix/all__sagemath_meataxe.py,sha256=isUgdlh6SqmFirYA2LvA-IFIJXW-fyhZrXsbt3PifDY,46
+sage/matrix/matrix_gfpn_dense.cpython-312-x86_64-linux-gnu.so,sha256=yaAJfeP3TJMXeYR2NIB0eH2m5l2XzbpjtEQU5ow9ZIk,1942673
+sage/matrix/matrix_gfpn_dense.pxd,sha256=1RHSQ4z0Cp0WT3BSCFwBnwU2RJk1mIprtekJ_SduSZI,1709
+passagemath_meataxe-10.5.31.dist-info/METADATA,sha256=Zrjv2tlipfrHXciXn5EU_2iO2q0Mr8jVmbHwMOlJE0E,4345
+passagemath_meataxe-10.5.31.dist-info/WHEEL,sha256=45mKFF2A0rXa0jSj-1-649p37Vm2_X0IOvFbJ8ZMP4A,113
+passagemath_meataxe-10.5.31.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_meataxe-10.5.31.dist-info/RECORD,,
