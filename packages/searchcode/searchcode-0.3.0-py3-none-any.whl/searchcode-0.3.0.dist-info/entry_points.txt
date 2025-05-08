@@ -1,0 +1,3 @@
+[console_scripts]
+searchcode=searchcode.cli:cli
+
