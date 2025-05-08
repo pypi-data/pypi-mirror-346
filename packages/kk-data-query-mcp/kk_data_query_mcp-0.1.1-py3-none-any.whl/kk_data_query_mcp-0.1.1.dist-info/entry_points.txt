@@ -1,0 +1,2 @@
+[console_scripts]
+kk-data-query-mcp = query_data:main
