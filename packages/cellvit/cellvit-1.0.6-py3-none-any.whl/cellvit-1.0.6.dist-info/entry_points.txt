@@ -1,0 +1,4 @@
+[console_scripts]
+cellvit-check = cellvit.check_system:main
+cellvit-download-examples = cellvit.utils.cache_test_database:cache_test_database
+cellvit-inference = cellvit.detect_cells:main
