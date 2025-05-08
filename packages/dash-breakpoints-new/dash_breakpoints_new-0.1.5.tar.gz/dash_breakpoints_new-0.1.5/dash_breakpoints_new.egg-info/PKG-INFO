@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: dash_breakpoints_new
+Version: 0.1.5
+Summary: Component to listen to the elements and window resize. A forked version of dash_breakpoints by RenaudLN.
+Author: Renaud LainÃ© <renaudlaine31@gmail.com>, Michael Welford <mwelford@r1planning.org>
+License: MIT
+Classifier: Framework :: Dash
+License-File: LICENSE
+Dynamic: author
+Dynamic: classifier
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
