@@ -1,0 +1,2 @@
+[sphinx.html_themes]
+ctao = ctao_sphinx_theme

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+html {
+  --pst-font-family-base-system: "Inter";
+  --pst-font-family-heading: "Space Grotesk";
+  --ctao-galaxy-blue: rgb(0, 0, 74);
+  --ctao-cherenkov-blue: rgb(0, 228, 216);
+  --ctao-moon-gray: rgb(245, 245, 245);
+  --ctao-cosmic-azure: rgb(0, 122, 255);
+  --ctao-interstellar-indigo: rgb(0, 0, 156);
+}
+
+html[data-theme="light"] {
+  --pst-color-primary: var(--ctao-cosmic-azure);
+  --pst-color-secondary: var(--ctao-cherenkov-blue);
+  --pst-color-accent: var(--ctao-interstellar-indigo);
+  --pst-color-inline-code: var(--ctao-interstellar-indigo);
+}
+
+html[data-theme="dark"] {
+  --pst-color-primary: var(--ctao-cherenkov-blue);
+  --pst-color-background: var(--ctao-galaxy-blue);
+  --pst-color-secondary: var(--ctao-cosmic-azure);
+  --pst-color-accent: var(--ctao-moon-gray);
+  --pst-color-inline-code: var(--ctao-moon-gray);
+}
+
+
+/* prevent logo from being to wide and text clashing with next item */
+
+.navbar-header-items__start .navbar-item {
+  width: 100%;
+}
+
+.navbar-item .navbar-brand {
+  width: 100%;
+}
+
+.navbar-brand img {
+  min-width: 0;
+  height: auto;
+  max-height: 100%;
+  flex-shrink: 1;
+}
+
+.navbar-brand p {
+  flex: 0 1 auto;
+}

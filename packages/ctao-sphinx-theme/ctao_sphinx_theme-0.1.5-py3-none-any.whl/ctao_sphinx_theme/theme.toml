@@ -1,0 +1,8 @@
+[theme]
+inherit = "pydata_sphinx_theme"
+stylesheets = [
+  "ctao-style.css",
+]
+
+[options]
+branding = "ctao"
