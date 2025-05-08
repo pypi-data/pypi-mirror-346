@@ -1,0 +1,15 @@
+cli/analytics_cli.py,sha256=3p2HMFq-3TS0MYrUTJBu3jXh8f9lyLGUlfbQbL-lADI,16535
+cli/pypxml_cli.py,sha256=B3mvtf4xo_2eoqjsIKVw-SUmV8R3ei8Lagn89sD_WLo,2095
+cli/regularize_cli.py,sha256=FIyFqK5uoBcYDH7GrLwieDkrdKtgQoS6bb97T8RMQGA,7077
+cli/util.py,sha256=PhXxIyhzuyB3Viz7gsw1QII_kVvATR7rhflhdhCnPfg,5862
+pypxml/__init__.py,sha256=F6RayCyV9dSInfZT5mqzofpErBluN3xvbtImTY0eteg,673
+pypxml/pageelement.py,sha256=GMaMv8A6TPmTHoA1JfDVhWcVPWqamWDtDa22iY2IN28,13842
+pypxml/pagetype.py,sha256=aMScEIRRmaNEiQs4Fd6wcfrXZopELXrx3OKDVonaa8k,8301
+pypxml/pagexml.py,sha256=Yeo9C9_5vVBZVNioPCR8Yv8tQCGrNmDho7oa1g5Y6KQ,25086
+pypxml-4.2.1.dist-info/licenses/LICENSE,sha256=FNrdnfKE3iYQxKvzH60l2VuIYB5_TrY_uyxvFueP4lY,11340
+resources/schema.json,sha256=kbGxWffUQ8jpw0CRYxHLKJI59p5ICGMdF0zvXP0S_a0,698
+pypxml-4.2.1.dist-info/METADATA,sha256=DKAox5wHs5ABdDO6KsgGKp2ELE3kkP0csnNzAQW2Z2A,24019
+pypxml-4.2.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+pypxml-4.2.1.dist-info/entry_points.txt,sha256=zkGOJGSpAat6xMZrzonPstt_BiHgTBkH0aEYb9SpX1w,46
+pypxml-4.2.1.dist-info/top_level.txt,sha256=eYNKPJB9pkSb2DuHBI3_yJTDq3mrwxOMJxtKAs0sta0,21
+pypxml-4.2.1.dist-info/RECORD,,
