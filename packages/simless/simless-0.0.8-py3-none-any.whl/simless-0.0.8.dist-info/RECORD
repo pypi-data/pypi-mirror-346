@@ -1,0 +1,16 @@
+simless/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simless/configurations.py,sha256=VPDUpeyJYQVr0064kd2QnpI_GMh2jH49ootCwZvN_Jg,9711
+simless/descriptors.py,sha256=z0vukSVbuB1OGh1sudnWPSRsYmZ6rXj5qjMMlLCKZIM,1983
+simless/parameters.py,sha256=yS_f95gRlPCm2gyGj8z9r9tKjCzb70z64zlRNwaZ0eI,9819
+simless/runner.py,sha256=Lp-AcmY8-3JP2yh7egq5knMHZ25CguZofLbbTYrnptE,949
+simless/runs_frame.py,sha256=3s4zcGgxB1w_HdHC8nNeYhL8y9nlUFyAZDMC0JcE0ak,2213
+simless/sections.py,sha256=GyhdSDFE5qxzHYoQQ8h9n5SlzeyvsO2u5KVi8l1Uirw,8579
+simless/sim_dir.py,sha256=kWk3cXRxXKZjJRGGj_DNIziz8iHIX9-ZyyqbqMq9kN0,10384
+simless/simulation.py,sha256=V0RZqKL4h8yAhKy7Cob6r0HA2B-IxkvTsArNLY4SZLY,6142
+simless/topology.py,sha256=cTIMsZu6niYE-KgzHQ91lqt9y1UOrSTKBfWKjaptkNU,1165
+simless/workloads.py,sha256=G1ycKqcb-6hP8rqWKFA9ijScUKMdNMwAKtf-Nymtjo4,8464
+simless-0.0.8.dist-info/licenses/LICENSE,sha256=beGIKXCeiwMrfYZyI-SQwN8IgER_KiMZ8svPBjaQ7ZQ,1066
+simless-0.0.8.dist-info/METADATA,sha256=N0dXPklhO3wGuQAzDlKzmX5xBRMPWBYGkPJrzIpxPYc,731
+simless-0.0.8.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+simless-0.0.8.dist-info/top_level.txt,sha256=XUYee0IPS3ts7XpxLE83zny9NwmkYCYQy9pqhIyM-Mk,8
+simless-0.0.8.dist-info/RECORD,,
