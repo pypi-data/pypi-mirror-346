@@ -1,0 +1,515 @@
+Metadata-Version: 2.4
+Name: dbis-relational-calculus
+Version: 1.0.12.post2
+Summary: RWTH Aachen Computer Science i5/dbis assets for Lecture Datenbanken und Informationssysteme
+Author-email: DBIS i5 RWTH Aachen <dbis-vl@dbis.rwth-aachen.de>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: Homepage, https://git.rwth-aachen.de/i5/teaching/dbis-relational-calculus
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: docstring_inheritance
+Requires-Dist: typeguard
+Provides-Extra: test
+Requires-Dist: black==23.12.1; extra == "test"
+Provides-Extra: build
+Requires-Dist: twine==6.*; extra == "build"
+Requires-Dist: build==1.*; extra == "build"
+Dynamic: license-file
+
+# DBIS Relational Calculus
+
+[![pypi](https://img.shields.io/pypi/pyversions/dbis-relational-calculus)](https://pypi.org/project/dbis-relational-calculus/)
+[![PyPI Status](https://img.shields.io/pypi/v/dbis-relational-calculus)](https://pypi.org/project/dbis-relational-calculus/)
+
+This set of classes is used to define objects of the relational model (as a result of a conversion from an ER-diagram)
+
+# Features
+- Create expressions of tuple and domain calculus in python.
+- Validate these expressions on a basic level.
+- Convert these expressions to Text in LaTeX math mode.
+- Convert these expressions to queries in SQLite.
+
+# Installation
+Install via pip:
+```sh
+pip install dbis-relational-calculus
+```
+
+# Basic usage
+Both tuple and domain calculus were developed to be as similar as possible to each other, and to the mathematical notation. You will find, that the programming style between tuple and domain calculus is in most ways identically.
+
+The only difference between both stems from what variables express in each of the relational calculus notations:
+ - In the tuple calculus, a variable represents a tuple of a relation (i.e. a row). Therefore, we here have to define the relation (type), which the variable stems from ($`x \in R`$).
+ - In the domain calculus, a variable represents an entry of a relation in a specific column. Multiple variables combined make up for a whole tuple in a specific relation ($`R(x, y, z)`$).
+
+## General constructs
+| Construct | Description | Tuple Calculus | Domain Calculus |
+| --------- | ----------- | -------------- | -------------- |
+| `TupleCalculus` | Defines an expression in the tuple calculus. | :heavy_check_mark: | :x: |
+| `DomainCalculus` | Defines an expression in the domain calculus. | :x: | :heavy_check_mark: |
+| `Result` | Defines a result of an expression in the respective calculus. | :heavy_check_mark: | :heavy_check_mark: |
+| `Variable` | Defines a variable in the respective relational calculus. | :heavy_check_mark: | :heavy_check_mark: |
+| `Tuple` | Defines a tuple in the domain calculus. | :x: | :heavy_check_mark: |
+| `Forall` | Defines a universal quantification in the respective relational calculus. | :heavy_check_mark: | :heavy_check_mark: |
+| `Exists` | Defines an existential quantification in the respective relational calculus. | :heavy_check_mark: | :heavy_check_mark: |
+| `And` | Defines a conjunction in the respective relational calculus. | :heavy_check_mark: | :heavy_check_mark: |
+| `Or` | Defines a disjunction in the respective relational calculus. | :heavy_check_mark: | :heavy_check_mark: |
+| `Not` | Defines a negation in the respective relational calculus. | :heavy_check_mark: | :heavy_check_mark: |
+| `Equals` | Defines an equality in the respective relational calculus. | :heavy_check_mark: | :heavy_check_mark: |
+| `GreaterEquals` | Defines a greater-or-equal comparison in the respective relational calculus. | :heavy_check_mark: | :heavy_check_mark: |
+| `GreaterThan` | Defines a greater-than comparison in the respective relational calculus. | :heavy_check_mark: | :heavy_check_mark: |
+| `LessEquals` | Defines a less-or-equal comparison in the respective relational calculus. | :heavy_check_mark: | :heavy_check_mark: |
+| `LessThan` | Defines a less-than comparison in the respective relational calculus. | :heavy_check_mark: | :heavy_check_mark: |
+
+
+## Specific usages
+### Tuple Calculus
+#### Atoms
+The comparison operators can be used to bound/set the values of a variables attribute, or compare two different variables attributes. We can access the attributes of a variable in two ways: Either as a `tuple[Variable, str]` or using the `__getitem__` syntax. Thus, the following lines are equivalent:
+```python
+assert var["some_attribute"] == (var, "some_attribute")
+```
+```python
+eq = Equals((x, 'some_attribute'), "Hello!")
+gt = GreaterThan(5, y['other_attribute'])
+le = LessEquals((z, 'other_attribute'), 7.2)
+lt = LessThan(a['some_attribute'], (b, 'other_attribute'))
+```
+Since a variable being returned cannot be quantified, we still must somehow tell the formula, which relation the variable stems from. For this reason, `Variable` is also an atom in the tuple calculus. See the examples down below.
+```python
+x = Variable('x', 'some_relation')
+```
+
+#### Quantifiers
+When a variable is not being returned, it has to be quantified. This is done by using the `Forall` and `Exists` construct. `sub_formula` here refers to a formula generated by using other atoms, quantifiers, and connectives.
+```python
+forall = Forall(x, sub_formula)
+exists = Exists(x, sub_formula)
+```
+If one wants to quantify multiple variables using the same quantification type at once, one can do so efficiently by using sets:
+```python
+foralls = Forall({x,y,z}, sub_formula)
+exists = Exists({x,y,z}, sub_formula)
+```
+
+#### Connectives
+The connectives can be used to combine atoms, quantifiers, and connectives.
+```python
+and_formula = And(sub_formula_1, sub_formula_2)
+or_formula = Or(sub_formula_1, sub_formula_2)
+not_formula = Not(sub_formula)
+```
+
+#### Examples
+##### Example 1
+- Relation `People` has three attributes: `name`, `age`, and `height`.
+```python
+from relational_calculus.tuple_calculus import *
+
+# define the variable used
+p = Variable('p', 'People')
+
+# define the expression
+tc = TupleCalculus(
+	# return every attribute of p
+	Result([p]),
+	# attribute height of p has to be greater than 190
+	And(
+		p,
+		GreaterThan(p['height'], 190)
+	)
+)
+
+# check if the expression is valid
+is_correct = tc.verify()
+
+# get latex math mode string representation
+latex = str(tc)
+
+# convert the expression into an SQLite query
+query = tc.to_sql()
+```
+`tc` will now return every attribute of `p` (that is `name`, `age`, and `height`) for tuples in `People` that have a `height` greater than 190.
+
+##### Example 2
+- Relation `Student` has two attributes: `name`, `student_id`.
+- Relation `Lecture` has three attributes: `name`, `lecture_id`, `lecture_type`, `location`.
+- Relation `Professor` has two attributes: `name`, `professor_id`.
+- Relation `teaches` has two attributes: `lecture_id`, `professor_id`.
+- Relation `listens` has two attributes: `student_id`, `lecture_id`.
+```python
+from relational_calculus.tuple_calculus import *
+
+# define the variable used
+s = Variable('s', 'Student')
+l = Variable('l', 'Lecture')
+p = Variable('p', 'Professor')
+t = Variable('t', 'teaches')
+li = Variable('li', 'listens')
+
+# define the expression
+tc = TupleCalculus(
+	# Return everything of p, followed by l.name, l.lecture_type and p.name
+	Result([s, l["name"], l["lecture_type"], p["name"]]),
+	# Formula
+	And(
+		And(And(s, l), p),
+		Exists(
+			{t, li},
+			And(
+				Equals(t["lecture_id"], li["lecture_id"]),
+				And(
+					And(
+						Equals(li["student_id"], s["student_id"]),
+						Equals(li["lecture_id"], l["lecture_id"])
+					),
+					And(
+						Equals(t["professor_id"], p["professor_id"]),
+						Equals(t["lecture_id"], l["lecture_id"])
+					)
+				)
+			)
+		)
+	)
+)
+
+# check if the expression is valid
+is_correct = tc.verify()
+
+# get latex math mode string representation
+latex = str(tc)
+
+# convert the expression into an SQLite query
+query = tc.to_sql()
+```
+`tc` will now return the all students `name`s and their `student_id`s who listen to a lecture `name` of type `lecture_type` and are taught by a professor with `name`.
+
+
+### Domain Calculus
+#### Atoms
+The comparison operators can be used to bound/set the values of a variable, or compare two different variables.
+```python
+eq = Equals(x, "Hello!")
+gt = GreaterThan(5, y)
+le = LessEquals(z, 7.2)
+lt = LessThan(a, b)
+```
+Variables are no atoms in the domain calculus. However, they still need to be typed. Since they only represent columns, we need multiple variables to make up a whole relation. We can also make initialize a column with a certain value. Then, all tuples must have that value in that specific column. Additionally, if one does not care for a single column, placeholders can be used:
+> :warning: Make sure that the tuple object received the same amount of variables, placeholders and values as the actually used relation consists of.
+```python
+t1 = Tuple("some_relation",  [x, y, z])
+t1 = Tuple("some_relation",  [x, y, "Hello!"])
+t1 = Tuple("some_relation",  [x, 1.5, z])
+t1 = Tuple("some_relation",  [x, y, None]) # placeholder
+```
+
+#### Quantifiers
+When a variable is not being returned, it has to be quantified. This is done by using the `Forall` and `Exists` construct. `sub_formula` here refers to a formula generated by using other atoms, quantifiers, and connectives.
+```python
+forall = Forall(x, sub_formula)
+exists = Exists(x, sub_formula)
+```
+If one wants to quantify multiple variables using the same quantification type at once, one can do so efficiently using sets.
+```python
+foralls = Forall({x,y,z}, sub_formula)
+exists = Exists({x,y,z}, sub_formula)
+```
+
+#### Connectives
+The connectives can be used to combine atoms, quantifiers, and connectives.
+```python
+and_formula = And(sub_formula_1, sub_formula_2)
+or_formula = Or(sub_formula_1, sub_formula_2)
+not_formula = Not(sub_formula)
+```
+
+#### Examples
+##### Example 1
+- Relation `People` has three attributes: `name`, `age`, and `height`.
+```python
+from relational_calculus.domain_calculus import *
+
+# define the variable used
+name = Variable('name')
+age = Variable('age')
+height = Variable('height')
+
+# define the expression
+dc = DomainCalculus(
+	# Return
+	Result([name, age, height]),
+	# Formula
+	And(
+		Tuple("People", [name, age, height]),
+		GreaterThan(height, 190)
+	)
+)
+
+# check if the expression is valid
+is_correct = dc.verify()
+
+# get latex math mode string representation
+latex = str(dc)
+
+# convert the expression into an SQLite query
+query = dc.to_sql()
+```
+`dc` will now return every tuple (`name`, `age`, `height`) for `People` that have a `height` greater than 190.
+
+##### Example 2
+- Relation `Student` has two attributes: `name`, `student_id`.
+- Relation `Lecture` has three attributes: `name`, `lecture_id`, `lecture_type`, `location`.
+- Relation `Professor` has two attributes: `name`, `professor_id`.
+- Relation `teaches` has two attributes: `lecture_id`, `professor_id`.
+- Relation `listens` has two attributes: `student_id`, `lecture_id`.
+```python
+from relational_calculus.domain_calculus import *
+
+# define the variable used
+s_name = Variable('s_name')
+student_id = Variable('student_id')
+l_name = Variable('l_name')
+lecture_id = Variable('lecture_id')
+lecture_type = Variable('lecture_type')
+p_name = Variable('p_name')
+professor_id = Variable('professor_id')
+
+
+# define the expression
+dc = DomainCalculus(
+	# Return
+	Result([s_name, student_id, l_name, lecture_type, p_name]),
+	# Formula
+	Exists(
+		{lecture_id, professor_id},
+		And(
+			And(
+				And(
+					Tuple("Student", [s_name, student_id]),
+					Tuple("Lecture", [l_name, lecture_id, lecture_type, None])
+				),
+				And(
+					Tuple("Professor", [p_name, professor_id]),
+					Tuple("teaches", [lecture_id, professor_id])
+				)
+			),
+			Tuple("listens", [student_id, lecture_id])
+		)
+	)
+)
+
+# check if the expression is valid
+is_correct = dc.verify()
+
+# get latex math mode string representation
+latex = str(dc)
+
+# convert the expression into an SQLite query
+query = dc.to_sql()
+```
+`dc` will now return the all students `name`s and their `student_id`s who listen to a lecture `name` of type `lecture_type` and are taught by a professor with `name`.
