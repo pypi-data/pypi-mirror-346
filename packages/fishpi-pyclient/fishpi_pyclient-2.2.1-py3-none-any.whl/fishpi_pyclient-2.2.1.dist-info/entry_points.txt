@@ -1,0 +1,2 @@
+[console_scripts]
+fishpi-pyclient = src.main:cli
