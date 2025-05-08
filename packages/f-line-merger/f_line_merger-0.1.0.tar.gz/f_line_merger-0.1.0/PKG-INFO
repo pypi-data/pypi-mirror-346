@@ -1,0 +1,36 @@
+Metadata-Version: 2.3
+Name: f-line-merger
+Version: 0.1.0
+Summary: Simple line merger gui
+Author: Filipe Ferreira
+Author-email: ola@filipeandre.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pyqt6 (>=6.9.0,<7.0.0)
+Project-URL: Homepage, https://github.com/filipeandre/f-line-merger
+Description-Content-Type: text/markdown
+
+# f-line-merger
+
+This package provides a simple line merger gui
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install f-line-merger
+```
+
+## Usage
+
+To execute the `f-line-merger` command:
+
+```bash
+f-line-merger
+```
+
+This command will execute the gui app.
+
