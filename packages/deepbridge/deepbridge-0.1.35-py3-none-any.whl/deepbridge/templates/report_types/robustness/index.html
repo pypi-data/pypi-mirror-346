@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepBridge {{ report_type|capitalize }} Report: {{ report_data.model_name }}</title>
+    
+    <!-- Global error handler - load first to catch syntax errors early -->
+    <script>
+        // Simple inline error handler to catch syntax errors
+        window.onerror = function(message, source, lineno, colno, error) {
+            if (message && (message.includes("Illegal continue") || message.includes("no surrounding iteration"))) {
+                console.error("Caught illegal continue:", {message, source, lineno});
+                return true; // Prevent default handling
+            }
+            return false; // Let other errors propagate
+        };
+    </script>
+    <script src="js/global_error_handler.js"></script>
+    <script src="js/syntax_fixer.js"></script>
+    
+    <!-- Favicon -->
+    {% if favicon_base64 %}
+    <link rel="icon" href="data:image/png;base64,{{ favicon_base64 }}" type="image/png">
+    {% endif %}
+    
+    <!-- Plotly library -->
+    <script src="https://cdn.plot.ly/plotly-2.29.1.min.js"></script>
+    
+    <!-- Fix scripts for critical functionality -->
+    <script src="js/global_error_handler.js"></script>
+    <script src="js/syntax_fixer.js"></script>
+    <script src="js/fixed_syntax.js"></script>
+    <script src="js/model_chart_fix.js"></script>
+    <script src="js/patches.js"></script>
+    
+    <!-- Tab-specific controllers -->
+    <script src="js/controllers/details.js"></script>
+    <script src="js/charts/details.js"></script>
+    
+    <!-- CSS combinado -->
+    <style>
+        {{ css_content }}
+    </style>
+</head>
+<body>
+    <div class="report-container {{ report_type }}-report">
+        <!-- Header comum -->
+        {% include 'common/header.html' %}
+
+        <!-- Summary section (inserido diretamente como o header) -->
+        {% include 'report_types/' + report_type + '/partials/summary.html' %}
+
+        <div class="report-content">
+            <!-- Navegação em abas usando componente comum -->
+            {% with 
+                tabs=[
+                    {'id': 'overview', 'title': 'Overview'},
+                    {'id': 'details', 'title': 'Details'},
+                    {'id': 'boxplot', 'title': 'Box Plot'},
+                    {'id': 'feature_impact', 'title': 'Feature Importance'},
+                    {'id': 'importance_comparison', 'title': 'Importance Comparison'}
+                ]
+            %}
+            {% include 'common/navigation.html' %}
+            {% endwith %}
+
+            <!-- Conteúdo das abas -->
+            <div id="overview" class="tab-content active">
+                {% include 'report_types/' + report_type + '/partials/overview.html' %}
+            </div>
+            
+            <div id="details" class="tab-content">
+                {% include 'report_types/' + report_type + '/partials/details.html' %}
+            </div>
+            
+            <div id="boxplot" class="tab-content">
+                {% include 'report_types/' + report_type + '/partials/boxplot.html' %}
+            </div>
+            
+            <div id="feature_impact" class="tab-content">
+                {% include 'report_types/' + report_type + '/partials/features.html' %}
+            </div>
+            
+            <div id="importance_comparison" class="tab-content">
+                {% include 'report_types/' + report_type + '/partials/importance_comparison_fixed.html' %}
+            </div>
+        </div>
+        
+        <!-- Footer comum -->
+        {% include 'common/footer.html' %}
+    </div>
+
+    <!-- Inicialização de dados do relatório -->
+    <script>
+        // Disponibilizar dados do relatório para todos os componentes
+        window.reportData = {{ report_data_json|safe }};
+        
+        // Debug info to verify data availability
+        console.log("Report data loaded. Keys:", Object.keys(window.reportData || {}));
+        console.log("Has initial_results:", !!(window.reportData && window.reportData.initial_results));
+        if (window.reportData && window.reportData.initial_results) {
+            console.log("Initial results keys:", Object.keys(window.reportData.initial_results));
+            if (window.reportData.initial_results.models) {
+                console.log("Initial results model count:", Object.keys(window.reportData.initial_results.models).length);
+                console.log("Initial results model keys:", Object.keys(window.reportData.initial_results.models));
+            }
+        }
+        
+        // Extrair dados do gráfico, se disponíveis
+        if (window.reportData && window.reportData.chart_data_json) {
+            try {
+                // Limpar dados JSON antes de analisar
+                const jsonStr = window.reportData.chart_data_json;
+                let cleanJson = jsonStr;
+                
+                // Corrigir vírgulas finais
+                cleanJson = cleanJson.replace(/,(\s*})/g, '$1');
+                cleanJson = cleanJson.replace(/,(\s*\])/g, '$1');
+                
+                // Tratar outros problemas de sintaxe
+                cleanJson = cleanJson.replace(/\bNaN\b/g, 'null');
+                cleanJson = cleanJson.replace(/\bInfinity\b/g, 'null');
+                cleanJson = cleanJson.replace(/\b-Infinity\b/g, 'null');
+                cleanJson = cleanJson.replace(/\bundefined\b/g, 'null');
+                
+                // Analisar os dados JSON limpos
+                window.chartData = JSON.parse(cleanJson);
+                console.log("Dados de gráfico carregados com sucesso");
+                
+                // Debug chartData
+                console.log("ChartData keys:", Object.keys(window.chartData || {}));
+                console.log("Has initial_results in chartData:", !!(window.chartData && window.chartData.initial_results));
+                console.log("Has radar_chart_data in chartData:", !!(window.chartData && window.chartData.radar_chart_data));
+                
+                if (window.chartData && window.chartData.initial_results) {
+                    console.log("ChartData initial_results keys:", Object.keys(window.chartData.initial_results));
+                }
+                
+                if (window.chartData && window.chartData.radar_chart_data) {
+                    console.log("ChartData radar_chart_data keys:", Object.keys(window.chartData.radar_chart_data));
+                }
+            } catch (e) {
+                console.error("Erro ao analisar dados do gráfico:", e);
+                window.chartData = {
+                    perturbation_levels: [],
+                    feature_importance: {},
+                    model_feature_importance: {},
+                    boxplot_data: { models: [] }
+                };
+            }
+        }
+        
+        // Configuração básica do relatório
+        window.reportConfig = {
+            reportType: '{{ report_type }}',
+            modelName: '{{ report_data.model_name }}',
+            // Incluir dados de importância de características diretamente para acesso mais fácil
+            feature_importance: {{ report_data.feature_importance|tojson|default('{}') }},
+            model_feature_importance: {{ report_data.model_feature_importance|tojson|default('{}') }},
+            feature_subset: {{ report_data.feature_subset|tojson|default('[]') }}
+        };
+    </script>
+    
+    <!-- Scripts combinados -->
+    <script>
+        {{ js_content }}
+    </script>
+</body>
+</html>
