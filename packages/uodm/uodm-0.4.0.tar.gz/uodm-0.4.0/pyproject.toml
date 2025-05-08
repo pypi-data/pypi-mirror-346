@@ -1,0 +1,56 @@
+[project]
+name = "uodm"
+version = "0.4.0"
+description = "ultraminimalistic Python library for simple object-document mappint for asyncronous mongodb"
+authors = [
+    { name = "Grigory Bakunov", email = "bobuk@rubedo.cloud" },
+]
+dependencies = [
+    "pydantic>=2.10.2",
+    "motor>=3.4.0",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "Unlicense"
+
+[project.optional-dependencies]
+orjson = [
+    "orjson>=3.9.10",
+]
+sqlite = [
+    "aiosqlite>=0.19.0",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=8.3.3",
+    "mongomock>=4.3.0",
+    "bson>=0.5.10",
+    "pymongo>=4.9.2",
+    "motor>=3.6.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+asyncio_mode = "auto"
+
+[dependency-groups]
+dev = [
+    "mongomock>=4.3.0",
+    "pyright>=1.1.391",
+    "pytest-asyncio>=0.25.0",
+    "pytest>=8.3.4",
+    "mypy>=1.15.0",
+]
