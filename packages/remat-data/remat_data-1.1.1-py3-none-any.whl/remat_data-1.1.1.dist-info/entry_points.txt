@@ -1,0 +1,2 @@
+[console_scripts]
+remat-data = remat_data.dataset:main

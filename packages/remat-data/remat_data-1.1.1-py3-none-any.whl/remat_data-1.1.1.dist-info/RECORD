@@ -1,0 +1,11 @@
+remat_data/__init__.py,sha256=0whVnHTcMxxQg1I4zNW0i2pmUxg8tJgwgmZQyWubogQ,237
+remat_data/_version.py,sha256=4eH93xkDSrgkJe3fAgdNcieQrtIWleWcRi03Wfja5Gk,511
+remat_data/_version.pyi,sha256=j5kbzfm6lOn8BzASXWjGIA1yT0OlHTWqlbyZ8Si_o0E,118
+remat_data/config.py,sha256=33lf1UJ_q3SSP-Hoi2RTE-t6o_bHDr-9T1txzZA5Z-k,462
+remat_data/dataset.py,sha256=atmDEH_BtiX_z4c_8Ymg86RXmxB1lF1kqTQNyhneRx4,7501
+remat_data/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+remat_data-1.1.1.dist-info/METADATA,sha256=W3cyw7EABzNxspZLGJ0FHNqy7pAPLkayYPWV7mRuMpo,8042
+remat_data-1.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+remat_data-1.1.1.dist-info/entry_points.txt,sha256=rpGjmCetctY2GaxsBR5t3-twSBAw3edAXTmb-3rOX4c,55
+remat_data-1.1.1.dist-info/licenses/LICENSE,sha256=3dALHH0x2As3ptYn3AJWexNUAt8zKjXzZDdksf0UMRE,1522
+remat_data-1.1.1.dist-info/RECORD,,
