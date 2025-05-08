@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+emailmasterpt/__init__.py
+emailmasterpt/agendador.py
+emailmasterpt/core.py
+emailmasterpt/excecoes.py
+emailmasterpt/provedores.py
+emailmasterpt/utils.py
+emailmasterpt.egg-info/PKG-INFO
+emailmasterpt.egg-info/SOURCES.txt
+emailmasterpt.egg-info/dependency_links.txt
+emailmasterpt.egg-info/requires.txt
+emailmasterpt.egg-info/top_level.txt

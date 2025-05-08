@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: emailmasterpt
+Version: 1.0.0
+Summary: Interface unificada para envio de emails com múltiplos provedores e agendamento
+Home-page: https://github.com/seuusuario/emailmasterpt
+Author: Wuotans
+Author-email: matheus.silva231996@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: apscheduler>=3.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.0.0; extra == "dev"
+Requires-Dist: twine>=3.0.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# EmailMasterPT
+
+[![PyPI version](https://badge.fury.io/py/emailmasterpt.svg)](https://badge.fury.io/py/emailmasterpt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+O EmailMasterPT é um pacote Python que simplifica o envio de e-mails através de diversos provedores com suporte para agendamento e anexos.
+
+## Funcionalidades
+
+- ✅ Suporte para Gmail, Outlook e SMTP personalizado
+- ✅ Agendamento de e-mails
+- ✅ Anexos de arquivos
+- ✅ Múltiplos destinatários (CC e CCO)
+- ✅ Corpo do e-mail em HTML
+- ✅ Interface simples e intuitiva
+
+## Instalação
+
+```bash
+pip install emailmasterpt
+```
