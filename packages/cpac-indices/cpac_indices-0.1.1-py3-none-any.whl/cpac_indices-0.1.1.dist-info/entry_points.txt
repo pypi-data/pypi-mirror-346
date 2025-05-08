@@ -1,0 +1,2 @@
+[console_scripts]
+cpac-indices = sort_nodes:main
