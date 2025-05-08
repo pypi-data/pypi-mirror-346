@@ -1,0 +1,87 @@
+[project]
+name = "pyaqsapi"
+requires-python = ">=3.9"
+version = "1.0.2"
+# dynamic = ["version"]
+description = "United States Environmental Protection Agency (US EPA) Air Quality System (AQS) Data Mart API v2 interface."
+authors = [
+  {name = "Clinton Mccrowey", email = "mccrowey.clinton@epa.gov"},
+]
+maintainers = [
+  {name = "Clinton Mccrowey", email = "mccrowey.clinton@epa.gov"}
+]
+readme = "README.rst"
+license-files = ["LICENSE.rst"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent"
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/USEPA/pyaqsapi"
+"Package on pypi.org" = "https://pypi.org/project/pyaqsapi/"
+"AQS" = "https://www.epa.gov/aqs"
+"AQS DataMart" = "https://aqs.epa.gov/aqsweb/documents/data_mart_welcome.html"
+"AQS Data Mart API" = "https://aqs.epa.gov/aqsweb/documents/data_api.html"
+"pyaqsapi API Documentation" = "https://usepa.github.io/pyaqsapi/"
+"SOURCE" = "https://github.com/USEPA/pyaqsapi.git"
+"RAQSAPI" = "https://github.com/USEPA/RAQSAPI"
+"Issue Tracker" = "https://github.com/USEPA/pyaqsapi/issues"
+
+[build-system]
+  requires = ["setuptools >= 77.0.3", "build"]
+  build-backend = "setuptools.build_meta"
+
+
+[tool.ruff]
+lint.select = [
+  "I001",
+  "I002",
+  "E101",
+  "D100",
+  "D402",
+  "D403",
+  "D406",
+  "D407",
+  "D408",
+  "D409",
+  "D414",
+  "D415",
+  "D417",
+  "D419"]
+lint.extend-select = ["UP"]
+lint.ignore = ["D404"]
+
+
+exclude = [
+    "__init__.py",
+    ".git",
+    ".tox",
+    "ruff_cache",
+    ".spyproject",
+    ".github",
+    ".vscode",
+    "conf.py",
+    "*tests/*",
+    "dev/*"
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.setuptools]
+packages = ["pyaqsapi",
+            "pyaqsapi.bysite",
+            "pyaqsapi.bycounty",
+            "pyaqsapi.bystate",
+            "pyaqsapi.bycbsa",
+            "pyaqsapi.bypqao",
+            "pyaqsapi.byma",
+            "pyaqsapi.bybox"]
+
+[tool.black]
+line-length = 80
+target-version = ['py39', 'py310', 'py311', 'py312', 'py313']
+skip_magic_trailing_comma = true
