@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "countpy"
+version = "0.2.0"
+description = "A python package to help you count words in a text file"
+authors = ["Dalia Tavizon-Dykstra"]
+license = "MIT"
+readme = "README.md"
+include = ["tests/*", "CHANGELOG.md"]
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+matplotlib = ">=3.10.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+jupyter = "^1.1.1"
+sphinx-rtd-theme = "^3.0.2"
+myst-nb = "^1.2.0"
+sphinx-autoapi = "^3.6.0"
+python-semantic-release = {version = "^9.21.1", python = "^3.12"}
+
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version",
+]                                                    # version location
+branch = "main"                                      # branch to make releases of
+changelog_file = "CHANGELOG.md"                      # changelog file
+build_command = "pip install poetry && poetry build" # build dists 
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
