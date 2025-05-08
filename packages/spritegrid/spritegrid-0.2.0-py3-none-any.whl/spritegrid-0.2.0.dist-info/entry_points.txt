@@ -1,0 +1,2 @@
+[console_scripts]
+spritegrid = spritegrid:cli.cli
