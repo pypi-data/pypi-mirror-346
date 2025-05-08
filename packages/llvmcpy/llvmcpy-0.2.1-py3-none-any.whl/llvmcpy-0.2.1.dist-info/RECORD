@@ -1,0 +1,10 @@
+llvmcpy/__init__.py,sha256=L1WWexhjbLU7AQSFMp4gjfbeZuqWZZVZ2nE1Bl0_YDo,6553
+llvmcpy/_generator.py,sha256=mPxMXGC4rrJvRD8WWMIIGSduRKn_iWabUx0LTzu20iE,31176
+llvmcpy/tests/__init__.py,sha256=vLMC2TjUyMzogiiEvwtDF73Yc-mS6LfZbXpP4nMENTo,877
+llvmcpy/tests/concurrent.py,sha256=pnSNladlasghqlmeS7egd2yaGphbTK2nHnjvfqCeL4U,640
+llvmcpy/tests/main.py,sha256=fJQH5WoxBS7Woi_HNI-4XKaBtZILtyxYbO-CTO6_1g8,2732
+llvmcpy-0.2.1.dist-info/licenses/LICENSE.txt,sha256=oZKFbJkwQUwuJBfzN-0dnWXGDI7Nt1M8DuQ5oCOgbRk,1078
+llvmcpy-0.2.1.dist-info/METADATA,sha256=TI-InJHnSE0zk-u_Cev8Nhte6_LZjBGxj8BzMZyoQR8,4964
+llvmcpy-0.2.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+llvmcpy-0.2.1.dist-info/top_level.txt,sha256=DxCj9AoRQvc4_7uznhTt_oDTP56lH2HcI1_gziMYBe8,8
+llvmcpy-0.2.1.dist-info/RECORD,,
