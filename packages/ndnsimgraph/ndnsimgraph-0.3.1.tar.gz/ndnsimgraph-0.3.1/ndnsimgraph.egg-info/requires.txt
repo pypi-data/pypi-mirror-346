@@ -1,0 +1,5 @@
+openpyxl
+matplotlib
+pandas
+rich
+jinja2
