@@ -1,0 +1,5 @@
+[console_scripts]
+gitp = pycmd2.git.gitp:main
+llmcli = pycmd2.llama.llama_client:main
+llmqnt = pycmd2.llama.llama_quantize:main
+llmsvr = pycmd2.llama.llama_server:main
