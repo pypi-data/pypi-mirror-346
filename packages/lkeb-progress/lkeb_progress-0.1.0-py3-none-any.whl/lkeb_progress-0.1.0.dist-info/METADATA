@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: lkeb_progress
+Version: 0.1.0
+Summary: Progressbar based on Rich
+Keywords: Rich
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: rich
+Description-Content-Type: text/markdown
+
+## Progress display based on Rich
+
+Progress display with the following columns:
+
+⠇ Processing... ━━━━━━━━━━━━━━━━━━━━━━━━━╺━ 48/50 Elapsed: 0:00:10 Remaining: 0:00:00 Completion: Wed 10:00:22
