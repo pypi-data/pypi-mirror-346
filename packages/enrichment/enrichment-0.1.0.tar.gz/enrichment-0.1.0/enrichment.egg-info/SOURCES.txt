@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+enrichment/__init__.py
+enrichment/enricher.py
+enrichment.egg-info/PKG-INFO
+enrichment.egg-info/SOURCES.txt
+enrichment.egg-info/dependency_links.txt
+enrichment.egg-info/requires.txt
+enrichment.egg-info/top_level.txt
+tests/test_enricher.py
