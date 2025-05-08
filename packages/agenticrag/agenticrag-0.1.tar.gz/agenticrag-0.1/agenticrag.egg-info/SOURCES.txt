@@ -1,0 +1,8 @@
+README.md
+setup.py
+agenticrag/__init__.py
+agenticrag/main.py
+agenticrag.egg-info/PKG-INFO
+agenticrag.egg-info/SOURCES.txt
+agenticrag.egg-info/dependency_links.txt
+agenticrag.egg-info/top_level.txt
