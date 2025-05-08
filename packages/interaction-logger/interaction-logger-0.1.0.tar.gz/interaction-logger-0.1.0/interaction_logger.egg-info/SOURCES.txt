@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+integration_logger/__init__.py
+integration_logger/admin.py
+integration_logger/apps.py
+integration_logger/middleware.py
+integration_logger/models.py
+integration_logger/tests.py
+integration_logger/views.py
+integration_logger/migrations/__init__.py
+interaction_logger.egg-info/PKG-INFO
+interaction_logger.egg-info/SOURCES.txt
+interaction_logger.egg-info/dependency_links.txt
+interaction_logger.egg-info/requires.txt
+interaction_logger.egg-info/top_level.txt
