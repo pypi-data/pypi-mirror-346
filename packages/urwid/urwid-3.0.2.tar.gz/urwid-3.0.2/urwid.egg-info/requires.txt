@@ -1,0 +1,30 @@
+wcwidth
+
+[curses]
+
+[curses:sys_platform == "win32"]
+windows-curses
+
+[glib]
+PyGObject
+
+[lcd]
+pyserial
+
+[serial]
+pyserial
+
+[tornado]
+tornado>=5.0
+
+[trio]
+trio>=0.24.0
+
+[trio:python_version < "3.11"]
+exceptiongroup
+
+[twisted]
+twisted
+
+[zmq]
+zmq
