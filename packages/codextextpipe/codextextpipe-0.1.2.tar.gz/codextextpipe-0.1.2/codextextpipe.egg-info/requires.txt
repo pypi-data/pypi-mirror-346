@@ -1,0 +1,6 @@
+scikit-learn
+nltk
+sphinx
+pytest
+pandas
+bs4
