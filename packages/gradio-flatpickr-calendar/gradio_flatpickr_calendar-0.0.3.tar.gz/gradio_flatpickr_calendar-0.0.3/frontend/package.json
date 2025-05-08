@@ -1,0 +1,31 @@
+{
+  "name": "gradio_calendar",
+  "version": "0.2.4",
+  "description": "Gradio UI packages",
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "private": false,
+  "main_changeset": true,
+  "exports": {
+    ".": {
+      "gradio": "./Index.svelte"
+    },
+    "./example": {
+      "gradio": "./Example.svelte"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@gradio/atoms": "0.9.0",
+    "@gradio/markdown": "^0.10.0",
+    "@gradio/statustracker": "0.8.0",
+    "@gradio/utils": "0.7.0",
+    "@zerodevx/svelte-json-view": "^1.0.11",
+    "flatpickr": "^4.6.13",
+    "svelte-flatpickr": "^3.3.5"
+  },
+  "devDependencies": {
+    "@gradio/preview": "^0.12.1"
+  }
+}
