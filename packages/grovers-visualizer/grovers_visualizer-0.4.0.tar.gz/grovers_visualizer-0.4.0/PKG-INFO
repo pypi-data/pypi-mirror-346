@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: grovers-visualizer
+Version: 0.4.0
+Summary: Add your description here
+License-File: LICENSE
+Requires-Python: >=3.13
+Requires-Dist: argparse>=1.4.0
+Requires-Dist: numpy>=2.2.4
+Requires-Dist: qiskit-aer>=0.17.0
+Requires-Dist: qiskit[visualization]>=2.0.0
+Provides-Extra: mpl
+Requires-Dist: pyqt6>=6.9.0; extra == 'mpl'
