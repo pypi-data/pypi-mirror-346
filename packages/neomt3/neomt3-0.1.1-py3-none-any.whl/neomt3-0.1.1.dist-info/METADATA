@@ -1,0 +1,73 @@
+Metadata-Version: 2.3
+Name: neomt3
+Version: 0.1.1
+Summary: Multi-Task Multitrack Music Transcription
+License: Apache-2.0
+Author: Google Inc.
+Author-email: no-reply@google.com
+Requires-Python: >=3.12,<3.14
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: absl-py (>=2.0.0,<3.0.0)
+Requires-Dist: flax (>=0.8.0,<0.9.0)
+Requires-Dist: gin-config (>=0.5.0,<0.6.0)
+Requires-Dist: immutabledict (>=4.0.0,<5.0.0)
+Requires-Dist: jax (==0.4.20)
+Requires-Dist: jaxlib (==0.4.20)
+Requires-Dist: librosa (>=0.10.1,<0.11.0)
+Requires-Dist: matplotlib (>=3.8.3,<4.0.0)
+Requires-Dist: mir_eval (>=0.7,<0.8)
+Requires-Dist: note-seq (>=0.0.5,<0.0.6)
+Requires-Dist: numpy (>=1.26)
+Requires-Dist: pretty_midi (>=0.2.10,<0.3.0)
+Requires-Dist: protobuf (>=4.25.2,<5.0.0)
+Requires-Dist: scikit-learn (>=1.4.0,<2.0.0)
+Requires-Dist: scipy (>=1.12.0,<2.0.0)
+Requires-Dist: tensorflow (==2.16.2)
+Requires-Dist: tensorflow-datasets (>=4.9.4,<5.0.0)
+Requires-Dist: transformers[torch] (>=4.37.2,<5.0.0)
+Project-URL: Homepage, http://github.com/magenta/neomt3
+Project-URL: Repository, http://github.com/magenta/neomt3
+Description-Content-Type: text/markdown
+
+# NeoMT3: Multi-Task Multitrack Music Transcription
+
+NeoMT3 is a multi-instrument automatic music transcription model that uses the [T5X framework](https://github.com/google-research/t5x).
+
+This is a fork of the original MT3 project by Google Research, now maintained by [Igor Bogicevic](https://github.com/probablyrobot).
+
+Original work by Google Research. This is not an officially supported Google product.
+
+## Quick Start
+
+Use our [colab notebook](https://colab.research.google.com/github/probablyrobot/neomt3/blob/main/neomt3/colab/music_transcription_with_transformers.ipynb) to
+try out the model on your own audio files.
+
+## Installation
+
+```bash
+pip install neomt3
+```
+
+## Usage
+
+To use the model, import the package
+and use one of the tasks defined in [tasks.py](neomt3/tasks.py).
+
+## Train a model
+
+For now, we do not (easily) support training.  If you like, you can try to
+follow the [T5X training instructions](https://github.com/google-research/t5x#training)
+and use one of the tasks defined in [tasks.py](neomt3/tasks.py).
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+The original work was created by Google Research and is also licensed under the Apache License 2.0.
+

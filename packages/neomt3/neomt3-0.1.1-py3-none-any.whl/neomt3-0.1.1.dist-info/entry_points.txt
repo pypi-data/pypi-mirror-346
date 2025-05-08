@@ -1,0 +1,3 @@
+[console_scripts]
+neomt3=neomt3.cli:main
+
