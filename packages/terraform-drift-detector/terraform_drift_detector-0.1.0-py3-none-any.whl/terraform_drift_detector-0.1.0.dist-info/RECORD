@@ -1,0 +1,11 @@
+terraform_drift_detector/__init__.py,sha256=5nVAOLRZbj-x373SE-9p3WRvrvEs77D0rkj6-MIkQ68,137
+terraform_drift_detector/cli.py,sha256=l_GCkxz9cqPCHVVhTEi6R8HEowP0nvAP-FY018JaKpw,2939
+terraform_drift_detector/detector.py,sha256=tkXqlmKrVDvCM57vkAt3lOV-fnICFq0A7Iz_Cq0-JHw,8999
+terraform_drift_detector-0.1.0.dist-info/licenses/LICENSE,sha256=KVsgPqM9e8f4_SPOjF_eFrlPSMF5ScZYfQPuC4irMkk,1065
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_basic.py,sha256=YjDh-vHYtIuP16QM8kD48UUAB9sNvc5pItmScFYaokY,2474
+terraform_drift_detector-0.1.0.dist-info/METADATA,sha256=VLuoKviYE4F_kUFY1koKBNXPS59XzaVP96gnjbv1rOw,3637
+terraform_drift_detector-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+terraform_drift_detector-0.1.0.dist-info/entry_points.txt,sha256=Ql0dMQstV2sMZYA2nRMOIpM8wMoOF69TzhC9KlaxhsY,59
+terraform_drift_detector-0.1.0.dist-info/top_level.txt,sha256=0jOOFfLDxBVYxE5px5OBOV2OyiDoF6vXlMOAKMUpRQ8,31
+terraform_drift_detector-0.1.0.dist-info/RECORD,,
