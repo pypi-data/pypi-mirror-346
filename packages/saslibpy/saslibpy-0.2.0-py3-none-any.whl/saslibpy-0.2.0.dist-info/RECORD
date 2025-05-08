@@ -1,0 +1,11 @@
+saslibpy/__init__.py,sha256=6aJ3az8pAPbiFmVCY9CIEbsNvbwUoO8zdSYqk-Uj_jE,454
+saslibpy/_version.py,sha256=t2W9oh_Uyz1mqvSAgsXjGPfasgibu8GY8zX1ld-S9-4,25
+saslibpy/attestation.py,sha256=HkuYerGDh-CIimv8nKehLI-510aXl1rTw4EV4RoLmNk,10750
+saslibpy/credential.py,sha256=gMg3KsGR4QWIcNGjzOe5zyKCTa8uLcH40GmofmNCBAI,4653
+saslibpy/requirements.txt,sha256=gtuWJTDxIBWYW1V73iHz5f90YGbowbgiO4LtG4Pi_sI,308
+saslibpy/sas.py,sha256=rc3nT4KUpado2qS-a4_uZGy2U-dVY_ofs2RY3iLn0y0,2726
+saslibpy/schema.py,sha256=-eD74HvATqo0QmEb8Xyh-UPBK2aYj_BddiaXi0c5Q4w,9847
+saslibpy-0.2.0.dist-info/METADATA,sha256=fjC9AKMz_ReD2ZhfGk2c0Jnz4z2mHBuJeGFxtGmr7k0,11528
+saslibpy-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+saslibpy-0.2.0.dist-info/licenses/LICENSE,sha256=B76_jFodLDUI4Nx9Y0TTwCJMeeQXiR0wPxY1oUUb6Ok,1068
+saslibpy-0.2.0.dist-info/RECORD,,
