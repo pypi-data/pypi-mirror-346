@@ -1,0 +1,14 @@
+when:
+  branch: main
+  event: pull_request
+
+steps:
+  code-quality:
+    image: ghcr.io/astral-sh/uv:python3.13-bookworm
+    commands:
+    - uvx --with=pre-commit-uv
+        pre-commit run
+        --all-files
+        --color=always
+        --show-diff-on-failure
+        --verbose

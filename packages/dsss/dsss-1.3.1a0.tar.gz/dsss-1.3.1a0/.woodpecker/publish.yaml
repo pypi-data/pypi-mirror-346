@@ -1,0 +1,22 @@
+when:
+  - event: [manual, pull_request]
+    branch: main
+  - event: tag
+    ref: refs/tags/v*
+  - event: release
+
+clone:
+  - name: git
+    image: woodpeckerci/plugin-git
+    settings: { tags: true }
+
+steps:
+  - name: build
+    image: ghcr.io/astral-sh/uv:python3.13-bookworm
+    commands: [ uv build --verbose ]
+
+  - name: publish
+    image: ghcr.io/astral-sh/uv:python3.13-bookworm
+    when: [ evaluate: 'CI_PIPELINE_EVENT in ["release", "tag"]' ]
+    environment: { UV_PUBLISH_TOKEN: { from_secret: PYPI_TOKEN } }
+    commands: [ uv publish --verbose ]

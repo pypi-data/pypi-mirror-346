@@ -1,0 +1,13 @@
+when:
+  branch: main
+  event: pull_request
+
+steps:
+  sphinx:
+    image: ghcr.io/astral-sh/uv:python3.13-bookworm
+    commands:
+    # Install the package and documentation dependencies
+    - uv pip install --system .[doc]
+    # Build documentation
+    - cd doc
+    - make html

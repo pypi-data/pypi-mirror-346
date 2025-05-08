@@ -1,0 +1,21 @@
+# Python
+__pycache__
+*.egg-info
+.benchmarks
+.coverage
+.mypy_cache
+.pytest_cache
+.ruff_cache
+/build
+/dist
+/prof
+
+# Sphinx
+doc/_api/
+doc/build/
+
+# Test data
+data/
+
+# Editors, IDEs, etc.
+.vscode

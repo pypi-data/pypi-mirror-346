@@ -1,0 +1,31 @@
+when:
+  branch: main
+  event: [cron, manual, pull_request]
+
+matrix:
+  PYTHON_VERSION:
+  - "3.9"  # Earliest supported version
+  - "3.10"
+  - "3.11"
+  - "3.12"
+  - "3.13"  # Latest supported version
+
+steps:
+  pytest:
+    image: ghcr.io/astral-sh/uv:python${PYTHON_VERSION}-bookworm
+    commands:
+    # Install the package and dependencies
+    - uv pip install --system .[tests]
+    # Run tests
+    - pytest dsss
+        --sdmx-fetch-data
+        --trace-config --color=yes --durations=20 -ra --verbose
+        --cov-report=xml --cov-report=term
+        --numprocesses=8 --dist=loadscope
+  codecov:
+    image: woodpeckerci/plugin-codecov
+    settings:
+      files:
+      - coverage.xml
+      token:
+        from_secret: CODECOV_TOKEN
