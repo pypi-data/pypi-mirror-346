@@ -1,0 +1,13 @@
+numpy>=1.26
+matplotlib>=3.8
+pandas>=2
+biopython>=1.82
+colorlog
+
+[dev]
+sphinx
+sphinx_rtd_theme
+coverage[toml]
+build
+ruff
+pre-commit

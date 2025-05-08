@@ -1,0 +1,118 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "type": "SoftwareSourceCode",
+    "applicationCategory": "Bioinformatic",
+    "author": [
+        {
+            "id": "https://orcid.org/0000-0002-0220-0482",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Bioinformatics and Biostatistics Hub, Institut Pasteur, Université de Paris Cité, 75015 Paris, France"
+            },
+            "email": "bneron@pasteur.fr",
+            "familyName": "Néron",
+            "givenName": "Bertrand"
+        },
+        {
+            "id": "https://orcid.org/0000-0002-6462-8783",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Molecular diversity of microbes, Institut Pasteur, Université de Paris Cité, CNRS UMR3525, 75015 Paris, France"
+            },
+            "email": "jean.cury@normalesup.org",
+            "familyName": "Cury",
+            "givenName": "Jean"
+        },
+        {
+            "id": "https://orcid.org/0000-0001-7704-822X",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Microbial Evolutionary Genomics, Institut Pasteur, Université de Paris Cité, CNRS UMR3525, 75015 Paris, France"
+            },
+            "email": "erocha@pasteur.fr",
+            "familyName": "Rocha",
+            "givenName": "Eduardo"
+        }
+    ],
+    "codeRepository": "https://github.com/gem-pasteur/Integron_Finder",
+    "contributor": [
+        {
+            "id": "https://orcid.org/0000-0002-8793-9584",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Microbial Evolutionary Genomics, Institut Pasteur, Université de Paris Cité, CNRS UMR3525, 75015 Paris, France /  DGA CBRN Defence, 91710 Vert-le-Petit, France"
+            },
+            "email": "eloi.littner@pasteur.fr",
+            "familyName": "Littner",
+            "givenName": "Eloi"
+        },
+        {
+            "id": "https://orcid.org/0000-0002-0878-2209",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Microbial Evolutionary Genomics, Institut Pasteur, Université de Paris Cité, CNRS UMR3525, 75015 Paris, France / Ecole Doctorale FIRE–Programme Bettencourt, CRI, 75004 Paris, France"
+            },
+            "email": "matthieu.haudiquet@pasteur.fr",
+            "familyName": "Haudiquet",
+            "givenName": "Matthieu"
+        },
+        {
+            "id": "https://orcid.org/0000-0003-4797-6185",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Microbial Evolutionary Genomics, Institut Pasteur, Université de Paris Cité, CNRS UMR3525, 75015 Paris, France / Collège Doctoral, Sorbonne Université, 75005 Paris, France"
+            },
+            "email": "amandine.perrin@pasteur.fr",
+            "familyName": "Perrin",
+            "givenName": "Amandine"
+        }
+    ],
+    "dateModified": "2025-06-05",
+    "datePublished": "2015-06-19",
+    "description": "Integron_Finder is a program that detects integrons in DNA sequences.",
+    "downloadUrl": "https://pypi.org/project/integron-finder/",
+    "funder": {
+        "type": "Organization",
+        "name": "Institut Pasteur, CNRS"
+    },
+    "keywords": [
+        "integron",
+        "genomic",
+        "antibiotic resistance",
+        "bioinformatic"
+    ],
+    "license": "https://spdx.org/licenses/GPL-3.0",
+    "name": "Integron_Finder",
+    "operatingSystem": [
+        "Linux",
+        "macOS"
+    ],
+    "programmingLanguage": "Python 3",
+    "relatedLink": "https://integronfinder.readthedocs.io/en/v2.0.6/",
+    "softwareRequirements": [
+        "https://www.python.org/ftp/python/3.13.3/Python-3.13.3.tar.xz",
+        "https://pypi.org/project/pandas/2.2.3/",
+        "https://pypi.org/project/numpy/2.2.5/",
+        "https://pypi.org/project/biopython/1.85/",
+        "https://pypi.org/project/matplotlib/3.10.1/",
+        "https://pypi.org/pypi/colorlog/",
+        "http://eddylab.org/software/hmmer/hmmer-3.4.tar.gz",
+        "http://eddylab.org/infernal/infernal-1.1.5.tar.gz",
+        "https://github.com/hyattpd/Prodigal/archive/refs/tags/v2.6.3.tar.gz"
+    ],
+    "version": "2.0.6",
+    "contIntegration": "https://github.com/gem-pasteur/Integron_Finder/actions",
+    "codemeta:continuousIntegration": {
+        "id": "https://github.com/gem-pasteur/Integron_Finder/actions"
+    },
+    "developmentStatus": "active",
+    "funding": "ANR-16-CONV-0005, EQU201903007835, ANR-10-LABX-62-IBEID",
+    "issueTracker": "https://github.com/gem-pasteur/Integron_Finder/issues",
+    "referencePublication": "https://doi.org/10.3390/microorganisms10040700"
+}

@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integron_finder API Reference &mdash; IntegronFinder 2.0.6 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/_css/custom.css?v=b89f2dfc" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=3e466467"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="annotation" href="annotation.html" />
+    <link rel="prev" title="Architecture Overview" href="../overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            IntegronFinder
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/index.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/installation.html">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/installation.html#integronfinder-dependencies">IntegronFinder dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/installation.html#installation-procedure">Installation procedure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/installation.html#from-version-2-0">From Version 2.0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/installation.html#from-version-1-5-1-and-after">From Version 1.5.1 and after</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/installation.html#for-version-1-5-and-before">For Version 1.5 and before</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/installation.html#uninstallation-procedure">Uninstallation procedure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/installation.html#id2">From Version 1.5.1 and after</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/installation.html#from-version-1-0-to-version-1-5">From Version 1.0 to Version 1.5</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/installation.html#how-to-install-python">How to install Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/changes.html">What’s new ?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/changes.html#v2-0-6">V2.0.6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/changes.html#v2-0-5">V2.0.5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/changes.html#v2-0-3">V2.0.3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/changes.html#in-version-2-0">In Version 2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/tutorial.html">Quick start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/tutorial.html#for-impatient">For impatient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/tutorial.html#input-and-outputs">Input and Outputs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#inputs">Inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#custom-protein-file">Custom protein file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#outputs">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/tutorial.html#for-everyone">For everyone</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#thorough-local-detection">Thorough local detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#calin-detection">CALIN detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#functional-annotation">Functional annotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#search-for-promoter-and-atti-sites">Search for promoter and <em>attI</em> sites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#keep-intermediate-results">Keep intermediate results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#topology">Topology</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/tutorial.html#for-big-data-people">For big data people</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#parallelization">Parallelization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/tutorial.html#for-integron-diggers">For integron diggers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#clustering-of-elements">Clustering of elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#integrase">Integrase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#attc-evalue"><em>attC</em> evalue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#attc-size"><em>attC</em> size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#palindromes">Palindromes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/tutorial.html#attc-alignements"><em>attC</em> alignements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/webserver.html">web server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../user_guide/webserver.html#galaxy">Galaxy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/webserver.html#how-to-use-it">How to use it</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_guide/webserver.html#results">Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../user_guide/references.html">References</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../dev_guide.html">Developer installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../dev_guide.html#dependencies">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dev_guide.html#integron-finder-testing-procedures">Integron_Finder testing procedures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dev_guide.html#coverage">Coverage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dev_guide.html#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dev_guide.html#build-a-new-release">Build a new release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dev_guide.html#send-changes-to-upstream-repository">Send changes to upstream repository</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Architecture Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#project-files-and-directories">Project files and directories</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../overview.html#files">Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../overview.html#directories">Directories</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#technical-overview">Technical overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Integron_finder API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="annotation.html">annotation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="annotation.html#integron_finder.annotation.add_feature"><code class="docutils literal notranslate"><span class="pre">add_feature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="annotation.html#integron_finder.annotation.func_annot"><code class="docutils literal notranslate"><span class="pre">func_annot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="attc.html">attc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="attc.html#integron_finder.attc.find_attc_max"><code class="docutils literal notranslate"><span class="pre">find_attc_max()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="attc.html#integron_finder.attc.search_attc"><code class="docutils literal notranslate"><span class="pre">search_attc()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="config.html">config</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="config.html#integron_finder.config.Config"><code class="docutils literal notranslate"><span class="pre">Config</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hmm.html">hmm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hmm.html#integron_finder.hmm.read_hmm"><code class="docutils literal notranslate"><span class="pre">read_hmm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hmm.html#integron_finder.hmm.scan_hmm_bank"><code class="docutils literal notranslate"><span class="pre">scan_hmm_bank()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="infernal.html">infernal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="infernal.html#integron_finder.infernal.expand"><code class="docutils literal notranslate"><span class="pre">expand()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="infernal.html#integron_finder.infernal.find_attc"><code class="docutils literal notranslate"><span class="pre">find_attc()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="infernal.html#integron_finder.infernal.local_max"><code class="docutils literal notranslate"><span class="pre">local_max()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="infernal.html#integron_finder.infernal.read_infernal"><code class="docutils literal notranslate"><span class="pre">read_infernal()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="integrase.html">integrase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="integrase.html#integron_finder.integrase.find_integrase"><code class="docutils literal notranslate"><span class="pre">find_integrase()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html">integron</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="integron.html#integron_finder.integron.Integron"><code class="docutils literal notranslate"><span class="pre">Integron</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="integron.html#integron_finder.integron.find_integron"><code class="docutils literal notranslate"><span class="pre">find_integron()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html">prot_db</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB"><code class="docutils literal notranslate"><span class="pre">GembaseDB</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProdigalDB"><code class="docutils literal notranslate"><span class="pre">ProdigalDB</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB"><code class="docutils literal notranslate"><span class="pre">ProteinDB</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc"><code class="docutils literal notranslate"><span class="pre">SeqDesc</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="results.html">results</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="results.html#integron_finder.results._log"><code class="docutils literal notranslate"><span class="pre">_log</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="results.html#integron_finder.results.filter_calin"><code class="docutils literal notranslate"><span class="pre">filter_calin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="results.html#integron_finder.results.integrons_report"><code class="docutils literal notranslate"><span class="pre">integrons_report()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="results.html#integron_finder.results.merge_results"><code class="docutils literal notranslate"><span class="pre">merge_results()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="results.html#integron_finder.results.summary"><code class="docutils literal notranslate"><span class="pre">summary()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="topology.html">topology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="topology.html#integron_finder.topology.Topology"><code class="docutils literal notranslate"><span class="pre">Topology</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html">utils</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#integron_finder.utils.FastaIterator"><code class="docutils literal notranslate"><span class="pre">FastaIterator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#integron_finder.utils.MultiFastaReader"><code class="docutils literal notranslate"><span class="pre">MultiFastaReader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#integron_finder.utils.get_name_from_path"><code class="docutils literal notranslate"><span class="pre">get_name_from_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#integron_finder.utils.log_level"><code class="docutils literal notranslate"><span class="pre">log_level()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#integron_finder.utils.model_len"><code class="docutils literal notranslate"><span class="pre">model_len()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">IntegronFinder</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Developer Guide</a></li>
+      <li class="breadcrumb-item active">Integron_finder API Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/developer_guide/api/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="integron-finder-api-reference">
+<span id="api"></span><h1>Integron_finder API Reference<a class="headerlink" href="#integron-finder-api-reference" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="annotation.html">annotation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="annotation.html#integron_finder.annotation.add_feature"><code class="docutils literal notranslate"><span class="pre">add_feature()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="annotation.html#integron_finder.annotation.func_annot"><code class="docutils literal notranslate"><span class="pre">func_annot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="attc.html">attc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="attc.html#integron_finder.attc.find_attc_max"><code class="docutils literal notranslate"><span class="pre">find_attc_max()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="attc.html#integron_finder.attc.search_attc"><code class="docutils literal notranslate"><span class="pre">search_attc()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">config</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config.html#integron_finder.config.Config"><code class="docutils literal notranslate"><span class="pre">Config</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.__init__"><code class="docutils literal notranslate"><span class="pre">Config.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.__weakref__"><code class="docutils literal notranslate"><span class="pre">Config.__weakref__</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.default_topology"><code class="docutils literal notranslate"><span class="pre">Config.default_topology</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.func_annot_path"><code class="docutils literal notranslate"><span class="pre">Config.func_annot_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.input_dir"><code class="docutils literal notranslate"><span class="pre">Config.input_dir</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.input_seq_path"><code class="docutils literal notranslate"><span class="pre">Config.input_seq_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.log_level"><code class="docutils literal notranslate"><span class="pre">Config.log_level</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.model_attc_name"><code class="docutils literal notranslate"><span class="pre">Config.model_attc_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.model_attc_path"><code class="docutils literal notranslate"><span class="pre">Config.model_attc_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.model_dir"><code class="docutils literal notranslate"><span class="pre">Config.model_dir</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.model_integrase"><code class="docutils literal notranslate"><span class="pre">Config.model_integrase</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.model_len"><code class="docutils literal notranslate"><span class="pre">Config.model_len</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.model_phage_int"><code class="docutils literal notranslate"><span class="pre">Config.model_phage_int</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.outdir"><code class="docutils literal notranslate"><span class="pre">Config.outdir</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.result_dir"><code class="docutils literal notranslate"><span class="pre">Config.result_dir</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#integron_finder.config.Config.tmp_dir"><code class="docutils literal notranslate"><span class="pre">Config.tmp_dir()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hmm.html">hmm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hmm.html#integron_finder.hmm.read_hmm"><code class="docutils literal notranslate"><span class="pre">read_hmm()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hmm.html#integron_finder.hmm.scan_hmm_bank"><code class="docutils literal notranslate"><span class="pre">scan_hmm_bank()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="infernal.html">infernal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="infernal.html#integron_finder.infernal.expand"><code class="docutils literal notranslate"><span class="pre">expand()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="infernal.html#integron_finder.infernal.find_attc"><code class="docutils literal notranslate"><span class="pre">find_attc()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="infernal.html#integron_finder.infernal.local_max"><code class="docutils literal notranslate"><span class="pre">local_max()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="infernal.html#integron_finder.infernal.read_infernal"><code class="docutils literal notranslate"><span class="pre">read_infernal()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="integrase.html">integrase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="integrase.html#integron_finder.integrase.find_integrase"><code class="docutils literal notranslate"><span class="pre">find_integrase()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="integron.html">integron</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="integron.html#integron_finder.integron.Integron"><code class="docutils literal notranslate"><span class="pre">Integron</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.__init__"><code class="docutils literal notranslate"><span class="pre">Integron.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.__weakref__"><code class="docutils literal notranslate"><span class="pre">Integron.__weakref__</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.add_attC"><code class="docutils literal notranslate"><span class="pre">Integron.add_attC()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.add_attI"><code class="docutils literal notranslate"><span class="pre">Integron.add_attI()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.add_integrase"><code class="docutils literal notranslate"><span class="pre">Integron.add_integrase()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.add_promoter"><code class="docutils literal notranslate"><span class="pre">Integron.add_promoter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.add_proteins"><code class="docutils literal notranslate"><span class="pre">Integron.add_proteins()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.describe"><code class="docutils literal notranslate"><span class="pre">Integron.describe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.draw_integron"><code class="docutils literal notranslate"><span class="pre">Integron.draw_integron()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.has_attC"><code class="docutils literal notranslate"><span class="pre">Integron.has_attC()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.has_integrase"><code class="docutils literal notranslate"><span class="pre">Integron.has_integrase()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="integron.html#integron_finder.integron.Integron.type"><code class="docutils literal notranslate"><span class="pre">Integron.type()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="integron.html#integron_finder.integron.find_integron"><code class="docutils literal notranslate"><span class="pre">find_integron()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prot_db.html">prot_db</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB"><code class="docutils literal notranslate"><span class="pre">GembaseDB</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.__getitem__"><code class="docutils literal notranslate"><span class="pre">GembaseDB.__getitem__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.__init__"><code class="docutils literal notranslate"><span class="pre">GembaseDB.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.__iter__"><code class="docutils literal notranslate"><span class="pre">GembaseDB.__iter__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB._make_protfile"><code class="docutils literal notranslate"><span class="pre">GembaseDB._make_protfile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB._parse_lst"><code class="docutils literal notranslate"><span class="pre">GembaseDB._parse_lst()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.coding_prot_ids"><code class="docutils literal notranslate"><span class="pre">GembaseDB.coding_prot_ids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.find_gembase_file_basename"><code class="docutils literal notranslate"><span class="pre">GembaseDB.find_gembase_file_basename()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.gembase1_complete_parser"><code class="docutils literal notranslate"><span class="pre">GembaseDB.gembase1_complete_parser()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.gembase1_draft_parser"><code class="docutils literal notranslate"><span class="pre">GembaseDB.gembase1_draft_parser()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.gembase2_parser"><code class="docutils literal notranslate"><span class="pre">GembaseDB.gembase2_parser()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.gembase_sniffer"><code class="docutils literal notranslate"><span class="pre">GembaseDB.gembase_sniffer()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.get_description"><code class="docutils literal notranslate"><span class="pre">GembaseDB.get_description()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.get_lst_dir"><code class="docutils literal notranslate"><span class="pre">GembaseDB.get_lst_dir()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.GembaseDB.get_replicon_type"><code class="docutils literal notranslate"><span class="pre">GembaseDB.get_replicon_type()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProdigalDB"><code class="docutils literal notranslate"><span class="pre">ProdigalDB</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProdigalDB.__getitem__"><code class="docutils literal notranslate"><span class="pre">ProdigalDB.__getitem__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProdigalDB.__iter__"><code class="docutils literal notranslate"><span class="pre">ProdigalDB.__iter__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProdigalDB._make_protfile"><code class="docutils literal notranslate"><span class="pre">ProdigalDB._make_protfile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProdigalDB.coding_prot_ids"><code class="docutils literal notranslate"><span class="pre">ProdigalDB.coding_prot_ids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProdigalDB.get_description"><code class="docutils literal notranslate"><span class="pre">ProdigalDB.get_description()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB"><code class="docutils literal notranslate"><span class="pre">ProteinDB</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB.__getitem__"><code class="docutils literal notranslate"><span class="pre">ProteinDB.__getitem__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB.__init__"><code class="docutils literal notranslate"><span class="pre">ProteinDB.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB.__iter__"><code class="docutils literal notranslate"><span class="pre">ProteinDB.__iter__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB.__weakref__"><code class="docutils literal notranslate"><span class="pre">ProteinDB.__weakref__</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB._make_db"><code class="docutils literal notranslate"><span class="pre">ProteinDB._make_db()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB._make_protfile"><code class="docutils literal notranslate"><span class="pre">ProteinDB._make_protfile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB.coding_prot_ids"><code class="docutils literal notranslate"><span class="pre">ProteinDB.coding_prot_ids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB.get_description"><code class="docutils literal notranslate"><span class="pre">ProteinDB.get_description()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB.is_pseudo_gene"><code class="docutils literal notranslate"><span class="pre">ProteinDB.is_pseudo_gene()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.ProteinDB.protfile"><code class="docutils literal notranslate"><span class="pre">ProteinDB.protfile</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc"><code class="docutils literal notranslate"><span class="pre">SeqDesc</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc.__getnewargs__"><code class="docutils literal notranslate"><span class="pre">SeqDesc.__getnewargs__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc.__new__"><code class="docutils literal notranslate"><span class="pre">SeqDesc.__new__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc.__replace__"><code class="docutils literal notranslate"><span class="pre">SeqDesc.__replace__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc.__repr__"><code class="docutils literal notranslate"><span class="pre">SeqDesc.__repr__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc._asdict"><code class="docutils literal notranslate"><span class="pre">SeqDesc._asdict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc._make"><code class="docutils literal notranslate"><span class="pre">SeqDesc._make()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc._replace"><code class="docutils literal notranslate"><span class="pre">SeqDesc._replace()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc.id"><code class="docutils literal notranslate"><span class="pre">SeqDesc.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc.start"><code class="docutils literal notranslate"><span class="pre">SeqDesc.start</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc.stop"><code class="docutils literal notranslate"><span class="pre">SeqDesc.stop</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="prot_db.html#integron_finder.prot_db.SeqDesc.strand"><code class="docutils literal notranslate"><span class="pre">SeqDesc.strand</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="results.html">results</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="results.html#integron_finder.results._log"><code class="docutils literal notranslate"><span class="pre">_log</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#integron_finder.results.filter_calin"><code class="docutils literal notranslate"><span class="pre">filter_calin()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#integron_finder.results.integrons_report"><code class="docutils literal notranslate"><span class="pre">integrons_report()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#integron_finder.results.merge_results"><code class="docutils literal notranslate"><span class="pre">merge_results()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#integron_finder.results.summary"><code class="docutils literal notranslate"><span class="pre">summary()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="topology.html">topology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="topology.html#integron_finder.topology.Topology"><code class="docutils literal notranslate"><span class="pre">Topology</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topology.html#integron_finder.topology.Topology.__getitem__"><code class="docutils literal notranslate"><span class="pre">Topology.__getitem__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="topology.html#integron_finder.topology.Topology.__init__"><code class="docutils literal notranslate"><span class="pre">Topology.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="topology.html#integron_finder.topology.Topology.__weakref__"><code class="docutils literal notranslate"><span class="pre">Topology.__weakref__</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="topology.html#integron_finder.topology.Topology._gembase_replicon_default_topo"><code class="docutils literal notranslate"><span class="pre">Topology._gembase_replicon_default_topo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="topology.html#integron_finder.topology.Topology._parse"><code class="docutils literal notranslate"><span class="pre">Topology._parse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="topology.html#integron_finder.topology.Topology._parse_topology"><code class="docutils literal notranslate"><span class="pre">Topology._parse_topology()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="utils.html#integron_finder.utils.FastaIterator"><code class="docutils literal notranslate"><span class="pre">FastaIterator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#integron_finder.utils.FastaIterator.__init__"><code class="docutils literal notranslate"><span class="pre">FastaIterator.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#integron_finder.utils.FastaIterator.__len__"><code class="docutils literal notranslate"><span class="pre">FastaIterator.__len__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#integron_finder.utils.FastaIterator.__next__"><code class="docutils literal notranslate"><span class="pre">FastaIterator.__next__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#integron_finder.utils.FastaIterator.__weakref__"><code class="docutils literal notranslate"><span class="pre">FastaIterator.__weakref__</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#integron_finder.utils.FastaIterator._check_seq_alphabet_compliance"><code class="docutils literal notranslate"><span class="pre">FastaIterator._check_seq_alphabet_compliance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#integron_finder.utils.FastaIterator._set_topologies"><code class="docutils literal notranslate"><span class="pre">FastaIterator._set_topologies()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html#integron_finder.utils.MultiFastaReader"><code class="docutils literal notranslate"><span class="pre">MultiFastaReader</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#integron_finder.utils.MultiFastaReader.__init__"><code class="docutils literal notranslate"><span class="pre">MultiFastaReader.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#integron_finder.utils.MultiFastaReader.__next__"><code class="docutils literal notranslate"><span class="pre">MultiFastaReader.__next__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#integron_finder.utils.MultiFastaReader.__weakref__"><code class="docutils literal notranslate"><span class="pre">MultiFastaReader.__weakref__</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#integron_finder.utils.MultiFastaReader.close"><code class="docutils literal notranslate"><span class="pre">MultiFastaReader.close()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html#integron_finder.utils.get_name_from_path"><code class="docutils literal notranslate"><span class="pre">get_name_from_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html#integron_finder.utils.log_level"><code class="docutils literal notranslate"><span class="pre">log_level()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html#integron_finder.utils.model_len"><code class="docutils literal notranslate"><span class="pre">model_len()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../overview.html" class="btn btn-neutral float-left" title="Architecture Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="annotation.html" class="btn btn-neutral float-right" title="annotation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2015-2025 Institut Pasteur, Paris, CNRS..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+
+<div class="licensing">
+  <p>
+    This documentation is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+      <img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">.
+    </a>
+  </p>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+<a href="https://github.com/gem-pasteur/Integron_Finder">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+         src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
+         alt="Fork me on GitHub"
+         data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+</a>
+
+
+
+</body>
+</html>
