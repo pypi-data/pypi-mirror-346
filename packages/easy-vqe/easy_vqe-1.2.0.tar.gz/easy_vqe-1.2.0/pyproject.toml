@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easy_vqe"
+version = "1.2.0" 
+authors = [
+  { name="Abdelrahman Elsayed Ahmed", email="abdo.elsayd102@gmail.com" },
+]
+description = "A user-friendly wrapper for setting up and running VQE calculations with Qiskit."
+readme = "README.md"
+license = {text = "Apache-2.0"} 
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha", 
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Typing :: Typed",
+]
+
+dependencies = [
+    "qiskit>=0.45",        
+    "qiskit-aer>=0.12",
+    "numpy>=1.20",
+    "scipy>=1.7",
+    "matplotlib>=3.4",
+    "pylatexenc>=2.10"
+]
+
+[project.optional-dependencies]
+test = [ 
+    "pytest>=7.0",
+]
+
+dev = [ 
+    "easy_vqe[test]", 
+    "ipython",      
+]
+
+[project.urls] 
+"Homepage" = "https://github.com/7Abdoman7/easy_vqe" 
+"Bug Tracker" = "https://github.com/7Abdoman7/easy_vqe/issues" 
