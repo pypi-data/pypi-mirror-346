@@ -1,0 +1,42 @@
+anime_score:
+  five_star_percentage: 97.0
+  four_star_percentage: 3.0
+  one_star_percentage: 1.0
+  reviewer_count: 5182
+  score: 4.9
+  three_star_percentage: 1.0
+  two_star_percentage: 1.0
+episodes:
+- name: '1'
+  sn: '22238'
+- name: '2'
+  sn: '22307'
+- name: '3'
+  sn: '22308'
+- name: '4'
+  sn: '22416'
+- name: '5'
+  sn: '22417'
+- name: '6'
+  sn: '22664'
+- name: '7'
+  sn: '22665'
+- name: '8'
+  sn: '22833'
+- name: '9'
+  sn: '22834'
+- name: '10'
+  sn: '23009'
+- name: '11'
+  sn: '23010'
+- name: '12'
+  sn: '23160'
+- name: '13'
+  sn: '23161'
+metadata:
+  作品類型: 推理懸疑
+  台灣代理: 曼迪
+  對象族群: 青年
+  導演監督: 木下麥
+  製作廠商: P.I.C.S. × OLM
+sn: '23373'

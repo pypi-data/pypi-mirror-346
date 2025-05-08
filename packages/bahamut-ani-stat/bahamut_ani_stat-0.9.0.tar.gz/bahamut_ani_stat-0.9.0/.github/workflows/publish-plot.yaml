@@ -1,0 +1,39 @@
+name: "Publish plots to GitHub Page"
+
+on:
+  push:
+    branches:
+    - 'accumulate-data'
+  workflow_dispatch:
+
+jobs:
+  plot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          version: "latest"
+
+      - name: Install dependencies
+        run: |
+          uv tool install invoke
+          inv env.init-dev --groups-to-install doc --no-pre-commit
+
+      - name: Build docs
+        run: |
+          inv doc.build --no-local
+
+      - name: Push documentation to Github Page
+        uses: peaceiris/actions-gh-pages@v4.0.0
+        with:
+          personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./site

@@ -1,0 +1,33 @@
+name: Publish Python package to PyPI
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  publish-pypi-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          version: "latest"
+
+      - name: Install dependencies
+        run: |
+          uv tool install invoke
+          inv env.init-dev --no-pre-commit
+
+      - name: Build package
+        run: |
+          inv build.dist
+
+      - name: Publish package
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.pypi_password }}
