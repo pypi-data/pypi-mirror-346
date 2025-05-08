@@ -1,0 +1,7 @@
+boto3_pydantic_finspace_data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_finspace_data/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_finspace_data/finspace_data_classes.py,sha256=GNSeLqXnw1e9UYbarwdxsCVP_WMSfLsU7Csr0u_sDZg,17235
+boto3_pydantic_finspace_data/finspace_data_constants.py,sha256=MJnk3nJ562s8deRVHnfmtvehhtG0DDU6iYWP5vhTwR0,8375
+boto3_pydantic_finspace_data-1.0.0.dist-info/METADATA,sha256=2-V5nTNfBu60XZfhAh5Q1bAR5o-gHh-CRe-jTB5DMrM,1430
+boto3_pydantic_finspace_data-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_finspace_data-1.0.0.dist-info/RECORD,,
