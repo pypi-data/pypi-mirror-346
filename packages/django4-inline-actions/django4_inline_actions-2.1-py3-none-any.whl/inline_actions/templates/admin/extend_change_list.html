@@ -1,0 +1,21 @@
+{% extends "admin/change_list.html" %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script>
+        (function() {
+            document.addEventListener("DOMContentLoaded", function(event) {
+                let inline_actions = document.querySelectorAll(".inline_actions input");
+                for (var i=0; i < inline_actions.length; i++) {
+                    inline_actions[i].addEventListener("click", function(e) {
+                        if(!confirm("Do you really want to " + e.target.value + "?")) {
+                            e.preventDefault();
+                        }
+                    });
+                }
+            });
+        })();
+    </script>
+{% endblock %}

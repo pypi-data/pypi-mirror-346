@@ -1,0 +1,11 @@
+inline_actions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inline_actions/actions.py,sha256=kDCIgG4JSvllVVN5RzjV9aMChw7GrZhvSwyHI7xtoGg,1425
+inline_actions/admin.py,sha256=QfZ2A1yibu7c9VMiLQrvJHJdt3ZFqCkevv1ctP4jR6A,10489
+inline_actions/static/inline_actions/css/inline_actions.css,sha256=3bczi7yV3nb1ZTVSUJnr2U-rotNTAwyEH89kqDEc6fg,245
+inline_actions/templates/admin/extend_change_list.html,sha256=SA_q6WerOjXvpCq84F4eYHAEuvVVWMIt7Mt_bRfHb4U,916
+inline_actions/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inline_actions/templatetags/inline_action_tags.py,sha256=3_Kvn-Dtf0aUGzPMJJfVzIWtNtcykbLAh6KqNGKNvE0,810
+django4_inline_actions-2.1.dist-info/LICENSE,sha256=TBh5dxZZCvZLPg8c_lr8hGls_NhcVzUJHc6-YaJ8ckE,1537
+django4_inline_actions-2.1.dist-info/METADATA,sha256=K3QEe72dfegkDdbtOcB32kLBN9u0Eb1OJBjCvYZFceI,14545
+django4_inline_actions-2.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+django4_inline_actions-2.1.dist-info/RECORD,,
