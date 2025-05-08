@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+dash_breakpoints_new/WindowBreakpoints.py
+dash_breakpoints_new/__init__.py
+dash_breakpoints_new/_imports_.py
+dash_breakpoints_new/dash_breakpoints_new.js
+dash_breakpoints_new/metadata.json
+dash_breakpoints_new/package-info.json
+dash_breakpoints_new/proptypes.js
+dash_breakpoints_new.egg-info/PKG-INFO
+dash_breakpoints_new.egg-info/SOURCES.txt
+dash_breakpoints_new.egg-info/dependency_links.txt
+dash_breakpoints_new.egg-info/top_level.txt
