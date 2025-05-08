@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "movie_frame_extractor_xethhung12"
+version = "0.0.1"
+authors = [
+  { name="Xeth Hung", email="adamhung12@gmail.com" },
+]
+dependencies = [
+    "opencv-python"
+]
+description = "A small program to extract movie frame from video"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/xh-dev/movie-frame-extractor"
+Issues = "https://github.com/xh-dev/movie-frame-extractor/issues"
+
+[project.scripts]
+movie-frame-extracting = "movie_frame_extractor_xethhung12.main:cmd"
