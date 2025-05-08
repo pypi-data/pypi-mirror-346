@@ -1,0 +1,13 @@
+tags:
+  - Device Control
+summary: Check if the hardware device is connected.
+responses:
+  200:
+    description: Returns the connection status.
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            connected:
+              type: boolean 
