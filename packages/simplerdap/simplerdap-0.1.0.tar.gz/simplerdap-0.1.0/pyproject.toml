@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simplerdap"
+version = "0.1.0"
+authors = [
+    { name="deepnor", email="hellnor@outlook.com" },
+]
+description = "A simple, lightweight Python library for RDAP lookups using IANA bootstrap data or custom bootstrap files."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Topic :: Internet",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["rdap", "iana", "lookup", "domain", "ip address", "asn"]
+
+[project.urls]
+"Repository" = "https://github.com/deepnor/SimpleRDAP"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
