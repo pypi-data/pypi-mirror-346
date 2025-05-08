@@ -1,0 +1,12 @@
+rgwfuncs/__init__.py,sha256=LSn54Tlyskcb6Wab_wUpPLB6UGMe5LdrB3GU88mDEbU,1712
+rgwfuncs/algebra_lib.py,sha256=rKFITfpWfgdBswnbMUuS41XgndEt-jUVz2ObO_ik7eM,42234
+rgwfuncs/df_lib.py,sha256=QgEydReadUBbBkyWGaDfB_OjtALGdjKmzp_S9YZlUks,76266
+rgwfuncs/docs_lib.py,sha256=i63NzX-V8cGhikYdtkRGAEe2VcuwpXxDUyTRa9xI7l8,1972
+rgwfuncs/interactive_shell_lib.py,sha256=YN0ZnM5twIsOeDKuOQ9ZGURCvvBX0RZjM4a1vO1C3E8,4281
+rgwfuncs/str_lib.py,sha256=hE0VfP6rhQpczsKyCZvH3G1aMRwngKnkW3NTYCEc0Po,3208
+rgwfuncs-0.0.96.dist-info/licenses/LICENSE,sha256=jLvt20gcUZYB8UOvyBvyKQ1qhYYhD__qP7ZDx2lPFkU,1062
+rgwfuncs-0.0.96.dist-info/METADATA,sha256=s2T3236W7cPHPnCM8dsFHk238-BIfncEBpzjVDToBwc,62223
+rgwfuncs-0.0.96.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+rgwfuncs-0.0.96.dist-info/entry_points.txt,sha256=j-c5IOPIQ0252EaOV6j6STio56sbXl2C4ym_fQ0lXx0,43
+rgwfuncs-0.0.96.dist-info/top_level.txt,sha256=aGuVIzWsKiV1f2gCb6mynx0zx5ma0B1EwPGFKVEMTi4,9
+rgwfuncs-0.0.96.dist-info/RECORD,,
