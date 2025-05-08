@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+gspreadplusplus/__init__.py
+gspreadplusplus/_version.py
+gspreadplusplus/core.py
+gspreadplusplus/functions.py
+gspreadplusplus/operations.py
+gspreadplusplus/utils.py
+gspreadplusplus.egg-info/PKG-INFO
+gspreadplusplus.egg-info/SOURCES.txt
+gspreadplusplus.egg-info/dependency_links.txt
+gspreadplusplus.egg-info/requires.txt
+gspreadplusplus.egg-info/top_level.txt
