@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: websearch4ai
+Version: 0.0.1
+Summary: A Python library for AI web search
+Home-page: https://github.com/zinodynn/websearch4ai
+Author: Zino
+Author-email: gushante@163.com
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# websearch4ai
+
+A Python library for AI web search capabilities.
+
+## Installation
+
+```bash
+pip install websearch4ai
