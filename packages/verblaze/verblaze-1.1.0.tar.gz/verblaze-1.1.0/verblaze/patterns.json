@@ -1,0 +1,633 @@
+{
+  "flutter": {
+    "code_patterns": [
+      {
+        "name": "strings",
+        "pattern": "(?:'([^'\\\\]*(?:\\\\.[^'\\\\]*)*)'|\"([^\"\\\\]*(?:\\\\.[^\"\\\\]*)*)\")"
+      }
+    ],
+    "prefixes_to_ignore": [
+      "package:",
+      "http:",
+      "https:",
+      "dart:",
+      "mailto:",
+      "tel:",
+      "sms:",
+      "print(",
+      "debugPrint(",
+      "log(",
+      "assert(",
+      "throw(",
+      "Uri.parse(",
+      "RegExp(",
+      "../"
+    ],
+    "filtering_patterns": [
+      "^[A-Z][A-Za-z0-9]+\\.[A-Za-z0-9]+",
+      ".*\\.(png|jpg|jpeg|gif|svg)$"
+    ],
+    "keywords_to_ignore": [
+      "final",
+      "const",
+      "var",
+      "void",
+      "null",
+      "true",
+      "false"
+    ]
+  },
+  "react": {
+    "jsx_patterns": [
+      {
+        "name": "text_nodes",
+        "pattern": "(?:>([^<>{}]+)<)"
+      },
+      {
+        "name": "attributes",
+        "pattern": "(?:(?:alt|title|placeholder|aria-label|label)=[\"']([^\"']+)[\"'])"
+      }
+    ],
+    "template_patterns": [
+      {
+        "name": "template_literals",
+        "pattern": "`([^`]*?)`"
+      }
+    ],
+    "prefixes_to_ignore": [
+      "import ",
+      "require(",
+      "console.log(",
+      "http:",
+      "https:",
+      "mailto:",
+      "tel:",
+      "sms:",
+      "../",
+      "./",
+      "export ",
+      "function",
+      "const ",
+      "let ",
+      "var ",
+      "{",
+      "}",
+      "return "
+    ]
+  },
+  "react-native": {
+    "jsx_patterns": [
+      {
+        "name": "text_nodes",
+        "pattern": "(?:>([^<>{}]+)<)"
+      },
+      {
+        "name": "attributes",
+        "pattern": "(?:(?:alt|title|placeholder|aria-label|label)=[\"']([^\"']+)[\"'])"
+      }
+    ],
+    "template_patterns": [
+      {
+        "name": "template_literals",
+        "pattern": "`([^`]*?)`"
+      }
+    ],
+    "prefixes_to_ignore": [
+      "import ",
+      "require(",
+      "console.log(",
+      "http:",
+      "https:",
+      "mailto:",
+      "tel:",
+      "sms:",
+      "../",
+      "./",
+      "export ",
+      "function",
+      "const ",
+      "let ",
+      "var ",
+      "{",
+      "}",
+      "return "
+    ]
+  },
+  "nextjs": {
+    "jsx_patterns": [
+      {
+        "name": "text_nodes",
+        "pattern": "(?:>([^<>{}]+)<)"
+      },
+      {
+        "name": "attributes",
+        "pattern": "(?:(?:alt|title|placeholder|aria-label|label)=[\"']([^\"']+)[\"'])"
+      }
+    ],
+    "template_patterns": [
+      {
+        "name": "template_literals",
+        "pattern": "`([^`]*?)`"
+      }
+    ],
+    "prefixes_to_ignore": [
+      "import ",
+      "export ",
+      "require(",
+      "console.log(",
+      "http:",
+      "https:",
+      "mailto:",
+      "tel:",
+      "sms:",
+      "../",
+      "./",
+      "function",
+      "const ",
+      "let ",
+      "var ",
+      "{",
+      "}",
+      "return "
+    ]
+  },
+  "swift": {
+    "ui_patterns": [
+      {
+        "name": "text",
+        "pattern": "text=\"([^\"]*)\""
+      },
+      {
+        "name": "placeholder",
+        "pattern": "placeholder=\"([^\"]*)\""
+      },
+      {
+        "name": "title",
+        "pattern": "title=\"([^\"]*)\""
+      },
+      {
+        "name": "accessibilityLabel",
+        "pattern": "accessibilityLabel=\"([^\"]*)\""
+      },
+      {
+        "name": "accessibilityHint",
+        "pattern": "accessibilityHint=\"([^\"]*)\""
+      },
+      {
+        "name": "headerTitle",
+        "pattern": "headerTitle=\"([^\"]*)\""
+      },
+      {
+        "name": "footerTitle",
+        "pattern": "footerTitle=\"([^\"]*)\""
+      },
+      {
+        "name": "prompt",
+        "pattern": "prompt=\"([^\"]*)\""
+      },
+      {
+        "name": "message",
+        "pattern": "message=\"([^\"]*)\""
+      }
+    ],
+    "code_patterns": [
+      {
+        "name": "strings",
+        "pattern": "(?<!\\\\)\"([^\"\\\\]*(?:\\\\.[^\"\\\\]*)*)\""
+      },
+      {
+        "name": "localized",
+        "pattern": "NSLocalizedString\\(\"([^\"]+)\""
+      },
+      {
+        "name": "text_assignment",
+        "pattern": "\\.text\\s*=\\s*\"([^\"]+)\""
+      },
+      {
+        "name": "title_assignment",
+        "pattern": "\\.title\\s*=\\s*\"([^\"]+)\""
+      },
+      {
+        "name": "text_component",
+        "pattern": "Text\\(\"([^\"]+)\"\\)"
+      }
+    ],
+    "prefixes_to_ignore": [
+      "import ",
+      "class ",
+      "func ",
+      "let ",
+      "var ",
+      "//",
+      "/*",
+      "print(",
+      "NSLog(",
+      "http:",
+      "https:",
+      "mailto:",
+      "tel:",
+      "sms:",
+      "IBAction",
+      "IBOutlet",
+      "UIViewController",
+      "UIView",
+      "Font.custom(",
+      "Font.system(",
+      "Image(",
+      "Color(",
+      "forKey:",
+      "key:",
+      "Bundle.",
+      "Bundle("
+    ],
+    "filtering_patterns": [
+      "^Font\\.custom\\(.+\\)",
+      "^Image\\(.+\\)",
+      "^Color\\(.+\\)",
+      "^systemName:.+",
+      "^named:.+",
+      "^forKey:.+",
+      "^key:.+",
+      "^UserDefaults\\.standard\\.\\w+",
+      "^loginview\\.\\w+",
+      "^Bundle\\.main\\.\\w+",
+      "^\\.[\\w]+(:|$)",
+      ".*\\.(png|jpg|jpeg|gif|pdf|svg)$",
+      ".*\\.(swift|storyboard|xib)$",
+      "^return .+",
+      "^self\\.\\w+",
+      "^super\\.\\w+",
+      "^@IBOutlet .+",
+      "^@IBAction .+",
+      "^@State .+",
+      "^@Binding .+",
+      "^@ObservedObject .+",
+      "^[A-Z][A-Za-z0-9]+\\.[A-Za-z0-9.]+",
+      "^#[a-zA-Z0-9]+",
+      "^[a-z]+:/{2}",
+      "^[\\w.]+\\.[\\w.]+_[\\w.]+$"
+    ],
+    "keywords_to_ignore": [
+      "func",
+      "var",
+      "let",
+      "class",
+      "struct",
+      "enum",
+      "protocol",
+      "extension",
+      "init",
+      "deinit",
+      "self",
+      "Self",
+      "super",
+      "override",
+      "mutating",
+      "static",
+      "dynamic",
+      "final",
+      "open",
+      "public",
+      "internal",
+      "private",
+      "fileprivate",
+      "import",
+      "typealias",
+      "associatedtype",
+      "switch",
+      "case",
+      "default",
+      "if",
+      "else",
+      "for",
+      "while",
+      "repeat",
+      "do",
+      "return",
+      "break",
+      "continue",
+      "fallthrough",
+      "defer",
+      "throw",
+      "throws",
+      "rethrows",
+      "guard",
+      "in",
+      "as",
+      "is",
+      "try",
+      "catch",
+      "nil",
+      "true",
+      "false",
+      "where",
+      "#if",
+      "#endif",
+      "#selector",
+      "@IBOutlet",
+      "@IBAction",
+      "@objc",
+      "@available",
+      "weak",
+      "strong",
+      "unowned"
+    ]
+  },
+  "kotlin": {
+    "ui_patterns": [
+      {
+        "name": "text",
+        "pattern": "android:text=\"([^\"@]*)\""
+      },
+      {
+        "name": "hint",
+        "pattern": "android:hint=\"([^\"@]*)\""
+      },
+      {
+        "name": "contentDescription",
+        "pattern": "android:contentDescription=\"([^\"@]*)\""
+      },
+      {
+        "name": "title",
+        "pattern": "android:title=\"([^\"@]*)\""
+      },
+      {
+        "name": "subtitle",
+        "pattern": "android:subtitle=\"([^\"@]*)\""
+      },
+      {
+        "name": "summary",
+        "pattern": "android:summary=\"([^\"@]*)\""
+      },
+      {
+        "name": "dialogTitle",
+        "pattern": "android:dialogTitle=\"([^\"@]*)\""
+      },
+      {
+        "name": "dialogMessage",
+        "pattern": "android:dialogMessage=\"([^\"@]*)\""
+      }
+    ],
+    "code_patterns": [
+      {
+        "name": "strings",
+        "pattern": "(?<!\\\\)\"([^\"\\\\]*(?:\\\\.[^\"\\\\]*)*)\""
+      },
+      {
+        "name": "getString",
+        "pattern": "getString\\(.*?\"([^\"]+)\"\\)"
+      },
+      {
+        "name": "setText",
+        "pattern": "setText\\(\"([^\"]+)\"\\)"
+      },
+      {
+        "name": "setTitle",
+        "pattern": "setTitle\\(\"([^\"]+)\"\\)"
+      },
+      {
+        "name": "text_component",
+        "pattern": "Text\\(\"([^\"]+)\"\\)"
+      },
+      {
+        "name": "text_component_res",
+        "pattern": "Text\\(stringResource\\(.*?\"([^\"]+)\"\\)\\)"
+      },
+      {
+        "name": "button_component",
+        "pattern": "Button\\(.*?\\)\\s*\\{[^}]*Text\\(\"([^\"]+)\"\\)"
+      },
+      {
+        "name": "alertdialog_component",
+        "pattern": "AlertDialog\\(.*?title\\s*=\\s*\\{[^}]*Text\\(\"([^\"]+)\"\\)"
+      },
+      {
+        "name": "alertdialog_message",
+        "pattern": "AlertDialog\\(.*?text\\s*=\\s*\\{[^}]*Text\\(\"([^\"]+)\"\\)"
+      }
+    ],
+    "prefixes_to_ignore": [
+      "import ",
+      "class ",
+      "fun ",
+      "val ",
+      "var ",
+      "//",
+      "/*",
+      "print(",
+      "println(",
+      "http:",
+      "https:",
+      "mailto:",
+      "tel:",
+      "sms:",
+      "R.layout",
+      "R.id",
+      "android:",
+      "@+id"
+    ],
+    "filtering_patterns": [
+      "^R\\.",
+      "^androidx\\.",
+      "^android\\.",
+      "^com\\.",
+      "^java\\.",
+      "^kotlin\\.",
+      "^@\\w+",
+      "^by\\s+",
+      "^Color\\(",
+      "^MaterialTheme",
+      "^remember",
+      "^mutableStateOf",
+      "^Modifier\\.",
+      "^\\.\\w+\\(",
+      "^\\{.*\\}$",
+      "^@Composable",
+      "^@Preview",
+      "^@Inject",
+      "^@Module",
+      "^@Provides",
+      "^@HiltViewModel",
+      "^viewModel\\.",
+      "^navController\\.",
+      "^coroutineScope\\.",
+      "^sharedPreferences\\.",
+      "^editor\\.",
+      "^bitmap\\.",
+      "^file\\.",
+      "^\\w+\\.\\w+\\(.*\\)",
+      ".*\\.(png|jpg|jpeg|gif|svg|xml|kt|java)$",
+      "^Uri\\.",
+      "^intent\\.",
+      "^bundle\\.",
+      "^activity\\.",
+      "^context\\.",
+      "^view\\."
+    ],
+    "keywords_to_ignore": [
+      "fun",
+      "val",
+      "var",
+      "class",
+      "object",
+      "interface",
+      "suspend",
+      "companion",
+      "override",
+      "private",
+      "protected",
+      "public",
+      "internal",
+      "abstract",
+      "final",
+      "sealed",
+      "open",
+      "data",
+      "enum",
+      "annotation",
+      "init",
+      "constructor",
+      "super",
+      "this",
+      "lateinit",
+      "lazy",
+      "by",
+      "get",
+      "set",
+      "true",
+      "false",
+      "null",
+      "if",
+      "else",
+      "when",
+      "for",
+      "while",
+      "do",
+      "continue",
+      "break",
+      "return",
+      "try",
+      "catch",
+      "finally",
+      "throw",
+      "throws",
+      "as",
+      "is",
+      "in",
+      "!in",
+      "out",
+      "package",
+      "import",
+      "typealias",
+      "infix",
+      "operator",
+      "inline",
+      "reified",
+      "tailrec",
+      "external",
+      "const",
+      "inner",
+      "crossinline",
+      "noinline",
+      "actual",
+      "expect",
+      "setOf",
+      "listOf",
+      "mapOf",
+      "mutableListOf",
+      "mutableMapOf",
+      "arrayOf",
+      "arrayListOf",
+      "hashMapOf",
+      "hashSetOf",
+      "sequenceOf",
+      "apply",
+      "let",
+      "run",
+      "with",
+      "also",
+      "takeIf",
+      "takeUnless",
+      "repeat",
+      "TODO"
+    ]
+  },
+  "blazor": {
+    "code_patterns": [
+      {
+        "name": "double_quotes",
+        "pattern": "\"([^\"\\\\]*(?:\\\\.[^\"\\\\]*)*)\""
+      },
+      {
+        "name": "single_quotes",
+        "pattern": "'([^'\\\\]*(?:\\\\.[^'\\\\]*)*)'"
+      },
+      {
+        "name": "bind",
+        "pattern": "@bind=\"([^\"]+)\""
+      }
+    ],
+    "template_patterns": [
+      {
+        "name": "template_literals",
+        "pattern": "`([^`]*?)`"
+      }
+    ],
+    "prefixes_to_ignore": [
+      "using ",
+      "namespace ",
+      "public ",
+      "private ",
+      "protected ",
+      "class ",
+      "void ",
+      "return ",
+      "http:",
+      "https:",
+      "mailto:",
+      "tel:",
+      "sms:",
+      "../",
+      "./",
+      "var ",
+      "let ",
+      "const ",
+      "{",
+      "}",
+      "@"
+    ]
+  },
+  "qt": {
+    "code_patterns": [
+      {
+        "name": "strings",
+        "pattern": "\"([^\"\\\\]*(?:\\\\.[^\"\\\\]*)*)\""
+      }
+    ],
+    "prefixes_to_ignore": [
+      "import ",
+      "QtQuick.",
+      "QtQuick.Controls.",
+      "Qt.",
+      "width:",
+      "height:",
+      "id:",
+      "anchors.",
+      "http:",
+      "https:",
+      "mailto:",
+      "tel:",
+      "sms:",
+      "../",
+      "./",
+      "return ",
+      "new ",
+      "function ",
+      "var ",
+      "{",
+      "}",
+      ";",
+      ","
+    ]
+  }
+}
