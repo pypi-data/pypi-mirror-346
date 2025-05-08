@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: pdmparse
+Version: 1.0.3
+Summary: 解析PowerDesigner的数据库设计pdm文件，用于模板代码生成
+Home-page: https://github.com/9kl/pdmparse
+Author: fhp
+Author-email: chinafengheping@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: Jinja2==3.1.6
+
+# pdmparse
+
+`pdmparse` 是一个用于解析 PowerDesigner 的数据库设计 PDM 文件并生成模板代码的工具。它允许开发者通过读取 PDM 文件中的表结构、字段、关系等信息，自动生成符合特定模板的代码。
+
+## 功能概述
+
+- **解析 PDM 文件**：读取 PowerDesigner 导出的 PDM 文件，提取表结构、字段、外键关系、图表信息等。
+- **模板代码生成**：基于解析的数据，使用 Jinja2 模板引擎生成目标代码（如 Flask API 模型）。
+- **灵活的过滤和重命名**：支持通过自定义函数对表进行过滤和重命名。
+
+## 主要模块
+
+### `test.py`
+
+`test.py` 是一个测试脚本，展示了如何使用 `pdmparse` 库的功能。
+
+#### 主要功能
+
+1. **生成模型代码**：
+   - 使用 `PdmParse` 类解析 PDM 文件。
+   - 应用表过滤函数，仅处理特定图表中的表。
+   - 使用自定义重命名函数为每个表生成输出文件名。
+   - 通过 Jinja2 模板生成目标代码。
+
+2. **打印读取内容**：
+   - 使用 `read` 函数直接读取 PDM 文件中的表信息。
+   - 打印每个表的详细信息，包括字段、外键关系、图表等。
+
+#### 使用示例
+
+以下是如何使用 `test.py` 脚本的示例：
+
+1. **生成模型代码**：
+   ```python
+   from pdmparse.api import PdmParse
+   from pdmparse.parsers import read
+
+   def table_filter_func(table):
+       """
+       表过滤函数：仅处理属于 '服务系统' 图表的表。
+       """
+       return len([diagram for diagram in table.diagrams if diagram.name == '服务系统']) > 0
+
+   def rename(table):
+       """
+       自定义重命名函数：为每个表生成输出文件名。
+       """
+       f_name = '%s.py' % (table.code.lower())
+       print(f_name)
+       return f_name
+
+   # 初始化 PdmParse 对象
+   api = PdmParse(r'C:\Users\china\OneDrive\Dev\pdm\lnwork_open.pdm', 'templates', __filters__)
+
+   # 生成模板文件
+   api.gen_template_file(
+       'output', 
+       'flask_api.jinja2',
+       table_filter_func, 
+       rename, 
+       **{'app_name': 'app_name', 'package_name': 'package_name'}
+   )
