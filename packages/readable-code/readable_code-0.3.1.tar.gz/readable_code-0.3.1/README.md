@@ -1,0 +1,42 @@
+
+# Overiew
+
+### NO DEPENDENCIES REQUIRED
+
+Joke Python module for making your code *\'more readable\'*.
+
+Has a weird naming scheme, random abstracted functions for no reason, and anything else that you could ever want!
+
+  
+
+# Functions
+
+  
+
+-  **Return_Value_Of(Value)** - Returns Value OFC (useless)
+
+- **Error(Err = Exception)** - Raises an exception (useless)
+
+-  **Print(Message) / Range(Number) / Len(List) / Int(Number) / String(Message) / Bool(Boolean)  / Float(Decimal) / List(Array)** - The corresponding function but capitalised
+
+-  **Print_Multiple_Times(Count, Msg)** - Prints Msg Count amount of times
+
+-  **Sum_Multiple_Numbers(Numbers)** - Sums multiple numbers
+
+-  **Multiply_Multiple_Numbers(Numbers)** - Multiplies multiple numbers
+
+-  **Get_Input_From_User(Message, Type = String)** - Gets an input from the user and applies a function to that input (intended to change the input type which is by default string)
+
+-  **For_Loop(List, Code, PassElement, Arguments)** - Creates a for loop iterating over a list, where the body code is a function, and the extra arguments (first of which will be the element if PassElement is true) goes into it.
+
+-  **While_Loop(Condition, Code, Arguments)** - Creates a while loop which will keep on iterating when the condition *(MUST BE A FUNCTION)* returns true, where the body code is a function and the extra arguments goes into it.
+
+-  **Open_File(Name, Mode, Code, Arguments)** - Opens the file with that name in that mode, where the body code is a function *which will always have the file be put into it as the first argument* as well as the extra arguments.
+
+
+
+# Challenges
+
+
+
+This module could create a few coding challenges such as using its functions as much as possible to make the most 'readable' code, excluding Return_Value_Of, though you could also make another challenge where every single value has Return_Value_Of surrounding it to make the most clustered code ever. If you would like to make reading your code ~~horrible~~ better, this is the perfect opportunity!
