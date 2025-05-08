@@ -1,0 +1,2 @@
+[console_scripts]
+chatosaurus-embedder = main:main

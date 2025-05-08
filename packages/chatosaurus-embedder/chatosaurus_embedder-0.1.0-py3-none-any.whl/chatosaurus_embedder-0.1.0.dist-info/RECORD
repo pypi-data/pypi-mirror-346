@@ -1,0 +1,14 @@
+chatosaurus_embedder-0.1.0.dist-info/licenses/LICENSE,sha256=1W6jEjLhf86HmBnP9i1e7vjwH7nz7wDjMwj6L9CcMBQ,1071
+embed_providers/__init__.py,sha256=X7zy_zUFZtBde_mbodvpKhtZvBN6m3kFedl2nWdzuLc,122
+embed_providers/base_embedder.py,sha256=mt_ZwZuK88GkodrohAQ2vgJzileRHqeKSMt2YGziFE4,1233
+embed_providers/factory.py,sha256=sFOzXAW1aG_2RNtz2cF5DxXHnSGPia9JgVEctyZ3w7Y,263
+embed_providers/openai_embedder.py,sha256=EBVDCTJanIGvU5AYpDbpmh-NL2k8HiRzwNu-ZPPCySw,1636
+utils/__init__.py,sha256=-IjuqALyCJzwCnjsoSev7z_KXk_kP7rEmysHt_g9sGA,148
+utils/api_communication.py,sha256=9lWSDqinjjqa8YdQQ5dkuZtoxclcVIxa67yVU1E3xnA,1228
+utils/file_loader.py,sha256=JpsJjG8rHoYmaVL942RvhiVCOqEUVzKLy-oFFOiSYKU,734
+utils/json_saver.py,sha256=aX25T2SMmGD2qMfhn4lg-hToTrw6Qy_tN0Wi1xbMlhE,189
+chatosaurus_embedder-0.1.0.dist-info/METADATA,sha256=EVPdZVfUrpPKg56foBvAjCpM0iS9RhDlfa7Of7-c1Hc,467
+chatosaurus_embedder-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+chatosaurus_embedder-0.1.0.dist-info/entry_points.txt,sha256=3wXHx6rox5lznKKSQALrDGyH1GrSuK1qKtFZShd7sQk,51
+chatosaurus_embedder-0.1.0.dist-info/top_level.txt,sha256=NZ7tj11MyTtmFmWIzGIWOvjwiQZGcZMJ3ChG_Lsxf-I,22
+chatosaurus_embedder-0.1.0.dist-info/RECORD,,
