@@ -1,0 +1,6 @@
+requests
+urwid>=2.1.2
+tqdm
+clipman
+ffmpeg-python>=0.2.0
+yt_dlp
