@@ -1,0 +1,11 @@
+django_advanced_bulk_signals-0.1.0.dist-info/licenses/LICENSE,sha256=_UzjxaKnlO4MJEG3QdaWOy2N9FMnPlR_k6QJRT4OjoA,1070
+django_bulk_signals/__init__.py,sha256=N2K46oJAsrYP-D00QJ1-tiwkHYVMbUNHb60r1OEm-9k,135
+django_bulk_signals/decorators.py,sha256=BN_Hp1P0cIwhiQ-DmN04-EE4tnJr5S4kAPlTiOzjJa8,220
+django_bulk_signals/managers.py,sha256=obR5ZW28CDSAuVnP4kpLH7vWLzmD1sncW5BZcB9PDcw,3893
+django_bulk_signals/receivers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_bulk_signals/signals.py,sha256=oDC6WjAaNMmVYcs8km2o-vxFcIZq-qf_HovUoGxbcEM,354
+django_bulk_signals/utils.py,sha256=NHHB1w3cL9i7hKGxFD2rUvpnuge3RZ6KQPz_hgLnqfg,3010
+django_advanced_bulk_signals-0.1.0.dist-info/METADATA,sha256=ZZz9TNnwQA_q9LhVsJ91aWLUKPcF5B4-hyYvzZNrD9w,2563
+django_advanced_bulk_signals-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+django_advanced_bulk_signals-0.1.0.dist-info/top_level.txt,sha256=rrUKDkzmgseqzA19e7b532rfzcTW-8fWn1F9xhfFfEM,20
+django_advanced_bulk_signals-0.1.0.dist-info/RECORD,,
