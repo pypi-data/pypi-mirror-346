@@ -1,0 +1,50 @@
+[project]
+name = "instaui"
+version = "0.1.8"
+description = "insta-ui is a Python-based UI library for rapidly building user interfaces."
+authors = [
+    {name = "CrystalWindSnake",email = "568166495@qq.com"}
+]
+license = "MIT"
+readme = "README.md"
+
+requires-python = ">=3.8,<3.13"
+
+dependencies = [
+    "pydantic (>=2.10.6,<3.0.0)",
+    "jinja2 (>=3.1.4,<4.0.0)",
+    "typing-extensions (>=4.12.2,<5.0.0)",
+    "orjson (>=3.10.15,<4.0.0)"
+]
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-playwright = "0.5.2"
+playwright = "1.47.0"
+pytest-asyncio = "^0.24.0"
+
+fastapi = {extras = ["standard"], version = "^0.115.6"}
+uvicorn = "^0.32.1"
+pywebview = "^5.4"
+duckdb = "^1.2.2"
+pandas = [
+    {version = "^2.0.0", python = "<3.13"},
+    {version = "^2.2.3", python = ">=3.13,<3.14"}
+]
+
+
+[project.optional-dependencies]
+web = ["fastapi[standard]", "uvicorn", "pydantic (>=2.10.6,<3.0.0)"]
+webview = ["pywebview", "pydantic (>=2.10.6,<3.0.0)"]
+all = ["fastapi[standard]", "uvicorn", "pywebview"]
+
+[tool.poetry]
+exclude = [
+    "**/*.less",
+    "instaui/ui/__build_init.py"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
