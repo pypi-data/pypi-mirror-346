@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: py-caelus
+Version: 4.0.1
+Summary: Caelus Python Library
+Home-page: https://sayerhs.github.io/cpl/
+Author: Shreyas Ananthan, Chris Sideroff
+Maintainer: Shreyas Ananthan, Chris Sideroff
+License: Apache License, Version 2.0
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+License-File: LICENSE.txt
+Requires-Dist: six>=1.16.0
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: scipy>=1.11.0
+Requires-Dist: pandas>=2.1.0
+Requires-Dist: matplotlib>=3.8.0
+Requires-Dist: PyYAML>=6.0.0
+Requires-Dist: pytz
+Requires-Dist: Jinja2>=3.0.0
+Requires-Dist: ply>=3.11
+Requires-Dist: vtk>=9.2.0
+Requires-Dist: pyvista>=0.42
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: platform
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Caelus Python Library
+
+This python package provides a scriptable interface to Caelus Computational
+Mechanics Library (CML).
