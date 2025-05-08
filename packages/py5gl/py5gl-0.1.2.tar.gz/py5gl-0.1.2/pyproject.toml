@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py5gl"
+version = "0.1.2"
+description = "A simple Python game engine using Panda3D."
+authors = [{ name = "Swonzy", email = "swonzycommunity@gmail.com" }]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "panda3d>=1.10.15",
+]
+
+[tool.setuptools]
+packages = ["py5gl"]
+include-package-data = true

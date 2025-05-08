@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+py5gl/__init__.py
+py5gl/engine.py
+py5gl.egg-info/PKG-INFO
+py5gl.egg-info/SOURCES.txt
+py5gl.egg-info/dependency_links.txt
+py5gl.egg-info/requires.txt
+py5gl.egg-info/top_level.txt

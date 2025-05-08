@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: py5gl
+Version: 0.1.2
+Summary: A simple Python game engine using Panda3D.
+Author-email: Swonzy <swonzycommunity@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: panda3d>=1.10.15
+Dynamic: license-file
+
+# Py5GL
+
+Py5GL is a simple Python game engine based on Panda3D.
+
+## Kurulum
