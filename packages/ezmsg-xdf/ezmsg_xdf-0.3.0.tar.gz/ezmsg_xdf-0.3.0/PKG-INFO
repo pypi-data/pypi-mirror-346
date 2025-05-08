@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: ezmsg-xdf
+Version: 0.3.0
+Summary: Namespace package for ezmsg to load iterate data from xdf files
+Author-email: Chadwick Boulay <chadwick.boulay@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: ezmsg>=3.6.0
+Requires-Dist: numpy>=2.0.2
+Requires-Dist: pyxdf>=1.16.8
+Provides-Extra: dev
+Requires-Dist: ruff>=0.6.8; extra == 'dev'
+Requires-Dist: typer>=0.12.5; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest>=8.3.3; extra == 'test'
+Description-Content-Type: text/markdown
+
+# ezmsg.xdf
+
+ezmsg namespace package for working with XDF files.
