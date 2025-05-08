@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+include requirements.txt
+include mcp_config_example.json
+recursive-include douyin_scanner_mcp *.py 
