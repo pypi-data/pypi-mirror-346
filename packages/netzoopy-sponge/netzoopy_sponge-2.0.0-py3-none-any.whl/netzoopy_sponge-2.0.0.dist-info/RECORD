@@ -1,0 +1,10 @@
+netzoopy_sponge-2.0.0.dist-info/licenses/LICENSE,sha256=ACn1uRZ352URar-B_HcV4uBLgRGg_jnFEfrY0jjbIMs,35133
+sponge/__init__.py,sha256=lF-6gdWcbVmzH5-Py3mOeyRNPigYRITHNb4I1OHbrF8,26
+sponge/cli.py,sha256=TAdHIkudVpozJBBPBAty_c0W24a0bDvVRaUc5bgG6eM,1722
+sponge/config_manager.py,sha256=QXeyddPycHISPwfHg7JyFZtz-ZIL_QU4NYI0fitwwtE,6617
+sponge/sponge.py,sha256=KqbMHGagXrF8_1R4iarf3D533FgUbEnP6E1DaDdotHE,9351
+netzoopy_sponge-2.0.0.dist-info/METADATA,sha256=hISGdw_6pfqRl-gIqusS0DqXp_vGvb4iESb6AWSpmNY,10238
+netzoopy_sponge-2.0.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+netzoopy_sponge-2.0.0.dist-info/entry_points.txt,sha256=w2GEl9b4sraMZqzZ1VGo3-BW1rvNXuctANNaOSUBp7g,51
+netzoopy_sponge-2.0.0.dist-info/top_level.txt,sha256=NH0y-hvhhOoGC0VzUYyjoaJ52c8kFKSXWjJclpo9B9M,7
+netzoopy_sponge-2.0.0.dist-info/RECORD,,
