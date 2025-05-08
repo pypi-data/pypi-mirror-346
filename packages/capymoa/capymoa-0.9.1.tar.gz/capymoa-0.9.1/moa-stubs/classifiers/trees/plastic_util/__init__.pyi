@@ -1,0 +1,73 @@
+
+import sys
+if sys.version_info >= (3, 8):
+    from typing import Protocol
+else:
+    from typing_extensions import Protocol
+
+import com.yahoo.labs.samoa.instances
+import java.util
+import moa
+import moa.classifiers.core.attributeclassobservers
+import moa.classifiers.core.conditionaltests
+import moa.classifiers.core.driftdetection
+import moa.classifiers.core.splitcriteria
+import moa.core
+import typing
+
+
+
+class CustomADWINChangeDetector(moa.classifiers.core.driftdetection.ADWINChangeDetector):
+    def __init__(self): ...
+    def getChange(self) -> bool: ...
+    def getWidth(self) -> int: ...
+    def input(self, double: float) -> None: ...
+
+class MeasuresNumberOfLeaves:
+    def getLeafNumber(self) -> int: ...
+
+class PerformsTreeRevision:
+    def didPerformTreeRevision(self) -> bool: ...
+
+class CustomHTNode(moa.classifiers.trees.plastic_util.CustomEFDTNode):
+    def __init__(self, splitCriterion: moa.classifiers.core.splitcriteria.SplitCriterion, int: int, double: float, double2: float, boolean: bool, string: str, integer: int, integer2: int, double3: float, boolean2: bool, boolean3: bool, nominalAttributeClassObserver: moa.classifiers.core.attributeclassobservers.NominalAttributeClassObserver, doubleVector: moa.core.DoubleVector, list: java.util.List[int], int4: int): ...
+
+class EFHATNode(moa.classifiers.trees.plastic_util.CustomEFDTNode):
+    @typing.overload
+    def __init__(self, splitCriterion: moa.classifiers.core.splitcriteria.SplitCriterion, int: int, double: float, double2: float, boolean: bool, string: str, integer: int, integer2: int, integer3: int, double3: float, boolean2: bool, boolean3: bool, nominalAttributeClassObserver: moa.classifiers.core.attributeclassobservers.NominalAttributeClassObserver, doubleVector: moa.core.DoubleVector, list: java.util.List[int], int5: int, customADWINChangeDetector: CustomADWINChangeDetector): ...
+    @typing.overload
+    def __init__(self, splitCriterion: moa.classifiers.core.splitcriteria.SplitCriterion, int: int, double: float, double2: float, boolean: bool, string: str, integer: int, integer2: int, integer3: int, double3: float, boolean2: bool, boolean3: bool, nominalAttributeClassObserver: moa.classifiers.core.attributeclassobservers.NominalAttributeClassObserver, doubleVector: moa.core.DoubleVector, list: java.util.List[int], int5: int, customADWINChangeDetector: CustomADWINChangeDetector, boolean4: bool): ...
+    def learnInstance(self, instance: com.yahoo.labs.samoa.instances.Instance, int: int) -> None: ...
+    def predict(self, instance: com.yahoo.labs.samoa.instances.Instance) -> typing.MutableSequence[float]: ...
+
+class PlasticNode(moa.classifiers.trees.plastic_util.CustomEFDTNode):
+    @typing.overload
+    def __init__(self, splitCriterion: moa.classifiers.core.splitcriteria.SplitCriterion, int: int, double: float, double2: float, boolean: bool, string: str, integer: int, integer2: int, integer3: int, double3: float, double4: float, double5: float, boolean2: bool, boolean3: bool, nominalAttributeClassObserver: moa.classifiers.core.attributeclassobservers.NominalAttributeClassObserver, doubleVector: moa.core.DoubleVector, list: java.util.List[int], int5: int, double7: float, int6: int): ...
+    @typing.overload
+    def __init__(self, plasticNode: 'PlasticNode'): ...
+    def collectChildrenSplitAttributes(self) -> java.util.Set[com.yahoo.labs.samoa.instances.Attribute]: ...
+    def getChildrenSplitAttributes(self) -> java.util.Set[com.yahoo.labs.samoa.instances.Attribute]: ...
+    def isArtificial(self) -> bool: ...
+    def isDummy(self) -> bool: ...
+    @typing.overload
+    def setIsArtificial(self) -> None: ...
+    @typing.overload
+    def setIsArtificial(self, boolean: bool) -> None: ...
+    def transferSplit(self, successors: 'Successors', attribute: com.yahoo.labs.samoa.instances.Attribute, int: int, instanceConditionalTest: moa.classifiers.core.conditionaltests.InstanceConditionalTest) -> None: ...
+
+class CustomEFDTNode: ...
+
+class Successors: ...
+
+
+class __module_protocol__(Protocol):
+    # A module protocol which reflects the result of ``jp.JPackage("moa.classifiers.trees.plastic_util")``.
+
+    CustomADWINChangeDetector: typing.Type[CustomADWINChangeDetector]
+    CustomEFDTNode: typing.Type[CustomEFDTNode]
+    CustomHTNode: typing.Type[CustomHTNode]
+    EFHATNode: typing.Type[EFHATNode]
+    MeasuresNumberOfLeaves: typing.Type[MeasuresNumberOfLeaves]
+    PerformsTreeRevision: typing.Type[PerformsTreeRevision]
+    PlasticNode: typing.Type[PlasticNode]
+    Successors: typing.Type[Successors]
