@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+calcfastapi_ps.egg-info/PKG-INFO
+calcfastapi_ps.egg-info/SOURCES.txt
+calcfastapi_ps.egg-info/dependency_links.txt
+calcfastapi_ps.egg-info/requires.txt
+calcfastapi_ps.egg-info/top_level.txt
+operacoes/__init__.py
+operacoes/base.py
+operacoes/divisao.py
+operacoes/multiplicacao.py
+operacoes/soma.py
+operacoes/subtracao.py

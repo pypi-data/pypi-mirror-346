@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: calcfastapi-ps
+Version: 0.1.0
+Summary: Calculadora com fastapi para atividade de PS
+Author-email: gLacerda21 <gabriellacerdasg@hotmail.com>
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.100
+Requires-Dist: uvicorn[standard]>=0.22
+
+# CalcFastapi_lib
+Calculadora com fastapi
