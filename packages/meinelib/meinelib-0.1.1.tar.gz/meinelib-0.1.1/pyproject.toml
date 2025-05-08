@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meinelib"
+dynamic = ["version"]
+authors = [
+    {name = "Javier", email = "deese2k@gmail.com"},
+]
+description = "A set of functions that I use regularlly."
+readme = "README.md"
+requires-python = ">=3.6"
+license="GPL-3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/deese/meinelib"
+"Bug Tracker" = "https://github.com/deese/meinelib/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "meinelib.__version__" }

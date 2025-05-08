@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+meinelib/__init__.py
+meinelib/debug.py
+meinelib.egg-info/PKG-INFO
+meinelib.egg-info/SOURCES.txt
+meinelib.egg-info/dependency_links.txt
+meinelib.egg-info/top_level.txt
