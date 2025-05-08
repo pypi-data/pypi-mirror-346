@@ -1,0 +1,2 @@
+[console_scripts]
+pysilero = pysilero.cli:main

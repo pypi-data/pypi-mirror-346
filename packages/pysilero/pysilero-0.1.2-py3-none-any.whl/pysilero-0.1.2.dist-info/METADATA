@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: pysilero
+Version: 0.1.2
+Home-page: https://github.com/pengzhendong/pysilero
+Author: Zhendong Peng
+Author-email: pzd17@tsinghua.org.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: audiolab
+Requires-Dist: librosa
+Requires-Dist: modelscope
+Requires-Dist: numpy
+Requires-Dist: onnxruntime
+Requires-Dist: soxr
+Requires-Dist: praat-parselmouth
+Requires-Dist: pyrnnoise
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+
+# PySilero
+
+## Silero VAD
+
+See [Silero VAD](https://github.com/snakers4/silero-vad).
+
+### Denoiser
+
+See [RnNoise](https://github.com/werman/noise-suppression-for-voice).
+
+### Python Usage
+
+```bash
+$ pip install pysilero
+$ pysilero audio.wav
+```
