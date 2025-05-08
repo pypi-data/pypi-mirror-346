@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: bclearer-interop-services
+Version: 0.3.0
+Summary: "A set of interop services to integrate and transfer data between different applications, model and storage technologies for the bclearer framework."
+Author: Mesbah Khan
+Author-email: khanm@ontoledgy.io
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: bclearer-orchestration-services (>=0.1.0,<0.2.0)
+Description-Content-Type: text/markdown
+
+# bclearer_storage_interop_services
+storage_interop_services
+
