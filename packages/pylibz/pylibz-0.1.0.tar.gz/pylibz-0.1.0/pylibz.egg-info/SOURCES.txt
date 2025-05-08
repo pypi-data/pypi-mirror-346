@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+pylibz/__init__.py
+pylibz/core.py
+pylibz.egg-info/PKG-INFO
+pylibz.egg-info/SOURCES.txt
+pylibz.egg-info/dependency_links.txt
+pylibz.egg-info/top_level.txt
