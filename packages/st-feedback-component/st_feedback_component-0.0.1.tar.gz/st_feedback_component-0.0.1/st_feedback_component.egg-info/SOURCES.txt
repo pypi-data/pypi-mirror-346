@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+st_feedback_component/__init__.py
+st_feedback_component/example.py
+st_feedback_component.egg-info/PKG-INFO
+st_feedback_component.egg-info/SOURCES.txt
+st_feedback_component.egg-info/dependency_links.txt
+st_feedback_component.egg-info/requires.txt
+st_feedback_component.egg-info/top_level.txt
