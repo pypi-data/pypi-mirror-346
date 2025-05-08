@@ -1,0 +1,191 @@
+Metadata-Version: 2.4
+Name: dfnotebook
+Version: 4.2.0b0
+Summary: A JupyterLab extension for running dataflow notebooks
+Project-URL: Homepage, https://github.com/dataflownb/dfnotebook
+Project-URL: Bug Tracker, https://github.com/dataflownb/dfnotebook/issues
+Project-URL: Repository, https://github.com/dataflownb/dfnotebook.git
+Author-email: "{'name': 'Dataflow Notebook Development Team', 'email': 'dataflownb@users.noreply.github.com'}" <dataflownb@users.noreply.github.com>
+License: ## BSD 3-Clause License
+        
+        Copyright (c) 2017-, Dataflow Notebook Development Team
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+          list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice,
+          this list of conditions and the following disclaimer in the documentation
+          and/or other materials provided with the distribution.
+        
+        * Neither the name of the copyright holder nor the names of its
+          contributors may be used to endorse or promote products derived from
+          this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+        ## Third-Party Licenses
+        
+        This code extends IPython and Jupyter projects. In a few cases, code from those projects is included in this repository. That code remains subject to those licenses.
+        
+        - JupyterLab (BSD 3-Clause License): https://github.com/jupyterlab/jupyterlab
+        - IPython (BSD 3-Clause License): https://github.com/ipython/ipython
+        - ipykernel (BSD 3-Clause License): https://github.com/ipython/ipykernel
+        
+        Each of these components is subject to its respective license terms, which are included in the [licenses](licenses/) directory.
+License-File: LICENSE.md
+Keywords: Dataflow,Jupyter,Kernel,Python
+Classifier: Framework :: Jupyter
+Classifier: Framework :: Jupyter :: JupyterLab
+Classifier: Framework :: Jupyter :: JupyterLab :: 4
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Requires-Dist: dfnbutils
+Requires-Dist: ipykernel>=6
+Requires-Dist: ipython>=8
+Requires-Dist: jupyterlab>=4.2
+Requires-Dist: nest-asyncio>=1.4
+Description-Content-Type: text/markdown
+
+# Dataflow Notebook for Jupyter/Python
+
+[![License](https://img.shields.io/badge/License-BSD3-blue.svg)](https://github.com/dataflownb/dfnotebook/blob/master/LICENSE)
+[![PyPI version](https://badge.fury.io/py/dfnotebook.svg)](https://badge.fury.io/py/dfnotebook)
+<!--
+[![Build Status](https://travis-ci.org/dataflownb/dfkernel.svg?branch=master)](https://travis-ci.org/dataflownb/dfkernel)
+[![Documentation Status](https://readthedocs.org/projects/dfkernel/badge)](http://dfkernel.readthedocs.io/)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/dataflownb/dfexamples/master)
+-->
+
+Dataflow notebooks are Jupyter notebooks written in Python that elevate outputs to link cells. Outputs of cells are labeled by their identifiers. Referencing an output of one cell in another cell creates a dependency between between the two cells, allowing the system to ensure upstream cells are up-to-date before executing a cell. Dataflow notebooks allow identifiers to be reassigned in different cells by tracking references by the identifier **and** persistent cell id, ensuring each reference is not ambiguous. Identifiers are disambiguated by suffixes indicating the cell by an assigned name or unique hexadecimal identifier.
+
+## Quickstart
+
+1. Install dfnotebook: `pip install dfnotebook`
+2. Start JupyterLab: `jupyter lab`
+3. Create a new notebook using the `DFPython 3` kernel.
+
+## Example Notebook
+
+<img src="https://dataflownb.github.io/assets/images/dfnotebook.svg" width="640" alt="Dataflow Notebook Example">
+
+## Install
+
+To install the extension and bundled kernel, execute:
+
+```bash
+pip install dfnotebook
+```
+
+## Requirements
+
+- JupyterLab >= 4.0.0
+- IPython >= 8.0
+- ipykernel >= 6.0
+
+## Uninstall
+
+To remove the extension, execute:
+
+```bash
+pip uninstall dfnotebook
+```
+
+## Contributing
+
+### Development install
+
+Note: You will need NodeJS to build the extension package.
+
+The `jlpm` command is JupyterLab's pinned version of
+[yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
+`yarn` or `npm` in lieu of `jlpm` below.
+
+```bash
+# Clone the repo to your local environment
+# Change directory to the dfnotebook directory
+# Install package in development mode
+pip install -e "."
+# Link your development version of the extension with JupyterLab
+jupyter labextension develop . --overwrite
+# Rebuild extension Typescript source after making changes
+jlpm build
+```
+
+You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
+
+```bash
+# Watch the source directory in one terminal, automatically rebuilding when needed
+jlpm watch
+# Run JupyterLab in another terminal
+jupyter lab
+```
+
+With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab. Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).
+
+By default, the `jlpm build` command generates the source maps for this extension to make it easier to debug using the browser dev tools. To also generate source maps for the JupyterLab core extensions, you can run the following command:
+
+```bash
+jupyter lab build --minimize=False
+```
+
+### Development uninstall
+
+```bash
+pip uninstall dfnotebook
+```
+
+In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
+command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
+folder is located. Then you can remove the symlink named `@dfnotebook/dfnotebook-extension` within that folder.
+
+### Testing the extension
+
+#### Frontend tests
+
+This extension is using [Jest](https://jestjs.io/) for JavaScript code testing.
+
+To execute them, execute:
+
+```sh
+jlpm
+jlpm test
+```
+
+#### Integration tests
+
+This extension uses [Playwright](https://playwright.dev/docs/intro) for the integration tests (aka user level tests).
+More precisely, the JupyterLab helper [Galata](https://github.com/jupyterlab/jupyterlab/tree/master/galata) is used to handle testing the extension in JupyterLab.
+
+More information are provided within the [ui-tests](./ui-tests/README.md) README.
+
+### Packaging the extension
+
+See [RELEASE](RELEASE.md)
+
+## Previous Versions
+
+The dataflow notebook was originally released as dfkernel and worked with older versions of Jupyter Notebook. It was updated to support JupyterLab as a paired set of packages (dfkernel and dfnotebook(-extension)). More recently, these were unified into a single package (dfnotebook).
