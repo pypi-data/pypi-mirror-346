@@ -1,0 +1,43 @@
+poscar_filename = "Mn2N.vasp" # POSCAR filename / POSCAR文件名
+output_filename = "Mn2N_model" # Output band structure filename (default png format) / 输出能带图文件名，默认png格式
+output_format = "png" # Output format (default png) / 输出格式，默认png格式
+savedir = "." # Save directory / 保存路径
+
+# Model parameters / 建模参数
+use_elements = ["Mn", "N"] # Elements to model / 需要建模的元素
+lattice_constant = 1    # Lattice constant / 晶格常数
+t0 = 1.0                # Reference hopping strength / 参考跃迁强度
+t0_distance = 2.5 # Reference hopping distance for t0 / 参考跃迁距离，指定t0的距离
+hopping_decay = 1       # Hopping decay coefficient / 跃迁衰减系数，
+# t = t0*exp(-hopping_decay*(r-t0_distance)/t0_distance)
+same_atom_negative_coupling = false # Negative coupling strength for same elements (optional) / 如果两个原子是同一种元素，则耦合强度为负(没必要，但是可以)
+onsite_energy = [0.0, 0.0, 0.0] # On-site energy for each atom / 每个原子的在位能
+min_distance = 0.1      # Minimum hopping distance / 最小跃迁距离，小于这个距离不考虑跃迁
+max_distance = 2.6      # Maximum hopping distance / 最大跃迁距离，超出此距离不考虑跃迁
+max_neighbors = 2       # Maximum number of neighbor sites, R search range / 最大相邻格点数, R的搜寻范围
+dimk = 2                # k-space dimension / k空间维度
+dimr = 3                # r-space dimension, keep it to 3 for POSCAR / r空间维度， 一般不要改，因为POSCAR都是3维的
+
+# Magnetic parameters / 磁性参数
+nspin = 2 # Spin (1 for no spinor, 2 for spinor) / 自旋，1表示没有自旋，2表示有自旋
+magnetic_moment = 0.1  # Magnetic moment / 磁矩大小
+magnetic_order = "+-0" # Magnetic order (+ up, - down, 0 none) / 磁序，+表示向上，-表示向下，0表示没有磁性
+
+# Define k-point path / 定义k点路径
+kpath = [
+    [0, 0],
+    [0.5,0],
+    [0.5,0.5],
+    [0.0,0.5],
+    [0.0,0.0],
+    [0.5, 0.5]
+]
+klabel = ["G","X","M","Y","G","M"]# k-point labels / 定义k点标签
+nkpt=1000 # Number of k-points / 定义k点数目
+
+
+# Other parameters / 其他参数
+is_print_tb_model_hop = true # Print tight-binding model hopping info / 是否打印紧束缚模型信息
+is_print_tb_model = true # Print tight-binding model / 是否打印紧束缚模型
+is_check_flat_bands = true # Check for flat bands / 是否检查平带
+
