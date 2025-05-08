@@ -1,0 +1,11 @@
+CHANGELOG.md,sha256=rFtabj-IkrbZHaPBm6v7dgEV3TazrogE7iSW679dd_A,335
+missouri/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+missouri/coding.py,sha256=9wB1_aQgs5nGG1q8SJeNi66L8EYYHRKkZDC29uxpCHw,4331
+missouri/json.py,sha256=dVVJVTQYChJN2VvViM85UpCS28vTu_NS7FqAXsrPEDg,1834
+missouri/numpylib.py,sha256=lzIG1az2JjphzMRA3ircfilu1r66pL6iYDbMZPAO3Ck,2164
+missouri/openlib.py,sha256=wqhl2rJrzlK3ar-vhvv-6ciHusNDaW5t6gT4AIVWr5M,909
+missouri/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+missouri-1.0.0.dist-info/LICENSE,sha256=bVfT_mnGGu-eVt0alYjawVxoqp23kJW1643y-1NiE5g,640
+missouri-1.0.0.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+missouri-1.0.0.dist-info/METADATA,sha256=6yOsJrJQfyaDGRqvSFXNyswaSv4GIqaW5vWA16GbQqw,817
+missouri-1.0.0.dist-info/RECORD,,
