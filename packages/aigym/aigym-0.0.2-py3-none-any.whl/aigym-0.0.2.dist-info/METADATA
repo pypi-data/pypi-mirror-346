@@ -1,0 +1,100 @@
+Metadata-Version: 2.4
+Name: aigym
+Version: 0.0.2
+Summary: Reinforcement learning environments for fine-tuning language models for reasoning tasks.
+Author-email: Niels Bantilan <niels.bantilan@gmail.com>
+Project-URL: Homepage, https://github.com/cosmicbboy/aigym
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beautifulsoup4
+Requires-Dist: html2text
+Requires-Dist: httpx
+Requires-Dist: gymnasium
+Requires-Dist: markdownify
+Requires-Dist: pydantic
+Requires-Dist: pygame
+Requires-Dist: python-dotenv
+Requires-Dist: rich
+Requires-Dist: tiktoken
+Provides-Extra: ollama
+Requires-Dist: ollama; extra == "ollama"
+Provides-Extra: openai
+Requires-Dist: openai; extra == "openai"
+Provides-Extra: google-genai
+Requires-Dist: google-genai; extra == "google-genai"
+Dynamic: license-file
+
+# 🤖 AI Gym
+
+*Reinforcement learning environments for AI fine-tuning*
+
+`aigym` is a library that provides a suite of reinforcement learning (RL)
+environments primarily for the purpose of fine-tuning pre-trained models - namely
+language models - for various reasoning tasks.
+
+Built on top of the [gymnasium](https://gymnasium.farama.org/) API, the objective
+of this project is to expose a light-weight and extensible environments
+to fine-tune language models with techniques like [PPO](https://arxiv.org/abs/1707.06347)
+and [GRPO](https://arxiv.org/abs/2402.03300).
+
+It is designed to complement training frameworks like [trl](https://huggingface.co/docs/trl/en/index),
+[transformers](https://huggingface.co/docs/transformers/en/index), [pytorch](https://pytorch.org/),
+and [pytorch lightning](https://lightning.ai/pytorch-lightning).
+
+See the project roadmap [here](./ROADMAP.md)
+
+## Installation
+
+```bash
+pip install aigym
+```
+
+## Development Installation
+
+Install `uv`:
+
+```bash
+pip install uv
+```
+
+Create a virtual environment:
+
+```bash
+uv venv
+```
+
+Activate the virtual environment:
+
+```bash
+source .venv/bin/activate
+```
+
+Install the package:
+
+```bash
+uv sync --extra ollama --group dev
+```
+
+Install `ollama` to run a local model: https://ollama.com/download
+
+## Usage
+
+The `examples` directory contains examples on how to use the `aigym` environments.
+Run an ollama-based agent on the Wikipedia maze environment:
+
+```bash
+python examples/ollama_agent.py
+```
