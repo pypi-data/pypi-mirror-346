@@ -1,0 +1,5 @@
+setuptools
+dacite
+PyYAML
+greenstream-config==3.20.0
+gr-urchin
