@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: SlenderQL
+Version: 0.1.1
+Summary: Missing library for working with raw SQL in Python/psycopg
+Author-email: Aleksandr Gridnev <gridnev.alexandr@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: psycopg[binary,pool]>=3.2.7
+Requires-Dist: pydantic>=2.11.4
+Requires-Dist: sentry-sdk[fastapi]>=2.27.0
+Description-Content-Type: text/markdown
+
+# SlenderQL
+SlenderQL - Missing library for working with raw SQL in Python/psycopg
+
+<img align="left" width="440" height="180" alt="Missing raw SQL tooling for python" src="https://github.com/user-attachments/assets/7f714119-e764-4427-b1b4-43051ead4a17" />
