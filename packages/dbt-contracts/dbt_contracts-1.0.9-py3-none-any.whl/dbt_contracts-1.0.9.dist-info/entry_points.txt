@@ -1,0 +1,7 @@
+[console_scripts]
+dbt-clean = dbt_contracts.cli:clean
+dbt-deps = dbt_contracts.cli:deps
+dbt-docs = dbt_contracts.cli:docs
+dbt-generate = dbt_contracts.cli:generate
+dbt-parse = dbt_contracts.cli:parse
+dbt-validate = dbt_contracts.cli:validate
