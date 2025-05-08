@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: make4db-duckdb
+Version: 0.1.2
+Summary: make4db provider for DuckDB
+Author-email: Paresh Adhia <padhia+github@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: make4db-api
+Requires-Dist: duckdb
+
+# make4db-duckdb
+
+**makedb** provider for DuckDB
+
+See [make4db](https://github.com/padhia/make4db) for more information

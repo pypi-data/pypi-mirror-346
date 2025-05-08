@@ -1,0 +1,8 @@
+README.md
+make4db_duckdb.py
+pyproject.toml
+make4db_duckdb.egg-info/PKG-INFO
+make4db_duckdb.egg-info/SOURCES.txt
+make4db_duckdb.egg-info/dependency_links.txt
+make4db_duckdb.egg-info/requires.txt
+make4db_duckdb.egg-info/top_level.txt
