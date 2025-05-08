@@ -1,0 +1,224 @@
+.chat-input-container {
+  padding: 12px 16px 16px;
+  background-color: #f8f9fa;
+}
+
+.chat-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 8px 12px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+}
+
+.chat-textarea {
+  width: 100%;
+  padding: 0;
+  border: none;
+  resize: none;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-height: 200px; /* Approximately 10 lines */
+  min-height: 24px;
+  background: transparent;
+}
+
+.chat-textarea:focus {
+  outline: none;
+}
+
+.input-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.context-button {
+  background: none;
+  border: none;
+  color: #5f6368;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.context-button:hover {
+  background-color: rgb(95 99 104 / 10%);
+}
+
+.send-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.model-name {
+  font-size: 12px;
+  color: #5f6368;
+}
+
+.send-button,
+.chat-input-cancel-button {
+  background-color: var(--jp-brand-color1);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chat-input-cancel-button {
+  background-color: #545353;
+  color: white;
+  border: none;
+}
+
+.send-button:hover,
+.chat-input-cancel-button:hover {
+  opacity: 0.8;
+}
+
+.send-button:disabled,
+.chat-input-cancel-button:disabled {
+  background-color: #c1c1c1;
+  cursor: not-allowed;
+}
+
+.enter-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.chat-prompt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+  cursor: text;
+}
+
+.prompt-text {
+  color: #5f6368;
+  font-size: 14px;
+}
+
+.prompt-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.ask-button {
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 14px;
+  color: #5f6368;
+  cursor: pointer;
+}
+
+.ask-button:hover {
+  background-color: rgb(95 99 104 / 10%);
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.context-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 0 8px;
+  align-items: center;
+  position: relative;
+}
+
+.add-context-button {
+  background: none;
+  border: none;
+  color: #5f6368;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.add-context-button:hover {
+  background-color: rgb(66 133 244 / 10%);
+  color: #4285f4;
+}
+
+.context-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.context-menu-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.context-menu-item:hover {
+  background-color: #f1f3f4;
+}
+
+.context-menu-item-icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.context-menu-item-icon.js {
+  color: #ff8f00;
+}
+
+.context-menu-item-icon.ts {
+  color: #0277bd;
+}
+
+.context-menu-item-icon.tsx {
+  color: #2e7d32;
+}
+
+.context-badges-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
