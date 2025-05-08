@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/subdata/resources/__init__.py
+src/subdata/resources/download_dict.json
+src/subdata/resources/instruction_dict.json
+src/subdata/resources/mapping_original.json
+src/subdata/resources/overview_original.json
+src/subdata/resources/process_dict.json
+src/subdata/resources/taxonomy_original.json
+subdata.egg-info/PKG-INFO
+subdata.egg-info/SOURCES.txt
+subdata.egg-info/dependency_links.txt
+subdata.egg-info/requires.txt
+subdata.egg-info/top_level.txt
