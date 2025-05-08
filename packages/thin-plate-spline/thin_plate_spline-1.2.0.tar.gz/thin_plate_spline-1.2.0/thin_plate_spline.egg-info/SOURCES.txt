@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+thin_plate_spline.egg-info/PKG-INFO
+thin_plate_spline.egg-info/SOURCES.txt
+thin_plate_spline.egg-info/dependency_links.txt
+thin_plate_spline.egg-info/requires.txt
+thin_plate_spline.egg-info/top_level.txt
+tps/__init__.py
+tps/polynomial_transform.py
+tps/py.typed
+tps/thin_plate_spline.py
