@@ -1,0 +1,10 @@
+toni/__init__.py,sha256=cIudcZJ5HpUdow3yYrDS5MYT6-WZk3QgGn5vJVEgayM,76
+toni/cli.py,sha256=8fmsjhP_y6D_Jh85tsqfeSqOfeiUhobBVT8iUX-L3dU,7865
+toni/core.py,sha256=jRx1PfKD1D0Zr4X8UoDVzHigPKkFlZBhm7euImQnwjQ,8918
+toni/test.py,sha256=qHXzPQ0twcCeMaxq8r02M4JidACgrWaIvLXIC25vBoM,2982
+toni_cli-0.1.7.dist-info/licenses/LICENSE,sha256=UfdUPRPWZM1TRmIk0X-AkcqeSN82imv_0eJ_JxOQEA0,1069
+toni_cli-0.1.7.dist-info/METADATA,sha256=x7ruF52e2vKvqwWDsQoPDUOm5mkw3IC_87MFvYDX_vU,3312
+toni_cli-0.1.7.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+toni_cli-0.1.7.dist-info/entry_points.txt,sha256=0Q8RebYrMMTBCwSz4NA90O5nJKnxl_cykkpEVK0-rb0,39
+toni_cli-0.1.7.dist-info/top_level.txt,sha256=bO1lC-ONCHKCE2wZD_wnra8Qpz2avXs1Lk1MjdpJ1R0,5
+toni_cli-0.1.7.dist-info/RECORD,,
