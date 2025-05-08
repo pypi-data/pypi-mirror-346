@@ -1,0 +1,40 @@
+# Custom
+/data.txt
+src_bak/
+*.bmp
+packages
+.hugo_build.lock
+
+# website
+public
+
+# Icon resources
+*.ico~
+*.kra~
+
+# Python
+__pycache__
+.venv
+/dist
+
+# include
+!vswhere.exe
+
+# language server
+__cmake*
+/.cache
+/compile*.json
+
+# Visual Studio
+/SuRun32.bin
+*.map
+*.exe
+*.dll
+UpgradeLog.htm
+*.user
+*.aps
+
+# VS build
+
+# makefile build
+/build*
