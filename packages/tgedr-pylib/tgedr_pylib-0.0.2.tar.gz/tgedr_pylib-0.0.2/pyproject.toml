@@ -1,0 +1,29 @@
+[project]
+name = "tgedr-pylib"
+version = "0.0.2"
+description = ""
+authors = [
+    {name = "joao tiago viegas",email = "jtgv@novonordisk.com"}
+]
+readme = "README.md"
+requires-python = "~=3.9"
+dependencies = [
+    "pandas (~=2.2.3)",
+    "praw (~=7.8.1)"
+]
+
+[tool.poetry]
+package-mode = true
+packages = [{include = "tgedr", from = "src"}]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "~=7.4.3"
+pytest-cov = "~=4.1.0"
+pytest-mock = "~=3.14.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.paths]
+source = ["src/"]
