@@ -1,0 +1,3 @@
+[console_scripts]
+f-line-merger=f_line_merger.main:main
+
