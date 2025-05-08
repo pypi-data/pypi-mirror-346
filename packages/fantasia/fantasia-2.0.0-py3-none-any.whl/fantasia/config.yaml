@@ -1,0 +1,104 @@
+# ============================================================
+# 🌍 Global Configuration — FANTASIA Functional Annotation System
+# ============================================================
+
+# ➤ Logging and system paths
+log_path: ~/fantasia/logs/
+constants: ./fantasia/constants.yaml
+monitor_interval: 5             # Seconds between monitoring cycles.
+limit_execution: 100              # Limits number of entries used (debug/benchmark only).
+log_level: INFO                 # Options: DEBUG, INFO, WARNING, ERROR
+
+# ➤ Parallelism
+store_workers: 1                # Workers used in final post-processing steps. (1 Suggested WIP)
+
+# ============================================================
+# 🗄️ Database Configuration — PostgreSQL
+# ============================================================
+DB_USERNAME: usuario
+DB_PASSWORD: clave
+DB_HOST: localhost
+DB_PORT: 5432
+DB_NAME: BioData
+
+# ============================================================
+# 📬 Messaging Queue — RabbitMQ
+# ============================================================
+rabbitmq_host: localhost
+rabbitmq_port: 5672
+rabbitmq_user: guest
+rabbitmq_password: guest
+
+# ============================================================
+# 📂 Experiment & Directory Setup
+# ============================================================
+experiment:
+  prefix: sample                            # Used to name output folders and files.
+  base_directory: ~/fantasia/experiments    # All experiment outputs go here.
+  output_path: null                         # Optional override for result saving path.
+
+# ============================================================
+# 📥 Input Configuration
+# ============================================================
+input:
+  embeddings_path: null     # If set, runs lookup mode on an existing .h5 file.
+  fasta_path: data/sample.fasta  # Input FASTA if generating embeddings.
+
+only_lookup: false           # Set true if skipping embedding generation.
+length_filter: 5000000       # Optional maximum sequence length.
+
+# ============================================================
+# 🧬 Embedding Model Configuration
+# ============================================================
+embedding:
+  device: cuda
+  distance_metric: cosine  # Options: euclidean, cosine
+
+  models:
+    esm:
+      enabled: true
+      distance_threshold: 3
+      batch_size: 1
+
+    prot_t5:
+      enabled: true
+      distance_threshold: 3
+      batch_size: 1
+
+    prost_t5:
+      enabled: true
+      distance_threshold: 3
+      batch_size: 1
+
+# ============================================================
+# 🔍 Lookup & Redundancy Filtering
+# ============================================================
+filters:
+  redundancy_filter: 0.90                  # Identity threshold for MMseqs2
+  alignment_coverage: 0                   # Percent coverage for alignments (0 = no constraint)
+  taxonomy_ids_to_exclude: []             # e.g., [6239] to exclude C. elegans
+  taxonomy_ids_included_exclusively: []   # Include only these (conflicts with exclude if both used)
+  get_descendants: false                  # Expand taxonomy IDs hierarchically if true
+
+# ============================================================
+# ⚙️ Runtime Behavior
+# ============================================================
+runtime:
+  batch_size: 512                          # Size for batch distance calculation
+  limit_per_entry: 1                       # Max neighbors considered per embedding
+  sequence_queue_package: 512              # Size of batches when enqueueing sequences
+  delete_queues: true                      # If true, queues are cleared on startup
+  use_gpu: true                            # Whether to use CUDA-enabled operations for distance calculations
+  mmseqs_tempdir: true                     # Use /tmp for MMseqs2 temporary files
+
+# ============================================================
+# 📊 Functional Annotation Output
+# ============================================================
+output:
+  topgo: true                              # Generate TopGO-compatible .tsv
+  save_raw_results: true                   # Save detailed annotation logs (pre-collapsing)
+
+# ============================================================
+# 💾 Reference Embeddings Dataset (Zenodo)
+# ============================================================
+embeddings_url: "https://zenodo.org/records/15261639/files/BioData_backup_2025_hq.tar?download=1"
