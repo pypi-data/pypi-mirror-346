@@ -1,0 +1,9 @@
+arxivextract/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arxivextract/data.py,sha256=liSqpbqytQmIvlEO06nX55MfFrgLiYlKZVrUsN0NxRc,6052
+arxivextract/extraction.py,sha256=jse53t6hq3IXT1YK1484Rn0kjEOwpQPye7NoLy8HbIg,2168
+arxivextract/keywords.py,sha256=oLRKwFzSDZrqJinhped15oNA-ee1JCJcsi7d72q4bsI,1674
+arxivextract-0.0.4.dist-info/licenses/LICENSE,sha256=ufwgIO2ky6BJ35g3fjy2fgU7-tkFlYu9C5K3WaYaPaA,1063
+arxivextract-0.0.4.dist-info/METADATA,sha256=iCzLYAzIw2Je0pfFrWaHF4HLQYgw2egphcU6Y616GCY,2426
+arxivextract-0.0.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+arxivextract-0.0.4.dist-info/top_level.txt,sha256=DnHfr2WxW2gF6oyubSl-9jdsXKyETirbjhpeDYBQjvk,13
+arxivextract-0.0.4.dist-info/RECORD,,
