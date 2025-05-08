@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: pyharp
+Version: 1.3.11
+Summary: High-performance Atmospheric Radiation Package
+Home-page: https://github.com/chengcli/pyharp
+Author: Cheng Li
+Author-email: chengcli@umich.edu
+License: MIT
+Project-URL: Documentation, https://github.com/chengcli/pyharp/
+Project-URL: Source, https://github.com/chengcli/pyharp/src
+Project-URL: Tracker, https://github.com/chengcli/pyharp/issues
+Keywords: atmosphere; radiation
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: torch>=2.7.0
+Dynamic: license-file
