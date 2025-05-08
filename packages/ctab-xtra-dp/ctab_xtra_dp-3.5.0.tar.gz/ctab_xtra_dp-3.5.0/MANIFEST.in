@@ -1,0 +1,5 @@
+recursive-include ctab_xtra_dp/datasets *.csv
+
+include ctab_xtra_dp/README.md
+
+include ctab_xtra_dp/requirements.txt
