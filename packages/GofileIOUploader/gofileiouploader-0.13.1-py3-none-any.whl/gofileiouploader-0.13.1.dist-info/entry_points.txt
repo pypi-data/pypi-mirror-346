@@ -1,0 +1,2 @@
+[console_scripts]
+gofile-upload = gofile_uploader:main
