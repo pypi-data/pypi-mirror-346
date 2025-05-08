@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools >= 77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "macv-metrics"
+version = "0.1.0"
+description = "Shared Prometheus metrics for MACV CV modules"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "MacV AI", email = "krithik@macv.ai" }
+]
+dependencies = [
+  "prometheus-client>=0.14.1"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]

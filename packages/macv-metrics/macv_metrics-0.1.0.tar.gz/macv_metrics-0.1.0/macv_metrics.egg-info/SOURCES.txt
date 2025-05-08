@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+macv_metrics/__init__.py
+macv_metrics/metrics.py
+macv_metrics.egg-info/PKG-INFO
+macv_metrics.egg-info/SOURCES.txt
+macv_metrics.egg-info/dependency_links.txt
+macv_metrics.egg-info/requires.txt
+macv_metrics.egg-info/top_level.txt
