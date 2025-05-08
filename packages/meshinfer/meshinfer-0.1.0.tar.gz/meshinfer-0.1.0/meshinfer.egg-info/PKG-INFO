@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: meshinfer
+Version: 0.1.0
+Summary: MeshInfer: Efficient Kernels Library for LLMs Serving on Mesh-arch Hardware
+Home-page: https://github.com/CongjieHe/meshinfer
+Author: Congjie He
+Author-email: congjiehe95@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: cerebras_appliance==2.4.0
+Requires-Dist: cerebras_sdk==2.4.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# MeshInfer
+MeshInfer: Efficient Kernels Library for LLMs Serving on Mesh-arch Hardware

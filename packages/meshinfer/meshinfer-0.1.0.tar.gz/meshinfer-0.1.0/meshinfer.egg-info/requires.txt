@@ -1,0 +1,2 @@
+cerebras_appliance==2.4.0
+cerebras_sdk==2.4.0

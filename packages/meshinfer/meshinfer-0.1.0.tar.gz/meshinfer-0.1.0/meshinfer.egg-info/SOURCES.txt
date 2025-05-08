@@ -1,0 +1,12 @@
+README.md
+requirements.txt
+setup.py
+meshinfer/__init__.py
+meshinfer.egg-info/PKG-INFO
+meshinfer.egg-info/SOURCES.txt
+meshinfer.egg-info/dependency_links.txt
+meshinfer.egg-info/requires.txt
+meshinfer.egg-info/top_level.txt
+meshinfer/ops/__init__.py
+meshinfer/ops/meshgemm.py
+meshinfer/ops/meshgemv.py
