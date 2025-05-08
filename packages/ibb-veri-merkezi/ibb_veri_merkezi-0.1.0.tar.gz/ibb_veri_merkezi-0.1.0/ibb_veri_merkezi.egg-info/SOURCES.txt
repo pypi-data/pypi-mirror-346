@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ibb_veri_merkezi/__init__.py
+ibb_veri_merkezi/ispark.py
+ibb_veri_merkezi.egg-info/PKG-INFO
+ibb_veri_merkezi.egg-info/SOURCES.txt
+ibb_veri_merkezi.egg-info/dependency_links.txt
+ibb_veri_merkezi.egg-info/requires.txt
+ibb_veri_merkezi.egg-info/top_level.txt
