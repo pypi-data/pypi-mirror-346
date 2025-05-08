@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: bento-sts
+Version: 0.1.13
+Summary: Bento Simple Terminology Server
+Home-page: https://github.com/CBIIT/bento-sts
+License: Apache-2.0
+Author: Mark Benson
+Author-email: mark.benson@nih.gov
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: Bootstrap-Flask (>=1.5.2)
+Requires-Dist: Flask-Moment (>=0.5.2)
+Requires-Dist: Flask-Paginate (>=2021.10.29)
+Requires-Dist: Flask-WTF (>=0.14.3)
+Requires-Dist: Jinja2 (>=2.11.3)
+Requires-Dist: MarkupSafe (>=1.1.1)
+Requires-Dist: PyYAML (>=5.4.1)
+Requires-Dist: WTForms (>=2.1)
+Requires-Dist: WTForms-Components (>=0.10.5)
+Requires-Dist: Werkzeug (==3.0.6)
+Requires-Dist: bento-meta (>=0.2.10)
+Requires-Dist: flask (<2.3.0)
+Requires-Dist: flask-testing (>=0.8.1,<0.9.0)
+Requires-Dist: guess-language-spirit (>=0.5.3)
+Requires-Dist: gunicorn (>=20.1.0)
+Requires-Dist: idna (>=2.6)
+Requires-Dist: importlib_resources (>=5.4.0)
+Requires-Dist: itsdangerous (>=0.24)
+Requires-Dist: jsonschema (<4.11.0)
+Requires-Dist: neo4j (>=4.1)
+Requires-Dist: pytest (>=8.0.0)
+Requires-Dist: pytest-docker (>=3.1.1)
+Requires-Dist: pytest-flask (>=1.3.0,<2.0.0)
+Requires-Dist: pytest-mock (>=3.14.0,<4.0.0)
+Requires-Dist: python-dateutil (>=2.6.1)
+Requires-Dist: python-dotenv (>=0.15.0)
+Requires-Dist: python-editor (>=1.0.3)
+Requires-Dist: pytz (>=2017.2)
+Requires-Dist: requests (>=2.20.0)
+Requires-Dist: six (>=1.15.0)
+Requires-Dist: urllib3 (>=1.26.5)
+Requires-Dist: visitor (>=0.1.3)
+Project-URL: Repository, https://github.com/CBIIT/bento-sts
+Description-Content-Type: text/markdown
+
+
