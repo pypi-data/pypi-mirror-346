@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voltmeter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/semantic.min.css">
+    <script src="/jquery.min.js"></script>
+    <script src="/semantic.min.js"></script>
+    
+    <!-- Canvas Gauges for analog display -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-gauges@2.1.7/gauge.min.js"></script>
+    
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .gauges-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .gauge-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px;
+            text-align: center;
+            width: 220px;
+        }
+        
+        .gauge-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .gauge-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            overflow: visible;
+        }
+        
+        .gauge-container canvas {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        .digital-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #2185D0;
+        }
+        
+        .unit {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .controls {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .gauges-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .gauge-box {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SEELab Voltmeter</h1>
+            <p>Real-time voltage measurements from multiple channels</p>
+        </div>
+        
+        <div class="gauges-container">
+            <!-- A1 Channel -->
+            <div class="gauge-box">
+                <div class="gauge-title">Channel A1</div>
+                <div class="gauge-container">
+                    <canvas id="gauge-a1"></canvas>
+                </div>
+                <div class="digital-value" id="value-a1">0.00 <span class="unit">V</span></div>
+            </div>
+            
+            <!-- A2 Channel -->
+            <div class="gauge-box">
+                <div class="gauge-title">Channel A2</div>
+                <div class="gauge-container">
+                    <canvas id="gauge-a2"></canvas>
+                </div>
+                <div class="digital-value" id="value-a2">0.00 <span class="unit">V</span></div>
+            </div>
+            
+            <!-- A3 Channel -->
+            <div class="gauge-box">
+                <div class="gauge-title">Channel A3</div>
+                <div class="gauge-container">
+                    <canvas id="gauge-a3"></canvas>
+                </div>
+                <div class="digital-value" id="value-a3">0.00 <span class="unit">V</span></div>
+            </div>
+            
+            <!-- SEN Channel -->
+            <div class="gauge-box">
+                <div class="gauge-title">Channel SEN</div>
+                <div class="gauge-container">
+                    <canvas id="gauge-sen"></canvas>
+                </div>
+                <div class="digital-value" id="value-sen">0.00 <span class="unit">V</span></div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="ui buttons">
+                <button class="ui primary button" id="start-btn">Start Measurement</button>
+                <button class="ui button" id="stop-btn">Stop</button>
+            </div>
+            <div class="ui checkbox" style="margin-left: 20px;">
+                <input type="checkbox" id="auto-range">
+                <label>Auto Range</label>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            // Initialize UI elements
+            $('.ui.checkbox').checkbox();
+            
+            // Create gauge options for radial gauges (dial with needle)
+            const gaugeOptions = {
+                width: 200,
+                height: 200,
+                valueBox: false,
+                units: "V",
+                minValue: -5,
+                maxValue: 5,
+                majorTicks: [
+                    "-5", "-4", "-3", "-2", "-1", "0", "1", "2", "3", "4", "5"
+                ],
+                minorTicks: 5,
+                strokeTicks: true,
+                highlights: [
+                    { from: -5, to: -4, color: "rgba(255, 0, 0, .3)" },
+                    { from: 4, to: 5, color: "rgba(255, 0, 0, .3)" }
+                ],
+                colorPlate: "#fff",
+                borderShadowWidth: 0,
+                borders: false,
+                needleType: "arrow",
+                needleWidth: 2,
+                needleCircleSize: 7,
+                needleCircleOuter: true,
+                needleCircleInner: false,
+                animationDuration: 200,
+                animationRule: "linear",
+                // Radial gauge specific settings
+                startAngle: 45,
+                ticksAngle: 270,
+                valueBox: false,
+                centralCircleRadius: 0,
+                borderRadius: 0,
+                radiusScale: 0.9,
+                renderTo: null
+            };
+            
+            // Function to create gauges with proper error handling and positioning
+            function createGauge(elementId, options) {
+                try {
+                    const canvas = document.getElementById(elementId);
+                    if (canvas) {
+                        // Set explicit dimensions before creating the gauge
+                        canvas.width = options.width;
+                        canvas.height = options.height;
+                        
+                        // Style the canvas directly
+                        canvas.style.margin = '0 auto';
+                        canvas.style.display = 'block';
+                    }
+                    
+                    // Create and draw the gauge
+                    const gauge = new window.RadialGauge({
+                        ...options,
+                        renderTo: elementId
+                    });
+                    
+                    gauge.draw();
+                    
+                    // Additional timeout to ensure gauge is centered after initial draw
+                    setTimeout(() => {
+                        if (gauge) gauge.update();
+                    }, 50);
+                    
+                    return gauge;
+                } catch (e) {
+                    console.error(`Error creating gauge ${elementId}:`, e);
+                    return null;
+                }
+            }
+            
+            // Initialize gauges
+            const gaugeA1 = createGauge('gauge-a1', {...gaugeOptions});
+            const gaugeA2 = createGauge('gauge-a2', {...gaugeOptions});
+            const gaugeA3 = createGauge('gauge-a3', {...gaugeOptions});
+            const gaugeSEN = createGauge('gauge-sen', {...gaugeOptions});
+            
+            // Function to handle window resize and redraw gauges
+            function handleResize() {
+                // Small delay to ensure DOM is ready
+                setTimeout(() => {
+                    if (gaugeA1) gaugeA1.update();
+                    if (gaugeA2) gaugeA2.update();
+                    if (gaugeA3) gaugeA3.update();
+                    if (gaugeSEN) gaugeSEN.update();
+                }, 100);
+            }
+            
+            // Listen for window resize
+            $(window).on('resize', handleResize);
+            
+            // Ensure gauges render correctly when container becomes visible
+            $('.gauge-container').on('visibility', handleResize);
+            
+            // Function to update a gauge and its digital value with error handling
+            function updateGauge(gauge, valueElement, voltage) {
+                try {
+                    if (gauge && typeof gauge.value !== 'undefined') {
+                        // Update gauge
+                        gauge.value = voltage;
+                        gauge.draw(); // Force redraw
+                    }
+                    
+                    // Update digital value with formatting
+                    valueElement.html(voltage.toFixed(3) + ' <span class="unit">V</span>');
+                    
+                    // Change color based on voltage (optional)
+                    if (Math.abs(voltage) > 4.5) {
+                        valueElement.css('color', '#DB2828'); // Red for near max range
+                    } else if (Math.abs(voltage) > 3.5) {
+                        valueElement.css('color', '#F2711C'); // Orange for high readings
+                    } else {
+                        valueElement.css('color', '#2185D0'); // Default blue
+                    }
+                } catch (e) {
+                    console.error('Error updating gauge:', e);
+                    // Still update the digital display even if gauge fails
+                    valueElement.html(voltage.toFixed(3) + ' <span class="unit">V</span>');
+                }
+            }
+            
+            // Variables
+            let measurementActive = false;
+            let measurementInterval;
+            const refreshRate = 500; // ms
+            
+            // Start/Stop measurement
+            $('#start-btn').on('click', function() {
+                if (!measurementActive) {
+                    startMeasurement();
+                    $(this).addClass('disabled');
+                    $('#stop-btn').removeClass('disabled');
+                }
+            });
+            
+            $('#stop-btn').on('click', function() {
+                if (measurementActive) {
+                    stopMeasurement();
+                    $(this).addClass('disabled');
+                    $('#start-btn').removeClass('disabled');
+                }
+            });
+            
+            // Auto-range checkbox
+            $('#auto-range').on('change', function() {
+                const isAutoRange = $(this).is(':checked');
+                console.log("Auto range set to:", isAutoRange);
+                // You can implement auto-ranging logic here
+            });
+            
+            // Functions to start and stop measurements
+            function startMeasurement() {
+                measurementActive = true;
+                
+                // Start the interval for updating measurements
+                measurementInterval = setInterval(updateMeasurements, refreshRate);
+                
+                // Initial update
+                updateMeasurements();
+                
+                console.log("Measurement started");
+            }
+            
+            function stopMeasurement() {
+                measurementActive = false;
+                clearInterval(measurementInterval);
+                console.log("Measurement stopped");
+            }
+            
+            // Function to get voltage readings from the server
+            function updateMeasurements() {
+                // Array of channels to measure
+                const channels = ['A1', 'A2', 'A3', 'SEN'];
+                
+                // Use promises to handle multiple requests
+                const requests = channels.map(channel => {
+                    return new Promise((resolve, reject) => {
+                        $.get(`/get_voltage/${channel}`, function(data) {
+                            if (data.status === 'success') {
+                                resolve({
+                                    channel: data.channel,
+                                    voltage: data.voltage
+                                });
+                            } else {
+                                reject(`Error for ${channel}: ${data.message}`);
+                            }
+                        }).fail(function(jqXHR, textStatus, errorThrown) {
+                            reject(`Request failed for ${channel}: ${textStatus}`);
+                        });
+                    });
+                });
+                
+                // Process all requests
+                Promise.allSettled(requests).then(results => {
+                    results.forEach(result => {
+                        if (result.status === 'fulfilled') {
+                            const data = result.value;
+                            
+                            // Update the appropriate gauge based on channel
+                            switch(data.channel) {
+                                case 'A1':
+                                    updateGauge(gaugeA1, $('#value-a1'), data.voltage);
+                                    break;
+                                case 'A2':
+                                    updateGauge(gaugeA2, $('#value-a2'), data.voltage);
+                                    break;
+                                case 'A3':
+                                    updateGauge(gaugeA3, $('#value-a3'), data.voltage);
+                                    break;
+                                case 'SEN':
+                                    updateGauge(gaugeSEN, $('#value-sen'), data.voltage);
+                                    break;
+                            }
+                        } else {
+                            console.error(result.reason);
+                        }
+                    });
+                });
+            }
+            
+            // Auto-start measurements
+            $('#start-btn').click();
+            
+            // Additional window load handler to ensure gauges render correctly
+            $(window).on('load', function() {
+                handleResize();
+                
+                // Force a redraw after a delay to fix positioning issues
+                setTimeout(() => {
+                    if (gaugeA1) {
+                        gaugeA1.update();
+                        gaugeA1.draw();
+                    }
+                    if (gaugeA2) {
+                        gaugeA2.update();
+                        gaugeA2.draw();
+                    }
+                    if (gaugeA3) {
+                        gaugeA3.update();
+                        gaugeA3.draw();
+                    }
+                    if (gaugeSEN) {
+                        gaugeSEN.update();
+                        gaugeSEN.draw();
+                    }
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
