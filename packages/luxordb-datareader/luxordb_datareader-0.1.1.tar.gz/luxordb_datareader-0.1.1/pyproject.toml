@@ -1,0 +1,29 @@
+[build-system]
+# Define o sistema de build usado — setuptools no nosso caso
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "luxordb-datareader"  # nome do pacote (usado no pip install)
+version = "0.1.1"              # versão atual
+description = "Módulo para consultas e cálculos diversos utilizando dados da LuxorDB"
+authors = [
+  { name = "Sergio", email = "backoffice@luxor.com.br" }
+]
+readme = "README.md"
+license.text = "Proprietary - All rights reserved"       # ou substitua se for proprietário
+requires-python = ">=3.8"
+
+# Dependências do pacote (são instaladas com ele)
+dependencies = [
+  "pandas>=1.5.0",
+  "numpy>=1.24.0",
+  "scipy",
+  "pyarrow>=12.0.0",
+  "azure-storage-blob",
+  "python-dotenv",
+  "loguru"
+]
+
+[tool.setuptools]
+py-modules = ["luxorDB_datareader"]
