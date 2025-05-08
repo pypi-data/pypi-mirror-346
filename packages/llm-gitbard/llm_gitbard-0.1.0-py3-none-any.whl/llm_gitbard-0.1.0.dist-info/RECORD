@@ -1,0 +1,11 @@
+llm_gitbard/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_gitbard/configs.py,sha256=6-nJnbGObdnRU1jJCehC1_0ZCfGiTPt7en4DjPNUhEA,1376
+llm_gitbard/git.py,sha256=Dx-c8NYkC6t44H4rws-OXtdCl6l0XLH8zfUcmbp5e48,795
+llm_gitbard/gitbard.py,sha256=ftYu7YQ0HB6hDokzGZ9xazMoib0yi69Es2PQ37rJzeI,5119
+llm_gitbard/llm_hook.py,sha256=nCQh0uugufOnvp-0TnCqX4JY2cdrQ7y1-RDNy2w39mM,156
+llm_gitbard/prompt.py,sha256=uuPwzYCGPDg-e5Hx7XugM-8G-qc664AbD1XvDqFdYJA,6081
+llm_gitbard-0.1.0.dist-info/METADATA,sha256=swYFuteufgqeneNmc5g1wrtxCuIy8x6M7Y8poBmZjYk,342
+llm_gitbard-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+llm_gitbard-0.1.0.dist-info/entry_points.txt,sha256=RmJfGzpQ4H3l2HR7_FHYgEzHL2TClIq9ntujJbRxvOs,95
+llm_gitbard-0.1.0.dist-info/top_level.txt,sha256=oUTgNU2Rb_wsrI9J_6UfnpeOmHlzzgpf8swdSp_V5aI,12
+llm_gitbard-0.1.0.dist-info/RECORD,,

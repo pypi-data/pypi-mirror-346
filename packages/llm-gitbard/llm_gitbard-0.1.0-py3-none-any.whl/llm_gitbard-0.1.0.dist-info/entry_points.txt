@@ -1,0 +1,5 @@
+[console_scripts]
+git-bard = llm_gitbard.gitbard:gitbard
+
+[llm]
+gitbard = llm_gitbard.llm_hook
