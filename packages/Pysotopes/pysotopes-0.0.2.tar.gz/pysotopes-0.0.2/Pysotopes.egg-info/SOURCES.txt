@@ -1,0 +1,8 @@
+setup.py
+Pysotopes/__init__.py
+Pysotopes/pysotopes.py
+Pysotopes/test.py
+Pysotopes.egg-info/PKG-INFO
+Pysotopes.egg-info/SOURCES.txt
+Pysotopes.egg-info/dependency_links.txt
+Pysotopes.egg-info/top_level.txt
