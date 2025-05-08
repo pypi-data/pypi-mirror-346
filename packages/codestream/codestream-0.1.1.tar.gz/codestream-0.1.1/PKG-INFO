@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: codestream
+Version: 0.1.1
+Summary: stream your codebase like an llm
+Author-email: Aaron Glover <aglove2189@gmail.com>
+Requires-Python: >=3.13
+Requires-Dist: pygments>=2.19.1
+Requires-Dist: rich>=14.0.0
+Description-Content-Type: text/markdown
+
+# codestream - stream your codebase like an llm
+
+```sh
+uvx codestream {path_to_codebase}
+```
