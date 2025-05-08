@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: make4db-snowflake
+Version: 0.1.2
+Summary: make4db provider for Snowflake
+Author-email: Paresh Adhia <padhia+github@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: snowflake-snowpark-python
+Requires-Dist: sfconn
+Requires-Dist: make4db-api
+Requires-Dist: yappt
+
+# make4db-snowflake
+
+**make4db** provider for Snowflake
+
+See [make4db](https://github.com/padhia/make4db) for more information
