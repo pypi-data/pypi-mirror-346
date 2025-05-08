@@ -1,0 +1,7 @@
+boto3_pydantic_emr_containers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_emr_containers/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_emr_containers/emr_containers_classes.py,sha256=MboXVJ_Ih_2Nzyz-4P6zsW2H-5TJ8INCRbFtZDWtT3E,22082
+boto3_pydantic_emr_containers/emr_containers_constants.py,sha256=HEWRCpipF7OOFKNSNE5_kAxsHRUIF3kuTSWOuRlD4Vw,8157
+boto3_pydantic_emr_containers-1.0.0.dist-info/METADATA,sha256=boJbX7B9zj9lm-4L2hu95Xal7aymgscxiUDu0SrSM6Y,1435
+boto3_pydantic_emr_containers-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_emr_containers-1.0.0.dist-info/RECORD,,
