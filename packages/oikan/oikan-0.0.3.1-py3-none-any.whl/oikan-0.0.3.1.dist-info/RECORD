@@ -1,0 +1,11 @@
+oikan/__init__.py,sha256=zEzhm1GYLT4vNaIQ4CgZcNpUk3uo8SWnoaHYtHW_XSQ,628
+oikan/exceptions.py,sha256=Is0jG4apxO8QJQREIiJQYMjANYWibWeS-103q9KWbfg,192
+oikan/model.py,sha256=-LuvcljM5fqQsqwmhfol_e-_zVQzTAfq8SedQ3HYQQQ,14032
+oikan/neural.py,sha256=wxmGgzmtpwJ3lvH6u6D4i4BiAzg018czrIdw49phSCY,1558
+oikan/symbolic.py,sha256=3gtBndqFFC9ny2-PekKkUgr_t1HEpfkbk68e94yPpbI,2083
+oikan/utils.py,sha256=xMGRa1qhn8BWn9UxpVeJIuGb-UvQmbjiFSsvAdF0bMU,2095
+oikan-0.0.3.1.dist-info/licenses/LICENSE,sha256=75ASVmU-XIpN-M4LbVmJ_ibgbzbvRLVti8FhnR0BTf8,1096
+oikan-0.0.3.1.dist-info/METADATA,sha256=BAYWIvUqQ-al4TPraOnx0tx6eGSFUOvl4_Mxfxo61Qw,8335
+oikan-0.0.3.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+oikan-0.0.3.1.dist-info/top_level.txt,sha256=XwnwKwTJddZwIvtrUsAz-l-58BJRj6HjAGWrfYi_3QY,6
+oikan-0.0.3.1.dist-info/RECORD,,
