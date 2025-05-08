@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+auths3.egg-info/PKG-INFO
+auths3.egg-info/SOURCES.txt
+auths3.egg-info/dependency_links.txt
+auths3.egg-info/top_level.txt
