@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-giga-checker = mcp_giga_checker.server:run
