@@ -1,0 +1,2 @@
+[console_scripts]
+deabook = deabook.cli:main
