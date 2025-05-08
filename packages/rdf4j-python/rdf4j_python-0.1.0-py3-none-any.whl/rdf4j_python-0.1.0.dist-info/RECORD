@@ -1,0 +1,15 @@
+rdf4j_python/__init__.py,sha256=-Ux0t15UPMS7zpvvedvR2xs8wtY5k_TiY74YdExI2PY,203
+rdf4j_python/_client/__init__.py,sha256=L5q5RTHXCNyHp2WNP4xTemGXNntUW4RF_QJPoCWciUQ,98
+rdf4j_python/_client/_client.py,sha256=gBuw0tfV18SXUmoh4JgJcaa-RwxkGejm2LnQwYlbmIo,3105
+rdf4j_python/_driver/__init__.py,sha256=ryxQ9zig30THoIFcFvSYouof7OEvoeaven15gzQqUZY,147
+rdf4j_python/_driver/_async_rdf4j_db.py,sha256=nUYXhZ2ku8ibRfPjveEv246P86-eXYiRS_u2-uRP-0U,3361
+rdf4j_python/_driver/_async_repository.py,sha256=xTaR8RJdnQFZ4s43KXRm7rr9YNQO8_Me2S6CGjSRYIk,2132
+rdf4j_python/exception/repo_exception.py,sha256=-PMWkw1ieOeSCHt1jHwIFHQsrXJn3KGsBWIn58-833w,102
+rdf4j_python/model/_base_model.py,sha256=YOcgb83NfObDlrj7-d8f3yg1ZJGzkKs4blI7wOYb4LA,812
+rdf4j_python/model/repository.py,sha256=LLKJnCer9dRDs-aS_Fyn3vKfmmRbmWguLuJlxvCWTro,1368
+rdf4j_python/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rdf4j_python/utils/const.py,sha256=awf0oGwDs54K02v2GPl2vTgUvrjG0YbX6cAUfXFMsug,838
+rdf4j_python-0.1.0.dist-info/METADATA,sha256=HNAT_i0qrKvFotzwclMSoIA8R7Ct9MHEB1DF7fAco-Y,215
+rdf4j_python-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+rdf4j_python-0.1.0.dist-info/top_level.txt,sha256=Lf2K8d8WcEkmvo5giLGuZ3gl20rNEwMssyAFBeVzbCs,13
+rdf4j_python-0.1.0.dist-info/RECORD,,

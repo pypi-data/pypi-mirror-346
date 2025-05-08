@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: rdf4j-python
+Version: 0.1.0
+Summary: The Python client for RDF4J
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: rdflib>=7.1.4
