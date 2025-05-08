@@ -1,0 +1,7 @@
+mariadb_binlog_indexer/__init__.py,sha256=yNv9eHiFGe0VOTOzszICb8Jg40NqCIXwP4ueOaFXfc4,52
+mariadb_binlog_indexer/indexer.py,sha256=7g9MvpTW36gD3cpyQh07o3_jkTbHbgOg5T4zrzxnDbY,9210
+mariadb_binlog_indexer/lib/indexer,sha256=YwO0YtIRVig-IrT_SxcijgmH8_eh3V2P5fZNq7E-5nA,74936872
+mariadb_binlog_indexer-0.0.5.dist-info/METADATA,sha256=4BgHuoHD5fE-EVToDD5YUCNSOHKK8TRswygfYfeDR4E,4117
+mariadb_binlog_indexer-0.0.5.dist-info/WHEEL,sha256=MYBKXDyYa3UY9_Pg9wt97dxd7e-ollUJhNHBfAwGSYA,108
+mariadb_binlog_indexer-0.0.5.dist-info/top_level.txt,sha256=u1GGXjjpVxjAveXe1R1R6vkOjCiPY_5dJ6E3lW82PgE,23
+mariadb_binlog_indexer-0.0.5.dist-info/RECORD,,
