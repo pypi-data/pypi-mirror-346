@@ -1,0 +1,13 @@
+charfinder/__init__.py,sha256=BW7SWRpHoxuOQZ67pS20yog2LWYl-nK7-BEFBNrHGgA,22
+charfinder/__main__.py,sha256=EClCwCzb6h6YBpt0hrnG4h0mlNhNePyg_xBNNSVm1os,65
+charfinder/cli.py,sha256=tySZWhlnHKrA5TsYBq2mHuXVfY5LCpMZcBVfqs6w1e8,5069
+charfinder/constants.py,sha256=3yAJ6BsAyjtp3Fdk79CqMW9DvC84OwyOEGzXL4wQ_L4,674
+charfinder/core.py,sha256=Jere7V3BbnClQ0qKmz16Bl9q8XoRyb3mI34gZj8hxXg,6798
+charfinder/fuzzymatchlib.py,sha256=FEQeFGBwGuw3yfikPTmbj33vRvya8XziICYFi5IHPTI,2014
+charfinder/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+charfinder-1.0.7.dist-info/licenses/LICENSE.txt,sha256=kzFewGND4i3WwqaVnKQh53Ac1Vw9laGYh5OhOouofOc,1091
+charfinder-1.0.7.dist-info/METADATA,sha256=RYJFM3lbpTrlNmuzynvPVSgqe9XvZYUsBoDL_1ruwpk,10918
+charfinder-1.0.7.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+charfinder-1.0.7.dist-info/entry_points.txt,sha256=FW4Uex9gEak5F9yb1kBZ6u3poDnDnzNVc09cNJv3hk4,51
+charfinder-1.0.7.dist-info/top_level.txt,sha256=FF_y5-Z0JG6C54cLeqJMDSCcarJAO1PnWyGK3NXkRmk,11
+charfinder-1.0.7.dist-info/RECORD,,
