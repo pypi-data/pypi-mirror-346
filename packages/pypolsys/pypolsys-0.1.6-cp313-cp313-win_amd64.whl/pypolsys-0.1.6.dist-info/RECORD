@@ -1,0 +1,11 @@
+pypolsys-0.1.6.dist-info/METADATA,sha256=6io28-5h3_a_28IXSi26wsJ0aVRi1_x1k_gKU9sbnNU,53882
+pypolsys-0.1.6.dist-info/WHEEL,sha256=suq8ARrxbiI7iLH3BgK-82uzxQ-4Hm-m8w01oCokrtA,85
+pypolsys-0.1.6.dist-info/LICENSE,sha256=U8TVOdK6KzAstfxpT4Baa1MVCT3QMIyza61txw5mI_0,35855
+pypolsys/polsys.cp313-win_amd64.pyd,sha256=YJdOgb6yW5HHPQrMUdbxv-8vyJxxAhT8OwfZuLGESaQ,1198773
+pypolsys/polsys.cp313-win_amd64.dll.a,sha256=LqDIQQ2h7lyklibE0nLrMsNcyYYyzjumNGSNfTB9l-A,1532
+pypolsys/__init__.py,sha256=KFPUXTgL3a-TPF0La9lCQdj7j8n0wEhs3e6Fv71aKck,2202
+pypolsys/test.py,sha256=MemiYQppbALQHgLD0O43-sk-eSluK8DsP94GUrTSwd8,17791
+pypolsys/utils.py,sha256=jmj_U97TY4ODeOWX8sCF2vhh1wf3WrdtozsxNjW58Is,19417
+pypolsys/version.py,sha256=L2B1nl7yV0DTHGIWFVbztK226Tb_rJmgGwSS_HoiSnA,101
+pypolsys/examples/data/toy_model.npz,sha256=mIa6hhLbJQFRcbOXd8pRCV3QfPbF1pS6aUZs9Nwy_jg,2071
+pypolsys-0.1.6.dist-info/RECORD,,
