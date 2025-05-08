@@ -1,0 +1,10 @@
+operacoes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+operacoes/base.py,sha256=RulhTOMyso30kmyax6tSEH2ya4z5d0CvcIWlIa1R1MY,144
+operacoes/divisao.py,sha256=72qs9V0vb-Py9NfWacIiJiTlcnXpIJ2S6OuKCeGo3XQ,223
+operacoes/multiplicacao.py,sha256=U17bhbRtz_KqgnqGPZQ9K2vvuhJhtcC4XiCifkSoYfY,142
+operacoes/soma.py,sha256=dMoy9FRfHjPQFOCZLqj_ebgQ-NMV9I2SW7gtkLe4itU,133
+operacoes/subtracao.py,sha256=D4RgZztwOqJyIYs1OeDbCG1mqXAxowejaY_em8v_oRs,138
+calcfastapi_ps-0.1.0.dist-info/METADATA,sha256=AQN9O5VSuBo87B1TakT55ZPp_YpreeYZtuncsj8IE_g,462
+calcfastapi_ps-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+calcfastapi_ps-0.1.0.dist-info/top_level.txt,sha256=J4krWc4XIk5L-Ml3hgnZI_5om3IK2Gp_82Gvsycz7ZE,10
+calcfastapi_ps-0.1.0.dist-info/RECORD,,
