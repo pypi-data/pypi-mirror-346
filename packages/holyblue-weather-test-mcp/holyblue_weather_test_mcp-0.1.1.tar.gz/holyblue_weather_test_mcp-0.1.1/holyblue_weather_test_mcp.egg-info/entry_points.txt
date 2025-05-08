@@ -1,0 +1,2 @@
+[console_scripts]
+holyblue-weather-test-mcp = weather_test_mcp.main:main

@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: holyblue-weather-test-mcp
+Version: 0.1.1
+Summary: MCP Test Program01 by holyblue
+Author-email: holyblue <dev.holyblue@gmail.com>
+License-Expression: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.6.0
