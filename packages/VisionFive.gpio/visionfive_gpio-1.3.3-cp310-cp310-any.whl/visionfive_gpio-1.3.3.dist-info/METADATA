@@ -1,0 +1,197 @@
+Metadata-Version: 2.4
+Name: VisionFive.gpio
+Version: 1.3.3
+Summary: A module to control VisionFive GPIO ports
+Home-page: http://gitlab.starfivetech.com/product1/software-ae/visionfive-python-gpio/gpio-libs
+Author: StarFive
+Author-email: support@starfivetech.com
+License: MIT
+Keywords: VisionFive GPIO
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development
+Classifier: Topic :: Home Automation
+Classifier: Topic :: System :: Hardware
+License-File: LICENCE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+
+This package provides a Python module to control the GPIO on a VisionFive SBC.
+
+Support basic GPIO function including I/O, edge detection, PWM, I2C, SPI. Although hardware PWM is not available yet, software PWM is available to use on all channels.
+
+Installation
+--------------
+
+Pypi does not support uploading binaries of RISC-V architectures, there are two ways to install VisionFive.gpio:
+
+pip:
+
+a. First, access the following website to check the latest version number of VisionFive.gpio: <https://pypi.org/project/VisionFive.gpio/#history>  
+
+b. Replace "1.x.x" in the following URL with the latest version number obtained from the above step: <https://pypi.org/project/VisionFive.gpio/1.x.x/#files>  
+
+c. Visit the modified URL, for example: <https://pypi.org/project/VisionFive.gpio/1.2.12/#files>  
+
+d. Hover over the file with the ".whl" extension (e.g., VisionFive.gpio-1.2.12-cp34-abi3-any.whl) and right-click to copy the link address.  
+
+e. Download the .whl installation package using the wget command:
+
+$ wget download_address_of_whl_package
+
+f. Rename the .whl package by replacing "any" with "linux_riscv64":
+
+$ mv VisionFive.gpio-1.2.12-cp34-abi3-any.whl VisionFive.gpio-1.2.12-cp34-abi3-linux_riscv64.whl
+
+g. Finally, install the .whl package using the following command:
+
+$ pip install VisionFive.gpio-1.2.12-cp34-abi3-any.whl
+
+script:  
+
+You can use the method provided in the following URL to install the script: <https://doc-en.rvspace.org/VisionFive2/AN_Edge_Detection/VisionFive2_ApplicationNotes/Shared_preparing_software%20-%20vf2.html>
+
+Usage
+-------
+
+Same as RPi.GPIO, help and usage of APIs can be obtained through help() API:
+
+$ import VisionFive.gpio as GPIO
+
+$ help(GPIO)
+
+$ help(GPIO.setup)
+
+Sample Code  
+-------------
+
+Support python sample, such as:  
+
+- GPIO basic operation including input and output
+- Sense HAT(B) basing I2C API
+- LED_Matrix to display logo about Starfive
+- uart_gps_demo to read gps information from GPS NEO-6M
+- pwm_led to test PWM module works well
+- edge_detection_basic about basic edge API usage
+- edge_with_waiting_time about edge detection with specific time
+- edge_with_LED_Matrix about trigger LED display by button
+- RPi_demo_#GPIO_basic#_run_on_VisionFive about running RPi GPIO demo on VisionFive board
+- RPi_demo_#PWM#_run_on_VisionFive about running RPi PWM demo on VisionFive board  
+
+All demos above are on the example folder.
+
+Change Log
+==========
+
+1.3.3
+-------
+- Add support for python 3.11 and 3.12
+- Fix exit error of LED_Matrix.py demo
+
+1.3.2
+-------
+- Add support for kernel v6.6
+
+1.3.1
+-------
+- Fix bugs in 'gpio_function()'
+
+1.3.0
+-------
+- Improve the setmode() and getmode() functions
+- Added BCM mode
+- Updated the demo program
+
+1.2.16
+-------
+- Fix and update demo program of 2.4inch_LCD
+
+1.2.15
+-------
+- Supplementary help documentation
+- Fix the missing warning message when 'GPIO.cleanup()' is repeated
+
+1.2.10
+-------
+- Fix gpio issues and text format
+
+1.2.9
+-------
+- Add help description for gpio, i2c, spi
+
+1.2.8
+-------
+- Fix gpio issue
+
+1.2.7
+-------
+- Fix pud issue
+
+1.2.6
+-------
+- Support GPIO edge detection
+- Add GPIO edge detection demo
+
+1.2.5
+-------
+- Support GPIO pud
+
+1.2.4
+-------
+- update 2.24inch LCD demo
+
+1.2.3
+-------
+- Update setup.py
+
+1.2.2
+-------
+- Update gpio code
+
+1.2.1
+-------
+- Modify PWM
+
+1.2.0
+-------
+- Modify Demo Code
+
+1.1.1
+-------
+- Modify prompt information
+
+1.0.1
+-------
+- ###Basic function:
+- For SPI API: add a function to write multiple bytes
+- ###Python sample:
+- ADD a SPI demo: using VisionFive SPI support LCD display
+
+1.0.0
+-------
+- ###Basic function:
+- Support basic GPIO function
+- Support I2C API
+- Support PWM API
+- Support SPI API
+- ###Python sample:
+- GPIO basic operation, including input, output
+- Sense HAT(B) basing I2C API
+- LED_Matrix to display logo about Starfive
+- uart_test to test VersionFive's UART works well with UART loopback 
+- uart_gps_demo to read gps information from GPS NEO-6M
+- pwm_led to test PWM module works well
