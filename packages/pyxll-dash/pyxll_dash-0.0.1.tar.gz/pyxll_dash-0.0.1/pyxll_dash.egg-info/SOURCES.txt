@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+pyxll_dash/__init__.py
+pyxll_dash/dash_bridge.py
+pyxll_dash/pyxll.py
+pyxll_dash.egg-info/PKG-INFO
+pyxll_dash.egg-info/SOURCES.txt
+pyxll_dash.egg-info/dependency_links.txt
+pyxll_dash.egg-info/entry_points.txt
+pyxll_dash.egg-info/requires.txt
+pyxll_dash.egg-info/top_level.txt
