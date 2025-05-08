@@ -1,0 +1,83 @@
+name: Build Vector Database
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - '.github/workflows/vector-db.yml'
+  workflow_dispatch:
+    inputs:
+      input_dir:
+        description: 'Input directory containing files to process'
+        required: true
+        default: 'docs'
+      output_dir:
+        description: 'Output directory for vector database'
+        required: true
+        default: 'vector-db'
+      embedding_model:
+        description: 'Embedding model to use'
+        required: false
+        default: 'text-embedding-ada-002'
+      embedding_provider:
+        description: 'Embedding provider (openai or huggingface)'
+        required: false
+        default: 'openai'
+      vector_store:
+        description: 'Vector store to use (chroma, faiss, or qdrant)'
+        required: false
+        default: 'chroma'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13'
+    
+    - name: Install uv
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+    
+    - name: Install vector-me
+      run: |
+        uv pip install vector-me
+    
+    - name: Build Vector Database
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        vector-me build \
+          ${{ github.event.inputs.input_dir || 'docs' }} \
+          ${{ github.event.inputs.output_dir || 'vector-db' }} \
+          --embedding-model "${{ github.event.inputs.embedding_model || 'text-embedding-ada-002' }}" \
+          --embedding-provider "${{ github.event.inputs.embedding_provider || 'openai' }}" \
+          --vector-store "${{ github.event.inputs.vector_store || 'chroma' }}" \
+          --api-key "${{ secrets.OPENAI_API_KEY }}"
+    
+    - name: Upload Vector Database
+      uses: actions/upload-artifact@v4
+      with:
+        name: vector-db
+        path: ${{ github.event.inputs.output_dir || 'vector-db' }}
+    
+    - name: Create Release Asset
+      if: github.event_name == 'workflow_dispatch'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ${{ github.event.inputs.output_dir || 'vector-db' }}/**/*
+        tag_name: vector-db-${{ github.run_number }}
+        name: Vector Database ${{ github.run_number }}
+        body: |
+          Vector database built from ${{ github.event.inputs.input_dir || 'docs' }}
+          - Embedding Model: ${{ github.event.inputs.embedding_model || 'text-embedding-ada-002' }}
+          - Embedding Provider: ${{ github.event.inputs.embedding_provider || 'openai' }}
+          - Vector Store: ${{ github.event.inputs.vector_store || 'chroma' }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 

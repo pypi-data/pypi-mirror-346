@@ -1,0 +1,60 @@
+[project]
+name = "vector-me"
+version = "0.1.0"
+description = "A flexible vector database builder with plugin support"
+authors = [
+    {name = "TheDataGuy", email = "me@thedataguy.pro"}
+]
+dependencies = [
+    "langchain>=0.1.0",
+    "langgraph>=0.0.10",
+    "typer>=0.9.0",
+    "pydantic>=2.0.0",
+    "chromadb>=0.4.0",
+    "faiss-cpu>=1.7.4",
+    "qdrant-client>=1.7.0",
+    "openai>=1.0.0",
+    "sentence-transformers>=2.2.2",
+    "rich>=13.0.0",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vector_me"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true 
