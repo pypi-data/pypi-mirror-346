@@ -1,0 +1,4 @@
+[console_scripts]
+r2x4_demo = ls_r2x4.r2x4:main
+r2x4_gui_qt = ls_r2x4.gui.qt_widget:main
+r2x4_gui_tkinter = ls_r2x4.gui.tkinter_gui:main
