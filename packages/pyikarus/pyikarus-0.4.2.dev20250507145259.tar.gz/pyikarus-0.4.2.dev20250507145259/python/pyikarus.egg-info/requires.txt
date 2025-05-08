@@ -1,0 +1,8 @@
+dune-functions<=2.11.0
+dune-common<=2.11.0
+dune-geometry<=2.11.0
+numpy<2.0.0
+dune-istl<=2.11.0
+matplotlib
+dune-grid<=2.11.0
+scipy
