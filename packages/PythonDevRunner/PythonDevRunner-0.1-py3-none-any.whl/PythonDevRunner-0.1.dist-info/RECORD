@@ -1,0 +1,8 @@
+dev_runner/__init__.py,sha256=rZtimUWvjdfleUUTsdTIgegJCj6THbaJBXCTpnDgHlo,26
+dev_runner/cli.py,sha256=QTrjkGkJyuLbiXDjyRzueQxZKgq3RFTqX9rAltLyJB0,1428
+dev_runner/core.py,sha256=2VWxRBUYjjO_HDH4RjDBkqphqJCdsb9quLxTWSiiBu8,1802
+PythonDevRunner-0.1.dist-info/METADATA,sha256=zdPjKrpi-_q5YgwenWognUps921gJMXoTfPhIY-7kxw,1355
+PythonDevRunner-0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+PythonDevRunner-0.1.dist-info/entry_points.txt,sha256=KwyR-6PRFIaYKP-AKwLYKnuIQ0wB-iPLB2E_FRChpDw,50
+PythonDevRunner-0.1.dist-info/top_level.txt,sha256=lPHj5_N8qE_ULiI8-XF9N3wj-iTubSMZ3ZP8yOW6WnM,11
+PythonDevRunner-0.1.dist-info/RECORD,,
