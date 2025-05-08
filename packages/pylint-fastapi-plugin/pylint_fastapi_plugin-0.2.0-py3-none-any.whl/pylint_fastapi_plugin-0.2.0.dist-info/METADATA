@@ -1,0 +1,167 @@
+Metadata-Version: 2.1
+Name: pylint-fastapi-plugin
+Version: 0.2.0
+Summary: A Pylint plugin that enforces FastAPI router decorator and model conventions
+License: MIT
+Keywords: pylint,fastapi,plugin,lint
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Dist: astroid (>=3.0.0,<4.0.0)
+Requires-Dist: pylint (>=3.0.0,<4.0.0)
+Description-Content-Type: text/markdown
+
+# Pylint FastAPI Plugin
+
+A Pylint plugin to enforce FastAPI router decorator parameters.
+
+This plugin checks that FastAPI router decorators include required parameters:
+- `response_model=BaseResponse`
+- `summary`
+- `operation_id`
+- `description`
+
+同时检查查询参数的命名规范和文档规范。
+
+## Installation
+
+```bash
+pip install pylint-fastapi-plugin
+```
+
+## Usage
+
+Add the following to your `.pylintrc`:
+
+```ini
+[MASTER]
+load-plugins=pylint_fastapi_plugin
+
+[MESSAGES CONTROL]
+enable=fastapi-router-response-model,
+       fastapi-router-summary,
+       fastapi-router-operation-id,
+       fastapi-router-description,
+       fastapi-query-params-docs,
+       fastapi-router-page-size-param
+```
+
+## Testing
+
+To run the tests:
+
+```bash
+cd tests
+python run_tests.py
+```
+
+You can also test the plugin on a sample FastAPI application:
+
+```bash
+cd tests
+python test_on_example.py
+```
+
+查看 [TESTING.md](./TESTING.md) 获取更多关于测试策略和结果的详细信息。
+
+## Rules
+
+- `fastapi-router-response-model` (W9001): Router decorator missing response_model=BaseResponse
+- `fastapi-router-summary` (W9002): Router decorator missing summary parameter
+- `fastapi-router-operation-id` (W9003): Router decorator missing operation_id parameter
+- `fastapi-query-params-docs` (W9004): Query parameter missing title or description
+- `fastapi-router-description` (W9005): Router decorator missing description parameter
+- `fastapi-router-page-size-param` (W9007): Query parameter should be renamed to 'page_size' with alias
+
+## PageSize Parameter Checker
+
+This plugin also checks and fixes the naming convention for FastAPI query parameters related to page size:
+
+1. Parameter name should be in snake_case (`page_size` instead of `pageSize`)
+2. Query decorator should include `alias="pageSize"` to maintain API compatibility
+3. Query decorator should include documentation (`title` and `description`)
+
+### Example
+
+Incorrect:
+```python
+@router.get("/list")
+async def list_users(pageSize: int = Query(10)):
+    # ...
+```
+
+Correct:
+```python
+@router.get("/list")
+async def list_users(page_size: int = Query(10, alias="pageSize", title="每页数量", description="每页显示的记录数")):
+    # ...
+```
+
+### Configuration
+
+Add the following to your `.pylintrc`:
+
+```ini
+[MASTER]
+load-plugins=pylint_fastapi_plugin
+
+[MESSAGES CONTROL]
+enable=W9007
+```
+
+### Auto-fix
+
+The plugin automatically applies fixes when running pylint:
+
+```bash
+python -m pylint your_file.py
+
+```
+
+## 示例
+
+查看 [fixed_example_app.py](./tests/test_files/fixed_example_app.py) 获取符合所有规则的示例代码。
+
+## 贡献
+
+欢迎提交 Pull Request 和 Issue 来改进这个插件。
+
+## 许可证
+
+MIT
+
+## Quickstart with Poetry
+
+```bash
+# 安装依赖并创建虚拟环境
+poetry install
+
+# 进入虚拟环境
+poetry shell
+
+# 本地开发模式安装到环境
+poetry run pip install -e .
+
+# 运行 pylint 验证插件生效
+poetry run pylint --load-plugins=pylint_fastapi_plugin your_code_dir/
+```
+
+## 发布到 PyPI
+
+```bash
+# 构建
+poetry build
+
+# 发布（需先配置 PyPI token）
+poetry publish --username __token__ --password <pypi-token>
+```
+
