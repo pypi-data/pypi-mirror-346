@@ -1,0 +1,15 @@
+easyopenchat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easyopenchat/chatbot.py,sha256=8E-8NIi0Fpz-ayd6rv8fFLUCPvz3DhfARZnNSBxQmEQ,881
+easyopenchat/client.py,sha256=J1If7-SD1Bvli1MEeRup24YnjTF8s620MVlHl9Dim4w,897
+easyopenchat/gui.py,sha256=qBm_8pEL3LdtUCL6LkHfiTuhf3OSWOyYbj-QkgCPaiw,955
+easyopenchat/memory.py,sha256=zWw-6s5CXTvGGwbFnfldzR3zVr25Ht1DQdslJz8mPkI,657
+easyopenchat/prompts.py,sha256=QJaZd-KilHbC0TbJZhbRPT7WD8akaz1qtDckZzi_z-M,216
+easyopenchat/vector_memory.py,sha256=Jx26U2z6OYKbp_sDQrAXNHBxTWWZU7aFmk0Zi_Znpig,351
+easyopenchat/web.py,sha256=5MA280dd7AI8mn_U0FN-NG_9_wK75Rp9CkUO9fYjT0k,591
+easyopenchat/plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easyopenchat/plugins/loader.py,sha256=ImGiJyl5SsWPmOQJxKrmaYi4iHTq0Q0sCiO-LVxC8Sc,358
+easyopenchat/plugins/time_plugin.py,sha256=hkYAMB3I-qdQKk2VR3cjIiwIU9Hic1Gtt6aM_EHoPpk,116
+easyopenchat-0.1.0.dist-info/METADATA,sha256=eP59w1HBpG4y1FiqrybmX4FYoa_Fjz0Tesp6jF-guzE,530
+easyopenchat-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+easyopenchat-0.1.0.dist-info/top_level.txt,sha256=0iGXMEzru0asezNfc5eW6aHU9C1VQVkpHMYeNJD27sc,13
+easyopenchat-0.1.0.dist-info/RECORD,,

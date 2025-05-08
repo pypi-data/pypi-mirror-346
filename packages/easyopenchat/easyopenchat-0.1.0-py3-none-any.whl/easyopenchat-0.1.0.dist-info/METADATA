@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: easyopenchat
+Version: 0.1.0
+Summary: An easy, beginner-friendly chatbot SDK powered by OpenRouter
+Author-email: Sriram G <sriramkrish379@gmail.com>
+License: MIT
+Keywords: chatbot,openai,openrouter,gradio,api,bot,openrouter
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: jinja2
+Requires-Dist: gradio
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+
+# easyopenchat
+
+A simple and extensible Python chatbot framework using OpenRouter.
