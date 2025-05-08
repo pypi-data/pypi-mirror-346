@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/pylatesttrends/__init__.py
+src/pylatesttrends/data.py
+src/pylatesttrends/trends_scraper.py
+src/pylatesttrends.egg-info/PKG-INFO
+src/pylatesttrends.egg-info/SOURCES.txt
+src/pylatesttrends.egg-info/dependency_links.txt
+src/pylatesttrends.egg-info/requires.txt
+src/pylatesttrends.egg-info/top_level.txt
