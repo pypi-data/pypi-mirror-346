@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: keplemon
+Version: 0.1.1
+Requires-Dist: requests
+Requires-Dist: click
+Requires-Dist: maturin ; extra == 'dev'
+Requires-Dist: keplemon[test] ; extra == 'dev'
+Requires-Dist: mkdocstrings[python] ; extra == 'dev'
+Requires-Dist: mkdocs-material ; extra == 'dev'
+Requires-Dist: markdown-include ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'test'
+Provides-Extra: dev
+Provides-Extra: test
