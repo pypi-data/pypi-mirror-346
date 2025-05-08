@@ -1,0 +1,13 @@
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+fbm
+tqdm
+torch
+
+[testing]
+setuptools
+pytest
+pytest-cov

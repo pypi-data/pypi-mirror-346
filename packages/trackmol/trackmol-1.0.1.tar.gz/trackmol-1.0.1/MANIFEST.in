@@ -1,0 +1,11 @@
+# MANIFEST.in
+
+# Explicitly include only what you want
+include README.md
+include LICENSE
+
+# Exclude things you don’t want
+exclude *.DS_Store
+exclude *.rst
+#prune docs
+prune tests
