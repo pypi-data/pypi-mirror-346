@@ -1,0 +1,7 @@
+drake
+meshcat
+loguru
+matplotlib
+numpy
+pycollada
+trimesh
