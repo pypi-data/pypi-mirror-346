@@ -1,0 +1,7 @@
+boto3_pydantic_dsql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_dsql/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_dsql/dsql_classes.py,sha256=rLKK7JMYUa73fX6p7nFMMVx8-I8RBw1ctxHaulRyhBc,4069
+boto3_pydantic_dsql/dsql_constants.py,sha256=7Toj3kg6hGY-Qte5fnWNn4oFEUwmjFgOnw5T2A4YmJs,6933
+boto3_pydantic_dsql-1.0.0.dist-info/METADATA,sha256=rFe-Awhm9kXfdeQmZJPTKXwK44LTLlPtmjXIYlRlamw,1385
+boto3_pydantic_dsql-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_dsql-1.0.0.dist-info/RECORD,,
