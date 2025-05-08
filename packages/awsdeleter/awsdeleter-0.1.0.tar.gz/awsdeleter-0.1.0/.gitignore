@@ -1,0 +1,25 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+env/
+.venv/
+*.egg-info/
+*.dist-info/
+
+# Distribution / packaging
+build/
+dist/
+*.egg
+*.tar.gz
+
+# PyCharm (example for local IDE setups)
+.idea/
+
+# VS Code (example for local IDE setups)
+.vscode/
+
+# MacOS
+.DS_Store
+
