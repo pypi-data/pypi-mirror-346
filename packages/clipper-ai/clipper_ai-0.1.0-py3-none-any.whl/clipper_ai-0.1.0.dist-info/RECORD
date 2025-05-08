@@ -1,0 +1,10 @@
+clipper/__init__.py,sha256=HvlAl-zKsOKEgayXsfr4EFzfXOYsJL-yuCI59H3LD8w,47
+clipper/__main__.py,sha256=EClCwCzb6h6YBpt0hrnG4h0mlNhNePyg_xBNNSVm1os,65
+clipper/cli.py,sha256=iUT-x5n4udWewp6WYSR2CCN8ZNHcp9CXoyGDIKMVEEo,912
+clipper/core.py,sha256=4h2j1vEh-PFmsFFwGu7UESU1IXhdX9ydJ4-9hOQcOVQ,3944
+clipper_ai-0.1.0.dist-info/licenses/LICENSE,sha256=PQwBcFOnfWsK8oUw2SDyNwMLWtedTMmtvqXL0cL9lO0,1089
+clipper_ai-0.1.0.dist-info/METADATA,sha256=TDvHSK3s3iDq9eeasxVpGS9f43EBbUycJKllOIUXjc4,454
+clipper_ai-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+clipper_ai-0.1.0.dist-info/entry_points.txt,sha256=4e2ytRLh1d00zC8gfbpGov35jFwUiM-15X6a8eB1fJ8,45
+clipper_ai-0.1.0.dist-info/top_level.txt,sha256=qk0Ag_OYxlLWPlDKylyWAFPwNiiDyuQwsf4ZYjDJ1zk,8
+clipper_ai-0.1.0.dist-info/RECORD,,
