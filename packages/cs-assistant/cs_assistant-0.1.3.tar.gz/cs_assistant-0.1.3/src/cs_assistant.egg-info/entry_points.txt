@@ -1,0 +1,2 @@
+[console_scripts]
+cs-assistant = main:main
