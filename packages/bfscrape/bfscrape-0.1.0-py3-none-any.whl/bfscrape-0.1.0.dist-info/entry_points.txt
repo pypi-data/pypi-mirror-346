@@ -1,0 +1,2 @@
+[console_scripts]
+bfscrape = bfs_scrape.cli:main

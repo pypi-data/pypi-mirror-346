@@ -1,0 +1,11 @@
+bfs_scrape/__init__.py,sha256=-8yabIfQ_fAKt0VrHgQGNH7utW1oNTMCGuwzqbLLRkI,439
+bfs_scrape/bfs_web_scraper.py,sha256=Kmk6f8208KlS0XyhPOxC_7hi42kzsD27woidlAD5VzE,22882
+bfs_scrape/cli.py,sha256=nDQwHkAqXXK2Na11SDwGnehNXxcpJ6O5UwHkV3aM3Vs,3131
+bfs_scrape/structured_outputs.py,sha256=HpDbC9BTyisMEMS6EyM0-H2Oa2LToCfTfb5L9hc1Q9w,1575
+bfs_scrape/system_prompt.py,sha256=UkwVpSyYcT0B8SGx03l82ZRjoK1AzXqVS_Vc2OEIAA0,2189
+bfscrape-0.1.0.dist-info/licenses/LICENSE,sha256=A94f9q7WQDbLfBDMer0GA3-i8xoZZ4g4uPeI7jkHnX4,1076
+bfscrape-0.1.0.dist-info/METADATA,sha256=ni_fCmmcU7KhgpoFtWIZ6yVnm8AJ4lPKmdQUGyKGOVw,4295
+bfscrape-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+bfscrape-0.1.0.dist-info/entry_points.txt,sha256=3NBpIrodAbHDQZuIBN-g5i4V443OwaJjKyA4mFX5cdA,49
+bfscrape-0.1.0.dist-info/top_level.txt,sha256=f230dJg9P5CNCwQY3F4dwpkDdU3NjOGJNWdYLpVvCD8,11
+bfscrape-0.1.0.dist-info/RECORD,,
