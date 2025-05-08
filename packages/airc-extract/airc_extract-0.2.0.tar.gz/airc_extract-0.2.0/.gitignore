@@ -1,0 +1,14 @@
+.venv
+.python-version
+uv.lock
+test_data/
+.DS_Store
+
+*.pyc
+__pycache__/
+*.ipynb_checkpoints/
+*.egg-info/
+*.egg
+*.log
+*.ini
+.ruff_cache
