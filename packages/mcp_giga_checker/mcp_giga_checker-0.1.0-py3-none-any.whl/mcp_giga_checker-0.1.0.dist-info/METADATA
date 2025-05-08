@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: mcp_giga_checker
+Version: 0.1.0
+Summary: MCP сервер для проверки текста на сгенерированность ИИ через GigaChat API
+Author-email: Sergei Trashchenkov <trashchenkov@gmail.com>
+License: MIT
+Requires-Python: >=3.12
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: uv>=0.7.2
