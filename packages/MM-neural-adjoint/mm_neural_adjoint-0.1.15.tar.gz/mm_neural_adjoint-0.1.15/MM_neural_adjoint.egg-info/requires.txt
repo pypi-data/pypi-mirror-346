@@ -1,0 +1,9 @@
+numpy
+pandas
+tqdm
+mlflow
+scikit-learn
+torch
+
+[all]
+groundingdino-py
