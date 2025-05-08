@@ -1,0 +1,44 @@
+global_settings:
+  default_model: "openai:o4-mini"
+
+log_settings:
+  level: "INFO"
+
+
+fix_environment_settings:
+  coder_settings:
+    system_prompt: |-
+      You are an expert python coder. Your job is to generate python code based on the context provided.
+    task_prompt: |-
+      Given the failing code, fix or impement the code so that it passes the tests.
+  reviewer_settings:
+    system_prompt: |-
+      You are a code reviewer. Your job is to review the code and provide feedback.
+    task_prompt: |-
+      Your task: review the code provided and provide feedback.
+      Do not rely on any logic that is not provided in this context. 
+      The code should of course be of high quality, pythonic and readable.
+
+
+unit_test_environment_settings:
+  coder_settings:
+    system_prompt: |-
+      You are a unit test expert. Your job is to generate pytest tests for all uncovered code.
+    task_prompt: |-
+      Your task: bring the coverage up by generating tests for the uncovered code provided.
+      Do not rely on any logic that is not provided in this context. 
+      The code should of course be of high quality, pythonic and readable.
+      Remember: pytest functions should always be named as test_<function_name>_<description>.
+      One more thing. We use relative imports in the tests. Example: src.my_coding_agent.<submodule>.<function_name>
+  reviewer_settings:
+    system_prompt: |-
+      You are a code reviewer. Your job is to review the code and provide feedback.
+    task_prompt: |-
+      Your task: review the code provided and provide feedback.
+      Consider the pytest report and coverage report.
+      Most importantly is: are the results as expected?
+      If patches / mocks: Are functions or classes mocked properly?
+      Do not rely on any logic that is not provided in this context. 
+      The code should of course be of high quality, pythonic and readable, but this is secondary.
+      **Remember**: you will review the pytest code. Good tests successfully caputre bugs
+      in the code, so you can approve if the test fail so long as the tested code is the reason for failure. 
