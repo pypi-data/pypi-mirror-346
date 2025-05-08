@@ -1,0 +1,9 @@
+genice_core/__init__.py,sha256=DbGXjp86qJLYrGr8FzVXao3aptpehlAdaZEFDgWtKrQ,4132
+genice_core/dipole+.py,sha256=NDl_dreBADEfRnont55aQICHDVP-yQaUs7dtbHNcBfo,6368
+genice_core/dipole.py,sha256=z7L8hcZHqz_iKIWHFnqgj9qQculVpIKCMcQDD0Gg9oU,4965
+genice_core/topology+.py,sha256=aHysruJvNLJ5d8Wca3g4kLskYU_qcYgJGP6-Ob1RyL8,14131
+genice_core/topology.py,sha256=wDf4e4HUTbDLZmuE0PfsrAEyWvlEZlNIrpsMnTuFs0c,13103
+genice_core-1.1.dist-info/LICENSE,sha256=XSAXeu-v1hTT32PFDrNvL1UZnjTZbeDzAWv9KaQrBQg,1075
+genice_core-1.1.dist-info/METADATA,sha256=Lo2z7b3NrNTf2C8AVmskOij9_RWOs12npRFKAKDHjyI,451
+genice_core-1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+genice_core-1.1.dist-info/RECORD,,
