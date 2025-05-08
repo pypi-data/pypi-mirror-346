@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: querypipz
+Version: 0.1.4
+Summary: 模型query理解能力
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: black>=25.1.0
+Requires-Dist: toolsz>=0.1.4
+
+# querypipz
