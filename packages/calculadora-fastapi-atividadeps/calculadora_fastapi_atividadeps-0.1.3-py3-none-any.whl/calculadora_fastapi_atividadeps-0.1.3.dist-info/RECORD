@@ -1,0 +1,7 @@
+controllers/operations.py,sha256=8ZGxpMr_lC3JsC22vVmXdWMcwtpe8lil1wQTjZU8nCo,830
+models/calculator.py,sha256=YzOgjqvNkiVTEbl2VT9ROaTxQ2a7u-DD3TFq6VkKzzg,503
+schemas/operation_request.py,sha256=SyHRyTrcAtBfrUVe4yX41MBYUNtRopx4pwpHajBgOsE,133
+calculadora_fastapi_atividadeps-0.1.3.dist-info/METADATA,sha256=3KlNhht_HFJqjvia-hkIuGfnw-UP5u2_5vkvbNryR3Y,2255
+calculadora_fastapi_atividadeps-0.1.3.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+calculadora_fastapi_atividadeps-0.1.3.dist-info/top_level.txt,sha256=WUftJj1ym1mZ52r_rIJnMunwF4ThqrulNtgJggj8ibg,27
+calculadora_fastapi_atividadeps-0.1.3.dist-info/RECORD,,
