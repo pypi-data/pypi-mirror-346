@@ -1,0 +1,2 @@
+[console_scripts]
+douyin-scanner-mcp = douyin_scanner_mcp.main:run_mcp

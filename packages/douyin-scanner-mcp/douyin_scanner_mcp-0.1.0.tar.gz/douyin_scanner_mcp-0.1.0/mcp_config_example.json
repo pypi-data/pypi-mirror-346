@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "douyin-scanner": {
+      "command": "uvx",
+      "args": [
+        "douyin-scanner-mcp"
+      ],
+      "env": {
+        "SERVER_HOST": "127.0.0.1",
+        "SERVER_PORT": "8000"
+      }
+    }
+  }
+} 

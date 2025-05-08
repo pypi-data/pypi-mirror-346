@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+mcp_config_example.json
+pyproject.toml
+requirements.txt
+setup.py
+douyin_scanner_mcp/__init__.py
+douyin_scanner_mcp/main.py
+douyin_scanner_mcp.egg-info/PKG-INFO
+douyin_scanner_mcp.egg-info/SOURCES.txt
+douyin_scanner_mcp.egg-info/dependency_links.txt
+douyin_scanner_mcp.egg-info/entry_points.txt
+douyin_scanner_mcp.egg-info/requires.txt
+douyin_scanner_mcp.egg-info/top_level.txt
