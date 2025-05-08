@@ -1,0 +1,6 @@
+green_gdk/__init__.py,sha256=wl-8MzXTiGDXNzMv3ikLRe35BVa4kIfXuK2UNDi-2Po,13491
+green_gdk/_green_gdk.cpython-311-x86_64-linux-gnu.so,sha256=b90LD40n74xVnlPq_DXh0oGhokbjzxUnH0G9hKYy8Y4,35479352
+green_gdk-0.75.2.dist-info/top_level.txt,sha256=Xe5CQrUkf885laA8xvVS_nRODRHCp0I-wvO3ueN3H2I,10
+green_gdk-0.75.2.dist-info/RECORD,,
+green_gdk-0.75.2.dist-info/WHEEL,sha256=PtrGWFHKHpgcnPeaL8FfreGrf_ClXazuxxKYexlPxj0,113
+green_gdk-0.75.2.dist-info/METADATA,sha256=JRFm71Qp-JVRj0gP2oXQc9gi0CE-Q9rgAi9cVNh4VYo,873
