@@ -1,0 +1,2 @@
+[flake8.extension]
+UGC = flake8_vedro_allure_id_plugin.plugin:AllureIdPlugin

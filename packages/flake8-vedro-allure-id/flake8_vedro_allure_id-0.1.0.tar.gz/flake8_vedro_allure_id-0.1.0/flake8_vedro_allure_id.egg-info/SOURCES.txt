@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+flake8_vedro_allure_id.egg-info/PKG-INFO
+flake8_vedro_allure_id.egg-info/SOURCES.txt
+flake8_vedro_allure_id.egg-info/dependency_links.txt
+flake8_vedro_allure_id.egg-info/entry_points.txt
+flake8_vedro_allure_id.egg-info/requires.txt
+flake8_vedro_allure_id.egg-info/top_level.txt
+flake8_vedro_allure_id_plugin/__init__.py
+flake8_vedro_allure_id_plugin/plugin.py
+tests/__init__.py
+tests/test_plugin.py

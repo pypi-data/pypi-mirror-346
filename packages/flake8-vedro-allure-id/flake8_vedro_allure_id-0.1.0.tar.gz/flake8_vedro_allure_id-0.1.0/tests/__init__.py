@@ -1,0 +1,1 @@
+"""Test package for flake8-allure-id plugin.""" 
