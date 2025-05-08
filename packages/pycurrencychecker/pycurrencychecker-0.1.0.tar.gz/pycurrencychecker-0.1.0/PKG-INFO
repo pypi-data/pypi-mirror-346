@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pycurrencychecker
+Version: 0.1.0
+Summary: A library to fetch exchange rates between different currencies without requiring an API key.
+Home-page: https://github.com/gcordovadatec/pycurrencychecker
+License: MIT
+Keywords: currency,exchange rates,forex,finance
+Author: GuillerCH
+Author-email: guillerc33@gmail.com
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: requests (>=2.0,<3.0)
+Project-URL: Repository, https://github.com/gcordovadatec/pycurrencychecker
+Description-Content-Type: text/markdown
+
+# pycurrencychecker
+Una librería simple y fácil de usar en Python para obtener las tasas de cambio de moneda actuales. Consume servicios gratuitos para ofrecer datos actualizados requiere claves API de https://exchangerate.host/.
+
