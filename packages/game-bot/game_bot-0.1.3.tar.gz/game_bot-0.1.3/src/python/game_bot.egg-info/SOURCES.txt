@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+src/python/game_bot/__init__.py
+src/python/game_bot/mouse_control.py
+src/python/game_bot/picker.py
+src/python/game_bot/picture.py
+src/python/game_bot/window_control.py
+src/python/game_bot.egg-info/PKG-INFO
+src/python/game_bot.egg-info/SOURCES.txt
+src/python/game_bot.egg-info/dependency_links.txt
+src/python/game_bot.egg-info/entry_points.txt
+src/python/game_bot.egg-info/requires.txt
+src/python/game_bot.egg-info/top_level.txt
+tests/test_picture.py

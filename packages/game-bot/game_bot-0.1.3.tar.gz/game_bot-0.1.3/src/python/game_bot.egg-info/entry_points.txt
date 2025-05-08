@@ -1,0 +1,2 @@
+[console_scripts]
+picker = game_bot.picker:main
