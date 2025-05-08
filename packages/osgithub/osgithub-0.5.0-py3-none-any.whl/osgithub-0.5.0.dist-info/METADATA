@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: osgithub
+Version: 0.5.0
+Summary: UNKNOWN
+Home-page: https://github.com/opensafely-core/osgithub
+Author: OpenSAFELY
+Author-email: tech@opensafely.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: requests-cache
+Requires-Dist: furl
+
+UNKNOWN
+
