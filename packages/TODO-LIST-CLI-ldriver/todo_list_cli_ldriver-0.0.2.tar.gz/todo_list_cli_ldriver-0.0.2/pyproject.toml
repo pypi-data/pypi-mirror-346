@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling >= 1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "TODO_LIST_CLI_ldriver"
+version = "0.0.2"
+authors = [
+  { name="L.D", email="author@example.com" },
+]
+description = "Testing pypi with a todo app"
+readme = "README.md"
+requires-python = ">=3.13.2"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
