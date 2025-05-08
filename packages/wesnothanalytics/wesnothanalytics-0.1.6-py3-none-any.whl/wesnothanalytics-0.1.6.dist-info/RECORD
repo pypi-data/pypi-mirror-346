@@ -1,0 +1,10 @@
+wesnothanalytics/__init__.py,sha256=a2lUdmiIyibl3eyUhNhhF8SGOqyMTFeVfrVdwPOvh1c,30
+wesnothanalytics/classes.py,sha256=ZRadV6SbmZ52DNOXkxj1v67vMrnSalkE55QPi_t0HFE,3819
+wesnothanalytics/main.py,sha256=HA7ZejnkIhb3UXxUzerMQbFcNWrDwpjhybbJRJKDcec,52856
+wesnothanalytics/util.py,sha256=kycoPDv3fvFGj_ZVhMX_hkP2ePy9fnGFNAVygRWso8I,2229
+wesnothanalytics/configs/flags.json,sha256=IYUHDz37X8CT0rmyQjbaF91HV2nwPGA95zdZowDV0bk,1727
+wesnothanalytics/configs/unit_db.json,sha256=gBS0tOkZx94FfWUVRWIrs_6z2o59zWwcaDPt8n744HQ,150873
+wesnothanalytics-0.1.6.dist-info/METADATA,sha256=2zYFmfbGjV-LkNJsDL-T9SifPFdB5BJv06EH0F_PNEg,507
+wesnothanalytics-0.1.6.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+wesnothanalytics-0.1.6.dist-info/top_level.txt,sha256=--ELkc3WXSvWkV1fP8tF17hUEH5Hpj-TGn55u8OOBbU,17
+wesnothanalytics-0.1.6.dist-info/RECORD,,
