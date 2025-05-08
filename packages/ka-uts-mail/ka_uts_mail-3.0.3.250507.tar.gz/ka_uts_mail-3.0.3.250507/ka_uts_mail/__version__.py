@@ -1,0 +1,10 @@
+__title__ = 'ka_uts_mail'
+__description__ = 'Email Utilities.'
+__url__ = 'https://ka-uts-uts.readthedocs.io/en/latest'
+__version__ = '3.0.3.250507'
+__build__ = 0x022200
+__author__ = 'Bernd Stroehle'
+__author_email__ = 'bernd.stroehle@gmail.com'
+__license__ = 'Apache-2.0'
+__copyright__ = 'Copyright 2025 Bernd Stroehle'
+__cake__ = u'\u2728 \U0001f370 \u2728'
