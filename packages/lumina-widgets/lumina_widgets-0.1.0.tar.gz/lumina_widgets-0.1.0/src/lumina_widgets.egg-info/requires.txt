@@ -1,0 +1,2 @@
+pydantic>=2.11.4
+pyside6>=6.9.0
