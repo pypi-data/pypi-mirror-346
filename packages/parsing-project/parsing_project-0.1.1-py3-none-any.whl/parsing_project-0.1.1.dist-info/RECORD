@@ -1,0 +1,12 @@
+parsing_project/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parsing_project/config.py,sha256=x1bE1tqAUK0eSNuDQulLYGQdTtoilTcOERYQdt3Fl_M,480
+parsing_project/file_ops.py,sha256=1XnrE8N89s4RKik9nq1yd1G32d0pZmPRu_fG6GOV3ZM,2418
+parsing_project/main.py,sha256=bzCNwLHd9ExiNWN3yu_A4pHqwtbGXT33fUjMNBgX3Fg,3501
+parsing_project/parser.py,sha256=I63RC6IGRY9pg5O8yWHJaVRQZk9W6oSPM9UcD3GMEjQ,5279
+parsing_project/utils.py,sha256=g4z_zMcNwSshhw_7aYeELU4xNZZQ76DkkB3UEW0Y8C0,1755
+parsing_project-0.1.1.dist-info/licenses/LICENSE,sha256=ncT0ZO-FUhxT5ttRrTQsUm2K4ktsCM_aHMGenTbnvlw,1087
+parsing_project-0.1.1.dist-info/METADATA,sha256=7UDBCqx7JSDDf1hEh9gDKFQORQM1dQAmaD2U_dYseb0,3809
+parsing_project-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+parsing_project-0.1.1.dist-info/entry_points.txt,sha256=7wVBzkaGGLkHsCKjpwh1IaNxiWAESvrz-HbsZ6NpMQ4,53
+parsing_project-0.1.1.dist-info/top_level.txt,sha256=djVDzUGt_shGzCz0PSpExf5ByJDrZifBjJyb4IbiRyE,16
+parsing_project-0.1.1.dist-info/RECORD,,
