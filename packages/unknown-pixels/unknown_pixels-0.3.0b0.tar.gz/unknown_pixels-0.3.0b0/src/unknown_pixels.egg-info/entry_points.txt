@@ -1,0 +1,2 @@
+[console_scripts]
+unknown-pixels = unknownpixels.unknownpixels:render
