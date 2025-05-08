@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oscilloscope</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/semantic.min.css">
+    <script src="/jquery.min.js"></script>
+    <script src="/semantic.min.js"></script>
+  
+    <script language="javascript" type="text/javascript" src="/flot/jquery.canvaswrapper.js"></script>
+    <script language="javascript" type="text/javascript" src="/flot/jquery.colorhelpers.js"></script>
+    <script language="javascript" type="text/javascript" src="/flot/jquery.flot.js"></script>
+    <script language="javascript" type="text/javascript" src="/flot/jquery.flot.saturated.js"></script>
+    <script language="javascript" type="text/javascript" src="/flot/jquery.flot.browser.js"></script>
+    <script language="javascript" type="text/javascript" src="/flot/jquery.flot.drawSeries.js"></script>
+    <script language="javascript" type="text/javascript" src="/flot/jquery.flot.uiConstants.js"></script>
+    <script language="javascript" type="text/javascript" src="/flot/jquery.flot.legend.js"></script>
+    <script language="javascript" type="text/javascript" src="/flot/jquery.flot.symbol.js"></script>
+    <script language="javascript" type="text/javascript" src="/flot/jquery.flot.axislabels.js"></script>
+  
+
+    <style>
+        html, body {
+            height: 100%; /* Ensure body takes full height */
+            margin: 0;
+            padding: 0;
+            display: flex; /* Make body a flex container */
+            flex-direction: column; /* Stack graph and controls vertically */
+            overflow: hidden; /* Prevent body scrollbars */
+        }
+        #graph {
+            /* width: 100vw; */ /* No longer needed */
+            /* height: 90vh; */ /* Replaced by flex */
+            flex-grow: 1; /* Allow graph to take available space (approx 70%) */
+            min-height: 0; /* Prevent graph from overflowing its flex space */
+            width: 100%; /* Ensure full width */
+        }
+        .controls {
+            /* position: fixed; */ /* Remove fixed positioning */
+            /* bottom: 0; */ /* Remove fixed positioning */
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            box-sizing: border-box; /* Include padding in height calculation */
+            flex-shrink: 0; /* Prevent controls from shrinking */
+            /*height: 10vh;  Set height to 30% of viewport height */
+            /*overflow-y: auto; Allow vertical scrolling if controls overflow */
+        }
+        .controls-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 100%; /* Allow container to fill the controls area */
+        }
+        .channel-controls, .wave-controls, .timebase-control, .trigger-control {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        .ui.range {
+            width: 200px;
+        }
+        .ui.dropdown {
+            margin-left: 5px;
+            margin-right: 15px;
+            font-size: 0.9em;
+        }
+        .ui.labeled.range .label,
+        .ui.labeled.input .label {
+            font-size: 0.9em;
+        }
+        .ui.range,
+        .ui.labeled.input input[type="number"],
+        .ui.dropdown {
+            min-width: 120px;
+            margin-bottom: 5px;
+        }
+        .ui.checkbox label,
+        .ui.dropdown .text {
+            font-size: 1em;
+        }
+        /* Responsive Styles for Mobile */
+        @media (max-width: 768px) {
+            .controls {
+                 height: auto; /* Let controls height be determined by content */
+                 max-height: 40vh; /* But limit it to 40% max on medium screens */
+            }
+            .controls-container {
+                flex-direction: column;
+                align-items: stretch;
+                height: auto; /* Allow container height to adjust */
+                 justify-content: flex-start; /* Align items to top */
+            }
+            .channel-controls, .wave-controls, .timebase-control, .trigger-control {
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+                justify-content: center;
+                padding: 5px 0;
+            }
+            .ui.range,
+            .ui.labeled.input input[type="number"],
+            .ui.dropdown {
+                min-width: 120px;
+                margin-bottom: 5px;
+            }
+            .ui.checkbox label,
+            .ui.dropdown .text {
+                font-size: 1em;
+            }
+            .ui.checkbox {
+                min-height: 30px; /* Ensure minimum touch height */
+                display: inline-flex; /* Align label properly */
+                align-items: center;
+            }
+            .ui.dropdown {
+                min-height: 40px; /* Ensure minimum touch height */
+                padding-top: 0.5em; /* Add padding for text */
+                padding-bottom: 0.5em;
+            }
+            .ui.labeled.input input[type="number"] {
+                min-height: 40px;
+            }
+            .ui.labeled.range input[type="range"] {
+                min-height: 30px; /* Make sliders easier to grab */
+            }
+            /* Slightly larger base font for controls on mobile */
+            .controls-container {
+                font-size: 1.1em;
+            }
+        }
+        @media (max-width: 480px) {
+             .controls {
+                 max-height: 50vh; /* Allow slightly more height on very small screens */
+            }
+            .channel-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .channel-controls .ui.checkbox,
+            .channel-controls .ui.dropdown {
+                margin-bottom: 10px; /* More space between stacked items */
+                width: 90%; /* Make channel controls take more width */
+            }
+            .wave-controls .ui.labeled.range {
+                flex-direction: column; /* Stack frequency */
+                align-items: flex-start;
+                 width: 90%; /* Take width */
+            }
+            .wave-controls .ui.labeled.range input[type="range"] {
+                width: 100%; /* Make slider full width */
+                margin-top: 5px;
+            }
+            .wave-controls .ui.labeled.range input[type="number"] {
+                width: 100px; /* Ensure number input is wide enough */
+                margin-top: 5px; /* Add space when stacked */
+            }
+            .timebase-control .ui.labeled.range {
+                flex-direction: column; /* Stack timebase */
+                align-items: flex-start;
+                 width: 90%; /* Take width */
+            }
+            .timebase-control .ui.labeled.range input[type="range"] {
+                width: 100%; /* Make slider full width */
+                margin-top: 5px;
+            }
+            .timebase-control #timebase-value {
+                margin-top: 5px;
+            }
+
+            .trigger-control .ui.checkbox {
+                width: 90%;
+                justify-content: center; /* Center trigger text */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="graph"></div>
+    
+    <div class="controls">
+        <div class="controls-container">
+            <div class="channel-controls">
+                <div class="channel-group"> <!-- Group A1 -->
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" id="A1" checked>
+                        <label>A1</label>
+                    </div>
+                    <select class="ui dropdown" id="A1_range">
+                        <option value="16">±16V</option>
+                        <option value="8">±8V</option>
+                        <option value="4">±4V</option>
+                        <option value="2.5">±2.5V</option>
+                        <option value="1.5">±1.5V</option>
+                        <option value="1">±1V</option>
+                        <option value="0.5">±0.5V</option>
+                        <option value="0.25">±0.25V</option>
+                    </select>
+                </div>
+            
+                <div class="channel-group"> <!-- Group A2 -->
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" id="A2">
+                        <label>A2</label>
+                    </div>
+                    <select class="ui dropdown" id="A2_range">
+                        <option value="16">±16V</option>
+                        <option value="8">±8V</option>
+                        <option value="4">±4V</option>
+                        <option value="2.5">±2.5V</option>
+                        <option value="1.5">±1.5V</option>
+                        <option value="1">±1V</option>
+                        <option value="0.5">±0.5V</option>
+                        <option value="0.25">±0.25V</option>
+                    </select>
+                </div>
+            
+                <div class="ui horizontal buttons"> <!-- Group A3/MIC -->
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" id="A3">
+                        <label>A3</label>
+                    </div>
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" id="MIC">
+                        <label>MIC</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wave-controls">
+                <div class="ui labeled range">
+                    <div class="ui label">Frequency (Hz)</div>
+                    <input type="range" id="frequency_slider" min="5" max="5000" value="1000" step="5">
+                    <input type="number" id="frequency" value="1000" min="5" max="5000" style="width: 80px; margin: 0 10px;">
+                </div>
+            </div>
+
+            <div class="timebase-control">
+                <div class="ui labeled range">
+                    <div class="ui label">Timebase (μs)</div>
+                    <input type="range" id="timebase" min="2" max="1000" value="2" step="1">
+                    <span id="timebase-value">2 μs</span>
+                </div>
+            </div>
+            <div class="trigger-control">
+                <div class="ui checkbox" id="TRIG">
+                    <input type="checkbox" >
+                    <label>TRIGGER</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $.get(`/select_range/A1/4`);
+            $.get(`/select_range/A2/4`);
+            $('.ui.checkbox').checkbox();
+            $('.ui.dropdown').dropdown();
+
+            // Initialize empty plot with Flot
+            let plot = $.plot("#graph", [[]], {
+                grid: {
+                    backgroundColor: "#000000",
+                    color: "#333333",
+                    borderColor: "#333333"
+                },
+                xaxis: {
+                    axisLabel: "Time (μs)",
+                    min: 0,
+                    max: 1000,
+                    color: "#ffffff"
+                },
+                yaxis: {
+                    axisLabel: "Voltage (V)",
+                    min: -5,
+                    max: 5,
+                    color: "#ffffff"
+                },
+                legend: {
+                    show: true,
+                    backgroundColor: "rgba(0,0,0,0.5)",
+                    textColor: "#ffffff"
+                }
+            });
+
+            let captureInProgress = 0;
+
+            function getPlotOptions(timebase, activeChannels) {
+                let yrange = 5;  // default range
+                if (activeChannels && activeChannels.length > 0) {
+                    yrange = parseFloat($('#' + activeChannels[0] + '_range').val()) || 5;
+                }
+                return {
+                    grid: {
+                        backgroundColor: "#000000",
+                        color: "#333333",
+                        borderColor: "#333333"
+                    },
+                    xaxis: {
+                        axisLabel: "Time (μs)",
+                        min: 0,
+                        max: timebase * 1000,
+                        color: "#ffffff"
+                    },
+                    yaxis: {
+                        axisLabel: "Voltage (V)",
+                        min: -yrange,
+                        max: yrange,
+                        color: "#ffffff"
+                    },
+                    legend: {
+                        show: true,
+                        backgroundColor: "rgba(0,0,0,0.5)",
+                        textColor: "#ffffff"
+                    }
+                };
+            }
+
+            function updateScope() {
+                if (captureInProgress > 0) {
+                    console.log("Capture in progress, skipping update");
+                    return;
+                }
+
+                let activeChannels = [];
+                if ($('#A1').is(':checked')) activeChannels.push('A1');
+                if ($('#A2').is(':checked')) activeChannels.push('A2');
+                if ($('#A3').is(':checked')) activeChannels.push('A3');
+                if ($('#MIC').is(':checked')) activeChannels.push('MIC');
+
+                if (activeChannels.length > 0) {
+                    let captureEndpoint = 'capture1';
+                    if (activeChannels.length === 2) captureEndpoint = 'capture2';
+                    if (activeChannels.length > 2) captureEndpoint = 'capture4';
+
+                    let timebase = parseInt($('#timebase').val());
+
+                    captureInProgress += 1;
+                    $.get(`/${captureEndpoint}/${activeChannels[0]}/1000/${timebase}`)
+                        .done(function(data) {
+                            if (data.status === 'success') {
+                                let plotData = [];
+                                activeChannels.forEach((channel, index) => {
+                                    if (data[`CH${index+1}`]) {
+                                        // Create data points array for Flot
+                                        let channelData = [];
+                                        let timestamps = data[`CH${index+1}`].timestamps;
+                                        let voltages = data[`CH${index+1}`].voltages;
+                                        for (let i = 0; i < timestamps.length; i++) {
+                                            channelData.push([timestamps[i], voltages[i]]);
+                                        }
+                                        
+                                        plotData.push({
+                                            data: channelData,
+                                            label: channel,
+                                            lines: { show: true }
+                                        });
+                                    }
+                                });
+
+                                // Update plot with new data and options
+                                plot = $.plot("#graph", plotData, getPlotOptions(timebase, activeChannels));
+                            }
+                        })
+                        .fail(function(jqXHR, textStatus, errorThrown) {
+                            console.error("Request failed:", textStatus, errorThrown);
+                        })
+                        .always(function() {
+                            captureInProgress -= 1;
+                        });
+                }
+            }
+
+            // Event handlers
+            $('.ui.checkbox').on('change', function() {
+                console.log($(this).attr('id'));
+                if($(this).attr('id') == "TRIG"){
+                    if($(this).checkbox('is checked')){
+                        $.get(`/scope_trigger/0/A1/0`);
+                    }else{
+                        $.get(`/scope_trigger/-1/A1/0`);
+                    }
+                }
+            });
+
+            $('#timebase').on('input', function() {
+                let timebase = parseInt($(this).val());
+                console.log("Timebase changed to:", timebase);
+                $('#timebase-value').text(timebase + ' μs');
+            });
+
+            // Wave control handlers
+            $('#frequency_slider').on('input', function() {
+                let freq = parseInt($(this).val());
+                $('#frequency').val(freq);  // Update the number input
+                $.get(`/set_sine/${freq}`, function() {
+                    console.log("Sine wave set to:", freq);
+                });
+            });
+
+            $('#frequency').on('change', function() {
+                let freq = parseInt($(this).val());
+                $('#frequency_slider').val(freq);  // Update the slider
+                $.get(`/set_sine/${freq}`, function() {
+                    console.log("Sine wave set to:", freq);
+                });
+            });
+
+            // Add range change handlers
+            $('#A1_range, #A2_range').on('change', function() {
+                let channel = this.id.split('_')[0];  // Gets 'A1' or 'A2'
+                let range = parseFloat($(this).val());
+                
+                // Call the select_range endpoint with full channel name
+                $.get(`/select_range/${channel}/${range}`)  // Use full channel name (A1 or A2)
+                    .done(function(response) {
+                        if (response.status === 'success') {
+                            // Update plot y-axis range for this channel
+                            let plotOptions = plot.getOptions();
+                            plotOptions.yaxes[0].min = -range;
+                            plotOptions.yaxes[0].max = range;
+                            plot.setupGrid();
+                            plot.draw();
+                        }
+                    })
+                    .fail(function(jqXHR, textStatus, errorThrown) {
+                        console.error("Range selection failed:", textStatus, errorThrown);
+                    });
+            });
+
+            setInterval(updateScope, 200);
+        });
+    </script>
+</body>
+</html>
+
