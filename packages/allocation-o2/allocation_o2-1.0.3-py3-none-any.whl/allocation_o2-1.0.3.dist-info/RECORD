@@ -1,0 +1,10 @@
+allocation_o2/__init__.py,sha256=BhiSzlJWFHjCbJbppGp3PIbWAPF05lXwrV4maaYmsQA,639
+allocation_o2/__main__.py,sha256=E4vvBUMzZD5PK66cGd9S3rbmEMWTF1bjGukg6XfgdxA,8692
+allocation_o2/allocation_o2.cpython-312-x86_64-linux-gnu.so,sha256=FCD3qA505qT5FcSuCiVwvdU6zLrkfn90gP7vrEveuFY,10372224
+allocation_o2/allocator_factory.py,sha256=QQwbFUI1-C30qaiWDh67rv4taUfs5uaT_INVtwGOCyk,5913
+allocation_o2/capital_allocator.py,sha256=udtz9YIZx1JoXakgrWQcMLpxAW7-7F3aaVIAR8uq_jM,2126
+allocation_o2-1.0.3.dist-info/licenses/LICENSE,sha256=cSBz1puTY2H_NMKjeP-bfRF80nURBP2VS24ggNDSMO8,1070
+allocation_o2-1.0.3.dist-info/METADATA,sha256=sEbsOUkyGNfJVknvfEHirm6AVNq_ryWB8uv-BKq3MfU,5936
+allocation_o2-1.0.3.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+allocation_o2-1.0.3.dist-info/top_level.txt,sha256=_oLWt1wEgrr3kDoWYGge5UKqCw2KxRfglt_K_7UpxTo,14
+allocation_o2-1.0.3.dist-info/RECORD,,
