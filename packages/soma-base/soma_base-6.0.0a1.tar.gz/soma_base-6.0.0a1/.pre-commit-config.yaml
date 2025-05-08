@@ -1,0 +1,36 @@
+ci:
+  autoupdate_commit_msg: 'chore: update pre-commit hooks'
+
+exclude: |
+  (?x)^(
+    doc|
+    LICENSE|
+  )
+
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    -   id: check-added-large-files
+    -   id: check-case-conflict
+    -   id: check-executables-have-shebangs
+    -   id: check-json
+    -   id: check-merge-conflict
+    -   id: check-shebang-scripts-are-executable
+    -   id: check-symlinks
+    -   id: check-toml
+    -   id: check-xml
+    -   id: check-yaml
+    -   id: debug-statements
+    -   id: destroyed-symlinks
+    -   id: end-of-file-fixer
+    -   id: fix-byte-order-marker
+    -   id: trailing-whitespace
+
+-   repo: https://github.com/pycqa/flake8
+    rev: 7.1.2
+    hooks:
+    -   id: flake8
+        name: flake8 under python3
+        language_version: python3
+        exclude: ^doc/sphinx/sphinxext/

@@ -1,0 +1,84 @@
+input.has_error,
+textarea.has_error
+{
+    background: #CD201F;
+    color: #ffffff;
+}
+
+.controller {
+    width: 1fr;
+    display: grid;
+    grid-template-columns: fit-content(2em) 0.3em 7fr;
+    grid-column-gap: 0.2em;
+}
+
+.controller button.delete {
+    color:red;
+    margin-left: 0.5em;
+}
+
+.QtWebEngine .controller {
+    grid-template-rows: 0;
+}
+
+.controller > * {
+    grid-column-start: 3;
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.controller > label, .controller > .label {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+    white-space: nowrap;
+}
+
+.controller legend button {
+    margin-left: 0.5em;
+}
+
+.controller > fieldset {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    grid-row-end: span 1;
+}
+
+.controller > input[type=checkbox] {
+    justify-self: start;
+}
+
+.controller > fieldset.collapsed {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.controller > fieldset.collapsed > * {
+    display: none;
+}
+
+.controller > fieldset.collapsed > legend {
+    display: initial;
+}
+
+.controller > fieldset > legend > label::before {
+    content: "▼ ";
+}
+
+.controller > fieldset.collapsed > legend > label::before {
+    content: "▻ ";
+}
+
+.button_and_element {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 0.2em;
+}
+
+.grid-splitter {
+    background-color: lightgray;
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+    cursor: ew-resize;
+}

@@ -1,0 +1,29 @@
+image: Visual Studio 2022
+
+environment:
+  matrix:
+    - PYTHON: "C:\\Python39"
+    - PYTHON: "C:\\Python311"
+
+build: off
+
+install:
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - "python -m pip install --upgrade pip"
+  - "pip install pydantic<2"
+  - "pip install numpy"
+  - "pip install six"
+  - "pip install argparse"
+  - "python setup.py install"
+
+test_script:
+  - "python --version"
+  - "python -m soma.tests.test_soma_base"
+
+notifications:
+  - provider: Email
+    to:
+      - '{{commitAuthorEmail}}'
+    on_build_failure: true
+    on_build_success: false
+    on_build_status_changed: true

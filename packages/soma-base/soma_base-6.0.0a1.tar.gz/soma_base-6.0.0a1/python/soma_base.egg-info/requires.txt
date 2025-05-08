@@ -1,0 +1,7 @@
+populse-db>=3.0.7
+pydantic<2
+pycryptodome
+argparse
+
+[doc]
+sphinx>=1.0
