@@ -1,0 +1,12 @@
+reclaim_sdk/__init__.py,sha256=WMmvm2Keb76yMz8OL_h4fKT34Xpi-1BVfCiTn2QGzz4,22
+reclaim_sdk/client.py,sha256=a15iQaZMyQGA1bsQBvHcME6gZDHiuLsltYSe2_KNhLo,4295
+reclaim_sdk/exceptions.py,sha256=86nhF5Ud9GNiNxglLGLNm2Ft8eicIqGq2ksVGo01Xr8,380
+reclaim_sdk/resources/__init__.py,sha256=mCmkKcAeS3tFQVUzI7MLXRkTikvks8-LqUIBc3RQ7WQ,77
+reclaim_sdk/resources/base.py,sha256=pp9woh0HLLtJPasTugvQ1KxPvGs_Jl-v1LP_R0_tI0o,2303
+reclaim_sdk/resources/hours.py,sha256=YsfHBYSHmw6KZZhamN26_rcUTfnC-OpXQZaTQAuXcQQ,956
+reclaim_sdk/resources/task.py,sha256=mGKMliWCuZtwb82yzQOYdQxPwf6jpNNIjePgpQBF2Zw,6392
+reclaim_sdk-0.6.4.dist-info/licenses/LICENSE,sha256=PkwiMiM0X1EF0KeDVi9kU1DKAt55m2jwnK7sRHK4BBY,1073
+reclaim_sdk-0.6.4.dist-info/METADATA,sha256=fVCtIOxI7Qqi1s3vHPMcj9gDG6Ll6_9hot1mEvIBsGM,5211
+reclaim_sdk-0.6.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+reclaim_sdk-0.6.4.dist-info/top_level.txt,sha256=f5RuzM7hoMKABJXWZqtFcPmstW8GMC-56yJG6tm-DL0,12
+reclaim_sdk-0.6.4.dist-info/RECORD,,
