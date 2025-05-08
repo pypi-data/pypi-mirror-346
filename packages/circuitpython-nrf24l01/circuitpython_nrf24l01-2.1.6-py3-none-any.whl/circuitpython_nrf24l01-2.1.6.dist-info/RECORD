@@ -1,0 +1,17 @@
+circuitpython_nrf24l01/__init__.py,sha256=7ex0KSuzW-0_aAvu6BWzRKAOGBtPkoBsZYMs-AOdELQ,309
+circuitpython_nrf24l01/fake_ble.py,sha256=46R4KmU4Ir-2VZfGDbjOhGL0szQtxxfSjiYGawetL-c,21388
+circuitpython_nrf24l01/rf24.py,sha256=MNA-uVG81v6d2pzCu_20_P0RrF4yBmpZtJjreDZ8Sp0,38118
+circuitpython_nrf24l01/rf24_lite.py,sha256=mUBk8Ai0Gd0evA2k57Kv24UfH0lZ5P-IRywrcZqu_EQ,11116
+circuitpython_nrf24l01/rf24_mesh.py,sha256=7kGCA9K8DEqsD0huoJiHsGm1hye22nAkHPlB2qzTGfE,20885
+circuitpython_nrf24l01/rf24_network.py,sha256=0XD8i8328FuA72TatIrC_Jmk5tX-jCSLT7o21jgQaBY,4308
+circuitpython_nrf24l01/network/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+circuitpython_nrf24l01/network/constants.py,sha256=Cva5hSnEHScG-NBveQMaKvj08mR7nfVopPDz35DUP3Q,3973
+circuitpython_nrf24l01/network/mixins.py,sha256=Ljm2LmEVF934zHgk9sVAKrvNCNMtj7ONz5Ime0Vu1v0,24064
+circuitpython_nrf24l01/network/structs.py,sha256=XBvFDkqXadpynvqe-fn9lIj5-JIRoQ-ztTZszNAaZE0,9545
+circuitpython_nrf24l01/wrapper/__init__.py,sha256=0oRTP7yKzM3piLmsPYqWN2Fbpi71GwlOocH1u-x2r58,1311
+circuitpython_nrf24l01/wrapper/cpy_spidev.py,sha256=CJCrj771npBdE4ljNmD6VfMGbzHa-i_BPtiYcMPoxlo,3522
+circuitpython_nrf24l01-2.1.6.dist-info/licenses/LICENSE,sha256=UMqGoXSfiv_krA5jlhsdgD38UYcNW54ezyjtxrT2NvY,1103
+circuitpython_nrf24l01-2.1.6.dist-info/METADATA,sha256=VrjaEkxkQS_ugMgZ9nYaImCgrdbMTag0u8T-pkOIgNw,3153
+circuitpython_nrf24l01-2.1.6.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+circuitpython_nrf24l01-2.1.6.dist-info/top_level.txt,sha256=BGDYnx0xnNqyyULmU_y79VXou75blYyzGWIWAldLiTQ,23
+circuitpython_nrf24l01-2.1.6.dist-info/RECORD,,
