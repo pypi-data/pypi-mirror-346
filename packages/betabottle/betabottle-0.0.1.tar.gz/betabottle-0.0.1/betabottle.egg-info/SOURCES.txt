@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+betabottle/__init__.py
+betabottle.egg-info/PKG-INFO
+betabottle.egg-info/SOURCES.txt
+betabottle.egg-info/dependency_links.txt
+betabottle.egg-info/top_level.txt
