@@ -1,0 +1,15 @@
+dolfin_navier_scipy/__init__.py,sha256=nefyVuTkHWPI8t-ZHQIQjRln1lSgulQELKjMW4S1LAg,345
+dolfin_navier_scipy/_deprecated_funcs.py,sha256=mNkLeiF0R2H10zMmtANpD-EdvuOtcdMPt1cB-Q6Gue8,2244
+dolfin_navier_scipy/cache_simustates_utils.py,sha256=nL5MNkrfSExeWxFEhSzWnMImcoITa_1T5tyDpiJdTTc,2364
+dolfin_navier_scipy/data_output_utils.py,sha256=-lZG_22Sv-oNaijGqUfQuN3VopfPDDWeN4oSgSirUXk,12747
+dolfin_navier_scipy/dolfin_to_sparrays.py,sha256=Fc8wkuoUbgOpR1nlZW2EU06mIcVF8WHwEU--nE7_-hE,25779
+dolfin_navier_scipy/problem_setups.py,sha256=yiCtmcu7UWOH6zROTgt_YpKoMtGX5IAFtC618OYCGBY,52740
+dolfin_navier_scipy/residual_checks.py,sha256=OVGFW3KqkQlWDSQoRmqZQppXiEJpBd7E1cShLuCg1es,3439
+dolfin_navier_scipy/stokes_navier_utils.py,sha256=nicrrwe2YF_bRDXaYuCDXtmSprCcn6Jg2wHOtpOFzHw,64511
+dolfin_navier_scipy/time_int_utils.py,sha256=x2ovsaWKX_M93RuzUQuyw7lTxVTx1NMoMYCOBtcPLmA,22735
+dolfin_navier_scipy-1.2.3.dist-info/LICENSE.md,sha256=4cCtcomD2KVzNeUs8QZPGv_R1FQXPYzr0-2LSnK0hwQ,35121
+dolfin_navier_scipy-1.2.3.dist-info/METADATA,sha256=fQ2lka5-QIO5vGo88VKQoe4DLkwAraYu81hDwINVnwI,3964
+dolfin_navier_scipy-1.2.3.dist-info/WHEEL,sha256=HiCZjzuy6Dw0hdX5R3LCFPDmFS4BWl8H-8W39XfmgX4,91
+dolfin_navier_scipy-1.2.3.dist-info/pbr.json,sha256=mFrqBrukHWC1C0wIQJcIxjAJJb3KUcv20QEsXdpBR-E,46
+dolfin_navier_scipy-1.2.3.dist-info/top_level.txt,sha256=b4qtW7q0dUTNqzpcxCFjBgkqeE8vPWzctndMcS6It50,20
+dolfin_navier_scipy-1.2.3.dist-info/RECORD,,
