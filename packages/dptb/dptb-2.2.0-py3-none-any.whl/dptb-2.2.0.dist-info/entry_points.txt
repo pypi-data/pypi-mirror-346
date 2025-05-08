@@ -1,0 +1,4 @@
+[console_scripts]
+dptb=dptb.__main__:main
+dptb-qm9=dptb.data.interfaces.pyscf:main
+
