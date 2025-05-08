@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: hud-sdk
+Version: 0.3.12
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+License-File: THIRD_PARTY_LICENSES.txt
+Requires-Dist: aiohttp (>=1.0.0)
+Requires-Dist: requests
+Requires-Dist: psutil
+Requires-Dist: orjson
+
+UNKNOWN
+
