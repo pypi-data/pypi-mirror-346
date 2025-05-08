@@ -1,0 +1,2 @@
+[console_scripts]
+tb-gateway = tb_gateway.vw_gateway.main:app
