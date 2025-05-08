@@ -1,0 +1,15 @@
+scr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scr/example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scr/example/sentinel_2_band_downloader_example.py,sha256=Z4vGCPW7IauIH-uv7SUObBraoyrDlsohHe2GXS5-0b0,1941
+scr/main/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scr/main/sentinel_2_band_downloader.py,sha256=Qmj-am-klbLE61gRnZTYIYXYPy8W7stP5A53T5L7WhI,5048
+scr/misc/__init__.py,sha256=sF6lrjxs2oj4S6jqbEP5MexRzCxpLz5WQT9yNGJSVK8,36
+scr/misc/connections.py,sha256=VhSmO2_3hTh70rE0w0pDuFcd5B0FYpBAm0KPX9Rda2s,24220
+scr/misc/dates.py,sha256=Px0o2LBz48mVmoJj-v4PyYmwPT3W__oWmlhS4P5q4DQ,681
+scr/misc/files.py,sha256=rb_36HqUuy4nQr6U9X-OwdX5rxKUyca9-nvo7KmvsR4,5103
+scr/misc/utils.py,sha256=suEVuHnBOhbkDB5_LXrZF_RLZnj6VnVNgMISPU8LRAw,6100
+sentinel_2_band_downloader-0.3.3.dist-info/licenses/LICENSE,sha256=GXuO6iCxEWCeJBbn6qYqqYbA9b0HofAfJbrTwHPm__E,1080
+sentinel_2_band_downloader-0.3.3.dist-info/METADATA,sha256=ZhEo5ztqoQ2CeojKipHh5CmrkoAmI1JoTHbE_ysd86Q,3100
+sentinel_2_band_downloader-0.3.3.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+sentinel_2_band_downloader-0.3.3.dist-info/top_level.txt,sha256=afGRs4UMYawG7tTEOM7n_QpJZ07uXzeBo6z-z5HVlvU,4
+sentinel_2_band_downloader-0.3.3.dist-info/RECORD,,
