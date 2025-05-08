@@ -1,0 +1,9 @@
+grpcio>=1.40.0
+protobuf>=3.19.0
+
+[dev]
+pytest>=6.0.0
+black>=21.5b2
+mypy>=0.812
+grpcio-tools>=1.40.0
+twine>=3.4.1
