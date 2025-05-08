@@ -1,0 +1,96 @@
+# Terraform Drift Detector
+
+A Python CLI tool to detect and report drift between your Terraform configuration and the actual infrastructure state.
+
+## Overview
+
+Infrastructure drift occurs when your actual cloud resources deviate from what's defined in your Terraform files. This tool helps you detect such drift by running `terraform plan` across your infrastructure and analyzing the results.
+
+## Features
+
+- Scan single or multiple Terraform directories for drift
+- Parallel processing for faster scanning of large infrastructure
+- Detailed reporting of resources that will be added, changed, or destroyed
+- Color-coded output for better readability
+- Option to export results to JSON for further processing or integration
+
+## Installation
+
+1. Clone this repository or download the files
+2. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Make the script executable:
+
+```bash
+chmod +x terraform_drift_detector.py
+```
+
+## Usage
+
+Basic usage:
+
+```bash
+tfdd
+```
+
+This will scan the current directory for Terraform files and check for drift.
+
+### Command Line Options
+
+```
+usage: terraform_drift_detector.py [-h] [-d DIRECTORY] [--details] [-w WORKERS] [-o OUTPUT]
+
+Detect drift in Terraform-managed infrastructure
+
+options:
+  -h, --help            show this help message and exit
+  -d DIRECTORY, --directory DIRECTORY
+                        Directory containing Terraform files (default: current directory)
+  --details             Show detailed information about detected drift
+  -w WORKERS, --workers WORKERS
+                        Maximum number of parallel workers (default: 5)
+  -o OUTPUT, --output OUTPUT
+                        Save results to a JSON file
+```
+
+### Examples
+
+Scan a specific directory with detailed output:
+
+```bash
+./terraform_drift_detector.py -d /path/to/terraform --details
+```
+
+Scan with more parallel workers and save results to a file:
+
+```bash
+./terraform_drift_detector.py -w 10 -o drift_results.json
+```
+
+## Exit Codes
+
+- 0: No drift detected
+- 1: Error during execution
+- 2: Drift detected
+
+You can use these exit codes in CI/CD pipelines to fail builds or trigger alerts when drift is detected.
+
+## How It Works
+
+The tool:
+
+1. Finds all directories containing Terraform files
+2. Runs `terraform init` if needed
+3. Executes `terraform plan` with the `-detailed-exitcode` option
+4. Parses the results to determine if drift exists
+5. For detailed reports, uses `terraform show -json` to extract specific resource changes
+
+## Requirements
+
+- Python 3.6+
+- Terraform CLI installed and in PATH
+- Valid Terraform configurations with proper authentication to your infrastructure provider

@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+terraform_drift_detector/__init__.py
+terraform_drift_detector/cli.py
+terraform_drift_detector/detector.py
+terraform_drift_detector.egg-info/PKG-INFO
+terraform_drift_detector.egg-info/SOURCES.txt
+terraform_drift_detector.egg-info/dependency_links.txt
+terraform_drift_detector.egg-info/entry_points.txt
+terraform_drift_detector.egg-info/requires.txt
+terraform_drift_detector.egg-info/top_level.txt
+tests/__init__.py
+tests/test_basic.py
