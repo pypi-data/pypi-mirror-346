@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/fnplz/__init__.py
+src/fnplz.egg-info/PKG-INFO
+src/fnplz.egg-info/SOURCES.txt
+src/fnplz.egg-info/dependency_links.txt
+src/fnplz.egg-info/top_level.txt
