@@ -1,0 +1,162 @@
+Metadata-Version: 2.4
+Name: ecg-transform
+Version: 0.1.3
+Summary: Package curating cohesive training & inference pipelines for ECG analysis.
+Author-email: Kaden McKeen <kaden.mckeen@mail.utoronto.ca>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2025, Kaden McKeen
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://github.com/KadenMc/ecg-transform
+Project-URL: Bug Tracker, https://github.com/KadenMc/ecg-transform/issues
+Keywords: ecg,ekg,electrocardiogram,transform,transformation,transformations,augment,augmentation,augmentations
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=2.1.3
+Requires-Dist: scipy>=1.14.0
+Dynamic: license-file
+
+# ecg-transform
+
+## Installation
+`pip install ecg-transform`
+
+## Example
+Here is an example of defining an input schema and transforms,
+```
+from ecg_transform.inp import ECGInputSchema
+from ecg_transform.t.common import LinearResample, ReorderLeads
+from ecg_transform.t.normalize import MinMaxNormalize
+from ecg_transform.t.cut import Pad, SegmentNonoverlapping
+
+LEAD_ORDER = ['I', 'II', 'III', 'aVR', 'aVL', 'aVF', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6']
+SAMPLE_RATE = 500
+N_SAMPLES = SAMPLE_RATE*10
+
+SCHEMA = ECGInputSchema(
+    sample_rate=SAMPLE_RATE,
+    expected_lead_order=LEAD_ORDER,
+    required_num_samples=N_SAMPLES,
+)
+
+TRANSFORMS = [
+    ReorderLeads(
+        expected_order=LEAD_ORDER,
+        missing_lead_strategy='raise',
+    ),
+    LinearResample(desired_sample_rate=SAMPLE_RATE),
+    MinMaxNormalize(),
+    SegmentNonoverlapping(segment_length=N_SAMPLES),
+    Pad(pad_to_num_samples=N_SAMPLES, value=0)
+]
+```
+
+Here is an example of how `ecg-transform` could be used in PyTorch (which we do not require to minimize dependencies),
+```
+from typing import List
+from itertools import chain
+
+from scipy.io import loadmat
+
+import numpy as np
+
+import torch
+from torch.utils.data import Dataset
+from torch.utils.data.dataloader import DataLoader
+
+from ecg_transform.inp import ECGInput, ECGInputSchema
+from ecg_transform.t.base import ECGTransform
+from ecg_transform.sample import ECGMetadata, ECGSample
+
+class ECGDataset(Dataset):
+    def __init__(
+        self,
+        schema,
+        transforms,
+        file_paths,
+    ):
+        self.schema = schema
+        self.transforms = transforms
+        self.file_paths = file_paths
+
+    def __len__(self):
+        return len(self.file_paths)
+
+    def __getitem__(self, idx):
+        mat = loadmat(self.file_paths[idx])
+        metadata = ECGMetadata(
+            sample_rate=int(mat['org_sample_rate'][0, 0]),
+            num_samples=mat['feats'].shape[1],
+            lead_names=['I', 'II', 'III', 'aVR', 'aVL', 'aVF', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6'],
+            unit=None,
+            input_start=0,
+            input_end=mat['feats'].shape[1],
+        )
+        inp = ECGInput(mat['feats'], metadata)
+        sample = ECGSample(
+            inp,
+            self.schema,
+            self.transforms,
+        )
+
+        return torch.from_numpy(sample.out).float(), self.file_paths[idx]
+
+def collate_fn(inps):
+    sample_ids = list(
+        chain.from_iterable([[inp[1]]*inp[0].shape[0] for inp in inps])
+    )
+    return torch.concatenate([inp[0] for inp in inps]), sample_ids
+
+def file_paths_to_loader(
+    file_paths: List[str],
+    schema: ECGInputSchema,
+    transforms: List[ECGTransform],
+    batch_size = 64,
+    num_workers = 7,
+):
+    dataset = ECGDataset(
+        schema,
+        transforms,
+        file_paths,
+    )
+
+    return DataLoader(
+        dataset,
+        batch_size=batch_size,
+        num_workers=num_workers,
+        pin_memory=True,
+        sampler=None,
+        shuffle=False,
+        collate_fn=collate_fn,
+        drop_last=False,
+    )
+```
