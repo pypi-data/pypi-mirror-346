@@ -1,0 +1,22 @@
+[package]
+name = "qoi-rs"
+version = "2.0.1"
+edition = "2024"
+repository = "https://codeberg.org/Joshix/qoi-rs-python"
+description = "Wrapper around https://lib.rs/crates/qoi"
+license-file = "LICENSE"
+
+[lib]
+name = "qoi_rs"
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+qoi = "0.4.1"
+pyo3 = { version = "0.24.2", features = [ "extension-module", "abi3", "abi3-py312" ] }
+
+[profile.release]
+codegen-units = 1
+panic = "abort"
+strip = true
+lto = true
+opt-level = "z"
