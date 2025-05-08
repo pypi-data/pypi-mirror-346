@@ -1,0 +1,6 @@
+[console_scripts]
+osl_func = osl_ephys.utils.run_func:main
+osl_ica_apply = osl_ephys.preprocessing.ica_label:apply
+osl_ica_label = osl_ephys.preprocessing.ica_label:main
+osl_maxfilter = osl_ephys.maxfilter.maxfilter:main
+osl_preproc = osl_ephys.preprocessing.batch:main

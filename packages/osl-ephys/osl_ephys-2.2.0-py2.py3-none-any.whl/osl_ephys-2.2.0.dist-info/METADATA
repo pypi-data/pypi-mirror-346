@@ -1,0 +1,140 @@
+Metadata-Version: 2.1
+Name: osl-ephys
+Version: 2.2.0
+Summary: OHBA Software Library for the analysis of electrophysiological data
+Author: OHBA Analysis Group
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: mne~=1.3.1
+Requires-Dist: scikit-learn
+Requires-Dist: fslpy
+Requires-Dist: sails
+Requires-Dist: tabulate
+Requires-Dist: pyyaml>=5.1
+Requires-Dist: neurokit2
+Requires-Dist: jinja2==3.0.3
+Requires-Dist: glmtools
+Requires-Dist: numba
+Requires-Dist: nilearn
+Requires-Dist: dask
+Requires-Dist: distributed
+Requires-Dist: parse
+Requires-Dist: opencv-python
+Requires-Dist: panel
+Requires-Dist: h5io
+Provides-Extra: dev
+Requires-Dist: setuptools>=41.0.1; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: sphinx==5.3.0; extra == "doc"
+Requires-Dist: numpydoc; extra == "doc"
+Requires-Dist: sphinx-gallery; extra == "doc"
+Requires-Dist: pydata-sphinx-theme; extra == "doc"
+Provides-Extra: full
+Requires-Dist: setuptools>=41.0.1; extra == "full"
+Requires-Dist: pytest; extra == "full"
+Requires-Dist: pytest-cov; extra == "full"
+Requires-Dist: coverage; extra == "full"
+Requires-Dist: flake8; extra == "full"
+Requires-Dist: sphinx==5.3.0; extra == "full"
+Requires-Dist: numpydoc; extra == "full"
+Requires-Dist: sphinx-gallery; extra == "full"
+Requires-Dist: pydata-sphinx-theme; extra == "full"
+
+# The OHBA Software Library for the analysis of electrophysiological data (osl-ephys)
+
+Tools for MEG/EEG analysis.
+
+Documentation: https://osl-ephys.readthedocs.io/en/latest/.
+
+## Installation
+
+See the [official documentation](https://osl-ephys.readthedocs.io/en/latest/install.html) for recommended installation instructions.
+
+Alternatively, osl-ephys can be installed from source code within a [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html) (or [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html)) environment using the following.
+
+### Linux
+
+```
+git clone https://github.com/OHBA-analysis/osl-ephys.git
+cd osl-ephys
+conda env create -f envs/linux.yml
+conda activate osle
+pip install -e .
+```
+
+### Mac
+
+```
+git clone https://github.com/OHBA-analysis/osl-ephys.git
+cd osl-ephys
+conda env create -f envs/mac.yml
+conda activate osle
+pip install -e .
+```
+
+### Oxford-specific computers
+
+If you are installing on an OHBA workstation computer (HBAWS) use:
+```
+git clone https://github.com/OHBA-analysis/osl-ephys.git
+cd osl-ephys
+conda env create -f envs/hbaws.yml
+conda activate osle
+pip install -e .
+pip install spyder==5.1.5
+```
+
+Or on the BMRC cluster:
+```
+git clone https://github.com/OHBA-analysis/osl-ephys.git
+cd osl-ephys
+conda env create -f envs/bmrc.yml
+conda activate osle
+pip install -e .
+```
+
+## Removing OSL
+
+Simply removing the conda environment and delete the repository:
+```
+conda env remove -n osle
+rm -rf osl-ephys
+```
+
+## For Developers
+
+Run tests:
+```
+cd osl_ephys
+pytest tests
+```
+or to run a specific test:
+```
+cd osl_ephys/tests
+pytest test_file_handling.py
+```
+
+Build documentation (if `build_sphinx` is not recognised, first try `pip install sphinx==5.3.0`):
+```
+python setup.py build_sphinx
+```
+Compiled docs can be found in `doc/build/html/index.html`.
