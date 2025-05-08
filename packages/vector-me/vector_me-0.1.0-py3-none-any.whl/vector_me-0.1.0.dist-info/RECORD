@@ -1,0 +1,11 @@
+vector_me/cli.py,sha256=Wv5bAhcT05t4Nt6g07Gu9jKElMjgHYdYayWkw0WnOYQ,4639
+vector_me/plugins/base.py,sha256=4U3iADDhpsfy3kVu1IIpOvdSfZz2zKm2H4b2GD8q4kM,1925
+vector_me/plugins/chunkers/recursive.py,sha256=JtM9Ea8ND06iSdRQsBWzQadKWFsnb1E4fGw_PijjSsk,631
+vector_me/plugins/embedders/huggingface.py,sha256=A-wxAtt9bGUIuVkbPQyiLpk-GKsF1x0sn_mf2i-YCdI,681
+vector_me/plugins/embedders/openai.py,sha256=idBeQQ97owVo7JOcfBxW5W4F9VnUo4wQ5oJy8eePVX8,623
+vector_me/plugins/vector_stores/chroma.py,sha256=ni28CROxBHccEE-X9j5o4HKYVC_TTgdlveg2Jj04lzg,2694
+vector_me/plugins/vector_stores/faiss.py,sha256=8BaGNkp1R4rT0bzkiEs4xK5rn41VnUt9KU2isFKtjH4,3704
+vector_me/plugins/vector_stores/qdrant.py,sha256=35HrlJtniuUk-ugAj3b0wAEvh2C-Vy3thP-x-vrvL_w,3227
+vector_me-0.1.0.dist-info/METADATA,sha256=YOfzjd9NktAsyFbGM_RC6LZ-R3rcubNMWzvPvqAPCf4,2762
+vector_me-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vector_me-0.1.0.dist-info/RECORD,,
