@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+electrical_power/__init__.py
+electrical_power/animate.py
+electrical_power/electrical_cables.py
+electrical_power/electrical_machines.py
+electrical_power/elsweedy_cables.db
+electrical_power/motors.db
+electrical_power/power_ana.py
+electrical_power/sqlite_tools.py
+electrical_power.egg-info/PKG-INFO
+electrical_power.egg-info/SOURCES.txt
+electrical_power.egg-info/dependency_links.txt
+electrical_power.egg-info/requires.txt
+electrical_power.egg-info/top_level.txt
+tests/test_electrical_cable.py
