@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: nanohubthemes
+Version: 0.0.6
+Summary: Select and install a Jupyter notebook theme
+Home-page: https://github.com/denphi/nanohubthemes
+Author: denphi,dunovank
+Author-email: denphi@denphi.com, dunovank@gmail.com
+License: MIT
+Keywords: jupyter,python,ipython,notebook,theme,less,css
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: lesscpy>=0.11.2
+Requires-Dist: jupyter-contrib-nbextensions>=0.5.1
+Requires-Dist: autopep8
+Requires-Dist: yapf
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# nanohubthemes
+<table>
+    <tr>
+        <td>Latest Release</td>
+        <td>
+            <a href="https://pypi.org/project/nanohubthemes/"/>
+            <img src="https://badge.fury.io/py/nanohubthemes.svg"/>
+        </td>
+    </tr>
+    <tr>
+        <td>PyPI Downloads</td>
+        <td>
+            <a href="https://pepy.tech/project/nanohubthemes"/>
+            <img src="https://pepy.tech/badge/nanohubthemes/month"/>
+            <img src="https://pepy.tech/badge/nanohubthemes"/>
+        </td>
+    </tr>
+</table>
+# install nanohubthemes
+pip install nanohubthemes
+
+# upgrade to latest version
+pip install --upgrade nanohubthemes
