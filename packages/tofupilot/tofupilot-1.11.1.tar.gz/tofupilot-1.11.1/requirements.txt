@@ -1,0 +1,9 @@
+requests
+setuptools
+packaging
+pytest
+websockets
+paho-mqtt
+build
+twine
+certifi>=2023.7.22
