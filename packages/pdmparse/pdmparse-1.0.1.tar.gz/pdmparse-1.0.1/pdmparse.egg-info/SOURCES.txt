@@ -1,0 +1,9 @@
+setup.py
+pdmparse/__init__.py
+pdmparse/api.py
+pdmparse/parsers.py
+pdmparse/table.py
+pdmparse.egg-info/PKG-INFO
+pdmparse.egg-info/SOURCES.txt
+pdmparse.egg-info/dependency_links.txt
+pdmparse.egg-info/top_level.txt
