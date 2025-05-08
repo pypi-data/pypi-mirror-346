@@ -1,0 +1,10 @@
+zeebee_ai_client/__init__.py,sha256=7uNtcMtKta9--q7XoaWAIVuHGku5V8KiIzbhFVLDWVg,560
+zeebee_ai_client/agents.py,sha256=TXW17KyEzKwE8s49UCkpK5PRBCiI3vWkhUhM2Wx_QFQ,3877
+zeebee_ai_client/client.py,sha256=Oh_Snq39Yva7ZgjkvkEmMZhMhVSyHpGhI1KvJvkYKXI,34995
+zeebee_ai_client/exceptions.py,sha256=kjeZ5mpZmktgfStcthVdOFwldKkMPBjr0ql95ynr1Lo,459
+zeebee_ai_client/pipelines.py,sha256=BRuoPfFAQXw463d5s6nXFCWKMsaVvnzfUAwmEGYI_Yk,3668
+zeebee_ai_client-0.1.2.dist-info/licenses/LICENSE,sha256=Ij531H_uLfyPJQwdg3_qjEqtX9kS7mUoxaQwrgVTAiE,1065
+zeebee_ai_client-0.1.2.dist-info/METADATA,sha256=aO45c5ywTZ4PcErSWVWoqVe9s5KFYeCbPf7DxZ8KELw,8025
+zeebee_ai_client-0.1.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+zeebee_ai_client-0.1.2.dist-info/top_level.txt,sha256=wnANnM9po21tZm4dTzEdk9U_t2swny_-_iIKyV83uWI,17
+zeebee_ai_client-0.1.2.dist-info/RECORD,,
