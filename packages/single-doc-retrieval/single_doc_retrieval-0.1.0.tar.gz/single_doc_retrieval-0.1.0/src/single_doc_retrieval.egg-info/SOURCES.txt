@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/single_doc_retrieval/__init__.py
+src/single_doc_retrieval/config.py
+src/single_doc_retrieval/core.py
+src/single_doc_retrieval/data_utils.py
+src/single_doc_retrieval/embedding_utils.py
+src/single_doc_retrieval/prompts.py
+src/single_doc_retrieval.egg-info/PKG-INFO
+src/single_doc_retrieval.egg-info/SOURCES.txt
+src/single_doc_retrieval.egg-info/dependency_links.txt
+src/single_doc_retrieval.egg-info/requires.txt
+src/single_doc_retrieval.egg-info/top_level.txt
