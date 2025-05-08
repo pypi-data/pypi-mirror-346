@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+pygamedui/__init__.py
+pygamedui/anchor.py
+pygamedui/container.py
+pygamedui/layout.py
+pygamedui/layouts.py
+pygamedui/ui_element.py
+pygamedui/widgets.py
+pygamedui.egg-info/PKG-INFO
+pygamedui.egg-info/SOURCES.txt
+pygamedui.egg-info/dependency_links.txt
+pygamedui.egg-info/requires.txt
+pygamedui.egg-info/top_level.txt
+pygamedui/layouts/stack_layout.py
