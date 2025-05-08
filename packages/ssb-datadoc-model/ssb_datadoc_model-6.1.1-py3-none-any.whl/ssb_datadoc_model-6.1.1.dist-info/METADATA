@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: ssb-datadoc-model
+Version: 6.1.1
+Summary: Data Model for use in Statistics Norway's Metadata system
+Project-URL: homepage, https://github.com/statisticsnorway/ssb-datadoc-model
+Project-URL: repository, https://github.com/statisticsnorway/ssb-datadoc-model
+Project-URL: changelog, https://github.com/statisticsnorway/ssb-datadoc-model/releases
+Author-email: Statistics Norway <metadata@ssb.no>
+Requires-Python: >=3.10
+Requires-Dist: pydantic>=2.5.2
