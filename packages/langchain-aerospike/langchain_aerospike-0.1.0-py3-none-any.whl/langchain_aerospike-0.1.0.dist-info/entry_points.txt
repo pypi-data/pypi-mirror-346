@@ -1,0 +1,5 @@
+[console_scripts]
+format=black:mainlangchain_aerospiketestsexamples
+lint=ruff:maincheck.
+test=pytest:main
+
