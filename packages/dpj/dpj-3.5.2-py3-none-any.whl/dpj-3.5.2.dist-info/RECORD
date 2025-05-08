@@ -1,0 +1,10 @@
+dpj/__init__.py,sha256=FXCG2OFOROh6ziW6iTSqNdNQRdZZN2yFW8ycGJw_xGA,504
+dpj/__main__.py,sha256=-vt2T7-_AnWJ8BTBSmJKPXmOZtpe6TkNXghJJ6dIP_o,63
+dpj/cli.py,sha256=TU5f7QJadsxylmR30Czuhnb3oBNVvlwI7O2GLrj18kc,31716
+dpj/utils.py,sha256=wXWzYINUUuRKzXG8wRUkAV885rMp_OBhBR9UPC2hj2E,9085
+dpj-3.5.2.dist-info/licenses/LICENSE,sha256=zcpeNwiASwY_YDC35XcM2bj5t2mAxPXfrFjFrCtG-aw,1093
+dpj-3.5.2.dist-info/METADATA,sha256=S6MPT_fP9zZP5BrBJ0wiFEccJ-lgP_6iHnqCMU5EMIA,8031
+dpj-3.5.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+dpj-3.5.2.dist-info/entry_points.txt,sha256=LbeHUr_dofiHDf3PWq5DYYAVt6DJErkWIrLiX-RCPXc,37
+dpj-3.5.2.dist-info/top_level.txt,sha256=iMDzZy_9yyKef5oGn90hLiOKIGltQDUTFGC0y-uHPLk,4
+dpj-3.5.2.dist-info/RECORD,,
