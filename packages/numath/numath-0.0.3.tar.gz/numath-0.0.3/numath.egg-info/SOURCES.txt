@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+documentation/code/diefrenciacion_numerica_e_integracion.md
+documentation/code/ecuaciones_una_variable.md
+documentation/code/tranformacion.md
+numath/__init__.py
+numath/diferenciacion_numerica_e_integracion.py
+numath/ecuaciones_una_variable.py
+numath/transformacion.py
+numath.egg-info/PKG-INFO
+numath.egg-info/SOURCES.txt
+numath.egg-info/dependency_links.txt
+numath.egg-info/requires.txt
+numath.egg-info/top_level.txt
