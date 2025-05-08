@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: ppcfd
+Version: 0.1.0.1
+Summary: PaddleCFD is a deep learning toolkit for surrogate modeling, equation discovery, shape optimization and flow-control strategy discovery in the field of fluid mechanics.
+Home-page: https://github.com/PaddlePaddle/PaddleCFD
+Author: AI4S@PaddlePaddle
+Author-email: paddlescience@baidu.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: colorlog
+Requires-Dist: einops
+Requires-Dist: h5py
+Requires-Dist: hydra-core
+Requires-Dist: imageio
+Requires-Dist: matplotlib
+Requires-Dist: meshio==5.3.4
+Requires-Dist: numpy<2.0.0,>=1.20.0
+Requires-Dist: pydantic>=2.5.0
+Requires-Dist: pyevtk
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: scikit-learn<1.5.0
+Requires-Dist: scikit-optimize
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: sympy
+Requires-Dist: tqdm
+Requires-Dist: typing-extensions
+Requires-Dist: wget
+
+# PaddleCFD
+
+## About PaddleCFD
+
+PaddleCFD is a deep learning toolkit for surrogate modeling, equation discovery, shape optimization and flow-control strategy discovery in the field of fluid mechanics. Currently, it mainly supports surrogate modeling, including models based on fourier neural operator (FNO), diffusion model, transformer, physics-informed model and Kolmogorov-Arnold Networks (KAN).
+
+## Code structure
+
+- `config`: config files for different tasks
+- `doc`: documentation
+- `examples`: example scripts
+- `ppcfd/data`: data-process source code
+- `ppcfd/model`: model source code
+- `ppcfd/utils`: util code
