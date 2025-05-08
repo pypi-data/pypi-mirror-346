@@ -1,0 +1,6 @@
+dist
+docs
+epydemix
+tests
+tutorials
+validation
