@@ -1,0 +1,12 @@
+azurefunctions-extensions-base
+azure-servicebus~=7.14.2
+uamqp~=1.6.11
+
+[dev]
+flake8
+mypy
+pytest
+pytest-cov
+coverage
+pytest-instafail
+pre-commit
