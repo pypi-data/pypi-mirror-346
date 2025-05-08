@@ -1,0 +1,14 @@
+{
+  "E0001": {
+    "usr_msg": "Unsupported file extension. Must be Excel File",
+    "tech_msg": "Unsupported file extension. Must be Excel File"
+  },
+  "E0002": {
+    "usr_msg": "Unsupported file extension.",
+    "tech_msg": "Unsupported file extension."
+  },
+  "E0003": {
+    "usr_msg": "Invalid file extension.",
+    "tech_msg": "Invalid file extension."
+  }
+}
