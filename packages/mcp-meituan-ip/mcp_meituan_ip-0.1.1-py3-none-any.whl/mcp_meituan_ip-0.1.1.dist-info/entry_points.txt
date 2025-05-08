@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-meituan-ip = mcp_meituan_ip:main
