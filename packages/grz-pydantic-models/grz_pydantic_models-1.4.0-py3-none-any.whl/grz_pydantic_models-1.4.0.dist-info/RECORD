@@ -1,0 +1,15 @@
+grz_pydantic_models/__init__.py,sha256=fLqgxvPwO2r5XhZg2YEs_XD-3-HLXDi-2L8Sdwey_pY,373
+grz_pydantic_models/common.py,sha256=_bi76C2Tp1HobD2WeaZvrYMzt1bubMl41r3X27F2twk,285
+grz_pydantic_models/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grz_pydantic_models/std.py,sha256=9I7108b990HoO2RKObwv_cyvj2mMHWRmmm3ivjyPwmA,368
+grz_pydantic_models/pruefbericht/__init__.py,sha256=HVC6WJi8mV5qK4oFM6Qch1_6aokNWwV1w0o46_WaQ5U,18
+grz_pydantic_models/pruefbericht/v0.py,sha256=C-1ltIvLQP-aWzPl0xVeZsh2DOAOKIBULc2w6cAgWqk,1489
+grz_pydantic_models/resources/thresholds.json,sha256=YemPrfXM6kWvyk99_gD650PopWrz0NcC1C-aDnjms4k,7429
+grz_pydantic_models/submission/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grz_pydantic_models/submission/metadata/__init__.py,sha256=NoeBoXILkCx8APPa-ipUGOZN1Olh7krrCkwzvrdn4ms,92
+grz_pydantic_models/submission/metadata/v1.py,sha256=3I_loOi_oBNATizNQ_-sEsNjOApgimnxNd_ymgLgT3Q,29947
+grz_pydantic_models/v1_1_1/metadata.py,sha256=o6rcSBk_dbp_ehd44pMPEKPLu8ctkXAS4MaRmS05SrE,182
+grz_pydantic_models-1.4.0.dist-info/METADATA,sha256=XVtJ2UA1JzQJm27lzOM5yBV20T9GicnmXBVQCpZJaFQ,954
+grz_pydantic_models-1.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+grz_pydantic_models-1.4.0.dist-info/licenses/LICENSE,sha256=q4oWduV4r8Z__LSpH3DPRSMo0NbrZ1Lxqgkz5vFy7ZA,1065
+grz_pydantic_models-1.4.0.dist-info/RECORD,,
