@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: yagwr
+Version: 0.1.2
+Summary: Yet Another Gitlab Webhook Runner
+Home-page: https://github.com/shaoran/yagwr
+Author: Pablo Yanez
+License: GPL-2.0-only
+Project-URL: Documentation, https://github.com/shaoran/yagwr
+Project-URL: Source, https://github.com/shaoran/yagwr
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: Software Development :: Version Control :: Git
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE.txt
+Requires-Dist: PyYAML
+Requires-Dist: importlib-metadata; python_version < "3.8"
+Provides-Extra: testing
+Requires-Dist: setuptools; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+Dynamic: license-file
+
+# yagwr - Yet Another Gitlab Webhooks Runner
+
+[![Documentation Status](https://readthedocs.org/projects/yagwr/badge/?version=latest)](https://yagwr.readthedocs.io/en/latest/?badge=latest)
+
+
+## Inspiration/Acknowledgments, isn't there enough of these projects already?
+
+That's a fair question. Before I decided to write my own project, I looked for
+projects that would fit my needs. And while I found quite a few out there, they were
+either to simple or to complex for my needs. One project in particular that got
+almost right for my needs is [gitlab-webhook-receiver][gitlab-webhook-receiver].
+However I had a few issues with it when I tested it, so I decided to write my
+own. I took inspiration on this project, specially the `config.yaml` file, so thank you
+for the idea, I will be using a similar approach here.
+
+## Installation
+
+To install this package:
+
+```console
+pip install yagwr
+```
+
+## Usage
+
+After the installation, a script called ``yagwr`` will be available:
+
+```console
+yagwr rules_and_actions.yml
+```
+
+For a complete list of all command line options, please execute:
+
+```console
+yagwr --help
+```
+
+A more detailed documentation can be found here: https://yagwr.readthedocs.io/en/latest/
+
+
+
+[gitlab-webhook-receiver]: https://github.com/pstauffer/gitlab-webhook-receiver
