@@ -1,0 +1,27 @@
+skaf/__init__.py,sha256=0CXaF9IZ6jR7tfDnMqh21GrLzseQDcSrT9Yx5fj-U5k,172
+skaf/cli.py,sha256=2ZwB8KZ6HRhuuTMMLQRjU5o98TcBasPJodsiMzTwF9I,3056
+skaf/properties.py,sha256=6Uxr6KDc9OUsp8ArcQ8uFWJ5cMk3RZ2d48smUFd22jU,341
+skaf/registry.py,sha256=1IUXGJyLwiEOv-FPQAfbowncJJ7voJTlU7vo9REHECg,2218
+skaf/scaffold/__init__.py,sha256=fzEqhzlJPWjRnJAGL-d54KiYCFPj5cELk0pTV81sx-c,39
+skaf/scaffold/context.py,sha256=kZ25mjnbt-NAoFWXyWupy92R75PDSAAg_K_SSD0brJw,1274
+skaf/scaffold/scaffold.py,sha256=gLAp7jOEUS7Z-B8jmXJN6ak2JYZ5OISslaOpHIJHEFU,4681
+skaf/scaffold/utils.py,sha256=jg4XLr8okqA567u97rwXfHKfVaX2T4T_0NV_zIRwUVo,456
+skaf/scaffold/variables.py,sha256=kjxZ-ipWvSj5gaOSwLEIj-nL49nIkAAAn2YTjvB5z5Q,2664
+skaf/template_classes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skaf/template_classes/_none.py,sha256=5UyheoNXwUYTDiffb_InjLvCZ111tQBfB31w99b4pjo,175
+skaf/template_classes/base.py,sha256=X5fdP1eNqb1wh7OoTsdMiMWn_FzjlYhRjjfFo_Ekzlg,1029
+skaf/template_classes/dict_template.py,sha256=cEGjUpxrcq5QlV7RTfqZkbetW6r_ZmkEboGaZi2JRiI,564
+skaf/template_classes/filesystem_template.py,sha256=xJEkCVEslhj9wteiWPKjulJ220YAA5CcRKMKGdi2g4Q,1774
+skaf/template_classes/git_template.py,sha256=JYQ9EYE3j1UcNaga7FnwFGDCC5EgzxtYlBWwYegp00w,2051
+skaf/template_lib/setuptools_pyproject/template/src/{{ project_name }}/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skaf/template_lib/setuptools_pyproject/template/src/{{ project_name }}/main.py,sha256=GY8_mwZiMByZyJkrAnHupUwXK4j1953L2CRFW0Ssdws,114
+skaf/templaters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skaf/templaters/base.py,sha256=xJVyM7KNqKwT7FHhTKf_8GeBq_qPliSZBgpFyz4xmGw,612
+skaf/templaters/jinja.py,sha256=fo7MRZh1CALScwt3pvZD_VRCXF-iqS7MgHlSDH0XOPw,888
+skaf/templaters/pystring.py,sha256=bJmChfu1hBlXLK-GrTQNELpJopYReLVaZGqLenLvP7E,737
+skaf/templaters/registry.py,sha256=36LUscRSrcDY2YuoSGF9rnFiFfFl6EmJYHFU1GZbx-8,701
+skaf-0.1.1.dist-info/METADATA,sha256=M4VDQq2r8NCkNNZPg8Cown9f7DbFTGJJgOQUcpTzCzk,6061
+skaf-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+skaf-0.1.1.dist-info/entry_points.txt,sha256=_Vd7cyk2aXKQzPo2P6_hM4VWXoRDEz1Pn5qNoW5gfGA,105
+skaf-0.1.1.dist-info/top_level.txt,sha256=nslynDuAAZbGkOfb5LWsUETKHxw0EDFOwsd2UPTOkZU,5
+skaf-0.1.1.dist-info/RECORD,,
