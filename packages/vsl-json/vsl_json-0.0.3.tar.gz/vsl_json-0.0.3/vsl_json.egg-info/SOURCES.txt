@@ -1,0 +1,7 @@
+LICENSE
+pyproject.toml
+vsl_json.py
+vsl_json.egg-info/PKG-INFO
+vsl_json.egg-info/SOURCES.txt
+vsl_json.egg-info/dependency_links.txt
+vsl_json.egg-info/top_level.txt
