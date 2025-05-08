@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: arctic_inference
+Version: 0.0.6
+Summary: Snowflake LLM inference library
+License-File: LICENSE
+Provides-Extra: vllm
+Requires-Dist: vllm==0.8.4; extra == "vllm"
+Dynamic: license-file
