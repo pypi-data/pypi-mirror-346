@@ -1,0 +1,12 @@
+app.py,sha256=CGTZyyiQTwsOlrsIVrB2DsgyvpqyQqxGP4_p21hdRLU,1331
+twitchsync/StreamsyncConfig.py,sha256=aSPmzcz6Uir1APg_DwzfXpvYQzHReOdEaEq5ANcQWTM,7094
+twitchsync/TwitchClient.py,sha256=JQROyv6MGlKH9nzhhoZtrOIOJ4SgC-tskFNIwisIeMA,3102
+twitchsync/TwitchSync.py,sha256=iqiDdpxf3Kds2BQK5E3BcQdhL35ui8zLYr_W00NtzZw,5258
+twitchsync/__init__.py,sha256=Rkatl4PZWN_bgejtoBD6v5veBhHiNNnZzVcorAoKio8,3046
+twitchsync/__main__.py,sha256=J3ljnbgG3fzV832pprvjLAi6Zil-4aEsT3dDZmbQBew,91
+twitchsync-2.1.3.dist-info/licenses/LICENSE,sha256=N6RniCg1oKnua5zFsHU7Qwr2dfnleK9ilrGg1YA32zc,1089
+twitchsync-2.1.3.dist-info/METADATA,sha256=v3KDVnp8JvGlsmvhET9Fz2l3m8UJj9EzX0AP00T4UPY,4416
+twitchsync-2.1.3.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+twitchsync-2.1.3.dist-info/entry_points.txt,sha256=OepPdGtDSGNzz7w_X-Be5rp_ko2vNlRMwmRar4EUQSA,51
+twitchsync-2.1.3.dist-info/top_level.txt,sha256=XPZfVdLomY5Ku4invJgqJ669qlkYuIAbHcNr9bv-NB4,15
+twitchsync-2.1.3.dist-info/RECORD,,
