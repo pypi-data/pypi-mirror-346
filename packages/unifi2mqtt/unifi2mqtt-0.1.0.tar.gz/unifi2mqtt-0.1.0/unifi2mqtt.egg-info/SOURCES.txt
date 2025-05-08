@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+unifi2mqtt/__init__.py
+unifi2mqtt/__main__.py
+unifi2mqtt/core.py
+unifi2mqtt/setup.py
+unifi2mqtt/utils.py
+unifi2mqtt.egg-info/PKG-INFO
+unifi2mqtt.egg-info/SOURCES.txt
+unifi2mqtt.egg-info/dependency_links.txt
+unifi2mqtt.egg-info/entry_points.txt
+unifi2mqtt.egg-info/requires.txt
+unifi2mqtt.egg-info/top_level.txt

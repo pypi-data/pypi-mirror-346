@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: unifi2mqtt
+Version: 0.1.0
+Summary: Monitor Unifi clients and publish status to MQTT
+Author-email: Your Name <you@example.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: paho-mqtt
+Dynamic: license-file
+
+# unifi2mqtt
+
+Monitor Unifi clients and publish their connection status to an MQTT broker.
