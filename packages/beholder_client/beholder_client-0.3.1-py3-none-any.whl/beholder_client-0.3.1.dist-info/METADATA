@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: beholder_client
+Version: 0.3.1
+Summary: Python client library for beholder.
+Home-page: https://github.com/mbari-org/beholder-py
+License: MIT
+Author: Kevin Barnard
+Author-email: kbarnard@mbari.org
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: Pillow (>=9.2.0)
+Requires-Dist: httpx (>=0.28.1,<0.29.0)
+Project-URL: Repository, https://github.com/mbari-org/beholder-py
+Description-Content-Type: text/markdown
+
+# beholder-py
+
+Python client library for [beholder](https://github.com/mbari-org/beholder).
+
+## Build
+
+This project is built with [Poetry](https://python-poetry.org/).
+
+You can build the project with the following command:
+
+```bash
+poetry build
+```
+
+This will create a `dist/` directory with the built `beholder` package.
+
+## Install
+
+You can install the built package with the following command:
+
+```bash
+pip install dist/beholder-<VERSION>.whl
+```
+
+## Development
+
+To configure the project for development, install Poetry and run
+
+```bash
+poetry install
+poetry shell
+```
+
+This will create a virtual environment for the project, install all dependencies into it, then spawn a new shell with the environment activated.
+
+---
+
+&copy; Monterey Bay Aquarium Research Institute, 2022
