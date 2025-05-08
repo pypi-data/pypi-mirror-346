@@ -1,0 +1,11 @@
+mcp_metatrader5_server/__init__.py,sha256=BZvAXsHlVxyIdew7zKmjvfWy4Drm9E7vb8gXxgwNzyQ,199
+mcp_metatrader5_server/cli.py,sha256=6vkR2oLNPt5e7TmfqtWosF0yg7cYoJr0DyrHV6T3uJ4,2986
+mcp_metatrader5_server/main.py,sha256=k1Cqwdx-3PAoYghZV6iUmJBBUeg0WN3bKnThza_x77c,12730
+mcp_metatrader5_server/market_data.py,sha256=h3HC0vkOACmtrx06DOZzKUw1M46mQ-4CAzYRIrePDts,14073
+mcp_metatrader5_server/server.py,sha256=_e34fj6Wkml9XfvPNGjwC2gPGAurvLU1u3gZZ421Q1Y,8366
+mcp_metatrader5_server/trading.py,sha256=ezu859C6zLEyNiHYWN_Lzdhu3_DC6jx9lzkQ0WnkMHs,11974
+mcp_metatrader5_server-0.1.3.dist-info/METADATA,sha256=yXsBQgo9vcMXEg_n_Gi-Bg7-qHqiXk3SJUZnOhHC0es,6767
+mcp_metatrader5_server-0.1.3.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+mcp_metatrader5_server-0.1.3.dist-info/entry_points.txt,sha256=eBPd35bnnJyQFMakrBiffCzw6lkteN707jKA_1kkor0,60
+mcp_metatrader5_server-0.1.3.dist-info/top_level.txt,sha256=Cz9uoyL_Xo-X3VjaO2KAX-ImPDjOSx311Y65ssMAaVM,23
+mcp_metatrader5_server-0.1.3.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+mt5-mcp = mcp_metatrader5_server.cli:main
