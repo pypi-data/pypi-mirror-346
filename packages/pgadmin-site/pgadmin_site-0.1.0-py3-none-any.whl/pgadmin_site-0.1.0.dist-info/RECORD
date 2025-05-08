@@ -1,0 +1,17 @@
+pgadmin_site/__init__.py,sha256=yaU2m5Tc-FDfGD-VvYRnNfIyr7YAe5yEgB48GnAtpnw,237
+pgadmin_site/cli.py,sha256=3gVFNYmYVDxo6y3PxGMSf822nHnmdCCpjBY_sxf3FuY,1261
+pgadmin_site/main.py,sha256=-FeHOH5wfRP-VQMh_2NBD4t5ygapgB_JDoB-ZAuF3Oo,15661
+pgadmin_site/static/style.css,sha256=h-qlUPWX8TbVl3VnYUGWvlQJ-Zd_Vgyzf0_VllVOHOk,1064
+pgadmin_site/templates/add_column.html,sha256=Em97lw8IJtbrD-uQt2ROJSex5FzDPGx4WS3PTO6ukI4,6392
+pgadmin_site/templates/add_row.html,sha256=YZcHXW9AnkBr6_7eUsXi86r_gKTQWYC8fkwolPaDi00,4711
+pgadmin_site/templates/edit_row.html,sha256=r7k-epVNuzo9ETQWJWrp4TYEJSu39smC6d87UH7XZ3A,4649
+pgadmin_site/templates/error.html,sha256=KKGMhBhbKwhj0wkCz-FDifARWdw0kbFmomvaNfAy5BA,2080
+pgadmin_site/templates/index.html,sha256=X4wGehqRG6Kj8y3btprqlvDPkg8YOwANGsjt22XoNv4,2409
+pgadmin_site/templates/structure.html,sha256=CM87DnwPOBn6SoTbsTIF3n523-zD81Qm-JOJuqNqRq8,5927
+pgadmin_site/templates/table.html,sha256=nowJSgHN9enret0ECdSi1CnNZE7Ce_kolQ5t9a_N3O8,8457
+pgadmin_site-0.1.0.dist-info/licenses/LICENSE,sha256=9ECgzJf_v_gkgityXyXOzJA7hcn1qliFXLMDxc9BjL8,1069
+pgadmin_site-0.1.0.dist-info/METADATA,sha256=Cp5aMkbj4PZKP-v8ubFqOPJlFOhYGFYSEYSuJ4SP-FM,1994
+pgadmin_site-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+pgadmin_site-0.1.0.dist-info/entry_points.txt,sha256=41d0IIoWucx_SZE9q5uQagmmVJKrGT1gheLu_pvrF1A,55
+pgadmin_site-0.1.0.dist-info/top_level.txt,sha256=qaop5AHaQQPcJQMt-A7dRh9ATlWNN8XKS7oeAefDtcI,13
+pgadmin_site-0.1.0.dist-info/RECORD,,

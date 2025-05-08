@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: pgadmin-site
+Version: 0.1.0
+Summary: Библиотека для создания локального сайта для работы с таблицами PostgreSQL
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/pgadmin-site
+Project-URL: Bug Tracker, https://github.com/yourusername/pgadmin-site/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flask>=2.0.0
+Requires-Dist: psycopg2-binary>=2.9.3
+Requires-Dist: SQLAlchemy>=2.0.0
+Requires-Dist: wtforms>=3.0.0
+Requires-Dist: flask-sqlalchemy>=3.0.0
+Requires-Dist: click>=8.0.0
+Dynamic: license-file
+
+# PGAdmin Site
+
+Библиотека для создания локального веб-интерфейса для работы с таблицами PostgreSQL.
+
+## Установка
+
+```bash
+pip install pgadmin-site
+```
+
+## Использование
+
+```python
+from pgadmin_site import site
+
+# Запустить локальный сайт для работы с базой данных
+site(
+    host="localhost",
+    port=5432,
+    username="postgres",
+    password="password",
+    database="your_database",
+    web_port=5000  # Порт для веб-интерфейса
+)
+```
+
+## Возможности
+
+- Просмотр всех таблиц в базе данных
+- Навигация между таблицами через кнопки или выпадающий список
+- Редактирование строк, столбцов и отдельных ячеек
+- Удаление существующих данных
+- Добавление новых записей
+
+## Требования
+
+- Python 3.8+
+- PostgreSQL
+
+## Лицензия
+
+MIT 
