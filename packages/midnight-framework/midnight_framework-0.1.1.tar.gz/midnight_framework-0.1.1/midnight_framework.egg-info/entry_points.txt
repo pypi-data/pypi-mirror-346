@@ -1,0 +1,2 @@
+[console_scripts]
+midnight = midnight_framework.cli:main
