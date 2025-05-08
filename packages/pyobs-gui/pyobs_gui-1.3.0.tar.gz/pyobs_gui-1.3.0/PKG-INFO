@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: pyobs-gui
+Version: 1.3.0
+Summary: A remote GUI for pyobs
+License: MIT
+Author: Tim-Oliver Husser
+Author-email: thusser@uni-goettingen.de
+Requires-Python: >=3.11,<3.14
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: PyQt5 (>=5.15.11,<6.0.0)
+Requires-Dist: QtAwesome (>=1.4.0,<2.0.0)
+Requires-Dist: colour (>=0.1.5,<0.2.0)
+Requires-Dist: matplotlib (>=3.10.1,<4.0.0)
+Requires-Dist: qasync (>=0.27.1,<0.28.0)
+Requires-Dist: qfitswidget (>=0.10.1,<0.11.0)
+Requires-Dist: slixmpp (>=1.10.0,<2.0.0)
+Requires-Dist: sunpy (>=6.1.1,<7.0.0)
