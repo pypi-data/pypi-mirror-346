@@ -1,0 +1,2 @@
+[console_scripts]
+chatprompt = chatprompt.cli:main

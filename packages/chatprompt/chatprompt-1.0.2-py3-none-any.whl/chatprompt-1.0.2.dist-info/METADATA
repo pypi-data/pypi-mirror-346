@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: chatprompt
+Version: 1.0.2
+Summary: A Python package to interact with powerfull AI
+Requires-Dist: requests>=2.32.3
+Requires-Dist: beautifulsoup4>=4.12.3
+Dynamic: description
+Dynamic: requires-dist
+Dynamic: summary
+
+# AI Interaction via Customizable Prompts
+This Python project allows users to interact with a powerful AI model in a personalized and efficient manner. By tailoring your inputs, you
+can receive highly relevant and accurate responses based on your unique context.
+## Features
+- **Personalized AI Responses**: Adjust the AI's responses based on your individual profile or preferences. With the ability to set a custom description, the
+AI can tailor its answers to be more relevant and precise.
+- **Seamless Integration**: Easily integrate the AI service into your Python projects with just a few simple functions. No need for complex setups or configurations.
+- **Real-time Interaction**: Send queries to the AI and receive prompt responses directly, making it ideal for a variety of use cases from casual conversations
+to technical questions.
+## How It Works
+### Key Functions
+- **personalization(desc)**
+This function allows you to set a custom description that will be used to personalize the AI's response. By defining your preferences or introducing specific
+context, the AI can provide more tailored answers.
+**Input**: `desc` (string) — Your personal context or description.
+**Output**: None (sets a global variable that will be used in subsequent prompts).
+- **prompt(message)**
+This function sends your message to the AI and returns its response. If a description is set, it will be included to make the AI's answer more relevant.
+**Input**: `message` (string) — The message you want to send to the AI.
+**Output**: (string) — The filtered and tailored response from the AI.
+### Example Usage
+```python
+import chatbotlib
+chatbotlib.personalization("I am a software developer with a strong interest in artificial intelligence.")
+response = chatbotlib.prompt("What is your opinion on the future of AI in programming?")
+print(response)
+```
+## How It Benefits You
+- **Customized Results**: The ability to personalize the AI ensures that the responses you receive are tailored to your specific needs. Whether you're a developer,
+student, or enthusiast, the AI will adjust its answers to match your context.
+- **No Unnecessary Responses**: By defining a personalized context, you avoid unnecessary or generic responses, making the conversation feel more natural and relevant.
+- **Versatility**: The system can be used for a wide range of applications, from personal inquiries to technical problem-solving, making it a versatile tool
+for anyone looking to interact with AI.
+## Dependencies
+- **requests**: A simple HTTP library for sending requests to external services.
+- **beautifulsoup4**: A library for parsing and handling HTML responses efficiently.
+## Getting Started
+1. **Install the dependencies**: Use pip to install the necessary libraries.
+2. **Set a Personal Description**: Customize your experience by providing a description of yourself or your preferences using the `personalization()` function.
+3. **Send a Message**: Use the `prompt()` function to send your message to the AI and receive a response.
+## Example Scenario
+Imagine you are working on a coding project and need quick, relevant advice. Instead of receiving generic responses, you provide a description of your project,
+and the AI will respond with insights tailored specifically to your needs, making your interactions with AI smarter and more productive.
+## Troubleshooting
+- **Error Handling**: If the AI service fails to respond or returns unexpected results, ensure your internet connection is active and the service is available.
+Check the response codes and logs for detailed troubleshooting.
+- **Response Quality**: The quality of responses depends heavily on the context provided. The more detailed and specific your personalization, the more relevant
+the AI’s answers will be.
