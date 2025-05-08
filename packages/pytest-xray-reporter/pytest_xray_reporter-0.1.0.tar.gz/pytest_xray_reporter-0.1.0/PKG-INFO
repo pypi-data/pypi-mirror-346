@@ -1,0 +1,204 @@
+Metadata-Version: 2.4
+Name: pytest-xray-reporter
+Version: 0.1.0
+Summary: A pytest plugin that generates test results in Xray JSON format
+Project-URL: Homepage, https://github.com/yourusername/pytest-xray-reporter
+Project-URL: Documentation, https://github.com/yourusername/pytest-xray-reporter#readme
+Project-URL: Repository, https://github.com/yourusername/pytest-xray-reporter.git
+Project-URL: Issues, https://github.com/yourusername/pytest-xray-reporter/issues
+Author-email: Jonathan Kittell <jonathan.kittell@example.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: pytest,reporting,testing,xray
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.8
+Requires-Dist: pytest>=7.0.0
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == 'dev'
+Requires-Dist: isort>=5.0.0; extra == 'dev'
+Requires-Dist: mypy>=1.0.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: ruff>=0.1.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# pytest-xray-reporter
+
+A pytest plugin that generates test results in Xray JSON format.
+
+## Installation
+
+```bash
+pip install pytest-xray-reporter
+```
+
+## Usage
+
+Run pytest with the plugin to generate Xray JSON results:
+
+```bash
+pytest --xray-output=results.json
+```
+
+### Command Line Options
+
+- `--xray-output`: Path to output Xray JSON report (default: "xray-results.json")
+- `--xray-project`: Xray project key
+- `--xray-test-plan`: Xray Test Plan key
+- `--xray-test-execution`: Xray Test Execution key
+
+Example:
+```bash
+pytest --xray-output=results.json \
+       --xray-project=PROJ \
+       --xray-test-plan=PLAN-1 \
+       --xray-test-execution=EXEC-1
+```
+
+## JSON Output Structure
+
+The plugin generates a JSON file with the following structure:
+
+```json
+{
+    "tests": [
+        {
+            "testKey": "test_file.py::test_name",
+            "start": "2024-03-21T10:00:00+00:00",
+            "finish": "2024-03-21T10:00:01+00:00",
+            "status": "PASSED",  // One of: PASSED, FAILED, ERROR, SKIPPED
+            "comment": "Error message if test failed",
+            "evidence": [
+                {
+                    "data": "base64_encoded_content",
+                    "filename": "stdout.txt",
+                    "contentType": "text/plain"
+                },
+                {
+                    "data": "base64_encoded_content",
+                    "filename": "stderr.txt",
+                    "contentType": "text/plain"
+                },
+                {
+                    "data": "base64_encoded_content",
+                    "filename": "stacktrace.txt",
+                    "contentType": "text/plain"
+                }
+            ],
+            "steps": [],
+            "defects": [],
+            "customFields": {},
+            "duration": 1.0
+        }
+    ],
+    "info": {
+        "summary": {
+            "total": 4,
+            "passed": 2,
+            "failed": 1,
+            "errors": 0,
+            "skipped": 1,
+            "duration": 0.12
+        },
+        "testEnvironments": [
+            "Darwin",        // Operating system
+            "24.4.0",        // OS version
+            "3.13.0"         // Python version
+        ],
+        "project": "PROJ",           // Optional: Xray project key
+        "testPlanKey": "PLAN-1",     // Optional: Test plan key
+        "testExecutionKey": "EXEC-1"  // Optional: Test execution key
+    }
+}
+```
+
+### Test Result Fields
+
+- `testKey`: Unique identifier for the test (pytest nodeid)
+- `start`: Test start time in ISO format
+- `finish`: Test end time in ISO format
+- `status`: Test outcome (PASSED, FAILED, ERROR, SKIPPED)
+- `comment`: Error message or skip reason if applicable
+- `evidence`: Array of test output and logs
+  - `data`: Base64 encoded content
+  - `filename`: Type of evidence (stdout.txt, stderr.txt, stacktrace.txt)
+  - `contentType`: MIME type of the content
+- `steps`: Array for test steps (if any)
+- `defects`: Array for related defects (if any)
+- `customFields`: Additional test metadata
+- `duration`: Test duration in seconds
+
+### Summary Information
+
+- `total`: Total number of tests
+- `passed`: Number of passed tests
+- `failed`: Number of failed tests
+- `errors`: Number of tests with errors
+- `skipped`: Number of skipped tests
+- `duration`: Total test execution time
+
+### Environment Information
+
+- `testEnvironments`: Array containing:
+  - Operating system
+  - OS version
+  - Python version
+
+## Example
+
+```python
+# test_example.py
+def test_success():
+    assert True
+
+def test_failure():
+    assert False, "This test is expected to fail"
+
+@pytest.mark.skip(reason="This test is skipped")
+def test_skipped():
+    assert True
+
+def test_with_output(capsys):
+    print("This is stdout")
+    print("This is stderr", file=sys.stderr)
+    assert True
+```
+
+Run the tests:
+```bash
+pytest --xray-output=results.json test_example.py
+```
+
+The generated `results.json` will contain:
+- All test results with their status
+- Captured stdout/stderr
+- Stack traces for failures
+- Skip reasons
+- Summary statistics
+- Environment information
+
+## Development
+
+1. Clone the repository
+2. Install development dependencies:
+   ```bash
+   pip install -e ".[dev]"
+   ```
+3. Run tests:
+   ```bash
+   pytest
+   ```
+
+## License
+
+MIT License
