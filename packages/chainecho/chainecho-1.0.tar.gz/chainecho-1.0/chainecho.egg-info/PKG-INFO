@@ -1,0 +1,92 @@
+Metadata-Version: 2.4
+Name: chainecho
+Version: 1.0
+Summary: Python API Client for https://chainecho.me
+Home-page: https://github.com/dvincente/pychainecho-api
+Author: Douglas Vincente
+Author-email: d.vincente@aol.com
+License: MIT
+Keywords: chainecho news business information
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32.1
+Requires-Dist: jsondump>=0.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# chainecho
+
+Python API Client for https://chainecho.me
+
+
+## Install
+
+```
+pip install chainecho
+```
+
+## Usage
+
+```python
+import chainecho
+```
+
+Get latest news and categories by calling chainecho API:
+
+
+```python
+
+api_key = os.getenv("API_KEY")
+api = chainecho.API(api_key)
+
+news = api.getLatestNews(limit=20)
+print(news)
+
+categories = api.getCategories()
+print(categories)
+
+```
+
+
+News response format is as the following:
+
+
+| Field           | Type    | Description               |
+| --------------- | ------- | ------------------------- |
+| `id`            | integer | Unique ID                 |
+| `ntype`         | string  | News Type                 |
+| `nid`           | integer | News ID                   |
+| `guid`          | string  | News GUID                 |
+| `published_on`  | string  | Published Date            |
+| `image_url`     | string  | News Thumbnail URI        |
+| `title`         | string  | News Title                |
+| `url`           | string  | News URI                  |
+| `source_id`     | integer | Source ID                 |
+| `body`          | string  | Summary Content           |
+| `keywords`      | string  | Keywords                  |
+| `lang`          | string  | Language                  |
+| `category`      | string  | Categories                |
+
