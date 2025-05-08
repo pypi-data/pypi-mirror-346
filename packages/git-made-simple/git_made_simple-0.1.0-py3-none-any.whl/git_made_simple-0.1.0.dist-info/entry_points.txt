@@ -1,0 +1,2 @@
+[console_scripts]
+git-made-simple = git_made_simple_app.main:main
