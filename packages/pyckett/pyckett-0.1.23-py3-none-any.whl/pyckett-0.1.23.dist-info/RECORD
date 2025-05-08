@@ -1,0 +1,16 @@
+pyckett/__init__.py,sha256=c-4A6zcm10jtFXKDfB07cyK5kNyJTr98mZdXEbnjiao,55923
+pyckett/clitools/__init__.py,sha256=Ajq9bGwL-UNWH2F8J4qcyB1dXnBkIJD6VAPXvaiW1DE,222
+pyckett/clitools/addparameters.py,sha256=14F4OUCAi2hB2Dbr8u5p8THiINGcZxaUm2Ol_Swia9Q,11560
+pyckett/clitools/automaticfit.py,sha256=e-9Zchlv-LKJw0BtrE3RMLh-ybhyxAd4oAFWfEh8ABg,9430
+pyckett/clitools/omitparameters.py,sha256=YDU4eR2ZFb1AgcF6kI292N7izXhKEw90DEo-vXOewcU,4232
+pyckett/clitools/partitionfunction.py,sha256=WAVcgZCcCguqKykNRXlE6T2t5w2wmBA7VWzKKr7Hadc,4006
+pyckett/clitools/pmix.py,sha256=mBjMmZ6eKPqKNvlAg7zizTp4-v0x-iKdbIAliNa0LMs,560
+pyckett/clitools/separatefits.py,sha256=grFDAQJUPA74tiSDxFvLWHZy3ZKWLusXykM8BrzQHgU,8241
+pyckett/clitools/shortcuts.py,sha256=S7fjeRpUNzVRRh6LvydiaPWX2kvBLA8ENaT8xN7XMbM,1481
+pyckett/clitools/uncertainties.py,sha256=6whZxn0wvz9kUkUJwmxHQVPQdfp7dMcjpf6H9G9-hAQ,2844
+pyckett-0.1.23.dist-info/licenses/LICENSE,sha256=HmA-W_VO3GNnzicFFt5fCuw3EwvIAjhVUxrsgVlUeTU,1055
+pyckett-0.1.23.dist-info/METADATA,sha256=NM_vhGzuxOHXbm4Ko8K9hGFg_ll8K7tnmM10R52UVOQ,3926
+pyckett-0.1.23.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+pyckett-0.1.23.dist-info/entry_points.txt,sha256=F3h8Iew_OFvraUDUwzGV1z0Gj_NKobnxuIxGihkiD-w,447
+pyckett-0.1.23.dist-info/top_level.txt,sha256=0htO9en0IOeFJOLgef2HYqxVh0NM7cWLtlkybGa0kAA,8
+pyckett-0.1.23.dist-info/RECORD,,
