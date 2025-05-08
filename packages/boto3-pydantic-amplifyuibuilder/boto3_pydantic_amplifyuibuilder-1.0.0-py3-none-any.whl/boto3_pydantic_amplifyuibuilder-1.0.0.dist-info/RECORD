@@ -1,0 +1,7 @@
+boto3_pydantic_amplifyuibuilder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_amplifyuibuilder/amplifyuibuilder_classes.py,sha256=44SaAV4iQPVya4q2dcvpdVI8t_eBjMDOg4oukS8N9O0,41797
+boto3_pydantic_amplifyuibuilder/amplifyuibuilder_constants.py,sha256=NAT2V12o5O3xaPf0-0S2AeZpZ9FOJEZ7AN6JviwADhs,8406
+boto3_pydantic_amplifyuibuilder/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_amplifyuibuilder-1.0.0.dist-info/METADATA,sha256=1JOg3qH6L7wcs9Ln9_Gr7CMjO1JKn2SnZiNVpvr1q5g,1445
+boto3_pydantic_amplifyuibuilder-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_amplifyuibuilder-1.0.0.dist-info/RECORD,,
