@@ -1,0 +1,13 @@
+database_interface/__init__.py,sha256=15NHD6uv_rUJGapsX4SXgzqFbsexz_bO5f4x1Q8jprU,396
+database_interface/database.py,sha256=pCq3YeqgdWwLXiZ_6yq4Z5bglQhj3tj-h4Hg7ccKLO0,19308
+database_interface/db_types.py,sha256=-hzTP_soXm7PDf5Qdmng34coxRr3nEat52P3_-4ObeQ,11013
+database_interface/errors.py,sha256=LS6tmERuynWLclXEGDIjIOtEJEuKtG583YFFyn9WnwY,2509
+database_interface/postgis.py,sha256=-L___XOHUJ0fl43gpMtzrVVKW3SL04RJtSD9VyuMwZk,11239
+database_interface/postgresql.py,sha256=eOSIRvwl6xkN-1uvMMQkukzbbwQcwj21jNsMveuwIEg,5288
+database_interface/schema_objects.py,sha256=mMcyWHqjEGkCExa98jzsO_UcN1mhMuXk1ha3rSj3Ccs,4051
+database_interface/sql_objects.py,sha256=X15tYhBgvkK5MY8jPfcaQ3mi3QhuBMITXABITHWVB9I,9559
+database_interface/sqlite.py,sha256=G9XRVw3A1vuk5Uu-cN7-LYEHxH7b2bLRfUXl94aTKFE,5198
+unnecessary_abstraction-1.2.3.dist-info/METADATA,sha256=tYZ2gWPGALnwD7BHr700X1ysDUF5iLOQOfOEMKDPr8A,382
+unnecessary_abstraction-1.2.3.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+unnecessary_abstraction-1.2.3.dist-info/top_level.txt,sha256=RJEKaOedO2QdmHtB1deXEmcZ4Tq7N-vANrhjiYyE3ko,19
+unnecessary_abstraction-1.2.3.dist-info/RECORD,,
