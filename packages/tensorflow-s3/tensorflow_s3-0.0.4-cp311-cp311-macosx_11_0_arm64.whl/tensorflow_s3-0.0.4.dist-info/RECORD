@@ -1,0 +1,5 @@
+tensorflow_s3/__init__.py,sha256=qL-uRUyfzrwGWO-zZ-t1KEIhCKTJVpz43SOQm8BFsw8,144
+tensorflow_s3/libtensorflow_s3.so,sha256=O6w3tQK_wpRvT4kpF6DXa-LoOXgJOffhVtjLofKl_YQ,9740400
+tensorflow_s3-0.0.4.dist-info/WHEEL,sha256=YHPPtLvDjQOq0q08ctbe4IB14vxJT80kUIrv015k8zs,109
+tensorflow_s3-0.0.4.dist-info/METADATA,sha256=ZNufUgx8_mofOZqdk_nGxDOHEF6qLucNOxc68QjvITE,218
+tensorflow_s3-0.0.4.dist-info/RECORD,,
