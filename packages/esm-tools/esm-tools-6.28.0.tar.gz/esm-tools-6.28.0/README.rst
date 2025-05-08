@@ -1,0 +1,76 @@
+=========
+ESM Tools
+=========
+
+Documentation
+-------------
+
+.. image:: https://readthedocs.org/projects/esm-tools/badge/?version=latest
+
+For our complete documentation, please check https://esm-tools.readthedocs.io/en/latest/index.html.
+
+How to cite this software
+-------------------------
+To cite ESM-Tools, please use the following DOI: https://zenodo.org/doi/10.5281/zenodo.3737927. This DOI represents all versions of the software, and will always pointing to the latest version available on https://zenodo.org.
+
+
+Before you continue
+-------------------
+
+You will need python 3 (possibly version 3.6 or newer), a version of git that is not ancient (everything newer than 2.10 should be good), and up-to-date pip (``pip install -U pip``) to install the `esm_tools`. That means that on the supported machines, you could for example use the following settings:
+
+albedo::
+
+    $ module load git
+    $ module load python
+
+levante.dkrz.de::
+
+    $ module load git
+    $ module load python3
+
+glogin.hlrn.de / blogin.hlrn.de::
+
+    $ module load git
+    $ module load anaconda3
+
+juwels.fz-juelich.de::
+
+    $ module load Stages/2022
+    $ module load git
+    $ module load Python/3.9.6
+
+aleph::
+
+    $ module load git
+    $ module load python
+
+Note that some machines might raise an error ``conflict netcdf_c`` when loading ``anaconda3``. In that case you will need to swap ``netcdf_c`` with ``anaconda3``::
+
+    $ module unload netcdf_c
+    $ module load anaconda3
+
+
+
+Installing
+----------
+
+1. First, make sure you add the following lines to one of your login or profile files, i.e. ``~/.bash_profile``, ``~/.bashrc``, ``~/.profile``, etc.::
+
+        $ export PATH=$PATH:~/.local/bin
+        $ export LC_ALL=en_US.UTF-8
+        $ export LANG=en_US.UTF-8
+
+2. Inside the same login or profile file, add also the ``module`` commands necessary for the HPC system you are using (find the lines in the section above).
+
+3. You can choose to source now your login or profile file, so that the ``module`` and ``export`` commands are run (e.g. ``$ source ~/.bash_profile``).
+
+4. To use the new version of the ESM-Tools, now rewritten in Python, clone this repository::
+
+        $ git clone https://github.com/esm-tools/esm_tools.git
+
+5. Then, run the ``install.sh``::
+
+        $ ./install.sh
+
+You should now have the command line tools ``esm_master`` and ``esm_runscripts``, which replace the old version.

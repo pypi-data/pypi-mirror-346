@@ -1,0 +1,20 @@
+# ESM-Runscripts defaults
+
+# Defaults added to the general section
+general:
+    additional_files: []
+    iterative_coupled_model: ""
+    reset_calendar_to_last: False
+    verbose: False
+
+# Defaults to be added to each model or component
+per_model_defaults:
+        file_movements:
+                default:
+                        all_directions: copy
+                bin:
+                        init_to_exp:    copy
+                        exp_to_run:     copy
+                        run_to_work:    copy
+                        work_to_run:    copy
+
