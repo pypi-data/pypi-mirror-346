@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "productmap-cli"
+version = "0.1.23"
+description = "The ProductMap CLI tool for validation and execution of map generation process in the ProductMap tool"
+authors = [
+  { name="ProductMap", email="axel.reichwein@koneksys.com" },
+]
+maintainers = [
+  { name="ProductMap", email="axel.reichwein@koneksys.com" },
+]
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+  "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+  "click",
+  "httpx",
+]
+
+
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+#[tool.poetry.group.dev.dependencies]
+#pytest
+#pytest-dotenv
+
+[project.scripts]
+pm-cli = "cli.main:main"
+
