@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django_autokit"
+version = "0.1.2"
+description = "A CLI tool to automate Django project setup, including settings splitting, .env creation, and app boilerplate."
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+authors = [
+    { name = "drey.tech", email = "oluwadamilareadeniye@yahoo.com" }
+]
+classifiers = [
+    "Framework :: Django",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "python-dotenv",
+]
+
+[project.urls]
+Homepage = "http://github.com/niyimarc/django_autokit"
+Issues = "http://github.com/niyimarc/django_autokit/issues"
+
+[tool.setuptools]
+packages = ["django_autokit"]
+include-package-data = true
