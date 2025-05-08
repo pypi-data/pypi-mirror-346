@@ -1,0 +1,13 @@
+name: spyrmsd
+channels:
+  - conda-forge
+dependencies:
+  # Base
+  - python
+  - setuptools
+
+  # Maths
+  - numpy
+  - scipy
+  - rustworkx
+  - networkx
