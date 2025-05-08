@@ -1,0 +1,13 @@
+pypolsys-0.1.6.dist-info/RECORD,,
+pypolsys-0.1.6.dist-info/LICENSE,sha256=PXd0-AGlGDo1qK-bRUaxWyxbiaTEOScPuDOS1HiP6Gc,35180
+pypolsys-0.1.6.dist-info/WHEEL,sha256=S20l25iOAdd1WPH_Mci73XRzbOi8JQNL5ekc52EfESw,123
+pypolsys-0.1.6.dist-info/METADATA,sha256=6io28-5h3_a_28IXSi26wsJ0aVRi1_x1k_gKU9sbnNU,53882
+pypolsys/version.py,sha256=RGrPbUhaG9Ly1dbdgteYLixlRa8ixpm2lECxc--W93E,96
+pypolsys/__init__.py,sha256=uAP3sXE4IebvwSCuBGmvrc0zeGWKzoo28yYkLI38SCQ,2148
+pypolsys/polsys.cpython-311-darwin.so,sha256=ZbLGBwxz7ESHTObeOJLD2RJTfRxbh9fCwNBBDPBxc8Q,333472
+pypolsys/test.py,sha256=KiTDyzJLDp9d6e3ikTv7ZaQh3ntOZz1pR3IAtw5x4Kc,17332
+pypolsys/utils.py,sha256=MsgqFfjvqS2sV9HoekH_Rxhc4d2VNjU9fCIIJJy2vxY,18870
+pypolsys/.dylibs/libgfortran.5.dylib,sha256=KN7QSPh31UQMqyhDRpClldcXxONAcrCu1boL1zeoKoA,3497360
+pypolsys/.dylibs/libquadmath.0.dylib,sha256=ZF0EYVP8z2KPLSJtwl_geIAnuI_NsYDX4WjdnM8jogw,381088
+pypolsys/.dylibs/libgcc_s.1.1.dylib,sha256=fPK2Zf-V6A6RIbzlUOS8rkHARbmf1T6BzeKqs-ESunE,244384
+pypolsys/examples/data/toy_model.npz,sha256=mIa6hhLbJQFRcbOXd8pRCV3QfPbF1pS6aUZs9Nwy_jg,2071
