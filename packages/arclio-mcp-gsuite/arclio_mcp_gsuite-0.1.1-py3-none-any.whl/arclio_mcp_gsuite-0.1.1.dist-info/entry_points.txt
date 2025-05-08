@@ -1,0 +1,2 @@
+[console_scripts]
+arclio-gsuite-worker = arclio_mcp_gsuite.__main__:main
