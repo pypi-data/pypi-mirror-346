@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: lightchat
+Version: 0.1.0
+Summary: Lightweight GPT2 training and deployment toolkit
+Author: RePromptsQuest
+Author-email: reprompts@gmail.com
+Classifier: Programming Language :: Python :: 3.8

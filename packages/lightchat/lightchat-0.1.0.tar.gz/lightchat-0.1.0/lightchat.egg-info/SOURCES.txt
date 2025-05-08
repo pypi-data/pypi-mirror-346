@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+lightchat/__init__.py
+lightchat/cli.py
+lightchat/config.py
+lightchat/manager.py
+lightchat/trainer.py
+lightchat/utils.py
+lightchat.egg-info/PKG-INFO
+lightchat.egg-info/SOURCES.txt
+lightchat.egg-info/dependency_links.txt
+lightchat.egg-info/entry_points.txt
+lightchat.egg-info/requires.txt
+lightchat.egg-info/top_level.txt
