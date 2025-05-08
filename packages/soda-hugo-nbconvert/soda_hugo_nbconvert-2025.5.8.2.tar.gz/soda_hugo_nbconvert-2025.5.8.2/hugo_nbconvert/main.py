@@ -1,0 +1,59 @@
+import subprocess
+from hugo_nbconvert.glob_hugo_ipynb import get_files
+from sodatools import Path, os
+from hugo_nbconvert.collapse_postprocessor import CollapsePostprocessor
+import argparse
+import multiprocessing
+
+
+def get_args():
+    parser = argparse.ArgumentParser(usage="convert ipynb to markdown posts")
+    parser.add_argument(
+        "file_path",
+        type=str,
+        default="",
+        help="ipynb file path (if not specified, will find and process all ipynb files)",
+        nargs="?",
+    )
+    args = parser.parse_args()
+    return args
+
+
+conf_path = Path(__file__).resolve().parent.joinpath("nbconvert_config.py")
+
+
+def main():
+    args = get_args()
+    files = []
+    if args.file_path == "":
+        files = get_files()
+    else:
+        file_path = Path(os.getcwd()).joinpath(args.file_path).resolve()
+        if file_path.suffix == ".ipynb":
+            files.append(file_path)
+
+    api_convert_main(files)
+
+
+def convert_proc(conf_path: Path, file: Path):
+    subprocess.run(
+        ["jupyter", "nbconvert", "--config", conf_path, "--to", "markdown", file]
+    )
+    output_filepath = file.with_suffix(".md")
+    if output_filepath.exists():
+        postprocessor = CollapsePostprocessor(output_filepath)
+        postprocessor.process()
+
+
+def api_convert_main(files: list[Path]):
+    processes = []
+    for i in files:
+        p = multiprocessing.Process(target=convert_proc, args=(conf_path, i))
+        processes.append(p)
+        p.start()
+    for p in processes:
+        p.join()
+
+
+if __name__ == "__main__":
+    main()
