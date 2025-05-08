@@ -1,0 +1,9 @@
+thin_plate_spline-1.2.0.dist-info/licenses/LICENSE,sha256=mTZcRcQZEJ2Wbp_A0P1mCeetemSOdyl043X0DbupM10,1068
+tps/__init__.py,sha256=V_i46mRd3tnaPus3mXgbltnqEGlONkckGZLL_2a1tno,175
+tps/polynomial_transform.py,sha256=gys5jZyzCRveYYiRp2VGfrvUiw5AhTgdpKHCI8_gedM,2569
+tps/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tps/thin_plate_spline.py,sha256=totuevz_DPDat3FFw8zLFxKlO4I6wUA_CixPHqzEAjQ,8814
+thin_plate_spline-1.2.0.dist-info/METADATA,sha256=EqS9cnxWBYv-w2-SkJrTSW0LjZHi9Uxs4voz0-n7W5Y,4199
+thin_plate_spline-1.2.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+thin_plate_spline-1.2.0.dist-info/top_level.txt,sha256=kaJ_Zq3ok1PnJNXa8zt2OnbSObGJQ_DN53N27LghLkY,4
+thin_plate_spline-1.2.0.dist-info/RECORD,,
