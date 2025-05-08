@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyamtb"
+version = "0.2.0"
+description = "A tight-binding model package for altermagnets"
+authors = [
+    { name="Wang Dinghui", email="wangdh@cumt.edu.cn" },
+    { name="Junting Zhang", email="juntingzhang@cumt.edu.cn" },
+    { name="Yu Xie" },
+]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.7"
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "pythtb"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.9",
+]
+
+[project.scripts]
+pyamtb = "pyamtb.cli:main"
