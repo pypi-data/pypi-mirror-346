@@ -1,0 +1,17 @@
+longquanagent/__init__.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+longquanagent/agent/agent.py,sha256=H2gCnY8NwSVypvH2e1N11R0Gq-YApEIulqWCYp9Tiws,10867
+longquanagent/examples/deepsearch.md,sha256=OCQZADJZ0BH4RCJfpQWcTxjFIt6mtaNDI0u-jZ9P4_g,19309
+longquanagent/examples/todaytrend.md,sha256=Mmh9CzBkEJ_dA3j2XsF_MKgBgsQQP-lDxAZgssBuFi4,7918
+longquanagent/register/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+longquanagent/register/tool.py,sha256=ahdT0NkPgpfNMnRiEQVy1rtYzGKNFm4xOGsEBxPuhvQ,4811
+longquanagent/tools/computer_tools.py,sha256=dxnh7PFJ5tZF9JVE_naQxBuaiFjChp6iFGG7agIY5bY,1372
+longquanagent/tools/deepsearch.py,sha256=rCrMzmCteIuQUIOxxWvV2pn86bSllbRQK4nI9qWgZp0,10679
+longquanagent/tools/hello.py,sha256=ooOWmJTe3-A5Y34AoKZ8FoE5L-Gd86CoJBl_rYrhP_k,102
+longquanagent/tools/terminal_tools.py,sha256=dxnh7PFJ5tZF9JVE_naQxBuaiFjChp6iFGG7agIY5bY,1372
+longquanagent/tools/trending_news.py,sha256=qD30SNJsfhmkydfcAeOJCgdCXCALmY0yaWon9nH_PoM,8660
+longquanagent/tools/websearch_tools.py,sha256=94_Hu16mZV6JVUXQd0UPLGd_ZmVjBf-fAmeK8_CD96Q,1027
+longquanagent/tools/yfinance_tools.py,sha256=gF0NCxLnUKl0fnpJw1BMS3_1NPV3EuTJnglvIQktioc,4611
+longquanagent-0.1.1.dist-info/LICENSE,sha256=91hWNAJ4ACDAGpOex77DwAQOeqrOQ2sAzAvKV-aeNa0,1096
+longquanagent-0.1.1.dist-info/METADATA,sha256=S-qOaVRWoHeGx1XwPzVrJ9QQ9ykrZgIjDVt1wiNTqkE,10515
+longquanagent-0.1.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+longquanagent-0.1.1.dist-info/RECORD,,
