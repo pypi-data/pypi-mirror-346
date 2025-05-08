@@ -1,0 +1,11 @@
+single_doc_retrieval/__init__.py,sha256=4Us_RRlmb7Jviwh1lJQSpLD6ds5KL6Qpr7aIlhsJGHE,123
+single_doc_retrieval/config.py,sha256=9w45C5XJHMZN8DUhlnqaaOXT-wZ5YivnNEP96oPLeCY,114
+single_doc_retrieval/core.py,sha256=1CAA7PyIlKxq5Z---JuXvQwOIZVpMSiT4eHM6wsE1pM,20697
+single_doc_retrieval/data_utils.py,sha256=4rvMi5vhww0CEOXBmnAuuE-EaFZTeezsdgTsCUyhBDg,4864
+single_doc_retrieval/embedding_utils.py,sha256=chjRACXPSRQ51jwpZAWRU4Y7Z5hTJC60sg-WgCjrOLc,3463
+single_doc_retrieval/prompts.py,sha256=Ho2XK9sMC0K-q8ezCSq1dsRINdR2wXWZ5cM0FxD4WzA,1370
+single_doc_retrieval-0.1.0.dist-info/licenses/LICENSE,sha256=oxA9-juFBCBko0t5sgbp4gsOl--8j_ekp8jqLVLIVJw,1069
+single_doc_retrieval-0.1.0.dist-info/METADATA,sha256=2xyCi6l-GGayvWhhA1akkOTBelFqKZVskCdAxQcjYvk,2120
+single_doc_retrieval-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+single_doc_retrieval-0.1.0.dist-info/top_level.txt,sha256=BiWqeJLsZQpWo_mJFTAH7OKaPZolLaRk-hHPufgW6_g,21
+single_doc_retrieval-0.1.0.dist-info/RECORD,,
