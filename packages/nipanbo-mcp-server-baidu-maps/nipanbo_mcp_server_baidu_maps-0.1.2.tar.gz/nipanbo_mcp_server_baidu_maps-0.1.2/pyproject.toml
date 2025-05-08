@@ -1,0 +1,14 @@
+[project]
+name = "nipanbo-mcp-server-baidu-maps"
+version = "0.1.2"
+description = "MCP Server Baidu Maps"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "baidu-maps" }]
+maintainers = [{ name = "Pineapple274", email = "yuyangyang3838@gmail.com" }]
+keywords = ["http", "mcp", "map", "baidu"]
+license = { text = "MIT" }
+dependencies = ["asyncio>=3.4.3", "httpx>=0.28.1", "mcp[cli]>=1.5.0"]
+
+[project.scripts]
+nipanbo-mcp-server-baidu-maps = "mcp_server_baidu_maps:main"
