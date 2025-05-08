@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fast_antx"
+version = "0.0.1"
+authors = [
+  { name="Kaldan", email="Kaldan@esukhia.org" },
+]
+description = "Fast implementation of antx text annotation tool"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "diff-match-patch>=20230430",
+    "PyYAML>=6.0",
+    "requests>=2.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "pre-commit",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/OpenPecha/fast-antx"
+"Bug Tracker" = "https://github.com/OpenPecha/fast-antx/issues"

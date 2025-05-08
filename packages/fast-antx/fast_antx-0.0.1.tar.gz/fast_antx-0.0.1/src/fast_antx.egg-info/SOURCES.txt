@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/fast_antx/__init__.py
+src/fast_antx/ann_patterns.py
+src/fast_antx/core.py
+src/fast_antx/utils.py
+src/fast_antx.egg-info/PKG-INFO
+src/fast_antx.egg-info/SOURCES.txt
+src/fast_antx.egg-info/dependency_links.txt
+src/fast_antx.egg-info/requires.txt
+src/fast_antx.egg-info/top_level.txt
+tests/test_annotation_transfer.py
+tests/test_optimized_dmp.py
