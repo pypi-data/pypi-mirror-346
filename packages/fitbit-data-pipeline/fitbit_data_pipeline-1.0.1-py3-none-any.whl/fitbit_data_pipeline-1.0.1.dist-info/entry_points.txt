@@ -1,0 +1,3 @@
+[console_scripts]
+fitbit-pipeline=fitbit_data_pipeline.runner:execute
+
