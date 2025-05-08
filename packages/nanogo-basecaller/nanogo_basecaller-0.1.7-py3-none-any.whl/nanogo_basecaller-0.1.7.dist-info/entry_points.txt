@@ -1,0 +1,3 @@
+[console_scripts]
+install-dorado = nanogo_basecaller.dorado_installer:main
+nanogo = nanogo_basecaller.cli:main
