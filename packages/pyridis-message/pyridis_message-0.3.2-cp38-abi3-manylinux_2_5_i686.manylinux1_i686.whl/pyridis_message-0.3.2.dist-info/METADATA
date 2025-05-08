@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: pyridis-message
+Version: 0.3.2
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: numpy>=2.2.5
+Requires-Dist: pyarrow>=20.0.0
+Requires-Dist: pytest ; extra == 'tests'
+Provides-Extra: tests
+Summary: iridis, with python
+Home-Page: https://iridis-rs.github.io/pyridis/
+Author: Enzo Le Van <dev@enzo-le-van.fr>
+Author-email: Enzo Le Van <dev@enzo-le-van.fr>
+License: Apache-2.0
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/iridis-rs/pyridis
+
+# flarrow-python
