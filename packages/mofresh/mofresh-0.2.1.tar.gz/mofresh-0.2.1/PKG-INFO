@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: mofresh
+Version: 0.2.1
+Summary: A Python package for fresh data processing
+Project-URL: Homepage, https://github.com/vincentwarmerdam/mofresh
+Project-URL: Bug Tracker, https://github.com/vincentwarmerdam/mofresh/issues
+Author: Vincent Warmerdam
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: altair
+Requires-Dist: anywidget
+Requires-Dist: matplotlib
+Requires-Dist: vl-convert-python
+Provides-Extra: dev
+Requires-Dist: marimo; extra == 'dev'
+Requires-Dist: polars; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Mofresh
+
+A Python package for fresh data processing.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install mofresh
+```
+
+## Development
+
+To set up the development environment:
+
+1. Clone the repository
+2. Install the package in development mode:
+```bash
+pip install -e .
+```
+
+## Testing
+
+Run the tests using pytest:
+
+```bash
+pytest
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
