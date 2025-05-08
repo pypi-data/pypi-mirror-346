@@ -1,0 +1,6 @@
+include nutmeg_cython.pyx
+include README.md
+include requirements.txt
+recursive-include nutmeg *.py
+recursive-include nutmeg *.pyx
+recursive-include nutmeg *.pxd 
