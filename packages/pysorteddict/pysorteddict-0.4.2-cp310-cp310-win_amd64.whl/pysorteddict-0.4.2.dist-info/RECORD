@@ -1,0 +1,10 @@
+pysorteddict.pyd,sha256=FOm4w9DCIeVCa9nDzhrs0C16XmpCZ2X228QGvPTumFE,27136
+pysorteddict/sorted_dict_module.cc,sha256=JBGnMwar-6cGTkCMmjsqz1i9ZVLSbfFEC2XbQsE3dA0,7785
+pysorteddict/sorted_dict_type.cc,sha256=sk1mzEPV82bfjBLSUXzuT5PMFvqXa-zuEu9Kp57BfiM,10983
+pysorteddict/sorted_dict_type.hh,sha256=rEJJOgEL21HTGeflHDqKqsCTOfkEXQugmzjIunjmRuQ,1161
+pysorteddict/sorted_dict_type_key_compare.hh,sha256=DmpvQpvVfNMr37YZCrdwVoOF-fBN-QrQHCgkvwlGwpY,876
+pysorteddict-0.4.2.dist-info/COPYING.md,sha256=juekV7PN2tByadDLX1mpSMnxk79uVBJLk6sFdq1OoGo,32335
+pysorteddict-0.4.2.dist-info/METADATA,sha256=e7rtiDLT96qNuOPHnx3htebc5DsozJYMFvwijjsbVJo,8968
+pysorteddict-0.4.2.dist-info/WHEEL,sha256=tF77PxuEGG-2kyJBah3Kgju_42iEyT5AcvsT_0Dgcj0,101
+pysorteddict-0.4.2.dist-info/top_level.txt,sha256=7ZNZyBgOg-S8hFnJwZRa7h_5hGtT_FOQjNCsgWkMcaA,13
+pysorteddict-0.4.2.dist-info/RECORD,,
