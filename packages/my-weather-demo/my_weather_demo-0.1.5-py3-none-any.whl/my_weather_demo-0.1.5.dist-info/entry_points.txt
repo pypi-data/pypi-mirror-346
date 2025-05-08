@@ -1,0 +1,2 @@
+[console_scripts]
+my_weather_demo = weather:mcp.run
