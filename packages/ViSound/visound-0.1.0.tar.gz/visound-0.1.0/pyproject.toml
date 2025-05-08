@@ -1,0 +1,16 @@
+[project]
+name = "ViSound"
+version = "0.1.0"
+description = "A library to sonify images using Python"
+authors = [{ name = "Dheeraj Vittal Shenoy", email = "dheerajshenoy22@email.com" }]
+dependencies = [
+    "numpy",
+    "opencv-python",
+]
+
+[project.urls]
+Homepage = "https://github.com/dheerajshenoy/sonify"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
