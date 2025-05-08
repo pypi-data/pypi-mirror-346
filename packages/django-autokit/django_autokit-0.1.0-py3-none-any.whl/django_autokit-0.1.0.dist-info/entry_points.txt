@@ -1,0 +1,2 @@
+[console_scripts]
+djkit = django_autokit.cli:main

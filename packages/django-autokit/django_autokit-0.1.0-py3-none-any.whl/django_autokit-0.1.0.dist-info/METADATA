@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: django-autokit
+Version: 0.1.0
+Summary: A CLI tool to automate Django project setup, including settings splitting, .env creation, and app boilerplate.
+Author: Adeniyi Oluwadamilare
+Author-email: "drey.tech" <oluwadamilareadeniye@yahoo.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/django-autokit
+Project-URL: Issues, https://github.com/yourusername/django-autokit/issues
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-dotenv
+
+# Django Autokit
+
+**Django Autokit** is a CLI tool to automate the setup of a Django project. It helps with environment variable setup, settings splitting (`base.py`, `dev.py`, `prod.py`), `.env` scaffolding, and boilerplate app creation — saving you time when starting new projects.
+
+---
+
+## ✨ Features
+
+- Automatically split `settings.py` into `base.py`, `dev.py`, and `prod.py`
+- Create a `.env` file with `SETTINGS_PATH` and `ENV` variables
+- Add newly created apps to `INSTALLED_APPS` (supports flat and split settings)
+- Smart handling for Django 4.x and 5.x compatibility
+
+---
+
+## 📦 Installation
+
+```bash
+pip install django-autokit
+
+
+🚀 Usage
+1. Initialize in your Django project root:
+bash
+Copy
+Edit
+python -m django_autokit.cli
+This will:
+
+Detect or create .env
+
+Set SETTINGS_PATH to the correct module path (e.g. yourproject.settings.base)
+
+Add ENV=dev by default with a comment
+
+Split your settings if needed
+
+
+2. Create an app:
+bash
+Copy
+Edit
+python -m django_autokit.cli startapp blog
+This will:
+
+Create the blog app using Django’s startapp
+
+Automatically add it to INSTALLED_APPS
+
+
+⚙️ Environment Management
+In your .env, you’ll find:
+
+env
+Copy
+Edit
+# Path to your Django settings file (use base.py for split settings)
+SETTINGS_PATH=yourproject.settings.base
+
+# Set ENV to 'prod' when deploying to production
+ENV=dev
+
+
+📁 Project Structure After Running Autokit
+yourproject/
+├── manage.py
+├── .env
+├── yourproject/
+│   ├── settings/
+│   │   ├── base.py
+│   │   ├── dev.py
+│   │   └── prod.py
+│   └── ...
+├── blog/
+│   └── ...
+
+
+✅ Compatibility
+✅ Django 4.x
+
+✅ Django 5.x
+
+✅ Python 3.7+
+
+🛡 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🤝 Contributing
+Pull requests are welcome! Feel free to open an issue to suggest new features or report bugs.
