@@ -1,0 +1,13 @@
+pyaffalddk/__init__.py,sha256=_CmW-z8LMtLExY5A5rGm66vHnpUHOPu_Ml4xB54Dz4k,594
+pyaffalddk/api.py,sha256=6zR8C5NLlayC2zWJUNxor-Uqv5HOEHPg_lxyhkD82v0,40184
+pyaffalddk/const.py,sha256=Zpq8pmSJ1Jxt-VzXK2_e7-JwjQE7CwZh2ZfsKdDBA_g,16749
+pyaffalddk/data.py,sha256=N1eVLQmVACbfPvuI7SJcfJRiaLdut1fN7sdI-6V92Vg,2125
+pyaffalddk/images.py,sha256=6on01KjduRSLmaXWFL-q9fx8QlWHTL1EFYdpTlVGlko,810
+pyaffalddk/municipalities.py,sha256=756-SM6XQdj1jluEnRp4FzR7yDF4CJ9AX2HZ6h78zCg,1647
+pyaffalddk-2.4.0.dist-info/licenses/LICENSE,sha256=V_lBwo7u3jb5xyxLhTvun0o1pmWIlCN6ChYW0SFrNvQ,1068
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_api.py,sha256=XZ2JkLNQOuh9EWdzsjNuiOXl0Kr6U7h2esH-OmLsom8,6916
+pyaffalddk-2.4.0.dist-info/METADATA,sha256=H9G_1Y3hHdTM5ih6_AChquI1fSTxIOI5imRG6p2evXQ,923
+pyaffalddk-2.4.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+pyaffalddk-2.4.0.dist-info/top_level.txt,sha256=USFQNBZjQNOa3_0uvI6K6qETRlJxD_6SUHrECxUmemo,17
+pyaffalddk-2.4.0.dist-info/RECORD,,
