@@ -1,0 +1,66 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aio_process_pool"
+dynamic = ["version"]
+description = "An async, concurrent.futures.Executor compliant, android compatible process pool implementation"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "jeff-dh", email = "1105041+jeff-dh@users.noreply.github.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+    "pytest_asyncio",
+]
+
+[project.urls]
+Documentation = "https://github.com/jeff-dh/aio_process_pool#readme"
+Issues = "https://github.com/jeff-dh/aio_process_pool/issues"
+Source = "https://github.com/jeff-dh/aio_process_pool"
+
+[tool.hatch.version]
+path = "src/aio_process_pool/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/aio_process_pool tests}"
+
+[tool.coverage.run]
+source_pkgs = ["aio_process_pool", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/aio_process_pool/__about__.py",
+]
+
+[tool.coverage.paths]
+aio_process_pool = ["src/aio_process_pool", "*/aio_process_pool/src/aio_process_pool"]
+tests = ["tests", "*/aio_process_pool/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
