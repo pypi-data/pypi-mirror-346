@@ -1,0 +1,15 @@
+mobvoi_tts_mcp/__init__.py,sha256=jEBKgNG9ZH-MC71cUCgfmdFGHShLY8k491XltUPtA-Q,60
+mobvoi_tts_mcp/server.py,sha256=F2tm8S7dgq99-zMWrPlJiR_iBsgla9CnGMLXxxHQPAs,9451
+mobvoi_tts_mcp/utils.py,sha256=I-GX2-9G-TwUP8DhFFsnFtRnHKa_XI1yYuOoCmATYOE,4365
+mobvoi_tts_sdk/__init__.py,sha256=Tndfc29G951QLZlXhDPXGb2ynJwMEtY4Vb-goi23NLc,67
+mobvoi_tts_sdk/client.py,sha256=PXiYFyC1fv_0HsrYqG5iGGWbZcHtRg5IKmygHvWWn6s,2600
+mobvoi_tts_sdk/play.py,sha256=vrv46ip5Q6tWXkO1hZx5D0xylMk-ySRNOIJX6U6tSoU,2916
+mobvoi_tts_sdk/text_to_speech/__init__.py,sha256=-HbuTYN5IOUGJnSKvcvofEMAy24GN9pA0GbsTAKgM-c,38
+mobvoi_tts_sdk/text_to_speech/client.py,sha256=siw3gGyl1ym5AAmv4NyuBUY9i3Jw50G18E07LI96toQ,3986
+mobvoi_tts_sdk/voice_clone/__init__.py,sha256=9EAjeFIdLAqPjUNN4FdP5YEbFXvaPvJNaOsOmnzRmDY,36
+mobvoi_tts_sdk/voice_clone/client.py,sha256=_LSgv3Z_pJrE1xUY7ChMFTVMobBZDqNo7q4nenqHG7o,4953
+mobvoi_tts_mcp-0.1.2.dist-info/METADATA,sha256=x4oasABPSCkeORElpXZWbZRq4rpmqjQyPSuTaYG3VQI,7318
+mobvoi_tts_mcp-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mobvoi_tts_mcp-0.1.2.dist-info/entry_points.txt,sha256=T0AWgco2Sw8Axeh_XBsY7GRKT9ry1QVYm1PAJWqQmjo,62
+mobvoi_tts_mcp-0.1.2.dist-info/licenses/LICENSE,sha256=sLNAxP9MqY9oVDPdIK8tf2tCd6dNIeeZ0As4zn_7xAw,1068
+mobvoi_tts_mcp-0.1.2.dist-info/RECORD,,
