@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "patlang"
+version = "0.0.3"
+authors = [
+  { name="MarijnvTricht", email="marijnpy@gmx.com" },
+]
+description = "pattern language"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/MarijnvanTricht/patlang"
+Issues = "https://github.com/MarijnvanTricht/patlang"

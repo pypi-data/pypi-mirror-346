@@ -1,0 +1,9 @@
+LICENSE
+NOTICE
+README.md
+patlang.py
+pyproject.toml
+patlang.egg-info/PKG-INFO
+patlang.egg-info/SOURCES.txt
+patlang.egg-info/dependency_links.txt
+patlang.egg-info/top_level.txt
