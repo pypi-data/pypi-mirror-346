@@ -1,0 +1,6 @@
+pandas
+biopython
+tqdm
+primer3-py
+matplotlib
+numpy
