@@ -1,0 +1,26 @@
+[project]
+name = "ssb-datadoc-model"
+version = "6.1.1"
+description = "Data Model for use in Statistics Norway's Metadata system"
+authors = [{ name = "Statistics Norway", email = "metadata@ssb.no" }]
+requires-python = ">=3.10"
+dependencies = ["pydantic>=2.5.2"]
+
+[project.urls]
+homepage = "https://github.com/statisticsnorway/ssb-datadoc-model"
+repository = "https://github.com/statisticsnorway/ssb-datadoc-model"
+changelog = "https://github.com/statisticsnorway/ssb-datadoc-model/releases"
+
+[dependency-groups]
+
+dev = ["pytest>=7.4.3", "pytest-cov>=4.1.0", "ruff>=0.11.8"]
+
+[tool.uv]
+required-version = ">=0.7.2"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["datadoc_model"]
