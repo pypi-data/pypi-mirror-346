@@ -1,0 +1,9 @@
+roo_conf/__init__.py,sha256=SxTCvnNipSseYD69kRkR7CAu_igqzEmML4Xe9XlVr_M,54
+roo_conf/deploy.py,sha256=TsQYGwH4fztXXLJ82EOitXyjnohivcq90QV6CNWSJJQ,1705
+roo_conf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+roo_conf/prompts/system-prompt-architect-gh.md,sha256=iKIKfHAhr3GAPBDjyUaetpKYKXAAWgVx4QchGU_XbJw,37433
+roo_conf/prompts/system-prompt-code-gh.md,sha256=gNYShhfk6hzlHK993dc7pDvfZaXzoOIeAB5BtbV-UkE,35390
+roo_conf-0.1.0.dist-info/METADATA,sha256=k5zJpPrGa6fxJnJF-0OkQHPajDStEmqlA3r9anV2ovM,1159
+roo_conf-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+roo_conf-0.1.0.dist-info/entry_points.txt,sha256=R2GtCZ_HsGbK72gvSfDArdXGyhHfmBsWxmXmeaQs19s,60
+roo_conf-0.1.0.dist-info/RECORD,,

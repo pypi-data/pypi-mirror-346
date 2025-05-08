@@ -1,0 +1,2 @@
+[console_scripts]
+roo-conf = roo_conf.deploy:deploy_prompts
