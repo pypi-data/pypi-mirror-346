@@ -1,0 +1,8 @@
+numpy
+tqdm
+jax
+jaxlib
+scikit-learn
+pot
+open3d
+ott-jax
