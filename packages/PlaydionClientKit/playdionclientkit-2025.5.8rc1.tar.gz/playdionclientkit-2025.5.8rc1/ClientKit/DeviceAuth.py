@@ -1,0 +1,75 @@
+import requests
+
+global devicecode
+global authstatus
+global requestid
+
+
+def initialize_auth():
+    global devicecode
+    global requestid
+    auth_url = "https://onlineservices.adriandevprojects.com/v1/auth/devicelogin/new/"
+
+
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+
+    response = requests.post(auth_url, headers=headers)
+    data = response.json()
+    requestid = data['requestid']
+    devicecode = data['devicecode']
+
+
+
+
+
+def check_auth(requestid):
+    global authstatus
+    global devicecode
+    auth_url = "https://onlineservices.adriandevprojects.com/v1/auth/devicelogin/check/"
+
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+
+    rid = {
+        "requestid": requestid
+    }
+
+    success = False
+
+    while success is False:
+        response = requests.post(auth_url, headers=headers, data=rid)
+        data = response.json()
+        status = data['status']
+        if status == "SUCCESS":
+            userid = data['userid']
+            with open("userdata.txt", "w+") as accfile:
+                accfile.write(userid)
+                success = True
+                authstatus = "SUCCESS"
+                break
+
+        elif status == "WAITING":
+            authstatus = "WAITING"
+            continue
+
+        else:
+            authstatus ="FAILED"
+            break
+
+    return authstatus
+
+
+def get_auth_status():
+    global authstatus
+    return authstatus
+
+def get_device_code():
+    global devicecode
+    return devicecode
+
+def get_request_id():
+    global requestid
+    return requestid
