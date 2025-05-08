@@ -1,0 +1,7 @@
+boto3_pydantic_appconfig/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_appconfig/appconfig_classes.py,sha256=tMi6o9moabF7YQrETPwSKbXFGVKx6XAfQxigzxYZVko,17920
+boto3_pydantic_appconfig/appconfig_constants.py,sha256=6o7OZAMjySpVBKhWL4IjSvSL_XL0hiQK02fmWBeXGcU,8858
+boto3_pydantic_appconfig/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_appconfig-1.0.0.dist-info/METADATA,sha256=-xJP6W8ye0KXFLX2pUQYXLflRauSu0-V5kxssd7CzPs,1410
+boto3_pydantic_appconfig-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_appconfig-1.0.0.dist-info/RECORD,,
