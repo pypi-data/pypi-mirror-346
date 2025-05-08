@@ -1,0 +1,10 @@
+ingest_anything/__init__.py,sha256=pQwcz4x7VVpZN9ag2grYLGECJ8KeC1NDe_fyBQC2dzE,50
+ingest_anything/add_types.py,sha256=w52GnIK-S3NEolGI5rbnYWKlT8uYVOOqMVXXz28yook,10539
+ingest_anything/agent.py,sha256=BIQNNo8XTr2BRgvZSeYJa8072aCn4syCuV5uGzUOJpg,4693
+ingest_anything/agent_types.py,sha256=ZdmYaj151j5I6utC8fg0powMmO1kKlU7vAWJnYkJcd4,16165
+ingest_anything/embeddings.py,sha256=73NyU9F8HF4xA5xtXvVN6xJdBZ7Tq1FGzRrXy3_l_UY,1872
+ingest_anything/ingestion.py,sha256=lRGe2PHJxcscE4bT77cn45mHadbG15hA2__ryZS60uQ,7045
+ingest_anything-1.1.1.dist-info/METADATA,sha256=_gng1_tgwGfz_CTIXATuWgWvd_zonad7AWov-U-sJRU,7412
+ingest_anything-1.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ingest_anything-1.1.1.dist-info/licenses/LICENSE,sha256=KjEHNYaY6SAFEDB53d4toUw3_Io9tHc76ZxqbPkMCMU,1099
+ingest_anything-1.1.1.dist-info/RECORD,,
