@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: eventor-api
+Version: 0.1.0
+Summary: A Python wrapper around the Eventor API
+Author-email: Niclas Ståhl <niclasstahl@hotmail.com>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: bs4>=0.0.2
+Requires-Dist: parsy>=2.1
+Requires-Dist: pydantic-xml>=2.16.0
+Requires-Dist: requests>=2.32.3
+
+
