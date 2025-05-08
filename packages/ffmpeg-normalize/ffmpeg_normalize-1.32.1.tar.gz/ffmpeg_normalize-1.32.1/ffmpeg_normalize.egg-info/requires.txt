@@ -1,0 +1,7 @@
+tqdm
+ffmpeg-progress-yield
+colorlog
+mutagen
+
+[:platform_system == "Windows"]
+colorama
