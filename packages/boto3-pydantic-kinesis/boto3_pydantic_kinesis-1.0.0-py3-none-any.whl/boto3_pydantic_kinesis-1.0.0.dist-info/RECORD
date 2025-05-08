@@ -1,0 +1,7 @@
+boto3_pydantic_kinesis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_kinesis/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_kinesis/kinesis_classes.py,sha256=sPs6LsLKjYvkXDBRPNwKnM3FvIR73gFTNMJYzwMWxdo,15093
+boto3_pydantic_kinesis/kinesis_constants.py,sha256=Ntt6nOLhmR92e0PWzJQx4O0YCbVOWkzAsd-oKR3VePI,8252
+boto3_pydantic_kinesis-1.0.0.dist-info/METADATA,sha256=nKbL6Cvpx1ulj819_V62iP9zzoyefxHobyTnqw5hwtg,1400
+boto3_pydantic_kinesis-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_kinesis-1.0.0.dist-info/RECORD,,
