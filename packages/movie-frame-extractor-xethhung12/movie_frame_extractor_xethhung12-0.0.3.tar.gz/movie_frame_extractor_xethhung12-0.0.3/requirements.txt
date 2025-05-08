@@ -1,0 +1,6 @@
+hatchling>=1.26
+opencv-python
+pyfilesizeutils
+build
+twine
+xh-py-project-versioning
