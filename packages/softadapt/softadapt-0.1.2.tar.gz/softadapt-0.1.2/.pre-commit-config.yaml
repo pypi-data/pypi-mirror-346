@@ -1,0 +1,21 @@
+repos:
+# Codespell for common misspellings
+- repo: https://github.com/codespell-project/codespell
+  rev: v2.4.1
+  hooks:
+    - id: codespell
+      name: Spell Checker (backend and frontend)
+      files: ^(backend|frontend)/ # Only backend and frontend directories
+      args: ["--exclude-file=frontend/package-lock.json"]
+      stages: [pre-commit]
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  # Ruff version.
+  rev: v0.11.7
+  hooks:
+    # Run the linter.
+    - id: ruff
+      types_or: [ python, pyi, jupyter ]
+      args: [ --fix ]
+    # Run the formatter.
+    - id: ruff-format
+      types_or: [ python, pyi, jupyter ]
