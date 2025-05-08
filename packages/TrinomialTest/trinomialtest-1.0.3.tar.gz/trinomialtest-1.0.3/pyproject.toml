@@ -1,0 +1,64 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project]
+name = "TrinomialTest"
+version = "1.0.3"
+authors = [
+    {name = "Josip Rudar", email = "joe.rudar@inspection.gc.ca"},
+    {name = "Oliver Lung", email = "oliver.lung@inspection.gc.ca"}
+]
+description = "A Python version of the Trinomial Test"
+keywords = [
+    "statistics",
+    "trinomial test",
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "numpy == 2.1.3",
+    "pandas >= 2.2.3",
+    "statsmodels >= 0.14.4",
+    "scipy >= 1.15.2"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jrudar/TrinomialTest"
+"Repository" = "https://github.com/jrudar/TrinomialTest.git"
+"Bug Tracker" = "https://github.com/jrudar/TrinomialTest/issues"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "mypy",
+    "ruff",
+    "twine",
+]
+
+test = [
+    "pytest",
+    "pytest-cov"
+]
+
+[tool.setuptools]
+py-modules = ["TrinomialTest"]
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report html --cov-report term-missing --cov-fail-under 30"
+
+[tool.coverage.run]
+source = ["TrinomialTest"]
