@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+pypi-readme.rst
+pyproject.toml
+sequenticon/Sequenticon.py
+sequenticon/__init__.py
+sequenticon/tools.py
+sequenticon/version.py
+sequenticon.egg-info/PKG-INFO
+sequenticon.egg-info/SOURCES.txt
+sequenticon.egg-info/dependency_links.txt
+sequenticon.egg-info/requires.txt
+sequenticon.egg-info/top_level.txt
+tests/test_basics.py

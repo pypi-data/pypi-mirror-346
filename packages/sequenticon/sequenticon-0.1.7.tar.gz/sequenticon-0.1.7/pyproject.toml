@@ -1,0 +1,28 @@
+[project]
+name = "sequenticon"
+version = "0.1.7"
+license = "MIT"
+authors = [{ name = "Zulko" }]
+description = "Generate human-friendly icons from DNA sequences"
+readme = "pypi-readme.rst"
+keywords = ["DNA", "sequence", "barcoding", "sequenticon", "identicon", "hash"]
+dependencies = [
+  "Biopython",
+  "pydenticon",
+  "snapgene_reader",
+  "flametree",
+  "pdf_reports",
+]
+
+[project.urls]
+Homepage = "https://github.com/Edinburgh-Genome-Foundry/sequenticon"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+sequenticon = ["report_assets"]
+
+[tool.setuptools.packages.find]
+exclude = ["docs", "examples", "tests"]
