@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+Xtructure/__init__.py
+Xtructure/annotate.py
+Xtructure/bgpq.py
+Xtructure/data.py
+Xtructure/hash.py
+Xtructure/util.py
+Xtructure.egg-info/PKG-INFO
+Xtructure.egg-info/SOURCES.txt
+Xtructure.egg-info/dependency_links.txt
+Xtructure.egg-info/requires.txt
+Xtructure.egg-info/top_level.txt
