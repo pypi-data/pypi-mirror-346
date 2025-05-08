@@ -1,0 +1,2 @@
+[console_scripts]
+bridgenlp = bridgenlp.cli:main
