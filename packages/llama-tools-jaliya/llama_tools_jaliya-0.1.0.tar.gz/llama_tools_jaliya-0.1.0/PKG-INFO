@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: llama-tools-jaliya
+Version: 0.1.0
+Summary: Utility for building and running llama.cpp
+Author-email: Jaliya Nimantha <jaliya@ahlab.org>

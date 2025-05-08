@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llama-tools-jaliya"
+version = "0.1.0"
+description = "Utility for building and running llama.cpp"
+authors = [
+    { name="Jaliya Nimantha", email="jaliya@ahlab.org" }
+]
+dependencies = []
+
+[project.scripts]
+llama-tools-jaliya = "llama_tools_jaliya.__main__:main"
