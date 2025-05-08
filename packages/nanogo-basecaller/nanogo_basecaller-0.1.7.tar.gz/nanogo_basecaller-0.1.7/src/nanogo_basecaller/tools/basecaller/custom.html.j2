@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Modern CSS framework -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre-icons.min.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <!-- Plotly for Data Visualization -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.16.1/plotly.min.js"></script>
+
+  <title>NanoGO Basecaller Report</title>
+  
+  <!-- Favicon - DNA helix icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
+
+  <style>
+    :root {
+      /* Professional color palette */
+      --primary-color: #2c3e50;       /* Dark blue-gray for headers */
+      --secondary-color: #3498db;     /* Accent blue */
+      --tertiary-color: #1abc9c;      /* Teal for highlights */
+      --background-color: #f5f7fa;    /* Light gray background */
+      --card-color: #ffffff;          /* White for cards */
+      --text-primary: #2c3e50;        /* Dark text */
+      --text-secondary: #7f8c8d;      /* Lighter text */
+      --border-color: #ecf0f1;        /* Very light gray for borders */
+      --success-color: #2ecc71;       /* Green for positive metrics */
+      --warning-color: #f39c12;       /* Amber for warnings */
+      --danger-color: #e74c3c;        /* Red for critical issues */
+    }
+    
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding-bottom: 3rem;
+    }
+    
+    /* Modern fixed header with gradient */
+    .header-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      padding: 0.8rem 0;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    /* DNA Helix Animation */
+    .dna-animation {
+      position: absolute;
+      left: 10px;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .dna-helix {
+      position: relative;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.7);
+      animation: rotate 4s linear infinite;
+    }
+    
+    .dna-helix:before, .dna-helix:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background: transparent;
+      border: 1px dashed rgba(255,255,255,0.5);
+    }
+    
+    .dna-helix:after {
+      height: 15px;
+      width: 15px;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .header-fixed.scrolled {
+      padding: 0.5rem 0;
+    }
+    
+    .header-fixed h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+    }
+    
+    .header-logo {
+      height: 32px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    
+    .content-section {
+      margin-top: 80px;
+      padding: 1rem;
+    }
+    
+    .report-meta {
+      background-color: var(--card-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--tertiary-color);
+    }
+    
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    
+    .section-header {
+      margin: 3rem 0 2rem 0;
+      padding-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    
+    .section-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
+      margin-right: 1rem;
+      color: white;
+      box-shadow: 0 3px 10px rgba(52, 152, 219, 0.2);
+    }
+    
+    .section-icon i {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      position: relative;
+    }
+    
+    .section-line {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(to right, var(--secondary-color) 0%, transparent 100%);
+      margin-left: 1rem;
+    }
+    
+    .plot-container {
+      background-color: var(--card-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-left: 3px solid var(--secondary-color);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .plot-container:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    
+    .plot-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, transparent 50%, rgba(52, 152, 219, 0.1) 50%);
+      border-radius: 0 0 0 8px;
+    }
+    
+    .plot-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px dashed var(--border-color);
+    }
+    
+    .plot-title {
+      margin: 0;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+    
+    .plot-title:before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: var(--secondary-color);
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 0.5rem;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 0.8rem;
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    /* Report Title Styling */
+    .report-title-section {
+      margin: 1.5rem 0 3rem 0;
+      position: relative;
+      padding: 2rem 0;
+    }
+    
+    .report-title-section h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .report-subtitle {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--text-secondary);
+    }
+    
+    .title-decoration {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--tertiary-color), var(--secondary-color));
+      margin: 1rem auto;
+      border-radius: 2px;
+    }
+    
+    /* Enhanced Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      background-color: var(--card-color);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer-logo {
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+      opacity: 0.8;
+    }
+    
+    .footer-content {
+      margin-bottom: 1rem;
+    }
+    
+    .footer-content p {
+      margin: 0.3rem 0;
+    }
+    
+    .version-info {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      opacity: 0.7;
+    }
+    
+    .footer-badge {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      border-radius: 50px;
+      padding: 0.5rem 1.2rem;
+      color: white;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .badge-text {
+      opacity: 0.8;
+      margin-right: 0.5rem;
+    }
+    
+    .badge-name {
+      font-weight: 600;
+    }
+    
+        /* Source Files Container */
+    .source-container {
+      background-color: var(--card-color);
+      border-left-color: var(--tertiary-color);
+    }
+    
+    .source-content {
+      background-color: rgba(236, 240, 241, 0.3);
+      border-radius: 6px;
+      padding: 1.2rem;
+      max-height: 300px;
+      overflow-y: auto;
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      border-left: 3px solid var(--tertiary-color);
+    }
+    
+    /* Print-friendly Styles */
+    @media print {
+      .header-fixed, 
+      .footer {
+        position: static;
+        background: none !important;
+        color: #000 !important;
+        box-shadow: none !important;
+      }
+      
+      .content-section {
+        margin-top: 0;
+      }
+      
+      .plot-container {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #eee;
+      }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .plot-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .section-icon {
+        margin-bottom: 1rem;
+      }
+      
+      .section-line {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Header Section with DNA animation -->
+<header class="header-fixed">
+  <div class="container">
+    <div class="dna-animation">
+      <div class="dna-helix"></div>
+    </div>
+    <h1><i class="fas fa-dna"></i> NanoGO Basecaller Report</h1>
+  </div>
+</header>
+
+<!-- Main Report Content -->
+<div class="container content-section">
+  
+  <!-- Report Title & Overview with decoration -->
+  <div class="text-center report-title-section">
+    <div class="title-decoration"></div>
+    <h1>{{ report_title }}</h1>
+    <p class="text-gray report-subtitle">{{ report_subtitle }}</p>
+    <div class="title-decoration"></div>
+  </div>
+  
+  <!-- Report Metadata with enhanced styling -->
+  <div class="report-meta">
+    <div class="meta-header">
+      <i class="fas fa-info-circle"></i>
+      <h3>Run Information</h3>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item">
+        <div class="meta-icon"><i class="fas fa-calendar-alt"></i></div>
+        <div class="meta-content">
+          <div class="meta-label">Analysis Date</div>
+          <div class="meta-value">{% if report_date %}{{ report_date }}{% else %}Not specified{% endif %}</div>
+        </div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-icon"><i class="fas fa-microchip"></i></div>
+        <div class="meta-content">
+          <div class="meta-label">Basecaller</div>
+          <div class="meta-value">Dorado Basecaller</div>
+        </div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-icon"><i class="fas fa-vial"></i></div>
+        <div class="meta-content">
+          <div class="meta-label">Sample Type</div>
+          <div class="meta-value">Genomic DNA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Plots Section with decoration -->
+  <div class="section-header">
+    <div class="section-icon">
+      <i class="fas fa-chart-line"></i>
+    </div>
+    <h2>Analysis Results</h2>
+    <div class="section-line"></div>
+  </div>
+  
+  {% for item in plots %}
+    <div id="{{ titles[loop.index0] }}" class="plot-container">
+      <div class="plot-header">
+        <h3 class="plot-title">{{ titles[loop.index0] }}</h3>
+      </div>
+      {{ item }}
+    </div>
+  {% endfor %}
+  
+  <!-- Source Files Section -->
+  <div class="section-header">
+    <div class="section-icon">
+      <i class="fas fa-file-code"></i>
+    </div>
+    <h2>Source Information</h2>
+    <div class="section-line"></div>
+  </div>
+  
+  <div class="plot-container source-container">
+    <div class="plot-header">
+      <h3 class="plot-title">Input Files</h3>
+    </div>
+    <div class="source-content">
+      {{ src_files }}
+    </div>
+  </div>
+  
+  <!-- Enhanced Footer Section -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <i class="fas fa-dna fa-2x"></i>
+    </div>
+    <div class="footer-content">
+      <p>Generated by NanoGO Basecalling Technology</p>
+      <p class="version-info">Version 0.1.6</p>
+      <p>© 2025 National Microbiology Laboratory - Pathogen Genetics and Genomics Unit </p>
+    </div>
+    <div class="footer-badge">
+      <span class="badge-text">Powered by</span>
+      <span class="badge-name">Dorado Basecaller</span>
+    </div>
+  </footer>
+</div>
+
+<!-- JavaScript section -->
+<script>
+  // Header scroll effect
+  window.onscroll = function() {
+    var header = document.querySelector('.header-fixed');
+    if (window.pageYOffset > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+  
+  // Add smooth scrolling for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+  
+  // Add current date to report if not specified
+  document.addEventListener('DOMContentLoaded', function() {
+    const metaValueElements = document.querySelectorAll('.meta-value');
+    metaValueElements.forEach(element => {
+      if (element.textContent.trim() === 'Not specified' && element.previousElementSibling && 
+          element.previousElementSibling.textContent.includes('Date')) {
+        const now = new Date();
+        element.textContent = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+      }
+    });
+  });
+</script>
+</body>
+</html>
