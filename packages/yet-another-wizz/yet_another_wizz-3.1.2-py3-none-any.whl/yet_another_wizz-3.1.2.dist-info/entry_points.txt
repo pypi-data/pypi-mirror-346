@@ -1,0 +1,2 @@
+[console_scripts]
+yaw_cli = yaw.cli:main
