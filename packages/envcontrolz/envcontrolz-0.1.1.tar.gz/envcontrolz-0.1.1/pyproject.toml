@@ -1,0 +1,7 @@
+[project]
+name = "envcontrolz"
+version = "0.1.1"
+description = "知识"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
