@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-play-windows-sound = mcp_play_windows_sound:main
