@@ -1,0 +1,33 @@
+# yaw_cli v3.0.3 configuration
+
+correlation:
+    binning:
+        zmin: 0.15
+        zmax: 0.7
+        num_bins: 11
+
+inputs:
+    reference:
+        path_data: $DATA$
+        path_rand: $RAND$
+        ra: RA
+        dec: Dec
+        redshift: redshift
+    unknown:
+        path_data:
+            1: $DATA$
+        path_rand:
+            1: $RAND$
+        ra: RA
+        dec: Dec
+        weight: wei
+        redshift: redshift
+    num_patches: 6
+
+tasks:
+  - auto_ref
+  - auto_unk
+  - cross_corr
+  - estimate
+  - hist
+  - plot
