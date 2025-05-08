@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: uot
+Version: 0.1.10
+Summary: Library for comparison of Optimal Transport algorithms
+Author-email: Maksym-Vasyl Tarnavskyi <tarnavskyi.pn@ucu.edu.ua>, Maksym Zhuk <zhuk.pn@ucu.edu.ua>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: jax
+Requires-Dist: jaxlib
+Requires-Dist: scikit-learn
+Requires-Dist: pot
+Requires-Dist: open3d
+Requires-Dist: ott-jax
+Requires-Dist: memory_profiler
