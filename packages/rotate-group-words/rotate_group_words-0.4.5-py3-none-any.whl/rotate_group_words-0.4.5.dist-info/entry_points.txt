@@ -1,0 +1,3 @@
+[console_scripts]
+rgw=rotate_group_words.entry:main
+
