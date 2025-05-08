@@ -1,0 +1,82 @@
+Metadata-Version: 2.4
+Name: mseep-databutton-app-mcp
+Version: 0.1.18
+Summary: Call your Databutton app endpoints as LLM tools with MCP
+Home-page: 
+Author: mseep
+Author-email: Martin Sandve Alnæs <msa@databutton.io>
+Maintainer-email: Martin Sandve Alnæs <msa@databutton.io>
+License-Expression: MIT
+Project-URL: Homepage, https://databutton.com
+Project-URL: Repository, https://github.com/databutton/databutton-app-mcp
+Project-URL: Documentation, https://docs.databutton.com
+Project-URL: Support, https://databutton.com/support
+Project-URL: Discord, https://discord.gg/K9aHvmmFtH
+Keywords: databutton,app,mcp,llm,tool
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certifi>=2025.1.31
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: websockets>=15.0.1
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Databutton App MCP
+
+Use API endpoints from your Databutton app as LLM tools from any MCP compatible client!
+
+This is a simple proxy that runs locally and connects securely to your Databutton app
+using the MCP protocol over websockets.
+
+To use it, make sure you have uv installed, see instructions here if not:
+
+    https://docs.astral.sh/uv/getting-started/installation/
+
+First download an API key from the settings page of your Databutton app, and save it to a file.
+
+Then configure your LLM client (e.g. Claude Desktop or Cursor), like this:
+
+```json
+{
+  "mcpServers": {
+    "myDatabuttonApp": {
+      "command": "uvx",
+      "args": [
+        "databutton-app-mcp@latest"
+      ],
+      "env": {
+        "DATABUTTON_API_KEY": "YOUR-DATABUTTON-APP-KEY"
+      }
+    }
+  }
+}
+```
+
+or this
+
+```json
+{
+  "mcpServers": {
+    "myDatabuttonApp": {
+      "command": "uvx",
+      "args": [
+        "databutton-app-mcp@latest"
+        "-k",
+        "/path/to/apikey.txt"
+      ]
+    }
+  }
+}
+```
+
+Here /path/to/apikey.txt is the full path to a file containing the api key,
+or DATABUTTON_API_KEY is either the api key value or the path to a file containing it.
+You can download the API key for your Databutton app on the app settings page.
+Make sure to keep it secure and don't share it.
