@@ -1,0 +1,4 @@
+[console_scripts]
+ionwizard-container = ionwizard.container_wizard:run
+ionwizard-install = ionwizard.install_project:run
+ionwizard-library = ionwizard.library_wizard:run
