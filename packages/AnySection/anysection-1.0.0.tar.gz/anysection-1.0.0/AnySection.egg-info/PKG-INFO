@@ -1,0 +1,211 @@
+Metadata-Version: 2.4
+Name: AnySection
+Version: 1.0.0
+Summary: A Python library for section-based moment-curvature analysis
+Home-page: https://github.com/iammix/anysection
+Author: Konstantinos Mixios
+Author-email: Konstantinos Mixios <k.mixios@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/iammix/anysection
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: alabaster==1.0.0
+Requires-Dist: babel==2.17.0
+Requires-Dist: certifi==2025.1.31
+Requires-Dist: charset-normalizer==3.4.1
+Requires-Dist: colorama==0.4.6
+Requires-Dist: contourpy==1.3.1
+Requires-Dist: cycler==0.12.1
+Requires-Dist: docutils==0.21.2
+Requires-Dist: fonttools==4.56.0
+Requires-Dist: idna==3.10
+Requires-Dist: imagesize==1.4.1
+Requires-Dist: Jinja2==3.1.5
+Requires-Dist: kiwisolver==1.4.8
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: MarkupSafe==3.0.2
+Requires-Dist: matplotlib==3.10.0
+Requires-Dist: mdit-py-plugins==0.4.2
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: myst-parser==4.0.1
+Requires-Dist: numpy==2.2.3
+Requires-Dist: packaging==24.2
+Requires-Dist: pillow==11.1.0
+Requires-Dist: Pygments==2.19.1
+Requires-Dist: pyparsing==3.2.1
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: requests==2.32.3
+Requires-Dist: roman-numerals-py==3.1.0
+Requires-Dist: scipy==1.15.2
+Requires-Dist: setuptools==75.8.0
+Requires-Dist: six==1.17.0
+Requires-Dist: snowballstemmer==2.2.0
+Requires-Dist: Sphinx==8.2.1
+Requires-Dist: sphinx-autodoc-typehints==3.1.0
+Requires-Dist: sphinx-rtd-theme==3.0.2
+Requires-Dist: sphinxcontrib-applehelp==2.0.0
+Requires-Dist: sphinxcontrib-devhelp==2.0.0
+Requires-Dist: sphinxcontrib-htmlhelp==2.1.0
+Requires-Dist: sphinxcontrib-jquery==4.1
+Requires-Dist: sphinxcontrib-jsmath==1.0.1
+Requires-Dist: sphinxcontrib-qthelp==2.0.0
+Requires-Dist: sphinxcontrib-serializinghtml==2.0.0
+Requires-Dist: urllib3==2.3.0
+Dynamic: license-file
+
+# 📐 **AnySection** – Reinforced Concrete Section Analysis
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/downloads/)
+[![Build](https://img.shields.io/badge/build-passing-brightgreen)]()
+
+---
+
+## 📊 **Overview**
+
+**AnySection** is a Python library for reinforced concrete section analysis. It provides tools for modeling, analyzing, and visualizing the structural behavior of reinforced concrete sections using material nonlinearities and fiber-based analysis methods.
+
+Key features include:
+
+- ✅ Support for **Concrete_NonlinearEC2** and **Steel_Bilinear** material models.
+- ✅ Fiber-based **moment-curvature** analysis.
+- ✅ Calculation of **axial forces**, **bending moments**, and **neutral axis** positions.
+- ✅ Generate **moment-curvature diagrams** and plot **section views**.
+- ✅ Extensible architecture for adding custom materials and solvers.
+
+---
+
+## 📁 **Project Structure**
+```
+AnySection/
+│
+├── anysection/              # Main package
+│   ├── __init__.py
+│   ├── geometry/            # Geometrical objects (Area, Fiber, Points)
+│   │   └── area.py
+│   │
+│   ├── materials/           # Material models
+│   │   └── material.py
+│   │
+│   ├── sections/            # Section definitions and properties
+│   │   └── section.py
+│   │
+│   ├── solvers/             # Section analysis solvers
+│   │   └── section_solver.py
+│   │
+│   └── utils/               # Utility classes (constants, helpers)
+│       └── globals.py
+│
+├── examples/                # Example usage
+│   └── example1.py
+│
+├── setup.py                 # Build configuration
+├── requirements.txt         # Dependencies
+├── README.md                 # 📖 You are here
+└── LICENSE                   # MIT License
+```
+
+---
+
+## ⚙️ **Installation**
+
+### 🔹 **1. Clone the Repository**
+
+```bash
+git clone https://github.com/yourusername/anysection.git
+cd anysection
+```
+
+### 🔹 **2. Install Dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+### 🔹 3. Install the Library Locally
+```bash
+pip install -e .
+```
+This installs the package in editable mode for local development.
+
+🧮 Quick Start Example
+```python
+
+import matplotlib.pyplot as plt
+import numpy as np
+from anysection.materials import Concrete_NonlinearEC2, Steel_Bilinear
+from anysection.sections import Section
+from anysection.solvers import SectionSolver
+
+# Define Materials
+concrete = Concrete_NonlinearEC2(fcm=20e6, ec1=0.002, ecu1=0.0035)  # C20/25 Concrete
+steel = Steel_Bilinear(Es=200e9, fy=500e6)  # Reinforcement Steel
+
+# Create a Section
+section = Section("Rectangular Beam")
+section.add_fiber(area=0.01, x=0.0, y=0.0, material=concrete)
+section.add_fiber(area=0.01, x=0.1, y=0.0, material=concrete)
+section.add_fiber(area=0.01, x=0.0, y=0.1, material=concrete)
+section.add_fiber(area=0.01, x=0.1, y=0.1, material=concrete)
+
+# Initialize Solver
+solver = SectionSolver(section)
+
+# Analyze Moment-Curvature
+curvatures = np.linspace(0, 0.02, 100)
+moments = [solver.calculate_moment_capacity(c) for c in curvatures]
+
+# Plot Moment-Curvature Diagram
+plt.plot(curvatures, moments)
+plt.xlabel('Curvature (1/m)')
+plt.ylabel('Moment (Nm)')
+plt.title('Moment-Curvature Diagram')
+plt.grid(True)
+plt.show()
+```
+
+## 📐 Features
+🏗️ **Section Modeling:** Fiber-based section modeling for reinforced concrete.
+
+📊 **Moment-Curvature Analysis:** Plot moment-curvature behavior for reinforced sections.
+
+
+**📏 Material Models:**
+- Concrete_NonlinearEC2 (Nonlinear EC2 behavior for concrete)
+
+- Steel_Bilinear (Bilinear elastic-plastic model for reinforcement)
+
+
+📈 **Customizable Solvers:** Easily extend the library with new solvers and materials.
+
+
+## 🛠️ Contributing
+Contributions are welcome! 🚀 Feel free to fork the repository, submit issues, and create pull requests.
+
+📢 To contribute:
+```bash
+Fork the repository.
+Create a new branch: git checkout -b feature/my-feature
+Commit your changes: git commit -m 'Add new feature'
+Push to the branch: git push origin feature/my-feature
+Open a Pull Request ✅
+```
+
+## 📄 **License**
+
+This project is licensed under the MIT License.
+
+## 🌐 **Links**
+📚 **Documentation:** *Coming Soon*
+
+🐛 **Issue Tracker:** *GitHub Issues*
+
+🏗️ **PyPI**: *Coming Soon*
+
+**Citation**:
+If you use AnySection in your research, please cite the following paper:
+
+```bibtex
+Papanikolaou, Vassilis. (2019). AnySection : Software for the analysis of arbitrary composite sections in biaxial bending and axial load. 
+```
