@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+calculadora_fastapi_atividadeps.egg-info/PKG-INFO
+calculadora_fastapi_atividadeps.egg-info/SOURCES.txt
+calculadora_fastapi_atividadeps.egg-info/dependency_links.txt
+calculadora_fastapi_atividadeps.egg-info/requires.txt
+calculadora_fastapi_atividadeps.egg-info/top_level.txt
+controllers/operations.py
+models/calculator.py
+schemas/operation_request.py
