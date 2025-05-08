@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: weather-mcp-kmy
+Version: 0.1.0
+Summary: 通过位置获取某一个城市的天气
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.7.1
