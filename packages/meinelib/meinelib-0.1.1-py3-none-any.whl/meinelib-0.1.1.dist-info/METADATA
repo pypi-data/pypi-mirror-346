@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: meinelib
+Version: 0.1.1
+Summary: A set of functions that I use regularlly.
+Author-email: Javier <deese2k@gmail.com>
+License-Expression: GPL-3.0
+Project-URL: Homepage, https://github.com/deese/meinelib
+Project-URL: Bug Tracker, https://github.com/deese/meinelib/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Meinelib
+
+This is a small library with all my common functions
+
+## Instalación
+
+```bash
+pip install meinelib
+```
+
