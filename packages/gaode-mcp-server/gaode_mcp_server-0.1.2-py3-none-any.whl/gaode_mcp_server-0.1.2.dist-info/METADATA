@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: gaode-mcp-server
+Version: 0.1.2
+Summary: 针对高德 api 的mcp server，支持地理/逆地理解析，路径规划，天气查询，ip定位等多个高德api能力
+Author-email: "shaoqi.cheng" <1925723789@qq.com>
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.7.1
+Requires-Dist: requests>=2.32.3
+
+## 高德api调用
+高德api文档及快速开始：https://lbs.amap.com/api/webservice/gettingstarted
