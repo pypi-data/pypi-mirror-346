@@ -1,0 +1,7 @@
+torch>=1.9.0
+scikit-survival>=0.23.0
+scikit-learn>=0.24.1
+importlib_resources
+matplotlib
+dask[distributed]
+shap-0.47.3.dev8-offline-fork-for-myevae==0.0.1
