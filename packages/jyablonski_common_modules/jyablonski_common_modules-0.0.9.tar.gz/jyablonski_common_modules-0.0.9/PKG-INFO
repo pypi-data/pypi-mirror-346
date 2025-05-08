@@ -1,0 +1,45 @@
+Metadata-Version: 2.3
+Name: jyablonski_common_modules
+Version: 0.0.9
+Summary: 
+Keywords: personal,helper functions
+Author: jyablonski9
+Author-email: jyablonski9@gmail.com
+Maintainer: jyablonski9
+Maintainer-email: jyablonski9@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: all
+Provides-Extra: es-logging
+Requires-Dist: SQLAlchemy (>=2.0.36,<3.0.0)
+Requires-Dist: boto3 (>=1.35.57,<2.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: psycopg2-binary (>=2.9.10,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# jyablonski Common Modules
+![Tests](https://github.com/jyablonski/jyablonski_common_modules/actions/workflows/ci_cd.yml/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/jyablonski/jyablonski_common_modules/badge.svg?branch=master)](https://coveralls.io/github/jyablonski/jyablonski_common_modules?branch=master) ![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)
+
+Version: 0.0.9
+
+Utility Repo w/ functions and tools for data engineering, cloud infrastructure, and development workflows. Includes helpers for:
+
+- PostgreSQL Connections + Upsert Functions
+- General Python Functions
+- Standard Logging & optional Opensearch Logging Functions
+- AWS Helper Functions
+
+## Testing
+To run tests, run `make test`
+
+## Install
+
+- `poetry add jyablonski_common_modules`
+- `poetry add jyablonski_common_modules --extras es-logging`
+- `poetry add jyablonski_common_modules --extras all`
+

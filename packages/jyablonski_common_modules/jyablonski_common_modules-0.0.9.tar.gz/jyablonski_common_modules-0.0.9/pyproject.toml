@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "jyablonski_common_modules"
+version = "0.0.9"
+description = ""
+authors = ["jyablonski9 <jyablonski9@gmail.com>"]
+maintainers = ["jyablonski9 <jyablonski9@gmail.com>"]
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["personal", "helper functions"]
+readme = "README.md"
+exclude = ["docker/"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.3"
+SQLAlchemy = "^2.0.36"
+psycopg2-binary = "^2.9.10"
+boto3 = "^1.35.57"
+requests = "^2.32.3"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+pytest-cov = "^4.1.0"
+coveralls = "^3.3.1"
+opensearch-logger = "^1.2.2"
+requests-mock = "^1.12.1"
+
+
+[tool.poetry.group.local.dependencies]
+ipykernel = "^6.29.5"
+moto = "^5.0.20"
+black = "^24.10.0"
+
+# no clue how to pin these versions lmao, great documentation doods
+ruff = "^0.9.4"
+
+[tool.poetry.extras]
+es-logging = ["opensearch-logger"]
+all = ["opensearch-logger"]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+    'ignore:function ham\(\) is deprecated:DeprecationWarning',
+]
+testpaths = ["tests"]
+addopts = "-v"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
