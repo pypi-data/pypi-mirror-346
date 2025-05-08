@@ -1,0 +1,2 @@
+[console_scripts]
+plan-rect = plan_rect.cli:cli
