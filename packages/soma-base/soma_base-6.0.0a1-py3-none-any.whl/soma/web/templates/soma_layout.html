@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title or 'Soma'}}</title>
+  <script>const backend_ready = new CustomEvent('backend_ready');</script>
+  <script type="text/javascript" src="qrc:///qtwebchannel/qwebchannel.js"></script>
+<script type="text/javascript" src="{{base_url}}/static/controller.js"></script>
+<link rel="stylesheet" href="{{base_url}}/static/controller.css">
+{% block head -%}
+{%- endblock %}
+</head>
+
+<body>
+{% block body -%}
+{%- endblock %}
+{% block script -%}
+{%- endblock %}
+</body>
+</html>
