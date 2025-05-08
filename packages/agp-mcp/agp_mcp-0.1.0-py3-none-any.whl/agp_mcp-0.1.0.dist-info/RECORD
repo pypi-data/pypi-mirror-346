@@ -1,0 +1,7 @@
+agp_mcp/__init__.py,sha256=M7Sb8tnVIqDWU442b15wdl1nekNXB60qBXqz5BXll2E,254
+agp_mcp/client.py,sha256=UugmYAVIk0L9IsGVw9k62IcvvpT7S-vgsqSBCLVoQkU,4187
+agp_mcp/common.py,sha256=25QSJsNVFkrti0ze6vDm2YNZ-FSLvGiSrjKHLz15mV4,9401
+agp_mcp/server.py,sha256=lemZQhvr927hkBaSCBh5ATemAf1GzVFzmjicsSUNLU0,2936
+agp_mcp-0.1.0.dist-info/METADATA,sha256=Dgjrx6cvpai4-5qXLyl1UTnrSEupheksum83qSxismE,3990
+agp_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+agp_mcp-0.1.0.dist-info/RECORD,,
