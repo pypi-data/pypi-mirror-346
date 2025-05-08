@@ -1,0 +1,11 @@
+/gps/particle mu-
+/gps/energy 10 GeV
+/gps/position 0 0 0 m
+/gps/direction 0 0 1
+
+#/gps/ang/type iso
+#/gps/pos/type Volume
+#/gps/pos/shape Cylinder
+#/gps/pos/centre 0 0 360 m
+#/gps/pos/halfz 350 m
+#/gps/pos/radius 1000 m
