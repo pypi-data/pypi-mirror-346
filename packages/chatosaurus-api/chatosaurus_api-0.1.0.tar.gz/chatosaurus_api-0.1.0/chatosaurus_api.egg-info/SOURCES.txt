@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+chatosaurus_api.egg-info/PKG-INFO
+chatosaurus_api.egg-info/SOURCES.txt
+chatosaurus_api.egg-info/dependency_links.txt
+chatosaurus_api.egg-info/entry_points.txt
+chatosaurus_api.egg-info/top_level.txt
+llm_providers/__init__.py
+llm_providers/base_provider.py
+llm_providers/factory.py
+llm_providers/openai.py
