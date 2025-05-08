@@ -1,0 +1,7 @@
+boto3_pydantic_ds/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_ds/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_ds/ds_classes.py,sha256=mgPvW7PmZI7puq5qqnLhQfWxCgVZ6YafdLCEqn_d7f4,29063
+boto3_pydantic_ds/ds_constants.py,sha256=oBsb_ja4nX5WLLA3iPwSZADCE1GuKcWyc7WVP_uYLOE,10990
+boto3_pydantic_ds-1.0.0.dist-info/METADATA,sha256=Oovyg29WgtM6phPSL1aVEV1n0kEYa4oxU0i60k1XhWM,1375
+boto3_pydantic_ds-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_ds-1.0.0.dist-info/RECORD,,
