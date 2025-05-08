@@ -1,0 +1,7 @@
+boto3_pydantic_cognito_identity/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_cognito_identity/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_cognito_identity/cognito_identity_classes.py,sha256=OkF2T-EI5g-ePyXZPe9qSpcfpsgGYF_Xy9c0SO3-Tr4,9246
+boto3_pydantic_cognito_identity/cognito_identity_constants.py,sha256=5tIjz3pR_aOrz51HyY2D4Y22MBOTmxMwxkaQ5eeRXpk,7420
+boto3_pydantic_cognito_identity-1.0.0.dist-info/METADATA,sha256=08eYy1NlOdOv-_1r0p9z4Gxy6u3ODgfJogzxQQnYP0E,1445
+boto3_pydantic_cognito_identity-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_cognito_identity-1.0.0.dist-info/RECORD,,
