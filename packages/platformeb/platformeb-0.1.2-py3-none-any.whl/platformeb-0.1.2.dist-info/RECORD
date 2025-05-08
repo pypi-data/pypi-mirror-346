@@ -1,0 +1,11 @@
+platformeb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platformeb/driver.py,sha256=zRo8SCae9Khh7ZdNtrcGunFp8ngXQum8JK4umn3ykyY,10009
+platformeb/pages/__init__.py,sha256=TfBdnRBUILo08uhEDjqPbiG8qtTgtki-LIUGH1ADNaQ,551
+platformeb/pages/abstract_page.py,sha256=tnadg9fsOJ3cVybC9a0K30qR0r53go8iES44f-KlxFQ,688
+platformeb/pages/web_page.py,sha256=cWeL50WbEO--N6lPf2pnU-Gxs6hJ-22tT3BucjdfIhA,2558
+platformeb/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platformeb/utils/logger.py,sha256=mKdLg7pZt56wzFdo4X7tNhMLOV9Yz9S97MdRAObWsTs,105
+platformeb/utils/page.py,sha256=ajz1GSNU9xYVrFEDSz6Xwg7amWQ_yvW75tQa1ZvRIWc,3
+platformeb-0.1.2.dist-info/METADATA,sha256=9WiBBl3VgU5hBsbalzTmKEL7JSlfsr1CIqDhR10Ve3A,897
+platformeb-0.1.2.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+platformeb-0.1.2.dist-info/RECORD,,
