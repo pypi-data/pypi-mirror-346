@@ -1,0 +1,13 @@
+splitpatch/__init__.py,sha256=NfGFEcdokLTQIGSHUJf_3hTTr7ExY4pIV8yXDXMyT3E,928
+splitpatch/__main__.py,sha256=r9t2CWkrI610MHzXq3dXQXXDR6T5eIrMZysHmmZhzXs,118
+splitpatch/cli.py,sha256=HWMqq86NOxk00mQ7ZCv4GG4zEw3QW_JsWppheDDIh2A,7079
+splitpatch/merge.py,sha256=nMvIw2IxfxD-qTbatODi9ejpUbF_E5lLBdqbh9ckNEk,9963
+splitpatch/patch.py,sha256=Gulu2xmuHLgAZ1I9TQmPEHCtodfYNR2O7C5OWRhueLE,4811
+splitpatch/profiling.py,sha256=GVplyN1jBI9ECUkuLk6EsLIKq1RUX2t33pcj3EWLesk,922
+splitpatch/tree.py,sha256=G1zo7MtKAgKHSYAAAsKwcLuqml-WG6X4836hCIgt3Bc,6724
+splitpatch-1.0.5.dist-info/licenses/LICENSE,sha256=9biu8VaGTc4_r4P41vy5bzEpozb4pFg-vxz4-FXdpeQ,1063
+splitpatch-1.0.5.dist-info/METADATA,sha256=BiMt8LTfUnp3Ut9G62ydD99a6I3_ooTR9YNq_1VKswk,22939
+splitpatch-1.0.5.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+splitpatch-1.0.5.dist-info/entry_points.txt,sha256=e4_eiSm4YF7vWgWwxt_tiaeHQCQ2NRXMfLwUsv8HUaE,51
+splitpatch-1.0.5.dist-info/top_level.txt,sha256=FDWzgC13ZKB9II7cvogO1xiQeeSbDPWlVv6Rrg2N_hE,11
+splitpatch-1.0.5.dist-info/RECORD,,
