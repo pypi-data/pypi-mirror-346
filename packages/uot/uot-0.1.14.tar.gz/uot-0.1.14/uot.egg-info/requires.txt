@@ -1,0 +1,9 @@
+numpy
+tqdm
+jax[cuda12]
+jaxlib
+scikit-learn
+pot
+open3d
+ott-jax
+memory_profiler
