@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+__pycache__/setup.cpython-313.pyc
+verblaze.egg-info/PKG-INFO
+verblaze.egg-info/SOURCES.txt
+verblaze.egg-info/dependency_links.txt
+verblaze.egg-info/entry_points.txt
+verblaze.egg-info/requires.txt
+verblaze.egg-info/top_level.txt

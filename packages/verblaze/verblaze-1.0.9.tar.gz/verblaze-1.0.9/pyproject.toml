@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "verblaze"
+version = "1.0.9"
+authors = [
+  { name="3K", email="info@verblaze.com" },
+]
+description = "Auto-Localization Generation Tool"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "click",
+    "termcolor",
+    "requests",
+    "unidecode",
+]
+
+[project.urls]
+"Homepage" = "https://verblaze.com"
+"Bug Tracker" = "https://github.com/Verblaze/verblaze_cli/issues"
+
+[project.scripts]
+verblaze = "verblaze.cli:main" 

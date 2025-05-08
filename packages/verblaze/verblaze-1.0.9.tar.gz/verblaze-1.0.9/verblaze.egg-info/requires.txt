@@ -1,0 +1,4 @@
+click
+termcolor
+requests
+unidecode

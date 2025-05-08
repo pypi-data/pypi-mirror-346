@@ -1,0 +1,2 @@
+global-exclude *.py
+global-include *.pyc 
