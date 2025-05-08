@@ -1,0 +1,9 @@
+README.md
+cleanup_unfinished_b2_uploads.py
+pyproject.toml
+b2_cleanup.egg-info/PKG-INFO
+b2_cleanup.egg-info/SOURCES.txt
+b2_cleanup.egg-info/dependency_links.txt
+b2_cleanup.egg-info/entry_points.txt
+b2_cleanup.egg-info/requires.txt
+b2_cleanup.egg-info/top_level.txt
