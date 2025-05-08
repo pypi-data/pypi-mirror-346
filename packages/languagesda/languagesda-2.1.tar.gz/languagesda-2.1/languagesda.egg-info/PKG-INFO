@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: languagesda
+Version: 2.1
+Author: development
+Author-email: agcs-development@rambler.ru
+Requires-Python: >=3.11
+Requires-Dist: os
+Requires-Dist: tkinter
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
