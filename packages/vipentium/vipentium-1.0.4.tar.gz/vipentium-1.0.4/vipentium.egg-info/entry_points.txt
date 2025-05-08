@@ -1,0 +1,2 @@
+[console_scripts]
+vipentium-runner = vipentium.vipentium_runner:main
