@@ -1,0 +1,36 @@
+name: Build and Package
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip setuptools wheel pyinstaller fpm
+
+      - name: Build binary with PyInstaller
+        run: |
+          pyinstaller --onefile myprogram.py
+
+      - name: Create .deb and .rpm packages with fpm
+        run: |
+          sudo gem install --no-document fpm
+          fpm -s dir -t deb -n myprogram -v ${GITHUB_REF_NAME#v} ./dist/myprogram=/usr/local/bin/myprogram
+          fpm -s dir -t rpm -n myprogram -v ${GITHUB_REF_NAME#v} ./dist/myprogram=/usr/local/bin/myprogram
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: myprogram-packages
+          path: "*.deb\n*.rpm"
