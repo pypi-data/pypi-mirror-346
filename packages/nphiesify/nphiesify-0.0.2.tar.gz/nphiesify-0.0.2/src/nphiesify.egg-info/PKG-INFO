@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: nphiesify
+Version: 0.0.2
+Summary: Nphies FHIR middleware
+Home-page: https://github.com/groa-inc/nphiesify
+Author: Jassim Abdul Latheef
+Author-email: jassim@glance.care
+License: MIT
+Project-URL: Bug Tracker, https://github.com/groa-inc/nphiesify/issues
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic
+Requires-Dist: python_dateutil
+Requires-Dist: typing_extensions
+Requires-Dist: eval_type_backport
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# README #
+
+This is a nphies API middlware project.
+
+Use Python version: 3.11.0
+
+### Architecture
+
+Architecture of this project is following the below image.
+
+![FHIR resources by categories screenshot ](./fhir-resources-by-categories.png "FHIR resources")
+
+
+Authors:
+Jassim Abdul Latheef
