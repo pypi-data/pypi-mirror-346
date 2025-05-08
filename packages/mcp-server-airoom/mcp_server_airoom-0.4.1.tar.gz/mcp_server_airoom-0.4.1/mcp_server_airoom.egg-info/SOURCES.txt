@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mcp_server_airoom/__init__.py
+mcp_server_airoom/__main__.py
+mcp_server_airoom.egg-info/PKG-INFO
+mcp_server_airoom.egg-info/SOURCES.txt
+mcp_server_airoom.egg-info/dependency_links.txt
+mcp_server_airoom.egg-info/entry_points.txt
+mcp_server_airoom.egg-info/requires.txt
+mcp_server_airoom.egg-info/top_level.txt
