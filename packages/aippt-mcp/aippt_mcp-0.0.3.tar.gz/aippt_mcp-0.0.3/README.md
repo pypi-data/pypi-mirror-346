@@ -1,0 +1,36 @@
+# aippt-mcp
+
+AIPPT-MCP: 讯飞智能PPT生成服务MCP服务器
+
+- 作者: gyli16
+- 接口文档: [讯飞开放平台-智能PPT生成(新版)](https://www.xfyun.cn/doc/spark/PPTv2.html)
+- 版本: 0.0.3
+
+## 简介
+
+本项目为科大讯飞智能PPT生成API的MCP协议封装，支持通过uvx一键启动，便于AI大模型和开发者自动化调用PPT生成、模板管理等能力。
+
+## 快速使用
+
+1. 安装依赖（推荐用 uv）：
+   ```
+   uv pip install aippt-mcp
+   ```
+
+2. 设置环境变量（你的讯飞API信息）：
+   ```
+   export AIPPT_APP_ID=你的appid
+   export AIPPT_API_SECRET=你的apisecret
+   ```
+
+3. 一键启动 MCP 服务：
+   ```
+   uvx aippt-mcp
+   ```
+
+4. 通过 MCP 客户端或大模型调用各类 PPT 相关工具。
+
+## 发布与维护
+
+- 公司: iflytek（科大讯飞）
+- 主页: https://github.com/iguangyu/aippt-mcp.git
