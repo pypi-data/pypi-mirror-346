@@ -1,0 +1,26 @@
+[package]
+name = "signaling"
+version.workspace = true
+edition.workspace = true
+repository.workspace = true
+keywords.workspace = true
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = "0.15"
+webrtc = { workspace = true }
+futures-util = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+futures = "0.3"
+uuid = { version = "1.0", features = ["v4"] }
+tracing-subscriber = { version = "0.3", features = [
+    "env-filter",
+    "json",
+    "registry",
+    "time",
+] }
+tracing = "0.1"
+url = "2"
+signaling-message = { package = "signaling-message", path = "../signaling-message" }
+dashmap = "6"

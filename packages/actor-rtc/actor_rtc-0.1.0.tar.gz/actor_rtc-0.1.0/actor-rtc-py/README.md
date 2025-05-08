@@ -1,0 +1,33 @@
+# actor-rtc python binding
+
+## 简介
+actor-rtc-py 是一个将 Rust 编写的 actor-rtc 库包装为 Python 模块的项目，使用 PyO3 框架创建高性能 Python 绑定。
+它基于 Actor 模型实现 WebRTC 点对点通信，为 Python 应用提供简单高效的实时通信功能。
+
+
+## 特性
+
+- Actor 模型：采用 Actor 编程模型，每个参与者（Actor）拥有独立的状态和行为，通过消息传递进行通信
+- WebRTC 通信：尽量利用 WebRTC 技术实现点对点通信，无需中心服务器中转数据
+- 高性能：核心逻辑由 Rust 实现，提供卓越的性能和内存安全
+- 类型支持：自动生成 .pyi 文件，提供完整的类型提示
+- 错误处理：Rust 错误被优雅地转换为 Python 异常
+
+## 安装
+
+```shell
+pip install actor_rtc
+```
+
+## 构建项目
+
+使用示例：[examples/main.py](examples/main.py)
+生成 pyi 文件：actor-rtc-py 目录下，执行 `cargo run --bin stub_gen`
+
+```shell
+python -m venv .env
+source .env/bin/activate
+pip install maturin
+maturin develop
+python examples/main.py
+```

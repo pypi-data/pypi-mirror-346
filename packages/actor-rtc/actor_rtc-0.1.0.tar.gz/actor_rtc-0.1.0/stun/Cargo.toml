@@ -1,0 +1,18 @@
+[package]
+name = "stun"
+version.workspace = true
+edition.workspace = true
+repository.workspace = true
+keywords.workspace = true
+
+[dependencies]
+webrtc-stun = { version = "0.7.0", package = "stun" }
+webrtc-util = { version = "0.10.0", package = "webrtc-util" }
+tokio = { version = "1.39.0", features = ["net", "signal"] }
+clap = { version = "4.5.35", features = ["derive", "color"] }
+tracing = "0.1.39"
+tracing-subscriber = "0.3.3"
+anyhow = "1.0.79"
+
+[dev-dependencies]
+portpicker = "0.1.1"

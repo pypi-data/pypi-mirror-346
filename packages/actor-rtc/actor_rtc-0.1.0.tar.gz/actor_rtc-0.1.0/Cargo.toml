@@ -1,0 +1,18 @@
+[workspace]
+members = ["actor-rtc", "signaling", "stun", "actor-rtc-py"]
+resolver = "3"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+repository = "https://gitlab.huanqiu-ltd.com/platform/actor-rtc"
+keywords = ["actor", "web-rtc", "signaling"]
+
+[profile.release]
+lto = true
+
+[patch.crates-io]
+webrtc = { git = "ssh://git@gitlab.huanqiu-ltd.com/platform/webrtc.git", branch = "fix-datachannel-close" }
+
+[workspace.dependencies]
+webrtc = { version = "0.12.0" }
