@@ -1,0 +1,27 @@
+[project]
+name = "flock-ui"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Andre Ratzenberger", email = "andre.ratzenberger@whiteduck.de" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115.12",
+    "uvicorn[standard]>=0.34.2",
+    "flock-core[all]>=0.4.0b34",
+    "jinja2>=3.1.6",
+    "python-multipart>=0.0.20",
+]
+
+[project.scripts]
+flock-ui = "flock_ui.run:main"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/flock_ui"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

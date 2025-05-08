@@ -1,0 +1,73 @@
+<nav>
+    <h5>Manage Flocks</h5>
+    <ul>
+        <li>
+            <button hx-get="/ui/htmx/load-flock-view" 
+                    hx-target="#main-content-area" 
+                    hx-push-url="/" 
+                    hx-indicator="#content-loading-indicator-main"
+                    class="contrast {% if request.url.path == '/' or request.url.path == '/ui/htmx/load-flock-view' %}active-nav{% endif %}">
+                Load / Manage Files
+            </button>
+        </li>
+         <li>
+            <button hx-get="/ui/htmx/create-flock-form" 
+                    hx-target="#main-content-area" 
+                    hx-push-url="/ui/create"
+                     hx-indicator="#content-loading-indicator-main"
+                    class="contrast {% if request.url.path == '/ui/create' %}active-nav{% endif %}">
+                 Create New Flock
+            </button>
+        </li>
+    </ul>
+    
+    {% if current_flock %}
+    <hr>
+    <h5>{{ current_flock.name | truncate(20) }}</h5>
+     <ul>
+         <li>
+             <button hx-get="/api/flocks/htmx/flock-properties-form" 
+                    hx-target="#main-content-area" 
+                    hx-push-url="/ui/editor/properties" 
+                    hx-indicator="#content-loading-indicator-main"
+                    class="{% if request.url.path == '/ui/editor/properties' %}active-nav{% endif %}">
+                Flock Properties & Save
+            </button>
+        </li>
+         <li>
+            <button hx-get="/ui/htmx/agent-manager-view" 
+                    hx-target="#main-content-area" 
+                    hx-push-url="/ui/editor/agents" 
+                    hx-indicator="#content-loading-indicator-main"
+                    class="{% if request.url.path == '/ui/editor/agents' %}active-nav{% endif %}">
+                Agents ({{ current_flock.agents|length }})
+            </button>
+         </li>
+         <li>
+            {# UPDATED HX-GET #}
+            <button hx-get="/ui/htmx/execution-view-container" 
+                    hx-target="#main-content-area" 
+                    hx-push-url="/ui/editor/execute" 
+                    hx-indicator="#content-loading-indicator-main"
+                    class="{% if request.url.path == '/ui/editor/execute' %}active-nav{% endif %}">
+                 Execute Flock
+            </button>
+         </li>
+     </ul>
+    {% endif %}
+
+    <hr>
+    <h5>Registry</h5>
+    <ul>
+        <li>
+            <button hx-get="/ui/htmx/registry-viewer" 
+                    hx-target="#main-content-area" 
+                    hx-push-url="/ui/registry"
+                    hx-indicator="#content-loading-indicator-main"
+                    class="contrast {% if request.url.path == '/ui/registry' %}active-nav{% endif %}">
+                View Registry
+            </button>
+        </li>
+    </ul>
+    <div id="content-loading-indicator-main" class="htmx-indicator" style="text-align:center; padding:1rem;"><progress indeterminate></progress></div>
+</nav>
