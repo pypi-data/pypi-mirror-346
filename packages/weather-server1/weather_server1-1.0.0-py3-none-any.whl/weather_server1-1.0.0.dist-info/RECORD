@@ -1,0 +1,8 @@
+weather_server/__init__.py,sha256=XzWxJtY8tU4QTDNTxKLDKrX-NQ-arFcPioslZi2cPDE,166
+weather_server/models.py,sha256=eJzdNM5xxq8iMgYhjltdmwx9umzpB-BgxRsxHz_H_pM,1875
+weather_server/server.py,sha256=Pi0F9QRmJvmAQrbdqiERcMxQG1iyWbhxyQWqvVQ6Kdo,6854
+weather_server/utils.py,sha256=AbHR4tDybTAROq1WimO7FNNueqXV1wuYjGHjGFVAG1s,1636
+weather_server1-1.0.0.dist-info/METADATA,sha256=SfA8fBSiPT3-P1txaxzeQe9U8iiDU9oXkqA-8WrmY6U,5212
+weather_server1-1.0.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+weather_server1-1.0.0.dist-info/top_level.txt,sha256=xpkzLUIHEK1ZntqgHu5YTzNBPGl4pbfjrFUotKWeVow,15
+weather_server1-1.0.0.dist-info/RECORD,,
