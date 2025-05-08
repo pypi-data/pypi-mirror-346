@@ -1,0 +1,7 @@
+pandas
+regex
+hvac
+requests
+SQLAlchemy
+sqlalchemy-sqlany
+psycopg2-binary
