@@ -1,0 +1,2 @@
+dist
+gaode_mcp_server

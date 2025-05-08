@@ -1,0 +1,37 @@
+[project]
+name = "gaode-mcp-server"
+
+version = "0.1.2"
+description = "针对高德 api 的mcp server，支持地理/逆地理解析，路径规划，天气查询，ip定位等多个高德api能力"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.7.1",
+    "requests>=2.32.3",
+]
+
+authors = [
+    { name="shaoqi.cheng", email="1925723789@qq.com" }
+]
+
+license = "MIT"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+# 新增：控制台脚本入口（可选，推荐）
+[project.scripts]
+gaode-mcp-server = "gaode_mcp_server.src.gaode_server:main"
+
+[project.gui-scripts]
+gaode_mcp_server = "gaode_mcp_server.src.gaode_server:main"
+
+[tool.setuptools.packages.find]
+exclude = ["test_env"]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
