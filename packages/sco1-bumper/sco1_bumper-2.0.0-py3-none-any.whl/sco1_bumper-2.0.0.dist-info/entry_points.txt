@@ -1,0 +1,2 @@
+[console_scripts]
+bumper = bumper.cli:bumper_cli
