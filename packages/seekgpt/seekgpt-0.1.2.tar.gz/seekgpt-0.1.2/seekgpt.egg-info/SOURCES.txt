@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+seekgpt/__init__.py
+seekgpt/client.py
+seekgpt.egg-info/PKG-INFO
+seekgpt.egg-info/SOURCES.txt
+seekgpt.egg-info/dependency_links.txt
+seekgpt.egg-info/requires.txt
+seekgpt.egg-info/top_level.txt
