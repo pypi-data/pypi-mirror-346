@@ -1,0 +1,11 @@
+## cdf 
+
+No changes.
+
+## templates
+
+### Fixed
+
+- The module `cdf_p_and_id_parser` had a bug in the example function,
+were it did not filter correctly on the instance ID set in the
+configuration This is now fixed.
