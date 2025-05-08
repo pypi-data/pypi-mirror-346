@@ -1,0 +1,174 @@
+import logging
+log = logging.getLogger(__name__)
+
+from functools import partial
+
+from enaml.workbench.api import Extension
+from enaml.workbench.core.api import Command
+import numpy as np
+
+from psiaudio.pipeline import coroutine
+from psiaudio import util
+from psi.context.api import ContextGroup, EnumParameter
+from psi.controller.api import (
+    AutoThreshold, Coroutine, ControllerManifest, Edges, ExperimentAction,
+    ExtractEpochs
+)
+from psi.data.api import GroupedEpochAveragePlot, EpochTimeContainer, ViewBox
+from psi.data.sinks.api import BinaryStore, TextStore
+
+
+EXPERIMENT = 'input_amplifier_calibration'
+
+
+def calculate_gain(event):
+    data = event.workbench.get_plugin('psi.data')
+    context = event.workbench.get_plugin('psi.context')
+    core = event.workbench.get_plugin('enaml.workbench.core')
+
+    cal_amplitude = context.get_value('cal_amplitude')
+
+    source = data.find_sink('amp_data').get_source('input_amplifier')
+    crp_info = data.find_sink('crp_data').get_source('crp')
+    waveforms = source.get_epochs(crp_info, offset=-0.025, duration=0.2)
+
+    gains = np.abs(waveforms.min(axis=1) / cal_amplitude)
+    gain = {
+        'gain mean (linear)': np.mean(gains),
+        'gain std (linear)': np.std(gains),
+        'cal_signal_fs': source.fs,
+    }
+    mean_waveforms = waveforms.mean(axis=0).rename('amplitude')
+    psd = util.db(util.psd_df(waveforms, fs=source.fs))
+    mean_psd = psd.mean(axis=0).rename('amplitude')
+
+    core.invoke_command(
+        'crp_data.save_dataframe',
+        {'name': 'cal_signal', 'dataframe': mean_waveforms},
+    )
+    core.invoke_command(
+        'crp_data.save_dataframe',
+        {'name': 'cal_psd', 'dataframe': mean_psd},
+    )
+    core.invoke_command(
+        'crp_data.save_mapping',
+        {'name': 'amplifier_gain', 'mapping': gain},
+    )
+
+
+
+@coroutine
+def notify_queue(queue, target):
+    while True:
+        data = (yield)
+        for _, row in data.events.iterrows():
+            info = {
+                't0': row['ts'],
+                'metadata': {'edge': row['event']},
+            }
+            queue.append(info)
+
+
+enamldef InputAmplifierCalibrationManifest(ControllerManifest): manifest:
+
+    Extension:
+        id = EXPERIMENT + '.commands'
+        point = 'enaml.workbench.core.commands'
+
+        Command:
+            id = manifest.id + '.calculate_gain'
+            handler = calculate_gain
+
+    Extension:
+        id = EXPERIMENT + '.monitor.context'
+        point = 'psi.context.items'
+
+        ContextGroup:
+            name = 'hardware_settings'
+            label = 'Hardware'
+
+            EnumParameter:
+                choices = {
+                    '10 µV': '10e-6',
+                    '20 µV': '20e-6',
+                    '50 µV': '50e-6',
+                    '100 µV': '100e-6',
+                    '200 µV': '200e-6',
+                    '500 µV': '500e-6',
+                    '1 mV': '1e-3',
+                    '2 mV': '2e-3',
+                    '5 mV': '5e-3',
+                    '10 mV': '10e-3',
+                    '20 mV': '20e-3',
+                    '50 mV': '50e-3',
+                }
+                default = '100 µV'
+                name = 'cal_amplitude'
+                label = 'Calibrator amplitude'
+
+        ContextGroup:
+            name = 'acquisition'
+            label = 'Acquisition'
+
+    Extension:
+        id = EXPERIMENT + '.monitor.actions'
+        point = 'psi.controller.actions'
+
+        ExperimentAction:
+            event = 'experiment_initialize'
+            command = 'psi.context.initialize'
+
+        ExperimentAction:
+            event = 'experiment_end'
+            command = manifest.id + '.calculate_gain'
+            delay = 1
+
+    Extension:
+        id = EXPERIMENT + '.monitor.io'
+        point = 'psi.controller.io'
+
+        AutoThreshold:
+            source_name = 'input_amplifier'
+            mode = 'negative'
+            baseline = 1
+            Edges:
+                debounce = 25
+                detect = 'rising'
+                Coroutine:
+                    coroutine = partial(notify_queue, extract.added_queue)
+
+        ExtractEpochs: extract:
+            source_name = 'input_amplifier'
+            name = 'crp'
+            prestim_time = 0.025
+            epoch_size = 0.200
+
+    Extension:
+        id = EXPERIMENT + '.monitor.sinks'
+        point = 'psi.data.sinks'
+
+        BinaryStore:
+            name = 'amp_data'
+            continuous_inputs = ['input_amplifier']
+
+        TextStore:
+            name = 'crp_data'
+            epoch_inputs = ['crp']
+
+    Extension:
+        id = EXPERIMENT + '.monitor.plots'
+        point = 'psi.data.plots'
+
+        EpochTimeContainer:
+            label = 'Calibration signal'
+            span = 0.6
+
+            ViewBox:
+                y_mode = 'mouse'
+                save_limits = True
+
+                GroupedEpochAveragePlot:
+                    source_name = 'crp'
+                    plot_grouping = ['edge']
+                    autogenerate_keys = 'neither'
+                    plot_keys = [('rising',)]

@@ -1,0 +1,299 @@
+import time
+import numpy as np
+
+from atom.api import Bool, Dict, Int, Float, List, observe, Typed, Value
+from enaml.application import deferred_call
+from enaml.core.api import Conditional, Looper
+from enaml.layout.api import (
+    align, hbox, spacer, vbox, AreaLayout, HSplitLayout, TabLayout,
+    VSplitLayout
+)
+from enaml.stdlib.fields import FloatField
+from enaml.widgets.api import (
+    Action, CheckBox, Container, DockArea, DockItem, Field, HGroup, Label,
+    ObjectCombo, PushButton, VGroup,
+)
+import pyqtgraph as pg
+
+from psi.data.plots_manifest import PGCanvas
+
+from cftscal.objects import inear_manager
+from cftscal.plugins.widgets import (
+    AddItem, BasePlotManager, CalibratedObjects, MultiPlotManager,
+    ObjectCollection,
+)
+
+
+class InEarDeltaPlotManager(BasePlotManager):
+
+    #: Settings for the delta plot
+    psd = Dict()
+    psd_freq = Value()
+    plot_freq = Float()
+    plot_freq_i = Int()
+
+    def update_selected_frequency(self, event):
+        self.plot_freq = event['value']
+        for plot_id in self.plots:
+            self.redraw_plots(plot_id)
+
+    def _observe_plot_freq(self, event):
+        if self.psd_freq is None:
+            return
+        self.plot_freq_i = int(np.argmin(np.abs(self.psd_freq - self.plot_freq)))
+
+    def make_x_axis(self):
+        x_axis = pg.DateAxisItem('bottom')
+        x_axis.setLabel('Time')
+        return x_axis
+
+    def get_plot_id(self, calibration):
+        return calibration.starship
+
+    def _update(self, calibration, remove=False):
+        if remove:
+            del self.psd[calibration.datetime]
+        else:
+            fh = calibration.load_recording()
+            psd = fh.get_average_psd().iloc[:, 1:].sort_index().iloc[-1]
+            if self.psd_freq is None:
+                self.psd_freq = psd.index.values
+            self.psd[calibration.datetime] = psd
+        plot_id = self.get_plot_id(calibration)
+        return self.redraw_plots(plot_id)
+
+    def redraw_plots(self, plot_id):
+        x, y = [], []
+        for c, psd in self.psd.items():
+            x.append(time.mktime(c.timetuple()))
+            y.append(psd.iloc[self.plot_freq_i])
+
+        if len(x) == 0:
+            self.remove_plots(plot_id)
+            return None
+
+        x = np.array(x)
+        y = np.array(y)
+        i = np.argsort(x)
+        color, plots = self.get_plots(plot_id)
+        plots[0].setData(x[i], y[i])
+        return color
+
+
+class InEarPlotManager(BasePlotManager):
+
+    #: Show noise floor on the PSD plot?
+    show_noise_floor = Bool(False)
+    selected_frequency = Float(16000)
+    freq_line = Value()
+
+    def _default_freq_line(self):
+        pen = pg.mkPen('black', width=2)
+        line = pg.InfiniteLine(1, 90, pen=pen, movable=True)
+        def update_position():
+            nonlocal line
+            nonlocal self
+            self.selected_frequency = 10 ** line.value()
+
+        line.sigPositionChanged.connect(update_position)
+        self.vb.addItem(line)
+        return line
+
+    def _observe_selected_frequency(self, event):
+        deferred_call(self.freq_line.setValue, np.log10(self.selected_frequency))
+
+    def create_empty_plots(self):
+        # Create two plots, one solid, one dashed. Both should be same color.
+        # Dashed is used to show thenoise floor when "show_noise_floor" is
+        # checked.
+        color, spl_plot = self.create_plot()
+        _, noise_plot = self.create_plot(color=color, line='dot')
+        return color, [spl_plot, noise_plot]
+
+    def _update(self, calibration, remove=False):
+        plot_id = self.get_plot_id(calibration)
+        if remove:
+            self.remove_plots(plot_id)
+            return None
+
+        color, plots = self.get_plots(plot_id)
+
+        fh = calibration.load_recording()
+
+        # Sort by index. Plot minimum level and maximum level
+        spl = fh.get_average_psd().iloc[:, 1:].sort_index()
+        x = np.log10(spl.columns.values)
+        y = spl.iloc[-1].values
+        plots[0].setData(x, y)
+
+        # Plot noise floor and then set visibility
+        y = spl.iloc[0].values
+        plots[1].setData(x, y)
+        plots[1].setVisible(self.show_noise_floor)
+        return color
+
+    def _observe_show_noise_floor(self, event):
+        for _, plots in self.plots.values():
+            plots[1].setVisible(self.show_noise_floor)
+            plots[1].invalidate()
+
+
+enamldef InEarView(Container):
+
+    attr settings
+    attr plot_manager = InEarPlotManager()
+    attr delta_plot_manager = InEarDeltaPlotManager()
+
+    initialized ::
+        plot_manager.observe('selected_frequency',
+                             delta_plot_manager.update_selected_frequency)
+
+    DockArea: area:
+        layout = AreaLayout(
+            HSplitLayout(
+                VSplitLayout(
+                    'settings',
+                    'inear_list',
+                    sizes=[25, 200],
+                ),
+                TabLayout(
+                    'inear_sens_plot',
+                    'inear_delta_plot',
+                ),
+                sizes=[150, 900],
+            ),
+        )
+
+        DockItem:
+            name = 'settings'
+            title = 'Settings'
+            closable = False
+            stretch = 0
+
+            Conditional:
+                condition << settings is None
+
+                Container:
+                    Label:
+                        text = 'No starships found on system. View mode only.'
+
+            Conditional:
+                condition << settings is not None
+
+                Container:
+                    layout_constraints => ():
+                        widgets = self.visible_widgets()
+                        first = []
+                        for w in widgets:
+                            first.append(w.children[0])
+                        constraints = [
+                            vbox(*widgets),
+                            align('right', *first),
+                        ]
+                        return constraints
+
+                    Looper:
+                        iterable << settings.ears
+
+                        Container:
+                            attr ear = loop_item
+                            share_layout = True
+                            padding = 0
+                            constraints = [
+                                hbox(
+                                    output_label,
+                                    hbox(starship_select, starship_gain, spacing=0),
+                                    starship_gain_label,
+                                    hbox(ear_select, ear_add, spacing=0),
+                                    spacer(0),
+                                    cal_start,
+                                    spacing=5,
+                                ),
+                                ear_add.width == 25,
+                                align('v_center', output_label,
+                                    starship_select, starship_gain,
+                                    starship_gain_label, ear_select, ear_add,
+                                    cal_start),
+                            ]
+
+                            Label: output_label:
+                                text = f'Output {ear.output}'
+
+                            ObjectCombo: starship_select:
+                                items = ear.available_starships
+                                selected := ear.name
+
+                            ObjectCombo: starship_gain:
+                                items = [20, 40]
+                                selected := ear.gain
+
+                            Label: starship_gain_label:
+                                text = 'dB gain'
+
+                            ObjectCombo: ear_select:
+                                items = ear.available_ears
+                                selected := ear.ear
+
+                            PushButton: ear_add:
+                                text = '+'
+                                clicked ::
+                                    popup = AddItem(self, combo=ear_select, label='Ear')
+                                    popup.show()
+
+                            PushButton: cal_start:
+                                text = 'Run'
+                                enabled << bool(ear.name) and bool(ear.ear)
+                                clicked ::
+                                    settings.run_cal(ear)
+                                    inear_tree.collection.update_groups()
+
+        DockItem:
+            name = 'inear_sens_plot'
+            title = 'In-Ear Sensitivity'
+            closable = False
+            stretch = 10
+
+            Container:
+                VGroup:
+                    padding = 0
+                    HGroup:
+                        Label:
+                            text = 'Selected frequency (Hz)'
+                        FloatField:
+                            value := plot_manager.selected_frequency
+                    PGCanvas: inear_plot:
+                        component << plot_manager.component
+
+        DockItem:
+            name = 'inear_delta_plot'
+            title = 'Δ In-Ear Sensitivity'
+            closable = False
+            stretch = 10
+
+            Container:
+                PGCanvas: inear_delta_plot:
+                    component << delta_plot_manager.component
+
+        DockItem:
+            name = 'inear_list'
+            title = 'In-Ear Calibrations'
+            closable = False
+            stretch = 0
+
+            VGroup:
+                CheckBox:
+                    text = 'Show noise floor?'
+                    checked << plot_manager.show_noise_floor
+                    checked ::
+                        plot_manager.show_noise_floor = checked
+
+                CalibratedObjects: inear_tree:
+                    padding = 0
+                    headers = ['Starship', 'Ear']
+                    collection = ObjectCollection(
+                        inear_manager,
+                        MultiPlotManager(
+                            plot_manager,
+                            delta_plot_manager,
+                        )
+                    )

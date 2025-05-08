@@ -1,0 +1,2 @@
+[console_scripts]
+cfts-cal = cftscal.main:main
