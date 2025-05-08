@@ -1,0 +1,10 @@
+pyzid/__about__.py,sha256=mSeaWmDzf7I-s6GJQd5F1q9lV4NG9jJt2ipNURsPuvg,46
+pyzid/__init__.py,sha256=tSrv2T2fTWTQS4Z15g4DeERDzXsUPSfQyNGjGTflpvk,94
+pyzid/_encoding.py,sha256=_6BIfZ6FyFNYRMX1SsxNlwQFus0PwkKnm1-t45hk-kQ,993
+pyzid/_id.py,sha256=6gF90R_laitpUjJQZ8Qto_hM44g1qpp-uJPF0z3mxmg,3127
+pyzid/_node.py,sha256=x7P9t3rj2WPm2-iMz02oPLPXBYJ57WdXtx2JoqWV8Mo,264
+pyzid/_utils.py,sha256=5i5eqamfni0ORYn_1hZaM8tDPQKoihvdFQgoSQEBTno,199
+pyzid-0.0.1.dist-info/METADATA,sha256=F_YWtMgeqe0XdiC4y4GntBF-T2RA0pYVcE2XJiQPl6U,1211
+pyzid-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyzid-0.0.1.dist-info/licenses/LICENSE,sha256=ALcZ5Pwi1yeWvC5YxQttlv7KS-tmFeVtK9g8EvBmQWs,1088
+pyzid-0.0.1.dist-info/RECORD,,
