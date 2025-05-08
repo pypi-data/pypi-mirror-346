@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+torch_tps/__init__.py
+torch_tps/polynomial_transform.py
+torch_tps/py.typed
+torch_tps/thin_plate_spline.py
+torch_tps.egg-info/PKG-INFO
+torch_tps.egg-info/SOURCES.txt
+torch_tps.egg-info/dependency_links.txt
+torch_tps.egg-info/requires.txt
+torch_tps.egg-info/top_level.txt
