@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+bfs_scrape/__init__.py
+bfs_scrape/bfs_web_scraper.py
+bfs_scrape/cli.py
+bfs_scrape/structured_outputs.py
+bfs_scrape/system_prompt.py
+bfscrape.egg-info/PKG-INFO
+bfscrape.egg-info/SOURCES.txt
+bfscrape.egg-info/dependency_links.txt
+bfscrape.egg-info/entry_points.txt
+bfscrape.egg-info/requires.txt
+bfscrape.egg-info/top_level.txt
+tests/test_bfs_web_scraper.py
