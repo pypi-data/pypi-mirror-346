@@ -1,0 +1,7 @@
+setup.py
+tipsz8/__init__.py
+tipsz8/module1.py
+tipsz8.egg-info/PKG-INFO
+tipsz8.egg-info/SOURCES.txt
+tipsz8.egg-info/dependency_links.txt
+tipsz8.egg-info/top_level.txt
