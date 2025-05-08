@@ -1,0 +1,8 @@
+pandas
+pyarrow
+datafusion
+langchain-core
+langchain-community
+langchain-openai
+jinja2
+overrides
