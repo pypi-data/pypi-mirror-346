@@ -1,0 +1,10 @@
+mm_neural_adjoint/__init__.py,sha256=GNl1wl_PG6Gt3geafz983QcBpo3vLwrppTeXCmxK9ew,251
+mm_neural_adjoint/models/NA.py,sha256=1CSAGBik1bSH6W7dHxQagDJDG92nqUFRaBcYTdwF3XE,21557
+mm_neural_adjoint/models/__init__.py,sha256=CH_3enWDFCd4IlgpEo9bfyybDJyA3Q9UiOQrvcxvmZ0,102
+mm_neural_adjoint/models/conv_model.py,sha256=ODTfoUfFY-7GmEP4GaEnBphTjQXuQ4U_PXDgKUQDT8o,2708
+mm_neural_adjoint/models/lin_model.py,sha256=1WYAaZwA31YS2gAehaLi8GMP4Z76aSzeyHCFjWnvtTA,1338
+mm_neural_adjoint-0.1.15.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+mm_neural_adjoint-0.1.15.dist-info/METADATA,sha256=uAowzPHGHVd2VtgNjhU5QeBfxziu-lYsSnB97nvyAMA,5056
+mm_neural_adjoint-0.1.15.dist-info/WHEEL,sha256=oSJJyWjO7Z2XSScFQUpXG1HL-N0sFMqqeKVVbZTPkWc,109
+mm_neural_adjoint-0.1.15.dist-info/top_level.txt,sha256=OwEb2XNaIrMK6e3ydy1mPnDtIVP4QMNm1I5qBmv7rno,18
+mm_neural_adjoint-0.1.15.dist-info/RECORD,,
