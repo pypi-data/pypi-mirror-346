@@ -1,0 +1,6 @@
+pyproject.toml
+tabarena/__init__.py
+tabarena.egg-info/PKG-INFO
+tabarena.egg-info/SOURCES.txt
+tabarena.egg-info/dependency_links.txt
+tabarena.egg-info/top_level.txt

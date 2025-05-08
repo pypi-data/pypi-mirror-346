@@ -1,0 +1,7 @@
+[project]
+name = "tabarena"
+authors = [
+    {name = "TabArena Team", email = "contact@tabarena.ai"},
+]
+version = "0.0.0"
+description = "Coming soon"
