@@ -1,0 +1,3 @@
+[console_scripts]
+neodynamics=neodynamics.cli:main
+
