@@ -1,0 +1,6 @@
+setup.py
+internal_dateutil/__init__.py
+internal_dateutil.egg-info/PKG-INFO
+internal_dateutil.egg-info/SOURCES.txt
+internal_dateutil.egg-info/dependency_links.txt
+internal_dateutil.egg-info/top_level.txt
