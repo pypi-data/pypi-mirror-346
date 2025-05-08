@@ -1,0 +1,24 @@
+[project]
+name = "facets-mcp-server"
+version = "0.1.1"
+description = "MCP server for Facets"
+authors = [
+    { name = "Anshul Sao", email = "anshul@example.com" }
+]
+dependencies = [
+    "mcp[cli]",
+    "checkov",
+    "questionary"
+]
+requires-python = ">=3.10"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+# (optional section for uv settings — no problem keeping this here)
+
+[tool.setuptools.packages.find]
+where = ["facets_mcp_server"]
+include = ["facets_mcp_server*", "facets_mcp_server.vendored*"]
