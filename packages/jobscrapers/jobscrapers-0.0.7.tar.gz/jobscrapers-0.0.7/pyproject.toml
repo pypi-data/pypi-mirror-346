@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=76.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jobscrapers"
+version = "0.0.7"
+dependencies = [
+    "bs4~=0.0.2",
+    "requests~=2.32.3",
+    "selenium~=4.29.0"
+]
+authors = [
+  { name="Mika", email="mikacchang@gmail.com" },
+]
+description = "A package to scrape job postings."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
+]
+
+[project.urls]
+Homepage = "https://github.com/Mika-Chang/job-scrape"
+Issues = "https://github.com/Mika-Chang/job-scrape/issues"

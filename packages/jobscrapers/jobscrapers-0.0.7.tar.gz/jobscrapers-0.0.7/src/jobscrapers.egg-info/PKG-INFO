@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: jobscrapers
+Version: 0.0.7
+Summary: A package to scrape job postings.
+Author-email: Mika <mikacchang@gmail.com>
+Project-URL: Homepage, https://github.com/Mika-Chang/job-scrape
+Project-URL: Issues, https://github.com/Mika-Chang/job-scrape/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bs4~=0.0.2
+Requires-Dist: requests~=2.32.3
+Requires-Dist: selenium~=4.29.0
+Dynamic: license-file
+
+# Job Scrapers
+
+This is a project that can pull job listing information from careers pages. Currently there is only support for Workday based careers pages with more support coming soon!
+
+Feel free to use this! (But also try not to be spammy with requests)
+
+## Requirements
+
+- Required python packages (Will be installed when installing from the .whl file)
+- WebDriver. This will be specific to your browser. You can download here: https://www.selenium.dev/documentation/webdriver/
+
+## Job Information
+
+Scraped information about a job will be formatted in JSON with the following information:
+  
+- `scraped_url`: `str`
+  - the url that was scraped for information.
+- `scrape_successful`: `bool`
+  - Whether information was extracted from `scraped_url` successfully. If `False` the following fields may not be added to the job. 
+- `title`: `str`
+  - The title of the position. E.g. "Software Engineer II"
+- `job_id`: `str`
+  - The ID of the job. This is a string of numbers and letters.
+- `date`: `str`
+  - The date the job was posted.
+- `employment_type`: `str`
+  - Type of employment specified by employer. E.g. "FULL_TIME"
+- `description`: `str`
+  - A description of the position.
+- `country`: `str`
+  - The country where the position will be.
+- `city`: `str`
+  - The city where the position will be.
+
+## Logging
+This package makes use of the Logging package for python using a logger with the name `jobscrapers`. By default, events with severity `WARNING` and higher will be printed to `sys.stderr`. Please see the `Logging` documentation for configuring logging for your project. https://docs.python.org/3/howto/logging.html#configuring-logging-for-a-library
+

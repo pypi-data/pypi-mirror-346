@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/jobscrapers/__init__.py
+src/jobscrapers/scrapers.py
+src/jobscrapers.egg-info/PKG-INFO
+src/jobscrapers.egg-info/SOURCES.txt
+src/jobscrapers.egg-info/dependency_links.txt
+src/jobscrapers.egg-info/requires.txt
+src/jobscrapers.egg-info/top_level.txt
+tests/test_args.py
+tests/tests.py
