@@ -1,0 +1,18 @@
+#======
+#README
+#======
+
+#Let's test the source code with our custom checker:
+
+from __future__ import absolute_import
+import p01.checker#>>>
+import p01.testbrowser#>>>
+skipCheckerFileNames = {#>>>
+    'py': [#...
+        'test_wsgi.py',#...
+        ]#...
+}#...
+
+checker = p01.checker.Checker()#>>>
+checker.check(p01.testbrowser, skipCheckerFileNames=skipCheckerFileNames)#>>>
+

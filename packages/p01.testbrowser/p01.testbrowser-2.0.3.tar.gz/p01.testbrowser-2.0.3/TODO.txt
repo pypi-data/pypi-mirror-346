@@ -1,0 +1,45 @@
+====
+TODO
+====
+
+- implement asDomString as asSoupTag and use them in dumpControlToDom
+
+
+new concept
+-----------
+
+review the concept at all and try to get rid of the control wrapping webttest
+control concept. Implement a simpler concept where the controls are direct
+wrappers of the dom without storing the values in web test controls.
+
+
+as next
+~~~~~~~
+
+- implement
+
+  - controls
+
+   - input, textarea, etc.
+
+  - parser
+
+    - lxml parser
+
+  - browser
+
+    - getControl, etc. api
+
+    - parse dom and wrap them to controls
+
+
+ideas
+-----
+
+- controls
+
+   - should we create controls for any dom element with attr contentEditable?
+
+     - if so, don't submit them as form, but support a json-rpc library for
+       andle them as they whould be form elements. This whould be a fancy
+       concept for inline content editing
