@@ -1,0 +1,191 @@
+import numpy as np
+
+from enaml.core.api import Conditional, Looper
+from enaml.layout.api import align, hbox, spacer, vbox, AreaLayout, HSplitLayout, VSplitLayout
+from enaml.stdlib.fields import FloatField
+from enaml.widgets.api import (
+    Container, DockArea, DockItem, Field, Label, ObjectCombo, PushButton
+)
+
+from psi.data.plots_manifest import PGCanvas
+
+from cftscal.objects import microphone_manager
+from cftscal.plugins.widgets import (
+    AddItem, CalibratedObjects, BasePlotManager, ObjectCollection,
+)
+
+
+class MicrophonePlotManager(BasePlotManager):
+
+    def _update(self, calibration, remove=False):
+        plot_id = self.get_plot_id(calibration)
+        if remove:
+            self.remove_plots(plot_id)
+            return None
+        color, plots = self.get_plots(plot_id)
+
+        fh = calibration.load_recording()
+        psd = fh.get_psd(average_seconds=1).iloc[1:]
+        x = np.log10(psd.index.values)
+        y = psd.values
+        plots[0].setData(x, y)
+        return color
+
+
+enamldef MicrophoneView(Container):
+
+    attr settings
+
+    DockArea: area:
+        layout = AreaLayout(
+            HSplitLayout(
+                VSplitLayout(
+                    'settings',
+                    'mic_list',
+                    sizes=[25, 200],
+                ),
+                'mic_sens_plot',
+                sizes=[150, 900],
+            ),
+        )
+        DockItem:
+            name = 'settings'
+            title = 'Settings'
+            closable = False
+            stretch = 0
+
+            Conditional:
+                condition << settings is None
+
+                Container:
+                    Label:
+                        text = 'No microphones found on system. View mode only.'
+
+            Conditional:
+                condition << settings is not None
+
+                Container:
+                    layout_constraints => ():
+                        # For some reason aligning right edge of first widget
+                        # (label) does not produce nicely-aligned widgets, so we
+                        # align the left edge of second widget.
+                        widgets = self.visible_widgets()
+                        second = [w.children[1] for w in widgets]
+                        constraints = [
+                            vbox(*widgets),
+                            align('left', *second),
+                        ]
+                        return constraints
+
+                    Container:
+                        padding = 0
+                        share_layout = True
+                        constraints = [
+                            vbox(
+                                hbox(
+                                    pistonphone_label,
+                                    pistonphone_select,
+                                    pistonphone_frequency,
+                                    pistonphone_frequency_label,
+                                    pistonphone_level,
+                                    pistonphone_level_label,
+                                    spacer(0),
+                                ),
+                            ),
+                            pistonphone_frequency.width == 50,
+                            pistonphone_level.width == 50,
+                            align('v_center', pistonphone_label,
+                                    pistonphone_select, pistonphone_frequency,
+                                    pistonphone_frequency_label,
+                                    pistonphone_level, pistonphone_level_label),
+                        ]
+
+                        Label: pistonphone_label:
+                            text = 'Pistonphone'
+
+                        Field: pistonphone_select:
+                            text := settings.pistonphone.name
+
+                        FloatField: pistonphone_frequency:
+                            value := settings.pistonphone.frequency
+
+                        Label: pistonphone_frequency_label:
+                            text = 'Hz @'
+
+                        FloatField: pistonphone_level:
+                            value := settings.pistonphone.level
+
+                        Label: pistonphone_level_label:
+                            text = 'dB SPL'
+
+                    Looper:
+                        iterable << settings.microphones
+
+                        Container:
+                            share_layout = True
+                            padding = 0
+                            constraints = [
+                                hbox(
+                                    mic_label,
+                                    hbox(mic_select, mic_add, mic_gain, spacing=0),
+                                    mic_gain_label,
+                                    spacer(0),
+                                    mic_cal_start,
+                                    spacing=5,
+                                ),
+                                align('v_center', mic_label, mic_select, mic_add,
+                                        mic_gain, mic_gain_label, mic_cal_start),
+                                mic_add.width == 25,
+                            ]
+
+                            attr microphone = loop_item
+
+                            Label: mic_label:
+                                text = f'Microphone {loop_item.input_name}'
+
+                            ObjectCombo: mic_select:
+                                items = sorted(microphone.available_microphones)
+                                selected := microphone.name
+
+                            PushButton: mic_add:
+                                text = '+'
+                                clicked ::
+                                    popup = AddItem(self, combo=mic_select, label='Microphone')
+                                    popup.show()
+
+                            ObjectCombo: mic_gain:
+                                items = [-20, -10, 0, 10, 20, 30, 40, 50]
+                                selected := microphone.gain
+
+                            Label: mic_gain_label:
+                                text = 'dB gain'
+
+                            PushButton: mic_cal_start:
+                                text = 'Calibrate'
+                                enabled << bool(microphone.name)
+                                clicked ::
+                                    settings.run_mic_cal(microphone)
+                                    mic_tree.collection.update_groups()
+
+        DockItem:
+            name = 'mic_sens_plot'
+            title = 'Microphone Sensitivity'
+            closable = False
+            stretch = 10
+
+            Container:
+                PGCanvas: microphone_plot:
+                    attr manager = MicrophonePlotManager()
+                    component << manager.component
+
+        DockItem:
+            name = 'mic_list'
+            title = 'Microphone Calibrations'
+            closable = False
+            stretch = 0
+
+            CalibratedObjects: mic_tree:
+                headers = ['Name', 'Sens', 'Sens (dB)', 'Pistonphone']
+                collection = ObjectCollection(
+                    microphone_manager, microphone_plot.manager
+                )
