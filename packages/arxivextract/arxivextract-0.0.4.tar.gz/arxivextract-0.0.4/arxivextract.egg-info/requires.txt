@@ -1,0 +1,12 @@
+feedparser
+requests
+
+[keyword]
+keybert
+
+[test]
+unittest2
+pytest
+
+[yake]
+yake
