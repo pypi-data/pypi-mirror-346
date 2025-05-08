@@ -1,0 +1,11 @@
+fastapi_zitadel_auth/__init__.py,sha256=pyaYA70p8XJq4EYBB8fmSB0b2KmxYy5AqECP055dUBE,190
+fastapi_zitadel_auth/auth.py,sha256=VvKgsXB67hnif9DKqDJ7aDGtBDECPg_ED1vXL_mJPvo,7126
+fastapi_zitadel_auth/exceptions.py,sha256=7YUsZ0LW3YUrjLRkRougqXthuYJWn5Jt7XNUz-pyz3s,1174
+fastapi_zitadel_auth/openid_config.py,sha256=h1WXVDymC1NpIZU4m9WR-BhEGmoJD8JjxS9DKMN5wEs,5117
+fastapi_zitadel_auth/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_zitadel_auth/token.py,sha256=AwY2PhTLAagKdVOZbpceau-0ZfWsNw2HtIfNQzVt6e4,3075
+fastapi_zitadel_auth/user.py,sha256=dD1680GbS3Pgf04ZA-6z51psrkEyAvu2pPQ0qRkU1iU,1962
+fastapi_zitadel_auth-0.2.4.dist-info/METADATA,sha256=3t_HR2IZvRqBwOKJe278TnrbDQA38ygu9g6WlA5GbvM,3845
+fastapi_zitadel_auth-0.2.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fastapi_zitadel_auth-0.2.4.dist-info/licenses/LICENCE,sha256=p8-ySKfGbUPR_nsAKjtLroTEi-eQH1P6EyOuzIAzz3I,1064
+fastapi_zitadel_auth-0.2.4.dist-info/RECORD,,
