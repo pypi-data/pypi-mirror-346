@@ -1,0 +1,7 @@
+duckdb_llm_udf/__init__.py,sha256=VtGIUxHv-qUwZ1-dxYeutLh_z-BuvzuEqmBZk1UxGaI,209
+duckdb_llm_udf/llm_udf.py,sha256=EF6YjdTp2-Xh5H0GTBhyGeLFOw32oT1rUAB3bQTD-yw,15846
+duckdb_llm_udf-0.1.0.dist-info/licenses/LICENSE,sha256=srHZ3fvcAuZY1LHxE7P6XWju2njRCHyK6h_ftEbzxSE,1057
+duckdb_llm_udf-0.1.0.dist-info/METADATA,sha256=JGUJB4Zng-ZOawdQMdrtGHBe_bZIXiJgGFkOwzuYGkE,9024
+duckdb_llm_udf-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+duckdb_llm_udf-0.1.0.dist-info/top_level.txt,sha256=7JC7Q2MKlN_-xFOFfxGXQSNZRu_2lld6LzW6DoPYWf8,15
+duckdb_llm_udf-0.1.0.dist-info/RECORD,,

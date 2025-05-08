@@ -1,0 +1,1 @@
+duckdb_llm_udf
