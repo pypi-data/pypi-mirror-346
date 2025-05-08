@@ -1,0 +1,7 @@
+boto3_pydantic_cloudwatch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_cloudwatch/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_cloudwatch/cloudwatch_classes.py,sha256=pnUuhaxuTiDlgVxZb-ni5RLMUqffj00AGWDjmOEVtKQ,31356
+boto3_pydantic_cloudwatch/cloudwatch_constants.py,sha256=V6QIsetR1sxZ8pWUgvK0k1wox3zxtqrNc4oJEjIpVJg,9278
+boto3_pydantic_cloudwatch-1.0.0.dist-info/METADATA,sha256=m6as5R8S6r6vRvGk0YfIMTp_SVUuDIZc7ATaoFPw8-k,1415
+boto3_pydantic_cloudwatch-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_cloudwatch-1.0.0.dist-info/RECORD,,
