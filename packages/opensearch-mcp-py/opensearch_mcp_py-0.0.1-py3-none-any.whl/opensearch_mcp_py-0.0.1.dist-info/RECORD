@@ -1,0 +1,15 @@
+mcp_server_opensearch/__init__.py,sha256=tjBE3KBOWsFr9YP4zgYiA85dvXGslBlA1KIM2QSNCjc,997
+mcp_server_opensearch/__main__.py,sha256=QKdWOzcbGvyf3ThcxBpzHiRqUYpw49NdFTywqWeb3QE,133
+mcp_server_opensearch/sse_server.py,sha256=VYXW5UqhGtfkPVCT3-sHVsl10X3xVfA3HdN66HSMmQU,2718
+mcp_server_opensearch/stdio_server.py,sha256=pTkMBi-Z6Yf1h7raJ7avOeGJJ4VoFBEewh75TQvXf3I,1301
+opensearch/__init__.py,sha256=zOs_EnNaYZJDJf0bvW3hL8sWo97aHVryJVLTqM_JeTA,73
+opensearch/client.py,sha256=BRjVV3eeDg7oB-ABmZDDMctAllkuyyrvOVLlHotkcY4,2101
+opensearch/helper.py,sha256=YVVRPUI8VDMi9tKkZ8aizp1jsD1DkC-Nd9DoTYVQ_NA,808
+opensearch_mcp_py-0.0.1.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+tools/__init__.py,sha256=zOs_EnNaYZJDJf0bvW3hL8sWo97aHVryJVLTqM_JeTA,73
+tools/tools.py,sha256=qfXCITg3AOF7P3RsnsrWQ2RIBHpc2lsmFOkFNjuDoNk,4074
+opensearch_mcp_py-0.0.1.dist-info/METADATA,sha256=xmQCksxZ2gkU2ZbPL_BqLDCXVcl-NWiOiQqo9NAs8hg,5637
+opensearch_mcp_py-0.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+opensearch_mcp_py-0.0.1.dist-info/entry_points.txt,sha256=kHf_WKw2_bUyUkvLlAgKtygMiHJakR1ralb7UrkHaEs,65
+opensearch_mcp_py-0.0.1.dist-info/top_level.txt,sha256=WMxBR74C127fpw--P52Qd9a5LEtxJGsDcIbLjJ6jBss,39
+opensearch_mcp_py-0.0.1.dist-info/RECORD,,
