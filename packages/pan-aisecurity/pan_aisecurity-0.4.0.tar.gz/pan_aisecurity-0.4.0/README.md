@@ -1,0 +1,475 @@
+Palo Alto Networks Prisma AIRS Scan API Python SDK
+=============================================
+
+This Python SDK provides convenient access to the
+Palo Alto Networks AI Runtime Security: API Intercept
+for Python applications. This SDK includes type
+definitions for all request params and response fields and offers both
+synchronous and asynchronous (asyncio) operations.
+
+<!--TOC-->
+
+- [API Documentation](#api-documentation)
+- [Installation](#installation)
+- [SDK Configuration](#sdk-configuration)
+  - [API Key](#api-key)
+  - [AI Profile](#ai-profile)
+- [Example: SDK Configuration](#example-sdk-configuration)
+  - [Using AI Profile Name](#using-ai-profile-name)
+  - [Using AI Profile ID](#using-ai-profile-id)
+- [Examples: Traditional Python (non-asyncio)](#examples-traditional-python-non-asyncio)
+  - [Inline (Synchronous) Scan Example](#inline-synchronous-scan-example)
+  - [Batch (Asynchronous) Scan Example](#batch-asynchronous-scan-example)
+  - [Scan Results Example](#scan-results-example)
+  - [Scan Reports Example](#scan-reports-example)
+- [Examples: Concurrent Python (asyncio)](#examples-concurrent-python-asyncio)
+  - [Inline (Synchronous) Scan Example (asyncio)](#inline-synchronous-scan-example-asyncio)
+  - [Batch (Asynchronous) Scan Example (asyncio)](#batch-asynchronous-scan-example-asyncio)
+  - [Scan Results Example (asyncio)](#scan-results-example-asyncio)
+  - [Scan Reports Example (asyncio)](#scan-reports-example-asyncio)
+- [Error Handling & Exceptions](#error-handling--exceptions)
+- [Retries and Timeouts](#retries-and-timeouts)
+  - [Note on Retries for POST Requests](#note-on-retries-for-post-requests)
+- [Compatability Policy](#compatability-policy)
+
+<!--TOC-->
+
+# API Documentation
+
+The reference API documentation for Palo Alto Networks AI Runtime Security:
+API Intercept can be found at [https://pan.dev/ai-runtime-security/scan/api/](https://pan.dev/ai-runtime-security/scan/api/)
+
+# Installation
+
+```sh
+# Create and activate a virtual environment
+python3 -m venv --prompt ${PWD%%*/} .venv && source .venv/bin/activate
+
+# Install most recent stable v1 compatible release version of aisecurity package
+python3 -m pip install "pan-aisecurity >= 1.0, < 2.0"
+```
+
+# SDK Configuration
+
+The `aisecurity.init()` function accepts the following optional parameters:
+
+- `api_key` (optional): Provide your API key through configuration or an environment variable.
+  - If `api_key` is not set, the environment variable `PANW_AI_SEC_API_KEY` will be used, if available.
+- `num_retries` (optional): Default value is 5.
+
+## API Key
+
+There are two ways to specify your API key:
+
+1. Using an environment variable:
+
+```sh
+export PANW_AI_SEC_API_KEY=YOUR_API_KEY
+```
+
+2. Specify your API key in `aisecurity.init()` with the `api_key` parameter:
+
+```python
+api_key = get_api_key_from_somewhere() # Fetch from Vault, Secrets Manager, etc.
+aisecurity.init(api_key=api_key)
+```
+
+## AI Profile
+
+You must provide ONE of: `profile_name` or `profile_id`
+
+```python
+ai_profile = AiProfile(profile_id="YOUR_AI_PROFILE_ID")
+```
+
+or
+
+```python
+ai_profile = AiProfile(profile_name="YOUR_AI_PROFILE_NAME")
+```
+
+# Example: SDK Configuration
+
+## Using AI Profile Name
+
+```python
+import aisecurity
+AI_PROFILE_NAME = "YOUR_AI_PROFILE_NAME"
+API_KEY = os.getenv("PANW_AI_SEC_API_KEY")
+
+aisecurity.init(api_key=API_KEY)
+ai_profile = AiProfile(profile_name=AI_PROFILE_NAME)
+```
+
+## Using AI Profile ID
+
+```python
+import aisecurity
+AI_PROFILE_ID = "YOUR_AI_PROFILE_ID"
+API_KEY = os.getenv("PANW_AI_SEC_API_KEY")
+
+aisecurity.init(api_key=API_KEY)
+ai_profile = AiProfile(profile_id=AI_PROFILE_ID)
+```
+
+# Examples: Traditional Python (non-asyncio)
+
+**Important**: You must properly configure an API Key and AI Profile ID or Name
+before using the SDK examples.
+
+## Inline (Synchronous) Scan Example
+
+API Reference: https://pan.dev/ai-runtime-security/api/scan-sync-request/
+
+<!-- source: examples/traditional/inline_sync_scan.py -->
+
+```python
+
+import os
+from pprint import pprint
+
+import aisecurity
+from aisecurity.generated_openapi_client.models.ai_profile import AiProfile
+
+# IMPORTANT: For traditional (non-asyncio), import Scanner from aisecurity.scan.inline.scanner
+from aisecurity.scan.inline.scanner import Scanner
+from aisecurity.scan.models.content import Content
+
+AI_PROFILE_NAME = "YOUR_AI_PROFILE_NAME"
+API_KEY = os.getenv("PANW_AI_SEC_API_KEY")
+
+# Initialize the SDK with your API Key
+aisecurity.init(api_key=API_KEY)
+
+# Configure an AI Profile
+ai_profile = AiProfile(profile_name=AI_PROFILE_NAME)
+
+# Create a Scanner
+scanner = Scanner()
+
+scan_response = scanner.sync_scan(
+    ai_profile=ai_profile,
+    content=Content(
+        prompt="Questionable User Prompt Text",
+        response="Questionable Model Response Text",
+    ),
+)
+pprint(scan_response)
+```
+
+## Batch (Asynchronous) Scan Example
+
+API Reference: https://pan.dev/ai-runtime-security/api/scan-async-request/
+
+<!-- source: examples/traditional/batch_async_scan.py -->
+
+```python
+import os
+from pprint import pprint
+
+import aisecurity
+from aisecurity.generated_openapi_client.models.ai_profile import AiProfile
+
+# IMPORTANT: For traditional (non-asyncio), import Scanner from aisecurity.scan.inline.scanner
+from aisecurity.scan.inline.scanner import Scanner
+from aisecurity.scan.models.content import Content
+
+AI_PROFILE_NAME = "YOUR_AI_PROFILE_NAME"
+API_KEY = os.getenv("PANW_AI_SEC_API_KEY")
+
+# Initialize the SDK with your API Key
+aisecurity.init(api_key=API_KEY)
+
+# Configure an AI Profile
+ai_profile = AiProfile(profile_name=AI_PROFILE_NAME)
+
+# Create a Scanner
+scanner = Scanner()
+
+scan_response = scanner.sync_scan(
+    ai_profile=ai_profile,
+    content=Content(
+        prompt="Questionable User Prompt Text",
+        response="Questionable Model Response Text",
+    ),
+)
+# See API documentation for response structure
+# https://pan.dev/ai-runtime-security/api/scan-sync-request/
+pprint(scan_response)
+```
+
+## Scan Results Example
+
+API Reference: https://pan.dev/ai-runtime-security/api/get-scan-results-by-scan-i-ds/
+
+<!-- source: examples/traditional/scan_results.py -->
+
+```python
+
+import aisecurity
+
+# IMPORTANT: For traditional (non-asyncio), import Scanner from aisecurity.scan.inline.scanner
+from aisecurity.scan.inline.scanner import Scanner
+
+aisecurity.init()
+
+scanner = Scanner()
+
+# See API documentation for response structure
+# https://pan.dev/ai-runtime-security/api/get-scan-results-by-scan-i-ds/
+example_scan_id = "020e7c31-0000-4e0d-a2a6-215a0d5c56d9"
+scan_by_ids_response = scanner.query_by_scan_ids(scan_ids=[example_scan_id])
+```
+
+## Scan Reports Example
+
+API Reference: https://pan.dev/ai-runtime-security/api/get-threat-scan-reports/
+
+<!-- source: examples/traditional/scan_reports.py -->
+
+```python
+import aisecurity
+
+# IMPORTANT: For traditional (non-asyncio), import Scanner from aisecurity.scan.inline.scanner
+from aisecurity.scan.inline.scanner import Scanner
+
+aisecurity.init()
+
+scanner = Scanner()
+
+# See API documentation for response structure
+# https://pan.dev/ai-runtime-security/api/get-threat-scan-reports/
+example_report_id = "020e7c31-0000-4e0d-a2a6-215a0d5c56d9"
+threat_scan_reports = scanner.query_by_report_ids(report_ids=[example_report_id])
+```
+
+# Examples: Concurrent Python (asyncio)
+
+**Important**: You must properly configure an API Key and AI Profile ID or Name
+before using the SDK examples.
+
+## Inline (Synchronous) Scan Example (asyncio)
+
+API Reference: https://pan.dev/ai-runtime-security/api/scan-sync-request/
+
+<!-- source: examples/asyncio/inline_sync_scan.py -->
+
+```python
+
+import asyncio
+import os
+from pprint import pprint
+
+import aisecurity
+from aisecurity.generated_openapi_client.models.ai_profile import AiProfile
+
+# IMPORTANT: For asyncio, import Scanner from aisecurity.scan.asyncio.scanner
+from aisecurity.scan.asyncio.scanner import Scanner
+from aisecurity.scan.models.content import Content
+
+AI_PROFILE_NAME = "YOUR_AI_PROFILE_NAME"
+API_KEY = os.getenv("PANW_AI_SEC_API_KEY")
+
+# Initialize the SDK with your API Key
+aisecurity.init(api_key=API_KEY)
+
+# Configure an AI Profile
+ai_profile = AiProfile(profile_name=AI_PROFILE_NAME)
+
+# Create a Scanner
+scanner = Scanner()
+
+
+async def main():
+    scan_response = await scanner.sync_scan(
+        ai_profile=ai_profile,
+        content=Content(
+            prompt="Questionable User Prompt Text",
+            response="Questionable Model Response Text",
+        ),
+    )
+    # See API documentation for response structure
+    # https://pan.dev/ai-runtime-security/api/scan-sync-request/
+    pprint(scan_response)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+```
+
+## Batch (Asynchronous) Scan Example (asyncio)
+
+API Reference: https://pan.dev/ai-runtime-security/api/scan-async-request/
+
+<!-- source: examples/asyncio/batch_async_scan.py -->
+
+```python
+
+import asyncio
+import os
+from pprint import pprint
+
+import aisecurity
+from aisecurity.generated_openapi_client import AiProfile
+from aisecurity.generated_openapi_client import AsyncScanObject
+from aisecurity.generated_openapi_client import ScanRequest
+from aisecurity.generated_openapi_client import ScanRequestContentsInner
+
+# IMPORTANT: For asyncio, import Scanner from aisecurity.scan.asyncio.scanner
+from aisecurity.scan.asyncio.scanner import Scanner
+
+AI_PROFILE_NAME = "YOUR_AI_PROFILE_NAME"
+API_KEY = os.getenv("PANW_AI_SEC_API_KEY")
+
+# Initialize the SDK with your API Key
+aisecurity.init(api_key=API_KEY)
+
+# Configure an AI Profile
+ai_profile = AiProfile(profile_name=AI_PROFILE_NAME)
+
+# Create a Scanner
+scanner = Scanner()
+
+req_ids = 0
+# Batch (Asyncronous) Scan supports up to 5 Scan Request Objects
+async_scan_objects = [
+    AsyncScanObject(
+        req_id=(req_ids := req_ids + 1),
+        scan_req=ScanRequest(
+            ai_profile=ai_profile,
+            contents=[
+                ScanRequestContentsInner(
+                    prompt="First Questionable User Prompt Text",
+                    response="First Questionable Model Response Text",
+                )
+            ],
+        ),
+    ),
+    AsyncScanObject(
+        req_id=(req_ids := req_ids + 1),
+        scan_req=ScanRequest(
+            ai_profile=ai_profile,
+            contents=[
+                ScanRequestContentsInner(
+                    prompt="Second Questionable User Prompt Text",
+                    response="Second Questionable Model Response Text",
+                )
+            ],
+        ),
+    ),
+]
+
+
+async def main():
+    response = await scanner.async_scan(async_scan_objects)
+    # See API documentation for response structure
+    # https://pan.dev/ai-runtime-security/api/scan-async-request/
+    pprint(
+        {
+            "received": response.received,
+            "scan_id": response.scan_id,
+            "report_id": response.report_id,
+        }
+    )
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+## Scan Results Example (asyncio)
+
+API Reference: https://pan.dev/ai-runtime-security/api/get-scan-results-by-scan-i-ds/
+
+<!-- source: examples/asyncio/scan_results.py -->
+
+```python
+import asyncio
+from pprint import pprint
+
+import aisecurity
+
+# IMPORTANT: For asyncio, import Scanner from aisecurity.scan.asyncio.scanner
+from aisecurity.scan.asyncio.scanner import Scanner
+
+aisecurity.init()
+
+scanner = Scanner()
+
+
+async def main():
+    # See API documentation for response structure
+    # https://pan.dev/ai-runtime-security/api/get-scan-results-by-scan-i-ds/
+    example_scan_id = "020e7c31-0000-4e0d-a2a6-215a0d5c56d9"
+    scan_results = await scanner.query_by_scan_ids(scan_ids=[example_scan_id])
+    pprint(scan_results)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+## Scan Reports Example (asyncio)
+
+API Reference: https://pan.dev/ai-runtime-security/api/get-threat-scan-reports/
+
+<!-- source: examples/asyncio/scan_reports.py -->
+
+```python
+import asyncio
+from pprint import pprint
+
+import aisecurity
+
+# IMPORTANT: For asyncio, import Scanner from aisecurity.scan.asyncio.scanner
+from aisecurity.scan.asyncio.scanner import Scanner
+
+aisecurity.init()
+
+scanner = Scanner()
+
+
+async def main():
+    # See API documentation for response structur
+    # https://pan.dev/ai-runtime-security/api/get-threat-scan-reports/
+    example_report_id = "020e7c31-0000-4e0d-a2a6-215a0d5c56d9"
+    threat_scan_reports = await scanner.query_by_report_ids(
+        report_ids=[example_report_id]
+    )
+    pprint(threat_scan_reports)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+# Error Handling & Exceptions
+
+When the client is unable to fetch the expected response from the API server, a
+subclass of `aisecurity.exceptions.AISecSDKException` is raised.
+
+There are five types of Exceptions defined in `aisecurity/exceptions.py`:
+
+- **AISEC_SERVER_SIDE_ERROR**: Errors returned by the API server. For example, an invalid API key.
+- **AISEC_CLIENT_SIDE_ERROR**: Errors that occur on the client side. For example, a network connection issue.
+- **AISEC_USER_REQUEST_PAYLOAD_ERROR**: Errors related to the user's request payload. For example, an empty scan object.
+- **AISEC_MISSING_VARIABLE**: Errors related to missing variables. For example, missing API key environment variable.
+- **AISEC_SDK_ERROR**: Other uncategorized errors that occur in the SDK.
+
+# Compatability Policy
+
+This package generally follows [SemVer v2](https://semver.org/spec/v2.0.0.html)
+conventions, though certain backwards-incompatible changes may be released as
+minor versions:
+
+1. Changes that only affect static types, without breaking runtime behavior.
+2. Changes to library internals which are technically public but not intended or
+   documented for external use.
+3. Changes that we do not expect to impact the vast majority of users in practice.
+
+We take backwards-compatibility seriously and work hard to ensure you can rely
+on a smooth upgrade experience. The major version number will be consistent with
+API major version.
+
+<!---Protected_by_PANW_Code_Armor_2024 - Y3ByfC9haWZ3L3B5dGhvbi1haXNlY3wxODI3MXxtYWlu --->
