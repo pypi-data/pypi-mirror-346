@@ -1,0 +1,12 @@
+midnight_framework/__init__.py,sha256=FniE7VinKmbx7f8osEnxO1wOjz8lZ9PwjAYPSygMgvM,236
+midnight_framework/cli.py,sha256=_0kAO4komFErS2SqMVkmY6jBXR8zCWfPcJ7mfFtJ64k,669
+midnight_framework/generator.py,sha256=WkCtmYgaRwEklztvli0NYOCewf1wVeabIq3iQ7kyDLU,1353
+midnight_framework/templates/main.py,sha256=XG5c8Da3Sm8ns8WzLMhc4J-u5Mleq2punW-LQpI7Pho,2085
+midnight_framework/templates/Buttons/AboutButtons.py,sha256=mCwau4GkVrKa-3PbktdIkiSi3j25_25EjYk6dswJ_m0,570
+midnight_framework/templates/cogs/about.py,sha256=lHPCAoIMdwynPjadOde5SgojK8mqwl7C9oq9spz_0Ls,1194
+midnight_framework/templates/core/enums.py,sha256=UN20c6ewgj5a5EKK-HlDcWmolcb7VBDcxYCy4C8Q_AY,725
+midnight_framework-0.1.0.dist-info/METADATA,sha256=eGM8pW2q_SWbkqw1IZLeXBcpffqReyAhnXUCm17qa-4,2126
+midnight_framework-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+midnight_framework-0.1.0.dist-info/entry_points.txt,sha256=jly5cJb20IX1VwJQYRmwWWB1lmgWPB7xoL5Zyqg2QPQ,57
+midnight_framework-0.1.0.dist-info/top_level.txt,sha256=FWxBD91vBC0w4BuU67SRvh9ZmaMpAKRRvG8qG8e2Ij0,19
+midnight_framework-0.1.0.dist-info/RECORD,,
