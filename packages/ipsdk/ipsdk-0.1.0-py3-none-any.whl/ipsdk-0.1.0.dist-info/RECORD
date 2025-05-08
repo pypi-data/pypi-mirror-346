@@ -1,0 +1,12 @@
+ipsdk/__init__.py,sha256=BI6MxUXNLyvUTkrJfmsY940B24CRGUt-PJ_2vHoc5lw,1356
+ipsdk/connection.py,sha256=soJQAMAJr_Kf_GTjBpcBBEqteEbwdLWatZNsHALhZmk,26143
+ipsdk/gateway.py,sha256=_A1n_hc16U6DbaBpAfbG4t-X6oH0m5KNjbXuHt_Dqag,4536
+ipsdk/jsonutils.py,sha256=2U4oVoWKDrt7bMU12lIpkIfFq6HbMRPwUFeQW5cKMqE,877
+ipsdk/logger.py,sha256=uJH0pPb8MTN0R3lpc6lKL9_kHi4WYDH2lBlSSFz9C_M,863
+ipsdk/metadata.py,sha256=HHZyLGneH_4mUCguXIQifu3TE3q9reIbr3CV987bY3g,182
+ipsdk/platform.py,sha256=XRplFYiLKV_6H66eaTwXnSQcEZ1_nGpnkcO67qupSHw,7165
+ipsdk-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ipsdk-0.1.0.dist-info/METADATA,sha256=lkAQtRAOWCQ1ZnMpylJ1ht4Ql2Fl_h_O8xGDPVrZb5s,8678
+ipsdk-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+ipsdk-0.1.0.dist-info/top_level.txt,sha256=9ad775h_4l04s3OwjzdmgnNqrDN28HWd6F944L3Qyts,6
+ipsdk-0.1.0.dist-info/RECORD,,
