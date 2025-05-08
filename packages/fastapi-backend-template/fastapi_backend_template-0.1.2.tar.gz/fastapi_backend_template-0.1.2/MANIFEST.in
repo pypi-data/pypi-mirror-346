@@ -1,0 +1,11 @@
+include LICENSE
+include README.md
+include SCAFFOLD-README.md
+include pyproject.toml
+
+# 包含FastAPI后端模板文件
+recursive-include fastapi_backend_template/template *
+
+# 排除构建文件和临时文件
+global-exclude *.py[cod] __pycache__/ *.so .*.swp
+global-exclude .git* .DS_Store 
