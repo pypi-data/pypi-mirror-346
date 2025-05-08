@@ -1,0 +1,66 @@
+{
+  "owners": {
+    "group:default": {
+      "name": "group:default",
+      "priority": 100,
+      "nodes": {},
+      "inherits": [],
+      "wildcards": []
+    },
+    "admin": {
+      "name": "admin",
+      "priority": 100,
+      "nodes": {
+        "foo.bar.baz": 5
+      },
+      "inherits": [
+        "group:default"
+      ],
+      "wildcards": []
+    },
+    "cithun": {
+      "name": "cithun",
+      "priority": null,
+      "nodes": {
+        "foo.bar.baz.qux": 7,
+        "command": 7,
+        "command.test": 7,
+        "command.test.sub": 7,
+        "command.test1": 7,
+        "command.test1.sub1": 7
+      },
+      "inherits": [
+        "group:default",
+        "admin"
+      ],
+      "wildcards": [
+        "command"
+      ]
+    }
+  },
+  "nodes": {
+    "foo": [
+      "foo.bar"
+    ],
+    "foo.bar": [
+      "foo.bar.baz"
+    ],
+    "foo.bar.baz": [
+      "foo.bar.baz.qux"
+    ],
+    "foo.bar.baz.qux": [],
+    "command": [
+      "command.test",
+      "command.test1"
+    ],
+    "command.test": [
+      "command.test.sub"
+    ],
+    "command.test.sub": [],
+    "command.test1": [
+      "command.test1.sub1"
+    ],
+    "command.test1.sub1": []
+  },
+  "depends": {}
+}

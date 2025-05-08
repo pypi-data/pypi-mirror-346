@@ -1,0 +1,56 @@
+[project]
+name = "arclet-cithun"
+version = "0.2.0"
+description = "Permission system"
+authors = [
+    { name = "RF-Tar-Railt", email = "rf_tar_railt@qq.com" },
+]
+dependencies = [
+    "typing-extensions>=4.6.3",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm.build]
+includes = [
+    "src/",
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "isort>=5.13.2",
+    "black>=24.2.0",
+]
+
+[tool.black]
+line-length = 120
+target-version = [
+    "py39",
+    "py310",
+    "py311",
+]
+include = "\\.pyi?$"
+extend-exclude = ""
+
+[tool.isort]
+profile = "black"
+line_length = 120
+skip_gitignore = true
+extra_standard_library = [
+    "typing_extensions",
+]
+
+[tool.pyright]
+pythonVersion = "3.9"
+pythonPlatform = "All"
+typeCheckingMode = "basic"
+disableBytesTypePromotions = true
