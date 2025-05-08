@@ -1,0 +1,2 @@
+[console_scripts]
+guidemarks = guidemarks.__main__:main

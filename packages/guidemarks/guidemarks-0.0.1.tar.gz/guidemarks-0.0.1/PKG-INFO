@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: guidemarks
+Version: 0.0.1
+Summary: A guidemarks package
+Home-page: https://github.com/NVIDIA/guidemarks
+Author: Dmitry Chichkov
+Author-email: dchichkov@nvidia.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# guidemarks
+
+A minimal Python package, as initial test.
+
+## Installation
+
+```bash
+pip install guidemarks
+```
+
+(Or clone the repo and run `pip install .` or `pip install -e .` for development mode.

@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+guidemarks/__init__.py
+guidemarks.egg-info/PKG-INFO
+guidemarks.egg-info/SOURCES.txt
+guidemarks.egg-info/dependency_links.txt
+guidemarks.egg-info/entry_points.txt
+guidemarks.egg-info/top_level.txt
