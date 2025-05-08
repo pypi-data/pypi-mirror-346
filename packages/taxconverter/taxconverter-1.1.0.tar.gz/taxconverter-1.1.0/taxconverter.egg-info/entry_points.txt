@@ -1,0 +1,2 @@
+[console_scripts]
+taxconverter = taxconverter.__main__:main

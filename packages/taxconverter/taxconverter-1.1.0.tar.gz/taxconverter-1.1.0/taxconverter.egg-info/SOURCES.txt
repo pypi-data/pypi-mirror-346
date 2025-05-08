@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+taxconverter/__init__.py
+taxconverter/__main__.py
+taxconverter.egg-info/PKG-INFO
+taxconverter.egg-info/SOURCES.txt
+taxconverter.egg-info/dependency_links.txt
+taxconverter.egg-info/entry_points.txt
+taxconverter.egg-info/requires.txt
+taxconverter.egg-info/top_level.txt
