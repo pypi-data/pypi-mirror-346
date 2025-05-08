@@ -1,0 +1,17 @@
+./.gitignore,sha256=cOh-K2WhrUyBaqanxvvwFS4qQanAeyLUCxemB41LR5I,147
+./CONTRIBUTING.md,sha256=pcBknMBnUFss6RFC_oXQmdr21u8UV5LJzarMWyvvjLI,2426
+./LICENSE,sha256=0OdzO0UVVCOLLHxUDPVJvxni94ODoZYPz5HR8JF-pJg,1064
+./PKG-INFO,sha256=EGz_oA2YaYqkBu03FYpkATbsJ3GhQsuglsBplAAzP58,7214
+./README.md,sha256=dVGEZtHlZRaEi9zUaPY2W1DGjD9CtXygUQ5CjbWs85o,4787
+./bible_api.py,sha256=za_DXLvC8TAkoMZiqov2W4UAcaSdXw1eFpmTMzhzj3k,8796
+./bible_data.py,sha256=ThuwOurRdn7QsSRruQuW3csT5igsxmGPXwBK8OM4gjc,20468
+./bible_server.py,sha256=5PmC3mMiV4BJTeSYVKfSWUZJuU5wDYuQp3Dno6f3TDg,9590
+./pyproject.toml,sha256=MSYgeYrnYsU8VJ5PyL0U9wjewTYollW4-F2TGLUvENE,1483
+./tests/test_bible_api.py,sha256=FbbGodjNK0xUWwbGnMdT6c-NND91oSg7ggdX7CkIJHA,17470
+./tests/test_bible_data.py,sha256=xvj4r6-BWipjXd31SlknQApQRoNYnrP4qCW3_MldNfg,5794
+./tests/test_bible_server.py,sha256=Y-JPL9G4ovoduCQp06rNoZc82tkr4HnXJh8PVO1N66I,14541
+bible_mcp-1.0.0.dist-info/METADATA,sha256=EGz_oA2YaYqkBu03FYpkATbsJ3GhQsuglsBplAAzP58,7214
+bible_mcp-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bible_mcp-1.0.0.dist-info/entry_points.txt,sha256=4uRmjTRQwDC1jpXWGYi_IjvlJC2pPTNgJCtJU0gQnxI,51
+bible_mcp-1.0.0.dist-info/licenses/LICENSE,sha256=0OdzO0UVVCOLLHxUDPVJvxni94ODoZYPz5HR8JF-pJg,1064
+bible_mcp-1.0.0.dist-info/RECORD,,
