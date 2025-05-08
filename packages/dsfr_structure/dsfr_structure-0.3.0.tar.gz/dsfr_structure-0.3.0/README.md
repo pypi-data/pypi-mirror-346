@@ -1,0 +1,63 @@
+# Documentation du Package d'Extensions MkDocs DSFR
+
+Ce document fournit une vue d'ensemble complète du package d'extensions MkDocs, y compris les détails sur chaque
+extension, la structure du projet, l'utilisation de Poetry, et les instructions pour l'installation et le développement.
+
+## Structure du Projet
+
+- `dsfr_structure/`: Dossier racine du package.
+  - `extension/`: Contient les différentes extensions.
+    - `blockquote/`: Extension pour les blockquotes.
+      - `__init__.py`: Contient la logique de l'extension de blockquote.
+    - `table/`: Extension pour les tables.
+      - `__init__.py`: Contient la logique de l'extension de table.
+    - `all_extensions.py`: Fichier pour enregistrer toutes les extensions.
+  - `tests/`: Contient les tests unitaires pour les extensions.
+  - `pyproject.toml`: Fichier de configuration Poetry pour le package.
+
+## Extensions
+
+### DsfrBlockQuoteExtension
+
+- **Fonctionnalité :** Permet la transformation des citations
+  en [blocks de mise en exergue du DSFR](https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/mise-en-exergue)
+
+### DsfrTableExtension
+
+- **Fonctionnalité :** Permet la transformation des tableaux
+  en [tableaux du DSFR](https://www.systeme-de-design.gouv.fr/elements-d-interface/composants/tableau)
+
+## Utilisation de Poetry
+
+- **Commandes Principales :**
+  - `poetry install`: Pour installer les dépendances.
+  - `poetry build`: Pour construire le package.
+  - `poetry publish`: Pour publier le package sur PyPI.
+
+## Installation pour le Développement
+
+- **Clonez le dépôt :** [Accès au dépôt](https://gitlab-forge.din.developpement-durable.gouv.fr/pub/numeco/mkdocs-dsfr-plugin-structure).
+- **Installation Locale :** Utilisez `pip install -e .` pour installer le package en mode éditable pour le rendre
+  disponible localement.
+
+## Tests
+
+- **Exécution des Tests :** Comment exécuter les tests unitaires avec `poetry run test`
+  ou `python -m unittest discover -s tests`.
+
+## Notes de version
+
+### 0.2.0
+
+- Accordéons avec la syntaxe :
+
+```
+/// accordion | Titre
+Contenu
+///
+```
+
+### 0.1.0
+
+- Version initiale
+- Tableaux DSFR et blocs de citation
