@@ -1,0 +1,12 @@
+{
+    "entity": {
+        "sensor": {
+            "ess_state": {
+                "state": {
+                    "charge": "Muirear\u00fa",
+                    "discharge": "Ag urscaoileadh"
+                }
+            }
+        }
+    }
+}
