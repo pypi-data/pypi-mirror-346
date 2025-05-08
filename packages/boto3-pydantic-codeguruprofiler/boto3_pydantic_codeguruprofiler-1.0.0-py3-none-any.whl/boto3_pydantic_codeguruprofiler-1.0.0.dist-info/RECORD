@@ -1,0 +1,7 @@
+boto3_pydantic_codeguruprofiler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_codeguruprofiler/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_codeguruprofiler/codeguruprofiler_classes.py,sha256=SuZEarMxzSW59FvfiAdu9hdEniF9c8uhiBrm3aCHvrY,11264
+boto3_pydantic_codeguruprofiler/codeguruprofiler_constants.py,sha256=FDB_8bPaMXiTYWVkVW4Dg_UBRJaVvstrKjWcuqUUiFY,1193
+boto3_pydantic_codeguruprofiler-1.0.0.dist-info/METADATA,sha256=dDsI0UGCkKuFMArH-IUV_3BICdnENuabl8yjlchDMaQ,1445
+boto3_pydantic_codeguruprofiler-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_codeguruprofiler-1.0.0.dist-info/RECORD,,
