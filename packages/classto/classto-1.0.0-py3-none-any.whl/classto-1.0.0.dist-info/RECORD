@@ -1,0 +1,11 @@
+classto/__init__.py,sha256=jpU6aBrG6gaa1lHlfL7UpS5RltKzfqPfHMKEOFVqh0M,62
+classto/image_labeler.py,sha256=KRs4x9Hd4ROygX83tTLxFIcXOCTNnPDlzwuHD0a8sfI,2308
+classto/main.py,sha256=gc50wiLuct4_5nHoIn9bc3iavDMWJO53WfSAQErHh2w,4289
+classto/utils.py,sha256=3Kh2S55J3NfRtQ9xNMnO_DL4IaM7j70tney5b1fFrS8,3183
+classto/static/favicon.png,sha256=zKQtWYUIcy_j9F0Vfay9kk9Xh0UR48-zAOZKL1wNFPc,422578
+classto/templates/index.html,sha256=A_RVtArIu021S_SFlGvUZWM8DN8oNvBuu6JmVpf8fuc,6191
+classto-1.0.0.dist-info/licenses/LICENSE,sha256=HxPBlT4sSfEgRBrX0jZd8WTfM0c31VFgnLaCEWzGMZc,1122
+classto-1.0.0.dist-info/METADATA,sha256=85qXnnfO7pmPsgGOcBoDO61096Kce-mP54kF1fFetTA,4278
+classto-1.0.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+classto-1.0.0.dist-info/top_level.txt,sha256=PlOqkVrmnqYb0izj1YAmtcztWRGm2TENWG--DZKWpko,8
+classto-1.0.0.dist-info/RECORD,,
