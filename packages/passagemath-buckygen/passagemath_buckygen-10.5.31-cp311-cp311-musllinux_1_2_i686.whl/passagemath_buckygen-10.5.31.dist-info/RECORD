@@ -1,0 +1,8 @@
+sage/all__sagemath_buckygen.py,sha256=n7Na4NcVyenPndgVYCnmn9wEybVaabSHZGQlZF-isbE,88
+sage/libs/all__sagemath_buckygen.py,sha256=ksfDYHzh0J3zMtN6-OUXrA9bjzUyhpTsr9KLWzpf8WA,47
+sage/libs/buckygen.cpython-311-i386-linux-musl.so,sha256=XdSTMppv68hibbUiX4JybwWeYG4uaE3dLD2HNyWrWNY,59124
+sage_wheels/bin/buckygen,sha256=2IomN54FUfG8je5aM-WTr965R8cDdRKfIKu2F33cX2g,720280
+passagemath_buckygen-10.5.31.dist-info/METADATA,sha256=seo7JWcmrYxfZjWf6nczlPD4gPLvdCBqLEBhMDBzLug,5082
+passagemath_buckygen-10.5.31.dist-info/WHEEL,sha256=GqfKL1RwSE3mtls--bWyQUnoqXIB9Hgwxr0AppgmH9g,110
+passagemath_buckygen-10.5.31.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_buckygen-10.5.31.dist-info/RECORD,,
