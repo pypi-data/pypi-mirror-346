@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: hello-world-example-luongtdt
+Version: 0.1.0
+Summary: A simple Hello World Python package
+Author-email: Luong Tran <tamluong.td@gmail.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Hello World Example
+
+This is a basic Python package that returns a greeting string.
