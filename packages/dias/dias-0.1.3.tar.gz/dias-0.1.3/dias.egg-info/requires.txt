@@ -1,0 +1,5 @@
+astor>=0.8.1
+pandas==1.5.1
+numpy==1.23.5
+nbformat==5.7.0
+ipython==8.7.0
