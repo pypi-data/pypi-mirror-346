@@ -1,0 +1,5 @@
+blocksat-cli==2.5.1
+pyside6==6.7.3
+
+[daemon]
+dbus-python

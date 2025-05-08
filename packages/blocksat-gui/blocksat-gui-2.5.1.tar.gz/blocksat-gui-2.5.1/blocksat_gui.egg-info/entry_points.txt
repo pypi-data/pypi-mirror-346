@@ -1,0 +1,3 @@
+[console_scripts]
+blocksat-gui = blocksatgui.main:main
+blocksatd = blocksatgui.blocksatd:main
