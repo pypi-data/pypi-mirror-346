@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: django-contact-form-gv
+Version: 0.9.1
+Summary: Django Contact Form using class based views.
+Home-page: https://github.com/madisona/django-contact-form
+Author: Aaron Madison
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+License-File: LICENSE
+Requires-Dist: django>=2.2
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+Django Contact Forms Generic Views
+==================================
+
+An Extensible Contact Form.
+Based entirely on James Bennett's django-contact-form:
+https://bitbucket.org/ubernostrum/django-contact-form/
+
+
+Installation
+------------
+`pip install django-contact-form-gv`
+
+
+Version 0.6.0 and above requires Django 1.11+ and drops support for python 2
+Version 0.5.0 and above requires Django 1.8+ because it uses the newly added "reply_to" field in `django.core.mail.message/EmailMessage`
+
+Previous versions Utilize Django's class based views and require Django >= 1.3.
