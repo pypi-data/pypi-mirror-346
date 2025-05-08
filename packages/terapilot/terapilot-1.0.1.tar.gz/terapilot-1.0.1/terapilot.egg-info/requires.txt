@@ -1,0 +1,6 @@
+cohere>=4.0
+requests>=2.25
+python-dotenv>=0.19
+
+[:python_version < "3.4"]
+pathlib>=1.0

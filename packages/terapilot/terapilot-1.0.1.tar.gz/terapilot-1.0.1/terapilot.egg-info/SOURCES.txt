@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+terapilot/__init__.py
+terapilot/cli.py
+terapilot/utils.py
+terapilot.egg-info/PKG-INFO
+terapilot.egg-info/SOURCES.txt
+terapilot.egg-info/dependency_links.txt
+terapilot.egg-info/entry_points.txt
+terapilot.egg-info/requires.txt
+terapilot.egg-info/top_level.txt
