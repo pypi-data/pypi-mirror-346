@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+fermentomap/__init__.py
+fermentomap/core.py
+fermentomap/parser.py
+fermentomap.egg-info/PKG-INFO
+fermentomap.egg-info/SOURCES.txt
+fermentomap.egg-info/dependency_links.txt
+fermentomap.egg-info/requires.txt
+fermentomap.egg-info/top_level.txt
+tests/test_core.py
