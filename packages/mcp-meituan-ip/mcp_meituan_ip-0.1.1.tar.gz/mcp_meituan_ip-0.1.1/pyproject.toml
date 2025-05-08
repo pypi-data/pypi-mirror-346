@@ -1,0 +1,20 @@
+[project]
+name = "mcp-meituan-ip"
+version = "0.1.1"
+description = "这是一个根据美团接口查询位置的mcp服务器"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+ "fastapi>=0.115.12",
+ "mcp>=1.6.0",
+ "requests>=2.32.3",
+]
+[[project.authors]]
+name = "123"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+mcp-meituan-ip = "mcp_meituan_ip:main"
