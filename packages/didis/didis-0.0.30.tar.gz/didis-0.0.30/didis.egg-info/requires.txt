@@ -1,0 +1,8 @@
+loguru
+argh
+itkdb
+pyyaml
+openpyxl
+pandas
+docxtpl
+docx2pdf
