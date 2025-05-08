@@ -1,0 +1,2 @@
+[console_scripts]
+char-similar-z = char_similar_z:main
