@@ -1,0 +1,135 @@
+Metadata-Version: 2.4
+Name: pynanolab
+Version: 3.0.7
+Summary: A data analysis and visualization software
+Home-page: https://github.com/decacent/PyNanoLab
+Author: Shaochuang Liu
+Author-email: shaochuangliu@gmail.com
+License: MIT
+Keywords: Data analysis
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: Academic Free License (AFL)
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Framework :: Matplotlib
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: PySide6
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: npTDMS
+Requires-Dist: sympy
+Requires-Dist: requests
+Requires-Dist: PyWaveLets
+Requires-Dist: lmfit
+Requires-Dist: pandas
+Requires-Dist: seaborn
+Requires-Dist: openpyxl
+Requires-Dist: pyqtgraph
+Requires-Dist: numexpr
+Requires-Dist: pyinstaller
+Requires-Dist: spectate
+Requires-Dist: traitlets
+Requires-Dist: psutil
+Requires-Dist: tftb
+Requires-Dist: chardet
+Requires-Dist: tabulate
+Requires-Dist: scikit-learn
+Requires-Dist: tables
+Requires-Dist: statsmodels
+Requires-Dist: pybaselines
+Requires-Dist: hdbscan
+Requires-Dist: untangle
+Requires-Dist: configobj
+Requires-Dist: deepdiff
+Requires-Dist: qtconsole
+Requires-Dist: pyshortcuts
+Requires-Dist: spikeextractors
+Requires-Dist: pyts
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+## PyNanoLab is an all-in-one GUI software for data analysis and visualization, expecially for nanopore analysis.
+
+![PyNanoLab UI](./assets/1.png)
+## Installition
+In the version 3.X, binary installer (*.exe) is not provided anymore owing to the complex workflow and lost feature and performance.
+
+We recommend you use the pip install to obtain all the advanced features.
+
+### System Required
+
+Firstly, you should have already installed the python or conda virtual environment in your system.
+
+[Miniconda](https://docs.conda.io/en/latest/miniconda.html) is recommended. And you should add the conda to your system environment variable.
+
+In windows, you also need to install a terminal. [git-windows](https://git-scm.com/download/win) or [windows-terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701) is recommended.
+
+### 1. Create a new python virtual environment
+
+PyNanoLab depend on th PySide6 to create its GUI. And it's not compatible with the other PyQt package. So we highly recommend to install pynanolab to a new python virtual environment.
+
+use following command in a terminal:
+```sh
+conda create -n pnl python=3.13.2  
+source activate
+conda activate pnl # activate the pnl environment.
+conda install numpy # optional, install the numpy-MKL to speed up the software.
+```
+Then, you should install [Pytorch](https://pytorch.org/) on this environment (Any version, you should select a version, GPU verison is more better).  
+For example:
+``` sh
+# CPU 版本
+pip install torch torchvision torchaudio
+# 或者自行安装GPU版本
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+```
+! warning: at windows, you should install hdbscan by manually compiling.
+For example using conda
+```shell
+conda install hdbscan -c conda-forge
+```
+If using pip, you should have c/c++ compiler on your system.
+Now, you have created a new python virtual environment and activated it.
+The name is pnl, and you can change the name to anything you want, and the python  version is specified to >=3.11. (We recommend >=3.13.x)
+
+### 2. Install the pynanolab by pip
+After version 3.x, we provide a pip package, you can directly install as general python packages.
+
+If you can't get the package from pip on your system, such as the Apple M1 or other Linux. You can tyr to search and download the wheel file from our [Github release](https://github.com/decacent/PyNanoLab/releases) for your special OS.
+```sh
+# online install
+pip install pynanolab
+```
+Use the above command, the pynanolab will be installed automaticly. And a entry fille will be created in the **Scripts** folder of the "pnl" virtual environment. In windows is named "pynanolab.exe" and "pynanolab" in Linux and MacOSX.
+
+Then, you can directily conduct the following command to open it in a terminal with pnl virtual environment activated.
+```sh
+pynanolab
+```
+If you want to create a shortcut or a desktop entry. Use the following command:
+```
+pnl-shortcut
+```
+
+### 3. Upgrade pynanolab
+If you use the pip installtion. You can upgrade the packages manually using the following command:
+```
+pip install --upgrade pynanolab
+```
+
+For binary installation, such as the .exe in windows. If we don't provide a new exe file in the [sourceforge](https://sourceforge.net/projects/pynano/files/). You can manually download the *.whl file for your system from pypi or GitHub. Then, you can unzip the *.whl file use any compressed software (such as 7zip in Windows or unzip in Linux). And you will find the pynanolab folder in the archive. Delete the same "pynanolab" folder in the PATH that you installed the PyNanoLab and replace with the new package in the archive.
