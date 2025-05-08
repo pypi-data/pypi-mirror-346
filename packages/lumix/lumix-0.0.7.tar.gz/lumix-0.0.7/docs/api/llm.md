@@ -1,0 +1,3 @@
+::: lumix.llm.completion.openai
+
+----
