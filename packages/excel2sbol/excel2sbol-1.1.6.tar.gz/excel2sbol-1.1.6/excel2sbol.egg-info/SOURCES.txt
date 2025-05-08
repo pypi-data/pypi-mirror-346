@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+excel2sbol.egg-info/PKG-INFO
+excel2sbol.egg-info/SOURCES.txt
+excel2sbol.egg-info/dependency_links.txt
+excel2sbol.egg-info/not-zip-safe
+excel2sbol.egg-info/requires.txt
+excel2sbol.egg-info/top_level.txt
+tests/test_column_functions.py
+tests/test_converter_function.py
+tests/test_helper_functions.py
+tests/test_initialise_functions.py
