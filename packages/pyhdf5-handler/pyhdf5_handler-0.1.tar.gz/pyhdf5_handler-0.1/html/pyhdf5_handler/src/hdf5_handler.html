@@ -1,0 +1,1731 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.6">
+<title>pyhdf5_handler.src.hdf5_handler API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>pyhdf5_handler.src.hdf5_handler</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="pyhdf5_handler.src.hdf5_handler.add_hdf5_sub_group"><code class="name flex">
+<span>def <span class="ident">add_hdf5_sub_group</span></span>(<span>hdf5, subgroup=None)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_hdf5_sub_group(hdf5, subgroup=None):
+    &#34;&#34;&#34;
+    Create a new subgroup in a HDF5 object
+
+    Parameters
+    ----------
+    
+    hdf5 : h5py.File
+        An hdf5 object opened with open_hdf5()
+    
+    subgroup: str
+        Path to a subgroub that must be created
+
+    Returns
+    -------
+    
+    hdf5 :
+        the HDF5 object.
+
+    Examples
+    --------
+    
+    &gt;&gt;&gt; hdf5=smash.tools.hdf5_handler.open_hdf5(&#34;./model_subgroup.hdf5&#34;, replace=True)  
+    &gt;&gt;&gt; hdf5=smash.tools.hdf5_handler.add_hdf5_sub_group(hdf5, subgroup=&#34;mygroup&#34;)  
+    &gt;&gt;&gt; hdf5.keys()  
+    &gt;&gt;&gt; hdf5.attrs.keys()  
+    
+    &#34;&#34;&#34;
+    if subgroup is not None:
+        if subgroup == &#34;&#34;:
+            subgroup = &#34;./&#34;
+
+        hdf5.require_group(subgroup)
+
+    return hdf5</code></pre>
+</details>
+<div class="desc"><p>Create a new subgroup in a HDF5 object</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>hdf5</code></strong> :&ensp;<code>h5py.File</code></dt>
+<dd>An hdf5 object opened with open_hdf5()</dd>
+<dt><strong><code>subgroup</code></strong> :&ensp;<code>str</code></dt>
+<dd>Path to a subgroub that must be created</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>hdf5 :</code></dt>
+<dd>the HDF5 object.</dd>
+</dl>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; hdf5=smash.tools.hdf5_handler.open_hdf5(&quot;./model_subgroup.hdf5&quot;, replace=True)  
+&gt;&gt;&gt; hdf5=smash.tools.hdf5_handler.add_hdf5_sub_group(hdf5, subgroup=&quot;mygroup&quot;)  
+&gt;&gt;&gt; hdf5.keys()  
+&gt;&gt;&gt; hdf5.attrs.keys()
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.close_all_hdf5_file"><code class="name flex">
+<span>def <span class="ident">close_all_hdf5_file</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def close_all_hdf5_file():
+
+    for obj in gc.get_objects():   # Browse through ALL objects
+        if isinstance(obj, h5py.File):   # Just HDF5 files
+            try:
+                print(f&#34;try closing {obj}&#34;)
+                obj.close()
+            except:
+                pass  # Was already closed</code></pre>
+</details>
+<div class="desc"></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.dump_dict_to_hdf5"><code class="name flex">
+<span>def <span class="ident">dump_dict_to_hdf5</span></span>(<span>hdf5, dictionary)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dump_dict_to_hdf5(hdf5, dictionary):
+    &#34;&#34;&#34;
+    
+    dump a dictionary to an hdf5 file
+
+    Parameters
+    ----------
+    
+    hdf5 : h5py.File
+        an hdf5 object
+    
+    dictionary : dict
+        a custom python dictionary
+    
+    &#34;&#34;&#34;
+    if isinstance(dictionary, dict):
+        for attr, value in dictionary.items():
+            # print(&#34;looping:&#34;,attr,value)
+            try:
+
+                attribute_name = str(attr)
+                for character in &#39;/ &#39;:
+                    attribute_name = attribute_name.replace(
+                        character, &#39;_&#39;)
+
+                if isinstance(value, dict):
+                    # print(&#34;---&gt; dictionary: &#34;,attr, value)
+
+                    hdf5 = add_hdf5_sub_group(hdf5, subgroup=attribute_name)
+                    dump_dict_to_hdf5(hdf5[attribute_name], value)
+
+                else:
+
+                   hdf5_dataset_creator(hdf5,attribute_name,value)
+                   
+            except:
+
+                raise ValueError(
+                    f&#34;Unable to save attribute {str(attr)} with value {value}&#34;)
+
+    else:
+
+        raise ValueError(f&#34;{dictionary} must be a instance of dict.&#34;)</code></pre>
+</details>
+<div class="desc"><p>dump a dictionary to an hdf5 file</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>hdf5</code></strong> :&ensp;<code>h5py.File</code></dt>
+<dd>an hdf5 object</dd>
+<dt><strong><code>dictionary</code></strong> :&ensp;<code>dict</code></dt>
+<dd>a custom python dictionary</dd>
+</dl></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.get_hdf5_item"><code class="name flex">
+<span>def <span class="ident">get_hdf5_item</span></span>(<span>hdf5_instance=None, location='./', item=None, search_attrs=False)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_hdf5_item(hdf5_instance=None, location=&#34;./&#34;, item=None, search_attrs=False):
+    &#34;&#34;&#34;
+    
+    Get a custom item in an hdf5file
+
+    Parameters
+    ----------
+
+    hdf5_instance : h5py.File
+        an instance of an hdf5
+    
+    location : str
+        path inside the hdf5 where the attribute is stored. If item is None, item is set to basename(location)
+    
+    item: str
+        item name
+    
+    search_attrs: bool
+        Default is False. If True, the function will search in the item in the attribute first.
+
+    Return
+    ------
+    
+    return : custom value. can be an hdf5 object (group), an numpy array, a string, a float, an int ...
+
+    Examples
+    --------
+    
+    get the dataset &#39;dataset&#39;  
+    &gt;&gt;&gt; dataset=hdf5_handler.get_hdf5_item(&#34;./multi_model.hdf5&#34;,location=&#34;path/in/hdf5/dataset&#34;)  
+    
+    &#34;&#34;&#34;
+
+    if item is None and isinstance(location, str):
+        head, tail = os.path.split(location)
+        if len(tail) &gt; 0:
+            item = tail
+        location = head
+
+    if not isinstance(item, str):
+        print(f&#34;Bad search item:{item}&#34;)
+        return None
+
+        return None
+
+    # print(f&#34;Getting item &#39;{item}&#39; at location &#39;{location}&#39;&#34;)
+    hdf5 = hdf5_instance[location]
+
+    # first search in the attribute
+    if search_attrs:
+        list_attribute = hdf5.attrs.keys()
+        if item in list_attribute:
+            return hdf5.attrs[item]
+
+    # then search in groups and dataset
+    list_keys = hdf5.keys()
+    if item in list_keys:
+
+        hdf5_item = hdf5[item]
+
+        # print(&#34;Got Item &#34;, hdf5_item)
+
+        if str(type(hdf5_item)).find(&#34;group&#34;) != -1:
+            
+            if item == &#39;ndarray_ds&#39;:
+
+                return _read_ndarray_datastructure(hdf5)
+            
+            else:
+                
+                returned_dict = read_hdf5_as_dict(hdf5_item)
+                
+                return returned_dict
+
+        elif str(type(hdf5_item)).find(&#34;dataset&#34;) != -1:
+            
+            if item in hdf5.attrs.keys():
+                expected_type=hdf5.attrs[item]
+                values=hdf5_read_dataset(hdf5_item,expected_type)
+            else:
+                values=hdf5_item[:]
+
+            return values
+
+        else:
+
+            return hdf5_item
+
+    else:
+
+        return None</code></pre>
+</details>
+<div class="desc"><p>Get a custom item in an hdf5file</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>hdf5_instance</code></strong> :&ensp;<code>h5py.File</code></dt>
+<dd>an instance of an hdf5</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path inside the hdf5 where the attribute is stored. If item is None, item is set to basename(location)</dd>
+<dt><strong><code>item</code></strong> :&ensp;<code>str</code></dt>
+<dd>item name</dd>
+<dt><strong><code>search_attrs</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Default is False. If True, the function will search in the item in the attribute first.</dd>
+</dl>
+<h2 id="return">Return</h2>
+<p>return : custom value. can be an hdf5 object (group), an numpy array, a string, a float, an int &hellip;</p>
+<h2 id="examples">Examples</h2>
+<p>get the dataset 'dataset'
+</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; dataset=hdf5_handler.get_hdf5_item(&quot;./multi_model.hdf5&quot;,location=&quot;path/in/hdf5/dataset&quot;)
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.get_hdf5file_attribute"><code class="name flex">
+<span>def <span class="ident">get_hdf5file_attribute</span></span>(<span>path_to_hdf5='', location='./', attribute=None, wait_time=0)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_hdf5file_attribute(path_to_hdf5=str(), location=&#34;./&#34;, attribute=None, wait_time=0):
+    &#34;&#34;&#34;
+    Get the value of an attribute in the hdf5file
+
+    Parameters
+    ----------
+    
+    path_to_hdf5 : str
+        the path to the hdf5file
+    
+    location : str
+        path inside the hdf5 where the attribute is stored
+    
+    attribute: str
+        attribute name
+    
+    wait_time: int
+        If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won&#39;t be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.
+
+    Return
+    --------
+    
+    return_attribute : the value of the attribute
+
+    Examples
+    --------
+    
+    get an attribute  
+    &gt;&gt;&gt; attribute=hdf5_handler.get_hdf5_attribute(&#34;./multi_model.hdf5&#34;,attribute=my_attribute_name)  
+    
+    &#34;&#34;&#34;
+
+    hdf5_base = open_hdf5(path_to_hdf5, read_only=True, wait_time=wait_time)
+
+    if hdf5_base is None:
+        return None
+
+    hdf5 = hdf5_base[location]
+
+    return_attribute = hdf5.attrs[attribute]
+
+    hdf5_base.close()
+
+    return return_attribute</code></pre>
+</details>
+<div class="desc"><p>Get the value of an attribute in the hdf5file</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>path_to_hdf5</code></strong> :&ensp;<code>str</code></dt>
+<dd>the path to the hdf5file</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path inside the hdf5 where the attribute is stored</dd>
+<dt><strong><code>attribute</code></strong> :&ensp;<code>str</code></dt>
+<dd>attribute name</dd>
+<dt><strong><code>wait_time</code></strong> :&ensp;<code>int</code></dt>
+<dd>If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won't be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.</dd>
+</dl>
+<h2 id="return">Return</h2>
+<p>return_attribute : the value of the attribute</p>
+<h2 id="examples">Examples</h2>
+<p>get an attribute
+</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; attribute=hdf5_handler.get_hdf5_attribute(&quot;./multi_model.hdf5&quot;,attribute=my_attribute_name)
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.get_hdf5file_dataset"><code class="name flex">
+<span>def <span class="ident">get_hdf5file_dataset</span></span>(<span>path_to_hdf5='', location='./', dataset=None, wait_time=0)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_hdf5file_dataset(path_to_hdf5=str(), location=&#34;./&#34;, dataset=None, wait_time=0):
+    &#34;&#34;&#34;
+    Get the value of an attribute in the hdf5file
+
+    Parameters
+    ----------
+    
+    path_to_hdf5 : str
+        the path to the hdf5file
+    
+    location : str
+        path inside the hdf5 where the attribute is stored
+    
+    dataset: str
+        dataset name
+    
+    wait_time: int
+        If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won&#39;t be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.
+
+    Return
+    --------
+    
+    return_dataset : the value of the attribute
+
+    Examples
+    --------
+    
+    get a dataset  
+    &gt;&gt;&gt; dataset=hdf5_handler.get_hdf5_dataset(&#34;./multi_model.hdf5&#34;,dataset=my_dataset_name)  
+    
+    &#34;&#34;&#34;
+
+    hdf5_base = open_hdf5(path_to_hdf5, read_only=True, wait_time=wait_time)
+
+    if hdf5_base is None:
+        return None
+
+    hdf5 = hdf5_base[location]
+    
+    if dataset in hdf5.attrs.keys():
+        expected_type=hdf5.attrs[dataset]
+        return_dataset=hdf5_read_dataset(hdf5,expected_type)
+        
+    else:
+        return_dataset = hdf5[dataset][:]
+
+    hdf5_base.close()
+
+    return return_dataset</code></pre>
+</details>
+<div class="desc"><p>Get the value of an attribute in the hdf5file</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>path_to_hdf5</code></strong> :&ensp;<code>str</code></dt>
+<dd>the path to the hdf5file</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path inside the hdf5 where the attribute is stored</dd>
+<dt><strong><code>dataset</code></strong> :&ensp;<code>str</code></dt>
+<dd>dataset name</dd>
+<dt><strong><code>wait_time</code></strong> :&ensp;<code>int</code></dt>
+<dd>If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won't be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.</dd>
+</dl>
+<h2 id="return">Return</h2>
+<p>return_dataset : the value of the attribute</p>
+<h2 id="examples">Examples</h2>
+<p>get a dataset
+</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; dataset=hdf5_handler.get_hdf5_dataset(&quot;./multi_model.hdf5&quot;,dataset=my_dataset_name)
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.get_hdf5file_item"><code class="name flex">
+<span>def <span class="ident">get_hdf5file_item</span></span>(<span>path_to_hdf5='', location='./', item=None, wait_time=0, search_attrs=False)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_hdf5file_item(path_to_hdf5=str(), location=&#34;./&#34;, item=None, wait_time=0, search_attrs=False):
+    &#34;&#34;&#34;
+    
+    Get a custom item in an hdf5file
+
+    Parameters
+    ----------
+    
+    path_to_hdf5 : str
+        the path to the hdf5file
+    
+    location : str
+        path inside the hdf5 where the attribute is stored. If item is None, item is set to basename(location)
+    
+    item: str
+        item name
+    
+    wait_time: int
+        If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won&#39;t be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.
+    
+    search_attrs: bool
+        Default is False. If True, the function will also search in the item in the attribute first.
+
+    Return
+    --------
+    
+    return : custom value. can be an hdf5 object (group), an numpy array, a string, a float, an int ...
+
+    Examples
+    --------
+    
+    get the dataset &#39;dataset&#39;  
+    &gt;&gt;&gt; dataset=hdf5_handler.get_hdf5_item(&#34;./multi_model.hdf5&#34;,location=&#34;path/in/hdf5/dataset&#34;)  
+    
+    &#34;&#34;&#34;
+
+    hdf5 = open_hdf5(path_to_hdf5, read_only=True, wait_time=wait_time)
+
+    if hdf5 is None:
+        return None
+
+    hdf5_item = get_hdf5_item(hdf5_instance=hdf5, location=location, item=item, search_attrs=search_attrs)
+
+    hdf5.close()
+
+    return hdf5_item</code></pre>
+</details>
+<div class="desc"><p>Get a custom item in an hdf5file</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>path_to_hdf5</code></strong> :&ensp;<code>str</code></dt>
+<dd>the path to the hdf5file</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path inside the hdf5 where the attribute is stored. If item is None, item is set to basename(location)</dd>
+<dt><strong><code>item</code></strong> :&ensp;<code>str</code></dt>
+<dd>item name</dd>
+<dt><strong><code>wait_time</code></strong> :&ensp;<code>int</code></dt>
+<dd>If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won't be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.</dd>
+<dt><strong><code>search_attrs</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Default is False. If True, the function will also search in the item in the attribute first.</dd>
+</dl>
+<h2 id="return">Return</h2>
+<p>return : custom value. can be an hdf5 object (group), an numpy array, a string, a float, an int &hellip;</p>
+<h2 id="examples">Examples</h2>
+<p>get the dataset 'dataset'
+</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; dataset=hdf5_handler.get_hdf5_item(&quot;./multi_model.hdf5&quot;,location=&quot;path/in/hdf5/dataset&quot;)
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.hdf5_dataset_creator"><code class="name flex">
+<span>def <span class="ident">hdf5_dataset_creator</span></span>(<span>hdf5: h5py.File, name: str, value)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hdf5_dataset_creator(hdf5:h5py.File,name:str,value):
+    &#34;&#34;&#34;
+    Write any value in an hdf5 object
+
+    Parameters
+    ----------
+    
+    hdf5 : h5py.File
+        an hdf5 object
+    
+    name : str
+        name of the dataset
+    
+    value : any
+        value to write in the hdf5
+    
+    &#34;&#34;&#34;
+    # save ndarray datast
+    if isinstance(value, str):
+        dataset=_hdf5_handle_str(name,value)
+    
+    elif isinstance(value, numbers.Number):
+        dataset=_hdf5_handle_numbers(name,value)
+    
+    elif value is None:
+        dataset=_hdf5_handle_none(name,value)
+    
+    elif isinstance(value, (pd.Timestamp, np.datetime64, datetime.date)):
+        dataset=_hdf5_handle_timestamp(name,value)
+    
+    elif isinstance(value,  pd.DatetimeIndex):
+        dataset=_hdf5_handle_DatetimeIndex(name,value)
+        
+    elif isinstance(value, list):
+        dataset=_hdf5_handle_list(name,value)
+    
+    elif isinstance(value, tuple):
+        dataset=_hdf5_handle_list(name,value)
+    
+    elif isinstance(value, np.ndarray):
+        
+        if len(value.dtype) &gt; 0 and len(value.dtype.names) &gt; 0:
+            _hdf5_handle_ndarray(hdf5,name,value)
+            return
+        else:
+            dataset=_hdf5_handle_array(name,value)
+    
+    else:
+        
+        hdf5 = add_hdf5_sub_group(
+            hdf5, subgroup=name)
+
+        newdict = object_handler.read_object_as_dict(value)
+
+        dump_dict_to_hdf5(hdf5[name], newdict)
+    
+    _hdf5_create_dataset(hdf5, dataset)</code></pre>
+</details>
+<div class="desc"><p>Write any value in an hdf5 object</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>hdf5</code></strong> :&ensp;<code>h5py.File</code></dt>
+<dd>an hdf5 object</dd>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>name of the dataset</dd>
+<dt><strong><code>value</code></strong> :&ensp;<code>any</code></dt>
+<dd>value to write in the hdf5</dd>
+</dl></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.hdf5_ls"><code class="name flex">
+<span>def <span class="ident">hdf5_ls</span></span>(<span>hdf5)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hdf5_ls(hdf5):
+    &#34;&#34;&#34;
+    List dataset in an hdf5 instance.
+
+    Parameters
+    ----------
+    
+    hdf5 : h5py.File
+        hdf5 instance
+    
+    location: str
+        path inside the hdf5 where to start the research
+    
+    Example
+    -------
+    
+    &gt;&gt;&gt; hdf5 = open_hdf5(path_to_hdf5, read_only=True)
+    &gt;&gt;&gt; hdf5_ls(hdf5)
+    
+    &#34;&#34;&#34;
+    
+    hdf5_view(hdf5, location=&#34;./&#34;, max_depth=0, level_base=&#39;&gt;&#39;, level_sep=&#34;--&#34;, list_attrs=False, return_view=False)</code></pre>
+</details>
+<div class="desc"><p>List dataset in an hdf5 instance.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>hdf5</code></strong> :&ensp;<code>h5py.File</code></dt>
+<dd>hdf5 instance</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path inside the hdf5 where to start the research</dd>
+</dl>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; hdf5 = open_hdf5(path_to_hdf5, read_only=True)
+&gt;&gt;&gt; hdf5_ls(hdf5)
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.hdf5_read_dataset"><code class="name flex">
+<span>def <span class="ident">hdf5_read_dataset</span></span>(<span>item, expected_type=None)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hdf5_read_dataset(item,expected_type=None):
+    &#34;&#34;&#34;
+    Read a dataset stored in an hdf5 database
+    
+    Parameters
+    ----------
+    
+    item : h5py.File
+        an hdf5 dataset/item
+    
+    expected_type: str
+        the expected dtype as string str(type())
+    
+    Return
+    --------
+    
+    value : the value read from the hdf5, any type matching the expected type
+    
+    
+    &#34;&#34;&#34;
+    
+    if expected_type == str(type(&#34;str&#34;)):
+        
+        values=item[0].decode()
+    
+    elif expected_type == str(type(1.0)):
+        
+        values=item[0]
+        
+    elif expected_type == &#34;_None_&#34;:
+        
+        values=None
+        
+    elif expected_type in (str(pd.Timestamp), str(np.datetime64), str(datetime.datetime)) :
+
+        if expected_type==str(pd.Timestamp):
+            values=pd.Timestamp(item[0].decode())
+            
+        elif expected_type==str(np.datetime64):
+            values=np.datetime64(item[0].decode())
+            
+        elif expected_type==str(datetime.datetime):
+            values=datetime.datetime.fromisoformat(item[0].decode())
+            
+        else:
+            values=item[0].decode()
+    
+    else:
+        
+        if item[:].dtype.char == &#34;S&#34;:
+
+            values = item[:].astype(&#34;U&#34;)
+
+        elif item[:].dtype.char == &#34;O&#34;:
+
+            # decode list if required
+            decoded_item = list()
+            for it in item[:]:
+                
+                decoded_item.append(it.decode())
+                
+            values = decoded_item
+        
+        else:
+            values = item[:]
+    
+    return values</code></pre>
+</details>
+<div class="desc"><p>Read a dataset stored in an hdf5 database</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>item</code></strong> :&ensp;<code>h5py.File</code></dt>
+<dd>an hdf5 dataset/item</dd>
+<dt><strong><code>expected_type</code></strong> :&ensp;<code>str</code></dt>
+<dd>the expected dtype as string str(type())</dd>
+</dl>
+<h2 id="return">Return</h2>
+<p>value : the value read from the hdf5, any type matching the expected type</p></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.hdf5_view"><code class="name flex">
+<span>def <span class="ident">hdf5_view</span></span>(<span>hdf5_obj,<br>location='./',<br>max_depth=None,<br>level_base=&#x27;&gt;&#x27;,<br>level_sep='--',<br>depth=None,<br>list_attrs=False,<br>return_view=False)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hdf5_view(hdf5_obj, location=&#34;./&#34;, max_depth=None, level_base=&#39;&gt;&#39;, level_sep=&#34;--&#34;, depth=None, list_attrs=False, return_view=False):
+    &#34;&#34;&#34;
+    List recursively all dataset (and attributes) in an hdf5 object.
+
+    Parameters
+    ----------
+    
+    hdf5_obj : h5py.File
+        opened instance of the hdf5
+    
+    location : str
+        path inside the hdf5 where to start the research
+    
+    max_depth: str
+        Max deph of the search in the hdf5
+    
+    level_base: str
+        string used as separator at the lower level (default &#39;&gt;&#39;)
+    
+    level_sep: str
+        string used as separator at higher level (default &#39;--&#39;)
+    
+    depth: int
+        current level depth
+    
+    list_attrs: bool
+        default is False, list also the attributes
+    
+    return_view: bool
+        retrun the object view in a dictionnary
+    
+    Return
+    --------
+    
+    dictionnary : optional, the view of the hdf5
+
+    Examples
+    --------
+    
+    search in a hdf5  
+    &gt;&gt;&gt; hdf5=hdf5_handler.open_hdf5(hdf5_file)  
+    &gt;&gt;&gt; matchkey=hdf5_handler.search_in_hdf5(hdf5, key=&#39;Nom_du_BV&#39;,location=&#34;./&#34;)  
+    &gt;&gt;&gt; hdf5.close()  
+    
+    &#34;&#34;&#34;
+
+    result = []
+
+    if max_depth is not None:
+
+        if depth is not None:
+            depth = depth+1
+        else:
+            depth = 0
+
+        if depth &gt; max_depth:
+            return result
+
+    hdf5 = hdf5_obj[location]
+    
+    if list_attrs:
+        list_attribute = hdf5.attrs.keys()
+    
+        for key in list_attribute:
+            values = hdf5.attrs[key]
+            sub_location = os.path.join(location, key)
+            if isinstance(values, (int, float, np.int64, np.float64, np.int32, np.float32, np.bool)):
+                result.append(
+                    f&#34;{level_base}| {sub_location}, attribute, type={type(hdf5.attrs[key])}, value={values}&#34;)
+            elif isinstance(values, (str)) and len(values) &lt; 20:
+                result.append(
+                    f&#34;{level_base}| {sub_location}, attribute, type={type(hdf5.attrs[key])}, len={len(values)}, value={values}&#34;)
+            else:
+                result.append(
+                    f&#34;{level_base}| {sub_location}, attribute, type={type(hdf5.attrs[key])}, len={len(values)}, value={values[0:20]}...&#34;)
+                
+        if not return_view:
+            print(result[-1])
+
+    for hdf5_key, item in hdf5.items():
+
+        if str(type(item)).find(&#34;group&#34;) != -1:
+            
+            sub_location = os.path.join(location, hdf5_key)
+            
+            if &#34;ndarray_ds&#34; in item.keys():
+                result.append(f&#34;{level_base}| {sub_location}, ndarray&#34;)
+            else:
+                result.append(f&#34;{level_base}| {sub_location}, group&#34;)
+            
+            if not return_view:
+                print(result[-1])
+
+            res = hdf5_view(hdf5_obj, sub_location, max_depth=max_depth,
+                            level_base=level_base+level_sep, depth=depth, return_view=True)
+
+            # if len(res)&gt;0:
+            for key, item in enumerate(res):
+                result.append(item)
+
+        if str(type(item)).find(&#34;dataset&#34;) != -1:
+
+            if item[:].dtype.char == &#34;S&#34;:
+                values = item[:].astype(&#34;U&#34;)
+            else:
+                values = item[:]
+
+            sub_location = os.path.join(location, hdf5_key)
+            # result.append({&#34;path&#34;:location, &#34;key&#34;:key, &#34;datatype&#34;:&#34;dataset&#34;,&#34;value&#34;:values})
+            result.append(
+                f&#34;{level_base}| {sub_location}, dataset, type={type(values)}, shape={values.shape}&#34;)
+            
+            if not return_view:
+                print(result[-1])
+    
+    if return_view:
+        return result</code></pre>
+</details>
+<div class="desc"><p>List recursively all dataset (and attributes) in an hdf5 object.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>hdf5_obj</code></strong> :&ensp;<code>h5py.File</code></dt>
+<dd>opened instance of the hdf5</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path inside the hdf5 where to start the research</dd>
+<dt><strong><code>max_depth</code></strong> :&ensp;<code>str</code></dt>
+<dd>Max deph of the search in the hdf5</dd>
+<dt><strong><code>level_base</code></strong> :&ensp;<code>str</code></dt>
+<dd>string used as separator at the lower level (default '&gt;')</dd>
+<dt><strong><code>level_sep</code></strong> :&ensp;<code>str</code></dt>
+<dd>string used as separator at higher level (default '&ndash;')</dd>
+<dt><strong><code>depth</code></strong> :&ensp;<code>int</code></dt>
+<dd>current level depth</dd>
+<dt><strong><code>list_attrs</code></strong> :&ensp;<code>bool</code></dt>
+<dd>default is False, list also the attributes</dd>
+<dt><strong><code>return_view</code></strong> :&ensp;<code>bool</code></dt>
+<dd>retrun the object view in a dictionnary</dd>
+</dl>
+<h2 id="return">Return</h2>
+<p>dictionnary : optional, the view of the hdf5</p>
+<h2 id="examples">Examples</h2>
+<p>search in a hdf5
+</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; hdf5=hdf5_handler.open_hdf5(hdf5_file)  
+&gt;&gt;&gt; matchkey=hdf5_handler.search_in_hdf5(hdf5, key='Nom_du_BV',location=&quot;./&quot;)  
+&gt;&gt;&gt; hdf5.close()
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.hdf5file_ls"><code class="name flex">
+<span>def <span class="ident">hdf5file_ls</span></span>(<span>path_to_hdf5, location='./')</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hdf5file_ls(path_to_hdf5, location=&#39;./&#39;):
+    &#34;&#34;&#34;
+    List dataset in an hdf5file. 
+
+    Parameters
+    ----------
+    
+    path_to_hdf5 : str
+        path to a hdf5file
+    
+    location: str
+        path inside the hdf5 where to start the research
+    
+    Example
+    -------
+    
+    &gt;&gt;&gt; hdf5file_ls(test.hdf5)
+    
+    &#34;&#34;&#34;
+    
+    hdf5 = open_hdf5(path_to_hdf5, read_only=True)
+    
+    hdf5_view(hdf5, location=location, max_depth=0, level_base=&#39;&gt;&#39;, level_sep=&#34;--&#34;, list_attrs=False, return_view=False)</code></pre>
+</details>
+<div class="desc"><p>List dataset in an hdf5file. </p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>path_to_hdf5</code></strong> :&ensp;<code>str</code></dt>
+<dd>path to a hdf5file</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path inside the hdf5 where to start the research</dd>
+</dl>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; hdf5file_ls(test.hdf5)
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.hdf5file_view"><code class="name flex">
+<span>def <span class="ident">hdf5file_view</span></span>(<span>path_to_hdf5,<br>location='./',<br>max_depth=None,<br>level_base=&#x27;&gt;&#x27;,<br>level_sep='--',<br>depth=None,<br>wait_time=0,<br>list_attrs=False,<br>return_view=False)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hdf5file_view(path_to_hdf5, location=&#34;./&#34;, max_depth=None, level_base=&#39;&gt;&#39;, level_sep=&#34;--&#34;, depth=None, wait_time=0, list_attrs=False, return_view=False):
+    &#34;&#34;&#34;
+    
+    Search key in an hdf5 and return a list of [locations, datatype, key name, values]. Value and key are returned only if the key is an attribute or a dataset (None otherwise)
+
+    Parameters
+    ----------
+    
+    
+    path_to_hdf5 : str
+        Path to an hdf5 database
+    
+    location : str
+        path inside the hdf5 where to start the research
+    
+    max_depth: str
+        Max deph of the search in the hdf5
+    
+    level_base: str
+        string used as separator at the lower level (default &#39;&gt;&#39;)
+    
+    level_sep: str
+        string used as separator at higher level (default &#39;--&#39;)
+    
+    depth: int
+        current depth level
+    
+    list_attrs: bool
+        default is False, list also the attributes
+    
+    return_view: bool
+        retrun the object view in a dictionnary (do not print at screen)
+    
+    wait_time: int
+        If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won&#39;t be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.
+
+    Return
+    --------
+    
+    dictionnary : optional, the view of the hdf5
+
+    Examples
+    --------
+    
+    search in a hdf5file  
+    &gt;&gt;&gt; matchkey=hdf5_handler.search_in_hdf5file(hdf5filename, key=&#39;Nom_du_BV&#39;,location=&#34;./&#34;)  
+    
+    &#34;&#34;&#34;
+
+    hdf5 = open_hdf5(path_to_hdf5, read_only=True, wait_time=wait_time)
+
+    if hdf5 is None:
+        return None
+
+    results = hdf5_view(hdf5, 
+                        location=location, 
+                        max_depth=max_depth,
+                        level_base=level_base, 
+                        level_sep=level_sep, 
+                        depth=depth,
+                        list_attrs=list_attrs,
+                        return_view=return_view)
+
+    hdf5.close()
+
+    return results</code></pre>
+</details>
+<div class="desc"><p>Search key in an hdf5 and return a list of [locations, datatype, key name, values]. Value and key are returned only if the key is an attribute or a dataset (None otherwise)</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>path_to_hdf5</code></strong> :&ensp;<code>str</code></dt>
+<dd>Path to an hdf5 database</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path inside the hdf5 where to start the research</dd>
+<dt><strong><code>max_depth</code></strong> :&ensp;<code>str</code></dt>
+<dd>Max deph of the search in the hdf5</dd>
+<dt><strong><code>level_base</code></strong> :&ensp;<code>str</code></dt>
+<dd>string used as separator at the lower level (default '&gt;')</dd>
+<dt><strong><code>level_sep</code></strong> :&ensp;<code>str</code></dt>
+<dd>string used as separator at higher level (default '&ndash;')</dd>
+<dt><strong><code>depth</code></strong> :&ensp;<code>int</code></dt>
+<dd>current depth level</dd>
+<dt><strong><code>list_attrs</code></strong> :&ensp;<code>bool</code></dt>
+<dd>default is False, list also the attributes</dd>
+<dt><strong><code>return_view</code></strong> :&ensp;<code>bool</code></dt>
+<dd>retrun the object view in a dictionnary (do not print at screen)</dd>
+<dt><strong><code>wait_time</code></strong> :&ensp;<code>int</code></dt>
+<dd>If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won't be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.</dd>
+</dl>
+<h2 id="return">Return</h2>
+<p>dictionnary : optional, the view of the hdf5</p>
+<h2 id="examples">Examples</h2>
+<p>search in a hdf5file
+</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; matchkey=hdf5_handler.search_in_hdf5file(hdf5filename, key='Nom_du_BV',location=&quot;./&quot;)
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.open_hdf5"><code class="name flex">
+<span>def <span class="ident">open_hdf5</span></span>(<span>path, read_only=False, replace=False, wait_time=0)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def open_hdf5(path, read_only=False, replace=False, wait_time=0):
+    &#34;&#34;&#34;
+    
+    Open or create an HDF5 file.
+
+    Parameters
+    ----------
+    
+    path : str
+        The file path.
+    
+    read_only : boolean
+        If true the access to the hdf5 fil is in read-only mode. Multi process can read the same hdf5 file simulteneously. This is not possible when access mode are append &#39;a&#39; or write &#39;w&#39;.
+    
+    replace: Boolean
+        If true, the existing hdf5file is erased
+    
+    wait_time: int
+        If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won&#39;t be opened. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.
+
+    Returns
+    -------
+    
+    f :
+        A HDF5 object.
+
+    Examples
+    --------
+    
+    &gt;&gt;&gt; hdf5=smash.tools.hdf5_handler.open_hdf5(&#34;./my_hdf5.hdf5&#34;)  
+    &gt;&gt;&gt; hdf5.keys()  
+    &gt;&gt;&gt; hdf5.attrs.keys()  
+    
+    &#34;&#34;&#34;
+    f = None
+    wait = 0
+    while wait &lt;= wait_time:
+
+        f = None
+        exist_file=True
+        
+        try:
+
+            if read_only:
+                if os.path.isfile(path):
+                    f = h5py.File(path, &#34;r&#34;)
+
+                else:
+                    exist_file=False
+                    raise ValueError(f&#34;File {path} does not exist.&#34;)
+
+            else:
+                if replace:
+                    f = h5py.File(path, &#34;w&#34;)
+
+                else:
+                    if os.path.isfile(path):
+                        f = h5py.File(path, &#34;a&#34;)
+
+                    else:
+                        f = h5py.File(path, &#34;w&#34;)
+        except:
+            pass
+
+        if f is None:
+            if not exist_file:
+                print(f&#34;File {path} does not exist.&#34;)
+                return f
+            else:
+                print(
+                    f&#34;The file {path} is unvailable, waiting {wait}/{wait_time}s&#34;)
+
+            wait = wait + 1
+
+            if wait_time &gt; 0:
+                time.sleep(1)
+
+        else:
+            break
+
+    return f</code></pre>
+</details>
+<div class="desc"><p>Open or create an HDF5 file.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>path</code></strong> :&ensp;<code>str</code></dt>
+<dd>The file path.</dd>
+<dt><strong><code>read_only</code></strong> :&ensp;<code>boolean</code></dt>
+<dd>If true the access to the hdf5 fil is in read-only mode. Multi process can read the same hdf5 file simulteneously. This is not possible when access mode are append 'a' or write 'w'.</dd>
+<dt><strong><code>replace</code></strong> :&ensp;<code>Boolean</code></dt>
+<dd>If true, the existing hdf5file is erased</dd>
+<dt><strong><code>wait_time</code></strong> :&ensp;<code>int</code></dt>
+<dd>If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won't be opened. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>f :</code></dt>
+<dd>A HDF5 object.</dd>
+</dl>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; hdf5=smash.tools.hdf5_handler.open_hdf5(&quot;./my_hdf5.hdf5&quot;)  
+&gt;&gt;&gt; hdf5.keys()  
+&gt;&gt;&gt; hdf5.attrs.keys()
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.read_hdf5_as_dict"><code class="name flex">
+<span>def <span class="ident">read_hdf5_as_dict</span></span>(<span>hdf5)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_hdf5_as_dict(hdf5):
+    &#34;&#34;&#34;
+    Load an hdf5 file
+
+    Parameters
+    ----------
+    
+    hdf5 : h5py.File
+        an instance of hdf5, open with the function open_hdf5()
+
+    Return
+    --------
+    
+    dictionary : dict, a dictionary of all keys and attribute included in the hdf5 file
+
+    Examples
+    --------
+    
+    read only a part of an hdf5 file  
+    &gt;&gt;&gt; hdf5=hdf5_handler.open_hdf5(&#34;./multi_model.hdf5&#34;)  
+    &gt;&gt;&gt; dictionary=hdf5_handler.read_hdf5_as_dict(hdf5[&#34;model1&#34;])  
+    &gt;&gt;&gt; dictionary.keys()  
+    
+    &#34;&#34;&#34;
+
+    if not isinstance(hdf5, (h5py.File, h5py.Group, h5py.Dataset, h5py.Datatype)):
+        print(&#39;Error: input arg is not an instance of hdf5.File()&#39;)
+        return {}
+
+    dictionary = {}
+
+    for key, item in hdf5.items():
+
+        if str(type(item)).find(&#34;group&#34;) != -1:
+
+            if key == &#39;ndarray_ds&#39;:
+
+                # dictionary.update({key: _read_ndarray_datastructure(hdf5)})
+                return _read_ndarray_datastructure(hdf5)
+
+            else:
+
+                dictionary.update({key: read_hdf5_as_dict(item)})
+
+
+        if str(type(item)).find(&#34;dataset&#34;) != -1:
+            
+            if key in hdf5.attrs.keys():
+                expected_type=hdf5.attrs[key]
+                values=hdf5_read_dataset(item,expected_type)
+                
+            else:
+                
+                values=item[:]
+                
+            dictionary.update({key: values})
+
+    return dictionary</code></pre>
+</details>
+<div class="desc"><p>Load an hdf5 file</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>hdf5</code></strong> :&ensp;<code>h5py.File</code></dt>
+<dd>an instance of hdf5, open with the function open_hdf5()</dd>
+</dl>
+<h2 id="return">Return</h2>
+<p>dictionary : dict, a dictionary of all keys and attribute included in the hdf5 file</p>
+<h2 id="examples">Examples</h2>
+<p>read only a part of an hdf5 file
+</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; hdf5=hdf5_handler.open_hdf5(&quot;./multi_model.hdf5&quot;)  
+&gt;&gt;&gt; dictionary=hdf5_handler.read_hdf5_as_dict(hdf5[&quot;model1&quot;])  
+&gt;&gt;&gt; dictionary.keys()
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.read_hdf5file_as_dict"><code class="name flex">
+<span>def <span class="ident">read_hdf5file_as_dict</span></span>(<span>path_to_hdf5, location='./', wait_time=0)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_hdf5file_as_dict(path_to_hdf5, location=&#34;./&#34;, wait_time=0):
+    &#34;&#34;&#34;
+    
+    Open, read and close an hdf5 file
+
+    Parameters
+    ----------
+    
+    path_to_hdf5 : str
+        path to the hdf5 file
+    
+    location: str
+        place in the hdf5 from which we start reading the file
+
+    Return
+    --------
+    
+    dictionary : dict, a dictionary of all keys and attribute included in the hdf5 file
+    
+    wait_time: int
+        If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won&#39;t be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.
+
+    Examples
+    --------
+    
+    read an hdf5 file  
+    dictionary=hdf5_handler.read_hdf5file_as_dict(hdf5[&#34;model1&#34;])  
+    &#34;&#34;&#34;
+
+    hdf5 = open_hdf5(path_to_hdf5, read_only=True, wait_time=wait_time)
+
+    if hdf5 is None:
+        return None
+
+    dictionary = read_hdf5_as_dict(hdf5[location])
+
+    hdf5.close()
+
+    return dictionary</code></pre>
+</details>
+<div class="desc"><p>Open, read and close an hdf5 file</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>path_to_hdf5</code></strong> :&ensp;<code>str</code></dt>
+<dd>path to the hdf5 file</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>place in the hdf5 from which we start reading the file</dd>
+</dl>
+<h2 id="return">Return</h2>
+<p>dictionary : dict, a dictionary of all keys and attribute included in the hdf5 file</p>
+<p>wait_time: int
+If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won't be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.</p>
+<h2 id="examples">Examples</h2>
+<p>read an hdf5 file<br>
+dictionary=hdf5_handler.read_hdf5file_as_dict(hdf5["model1"])</p></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.save_dict_to_hdf5"><code class="name flex">
+<span>def <span class="ident">save_dict_to_hdf5</span></span>(<span>path_to_hdf5, dictionary=None, location='./', replace=False, wait_time=0)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_dict_to_hdf5(path_to_hdf5, dictionary=None, location=&#34;./&#34;, replace=False, wait_time=0):
+    &#34;&#34;&#34;
+    
+    dump a dictionary to an hdf5 file
+
+    Parameters
+    ----------
+    
+    path_to_hdf5 : str
+        path to the hdf5 file
+    
+    dictionary : dict | None
+        a dictionary containing the data to be saved
+    
+    location : str
+        path location or subgroup where to write data in the hdf5 file
+    
+    replace : Boolean
+        replace an existing hdf5 file. Default is False
+    
+    wait_time: int
+        If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won&#39;t be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.
+
+    Examples
+    --------
+    
+    &gt;&gt;&gt; setup, mesh = smash.load_dataset(&#34;cance&#34;)  
+    &gt;&gt;&gt; model = smash.Model(setup, mesh)  
+    &gt;&gt;&gt; model.run(inplace=True)  
+    &gt;&gt;&gt;  
+    &gt;&gt;&gt; smash.tools.hdf5_handler.save_dict_to_hdf5(&#34;saved_dictionary.hdf5&#34;,mesh)
+    
+    &#34;&#34;&#34;
+    if isinstance(dictionary, dict):
+        hdf5 = open_hdf5(path_to_hdf5, replace=replace, wait_time=wait_time)
+
+        if hdf5 is None:
+            return
+
+        hdf5 = add_hdf5_sub_group(hdf5, subgroup=location)
+        dump_dict_to_hdf5(hdf5[location], dictionary)
+
+    else:
+        raise ValueError(f&#34;The input {dictionary} must be a instance of dict.&#34;)
+
+    hdf5.close()</code></pre>
+</details>
+<div class="desc"><p>dump a dictionary to an hdf5 file</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>path_to_hdf5</code></strong> :&ensp;<code>str</code></dt>
+<dd>path to the hdf5 file</dd>
+<dt><strong><code>dictionary</code></strong> :&ensp;<code>dict | None</code></dt>
+<dd>a dictionary containing the data to be saved</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path location or subgroup where to write data in the hdf5 file</dd>
+<dt><strong><code>replace</code></strong> :&ensp;<code>Boolean</code></dt>
+<dd>replace an existing hdf5 file. Default is False</dd>
+<dt><strong><code>wait_time</code></strong> :&ensp;<code>int</code></dt>
+<dd>If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won't be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.</dd>
+</dl>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; setup, mesh = smash.load_dataset(&quot;cance&quot;)  
+&gt;&gt;&gt; model = smash.Model(setup, mesh)  
+&gt;&gt;&gt; model.run(inplace=True)  
+&gt;&gt;&gt;  
+&gt;&gt;&gt; smash.tools.hdf5_handler.save_dict_to_hdf5(&quot;saved_dictionary.hdf5&quot;,mesh)
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.save_object_to_hdf5"><code class="name flex">
+<span>def <span class="ident">save_object_to_hdf5</span></span>(<span>path_to_hdf5,<br>instance,<br>keys_data=None,<br>location='./',<br>sub_data=None,<br>replace=False,<br>wait_time=0)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_object_to_hdf5(
+    path_to_hdf5, instance, keys_data=None, location=&#34;./&#34;, sub_data=None, replace=False, wait_time=0
+):
+    &#34;&#34;&#34;
+    
+    dump an object to an hdf5 file
+
+    Parameters
+    ----------
+    
+    path_to_hdf5 : str
+        path to the hdf5 file
+    
+    instance : object
+        A custom python object to be saved into an hdf5
+    
+    keys_data : list | dict
+        optional, a list or a dictionary of the attribute to be saved
+    
+    location : str
+        path location or subgroup where to write data in the hdf5 file
+    
+    sub_data : dict | None
+        optional, a extra dictionary containing extra-data to be saved along the object
+    
+    replace : Boolean
+        replace an existing hdf5 file. Default is False
+    
+    wait_time: int
+        If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won&#39;t be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.
+    
+    &#34;&#34;&#34;
+
+    if keys_data is None:
+        keys_data = object_handler.generate_object_structure(instance)
+
+    # print(keys_data)
+
+    hdf5 = open_hdf5(path_to_hdf5, replace=replace, wait_time=wait_time)
+
+    if hdf5 is None:
+        return None
+
+    hdf5 = add_hdf5_sub_group(hdf5, subgroup=location)
+
+    _dump_object_to_hdf5_from_iteratable(hdf5[location], instance, keys_data)
+
+    if isinstance(sub_data, dict):
+        dump_dict_to_hdf5(hdf5[location], sub_data)
+
+    hdf5.close()</code></pre>
+</details>
+<div class="desc"><p>dump an object to an hdf5 file</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>path_to_hdf5</code></strong> :&ensp;<code>str</code></dt>
+<dd>path to the hdf5 file</dd>
+<dt><strong><code>instance</code></strong> :&ensp;<code>object</code></dt>
+<dd>A custom python object to be saved into an hdf5</dd>
+<dt><strong><code>keys_data</code></strong> :&ensp;<code>list | dict</code></dt>
+<dd>optional, a list or a dictionary of the attribute to be saved</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path location or subgroup where to write data in the hdf5 file</dd>
+<dt><strong><code>sub_data</code></strong> :&ensp;<code>dict | None</code></dt>
+<dd>optional, a extra dictionary containing extra-data to be saved along the object</dd>
+<dt><strong><code>replace</code></strong> :&ensp;<code>Boolean</code></dt>
+<dd>replace an existing hdf5 file. Default is False</dd>
+<dt><strong><code>wait_time</code></strong> :&ensp;<code>int</code></dt>
+<dd>If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won't be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.</dd>
+</dl></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.search_in_hdf5"><code class="name flex">
+<span>def <span class="ident">search_in_hdf5</span></span>(<span>hdf5_base, key=None, location='./', search_attrs=False)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def search_in_hdf5(hdf5_base, key=None, location=&#34;./&#34;, search_attrs=False):
+    &#34;&#34;&#34;
+    
+    Search key in an hdf5 and return a list of [locations, datatype, key name, values]. Value and key are returned only if the key is an attribute or a dataset (None otherwise)
+
+    Parameters
+    ----------
+    
+    hdf5_base : h5py.File
+        opened instance of the hdf5
+    
+    key: str
+        key to search in the hdf5file
+    
+    location : str
+        path inside the hdf5 where to start the research
+    
+    search_attrs : Bool
+        Default false, search in the attributes
+    
+    Return
+    ------
+    
+    return_dataset : the value of the attribute
+
+    Examples
+    --------
+    
+    search in a hdf5  
+    &gt;&gt;&gt; hdf5=hdf5_handler.open_hdf5(hdf5_file)  
+    &gt;&gt;&gt; matchkey=hdf5_handler.search_in_hdf5(hdf5, key=&#39;Nom_du_BV&#39;,location=&#34;./&#34;)  
+    &gt;&gt;&gt; hdf5.close()  
+    
+    &#34;&#34;&#34;
+    if key is None:
+        print(&#34;Nothing to search, use key=&#34;)
+        return []
+
+    result = []
+
+    hdf5 = hdf5_base[location]
+
+    if search_attrs:
+        list_attribute = hdf5.attrs.keys()
+    
+        if key in list_attribute:
+            result.append({&#34;path&#34;: location, &#34;key&#34;: key,
+                          &#34;datatype&#34;: &#34;attribute&#34;, &#34;value&#34;: hdf5.attrs[key]})
+        
+    for hdf5_key, item in hdf5.items():
+
+        if str(type(item)).find(&#34;group&#34;) != -1:
+
+            sub_location = os.path.join(location, hdf5_key)
+            
+            # print(hdf5_key,sub_location,list(hdf5.keys()))
+            
+            if hdf5_key == key:
+                
+                if &#34;ndarray_ds&#34; in item.keys():
+                    
+                    result.append({&#34;path&#34;: sub_location, 
+                                   &#34;key&#34;: None,
+                                   &#34;datatype&#34;: &#34;ndarray&#34;, 
+                                   &#34;value&#34;: _read_ndarray_datastructure(item)})
+                    
+                else:
+                    
+                    result.append({&#34;path&#34;: sub_location, &#34;key&#34;: None,
+                              &#34;datatype&#34;: &#34;group&#34;, &#34;value&#34;: None})
+
+            res = search_in_hdf5(hdf5_base, key, sub_location)
+            
+            if len(res) &gt; 0:
+                for element in res:
+                    result.append(element)
+                
+
+        if str(type(item)).find(&#34;dataset&#34;) != -1:
+
+            if hdf5_key == key:
+
+                if item[:].dtype.char == &#34;S&#34;:
+
+                    values = item[:].astype(&#34;U&#34;)
+
+                elif item[:].dtype.char == &#34;O&#34;:
+
+                    # decode list if required
+                    decoded_item = list()
+                    for it in item[:]:
+                        decoded_item.append(it.decode())
+
+                    values = decoded_item
+
+                else:
+
+                    values = item[:]
+                
+                result.append({&#34;path&#34;: location, 
+                               &#34;key&#34;: key,
+                              &#34;datatype&#34;: &#34;dataset&#34;, 
+                              &#34;value&#34;: values})
+    
+    return result</code></pre>
+</details>
+<div class="desc"><p>Search key in an hdf5 and return a list of [locations, datatype, key name, values]. Value and key are returned only if the key is an attribute or a dataset (None otherwise)</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>hdf5_base</code></strong> :&ensp;<code>h5py.File</code></dt>
+<dd>opened instance of the hdf5</dd>
+<dt><strong><code>key</code></strong> :&ensp;<code>str</code></dt>
+<dd>key to search in the hdf5file</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path inside the hdf5 where to start the research</dd>
+<dt><strong><code>search_attrs</code></strong> :&ensp;<code>Bool</code></dt>
+<dd>Default false, search in the attributes</dd>
+</dl>
+<h2 id="return">Return</h2>
+<p>return_dataset : the value of the attribute</p>
+<h2 id="examples">Examples</h2>
+<p>search in a hdf5
+</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; hdf5=hdf5_handler.open_hdf5(hdf5_file)  
+&gt;&gt;&gt; matchkey=hdf5_handler.search_in_hdf5(hdf5, key='Nom_du_BV',location=&quot;./&quot;)  
+&gt;&gt;&gt; hdf5.close()
+</code></pre></div>
+</dd>
+<dt id="pyhdf5_handler.src.hdf5_handler.search_in_hdf5file"><code class="name flex">
+<span>def <span class="ident">search_in_hdf5file</span></span>(<span>path_to_hdf5, key=None, location='./', wait_time=0, search_attrs=False)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def search_in_hdf5file(path_to_hdf5, key=None, location=&#34;./&#34;, wait_time=0, search_attrs=False):
+    &#34;&#34;&#34;
+    
+    Search key in an hdf5 and return a list of [locations, datatype, key name, values]. Value and key are returned only if the key is an attribute or a dataset (None otherwise)
+
+    Parameters
+    ----------
+    
+    path_to_hdf5 : str
+        the path to the hdf5file
+    
+    key: str
+        key to search in the hdf5file
+    
+    location : str
+        path inside the hdf5 where to start the research
+    
+    wait_time: int
+        If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won&#39;t be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.
+    
+    search_attrs : Bool
+        Default false, search in the attributes
+    
+    Return
+    ------
+    
+    return_dataset : the value of the attribute
+
+    Examples
+    --------
+    
+    search in a hdf5file  
+    &gt;&gt;&gt; matchkey=hdf5_handler.search_in_hdf5file(hdf5filename, key=&#39;Nom_du_BV&#39;,location=&#34;./&#34;)  
+    
+    &#34;&#34;&#34;
+    if key is None:
+        print(&#34;Nothing to search, use key=&#34;)
+        return []
+
+    hdf5 = open_hdf5(path_to_hdf5, read_only=True, wait_time=wait_time)
+
+    if hdf5 is None:
+        return None
+
+    results = search_in_hdf5(hdf5, key, location=location, search_attrs=search_attrs)
+
+    hdf5.close()
+
+    return results</code></pre>
+</details>
+<div class="desc"><p>Search key in an hdf5 and return a list of [locations, datatype, key name, values]. Value and key are returned only if the key is an attribute or a dataset (None otherwise)</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>path_to_hdf5</code></strong> :&ensp;<code>str</code></dt>
+<dd>the path to the hdf5file</dd>
+<dt><strong><code>key</code></strong> :&ensp;<code>str</code></dt>
+<dd>key to search in the hdf5file</dd>
+<dt><strong><code>location</code></strong> :&ensp;<code>str</code></dt>
+<dd>path inside the hdf5 where to start the research</dd>
+<dt><strong><code>wait_time</code></strong> :&ensp;<code>int</code></dt>
+<dd>If the hdf5 is unavailable, the function will try to access serveral time and will wait wait_time seconds maximum. If this time is elapsed, the file won't be opened and the funciton will return None. This parameter is usefull if several program or threads need to read/write simultaneously in the same hdf5 database.</dd>
+<dt><strong><code>search_attrs</code></strong> :&ensp;<code>Bool</code></dt>
+<dd>Default false, search in the attributes</dd>
+</dl>
+<h2 id="return">Return</h2>
+<p>return_dataset : the value of the attribute</p>
+<h2 id="examples">Examples</h2>
+<p>search in a hdf5file
+</p>
+<pre><code class="language-python-repl">&gt;&gt;&gt; matchkey=hdf5_handler.search_in_hdf5file(hdf5filename, key='Nom_du_BV',location=&quot;./&quot;)
+</code></pre></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="pyhdf5_handler.src" href="index.html">pyhdf5_handler.src</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.add_hdf5_sub_group" href="#pyhdf5_handler.src.hdf5_handler.add_hdf5_sub_group">add_hdf5_sub_group</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.close_all_hdf5_file" href="#pyhdf5_handler.src.hdf5_handler.close_all_hdf5_file">close_all_hdf5_file</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.dump_dict_to_hdf5" href="#pyhdf5_handler.src.hdf5_handler.dump_dict_to_hdf5">dump_dict_to_hdf5</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.get_hdf5_item" href="#pyhdf5_handler.src.hdf5_handler.get_hdf5_item">get_hdf5_item</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.get_hdf5file_attribute" href="#pyhdf5_handler.src.hdf5_handler.get_hdf5file_attribute">get_hdf5file_attribute</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.get_hdf5file_dataset" href="#pyhdf5_handler.src.hdf5_handler.get_hdf5file_dataset">get_hdf5file_dataset</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.get_hdf5file_item" href="#pyhdf5_handler.src.hdf5_handler.get_hdf5file_item">get_hdf5file_item</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.hdf5_dataset_creator" href="#pyhdf5_handler.src.hdf5_handler.hdf5_dataset_creator">hdf5_dataset_creator</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.hdf5_ls" href="#pyhdf5_handler.src.hdf5_handler.hdf5_ls">hdf5_ls</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.hdf5_read_dataset" href="#pyhdf5_handler.src.hdf5_handler.hdf5_read_dataset">hdf5_read_dataset</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.hdf5_view" href="#pyhdf5_handler.src.hdf5_handler.hdf5_view">hdf5_view</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.hdf5file_ls" href="#pyhdf5_handler.src.hdf5_handler.hdf5file_ls">hdf5file_ls</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.hdf5file_view" href="#pyhdf5_handler.src.hdf5_handler.hdf5file_view">hdf5file_view</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.open_hdf5" href="#pyhdf5_handler.src.hdf5_handler.open_hdf5">open_hdf5</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.read_hdf5_as_dict" href="#pyhdf5_handler.src.hdf5_handler.read_hdf5_as_dict">read_hdf5_as_dict</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.read_hdf5file_as_dict" href="#pyhdf5_handler.src.hdf5_handler.read_hdf5file_as_dict">read_hdf5file_as_dict</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.save_dict_to_hdf5" href="#pyhdf5_handler.src.hdf5_handler.save_dict_to_hdf5">save_dict_to_hdf5</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.save_object_to_hdf5" href="#pyhdf5_handler.src.hdf5_handler.save_object_to_hdf5">save_object_to_hdf5</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.search_in_hdf5" href="#pyhdf5_handler.src.hdf5_handler.search_in_hdf5">search_in_hdf5</a></code></li>
+<li><code><a title="pyhdf5_handler.src.hdf5_handler.search_in_hdf5file" href="#pyhdf5_handler.src.hdf5_handler.search_in_hdf5file">search_in_hdf5file</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.6</a>.</p>
+</footer>
+</body>
+</html>
