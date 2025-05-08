@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: python-cnpd
+Version: 0.1.0
+Summary: A short description of your package
+Home-page: https://github.com/gauravw66/cnpd
+Author: flyingcar06
+Author-email: gbwaghmare66@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# python-cnpd
+
+A Python package for data science and machine learning utilities.
+
+## Installation
+
+```bash
+pip install python-cnpd
+```
+
+## Usage
+
+```python
+from mypackage import example
+
+example.hello_world()
