@@ -1,0 +1,2 @@
+[console_scripts]
+yagwr = yagwr.bin.yagwr:main
