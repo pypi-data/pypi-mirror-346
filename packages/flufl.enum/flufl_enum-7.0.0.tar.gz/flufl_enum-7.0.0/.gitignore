@@ -1,0 +1,11 @@
+build
+flufl.*.egg-info
+dist
+*.pyc
+.tox
+/.coverage
+/.pdm.toml
+/coverage.xml
+/.pdm-python
+/pdm.toml
+/.coverage.*
