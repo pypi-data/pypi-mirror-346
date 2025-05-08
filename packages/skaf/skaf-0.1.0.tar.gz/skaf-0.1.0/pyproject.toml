@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skaf"
+version = "0.1.0"
+description = "A tool to scaffold a projects from templates"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "John Raines", email = "johndanielraines@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pyyaml >= 6.0",
+    "Jinja2 == 3.1.6",
+    "GitPython == 3.1.44"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov"
+]
+
+[project.scripts]
+skaf = "skaf.cli:main"
+
+[tool.setuptools.package-data]
+"*" = ["template_lib/*.*"]
+
+[project.entry-points."skaf.template"]
+none = "skaf.template_classes._none:none_template"

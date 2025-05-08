@@ -1,0 +1,34 @@
+README.md
+pyproject.toml
+src/skaf/__init__.py
+src/skaf/cli.py
+src/skaf/properties.py
+src/skaf/registry.py
+src/skaf/scaffold.py
+src/skaf.egg-info/PKG-INFO
+src/skaf.egg-info/SOURCES.txt
+src/skaf.egg-info/dependency_links.txt
+src/skaf.egg-info/entry_points.txt
+src/skaf.egg-info/requires.txt
+src/skaf.egg-info/top_level.txt
+src/skaf/template_classes/__init__.py
+src/skaf/template_classes/_none.py
+src/skaf/template_classes/base.py
+src/skaf/template_classes/dict_template.py
+src/skaf/template_classes/filesystem_template.py
+src/skaf/template_classes/git_template.py
+src/skaf/template_lib/setuptools_pyproject/template/src/{{ project_name }}/__init__.py
+src/skaf/template_lib/setuptools_pyproject/template/src/{{ project_name }}/main.py
+src/skaf/templaters/__init__.py
+src/skaf/templaters/base.py
+src/skaf/templaters/jinja.py
+src/skaf/templaters/pystring.py
+src/skaf/templaters/registry.py
+test/test_base_templater.py
+test/test_cli.py
+test/test_dict_template.py
+test/test_registry.py
+test/test_scaffold.py
+test/test_template_classes.py
+test/test_templater_registry.py
+test/test_templaters.py
