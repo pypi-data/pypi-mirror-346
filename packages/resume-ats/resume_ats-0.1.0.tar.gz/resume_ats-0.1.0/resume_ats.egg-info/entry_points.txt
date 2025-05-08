@@ -1,0 +1,2 @@
+[console_scripts]
+resume-ats = api_app:app

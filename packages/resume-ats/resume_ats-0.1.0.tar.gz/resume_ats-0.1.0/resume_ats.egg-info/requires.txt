@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+langchain-openai
+langchain_groq
+unstructured[docx]
+unstructured[pdf]
+langchain-docling
+tika
+crewai_tools
+litellm
+scrapfly-sdk

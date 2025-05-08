@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: resume_ats
+Version: 0.1.0
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pydantic
+Requires-Dist: python-dotenv
+Requires-Dist: langchain-openai
+Requires-Dist: langchain_groq
+Requires-Dist: unstructured[docx]
+Requires-Dist: unstructured[pdf]
+Requires-Dist: langchain-docling
+Requires-Dist: tika
+Requires-Dist: crewai_tools
+Requires-Dist: litellm
+Requires-Dist: scrapfly-sdk
+Dynamic: requires-dist
