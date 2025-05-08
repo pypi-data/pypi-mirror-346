@@ -1,0 +1,7 @@
+boto3_pydantic_chatbot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_chatbot/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_chatbot/chatbot_classes.py,sha256=jhspEE4F6IZEw8TVSsCcXhk5RMz_-ovG_4eow1j07B8,15049
+boto3_pydantic_chatbot/chatbot_constants.py,sha256=8HNGPtxcghk_mqGKFvtmxMgekr1QkPhnJO1jL_Kiz8o,7777
+boto3_pydantic_chatbot-1.0.0.dist-info/METADATA,sha256=cIwlwbaVJKmjJGbvxlN3d0q_V49pt4U14E48_O9punQ,1400
+boto3_pydantic_chatbot-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_chatbot-1.0.0.dist-info/RECORD,,
