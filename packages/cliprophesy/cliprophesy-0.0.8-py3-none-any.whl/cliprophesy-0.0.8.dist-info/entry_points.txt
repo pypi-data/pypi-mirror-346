@@ -1,0 +1,2 @@
+[console_scripts]
+cliprophesy = cliprophesy.main:run
