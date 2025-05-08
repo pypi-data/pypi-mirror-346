@@ -1,0 +1,11 @@
+platformeb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platformeb/driver.py,sha256=zRo8SCae9Khh7ZdNtrcGunFp8ngXQum8JK4umn3ykyY,10009
+platformeb/pages/__init__.py,sha256=IpslEcvimBCKevP1R4hbVkWpdMPfEnMBgiPHmQqEAKA,417
+platformeb/pages/abstract_page.py,sha256=EzJKgb1Gz9BT77bEzS2pW-y64nbANOVLmrGxJpjWhfU,788
+platformeb/pages/web_page.py,sha256=nYUfF03bjUkesbE7SEeZKrVb0ckiE-BBWQn377JgQA0,2598
+platformeb/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platformeb/utils/logger.py,sha256=mKdLg7pZt56wzFdo4X7tNhMLOV9Yz9S97MdRAObWsTs,105
+platformeb/utils/page.py,sha256=ajz1GSNU9xYVrFEDSz6Xwg7amWQ_yvW75tQa1ZvRIWc,3
+platformeb-0.1.1.dist-info/METADATA,sha256=Zheh6sCTUfy65tlYd5vGzJCH0LLLHLycL24U4BRyXH4,897
+platformeb-0.1.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+platformeb-0.1.1.dist-info/RECORD,,
