@@ -1,0 +1,11 @@
+unifi2mqtt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unifi2mqtt/__main__.py,sha256=pGndKuDbxu39htHCXEG9gxvUmSTQsjzUldZ5BS0JbAc,181
+unifi2mqtt/core.py,sha256=_GYI3PimwrvdVEmnphBHksVe6SOVDdn8-YZbPF-IVfM,3497
+unifi2mqtt/setup.py,sha256=D0gfapYaknP1IZt6XeuPKcEdbNuBc91SCK_vIq19LnQ,48
+unifi2mqtt/utils.py,sha256=0r8KG0-IAQOFantwq-vI7ptCoAqrTQ-nSsoh9bTjnww,2363
+unifi2mqtt-0.1.0.dist-info/licenses/LICENSE,sha256=LTmcNUtt9HGDCGAH1lKakArFf3SOALizk-yLp_0KqRw,30
+unifi2mqtt-0.1.0.dist-info/METADATA,sha256=lGotn_fVPEitJGOevt4mTcyARyAcAdPOKvvjwSx-Dgw,402
+unifi2mqtt-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+unifi2mqtt-0.1.0.dist-info/entry_points.txt,sha256=F62dlIRN648AnY6-Glq3XuUMRx4mYQK8w885ZdVns54,56
+unifi2mqtt-0.1.0.dist-info/top_level.txt,sha256=K6gzjHnA968bYhqdvD5I9nLf4ofuVXAacFObux6IbRY,11
+unifi2mqtt-0.1.0.dist-info/RECORD,,
