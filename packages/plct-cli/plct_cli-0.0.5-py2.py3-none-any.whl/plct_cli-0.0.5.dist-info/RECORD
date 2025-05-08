@@ -1,0 +1,9 @@
+plct_cli/__init__.py,sha256=vucW-Fe97d2P_nl7TMRJ2Cp458lb7VTRk6EckM_ozdM,23
+plct_cli/__main__.py,sha256=K2yihcGCD1Up1DHtU1J29q_-EqbHvUQIjT8oQqNKY0k,31
+plct_cli/cli.py,sha256=MbqAkpqTjJrq-znBQewOBuVzB3MbfPX2sYqI_uYeDwE,4326
+plct_cli/project_config.py,sha256=_vjjohaOz6lJ-remp_0vE-An-EaRxEin6AkazbnJOck,2031
+plct_cli-0.0.5.dist-info/entry_points.txt,sha256=y8abz8Pc59ueVPbGuM1eqCh9N8KZ1UvXvAtpQv9Dfts,42
+plct_cli-0.0.5.dist-info/LICENSE,sha256=lSR1enGDBnXnvJhInXR2HP2_mfre393AB30X5GuVR8o,1084
+plct_cli-0.0.5.dist-info/METADATA,sha256=H8x915w0aX5V361F-F4hMvHuxQCSpsa5jdrBxdvg2uY,2828
+plct_cli-0.0.5.dist-info/WHEEL,sha256=5cEDLREhpnNYpDlijc02-Q_4r7AkXMYW6R1JITTLLOQ,92
+plct_cli-0.0.5.dist-info/RECORD,,
