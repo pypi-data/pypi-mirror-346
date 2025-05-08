@@ -1,0 +1,2 @@
+global-include src/sympy2c/*.pyx
+global-include src/sympy2c/*.pxd
