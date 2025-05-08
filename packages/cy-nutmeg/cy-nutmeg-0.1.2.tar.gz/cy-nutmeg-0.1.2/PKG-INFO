@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cy-nutmeg
+Version: 0.1.2
+Summary: A Cython-optimized implementation of the NUTMEG algorithm
+Home-page: https://github.com/jonathanivey/NUTMEG
+Author: Jonathan Ivey
+Author-email: jonathan8ivey@gmail.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
