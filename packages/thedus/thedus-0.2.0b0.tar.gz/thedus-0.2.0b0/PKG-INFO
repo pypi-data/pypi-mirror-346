@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: thedus
+Version: 0.2.0b0
+Summary: Thedus is a lightweight migration tool for Clickhouse
+Author-email: Danila Ganchar <danila.ganchar@gmail.com>
+Maintainer-email: Danila Ganchar <danila.ganchar@gmail.com>
+License: MIT license
+Project-URL: Homepage, https://github.com/d-ganchar/thedus
+Project-URL: Changelog, https://github.com/d-ganchar/thedus/releases
+Project-URL: Issues, https://github.com/d-ganchar/thedus/issues
+Project-URL: CI, https://github.com/d-ganchar/thedus/actions
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: <3.14,>=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich<14,>=13.9
+Requires-Dist: typer<1,>=0.15
+Requires-Dist: clickhouse-driver<1,>=0.2.9
+Requires-Dist: ripley==0.3.0a0
+Requires-Dist: textual<4.0,>=3.1.1
+Dynamic: license-file
+
+# Thedus
+
+[Thedus](https://github.com/d-ganchar/thedus) is a lightweight migration tool for [Clickhouse](https://clickhouse.com/)
+
+```bash
+$ pip install thedus
+```
+
+<hr/>
+
+<a href="https://pypi.org/project/thedus/" target="_blank"><img src="https://img.shields.io/pypi/v/thedus.svg?logo=pypi&logoColor=FFE200" alt="pypi"/></a>
+<a href="https://www.pepy.tech/projects/thedus" target="_blank"><img src="https://static.pepy.tech/badge/thedus" alt="total downloads"/></a>
+<a href="https://www.pepy.tech/projects/thedus" target="_blank"><img src="https://img.shields.io/pypi/dm/thedus.svg?logo=docusign&logoColor=FFE200" alt="monthly downloads"/></a>
+<a href="https://github.com/d-ganchar/thedus/tree/main/thedus" target="_blank"><img src="https://img.shields.io/github/languages/code-size/d-ganchar/thedus.svg?logo=Dropbox&logoColor=ACD2F6" alt="pkg size"/></a>
+<a href="https://github.com/d-ganchar/thedus/wiki" target="_blank"><img alt="Wiki" src="https://img.shields.io/badge/github-wiki-orange"/></a>
+<a href="https://github.com/d-ganchar/thedus/actions" target="_blank"><img alt="Wiki" src="https://img.shields.io/badge/github-workflows-lightgreen"/></a>
