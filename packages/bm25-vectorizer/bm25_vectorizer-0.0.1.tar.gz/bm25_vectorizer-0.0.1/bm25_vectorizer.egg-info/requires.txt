@@ -1,0 +1,12 @@
+numpy
+scipy
+scikit-learn
+packaging
+typing-extensions
+
+[dev]
+uv
+python-dotenv
+ruff
+mypy
+pre-commit
