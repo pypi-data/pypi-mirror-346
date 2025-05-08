@@ -1,0 +1,2 @@
+[console_scripts]
+nlm = nnxlm.main:cli
