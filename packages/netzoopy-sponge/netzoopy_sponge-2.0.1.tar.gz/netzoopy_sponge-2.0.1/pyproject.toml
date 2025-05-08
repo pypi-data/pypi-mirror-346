@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[packages]
+find = {}
+
+[project]
+name = "netzoopy-sponge"
+authors = [
+    {name = "Ladislav Hovan", email = "ladislav.hovan@ncmbm.uio.no"},
+]
+version = "2.0.1"
+description = "A package to generate prior gene regulatory networks."
+readme = "README.md"
+license = "GPL-3.0-or-later"
+keywords = ["transcription-factors", "gene-regulatory-network"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "bioframe",
+    "numpy",
+    "pandas",
+    "pybbi",
+    "pyjaspar",
+    "scikit-learn",
+    "tqdm",
+]
+
+[project.scripts]
+netzoopy-sponge = "sponge.cli:cli"
+
+[project.urls]
+Repository = "https://github.com/kuijjerlab/sponge"
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: marks integration tests",
+    "network: marks tests that require internet connection",
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]

@@ -1,0 +1,56 @@
+name: SPONGE GHCR package
+
+on:
+  workflow_run:
+    workflows:
+    - SPONGE PyPI upload
+    types:
+    - completed
+
+env:
+  IMAGE_NAME: netzoopy_sponge
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Build image
+      run: docker build . --file Dockerfile --tag $IMAGE_NAME --label "runnumber=${GITHUB_RUN_ID}"
+
+    - name: Log in to registry
+      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+    - name: Push images
+      run: |
+        IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME
+
+        # This changes all uppercase characters to lowercase.
+        IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+
+        # This strips the git ref prefix from the version.
+        VERSION=$(echo "${{ github.event.workflow_run.head_branch }}" | sed -e 's,.*/\(.*\),\1,')
+
+        # This strips the "v" prefix from the tag name.
+        [[ $VERSION =~ v[0-9]+.[0-9]+.[0-9]+ ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+        # Show the derived image ID and version
+        echo IMAGE_ID=$IMAGE_ID
+        echo VERSION=$VERSION
+
+        # Push the with the version tag
+        docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
+        docker push $IMAGE_ID:$VERSION
+
+        # Push with the latest tag
+        docker tag $IMAGE_NAME $IMAGE_ID:latest
+        docker push $IMAGE_ID:latest
