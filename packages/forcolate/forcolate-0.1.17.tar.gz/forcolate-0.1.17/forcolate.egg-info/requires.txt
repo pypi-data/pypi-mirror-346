@@ -1,0 +1,10 @@
+sentence-transformers
+docling
+py7zr
+mcp
+mcpadapt
+smolagents
+openai
+
+[:platform_system == "Windows"]
+pywin32
