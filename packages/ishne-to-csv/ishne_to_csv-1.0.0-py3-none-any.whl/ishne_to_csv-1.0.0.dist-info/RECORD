@@ -1,0 +1,9 @@
+ishne_to_csv/__init__.py,sha256=TM-w3ch3UCDGNpST8w4HpGuLDjbkjjAEbEt_Gd2QRVE,330
+ishne_to_csv/cli.py,sha256=UBbUkkySi94-1Gv6Xh93E1mL443j1xNlCxWEZ54vbnQ,1036
+ishne_to_csv/core.py,sha256=zyw5RAoLmSUqMNh8czOX8XRxchRqEJTXtgu1evNujlY,5836
+ishne_to_csv-1.0.0.dist-info/licenses/LICENSE,sha256=Btzdu2kIoMbdSp6OyCLupB1aRgpTCJ_szMimgEnpkkE,1056
+ishne_to_csv-1.0.0.dist-info/METADATA,sha256=bXiAo4CErZox8JXmnJaxvlK4nEHp_FWXl_D0lMsY7Tk,3932
+ishne_to_csv-1.0.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+ishne_to_csv-1.0.0.dist-info/entry_points.txt,sha256=wnMDDuMWL9YWYAf4HWHhp42Wi10qrFS5a9ZK8ZC7MP0,55
+ishne_to_csv-1.0.0.dist-info/top_level.txt,sha256=y-vtLCghF5fd0tz7KwKENfBtuYC8b-wPpHXgTAITWsc,13
+ishne_to_csv-1.0.0.dist-info/RECORD,,
