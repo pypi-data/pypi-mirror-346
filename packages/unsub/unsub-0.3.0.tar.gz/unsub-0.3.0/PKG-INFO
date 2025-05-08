@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: unsub
+Version: 0.3.0
+Summary: Add your description here
+Author-email: Andrew Hannigan <Andrew.S.Hannigan@Gmail.com>
+Requires-Python: >=3.11
+Requires-Dist: click>=8.1.8
+Requires-Dist: marvin==3.1.0a1
+Requires-Dist: sqlalchemy>=2.0.40
