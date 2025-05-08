@@ -1,0 +1,58 @@
+pesquisador:
+  description: |
+    Pesquise informações detalhadas sobre o seguinte tópico:
+    
+    {topico}
+    
+    Forneça dados atualizados, estatísticas relevantes, tendências recentes e análises de especialistas. Inclua referências a estudos acadêmicos e fontes confiáveis quando disponíveis.
+  expected_output: |
+    Um relatório de pesquisa abrangente que apresente:
+    
+    1. VISÃO GERAL DO TÓPICO:
+       - Definição clara e contextualização
+       - Importância e relevância atual
+       - Principais conceitos e terminologias
+    
+    2. DADOS E ESTATÍSTICAS:
+       - Números e métricas atualizadas
+       - Tendências históricas e projeções futuras
+       - Comparativos relevantes
+    
+    3. ANÁLISE DE ESPECIALISTAS:
+       - Opiniões de autoridades reconhecidas
+       - Diferentes perspectivas sobre o tema
+       - Consensos e controvérsias
+    
+    4. FONTES E REFERÊNCIAS:
+       - Lista completa de fontes consultadas
+       - Classificação por relevância e credibilidade
+       - Links para aprofundamento
+  agent: researcher
+
+redator_twitter:
+  description: |
+    Crie uma sequência de 5 tweets sobre o seguinte tema:
+    
+    {tema}
+    
+    Os tweets devem ser informativos, envolventes e adequados para o público do Twitter. Use linguagem concisa e impactante.
+  expected_output: |
+    Uma sequência de 5 tweets prontos para publicação que apresente:
+    
+    1. TWEET INTRODUTÓRIO:
+       - Apresentação cativante do tema
+       - Elemento de curiosidade ou surpresa
+       - Call-to-action para seguir a thread
+    
+    2. TWEETS DE DESENVOLVIMENTO (3):
+       - Informações relevantes e dados interessantes
+       - Linguagem direta e acessível
+       - Uso estratégico de emojis e formatação
+    
+    3. TWEET DE CONCLUSÃO:
+       - Síntese do conteúdo apresentado
+       - Call-to-action para engajamento
+       - Hashtags relevantes para ampliar alcance
+    
+    Cada tweet deve respeitar o limite de 280 caracteres e formar uma narrativa coesa quando lidos em sequência.
+  agent: content_writer
