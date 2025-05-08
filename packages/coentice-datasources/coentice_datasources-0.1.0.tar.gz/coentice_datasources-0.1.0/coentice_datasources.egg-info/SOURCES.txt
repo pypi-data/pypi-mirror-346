@@ -1,0 +1,12 @@
+README.md
+setup.py
+coentice_datasources/__init__.py
+coentice_datasources.egg-info/PKG-INFO
+coentice_datasources.egg-info/SOURCES.txt
+coentice_datasources.egg-info/dependency_links.txt
+coentice_datasources.egg-info/requires.txt
+coentice_datasources.egg-info/top_level.txt
+coentice_datasources/client/__init__.py
+coentice_datasources/client/api_client.py
+coentice_datasources/core/__init__.py
+coentice_datasources/core/datasources.py
