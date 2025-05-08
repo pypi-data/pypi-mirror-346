@@ -1,0 +1,5 @@
+docs
+epydemix
+tests
+tutorials
+validation
