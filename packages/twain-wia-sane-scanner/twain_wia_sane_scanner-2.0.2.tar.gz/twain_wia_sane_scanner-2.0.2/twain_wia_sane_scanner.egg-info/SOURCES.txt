@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+dynamsoftservice/__init__.py
+twain_wia_sane_scanner.egg-info/PKG-INFO
+twain_wia_sane_scanner.egg-info/SOURCES.txt
+twain_wia_sane_scanner.egg-info/dependency_links.txt
+twain_wia_sane_scanner.egg-info/requires.txt
+twain_wia_sane_scanner.egg-info/top_level.txt
