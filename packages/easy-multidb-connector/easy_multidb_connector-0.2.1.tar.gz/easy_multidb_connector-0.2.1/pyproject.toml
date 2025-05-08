@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easy-multidb-connector"
+version = "0.2.1"
+authors = [
+    {name = "Wuotans", email = "matheus.silva231996@gmail.com"},
+]
+description = "Conexões simplificadas com bancos SQL/NoSQL"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.optional-dependencies]
+mysql = ["mysql-connector-python"]
+postgresql = ["psycopg2"]
+oracle = ["cx_Oracle"]
+mssql = ["pyodbc"]
+mongodb = ["pymongo"]
+redis = ["redis"]
+cassandra = ["cassandra-driver"]
+elasticsearch = ["elasticsearch"]
+async = [
+    "aiomysql",
+    "asyncpg",
+    "aioredis",
+    "aioelasticsearch"
+]
+all = [
+    "mysql-connector-python",
+    "psycopg2",
+    "cx_Oracle",
+    "pyodbc",
+    "pymongo",
+    "redis",
+    "cassandra-driver",
+    "elasticsearch",
+    "aiomysql",
+    "asyncpg",
+    "aioredis",
+    "aioelasticsearch",
+    "typing-extensions",
+    "click"
+]
+
+[project.scripts]
+dbconnector-cli = "dbconnector.cli:main"
