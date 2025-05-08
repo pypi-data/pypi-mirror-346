@@ -1,0 +1,2 @@
+[console_scripts]
+gensh = gensh.processor:main

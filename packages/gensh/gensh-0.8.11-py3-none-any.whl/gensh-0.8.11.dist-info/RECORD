@@ -1,0 +1,15 @@
+gensh/__init__.py,sha256=DRLKAYKBGVMZsOSs72SAEy_PozGOno19HiIM9v2GHw4,92
+gensh/processor.py,sha256=BB2VM0JqvIE6NGYVt8MwVgCRCn8dXobZEkQ3uuh48sU,33072
+gensh/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gensh/templates/analyze-logs.yml,sha256=r5aO-2EyyYfxiw1N2ImghacBJr97d3kmhUnUcGqb_Mc,2347
+gensh/templates/architect.yml,sha256=V2P6eUyMYfvQepIAymoZt-I0_6btBqWL08SxhvQZxnE,527
+gensh/templates/book-summary.yml,sha256=aqZh6ALgzp5pM9ZYfijEM2QY1fKHQPn701O98Gaj-mw,1302
+gensh/templates/code-python.yml,sha256=8KIVEGFy6E0Xo3K5yuROrCZa1fFxHtyivL3s6bIy1pU,384
+gensh/templates/code-shell.yml,sha256=-5u0Aa6lzvc_cgON2uKYPw8mRDMFKmTOlk7MH9fjak0,443
+gensh/templates/links-summary.yml,sha256=Ygd3CKQ-InYvOa01XbiVZ0XZY2ayJrUvDXq-b8nYDo4,882
+gensh/templates/pm-news.yml,sha256=ERjTQTlJXS_T5p5YBzlCK3lvXuQvWkTBnZnKpdR44-E,458
+gensh/templates/security-news.yml,sha256=gLu9mObiCyrX7fekIX7M5dRqDPjYaemUnLqcNPd4iAM,439
+gensh-0.8.11.dist-info/METADATA,sha256=1OQ_4N7DLkS15tIfPsIH9bPeHYkeGWLGczqXTdocUfU,4536
+gensh-0.8.11.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gensh-0.8.11.dist-info/entry_points.txt,sha256=XuudKl4Fm5OyfH8_UiX_N4e_GMYnycIsDoK6EHmnmbg,47
+gensh-0.8.11.dist-info/RECORD,,
