@@ -1,0 +1,6 @@
+tvbk/__init__.py,sha256=_xAWXZt46o86nxIWzVPPItpjGcC_pqe_mtaoH6yIBuk,192
+tvbk/tvbk_ext.cpython-310-x86_64-linux-gnu.so,sha256=66bK6z8Yviet7pr54TBvoB8mUWHuG_HBttiDYJY0pOM,283696
+tvbk-0.5.dist-info/METADATA,sha256=8MbKgtRL3N-xkH33uQOfSNx0ab5Q90rAd7t9PxdM3uY,1253
+tvbk-0.5.dist-info/WHEEL,sha256=ECE8MRbwfg6TGi4LblE8JDdYCQ1z4rjD2e0Tx1t1iio,156
+tvbk-0.5.dist-info/RECORD,,
+tvbk-0.5.dist-info/licenses/LICENSE,sha256=_66u1F94WzbMN2QbBh5xro9GbvULf49iqefFAPmGXVA,547
