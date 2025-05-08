@@ -1,0 +1,9 @@
+coentice_datasources/__init__.py,sha256=MnCoegkMN7nBCSWzrwBoXddJy5MZqbawYmej_MTo9xo,67
+coentice_datasources/client/__init__.py,sha256=Maphlal9MpFlCV2sm56UyD08murtT-RgY6kZo3FvWYQ,33
+coentice_datasources/client/api_client.py,sha256=QF-z5_zq0kAwlNOslBLtNBt7WaE4W-5IzOf2xhXNlCM,2302
+coentice_datasources/core/__init__.py,sha256=9gh0CpnaMS90eJzb9oabLK-RwAPkMLxDE4lo2xZHsCU,45
+coentice_datasources/core/datasources.py,sha256=MMvVKltSpnm7LrvHCzzJSorzrFHcYa_l0eovdM-xMcU,7039
+coentice_datasources-0.1.0.dist-info/METADATA,sha256=aVm9ZGUEInkshBXuGXTbWBW4GEhsFXA9dbSAySkA5Jo,314
+coentice_datasources-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+coentice_datasources-0.1.0.dist-info/top_level.txt,sha256=eySxJL_dvzazH7J2E882NbqautNi2C6LJtS8EYl-4Ic,21
+coentice_datasources-0.1.0.dist-info/RECORD,,
