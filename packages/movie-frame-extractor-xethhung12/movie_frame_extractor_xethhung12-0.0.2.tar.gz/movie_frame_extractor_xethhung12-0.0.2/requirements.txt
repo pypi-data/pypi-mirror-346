@@ -1,0 +1,5 @@
+hatchling>=1.26
+opencv-python
+build
+twine
+xh-py-project-versioning

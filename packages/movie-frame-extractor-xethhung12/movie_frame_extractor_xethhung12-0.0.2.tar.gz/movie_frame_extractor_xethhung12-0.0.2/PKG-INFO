@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: movie_frame_extractor_xethhung12
+Version: 0.0.2
+Summary: A small program to extract movie frame from video
+Project-URL: Homepage, https://github.com/xh-dev/movie-frame-extractor
+Project-URL: Issues, https://github.com/xh-dev/movie-frame-extractor/issues
+Author-email: Xeth Hung <adamhung12@gmail.com>
+License-Expression: MIT
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: opencv-python
+Description-Content-Type: text/markdown
+
+# Installation
+```shell
+pip install -U movie-frame-extractor-xethhung12
+```
+
+# Execution
+```shell
+movie-frame-extracting --path {path to extract} --start {start time} --end {end time}
+```
