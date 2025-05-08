@@ -1,0 +1,13 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index f9ea0c6a1d..6e7c19dd42 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -51,7 +51,7 @@ tests = [
+ ]
+ 
+ [tool.setuptools_scm]
+-version_file = "src/igwn_segments/_version.py"
++write_to = "src/igwn_segments/_version.py"
+ 
+ # -- coverage
+ 
