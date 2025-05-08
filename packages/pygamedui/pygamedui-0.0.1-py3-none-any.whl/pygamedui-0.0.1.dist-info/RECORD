@@ -1,0 +1,13 @@
+pygamedui/__init__.py,sha256=TJX8G8zqoAbgsoRuo-tuF_e8txWF0eqiJj--PIxpqLE,190
+pygamedui/anchor.py,sha256=O5Za_BJIWWD_aRGuqgxJBR9GOzYTN6wpAAvfnAmWnVc,274
+pygamedui/container.py,sha256=HiCEEdagjWHWkgeEi_6BPe8OMhQtdnbrvmw7spuaWOQ,1273
+pygamedui/layout.py,sha256=N7ZTPrz7Qux-lskGrXnSP0mYvEsUDguUNxOzf80NZcI,2375
+pygamedui/layouts.py,sha256=iVQi1MxJ3PlcOsb5E8kmJrgHS7qkUUIx2Eld2Q8TSRs,3856
+pygamedui/ui_element.py,sha256=c_wv7-Z08-3CelEae2ttJdKdMbtws6y8TFJND7qFi2I,4054
+pygamedui/widgets.py,sha256=s0T0MRFAmeiRm5Gr9NDngTLkPh3Xv4fWv7vHlQ5QLB8,3884
+pygamedui/layouts/stack_layout.py,sha256=8qrGcArpTz0zsotHQFIHEXA_MYd7Bz3tRIuo_Qm4etY,45
+pygamedui-0.0.1.dist-info/licenses/LICENSE,sha256=2MJpNV-mtHLPfBKQfOMnZ4MMwx0alp7qH5h0gSfPpU0,1053
+pygamedui-0.0.1.dist-info/METADATA,sha256=XpIfURJEzz7hf7MsW8aoIiXHvIXqHc2283-Hg29x9Gs,4986
+pygamedui-0.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+pygamedui-0.0.1.dist-info/top_level.txt,sha256=lFSSG1wYnf16zT0Av6VZtqgCvYmN64g_Jyn3H-GJ5io,10
+pygamedui-0.0.1.dist-info/RECORD,,
