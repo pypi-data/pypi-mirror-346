@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: longer-limbs
+Version: 1.0a1
+Summary: Wrapper for SciKit-learn tree-based estimators providing linear regression fallback for inputs outside of training data range.
+Project-URL: Homepage, https://github.com/gperdrizet/longer-limbs
+Project-URL: Issues, https://github.com/gperdrizet/longer-limbs/issues
+Author-email: George Perdrizet <george@perdrizet.org>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Description-Content-Type: text/markdown
+
+# longer-limbs
+Wrapper for SciKit-learn tree-based estimators providing linear regression fallback for inputs outside of training data range.
+
+## Instructions
+
+Install longer-limbs with:
+
+```bash
+pip install longer-limbs
+```
+
+Longer-limbs wraps SciKit-learn's `GradientBoostingRegressor()`. It offers identical `.fit()` and `.predict()` methods. To adapt code which currently uses pure SciKit-learn, change the import of `GradientBoostingRegressor()` from:
+
+```python
+from sklearn.ensemble import GradientBoostingRegressor
+```
+
+to:
+
+```python
+from longer_limbs.regressors import GradientBoostingRegressor
+```
+
+## Usage
+
+See the [example regression notebook](https://github.com/gperdrizet/longer-limbs/blob/main/examples/regression.ipynb) for usage demonstration and comparison to SciKit-learn.
