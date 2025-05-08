@@ -1,0 +1,34 @@
+[project]
+name = "codextextpipe"
+version = "0.1.3"
+description = "All-in-one tool for text processing"
+readme = { file = "README.md", content-type = "text/markdown" }
+authors = [
+  { name = "Textpipe Team", email = "codexesto@gmail.com" }
+]
+requires-python = ">=3.7"
+dependencies = [
+  "scikit-learn",
+  "nltk",
+  "sphinx",
+  "pytest",
+  "pandas",
+  "bs4"
+]
+keywords = ["text processing", "text analysis", "natural language processing"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Natural Language :: English"
+]
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["codextextpipe*"]
+
