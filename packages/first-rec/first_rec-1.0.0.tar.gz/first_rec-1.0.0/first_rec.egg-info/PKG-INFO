@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: first-rec
+Version: 1.0.0
+Summary: Find first file record
+Author: Matteo Watson
+Author-email: <m.watson12@gmail.com>
+License: MIT License
+Classifier: Framework :: Flask
+Classifier: Development Status :: 6 - Mature
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+# first-rec &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+**Find first file record**
