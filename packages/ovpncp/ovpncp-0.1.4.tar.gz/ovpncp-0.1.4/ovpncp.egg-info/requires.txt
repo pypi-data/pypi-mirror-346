@@ -1,0 +1,12 @@
+cryptography
+fastapi[all]
+PyYAML
+sqlmodel
+uvicorn
+
+[security]
+python-jose[cryptography]
+types-python-jose
+
+[storage]
+azure-storage-blob
