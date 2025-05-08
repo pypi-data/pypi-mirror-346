@@ -1,0 +1,11 @@
+emailmasterpt/__init__.py,sha256=Ysw3CP6xUAoVPQsBFQQawF7FidWPhKkSMjG0UOzMVVw,266
+emailmasterpt/agendador.py,sha256=gtjHhHXq6rx7L_dHBTYKaQFJcE8I_av2gzs2JFcKwuo,2394
+emailmasterpt/core.py,sha256=9dlL1OV6IkaNuRu3YGv-D3n2rGLWoUBDWR5fYEF-4rI,3844
+emailmasterpt/excecoes.py,sha256=2SwS89-c63atJG0OGwVcAYxYK7vfofqiUa5ucQRY1ww,381
+emailmasterpt/provedores.py,sha256=dvHY_8YKM3YMwjn7IsCvRJQK5Lqab-vIANhyH9_CJdo,637
+emailmasterpt/utils.py,sha256=HXSjqw7Y98r8ZfLByWmzhykz_RdejWM9fwqUYrc0g4I,392
+emailmasterpt-1.0.0.dist-info/licenses/LICENSE,sha256=XM5xWCMiSt-KRUzwmPdaBZoylsMvOWQvKnr38OFGGtc,1085
+emailmasterpt-1.0.0.dist-info/METADATA,sha256=wHJa5onjYFyCulGxYSaM8wBTvuJ2_-Wh0xhtPr3MFVI,1645
+emailmasterpt-1.0.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+emailmasterpt-1.0.0.dist-info/top_level.txt,sha256=xXl4_7Y2GprES1ZChHvtnZO9997ciz4iAMXqZ7pnTus,14
+emailmasterpt-1.0.0.dist-info/RECORD,,
