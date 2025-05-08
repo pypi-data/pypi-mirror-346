@@ -1,0 +1,15 @@
+digraph memory_graph {
+	node [shape=plaintext]
+	node138934146345152 [label=<
+<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="dodgerblue1" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> image </TD><TD BORDER="1"> 0 </TD></TR>
+</TABLE>
+> xlabel=dict]
+	node138934144003728 [label=<
+<TABLE BORDER="3" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="khaki" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> 0: &lt;module&gt; </TD></TR>
+    <TR><TD BORDER="1" PORT="ref0"> </TD></TR>
+</TABLE>
+> xlabel=call_stack]
+	node138934144003728:ref0 -> node138934146345152:table [style=solid]
+}
