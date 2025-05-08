@@ -1,0 +1,107 @@
+# Grepy
+
+Grepy is an enhanced grep-like tool built in Python that extends the functionality of traditional grep with additional features for more efficient and powerful text searching.
+
+## Features
+
+- **All standard grep functionality**: Case-insensitive search, recursive search, invert matching, line numbers, word boundaries, etc.
+- **Enhanced display**: Highlighted matches, colored output for easy reading
+- **Performance options**: Parallel processing for faster searches on multiple files
+- **Advanced search**: File filtering with include/exclude patterns, directory exclusion
+- **Customizable output**: Sort results, limit results count, show column numbers
+- **Detailed information**: Summary statistics, verbose mode for debugging
+- **Portable**: Works on any platform that supports Python 3.6+
+
+## Installation
+
+```bash
+pip install grepy-tool
+```
+
+## Usage
+
+Basic usage:
+
+```bash
+grepy "pattern" file.txt
+```
+
+Search in all files in current directory:
+
+```bash
+grepy "pattern" .
+```
+
+Recursive search with highlighting:
+
+```bash
+grepy "pattern" --recursive --highlight .
+```
+
+Case-insensitive search with line numbers:
+
+```bash
+grepy -i -n "pattern" file.txt
+```
+
+Advanced example:
+
+```bash
+grepy "function" --recursive --highlight --summary --include="*.py" --exclude="*test*" .
+```
+
+## Options
+
+### Standard grep options:
+- `-i, --ignore-case`: Case insensitive search
+- `-r, --recursive`: Search directories recursively
+- `-v, --invert-match`: Show lines that do not match
+- `-n, --line-numbers`: Show line numbers
+- `-w, --word`: Match whole words only
+- `-m, --max-count NUM`: Stop after NUM matches
+
+### Enhanced features:
+- `-p, --parallel`: Use parallel processing for faster searches
+- `--workers NUM`: Number of worker threads for parallel processing
+- `--highlight`: Highlight matching text
+- `--no-color`: Disable colored output
+- `--sort`: Sort results by filename
+- `--column`: Show column number of match
+- `--first-only`: Only show first match per file
+- `--summary`: Show summary of matches
+- `--multiline`: Enable multiline regex matching
+- `--include GLOB`: Only search files matching GLOB pattern
+- `--exclude GLOB`: Skip files matching GLOB pattern
+- `--exclude-dir GLOB`: Skip directories matching GLOB pattern
+- `--filename`: Always show filename
+- `--verbose`: Enable verbose output
+
+## Python API
+
+Grepy can also be used as a Python library:
+
+```python
+from grepy.grepy import Grepy
+
+# Create a grepy instance
+grepy = Grepy()
+
+# Search with options
+matches = grepy.search(
+    "pattern",
+    ["file.txt", "directory"],
+    {
+        "recursive": True,
+        "ignore_case": True,
+        "highlight": True
+    }
+)
+
+# Process results
+for match in matches:
+    print(f"{match.filename}:{match.line_number}: {match.line}")
+```
+
+## License
+
+MIT License
