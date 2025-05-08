@@ -1,0 +1,11 @@
+aucodb/__init__.py,sha256=Wzf5T3NBDfhQoTnhnRNHSlAsE0XMqbclXG-M81Vas70,22
+aucodb/client/__init__.py,sha256=747CTN62g7HzDjb9FU6dWD40jRDsiWG7N8HFPD61pvA,62
+aucodb/client/auco_client.py,sha256=NG39YMuj2odrOGC1Svaivof02U4LY_vkSj04O9tJ7EI,6432
+aucodb/database/__init__.py,sha256=BWTddoopTjzWat6GKiq0UF4Gk4ahr6t2dulopFsjbTk,119
+aucodb/database/aucodb.py,sha256=HgwV5g9zmRLHW2IuHJdHCP56h5-5rPYeqrV-6dTpFns,15170
+aucodb/server/__init__.py,sha256=k8ufeN1j3GNC8D8LTQFDoAQpjxLiog3hgLo-Q5G0bzI,48
+aucodb/server/auco_server.py,sha256=k8fLe9ESlSxv0Kw1uKGZDNvi6rVJ0Te8TssYFaRHgy0,6428
+aucodb-0.1.4.dist-info/LICENSE,sha256=91hWNAJ4ACDAGpOex77DwAQOeqrOQ2sAzAvKV-aeNa0,1096
+aucodb-0.1.4.dist-info/METADATA,sha256=ILXNL7K2Ij0aNGG0MwmW91vE4j8tFa479RQPYY3RoZc,8519
+aucodb-0.1.4.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+aucodb-0.1.4.dist-info/RECORD,,
