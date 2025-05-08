@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: rpsa-client
+Version: 0.1.0
+Summary: Python client library for the Rock, Paper, Code! app public API
+Home-page: https://github.com/you/rpsa-client
+License: MIT
+Keywords: rpsa,api,client,httpx,pydantic
+Author: Adrian Bohner
+Author-email: adrian.bohner@onespire.hu
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: httpx (>=0.24.1,<0.25.0)
+Requires-Dist: pydantic (>=2.0,<3.0)
+Project-URL: Documentation, https://github.com/you/rpsa-client#readme
+Project-URL: Repository, https://github.com/you/rpsa-client
+Description-Content-Type: text/markdown
+
+# rpsa-client
+
+A Python client library for the RPSA public API.
+
+## Installation
+
+```bash
+# Via pip
+pip install rpsa-client
+
+# Or with Poetry
+poetry add rpsa-client
+```
+
+## Quickstart
+
+```python
+from rpsa_client import RPSAClient, exceptions
+
+# Initialize the client
+client = RPSAClient(
+    api_key="YOUR_API_KEY",
+    base_url="https://rockpapercode.onespire.hu/api/v1/public"
+)
+
+# List arenas
+resp = client.list_arenas(page=1, per_page=10)
+for arena in resp.data:
+    print(arena.id, arena.created_at)
+
+# Get arena details
+arena = client.get_arena(arena_id=1)
+print(arena)
+
+# Fetch game results
+results = client.get_game_results(game_id=42)
+for r in results:
+    print(r.strategy_name, r.score)
+
+# Strategy summary
+summary = client.get_strategy_summary(strategy_id=7)
+print(summary.total_score)
+
+# Always close client when done
+client.close()
+```
+
+## Error handling
+
+- `UnauthorizedError` (401)
+- `NotFoundError` (404)
+- `BadRequestError` (400)
+- `RateLimitError` (429)
+- Generic `APIError` for other statuses.
+
+## Testing
+
+```bash
+poetry install
+poetry run pytest
+```
+
