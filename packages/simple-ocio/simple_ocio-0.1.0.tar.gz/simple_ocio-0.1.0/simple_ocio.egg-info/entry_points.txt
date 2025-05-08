@@ -1,0 +1,2 @@
+[console_scripts]
+simple_ocio = simple_ocio.__main__:main
