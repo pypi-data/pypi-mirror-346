@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "personal_cloud_client"
+version = "0.0.1"
+authors = [
+  { name="Lee Jun", email="leejun.nakao@gmail.com" },
+]
+description = "The client to handle the cloud server"
+requires-python = ">=3.9"
+

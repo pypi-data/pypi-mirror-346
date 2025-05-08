@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: personal_cloud_client
+Version: 0.0.1
+Summary: The client to handle the cloud server
+Author-email: Lee Jun <leejun.nakao@gmail.com>
+Requires-Python: >=3.9
