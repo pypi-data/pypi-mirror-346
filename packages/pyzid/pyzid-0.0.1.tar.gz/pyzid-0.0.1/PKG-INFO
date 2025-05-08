@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: pyzid
+Version: 0.0.1
+Summary: A sortable unique identifier generator.
+Project-URL: Homepage, https://github.com/deadblue/pyzid
+Project-URL: Repository, https://github.com/deadblue/pyzid
+Author-email: deadblue <root@dead.blue>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# pyzid
+
+A sortable unique identifier generator.
+
+## Usage
+
+```python
+import pyzid
+
+print( pyzid.generate() )
+```
+
+## Specification
+
+Raw ZID is a 15 bytes binary data, which consists of 4 parts:
+
+| Part | Size | Description |
+| --- | --- | --- |
+| Timestamp | 6 | Timestamp in milliseconds. |
+| MachineID | 4 | Machine unique identifier. |
+| ProcessID | 3 | Process ID. |
+| Sequence  | 2 | Sequence. |
+
+All parts are integer value, and they are encoded to bytes in Big-Endian.
+
+---
+
+ZID is a customized base32 encoded string from raw ZID, which is a 24 characters string consists of numbers and lower-case letters.
