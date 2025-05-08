@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ibm_cloud_fail_over"
+version = "1.0.14"
+authors = [
+  { name="Eran Gampel", email="dev@gampel.net" },
+]
+description = "Module providing IBM Fail over functions"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["ibm-cloud-sdk-core" , "ibm-vpc"]
+[project.urls]
+Homepage = "https://github.com/gampel/ibm_cloud_fail_over"
+Issues = "https://github.com/gampel/ibm_cloud_fail_over/issues"
