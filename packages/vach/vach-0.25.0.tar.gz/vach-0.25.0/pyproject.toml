@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vach"
+version = "0.25.0"
+dependencies = [
+  "argcomplete",
+  "ansible-vault",
+  "PyYAML"
+]
+authors = [
+  { name="terasik" },
+]
+description = "changing vault passwords"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+]
+
+[project.urls]
+Homepage = "https://github.com/terasik/chvp"
+
+[tool.setuptools.package-dir]
+vach="src"
+
+[project.scripts]
+vach = "vach.cli:main"
+

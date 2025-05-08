@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/cli.py
+src/defs.py
+src/excs.py
+src/optsargs.py
+src/utils.py
+src/vach.py
+src/yavault.py
+vach.egg-info/PKG-INFO
+vach.egg-info/SOURCES.txt
+vach.egg-info/dependency_links.txt
+vach.egg-info/entry_points.txt
+vach.egg-info/requires.txt
+vach.egg-info/top_level.txt
