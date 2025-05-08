@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+jumpcloud_aws_cli/__init__.py
+jumpcloud_aws_cli/auth.py
+jumpcloud_aws_cli/cli.py
+jumpcloud_awscli.egg-info/PKG-INFO
+jumpcloud_awscli.egg-info/SOURCES.txt
+jumpcloud_awscli.egg-info/dependency_links.txt
+jumpcloud_awscli.egg-info/entry_points.txt
+jumpcloud_awscli.egg-info/requires.txt
+jumpcloud_awscli.egg-info/top_level.txt

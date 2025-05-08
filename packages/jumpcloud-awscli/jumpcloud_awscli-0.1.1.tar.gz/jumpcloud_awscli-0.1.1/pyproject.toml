@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jumpcloud-awscli"
+version = "0.1.1"
+description = "JumpCloud AWS CLI Authentication with Device Trust"
+readme = "README.md"
+authors = [{name = "Prashant Banthia", email = "prashantbanthia98@gmail.com"}]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "boto3>=1.20.0",
+    "requests>=2.25.0",
+    "selenium>=4.0.0",
+    "beautifulsoup4>=4.9.0",
+    "configparser>=5.0.0",
+    "chromedriver-binary-auto",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/prashantbanthia/jumpcloud-awscli"
+"Bug Tracker" = "https://github.com/prashantbanthia/jumpcloud-awscli/issues"
+
+[project.scripts]
+jumpcloud-aws = "jumpcloud_aws_cli.cli:main"
