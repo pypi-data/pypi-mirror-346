@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: TODO_LIST_CLI_ldriver
+Version: 0.0.1
+Summary: Testing pypi with a todo app
+Author-email: "L.D" <author@example.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.13.2
+Description-Content-Type: text/markdown
+
+    # Example Package
