@@ -1,0 +1,12 @@
+numpy
+opencv-python
+torch
+torchvision
+Pillow
+psd-tools
+rectpack
+modelscope
+basicsr
+realesrgan
+nst_vgg19
+gdown
