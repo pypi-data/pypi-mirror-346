@@ -1,0 +1,45 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "fedzk"
+version = "1.0.0"
+description = "Secure Federated Learning with Zero-Knowledge Proofs"
+authors = ["Aaryan Guglani <aaryan@fedzkproject.org>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "fedzk", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+numpy = ">=1.21.0"
+requests = ">=2.25.0"
+rich = ">=12.0.0"
+typer = ">=0.4.0"
+httpx = ">=0.21.0"
+torch = ">=1.10.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=6.2.0"
+pytest-cov = ">=2.12.0"
+black = ">=22.6.0"
+mypy = ">=0.81.0"
+
+[tool.poetry.scripts]
+fedzk = "fedzk.cli:main"
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --cov=fedzk --cov-report=term-missing"
