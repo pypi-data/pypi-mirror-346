@@ -1,0 +1,8 @@
+README
+setup.py
+wacundb.py
+wacundb.egg-info/PKG-INFO
+wacundb.egg-info/SOURCES.txt
+wacundb.egg-info/dependency_links.txt
+wacundb.egg-info/requires.txt
+wacundb.egg-info/top_level.txt

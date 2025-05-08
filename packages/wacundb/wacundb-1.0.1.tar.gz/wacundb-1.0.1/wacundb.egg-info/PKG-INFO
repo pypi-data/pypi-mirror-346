@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: wacundb
+Version: 1.0.1
+Summary: wacunDB library
+Home-page: http://www.leafpy.org/
+Author: Huaqing Ye
+Author-email: wacunye@gmail.com
+License: MIT license
+Platform: any
+Requires-Dist: sqlalchemy
+Requires-Dist: pymssql
+Requires-Dist: pymysql
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: platform
+Dynamic: requires-dist
+Dynamic: summary
+
+wacunDB is a simple library for makeing raw SQL queries to most relational databases.
