@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+llm_cli_lite.egg-info/PKG-INFO
+llm_cli_lite.egg-info/SOURCES.txt
+llm_cli_lite.egg-info/dependency_links.txt
+llm_cli_lite.egg-info/entry_points.txt
+llm_cli_lite.egg-info/requires.txt
+llm_cli_lite.egg-info/top_level.txt
