@@ -1,0 +1,2 @@
+[console_scripts]
+flock-ui = flock_ui.run:main

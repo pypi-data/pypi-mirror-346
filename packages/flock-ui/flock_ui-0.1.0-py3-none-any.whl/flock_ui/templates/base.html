@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Flock UI{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/custom.css') }}">
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        body { padding-top: 4.5rem; }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: var(--pico-card-background-color);
+            border-bottom: 1px solid var(--pico-muted-border-color);
+            padding-top: 0.5rem; 
+            padding-bottom: 0.5rem;
+        }
+        .message-container {
+            position: fixed;
+            top: 4.5rem; 
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1001; 
+            width: auto;
+            max-width: 80%;
+            min-width: 300px; /* Ensure it has some base width */
+            padding: 0; margin: 0;
+            text-align: center; /* Center the alert divs */
+        }
+        .message-container > div { 
+            margin-top: 0.5rem;
+            box-shadow: var(--pico-card-box-shadow);
+            display: inline-block; /* Make alerts only as wide as content */
+            text-align: left; /* Reset text align for content within alert */
+            min-width: 280px; /* Ensure some minimum width for the alert itself */
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong><a href="/" style="text-decoration: none;">Flock UI 🐤</a></strong></li>
+        </ul>
+        <ul>
+            <li><a href="/" role="button" {% if request.url.path == '/' %}aria-current="page"{% else %}class="outline"{% endif %}>Dashboard</a></li>
+            <li><a href="/ui/editor" role="button" {% if request.url.path.startswith('/ui/editor') %}aria-current="page"{% else %}class="outline"{% endif %}>Editor</a></li>
+            <li><a href="/ui/registry" role="button" {% if request.url.path.startswith('/ui/registry') %}aria-current="page"{% else %}class="outline"{% endif %}>Registry</a></li>
+        </ul>
+    </nav>
+
+    <div class="message-container" 
+         x-data="messageHandler(
+            {{ success_message | tojson | safe if success_message else 'null' }},
+            {{ error_message | tojson | safe if error_message else 'null' }}
+         )">
+        <template x-if="showSuccess && successMsg">
+            <div class="success" role="alert" @click="showSuccess = false" style="cursor: pointer;">
+                <span x-text="successMsg"></span>
+                <button type="button" class="close" aria-label="Dismiss">×</button>
+            </div>
+        </template>
+        <template x-if="showError && errorMsg">
+            <div class="error" role="alert" @click="showError = false" style="cursor: pointer;">
+                <span x-text="errorMsg"></span>
+                <button type="button" class="close" aria-label="Dismiss">×</button>
+            </div>
+        </template>
+    </div>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="container">
+        <small>Built with FastAPI, HTMX, Pico.CSS, and ❤️ for Flock</small>
+    </footer>
+
+    <script>
+        function messageHandler(initialSuccessMsg, initialErrorMsg) {
+            return {
+                showSuccess: !!initialSuccessMsg,
+                showError: !!initialErrorMsg,
+                successMsg: initialSuccessMsg,
+                errorMsg: initialErrorMsg,
+                init() {
+                    if (this.successMsg) { setTimeout(() => this.showSuccess = false, 5000); }
+                    if (this.errorMsg) { setTimeout(() => this.showError = false, 7000); }
+
+                    window.addEventListener('notify', event => {
+                        if (event.detail.type === 'success') {
+                            this.successMsg = event.detail.message;
+                            this.showSuccess = true;
+                            this.showError = false;
+                            setTimeout(() => this.showSuccess = false, 5000);
+                        }
+                        if (event.detail.type === 'error') {
+                            this.errorMsg = event.detail.message;
+                            this.showError = true;
+                            this.showSuccess = false;
+                            setTimeout(() => this.showError = false, 7000);
+                        }
+                    });
+                }
+            };
+        }
+    </script>
+</body>
+</html>

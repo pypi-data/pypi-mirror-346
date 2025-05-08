@@ -1,0 +1,240 @@
+/* Global styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    padding-bottom: 4rem; /* Space for footer */
+}
+
+/* Navigation */
+nav ul li strong a { /* For the brand link */
+    color: var(--pico-h1-color);
+    text-decoration: none;
+}
+nav ul li a[role="button"][aria-current="page"] { /* Active nav button */
+    /* Pico handles this by default with aria-current, but we can override */
+}
+
+
+/* Messages (success/error) */
+.message-container > div {
+    padding: 0.75rem;
+    margin-bottom: 1rem; /* Spacing between multiple messages if they appear */
+    border-radius: var(--pico-border-radius);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.message-container .success {
+    background-color: var(--pico-ins-color);
+    color: var(--pico-primary-inverse);
+    border: 1px solid var(--pico-ins-color);
+}
+.message-container .error {
+    background-color: var(--pico-del-color);
+    color: var(--pico-primary-inverse);
+    border: 1px solid var(--pico-del-color);
+}
+.message-container .close { /* Simple close button for messages */
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+
+/* Editor Layout - Two Column */
+.editor-layout-grid {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 2fr; /* Sidebar fixed-ish, main content flexible */
+    gap: var(--pico-spacing);
+    margin-top: var(--pico-spacing);
+}
+
+.editor-sidebar > section,
+.editor-main-content > section {
+    margin-bottom: var(--pico-spacing);
+}
+.editor-sidebar article, .editor-main-content article { /* Ensure articles within sections don't add extra margins unless needed */
+    margin-bottom: 0; 
+}
+
+
+/* Styling for panels/articles within the editor */
+#flock-properties-panel article,
+#agent-list-panel article,
+#agent-detail-panel article,
+#execution-panel article,
+#results-display-container article { /* If results are wrapped in article */
+    padding: var(--pico-block-spacing-vertical) var(--pico-block-spacing-horizontal);
+}
+#flock-properties-panel header h4,
+#agent-list-panel header h4,
+#agent-detail-panel header h4,
+#execution-panel header h4,
+#results-display-container header h4 {
+    margin-bottom: var(--pico-typography-spacing-vertical);
+}
+
+
+/* Agent List Styling */
+#agent-list-panel ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 50vh; /* Allow scrolling for long lists */
+    overflow-y: auto;
+}
+#agent-list-panel li {
+    padding: 0.75rem;
+    border: 1px solid var(--pico-muted-border-color);
+    margin-bottom: 0.5rem;
+    border-radius: var(--pico-border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+#agent-list-panel li:hover, #agent-list-panel li.htmx-settling {
+    background-color: var(--pico-muted-hover-background-color);
+}
+#agent-list-panel li.selected-agent { /* Add a class for selected agent if you implement that client-side */
+    background-color: var(--pico-primary-focus);
+    border-color: var(--pico-primary);
+    color: var(--pico-primary-inverse);
+}
+#agent-list-panel li small {
+    color: var(--pico-muted-color);
+}
+
+
+/* Agent Detail Form */
+#agent-detail-form-content fieldset {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem; /* Space before next fieldset or buttons */
+    border-bottom: 1px solid var(--pico-muted-border-color);
+}
+#agent-detail-form-content fieldset:last-of-type {
+    border-bottom: none; /* No border for the last fieldset */
+    margin-bottom: 0;
+}
+#agent_detail_form_content .grid { /* For button groups */
+    margin-top: 1rem;
+}
+
+
+/* Tool Checklist */
+.tool-checklist {
+    max-height: 150px; /* Example max height */
+    overflow-y: auto;
+    border: 1px solid var(--pico-muted-border-color);
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border-radius: var(--pico-border-radius);
+}
+.tool-checklist label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: normal; /* Make tool labels normal weight */
+}
+.tool-checklist input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+.tool-checklist label small {
+    color: var(--pico-muted-color);
+}
+
+/* Execution & Results */
+#dynamic-input-form-fields fieldset {
+    margin-bottom: 1rem;
+    border: 1px solid var(--pico-form-element-border-color);
+    padding: 1rem;
+    border-radius: var(--pico-border-radius);
+}
+#dynamic-input-form-fields fieldset legend { /* Style legend if you use it */
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+#results-display {
+    background-color: var(--pico-code-background-color);
+    color: var(--pico-code-color);
+    padding: 1rem;
+    border-radius: var(--pico-border-radius);
+    overflow-x: auto;
+    margin-top: 1rem;
+    min-height: 100px; /* Ensure it has some height even when empty */
+    border: 1px solid var(--pico-muted-border-color);
+}
+#results-display pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+
+/* HTMX Indicators */
+.htmx-indicator {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.htmx-request .htmx-indicator {
+    display: inline-block; /* Or block, depending on context */
+    opacity: 1;
+    margin-left: 0.5em;
+}
+.htmx-request.htmx-indicator { /* For elements that become indicators themselves */
+    display: inline-block;
+    opacity: 1;
+}
+
+/* Registry Viewer */
+#registry-viewer-page nav ul.grid li button {
+    width: 100%; /* Make buttons take full width of grid cell */
+}
+#registry-table-container table {
+    margin-top: 1rem;
+}
+
+/* Small utility for form field errors */
+.field-error {
+    color: var(--pico-del-color);
+    font-size: var(--pico-font-size-small);
+    margin-top: -0.5rem; /* Pull it closer to the input */
+    margin-bottom: 0.5rem;
+}
+
+/* ... (previous custom.css content) ... */
+
+/* Structured Data View */
+.structured-table {
+    border: 1px solid var(--pico-muted-border-color);
+    font-size: 0.9em;
+    width: 100%; /* Make tables take full width of their container */
+    margin-bottom: 0.75rem !important; /* Ensure some space below tables */
+}
+.structured-table td, .structured-table th {
+    padding: 0.4em 0.6em !important; /* Consistent padding */
+    vertical-align: top;
+}
+.structured-table tr:last-child td {
+    border-bottom: none;
+}
+.structured-table td[style*="font-weight: bold"] { /* Key column */
+    color: var(--pico-secondary); /* Example: use secondary color for keys */
+    min-width: 120px; /* Give keys some minimum width */
+    max-width: 250px; /* And a max to prevent overly wide key columns */
+    word-break: break-word;
+}
+
+#results-display-content header.grid {
+    align-items: center; /* Vertically align header content */
+    margin-bottom: 0.5rem;
+}
+#results-display-content header h5 {
+    margin-bottom: 0; /* Remove default margin from h5 in this context */
+}
+#results-display-content header div[style*="text-align: right"] button {
+    margin-left: 0.5rem; /* Space between toggle buttons */
+    padding: 0.25rem 0.75rem; /* Smaller toggle buttons */
+    font-size: 0.85em;
+}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Flock Editor - {{ flock.name if flock else 'No Flock Loaded' }}{% endblock %}
+
+{% block content %}
+<div class="editor-layout-grid">
+    <aside class="editor-sidebar">
+        <section id="flock-properties-panel" 
+                 hx-get="/api/flocks/htmx/flock-properties-form" 
+                 hx-trigger="load, flockPropertiesUpdated from:body" 
+                 hx-swap="innerHTML">
+            <article><p>Loading Flock properties...</p><progress></progress></article>
+        </section>
+
+        <section id="agent-list-panel" 
+                 hx-get="/api/flocks/htmx/agent-list" 
+                 hx-trigger="load, agentListChanged from:body" 
+                 hx-swap="innerHTML">
+            <article><p>Loading agents...</p><progress></progress></article>
+        </section>
+
+        <section id="execution-panel" 
+                 hx-get="/api/flocks/htmx/execution-form" 
+                 hx-trigger="load, executionFormNeedsUpdate from:body" 
+                 hx-swap="innerHTML">
+            <article><p>Loading execution controls...</p><progress></progress></article>
+        </section>
+    </aside>
+
+    <main class="editor-main-content">
+        <section id="agent-detail-panel">
+            <article>
+                <header><h4>Agent Details</h4></header>
+                <p>Select an agent from the list to view/edit its details, or click "Add New Agent" in the agent list.</p>
+            </article>
+        </section>
+
+        <section id="results-display-container">
+            <header><h4>Execution Results</h4></header>
+            <div id="results-display">
+                <p>Results will appear here after running the Flock.</p>
+            </div>
+        </section>
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Flock UI - Dashboard{% endblock %}
+
+{% block content %}
+<article>
+    <header>
+        <h2>Welcome to Flock UI!</h2>
+        <p>Manage your Flock configurations and agents.</p>
+    </header>
+
+    <section id="create-flock-section">
+        <h3>Create New Flock</h3>
+        <form hx-post="/ui/create-flock" hx-target="body" hx-swap="innerHTML" hx-push-url="true">
+            <label for="flock_name">Flock Name</label>
+            <input type="text" id="flock_name" name="flock_name" placeholder="My Awesome Flock" required>
+
+            <label for="default_model">Default Model (Optional)</label>
+            <input type="text" id="default_model" name="default_model" placeholder="openai/gpt-4o">
+
+            <label for="description">Description (Optional)</label>
+            <textarea id="description" name="description" placeholder="A brief description of what this Flock does."></textarea>
+
+            <button type="submit">Create Flock and Open Editor</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section id="load-flock-section">
+        <h3>Load Existing Flock</h3>
+        <form hx-post="/ui/load-flock" hx-target="body" hx-swap="innerHTML" hx-push-url="true" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Load from server:</legend>
+                {% if flock_files %}
+                    <label for="flock_file_select">Select a Flock file:</label>
+                    <select id="flock_file_select" name="flock_file_select">
+                        <option value="" disabled selected>-- Choose a file --</option>
+                        {% for file_name in flock_files %}
+                            <option value="{{ file_name }}">{{ file_name }}</option>
+                        {% endfor %}
+                    </select>
+                {% else %}
+                    <p>No Flock files found on the server in <code>./.flock_ui_projects/</code> directory.</p>
+                {% endif %}
+            </fieldset>
+            <fieldset>
+                <legend>Or upload a file:</legend>
+                <label for="flock_file_upload">Upload .flock.yaml, .yaml, or .yml file:</label>
+                <input type="file" id="flock_file_upload" name="flock_file_upload" accept=".yaml,.yml,.flock">
+            </fieldset>
+            <button type="submit">Load Flock and Open Editor</button>
+        </form>
+    </section>
+</article>
+{% endblock %}
