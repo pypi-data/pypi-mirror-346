@@ -1,0 +1,11 @@
+gradio_flatpickr_calendar/__init__.py,sha256=KGhN4C0SL4zFdT5SyUPzpZRQi9hjApK0h2qoEksnj6M,56
+gradio_flatpickr_calendar/calendar.py,sha256=jVMFruzRM-_2ngaqcsL_kiVe2wxRHu41CG9692FSm3Q,4963
+gradio_flatpickr_calendar/calendar.pyi,sha256=rd8o3z4XsDnqedXPDwmkenbXhEwuUIwYBfcxP3lmG0Q,22152
+gradio_flatpickr_calendar/templates/component/index.js,sha256=11w3tUea1ib9tey2TqF7JeP6XXMKWngA4H-VZBXryCw,885733
+gradio_flatpickr_calendar/templates/component/style.css,sha256=Um1sLqinHYtYDWdRu4UEns2fWojcpT7YHe0Oq7AQhs4,1493984
+gradio_flatpickr_calendar/templates/example/index.js,sha256=S0rQhEVCiO6TrKOl5wSmmKeYSD4WufxrYzuLtpfb-fo,1818
+gradio_flatpickr_calendar/templates/example/style.css,sha256=Aj4k-S41TV83pot-J9j9Fi2UonrXHFC1Jl4Zb1xaYo4,61
+gradio_flatpickr_calendar-0.0.3.dist-info/METADATA,sha256=hQRZ_xwSM1RYZwyPSY0NSeLLXNmi3IWTny_57w2BK1M,7399
+gradio_flatpickr_calendar-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gradio_flatpickr_calendar-0.0.3.dist-info/licenses/LICENSE,sha256=a79pefoeovQXSnVIWJQ3iDW3Gfrr7tX6KeGOMBJuEck,1071
+gradio_flatpickr_calendar-0.0.3.dist-info/RECORD,,
