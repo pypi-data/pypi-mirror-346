@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: groupdocs-signature-net
+Version: 25.4
+Summary: GroupDocs.Signature for Python via .NET is a robust on-premise library designed for adding electronic signatures to documents. This powerful API allows developers to easily integrate digital signatures into their applications without the need for any third-party tools. It supports multiple signature types, such as text, image, barcode, and QR code, providing flexibility across different file formats like PDF, Word, Excel, and more.
+Home-page: https://products.groupdocs.com/Signature
+Author: GroupDocs
+License: Other/Proprietary License
+Keywords: Signature,meta,file,render,api,pdf,docx,xlsx,pptx,html,png,word,excel,powerpoint,visio,opendocument,photoshop
+Platform: macos_x86_64
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5,<3.14
+Description-Content-Type: text/markdown
+
+# File Signature Python API
+
+[![banner](https://raw.githubusercontent.com/Aspose/aspose.github.io/master/img/banners/aspose_slides-for-python-net-banner.png)](https://releases.groupdocs.com/signature/python-net/)
+
+[Product Page](https://products.groupdocs.com/signature/python-net/) | [Docs](https://docs.groupdocs.com/signature/python-net/) | [Demos](https://products.groupdocs.app/signature/family) | [API Reference](https://references.groupdocs.com/signature/) | [Blog](https://blog.groupdocs.com/category/signature/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/signature) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
+
+[GroupDocs.Signature for Python via .NET](https://products.groupdocs.com/signature/python-net/) is a robust on-premise library designed for adding electronic signatures to documents. This powerful API allows developers to easily integrate digital signatures into their applications without the need for any third-party tools. It supports multiple signature types, such as text, image, barcode, and QR code, providing flexibility across different file formats like PDF, Word, Excel, and more.
+
+Without having to install any 3rd party component, you can use GroupDocs.Signature to build different types applications. For example, GroupDocs, using its own APIs, developed a [free web application](https://products.groupdocs.app/signature/pdf) that allows people to sign their PDF documents online.
+
+>GroupDocs.Signature for Python requires you to use python programming language. For Node.js, Java and .NET languages, we recommend you get [GroupDocs.Signature for Node.js](https://products.groupdocs.com/signature/nodejs-java/), [GroupDocs.Signature for Java](https://products.groupdocs.com/signature/java/) and [GroupDocs.Signature for .NET](https://products.groupdocs.com/signature/net/), respectively.
+
+## View API Features
+
+GroupDocs.Signature for Python via .NET provides these popular features:
+- Create and add signatures to documents of various file formats.
+- Specify visual attributes of signatures, such as color, font, margins, etc.
+- Search and fetch a list of signatures from a document.
+- Determine if the document contains signatures meeting specified criteria.
+- Extract basic information about the document.
+- Generate image representation of document pages for preview.
+- Distinguish created signatures from the actual document.
+- Put encrypted text into the QR-code signature or embed custom data objects.
+
+
+## Supported File Formats
+
+With GroupDocs.Signature for Python via .NET, developers and applications can view files of the following categories: 
+
+- Microsoft Word® formats: DOC, DOCM, DOCX, DOT, DOTM, DOTX
+- Microsoft Excel® formats: XLS, XLSB, XLSM, XLSX, XLTX, XLTM
+- Microsoft PowerPoint® formats: PPT, PPTM, PPTX, PPS, PPSM, PPSX, POTX, POTM
+- OpenOffice® formats: ODT, OTT, ODS, OTS, ODP, OTP
+- Image formats: BMP, DJVU, GIF, JPG, JPEG, PNG, SVG, TIF, TIFF, WEBP
+- CorelDraw® formats: CDR, CMX
+- Photoshop® formats: PSD
+- Metafile formats: WMF
+- Portable formats: PDF
+
+## Platform Independence
+
+GroupDocs.Signature for Python via .NET does not require any external software or third-party tools and supports any 32-bit or 64-bit operating system with .NET Framework, .NET Core, or .NET installed. The supported operating systems and platforms are listed below: 
+
+## Get Started
+
+Ready to try GroupDocs.Signature for Python via .NET?
+
+Fetch the package and install **GroupDocs.Signature**. Run this command: `pip install groupdocs.signature`
+
+If you already have **GroupDocs.Signature** installed and want to get the latest version, 
+you have to run `pip install --upgrade groupdocs.signature` instead. 
+
+Check out GroupDocs.Signature for Python for .NET [documentation](http://docs.groupdocs.com/signature/python-net/)).  
+
+## Sign with text the PDF file
+
+```py
+import groupdocs.signature as gs
+import groupdocs.signature.options as gso
+
+ # Open the document
+with gs.Signature(sample_pdf) as signature:
+    # Set up text signature options
+    options = gso.TextSignOptions("John Smith")
+    options.left = 50
+    options.top = 200
+    options.width = 100
+    options.height = 30
+
+    # Sign document and save
+    result = signature.sign(output_file_path, options)
+```
+
+## Sign with QRcode the PDF file
+
+```py
+import groupdocs.signature as gs
+import groupdocs.signature.options as gso
+import groupdocs.signature.domain as gsd
+
+ # Open the document
+with gs.Signature(sample_pdf) as signature:
+    # Set up text signature options
+    options = gso.QrCodeSignOptions("John Smith")
+    options.encode_type = gsd.QrCodeTypes.QR
+    options.left = 50
+    options.top = 200
+    options.width = 100
+    options.height = 30
+
+    # Sign document and save
+    result = signature.sign(output_file_path, options)
+```
+
+## Sign with digital signature the PNG file
+
+```py
+import groupdocs.signature as gv
+import groupdocs.signature.options as gvo
+
+with gs.Signature(sample_pdf) as signature:
+        options = gso.DigitalSignOptions(certificate_pfx)
+        options.image_file_path = image_handwrite
+        options.left = 50
+        options.top = 50
+        options.page_number = 1
+        options.password = "1234567890"
+```
+
+[Product Page](https://products.groupdocs.com/signature/python-net/) | [Docs](https://docs.groupdocs.com/signature/python-net/) | [Demos](https://products.groupdocs.app/signature/family) | [API Reference](https://references.groupdocs.com/signature/) | [Blog](https://blog.groupdocs.com/category/signature/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/signature) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
+
