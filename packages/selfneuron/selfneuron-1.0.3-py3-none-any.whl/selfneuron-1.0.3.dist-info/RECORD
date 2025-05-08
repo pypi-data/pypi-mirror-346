@@ -1,0 +1,10 @@
+selfneuron/Logger.py,sha256=ZUedTltDVlZ6rENSAyGMn22tVqt-X_CbepyILcGY9_k,353
+selfneuron/__init__.py,sha256=KM10sWnYL7v54rfeGtMQCHPqlPe66hZXLkFGsas1uyA,112
+selfneuron/client.py,sha256=46ex097JJRqujWf47rhgfXY7V82ahwXCNLRIs4ypLyc,18844
+selfneuron/custom_exception.py,sha256=PZ-Abz0qywh_wadnK02nF4tu39pdioHoruyvRAfVUYY,234
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_basic_connection.py,sha256=SWAz96e9wuONruPOul3B-INniVI8q-3nH4A-UWSYd0w,2178
+selfneuron-1.0.3.dist-info/METADATA,sha256=LBjb4QBR5_udjL1A-QxORk7M4zzaUI-EqoCCSvUyg8w,238
+selfneuron-1.0.3.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+selfneuron-1.0.3.dist-info/top_level.txt,sha256=f0A8holPgnRZqy3TVtRNbmSyE6spqdUVHOAsRLJrK1A,17
+selfneuron-1.0.3.dist-info/RECORD,,
