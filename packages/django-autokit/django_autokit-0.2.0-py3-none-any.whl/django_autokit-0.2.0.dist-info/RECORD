@@ -1,0 +1,15 @@
+django_autokit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_autokit/cli.py,sha256=qvDf7idRH6Ir76pBxOpcH_OGR06H1DLOr-f2rEiLoig,1428
+django_autokit/core.py,sha256=wRK15T0Jwx8RP2e9etn4ZV21NnC9SSniNxYhhovQ5i4,1532
+django_autokit/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_autokit/utils/app_file_creator.py,sha256=IDHD0FvuSVDQrYqhWn7h3PRMmzvrzB6mJ-KyR4HWXFo,718
+django_autokit/utils/env_loader.py,sha256=fcm6GaEsP8PQBTYOpkh_gJBApuExaL2FiP5l-iPxHpo,2858
+django_autokit/utils/gen_gitignore.py,sha256=ONSkOq6FVLXUX-sn-sAesGdLQ9BWeIEL0uxDByCh3Tg,2232
+django_autokit/utils/settings_modifier.py,sha256=u9UU-CpVlPLPQ5Qf8GTksYBu_tdLj1n4bc4hD287Jkw,1893
+django_autokit/utils/settings_splitter.py,sha256=6WcbDFNviw0YMzAsRPRV-WeVRmSGDi_uCLd8gVcfNoU,3045
+django_autokit-0.2.0.dist-info/LICENSE,sha256=S9dGTKWbVfjtMsoiMPSeGVaB_zXa-9351JgUDrIynY4,1527
+django_autokit-0.2.0.dist-info/METADATA,sha256=hYDymj47ICJEeowNFg7P_zLsofNFOGjrFibPYcQETqE,3729
+django_autokit-0.2.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+django_autokit-0.2.0.dist-info/entry_points.txt,sha256=Js_0ZLTxIU_hF_tA8MLAMp5vSbQWwUDrNBGxrDaSvgo,50
+django_autokit-0.2.0.dist-info/top_level.txt,sha256=Bs_9vrCCF06tQANNQSMu2UOPcVFFowYOM8OL5SvkS5o,15
+django_autokit-0.2.0.dist-info/RECORD,,
