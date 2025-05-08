@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+eventor/__init__.py
+eventor/api.py
+eventor/schemas.py
+eventor_api.egg-info/PKG-INFO
+eventor_api.egg-info/SOURCES.txt
+eventor_api.egg-info/dependency_links.txt
+eventor_api.egg-info/requires.txt
+eventor_api.egg-info/top_level.txt

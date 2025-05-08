@@ -1,0 +1,4 @@
+bs4>=0.0.2
+parsy>=2.1
+pydantic-xml>=2.16.0
+requests>=2.32.3

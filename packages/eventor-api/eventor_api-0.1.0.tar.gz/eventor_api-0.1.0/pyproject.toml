@@ -1,0 +1,15 @@
+[project]
+name = "eventor-api"
+version = "0.1.0"
+description = "A Python wrapper around the Eventor API"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bs4>=0.0.2",
+    "parsy>=2.1",
+    "pydantic-xml>=2.16.0",
+    "requests>=2.32.3",
+]
+authors = [
+  {name = "Niclas Ståhl", email = "niclasstahl@hotmail.com"},
+]
