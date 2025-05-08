@@ -1,0 +1,8 @@
+-r requirements.txt
+
+ezdxf
+gempy
+pooch
+trimesh
+
+subsurface-terra

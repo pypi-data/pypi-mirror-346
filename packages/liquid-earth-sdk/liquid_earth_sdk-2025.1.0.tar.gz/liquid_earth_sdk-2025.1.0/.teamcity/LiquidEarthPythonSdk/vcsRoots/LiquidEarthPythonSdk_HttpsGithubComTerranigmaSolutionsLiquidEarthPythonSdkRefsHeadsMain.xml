@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fbeb010e-2bba-4353-a334-9575a4ea45a9" type="jetbrains.git" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>https://github.com/terranigma-solutions/liquid_earth_python_sdk#refs/heads/main</name>
+  <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
+  <param name="agentCleanPolicy" value="ON_BRANCH_CHANGE" />
+  <param name="authMethod" value="PASSWORD" />
+  <param name="branch" value="refs/heads/main" />
+  <param name="ignoreKnownHosts" value="true" />
+  <param name="secure:password" value="credentialsJSON:4df4bdb0-1278-4834-a702-18ae3a286003" />
+  <param name="submoduleCheckout" value="CHECKOUT" />
+  <param name="url" value="https://github.com/terranigma-solutions/liquid_earth_python_sdk" />
+  <param name="useAlternates" value="AUTO" />
+  <param name="username" value="Leguark" />
+  <param name="usernameStyle" value="USERID" />
+</vcs-root>
+

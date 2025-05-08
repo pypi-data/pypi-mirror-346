@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>Testing Dev 001</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="Run_Test_2" />
+    </disabled-settings>
+    <parameters>
+      <param name="env.BACKEND_OVERRIDE" value="%env.BACKEND_OVERRIDE_DEV%" />
+      <param name="env.BACKEND_OVERRIDE_DEV" value="https://liquidearthapim-dev001.azure-api.net/python/" />
+      <param name="env.BACKEND_OVERRIDE_LOCAL" value="http://localhost:7151/api" />
+      <param name="env.DXF_DATA_PATH" value="%env.TERRA_PATH_DEVOPS%/meshes/upc_surface.dxf" />
+      <param name="env.DXF_DATA_PATH_II" value="%env.TERRA_PATH_DEVOPS%/meshes/leinster_detector_positions.dxf" />
+      <param name="env.LIQUID_EARTH_API_TOKEN" value="%env.LIQUID_EARTH_API_TOKEN_DEV001%" />
+      <param name="env.LIQUID_EARTH_API_TOKEN_DEV001" value="credentialsJSON:e740f821-25ac-410c-9f81-2b8cb7c7911e" spec="password" />
+      <param name="env.LIQUID_EARTH_API_TOKEN_LEGACY" value="credentialsJSON:e740f821-25ac-410c-9f81-2b8cb7c7911e" spec="password" />
+      <param name="env.LIQUID_EARTH_API_TOKEN_REVEAL" value="credentialsJSON:d14b7073-3cd7-4e10-a829-2a094b2576a8" spec="password" />
+      <param name="env.LOGIN_CLIENT_ID" value="685e08c0-0aac-42f6-80a9-c57440cd2962" />
+      <param name="env.LOGIN_PASSWORD" value="credentialsJSON:d61e0721-071f-4838-9940-145fe0709afd" spec="password" />
+      <param name="env.LOGIN_SCOPE" value="%env.LOGIN_CLIENT_ID%" />
+      <param name="env.LOGIN_SUBSCRIPTION_KEY" value="0d7113b9f2054be8b4e1b350f18a7f72" />
+      <param name="env.LOGIN_URL" value="https://liquidearthapim-dev001.azure-api.net/user/login_b2c_license" />
+      <param name="env.LOGIN_USER" value="miguel@terranigma-solutions.com" />
+      <param name="env.LOGIN_PAYLOAD" value="grant_type=password&amp;response_type=token id_token&amp;client_id=%env.LOGIN_CLIENT_ID%&amp;scope=openid %env.LOGIN_SCOPE%&amp;username=%env.LOGIN_USER%&amp;password=%env.LOGIN_PASSWORD%" />
+      <param name="env.PATH_TO_DXF_DATA_PATH_SMALL" value="%env.TERRA_PATH_DEVOPS%/meshes/shafts_small.dxf" />
+      <param name="env.PATH_TO_MX" value="%env.TERRA_PATH_DEVOPS%/meshes/GOCAD/mix/horizons_faults_small.mx" />
+      <param name="env.TERRA_PATH_DEVOPS" value="D:/OneDrive - Terranigma Solutions GmbH/Documents - Terranigma Base/DevOps/SubsurfaceTestData/" />
+      <param name="env.TEST_LOGIN_TOKEN" value="Not sure how to set this yet" />
+      <param name="env.TEST_USER_ID" value="43773b72-feae-495d-a1d9-e529dc64da9f" />
+    </parameters>
+    <build-runners>
+      <runner id="Setup" name="Setup" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[@echo on
+python -m venv venv
+call venv\Scripts\activate
+venv\Scripts\python -m pip install --upgrade pip
+
+echo Checking directory...
+dir
+dir .requirements
+
+venv\Scripts\pip install --verbose -r requirements/requirements_dev.txt
+venv\Scripts\pip install --verbose teamcity-messages]]></param>
+          <param name="teamcity.kubernetes.executor.pull.policy" value="" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="Run_Test" name="Run Test: Core" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[@echo on
+venv\Scripts\python -m pytest --teamcity -v]]></param>
+          <param name="teamcity.kubernetes.executor.pull.policy" value="IfNotPresent" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="Run_Test_2" name="Run Test: Mesh" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[venv\Scripts\pip install --verbose -r requirements/requirements_mesh.txt
+
+@echo on
+set REQUIREMENT_LEVEL=READ_MESH
+echo REQUIREMENT_LEVEL is %REQUIREMENT_LEVEL%
+venv\Scripts\python -m pytest --teamcity -v -m read_mesh]]></param>
+          <param name="teamcity.kubernetes.executor.pull.policy" value="IfNotPresent" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="LiquidEarthPythonSdk_HttpsGithubComTerranigmaSolutionsLiquidEarthPythonSdkRefsHeadsMain" />
+    </vcs-settings>
+    <build-triggers>
+      <build-trigger id="TRIGGER_1" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter"><![CDATA[+pr:draft=false
++:<default>]]></param>
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+          <param name="triggerRules" value="-:.teamcity/**" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <build-extensions>
+      <extension id="BUILD_EXT_1" type="perfmon">
+        <parameters>
+          <param name="teamcity.perfmon.feature.enabled" value="true" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_2" type="commit-status-publisher">
+        <parameters>
+          <param name="github_authentication_type" value="token" />
+          <param name="github_host" value="https://api.github.com" />
+          <param name="publisherId" value="githubStatusPublisher" />
+          <param name="secure:github_access_token" value="credentialsJSON:4df4bdb0-1278-4834-a702-18ae3a286003" />
+          <param name="vcsRootId" value="LiquidEarthPythonSdk_HttpsGithubComTerranigmaSolutionsLiquidEarthPythonSdkRefsHeadsMain" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_3" type="pullRequests">
+        <parameters>
+          <param name="authenticationType" value="token" />
+          <param name="filterAuthorRole" value="MEMBER" />
+          <param name="filterTargetBranch" value="" />
+          <param name="providerType" value="github" />
+          <param name="secure:accessToken" value="credentialsJSON:4df4bdb0-1278-4834-a702-18ae3a286003" />
+          <param name="vcsRootId" value="" />
+        </parameters>
+      </extension>
+    </build-extensions>
+  </settings>
+</build-type>
