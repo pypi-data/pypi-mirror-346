@@ -1,0 +1,5 @@
+[console_scripts]
+gaode-mcp-server = gaode_mcp_server.src.gaode_server:main
+
+[gui_scripts]
+gaode_mcp_server = gaode_mcp_server.src.gaode_server:main
