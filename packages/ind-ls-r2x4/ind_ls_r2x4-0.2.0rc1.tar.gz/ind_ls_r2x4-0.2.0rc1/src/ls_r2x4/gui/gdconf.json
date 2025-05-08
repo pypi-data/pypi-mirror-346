@@ -1,0 +1,114 @@
+{
+  "qapp": true,
+  "default_perspective": "r2x4",
+  "next_config_file": null,
+  "layout": {
+    "r2x4": {
+      "panels": [
+        {
+          "id": 1,
+          "category": "r2x4",
+          "module": "ls_r2x4.gui.gdesk_panel",
+          "qualname": "R2X4Panel",
+          "title": "r2x4#1",
+          "bindings": [
+            {
+              "category": "console",
+              "id": 1
+            }
+          ]
+        },
+        {
+          "id": 0,
+          "category": "console",
+          "module": "gdesk.panels.console.consolepanel",
+          "qualname": "MainThreadConsole",
+          "title": "console#0",
+          "bindings": []
+        },
+        {
+          "id": 1,
+          "category": "console",
+          "module": "gdesk.panels.console.consolepanel",
+          "qualname": "SubThreadConsole",
+          "title": "console#1",
+          "bindings": []
+        }
+      ],
+      "windows": [
+        {
+          "name": "main",
+          "docks": {
+            "type": "layout",
+            "category": "vbox",
+            "id": "vbox#1",
+            "sizes": [
+              200,
+              300
+            ],
+            "pinscroll": [
+              300,
+              0
+            ],
+            "scroll": [],
+            "items": [
+              {
+                "type": "panel",
+                "category": "r2x4",
+                "id": 1
+              },
+              {
+                "type": "panel",
+                "category": "console",
+                "id": 1
+              }
+            ]
+          },
+          "visible": true
+        },
+        {
+          "name": "window 1",
+          "docks": {
+            "type": "panel",
+            "category": "console",
+            "id": 0
+          },
+          "visible": false
+        },
+        {
+          "name": "window2",
+          "docks": {
+            "type": "layout",
+            "category": "hbox",
+            "items": [],
+            "sizes": []
+          },
+          "visible": false
+        }
+      ]
+    }
+  },
+  "shortcutmenu": {
+    "Ctrl+Shift+Z": {
+      "image": [
+        "Edit",
+        "Show Prior Image"
+      ]
+    },
+    "Ctrl+Shift+Y": {
+      "image": [
+        "Edit",
+        "Show Next Image"
+      ]
+    },
+    "Ctrl+0": {
+      "image": [
+        "View",
+        "Zoom...",
+        "Zoom Auto"
+      ]
+    }
+  },
+  "keep_children": false,
+  "path_config_files": []
+}

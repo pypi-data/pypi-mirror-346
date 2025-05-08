@@ -1,0 +1,42 @@
+[project]
+name = "ind-ls-r2x4"
+version = "0.2.0.rc1"
+description = "Interface the R2X4 light source from Industrialise."
+authors = [{ name = "Lou Vervecken", email = "lou.vervecken@industrialise.be" }]
+readme = "README.md"
+requires-python = ">=3.8,<3.14"
+dependencies = [
+    "pyserial~=3.5",
+    "cobs"
+]
+
+[project.urls]
+Home = "https://industrialise.be"
+
+[project.scripts]
+r2x4_gui_tkinter = "ls_r2x4.gui.tkinter_gui:main"
+r2x4_gui_qt = "ls_r2x4.gui.qt_widget:main"
+r2x4_demo = "ls_r2x4.r2x4:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ls_r2x4"]
+
+[tool.hatch.build.targets.wheel.force-include]
+# Include the calibration data in the wheel for now, can be removed when it's stored in the firmware
+"./calib_data/ls_3821846592" = "ls_r2x4/calib_data/ls_3821846592"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+    "pytest-ordering>=0.6",
+    "qtpy",
+    "pyside6",
+    "ipywidgets>=8.1.5",
+    "jupyterlab>=4.2.5",
+    "gamma-desk>=1.7.0",
+    "numpy"
+]

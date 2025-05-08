@@ -1,0 +1,52 @@
+Index: ls_r2x4/gui/demo_notebook.ipynb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n \"cells\": [\r\n  {\r\n   \"cell_type\": \"code\",\r\n   \"execution_count\": 1,\r\n   \"id\": \"8a51934b-354d-44fb-b9ce-560a8d026236\",\r\n   \"metadata\": {},\r\n   \"outputs\": [],\r\n   \"source\": [\r\n    \"from ls_r2x4.r2x4 import LightSourceR2X4\\n\",\r\n    \"from ls_r2x4.gui.jupyterlab_widget import LightSourceWidget\"\r\n   ]\r\n  },\r\n  {\r\n   \"cell_type\": \"code\",\r\n   \"execution_count\": 2,\r\n   \"id\": \"846e312e-1baa-4b0e-a1fc-cd9b383af0e0\",\r\n   \"metadata\": {},\r\n   \"outputs\": [\r\n    {\r\n     \"name\": \"stdout\",\r\n     \"output_type\": \"stream\",\r\n     \"text\": [\r\n      \"Found 'Lightsource VCP' serial port: /dev/ttyACM0\\n\"\r\n     ]\r\n    }\r\n   ],\r\n   \"source\": [\r\n    \"ls  = LightSourceR2X4()\"\r\n   ]\r\n  },\r\n  {\r\n   \"cell_type\": \"code\",\r\n   \"execution_count\": 3,\r\n   \"id\": \"057c9b4b-3fab-4fbe-a4b5-ab56e89001b8\",\r\n   \"metadata\": {},\r\n   \"outputs\": [\r\n    {\r\n     \"data\": {\r\n      \"application/vnd.jupyter.widget-view+json\": {\r\n       \"model_id\": \"53d2f93bd22944068c56a1c5260229aa\",\r\n       \"version_major\": 2,\r\n       \"version_minor\": 0\r\n      },\r\n      \"text/plain\": [\r\n       \"LightSourceWidget(children=(Label(value='LightSourceR2X4 (R/G/B/W)'), HBox(children=(Label(value='Toggle chann…\"\r\n      ]\r\n     },\r\n     \"execution_count\": 3,\r\n     \"metadata\": {},\r\n     \"output_type\": \"execute_result\"\r\n    }\r\n   ],\r\n   \"source\": [\r\n    \"LightSourceWidget(light_source=ls)\"\r\n   ]\r\n  },\r\n  {\r\n   \"cell_type\": \"code\",\r\n   \"execution_count\": 4,\r\n   \"id\": \"74a95a01-199c-490d-83a2-98c27911b9c9\",\r\n   \"metadata\": {},\r\n   \"outputs\": [],\r\n   \"source\": [\r\n    \"# ls.power_off()\"\r\n   ]\r\n  }\r\n ],\r\n \"metadata\": {\r\n  \"kernelspec\": {\r\n   \"display_name\": \"Python 3 (ipykernel)\",\r\n   \"language\": \"python\",\r\n   \"name\": \"python3\"\r\n  },\r\n  \"language_info\": {\r\n   \"codemirror_mode\": {\r\n    \"name\": \"ipython\",\r\n    \"version\": 3\r\n   },\r\n   \"file_extension\": \".py\",\r\n   \"mimetype\": \"text/x-python\",\r\n   \"name\": \"python\",\r\n   \"nbconvert_exporter\": \"python\",\r\n   \"pygments_lexer\": \"ipython3\",\r\n   \"version\": \"3.10.12\"\r\n  }\r\n },\r\n \"nbformat\": 4,\r\n \"nbformat_minor\": 5\r\n}\r\n
+===================================================================
+diff --git a/ls_r2x4/gui/demo_notebook.ipynb b/ls_r2x4/gui/demo_notebook.ipynb
+--- a/ls_r2x4/gui/demo_notebook.ipynb	(revision 252353b7fc2c8eb81991df9138e91a3cdefbc7d9)
++++ b/ls_r2x4/gui/demo_notebook.ipynb	(date 1728065707789)
+@@ -16,15 +16,7 @@
+    "execution_count": 2,
+    "id": "846e312e-1baa-4b0e-a1fc-cd9b383af0e0",
+    "metadata": {},
+-   "outputs": [
+-    {
+-     "name": "stdout",
+-     "output_type": "stream",
+-     "text": [
+-      "Found 'Lightsource VCP' serial port: /dev/ttyACM0\n"
+-     ]
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "ls  = LightSourceR2X4()"
+    ]
+@@ -38,7 +30,7 @@
+     {
+      "data": {
+       "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "53d2f93bd22944068c56a1c5260229aa",
++       "model_id": "2dd5c3a6fcef4e978f43059317801eea",
+        "version_major": 2,
+        "version_minor": 0
+       },
+@@ -62,7 +54,7 @@
+    "metadata": {},
+    "outputs": [],
+    "source": [
+-    "# ls.power_off()"
++    "# ls.standby_enable()"
+    ]
+   }
+  ],
+@@ -82,7 +74,7 @@
+    "name": "python",
+    "nbconvert_exporter": "python",
+    "pygments_lexer": "ipython3",
+-   "version": "3.10.12"
++   "version": "3.9.13"
+   }
+  },
+  "nbformat": 4,

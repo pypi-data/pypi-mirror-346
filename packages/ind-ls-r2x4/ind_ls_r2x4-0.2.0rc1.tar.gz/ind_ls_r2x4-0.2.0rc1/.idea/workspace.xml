@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b5e63763-04e9-42f5-9cbb-0ec94b6a9113" name="Changes" comment="dev: Use astral UV iso poetry for dep. management and building">
+      <change beforePath="$PROJECT_DIR$/../../doc/r2x4.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../doc/r2x4.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hardware/control_board/ls_control_board/ls_control_board.kicad_prl" beforeDir="false" afterPath="$PROJECT_DIR$/../../hardware/control_board/ls_control_board/ls_control_board.kicad_prl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hardware/control_board/ls_control_board/ls_control_board.kicad_pro" beforeDir="false" afterPath="$PROJECT_DIR$/../../hardware/control_board/ls_control_board/ls_control_board.kicad_pro" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="9bb8ab9f-a2da-487f-a204-4773590fa873" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2mywtVARg3DS7mt1QM4xC3bAD6G" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.pytest for test_r2x4.test_get_info.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_r2x4.test_get_status.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_r2x4.test_numpy_float_supported.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_r2x4.test_numpy_int_supported.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_r2x4.test_reboot.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_r2x4.test_set_mux.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_r2x4.test_we_can_use_fixed_serial_name.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_r2x4.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gdesk_panel.executor&quot;: &quot;Run&quot;,
+    &quot;Python.jupyterlab_widget.executor&quot;: &quot;Run&quot;,
+    &quot;Python.monitor_plot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.r2x4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tkinter_gui.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lou_v/Documents/industrialise&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lou_v\Documents\industrialise\LightSource\software\ls_r2x4\ls_r2x4\calib_data\ls_2063324D3831" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lou_v\Documents\industrialise\LightSource\software\ls_r2x4\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.monitor_plot">
+    <configuration name="monitor_plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ls_r2x4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/debug" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debug/monitor_plot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_r2x4.test_get_status" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ls_r2x4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_r2x4.test_get_status&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_r2x4.test_reboot" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ls_r2x4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_r2x4.test_reboot&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_r2x4.test_we_can_use_fixed_serial_name" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ls_r2x4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_r2x4.test_we_can_use_fixed_serial_name&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_r2x4.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ls_r2x4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_r2x4.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.monitor_plot" />
+        <item itemvalue="Python tests.pytest in test_r2x4.py" />
+        <item itemvalue="Python tests.pytest for test_r2x4.test_we_can_use_fixed_serial_name" />
+        <item itemvalue="Python tests.pytest for test_r2x4.test_get_status" />
+        <item itemvalue="Python tests.pytest for test_r2x4.test_reboot" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-a5bc9544c897-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.23654.177" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b5e63763-04e9-42f5-9cbb-0ec94b6a9113" name="Changes" comment="" />
+      <created>1728062338458</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728062338458</updated>
+    </task>
+    <task id="LOCAL-00001" summary="dev: Another small fix in the reboot process&#10;&#10;Need to cover the case were there is no port for a while.">
+      <option name="closed" value="true" />
+      <created>1728062967623</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728062967623</updated>
+    </task>
+    <task id="LOCAL-00002" summary="dev: fix import in monitor plot and clean up widget">
+      <option name="closed" value="true" />
+      <created>1728642594009</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728642594009</updated>
+    </task>
+    <task id="LOCAL-00003" summary="dev: Slider background was not working on windows, using label as well now">
+      <option name="closed" value="true" />
+      <created>1728643233533</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728643233533</updated>
+    </task>
+    <task id="LOCAL-00004" summary="dev: Fix config loading when running panel as script">
+      <option name="closed" value="true" />
+      <created>1728648526570</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728648526570</updated>
+    </task>
+    <task id="LOCAL-00005" summary="dev: Add info on optional backend installs">
+      <option name="closed" value="true" />
+      <created>1728648569147</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728648569147</updated>
+    </task>
+    <task id="LOCAL-00006" summary="dev: Also support pyton 3.8 (used by omn)">
+      <option name="closed" value="true" />
+      <created>1728907582606</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728907582606</updated>
+    </task>
+    <task id="LOCAL-00007" summary="dev: Also use 'hw_uid' on linux&#10;&#10;Try not to confuse with too many different serial numbers">
+      <option name="closed" value="true" />
+      <created>1728987052790</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728987052790</updated>
+    </task>
+    <task id="LOCAL-00008" summary="dev: Make sure all the np int and floats also work">
+      <option name="closed" value="true" />
+      <created>1728987083494</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728987083494</updated>
+    </task>
+    <task id="LOCAL-00009" summary="dev: Protect the instance from attribute overwriting&#10;&#10;Mainly to prevent ls.red_a = 1&#10;&#10;wait_for_stable_temperature can be turned off now. Handy for unit test speedup">
+      <option name="closed" value="true" />
+      <created>1728987158748</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728987158748</updated>
+    </task>
+    <task id="LOCAL-00010" summary="dev: Add tests for some issues we had recently">
+      <option name="closed" value="true" />
+      <created>1728987486318</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1728987486318</updated>
+    </task>
+    <task id="LOCAL-00011" summary="dev: Add calib placeholders for new ls (the one used by tim)">
+      <option name="closed" value="true" />
+      <created>1728987753791</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1728987753791</updated>
+    </task>
+    <task id="LOCAL-00012" summary="dev: New version with some fixes&#10;&#10;Exlude new calib files from build for now">
+      <option name="closed" value="true" />
+      <created>1728987777324</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1728987777324</updated>
+    </task>
+    <task id="LOCAL-00013" summary="dev: Fix fan power conversion">
+      <option name="closed" value="true" />
+      <created>1729060851478</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1729060851478</updated>
+    </task>
+    <task id="LOCAL-00014" summary="dev: Use astral UV iso poetry for dep. management and building">
+      <option name="closed" value="true" />
+      <created>1744267215936</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1744267215936</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dev: Another small fix in the reboot process&#10;&#10;Need to cover the case were there is no port for a while." />
+    <MESSAGE value="dev: fix import in monitor plot and clean up widget" />
+    <MESSAGE value="dev: Slider background was not working on windows, using label as well now" />
+    <MESSAGE value="dev: Fix config loading when running panel as script" />
+    <MESSAGE value="dev: Add info on optional backend installs" />
+    <MESSAGE value="dev: Also support pyton 3.8 (used by omn)" />
+    <MESSAGE value="dev: Also use 'hw_uid' on linux&#10;&#10;Try not to confuse with too many different serial numbers" />
+    <MESSAGE value="dev: Make sure all the np int and floats also work" />
+    <MESSAGE value="dev: Protect the instance from attribute overwriting&#10;&#10;Mainly to prevent ls.red_a = 1&#10;&#10;wait_for_stable_temperature can be turned off now. Handy for unit test speedup" />
+    <MESSAGE value="dev: Add tests for some issues we had recently" />
+    <MESSAGE value="dev: Add calib placeholders for new ls (the one used by tim)" />
+    <MESSAGE value="dev: New version with some fixes&#10;&#10;Exlude new calib files from build for now" />
+    <MESSAGE value="dev: Fix fan power conversion" />
+    <MESSAGE value="dev: Use astral UV iso poetry for dep. management and building" />
+    <option name="LAST_COMMIT_MESSAGE" value="dev: Use astral UV iso poetry for dep. management and building" />
+  </component>
+</project>
