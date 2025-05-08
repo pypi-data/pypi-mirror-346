@@ -1,0 +1,150 @@
+Metadata-Version: 2.4
+Name: ttable
+Version: 0.7.0
+Summary: Python toolkit for Boolean expressions
+Author-email: Brian Welch <me@brianwel.ch>
+Maintainer-email: Brian Welch <me@brianwel.ch>
+License-Expression: MIT
+Project-URL: Homepage, https://tt.brianwel.ch
+Project-URL: Documentation, https://tt.brianwel.ch
+Project-URL: Repository, https://github.com/welchbj/tt
+Project-URL: Bug Tracker, https://github.com/welchbj/tt/issues
+Project-URL: Changelog, https://tt.brianwel.ch/en/latest/release_notes.html
+Keywords: boolean,sat,satisfiability,eda,bexpr
+Classifier: Environment :: Console
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Utilities
+Requires-Python: >=3.11
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: z3-solver>=4.14.1.0
+Dynamic: license-file
+
+Synopsis
+--------
+
+tt (**t**\ ruth **t**\ able) is a library aiming to provide a toolkit for working with Boolean expressions and truth tables. Please see the `project site`_ for guides and documentation.
+
+Installation
+------------
+
+tt is tested on the latest three major versions of CPython. You can get the latest release from PyPI with::
+
+    pip install ttable
+
+Features
+--------
+
+Parse expressions::
+
+    >>> from tt import BooleanExpression
+    >>> b = BooleanExpression('A impl not (B nand C)')
+    >>> b.tokens
+    ['A', 'impl', 'not', '(', 'B', 'nand', 'C', ')']
+    >>> print(b.tree)
+    impl
+    `----A
+    `----not
+         `----nand
+              `----B
+              `----C
+
+Evaluate expressions::
+
+    >>> b = BooleanExpression('(A /\\ B) -> (C \\/ D)')
+    >>> b.evaluate(A=1, B=1, C=0, D=0)
+    False
+    >>> b.evaluate(A=1, B=1, C=1, D=0)
+    True
+
+Interact with expression structure::
+
+    >>> b = BooleanExpression('(A and ~B and C) or (~C and D) or E')
+    >>> b.is_dnf
+    True
+    >>> for clause in b.iter_dnf_clauses():
+    ...     print(clause)
+    ...
+    A and ~B and C
+    ~C and D
+    E
+
+Apply expression transformations::
+
+    >>> from tt import to_primitives, to_cnf
+    >>> to_primitives('A xor B')
+    <BooleanExpression "(A and not B) or (not A and B)">
+    >>> to_cnf('(A nand B) impl (C or D)')
+    <BooleanExpression "(A or C or D) and (B or C or D)">
+
+Or create your own::
+
+    >>> from tt import tt_compose, apply_de_morgans, coalesce_negations, twice
+    >>> b = BooleanExpression('not (not (A or B))')
+    >>> f = tt_compose(apply_de_morgans, twice)
+    >>> f(b)
+    <BooleanExpression "not not A or not not B">
+    >>> g = tt_compose(f, coalesce_negations)
+    >>> g(b)
+    <BooleanExpression "A or B">
+
+Exhaust SAT solutions::
+
+    >>> b = BooleanExpression('~(A or B) xor C')
+    >>> for sat_solution in b.sat_all():
+    ...     print(sat_solution)
+    ...
+    A=0, B=0, C=0
+    A=1, B=0, C=1
+    A=0, B=1, C=1
+    A=1, B=1, C=1
+
+Find just a few::
+
+    >>> with b.constrain(A=1):
+    ...     for sat_solution in b.sat_all():
+    ...         print(sat_solution)
+    ...
+    A=1, B=0, C=1
+    A=1, B=1, C=1
+
+Or just one::
+
+    >>> b.sat_one()
+    <BooleanValues [A=0, B=0, C=0]>
+
+Build truth tables::
+
+    >>> from tt import TruthTable
+    >>> t = TruthTable('A iff B')
+    >>> print(t)
+    +---+---+---+
+    | A | B |   |
+    +---+---+---+
+    | 0 | 0 | 1 |
+    +---+---+---+
+    | 0 | 1 | 0 |
+    +---+---+---+
+    | 1 | 0 | 0 |
+    +---+---+---+
+    | 1 | 1 | 1 |
+    +---+---+---+
+
+And `much more`_!
+
+License
+-------
+
+tt uses the `MIT License`_.
+
+
+.. _MIT License: https://opensource.org/licenses/MIT
+.. _project site: https://tt.brianwel.ch
+.. _bool.tools: http://www.bool.tools
+.. _much more: https://tt.brianwel.ch/en/latest/user_guide.html
