@@ -1,0 +1,9 @@
+mcp_client_for_ollama/__init__.py,sha256=Io_yL76PCsDyPP_I2YlN8ePCe-N-85PxBgi7XeZFhLk,60
+mcp_client_for_ollama/cli.py,sha256=FqwoEqluTrKX_ObLLx_dXG7_tV-TcXFeWJvU0s-VYNU,269
+mcp_client_for_ollama/client.py,sha256=twn9rhYTjPr6Db2EjH1GpIaIEN6kqHea4ADHqTarVjA,27440
+mcp_client_for_ollama-0.3.1.dist-info/licenses/LICENSE,sha256=DtWh9TQsrXAb9rVTovoogRFuZoDelRs5tlxi7sFlpSw,1063
+mcp_client_for_ollama-0.3.1.dist-info/METADATA,sha256=-M-x_GdCNNCQlMgdpGLdFNn2BrQDkZFI7Yhlw4lu13A,9476
+mcp_client_for_ollama-0.3.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+mcp_client_for_ollama-0.3.1.dist-info/entry_points.txt,sha256=trVh25UAVl9hqZLDj9ItlDBf3fCiBM8V7adwsklRQXU,119
+mcp_client_for_ollama-0.3.1.dist-info/top_level.txt,sha256=esVgeQyCgxlu8zzyJxi5WUrtGobD3YkSjIsfLj5BG0M,22
+mcp_client_for_ollama-0.3.1.dist-info/RECORD,,
