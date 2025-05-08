@@ -1,0 +1,10 @@
+Flask-SQLAlchemy>=3.0.3
+flask_swagger_ui>=4.11.1
+flask-restful-swagger-2>=0.35
+PyYaml>=6.0
+
+[dev]
+flask_cors
+
+[test]
+flask_cors
