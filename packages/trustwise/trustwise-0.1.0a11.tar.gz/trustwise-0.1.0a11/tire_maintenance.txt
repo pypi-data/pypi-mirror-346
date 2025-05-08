@@ -1,0 +1,109 @@
+# Crawford's Complete Auto Maintenance Guide
+
+## Chapter 4: Tire Maintenance and Safety
+
+### Introduction to Tire Care
+Proper tire maintenance is essential for vehicle safety, fuel efficiency, and tire longevity. This chapter covers the fundamental aspects of tire care that every vehicle owner should know.
+
+### Tire Pressure Management
+
+#### Checking Tire Pressure
+To check your tire pressure, you'll need a tire pressure gauge. These can be purchased at auto parts stores and service stations for as little as $1-7. They typically come in three types:
+- Pen-sized tire pressure gauges
+- Digital tire pressure gauges
+- Dial tire pressure gauges with hoses
+
+Follow these steps to properly check tire pressure:
+1. Remove the valve cap from each tire
+2. Align the gauge up to the valve
+3. Press the gauge onto the valve with firm direct pressure and then release
+4. For pen gauges, you'll see the measuring stick pushed out displaying the pressure reading
+5. Fill the tire with air if needed, then recheck until you reach the desired pressure
+
+#### Optimal Tire Pressure
+The recommended tire pressure for your vehicle can be found:
+- On a sticker in the driver's door jamb
+- In the vehicle owner's manual
+- Sometimes on the inside of the fuel filler door
+
+Most passenger vehicles have a recommended pressure between 32-35 PSI (pounds per square inch). Never use the maximum pressure listed on the tire sidewall as your target - this is the maximum the tire can hold, not the recommended pressure.
+
+### Tire Tread Inspection
+
+#### The Penny Test
+A simple way to check your tire tread depth is with a penny:
+1. Insert a penny into the tread groove with Lincoln's head upside down
+2. If you can see the top of Lincoln's head, your tread is less than 2/32" and the tire needs replacement
+3. Check multiple spots across each tire
+
+#### Wear Patterns
+Uneven tire wear can indicate problems with alignment, inflation, or suspension:
+- Center wear: Overinflation
+- Edge wear: Underinflation
+- One-sided wear: Alignment issues
+- Cupping or scalloping: Suspension problems
+
+### Tire Rotation
+
+Tires should be rotated every 5,000-7,000 miles to ensure even wear and maximize lifespan. The rotation pattern depends on your vehicle:
+- Forward Cross: For front-wheel drive vehicles
+- Rearward Cross: For rear-wheel and 4-wheel drive vehicles
+- X-Pattern: Alternative for any drive type
+
+### Wheel Alignment
+
+Proper wheel alignment ensures your vehicle handles correctly and prevents premature tire wear. There are three primary alignment angles:
+- Camber: The inward or outward tilt of the tire when viewed from the front
+- Toe: Whether the tires point inward or outward when viewed from above
+- Caster: The forward or backward tilt of the steering axis
+
+Signs you need an alignment include:
+- Vehicle pulling to one side
+- Uneven or rapid tire wear
+- Crooked steering wheel when driving straight
+- Squealing tires
+
+### Seasonal Considerations
+
+#### Winter Tires
+In regions with regular snow and ice, winter tires provide superior traction below 45°F. They use special rubber compounds that remain flexible in cold temperatures and have tread patterns designed to grip snow and slush.
+
+#### All-Season vs. Summer Tires
+All-season tires offer a compromise between summer and winter performance but excel at neither. Summer tires provide better dry and wet traction in warm conditions but become dangerously hard below freezing temperatures.
+
+### Tire Aging and Replacement
+
+Even with adequate tread, tires should be replaced every 6-10 years due to rubber degradation. Find the tire's age by locating the DOT code on the sidewall - the last four digits indicate the week and year of manufacture (e.g., "2618" means the 26th week of 2018).
+
+### Emergency Situations
+
+#### Handling a Blowout
+If you experience a tire blowout:
+1. Maintain a firm grip on the steering wheel
+2. Don't slam on the brakes
+3. Let the car slow down gradually
+4. Pull to the shoulder when safe
+
+#### Changing a Flat Tire
+Basic steps for changing a flat tire:
+1. Find a safe location away from traffic
+2. Apply the parking brake and use wheel chocks
+3. Loosen lug nuts before jacking up the car
+4. Raise the vehicle with the jack at the designated lift point
+5. Remove lug nuts and tire
+6. Mount the spare tire and hand-tighten lug nuts
+7. Lower the vehicle and tighten lug nuts in a star pattern
+8. Check the spare tire pressure when possible
+
+### Eco-Friendly Tire Disposal
+
+Old tires should never be sent to landfills. Options for proper disposal include:
+- Recycling at tire retailers (most offer this service for a small fee)
+- Municipal recycling programs
+- Specialized tire recycling centers
+
+Recycled tires can be used for playground surfaces, rubberized asphalt, and other products.
+
+## Chapter 5: Fluid Checks and Changes
+
+[Content continues in next chapter...]
