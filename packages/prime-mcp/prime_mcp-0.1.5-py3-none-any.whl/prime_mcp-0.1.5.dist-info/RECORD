@@ -1,0 +1,10 @@
+prime_mcp/__init__.py,sha256=Tkm-vKOUKHXY_0wNcrY7s4SsyX3W3pBfvtKRuiDNkmI,113
+prime_mcp/__main__.py,sha256=DfpquO85qF6E-nUf8uFtzxoeeWi_VsHfX3jVKKYv8EA,66
+prime_mcp/operations.py,sha256=HYORNSZs4DPkLqKNpPiV_5O3ZRh_Vm8XY45KbgrDCDs,4073
+prime_mcp/server.py,sha256=MNiOLJfmJcrSZxon0q5hsuDsGmCycnJa9yumvSRjPIs,2047
+prime_mcp/data/recommendation.json,sha256=EZwA6q5cDj-f8onRYpx0BWT1gZDHk8Vx78e9kY2jCJs,7076
+prime_mcp/data/summary.json,sha256=GRffH-57OBoq9UySOIvc9ohKrM42zoihILwineBv-f4,759
+prime_mcp-0.1.5.dist-info/METADATA,sha256=rfMGTOLL9evDhtkgzRyA--SzOI2lqtkYjEnQj8i9c4s,254
+prime_mcp-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+prime_mcp-0.1.5.dist-info/entry_points.txt,sha256=dwSu_Tct9MZ5vac6mRz6EOf4UEv3WLZhQOTuLSyKs6w,45
+prime_mcp-0.1.5.dist-info/RECORD,,
