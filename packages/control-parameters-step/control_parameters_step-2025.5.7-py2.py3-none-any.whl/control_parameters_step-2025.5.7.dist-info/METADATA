@@ -1,0 +1,208 @@
+Metadata-Version: 2.4
+Name: control_parameters_step
+Version: 2025.5.7
+Summary: A SEAMM plug-in for defining command-line parameters for a flowchart.
+Home-page: https://github.com/molssi-seamm/control_parameters_step
+Author: Paul Saxe
+Author-email: psaxe@molssi.org
+License: BSD-3-Clause
+Keywords: SEAMM,plug-in,flowchart
+Platform: Linux
+Platform: Mac OS-X
+Platform: Unix
+Platform: Windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: seamm
+Requires-Dist: seamm-util
+Requires-Dist: seamm-widgets
+Requires-Dist: tabulate
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: platform
+Dynamic: requires-dist
+Dynamic: summary
+
+=======================
+Control Parameters Step
+=======================
+
+.. image:: https://img.shields.io/github/issues-pr-raw/molssi-seamm/control_parameters_step
+   :target: https://github.com/molssi-seamm/control_parameters_step/pulls
+   :alt: GitHub pull requests
+
+.. image:: https://github.com/molssi-seamm/control_parameters_step/workflows/CI/badge.svg
+   :target: https://github.com/molssi-seamm/control_parameters_step/actions
+   :alt: Build Status
+
+.. image:: https://codecov.io/gh/molssi-seamm/control_parameters_step/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/molssi-seamm/control_parameters_step
+   :alt: Code Coverage
+
+.. image:: https://github.com/molssi-seamm/control_parameters_step/workflows/CodeQL/badge.svg
+   :target: https://github.com/molssi-seamm/control_parameters_step/security/code-scanning
+   :alt: Code Quality
+
+.. image:: https://github.com/molssi-seamm/control_parameters_step/workflows/Release/badge.svg
+   :target: https://molssi-seamm.github.io/control_parameters_step/index.html
+   :alt: Documentation Status
+
+.. image:: https://pyup.io/repos/github/molssi-seamm/control_parameters_step/shield.svg
+   :target: https://pyup.io/repos/github/molssi-seamm/control_parameters_step/
+   :alt: Updates for Dependencies
+
+.. image:: https://img.shields.io/pypi/v/control_parameters_step.svg
+   :target: https://pypi.python.org/pypi/control_parameters_step
+   :alt: PyPi VERSION
+
+Description
+-----------
+
+A SEAMM plug-in for defining command-line parameters for a
+flowchart. This plug-in provides a step in a SEAMM flowchart where a
+user can define required and optional arguments for the flowchart as a
+whole. When the flowchart is run, the command-line is parsed and the
+arguments placed in variables that can then be used by other steps.
+
+This can be used to pass file names or SMILES strings for the
+molecules to run; or give the temperature and pressure; or any
+appropriate parameters that the flowchart author feels are relevant.
+
+When run from the command-line, giving the option `--help` provides
+help on these control parameters as well as other options for the run::
+
+    bash-3.2$ ../flowcharts/psi4.flow --help
+    usage: ../flowcharts/psi4.flow [options] plug-in [options] plug-in [options] ...
+    
+    positional arguments:
+      SMILES                The SMILES string for the input molecule
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      --method {b3lyp-d3mbj,mp2,ccsd}
+                            The type of calculation
+    ... 
+
+- Free software: BSD-3-Clause
+- Documentation: https://molssi-seamm.github.io/control_parameters_step/index.html
+
+
+Features
+--------
+
+- Graphical user interface (GUI) to define the parameters.
+- Mandatory and optional arguments, as well as flags for boolean
+  options.
+- Default values for optional arguments.
+- Follows standard, familiar  Unix conventions for command-line
+  arguments.
+- Help provided by `-h` or `--help` options.
+
+Credits
+---------
+
+This package was created with Cookiecutter_ and the `molssi-seamm/cookiecutter-seamm-plugin`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`molssi-seamm/cookiecutter-seamm-plugin`: https://github.com/molssi-seamm/cookiecutter-seamm-plugin
+
+Developed by the Molecular Sciences Software Institute (MolSSI_),
+which receives funding from the `National Science Foundation`_ under
+award OAC-1547580 and CHE-2136142.
+
+.. _MolSSI: https://www.molssi.org
+.. _`National Science Foundation`: https://www.nsf.gov
+
+
+
+=======
+History
+=======
+2025.5.7: Bugfix: Error printing lists of values
+   * Fixed a problem printing variables that were a list of floats.
+     
+2023.11.15: Improved handling of boolean options
+   * Properly support using boolean options on the commandline as just a flag to
+     indicate True.
+     
+2023.11.6: Bugfix for choices in control parameters
+   * Ensuring compatibility of older flowcharts with improved handling of choices in the
+     control parameters, necessitated by the Web GUI.
+     
+2023.10.21: Improved handling of choices
+   * When editing the choices for a parameter, the entryfield now accepts the choices
+     separated by spaces. If a choice has spaces or other special characters they can be
+     protected with quotes or backslash in the normal fashion for shell arguments.
+
+2023.7.10: Bugfix handling parameters with 0+ values
+
+   * The default was not correctly handled for control parameters with 0+ arguments,
+     where they need to be a list.
+     
+2023.1.23: Fixed issue with  parameters with '_'
+------------------------------------------------
+
+* Fixed issue with '-' and '_' in parameter/variable names
+
+* Revamped documentation to the new MolSSI style and diátaxis layout.
+
+* (internal) Moved from LGTM to GitHub CodeQL for code quality analysis
+
+2022-6-6: Fixed bugs when editing parameters
+--------------------------------------------
+
+* Also added button to remove a parameter.
+
+2022.2.9: Added 'files' to parameter types
+------------------------------------------
+
+* Added 'files' to parameter types. Needed for job submission
+
+2021.10.13: Cleaned up the GUI
+------------------------------
+
+* Made the dialog larger
+
+* Show all parameters
+
+* Made appropriate comboboxes read only
+
+2021.6.3: Update for internal change in argument parsing
+--------------------------------------------------------
+
+* Updated for the SEAMM argument parser moving to seamm_util
+
+2021.2.9: Improved description for the installer
+------------------------------------------------
+
+* Added to the README text, and made it conform to the standard style
+
+2020.12.4: First working release
+--------------------------------
+
+Adds functionality to SEAMM for specifying key control parameters, items such as the
+structure, temperature, and pressure, and use them as command-line parameters. In the
+future, we will also provide the ability to set them when submitting a flowchart from
+the Python or web interfaces.
+
+0.1 (2020-10-06)
+------------------
+
+* First release on PyPI.
