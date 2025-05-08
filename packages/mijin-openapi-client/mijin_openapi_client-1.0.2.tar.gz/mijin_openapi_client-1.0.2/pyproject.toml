@@ -1,0 +1,22 @@
+[project]
+name = "mijin_openapi_client"
+version = "1.0.2"
+description = "OpenAPI client generated"
+authors = [
+    { name = "Techbureau Contributors", email = "development@techbureau.jp" },
+]
+dependencies = [
+    "urllib3 >=1.25.3,<3.0.0",
+    "python-dateutil >=2.8.2",
+    "pydantic >=2",
+    "typing-extensions >=4.7.1",
+]
+readme = "mijin_openapi_client_README.md"
+requires-python = ">=3.9"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = ["openapi-generator-cli>=7.12.0"]
