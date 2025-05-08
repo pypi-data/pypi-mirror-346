@@ -1,0 +1,2 @@
+[console_scripts]
+pelican-stat = bahamut_ani_stat.__main__:main
