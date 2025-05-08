@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "power_calculator_zimjing"
+version = "0.2.0"
+authors = [
+    { name = "Zim Jing", email = "340552684@qq.com" },
+]
+description = "一个提供乘方计算服务的MCP服务器包"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/zimjing/power_calculator"
+"Bug Tracker" = "https://github.com/zimjing/power_calculator/issues" 
+
