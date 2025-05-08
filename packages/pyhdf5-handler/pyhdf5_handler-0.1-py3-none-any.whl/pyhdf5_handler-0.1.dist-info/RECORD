@@ -1,0 +1,10 @@
+pyhdf5_handler/__init__.py,sha256=ZZWv-prmLdV3OiJK4c_s_gZATAzGqvn6WwN9FytmaSU,67
+pyhdf5_handler/src/__init__.py,sha256=XI-pnBsKhglgaowT2LowZM2N0km4X_-_ju5hS7InYew,59
+pyhdf5_handler/src/hdf5_handler.py,sha256=W9Slib773fqIdttcRu32vl2oWu-1fJH__Nl8ICfDO30,42409
+pyhdf5_handler/src/hdf5_io_tests.py,sha256=ClcJUKG5K13qsNAWfqRJGkC_nvuDDawkPdKCiCCfd64,4000
+pyhdf5_handler/src/object_handler.py,sha256=vPNiUdD0Q-Lx_ExAWQEx7JiGlZhFNqQRSnlMSYvuybk,5735
+pyhdf5_handler/src/test.hdf5,sha256=vU8keSoDy_6LRbvWec7mr5LTaUzzLELn6Tw-J7dSdyI,75224
+pyhdf5_handler-0.1.dist-info/METADATA,sha256=BIOYWADJQxoQsD0N-F6PTfs2cKM86aMqX98_FD4RXcU,9203
+pyhdf5_handler-0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyhdf5_handler-0.1.dist-info/licenses/LICENSE,sha256=vtbgomEWj-skUJfShyiODiCbTuCxAaFoWEz8hoGdw38,33954
+pyhdf5_handler-0.1.dist-info/RECORD,,
