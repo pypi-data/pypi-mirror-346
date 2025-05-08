@@ -1,0 +1,13 @@
+integration_logger/__init__.py,sha256=Ikkzkw9ilOicjB-g81kG8P0BIzJOGDxLy7nWJ62KSrY,130
+integration_logger/admin.py,sha256=SUJqlRsImrzAGceaAwF6DC4v65dUJo2gcWX9Da92flk,775
+integration_logger/apps.py,sha256=J2rS6WuK97fLJxashCGGsiYhl8BHM__0UUC9uoIGP3I,209
+integration_logger/middleware.py,sha256=5hIE6but3PhpXmHC2HXWp7555wIhLwmQbIKRQxRzWUM,2016
+integration_logger/models.py,sha256=w_dhTdcsyP_FGy0WstzcLQFeWWBWY6kjT8D40XDMYF0,1188
+integration_logger/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+integration_logger/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+integration_logger/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+interaction_logger-0.1.0.dist-info/LICENSE,sha256=Xiqxp03l-YLtee1p9Zo_DP2Gn3D-9x7mD7-HXS2D588,1065
+interaction_logger-0.1.0.dist-info/METADATA,sha256=1_GQj7Fi5CQH5NBQ23EdgcOjeQDsPWd2dJ6uwKFe0hw,2595
+interaction_logger-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+interaction_logger-0.1.0.dist-info/top_level.txt,sha256=1uCbRHwhzmjjeTG6EI0nkpr5lC9v1vSmM9tVXNMYBrY,19
+interaction_logger-0.1.0.dist-info/RECORD,,
