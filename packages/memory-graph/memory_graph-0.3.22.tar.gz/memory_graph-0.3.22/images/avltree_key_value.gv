@@ -1,0 +1,49 @@
+digraph memory_graph {
+	node [shape=plaintext]
+	node125903183662352 [label=<
+<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="sandybrown" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> left </TD><TD BORDER="1"> None </TD></TR>
+    <TR><TD BORDER="1" STYLE="ROUNDED"> key </TD><TD BORDER="1"> 5 </TD></TR>
+    <TR><TD BORDER="1" STYLE="ROUNDED"> value </TD><TD BORDER="1"> five </TD></TR>
+    <TR><TD BORDER="1" STYLE="ROUNDED"> right </TD><TD BORDER="1"> None </TD></TR>
+</TABLE>
+> xlabel="Node"]
+	node125903183660592 [label=<
+<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="sandybrown" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> left </TD><TD BORDER="1"> None </TD></TR>
+    <TR><TD BORDER="1" STYLE="ROUNDED"> key </TD><TD BORDER="1"> 15 </TD></TR>
+    <TR><TD BORDER="1" STYLE="ROUNDED"> value </TD><TD BORDER="1"> fifteen </TD></TR>
+    <TR><TD BORDER="1" STYLE="ROUNDED"> right </TD><TD BORDER="1"> None </TD></TR>
+</TABLE>
+> xlabel="Node"]
+	node125903183660752 [label=<
+<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="sandybrown" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> left </TD><TD BORDER="1" STYLE="ROUNDED"> key </TD><TD BORDER="1" STYLE="ROUNDED"> value </TD><TD BORDER="1" STYLE="ROUNDED"> right </TD></TR>
+    <TR><TD BORDER="1" PORT="ref0"> </TD><TD BORDER="1"> 20 </TD><TD BORDER="1"> twenty </TD><TD BORDER="1"> None </TD></TR>
+</TABLE>
+> xlabel="Node"]
+	node125903183660752:ref0 -> node125903183660592:table [style=solid]
+	node125903186222576 [label=<
+<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="sandybrown" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> left </TD><TD BORDER="1" STYLE="ROUNDED"> key </TD><TD BORDER="1" STYLE="ROUNDED"> value </TD><TD BORDER="1" STYLE="ROUNDED"> right </TD></TR>
+    <TR><TD BORDER="1" PORT="ref0"> </TD><TD BORDER="1"> 10 </TD><TD BORDER="1"> ten </TD><TD BORDER="1" PORT="ref1"> </TD></TR>
+</TABLE>
+> xlabel="Node"]
+	node125903186222576:ref0 -> node125903183662352:table [style=solid]
+	node125903186222576:ref1 -> node125903183660752:table [style=solid]
+	node125903186401360 [label=<
+<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="seagreen1" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> _root </TD><TD BORDER="1" STYLE="ROUNDED"> _count </TD></TR>
+    <TR><TD BORDER="1" PORT="ref0"> </TD><TD BORDER="1"> 4 </TD></TR>
+</TABLE>
+> xlabel=AVLTree]
+	node125903186401360:ref0 -> node125903186222576:table [style=solid]
+	node125903196757696 [label=<
+<TABLE BORDER="3" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="dodgerblue1" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> tree </TD></TR>
+    <TR><TD BORDER="1" PORT="ref0"> </TD></TR>
+</TABLE>
+> xlabel=dict]
+	node125903196757696:ref0 -> node125903186401360:table [style=solid]
+subgraph { rank=same; node125903183662352 -> node125903183660752[weight=10, style=invis]; }
+}
