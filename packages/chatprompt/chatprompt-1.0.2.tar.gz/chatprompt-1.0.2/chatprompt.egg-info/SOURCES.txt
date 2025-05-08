@@ -1,0 +1,10 @@
+README.md
+setup.py
+chatbotlib/__init__.py
+chatbotlib/main.py
+chatprompt.egg-info/PKG-INFO
+chatprompt.egg-info/SOURCES.txt
+chatprompt.egg-info/dependency_links.txt
+chatprompt.egg-info/entry_points.txt
+chatprompt.egg-info/requires.txt
+chatprompt.egg-info/top_level.txt
