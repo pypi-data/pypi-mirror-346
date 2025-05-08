@@ -1,0 +1,10 @@
+streambotcore/__init__.py,sha256=gOm2fRCmpFIkNxGP_98OQ6HBByJNjwvH6wOnQCsRlUc,27
+streambotcore/bot_discord.py,sha256=QOmgFqrvwJNFOibmx4pb047guQZ5-IaA7uXyNrgGYH8,644
+streambotcore/bot_twitch.py,sha256=eQd6W4PIkL_Pu6Cm3fupZpZZTT0utXFvQ3vpPl-yp1I,680
+streambotcore/core.py,sha256=jVXTPLd_a-wBDUdAyl4q69ZuAnuTxJXGIms7Z9JXCGo,813
+streambotcore/loader.py,sha256=dXzqu-nPnBcTGT58xqTLE89dRgI_UcOrzVbcolS7MlA,1073
+streambotcore/utils.py,sha256=BCoAM9G-8VxbmzhEGDpCUs6nk6GhueO6l93JgQP7Xr4,58
+streambotcore-0.2.0.dist-info/METADATA,sha256=qFeX6iq8eQUUj7YaXjg0TgkQDPPKOOcQgwGJrenmT2s,547
+streambotcore-0.2.0.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+streambotcore-0.2.0.dist-info/top_level.txt,sha256=kpCf5m6hADbG51MB6BZ9qfcfN83nRP9C2n9MxWj56_k,14
+streambotcore-0.2.0.dist-info/RECORD,,
