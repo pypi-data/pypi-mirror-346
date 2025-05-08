@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+chatfic_validator/__init__.py
+chatfic_validator/error.py
+chatfic_validator/result.py
+chatfic_validator/validator.py
+chatfic_validator.egg-info/PKG-INFO
+chatfic_validator.egg-info/SOURCES.txt
+chatfic_validator.egg-info/dependency_links.txt
+chatfic_validator.egg-info/top_level.txt
+tests/__init__.py
+tests/test_validator.py
