@@ -1,0 +1,2 @@
+[console_scripts]
+databutton-app-mcp = databutton_app_mcp.__main__:main
