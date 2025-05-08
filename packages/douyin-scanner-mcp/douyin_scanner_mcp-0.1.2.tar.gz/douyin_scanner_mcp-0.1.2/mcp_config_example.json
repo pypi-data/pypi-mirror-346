@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "douyin-scanner": {
+      "command": "uvx",
+      "args": [
+        "douyin-scanner-mcp"
+      ],
+      "env": {
+        "BROWSER_TYPE": "chromium",
+        "BROWSER_HEADLESS": "1",
+        "BROWSER_TIMEOUT": "60000",
+        "DOUYIN_SCAN_MAX_VIDEOS": "100",
+        "CONCURRENT_LIMIT": "3",
+        "LOG_LEVEL": "INFO"
+      }
+    }
+  }
+} 
