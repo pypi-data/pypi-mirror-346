@@ -1,0 +1,7 @@
+requests
+urllib3
+setuptools
+requests_toolbelt
+tqdm
+cryptography
+treelib
