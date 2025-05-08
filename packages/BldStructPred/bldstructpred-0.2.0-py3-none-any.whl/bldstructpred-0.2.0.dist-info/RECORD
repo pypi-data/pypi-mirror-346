@@ -1,0 +1,13 @@
+BldStructPred/StructPred.py,sha256=dAV7UOkWKPVXDAdSSN3UMBTfmq_VTuYn5C9eG9daXdM,12285
+BldStructPred/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+BldStructPred/data/TrainedRF.joblib,sha256=U-BIh_24SvrcAF5w1asgspT4oGZaXy4vh_jRO5HBHOo,12622623
+BldStructPred/data/TrainedRF_noPOI.joblib,sha256=9t9lSNJWsn3VrBvKJ3Fp6fzA-c-32KRGCcYUqNdIo6A,11327919
+BldStructPred/data/TrainedRF_noPOI_numpy_v_1_26.joblib,sha256=FbVM45kuYbeiWNa--Sm41WRZ99u4pEMECjL_3epcbX4,11342687
+BldStructPred/data/TrainedRF_numpy_v_1_26.joblib,sha256=HIDzoPq_mr10SEg6mAh9pT_21GdUhTTEDclJefMRolQ,12109887
+BldStructPred/data/武汉建筑训练数据_POI.csv,sha256=GADLp7-YlRcyMfmBp5glP1EKBZjWIozfMClyFUYtZJM,4247116
+BldStructPred/data/武汉建筑训练数据_POI_LJJ.csv,sha256=nvikFweEDy9jnc8yGHd02mBIOYwEQ_CAqq6DPcv3fu4,27162367
+BldStructPred/data/高德POI分类与编码（中英文）_V1.06_20230208.xlsx,sha256=gd7HzLkY_UStK3KoDkoy8kthDGfCQKEIqQzDxcDCMig,74613
+bldstructpred-0.2.0.dist-info/METADATA,sha256=rKT1phngChJiqaYaHO7Oar2hyTZgC3oyTBa_NESMuXU,46997
+bldstructpred-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bldstructpred-0.2.0.dist-info/licenses/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+bldstructpred-0.2.0.dist-info/RECORD,,
