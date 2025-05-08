@@ -1,0 +1,97 @@
+[build-system]
+requires = ["hatchling", "versioningit~=3.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dbt-contracts"
+dynamic = ["version"]
+authors = [
+  { name="George Martin Marino", email="gm.engineer+dbt-contracts@pm.me" },
+]
+description = "Enforce standards for your dbt projects through automated checks and generators"
+readme = "README.md"
+license-files = { paths = ["LICENSE"] }
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Development Status :: 5 - Production/Stable",
+    "Natural Language :: English",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    "dbt-core>=1.9,<2.0",
+    "pydantic>=2.10,<3.0",
+]
+
+[dependency-groups]
+dev = [
+    "flake8",
+    "grip",
+    "jupyterlab",
+    "ipywidgets",
+]
+test = [
+    "pytest>=8.3,<9.0",
+    "pytest-asyncio>=0.25,<1.0",
+    "pytest-xdist>=3.6,<4.0",
+    # "pytest-mock~=3.14",
+    "Faker>=37.0,<38.0",
+]
+docs = [
+    "sphinx>=8.2.3,<9.0",
+    "sphinx-rtd-theme>=3.0.2,<4.0",
+    "sphinx-design>=0.6.1,<1.0",
+    "sphinx-new-tab-link>=0.7.0,<1.0",
+    "docstring_parser>=0.16,<1.0",
+]
+build = [
+    "hatch",
+]
+
+[tool.uv]
+default-groups = ["dev", "test", "docs", "build"]
+
+[project.scripts]
+dbt-clean = "dbt_contracts.cli:clean"
+dbt-deps = "dbt_contracts.cli:deps"
+dbt-parse = "dbt_contracts.cli:parse"
+dbt-docs = "dbt_contracts.cli:docs"
+dbt-validate = "dbt_contracts.cli:validate"
+dbt-generate = "dbt_contracts.cli:generate"
+
+[project.urls]
+"Documentation" = "https://geo-martino.github.io/dbt-contracts/"
+"Release Notes" = "https://geo-martino.github.io/dbt-contracts/info/release-history.html"
+"Contribute" = "https://geo-martino.github.io/dbt-contracts/info/contributing.html"
+"Source code" = "https://github.com/geo-martino/dbt-contracts"
+Issues = "https://github.com/geo-martino/dbt-contracts/issues"
+
+[tool.hatch.version]
+source = "versioningit"
+
+[tool.versioningit]
+default-version = "0.0.0"
+
+[tool.versioningit.format]
+# WORKAROUND: commits for actual production releases keep getting identified as dirty and/or with distance
+#  Delete this config when fixed. It should be the commented lines below each (i.e. the default formats)
+#distance = "{next_version}.dev{distance}+{vcs}{rev}"
+dirty = "{base_version}"
+#dirty = "{base_version}+d{build_date:%Y%m%d}"
+distance-dirty = "{base_version}"
+#distance-dirty = "{next_version}.dev{distance}+{vcs}{rev}.d{build_date:%Y%m%d}"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-color=yes"
+markers = [
+    "slow: marks test as slow (deselect with '-m \"not slow\"')",
+    "manual: marks tests to be run only when manually directed to by the developer",
+]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
