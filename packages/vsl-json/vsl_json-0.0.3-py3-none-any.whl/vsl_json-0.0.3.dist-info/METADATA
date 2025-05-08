@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: vsl-json
+Version: 0.0.3
+Summary: Compact JSON formatter
+Author-email: Arseniy Terekhin <senyai@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/iitpvisionlab/vsl_json
+Project-URL: Bug Reports, https://github.com/iitpvisionlab/vsl_json/issues
+Project-URL: Source, https://github.com/iitpvisionlab/vsl_json
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
