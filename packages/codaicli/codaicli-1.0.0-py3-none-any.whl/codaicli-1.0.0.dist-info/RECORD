@@ -1,0 +1,13 @@
+codaicli/__init__.py,sha256=_sMuuw4dBAVf0BbFQvskuCQk_WS9uwDbJqu8hXIvOQg,220
+codaicli/ai_manager.py,sha256=7x7mOYapdDOWTGiTo2TA1FHSMEeJDpF_mYBk6VEmD2g,10619
+codaicli/cli.py,sha256=cbKZhqg3aNfTF2CmLHouahEo9AGj7h20z3CtNixEjr8,14546
+codaicli/config.py,sha256=v-BDCIEsuyx375Hx9khSdtSXLnHaLvAMomLfuYpPhME,1299
+codaicli/file_manager.py,sha256=QTejx3utofwXrI7sQBKBzKQXkqv2fZBUwot1gpaQcHM,11438
+codaicli/ui.py,sha256=ACU3u_3d-IhCAQsnJAcRS7BX6ZvP9SQjNapKBfQ4YIM,6628
+codaicli/utils.py,sha256=F6GZIoQU9HJdxonHCqSA9awSjE1eMfFakDYUJsBXvn8,1576
+codaicli-1.0.0.dist-info/LICENSE,sha256=TZxp0ye1mgjXMezBEe0-A_fSInrpnNGXiwCAZ_DlODE,1071
+codaicli-1.0.0.dist-info/METADATA,sha256=mu-GO5NTD14tHrlLfyXO04yRJ0V_0HWUxMCEPtfnxQM,4511
+codaicli-1.0.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+codaicli-1.0.0.dist-info/entry_points.txt,sha256=_XKUpLtMApk-kw_i0OXPE6qxeBETEFz5dfTFl_Nrcv0,46
+codaicli-1.0.0.dist-info/top_level.txt,sha256=Bcgp1rQLm6Yu4KQV1n1XrMwGedO3oXeghnYrei5332s,9
+codaicli-1.0.0.dist-info/RECORD,,
