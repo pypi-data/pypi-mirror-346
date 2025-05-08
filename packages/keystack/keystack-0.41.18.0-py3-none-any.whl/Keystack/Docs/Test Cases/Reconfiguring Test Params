@@ -1,0 +1,72 @@
+Reconfiguring testcases or scripts:
+
+    CRITICAL NOTE on reconfiguring configurations:
+        If you change the parameters in the testcase.yml file, this will
+        affect other users running the same testcases.
+
+        This will change all future testings using your updated param values on this testcase.
+    
+        It is not ideal to reconfigure testcases in testcase.yml files!
+
+Modify configurations with reconfig data:
+------------------------------------------
+   - Every testcase .yml file can state which script to run and state which data config file
+     to consume param values inside scripts
+   - The problem is that the data configs stated in the testcase .yml files are static
+   - The question is how to pass in different config files for each testcase
+   - Use Keystack CLI parameter -reconfigs
+   - Keystack installation comes with a folder called /opt/KeystackTests/Reconfigs
+   - In this <Reconfigs> folder, organize your data config files with subfolders
+  
+Creating a reconfigs YAML file:
+-------------------------------
+Modify testcase configurations by using the following keywords in reconfig YAML files
+    - dataConfigsFile:       The file path containining data-model in json or Ymal format ONLY
+    - dataConfigs:           Dict object: Param / Values
+    - exportedConfigsFile:   The test tool's saved and exported config file full path.
+                             State the full path or if it is in the /Modules/<module name> directory, 
+                             /Modules/<module name>/ExportedConfigs/<filename>
+    - scriptCmdlineArgs:     The CLI args to passed into the script in which your python scripts should use
+                             arpparse to parse the param values as if they're CLI args
+
+To run Keystack with param "-reconfigs" on the CLI using the filename without the .yml extension
+Example:
+   - keystack run -playbook Samples/advance -domain Communcal -reconfigs demoChanges
+   - keystack run -playbook Samples/advance -domain Communcal -reconfigs /<subfolder>/demoChanges
+
+In a reconfigs file for example: <demoChange.yml> 
+    - State the testcase YAML filename as the root level key 
+      There are 4 optional keywords. The values are the unique data for the testcase 
+
+      # This is the testcase yml file to modify the configurations
+      /opt/KeystackTests/Playlist/Demo/L2L3_Testcases/bgp.yml:
+
+          # Below are testcase yml file keywords to change
+          scriptCmdlineArgs:
+              - -arg1 value1 -arg2 value2
+          dataConfigs:
+              param1: value1
+              param2: value2
+          dataConfigsFile: /Modules/Demo/DataConfigs/bgp_dataConfigs.json
+          exportedConfigsFile: /Modules/Demo/ExportedConfigs/bgp_exportedConfigs.json
+        
+      /opt/KeystackTests/Playlist/Demo/L2L3_Testcases/ospf.yml:
+          scriptCmdlineArgs:
+              - -arg1 value1 -arg2 value2
+          dataConfigs:
+              param1: value2
+          dataConfigsFile: /Modules/Demo/DataConfigs/ospf_dataConfigs.json
+          exportedConfigsFile: /Modules/Demo/ExportedConfigs/ospf_exportedConfigs.json
+    
+   How to retrieve reconfig data with reconfigs files:
+   ---------------------------------------------------
+       In your python scripts:
+          from keystackEnv import keystack
+
+          keystack.logInfo(f'Get scriptCmdlineArgs:   {keystack.testcaseParams["scriptCmdlineArgs"]}')
+          keystack.logInfo(f'Get exportedConfigsFile: {keystack.testcaseParams["exportedConfigsFile"]}')
+          keystack.logInfo(f'Get dataConfigsFile:     {keystack.testcaseParams["dataConfigsFile"]}')
+          keystack.logInfo(f'Get dataConfigs:         {keystack.testcaseParams["dataConfigs"]}')
+
+      
+       This will overwrite the values stated inside the testcase .yml files (if any of these keywords are used in the testcase.yml file)
