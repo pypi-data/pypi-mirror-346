@@ -1,0 +1,12 @@
+passagemath_meataxe-10.5.31.dist-info/RECORD,,
+passagemath_meataxe-10.5.31.dist-info/WHEEL,sha256=09j-19BI3i0W1zvsxi68cwbv_eU1SmDHK3-bGxgI9xQ,137
+passagemath_meataxe-10.5.31.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_meataxe-10.5.31.dist-info/METADATA,sha256=Zrjv2tlipfrHXciXn5EU_2iO2q0Mr8jVmbHwMOlJE0E,4345
+passagemath_meataxe.dylibs/libmtx.0.dylib,sha256=Y704IOIseqC4aVh1ejeG_vs_chQXSlpXXxw6vWKHLa8,272496
+sage/all__sagemath_meataxe.py,sha256=isUgdlh6SqmFirYA2LvA-IFIJXW-fyhZrXsbt3PifDY,46
+sage/libs/meataxe.pxd,sha256=FqAwBUCWeeJpp4UjeWxWWhRgStywZP8jmCK0tTvxhTs,6643
+sage/libs/all__sagemath_meataxe.py,sha256=isUgdlh6SqmFirYA2LvA-IFIJXW-fyhZrXsbt3PifDY,46
+sage/libs/meataxe.cpython-310-darwin.so,sha256=5uGUimSPjgVLCjX6iJYCOQXJET6xYzcOmLVOQoqzp3o,101536
+sage/matrix/matrix_gfpn_dense.cpython-310-darwin.so,sha256=Xq12bNGXurZV43l7FiDE7Al8AEiMXXIJ12ofjGRSfSc,344704
+sage/matrix/all__sagemath_meataxe.py,sha256=isUgdlh6SqmFirYA2LvA-IFIJXW-fyhZrXsbt3PifDY,46
+sage/matrix/matrix_gfpn_dense.pxd,sha256=1RHSQ4z0Cp0WT3BSCFwBnwU2RJk1mIprtekJ_SduSZI,1709
