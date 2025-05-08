@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: autoconf
+Version: 2025.5.7.16
+Summary: PyAuto Configration
+Home-page: https://github.com/rhayes777/PyAutoConf
+Author: James Nightingale and Richard Hayes
+Author-email: richard@rghsoftware.co.uk
+License: MIT License
+Keywords: cli
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: typing-inspect>=0.4.0
+Requires-Dist: pathlib
+Requires-Dist: PyYAML>=6.0.1
+Requires-Dist: numpy<=2.0.1,>=1.24.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# PyAutoConf
