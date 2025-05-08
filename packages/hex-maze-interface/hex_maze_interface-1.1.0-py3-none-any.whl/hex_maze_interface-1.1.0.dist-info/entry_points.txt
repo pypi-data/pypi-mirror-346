@@ -1,0 +1,2 @@
+[console_scripts]
+hex-maze-interface = hex_maze_interface.cli:cli
