@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+betfairutil/__init__.py
+betfairutil.egg-info/PKG-INFO
+betfairutil.egg-info/SOURCES.txt
+betfairutil.egg-info/dependency_links.txt
+betfairutil.egg-info/requires.txt
+betfairutil.egg-info/top_level.txt
+betfairutil/examples/__init__.py
+tests/test_non_prices.py
+tests/test_prices.py
