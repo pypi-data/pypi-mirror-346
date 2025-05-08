@@ -1,0 +1,3 @@
+[console_scripts]
+deepcodec = deepcodec.__main__:mp_entrypoint
+deepcodec_interleaved = deepcodec.__main__:mp_interleaved_entrypoint
