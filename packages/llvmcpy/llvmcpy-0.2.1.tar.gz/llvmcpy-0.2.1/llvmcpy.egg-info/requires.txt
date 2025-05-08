@@ -1,0 +1,6 @@
+cffi>=1.0.0
+pycparser
+platformdirs
+
+[:python_version < "3.8"]
+setuptools
