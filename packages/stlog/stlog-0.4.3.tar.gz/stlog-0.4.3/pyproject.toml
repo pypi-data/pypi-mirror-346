@@ -1,0 +1,49 @@
+[project]
+name = "stlog"
+version = "0.4.3"
+description = ""
+authors = [{ name = "Fabien MARTY", email = "fabien.marty@gmail.com" }]
+requires-python = ">=3.7"
+readme = "README.md"
+license = "MIT"
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "mypy",
+    "pdoc3",
+    "mkdocs-material",
+    "rich",
+    "pytest",
+    "pytest-cov",
+    "mkdocs-macros-plugin",
+    "mkdocs-include-markdown-plugin",
+    "setuptools",
+    "types-pyyaml",
+    "jinja2-shell-extension",
+    "termtosvg",
+    "dunamai",
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["stlog"]
+
+[tool.hatch.build.targets.wheel]
+include = ["stlog"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+select = ["E", "F", "W", "N", "UP", "B", "I", "PL", "RUF"]
+ignore = ["E501", "PLR2004"]
+line-length = 88
+target-version = "py37"
+extend-exclude = ["docs/python", "html"]
+
+[tool.ruff.isort]
+required-imports = ["from __future__ import annotations"]
+
+[tool.mypy]
+exclude = ['^html/.*']
