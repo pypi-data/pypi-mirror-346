@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: transformcl
+Version: 2025.1
+Summary: Transform angular power spectra and correlation functions
+Project-URL: Documentation, https://glass.readthedocs.io/projects/transformcl
+Project-URL: Repository, https://github.com/glass-dev/transformcl
+Project-URL: Issues, https://github.com/glass-dev/transformcl/issues
+Maintainer-email: Nicolas Tessore <n.tessore@ucl.ac.uk>
+License: MIT
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: array-api-compat
+Requires-Dist: flt>=2025.1
+Provides-Extra: doc
+Requires-Dist: furo; extra == 'doc'
+Requires-Dist: numpydoc; extra == 'doc'
+Requires-Dist: sphinx; extra == 'doc'
+Requires-Dist: sphinxcontrib-katex; extra == 'doc'
+Description-Content-Type: text/markdown
+
+# transformcl
+
+**Transform angular power spectra and correlation functions.**
+
+This is a minimal Python package for transformations between angular power
+spectra and correlation functions. It is currently limited to the spin zero
+case.
+
+The package can be installed using pip:
+
+    pip install transformcl
+
+Then import the package to use the functions:
+
+```py
+import transformcl
+t = transformcl.theta(cl.size)
+ct = transformcl.corr(cl)
+```
+
+For more information, please see the [documentation].
+
+Current functionality covers the absolutely minimal use case. Please open an
+issue on GitHub if you would like to see anything added.
+
+[documentation]: https://glass.readthedocs.io/projects/transformcl/latest
