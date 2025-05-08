@@ -1,0 +1,3 @@
+[console_scripts]
+fedzk=fedzk.cli:main
+
