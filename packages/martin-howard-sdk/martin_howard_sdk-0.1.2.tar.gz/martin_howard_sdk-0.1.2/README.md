@@ -1,0 +1,6 @@
+README.md
+add version
+python setup.py sdist bdist*wheel
+rm -rf dist/*
+twine upload dist/\_
+key: pypi-AgEIcHlwaS5vcmcCJDYyYTU1YmI4LWRlYTItNGEzNS05MGY5LTU5ZjEyMWRkZmZhNgACKlszLCI3YWY1ZWI1ZS1mY2M0LTQ3Y2ItOTc5Ny1kNTVhY2JmNWQxMDkiXQAABiBbI61mdPFSWtJqI1h2uckuXsVAIbB1VWpWKts_gae03w
