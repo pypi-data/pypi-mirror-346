@@ -1,0 +1,4 @@
+include README_EN.md
+exclude README.md
+recursive-exclude tests *
+recursive-exclude *.py[cod] *$py.class
