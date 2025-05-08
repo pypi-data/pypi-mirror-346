@@ -1,0 +1,5 @@
+actor_rtc-0.1.0.dist-info/METADATA,sha256=KIUlUp4kP316iTe3kH1COKF9D8W-Shs-ovg7iHjW1uk,1551
+actor_rtc-0.1.0.dist-info/WHEEL,sha256=ZdJXSDgn96_12ecdISeGgrSmAL4PCHd7ovvSle4BuQ0,108
+actor_rtc/__init__.py,sha256=FDNnjnYkyDNsDRy0MrHSR1PXx039amVydTgKPMLotEQ,119
+actor_rtc/actor_rtc.cpython-310-x86_64-linux-gnu.so,sha256=-iXKuzpCi7G4gY0LAqvYJaFhA5MSKoXoH0KYJfEGOLo,10573928
+actor_rtc-0.1.0.dist-info/RECORD,,
