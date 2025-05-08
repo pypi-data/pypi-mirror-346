@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/websearch4ai/__init__.py
+src/websearch4ai/core.py
+src/websearch4ai.egg-info/PKG-INFO
+src/websearch4ai.egg-info/SOURCES.txt
+src/websearch4ai.egg-info/dependency_links.txt
+src/websearch4ai.egg-info/top_level.txt
