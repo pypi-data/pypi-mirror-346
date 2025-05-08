@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+streambotcore/__init__.py
+streambotcore/bot_discord.py
+streambotcore/bot_twitch.py
+streambotcore/core.py
+streambotcore/loader.py
+streambotcore/utils.py
+streambotcore.egg-info/PKG-INFO
+streambotcore.egg-info/SOURCES.txt
+streambotcore.egg-info/dependency_links.txt
+streambotcore.egg-info/requires.txt
+streambotcore.egg-info/top_level.txt
+tests/test_core.py
