@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+photorch/__init__.py
+photorch.egg-info/PKG-INFO
+photorch.egg-info/SOURCES.txt
+photorch.egg-info/dependency_links.txt
+photorch.egg-info/requires.txt
+photorch.egg-info/top_level.txt
