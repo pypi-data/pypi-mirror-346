@@ -1,0 +1,11 @@
+app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/main.py,sha256=Ks4ADV5mQSumWmNgSbT1irRA0FOmFI_4YR7hCUj9ayw,939
+app/models.py,sha256=5y24Cc3GTte2Uel2gEbx_bFYExUEJbjiwDtjn9E0Oww,278
+calculator_lib/__init__.py,sha256=2fYypBopBFvLICYLi2irxqY9JugyqARcDncl17hlQP8,43
+calculator_lib/operations.py,sha256=1miK62ap0o8i2t2-vlK3AUxe4YE8sRU8pynRkzsiROE,291
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_main.py,sha256=wZ4AkjhwP1rizLuzkiI18hGdsRHE_c2L8HlXGPxEreQ,1121
+calculator_lib_riffxs-0.1.0.dist-info/METADATA,sha256=6sTkP9kv2_1pcuqgpumaKYmKcPyD1S1gwz1gjzCTo-4,810
+calculator_lib_riffxs-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+calculator_lib_riffxs-0.1.0.dist-info/top_level.txt,sha256=Tnh8rgaZCxjTU3l2J_Iz7jcGXHyldhXxVXYjcBSeQ1w,25
+calculator_lib_riffxs-0.1.0.dist-info/RECORD,,
