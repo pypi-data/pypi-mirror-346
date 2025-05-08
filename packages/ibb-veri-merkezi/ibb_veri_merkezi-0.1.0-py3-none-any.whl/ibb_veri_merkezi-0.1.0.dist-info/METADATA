@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: ibb-veri-merkezi
+Version: 0.1.0
+Summary: İstanbul Büyükşehir Belediyesi'nin (İBB) Açık Veri Merkezi dahilindeki servisler için kolay erişim sağlar.
+Home-page: https://github.com/aribilgiogr/ibb-veri-merkezi
+Author: ilker turan
+Author-email: email@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: requests>=2.32.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# IBB Veri Merkezi
+
+İstanbul Büyükşehir Belediyesi'nin (İBB) Açık Veri Portalı dahilindeki servisler için kolay erişim sağlar.
+
+## Kurulum
+
+```bash
+  pip install ibb-veri-merkezi
+```
+## Kullanım
+
+```python
+from ibb_veri_merkezi import get_parking_lots, get_parking_lot
+
+print(get_parking_lots(to_frame=True))
+print(get_parking_lot(1487))
+```
