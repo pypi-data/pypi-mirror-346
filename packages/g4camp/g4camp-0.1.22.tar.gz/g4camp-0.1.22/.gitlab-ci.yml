@@ -1,0 +1,30 @@
+#test:
+#  image: git.jinr.ru:5005/malyshkin/ubuntu_ntsim_requirements
+#  script:
+#    - pwd
+#    - ls
+#    - source /software/geant4-v11.1.0-install/bin/geant4.sh
+#    - pip install geant4_pybind==0.1.0-beta.11 numpy h5py matplotlib configargparse
+#    - export PYTHONPATH=${PWD}:$PYTHONPATH
+#    - echo $PYTHONPATH
+#    - cd /workdir
+#    - python -m g4camp.run_g4camp # this cannot import geant4_pybind (???)
+
+# The Docker image that will be used to build your app
+
+# Functions that should be executed before the build script is run
+before_script: []
+pages:
+  image: ruby:2.7
+  script:
+    - gem install bundler -v 2.4.22
+    - bundle install
+    - bundle exec jekyll build -s docs -d public
+  artifacts:
+    paths:
+      # The folder that contains the files to be exposed at the Page URL
+      - public
+  rules:
+    # This ensures that only pushes to the default branch will trigger
+    # a pages deploy
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH

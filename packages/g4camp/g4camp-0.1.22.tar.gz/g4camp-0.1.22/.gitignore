@@ -1,0 +1,4 @@
+**/__pycache__
+dist/**
+docs/Gemfile.lock
+docs/_site/*
