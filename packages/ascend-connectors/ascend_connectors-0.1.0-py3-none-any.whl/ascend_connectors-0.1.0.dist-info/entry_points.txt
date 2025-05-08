@@ -1,0 +1,2 @@
+[console_scripts]
+ascend-connectors = ascend_connectors:main
