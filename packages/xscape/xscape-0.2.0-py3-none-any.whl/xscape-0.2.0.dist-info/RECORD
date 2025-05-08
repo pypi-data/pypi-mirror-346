@@ -1,0 +1,9 @@
+xscape/__init__.py,sha256=4X4v6Q1Q8z8eCpoAQxoaveqaWfPTu7PK_I_0J7QrNhM,346
+xscape/accessors.py,sha256=aI2E-qY1hGoCxv4wV4vJtUCc9iLmR-6Hdtbbn1oUfSY,4138
+xscape/core.py,sha256=W7anv63XGCxoln-VHTK7y-5_JjdrDh1jA9eyDYZFsxI,10341
+xscape/plotting.py,sha256=EDN5eK2V4ddRv-v5dxphJvt0PxLZoaUwug9yhcKcANE,774
+xscape/utils.py,sha256=H2shI1Ea2SMd96C_8e3QMcVr_khw_zX44AklwyfbT00,10300
+xscape-0.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+xscape-0.2.0.dist-info/METADATA,sha256=t_d9ZJKVeOCDUSc4PCCT-aMAm-wj9I11NCLdX4Aelfs,4040
+xscape-0.2.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+xscape-0.2.0.dist-info/RECORD,,
