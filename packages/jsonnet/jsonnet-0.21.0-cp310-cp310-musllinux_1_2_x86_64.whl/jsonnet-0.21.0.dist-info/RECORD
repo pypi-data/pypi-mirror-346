@@ -1,0 +1,8 @@
+_jsonnet.cpython-310-x86_64-linux-gnu.so,sha256=qVv9o8Q9U2wmVacph1A6GwPdX-coxq0IlG21IIO5dl4,17760713
+jsonnet.libs/libgcc_s-a0b57c20.so.1,sha256=XPAr2giQZFaQKDEig3i_sQM7zfbaGkuhwmZ9ryvu-Vk,148041
+jsonnet.libs/libstdc++-0d31ccbe.so.6.0.32,sha256=QyUTnI2umnGgPmNJ-6F_BVIAJnq6-70cNoEWpma6EFQ,3494521
+jsonnet-0.21.0.dist-info/top_level.txt,sha256=Fy69tqEUTvo9vknMBg9XqRG7aunzZO4XhLlUQh_xlVE,9
+jsonnet-0.21.0.dist-info/RECORD,,
+jsonnet-0.21.0.dist-info/METADATA,sha256=ABVDSpF74CXdcVmAsyzY83XgvXr7pNaEv35VE4wj_h4,449
+jsonnet-0.21.0.dist-info/WHEEL,sha256=TTgdNXyqToji0NiR0LEtrRXByLy2srDcH-frdricj7E,112
+jsonnet-0.21.0.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
