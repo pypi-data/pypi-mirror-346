@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ttk-epay
+Version: 0.1.4
+Summary: 
+Author: charen bahaeddine hemmem
+Author-email: charenbahaeddinehemmem@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# ttk-epay-python-client
