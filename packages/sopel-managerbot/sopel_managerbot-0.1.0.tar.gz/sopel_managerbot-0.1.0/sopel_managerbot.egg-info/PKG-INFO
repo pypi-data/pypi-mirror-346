@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: sopel-managerbot
+Version: 0.1.0
+Summary: "Manager-like" approval/denial responses for Sopel IRC bots.
+Author-email: dgw <dgw@technobabbl.es>
+License-Expression: EFL-2.0
+Project-URL: Homepage, https://github.com/dgw/sopel-managerbot
+Project-URL: Bug Tracker, https://github.com/dgw/sopel-managerbot/issues
+Keywords: sopel,plugin,bot,irc
+Platform: Linux x86, x86-64
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Requires-Python: <4,>=3.8
+Description-Content-Type: text/markdown
+License-File: COPYING
+Requires-Dist: sopel>=8.0
+Dynamic: license-file
+
+# sopel-managerbot
+
+"Manager-like" approval/denial responses for Sopel IRC bots.
+
+(Note: Does not manage other Sopel instances. That plugin would have to be
+called `sopel-botmanager`. 😉)
+
+## Installing
+
+Releases are hosted on PyPI, so after installing Sopel, all you need is `pip`:
+
+```shell
+$ pip install sopel-managerbot
+```
+
+## Using
+
+This plugin provides two command sets:
+
+* `.approve`/`.yes`: Fetches a "yes" reason from [yes-as-a-service][]
+* `.deny`/`.no`: Fetches a "no" reason from [no-as-a-service][]
+
+These commands do not take any arguments.
+
+
+[yes-as-a-service]: https://github.com/misterdim/yes-as-a-service
+[no-as-a-service]: https://github.com/hotheadhacker/no-as-a-service
+
+## Changelog
+
+### 0.1.0
+
+First release of `sopel-managerbot`.

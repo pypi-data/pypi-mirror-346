@@ -1,0 +1,13 @@
+COPYING
+MANIFEST.in
+NEWS
+README.md
+pyproject.toml
+sopel_managerbot/__init__.py
+sopel_managerbot/plugin.py
+sopel_managerbot.egg-info/PKG-INFO
+sopel_managerbot.egg-info/SOURCES.txt
+sopel_managerbot.egg-info/dependency_links.txt
+sopel_managerbot.egg-info/entry_points.txt
+sopel_managerbot.egg-info/requires.txt
+sopel_managerbot.egg-info/top_level.txt
