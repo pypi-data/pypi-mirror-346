@@ -1,0 +1,15 @@
+color_spec_changer/__init__.py,sha256=Qjdgy8MJe4vw3ZRIgSs5nl9czzMmYxsfaBp7MuHnZH0,2691
+color_spec_changer/version.py,sha256=M89d8LV268pFEl2-Thd_kLzv3REyqkchyHLICHVk-TQ,2205
+color_spec_changer/constant/catalog.py,sha256=1haaxoKkgGELT3leUMfHhtfqARRAIvidFezyFcPU18A,4144
+color_spec_changer/constant/name.py,sha256=DP-ZEtWzDcOvkvDB3BfaqPIosiwpBoFfSs0uPMD9ZL4,2956
+color_spec_changer/constant/runtime.py,sha256=p02pid5PbsDWKWrYkWd3mrL33KgZ2We4fic1dy7Iftk,2794
+color_spec_changer/constant/specification.py,sha256=8fAoiMo1i4lYgB1cL7VdHFzdd9kvcAea7yYl_HqcVZM,2527
+color_spec_changer/task/analysis.py,sha256=7Gc-FAwdE3GD_Uyn_qA16sAXpDbrLpB1SmPGIQ4Kh24,7794
+color_spec_changer/task/reference.py,sha256=MVTD6qC0HweAlnMLVxyM0x75HlaqnBbIkcWRtIdcoyo,9533
+color_spec_changer/task/translation.py,sha256=qAt3o1z_Wi7RUMWTWUVQd7S1DPupHEFNEW2VZq-hF4E,10228
+color_spec_changer/type/color.py,sha256=tbtMI7DCo6cMYpBElS_mgy74N5KNzfyMs2o9yOCkVsc,2769
+color_spec_changer/type/specification.py,sha256=lDhj8p1rcdCoMncrl2vOM3SHM-_SCpdX1Vql8AdnRXE,4239
+colorspecchanger-2025.4.dist-info/METADATA,sha256=li1feIpIswVrvrl8oJWQhpwl390-0Ey66tpH6oQxBa0,6631
+colorspecchanger-2025.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+colorspecchanger-2025.4.dist-info/top_level.txt,sha256=Ad8Uz2xPAJTHAhEvQwdi8GvhgC1SfAbN-JaIOeWn7ek,19
+colorspecchanger-2025.4.dist-info/RECORD,,
