@@ -1,0 +1,5 @@
+openai
+torch
+huggingface_hub
+requests
+python-dotenv
