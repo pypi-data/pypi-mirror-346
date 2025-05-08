@@ -1,0 +1,58 @@
+{
+  "version": 2,
+  "brokers": {
+    "pg_notify": {
+      "config": "typing.Optional[dict]",
+      "async_connection_factory": "typing.Optional[str]",
+      "sync_connection_factory": "typing.Optional[str]",
+      "channels": "typing.Union[tuple, list]",
+      "default_publish_channel": "typing.Optional[str]",
+      "max_connection_idle_seconds": "typing.Optional[int]",
+      "max_self_check_message_age_seconds": "typing.Optional[int]"
+    },
+    "socket": {
+      "socket_path": "<class 'str'>"
+    }
+  },
+  "producers": {
+    "ScheduledProducer": {
+      "task_schedule": "dict[str, dict[str, typing.Union[int, str]]]"
+    },
+    "OnStartProducer": {
+      "task_list": "dict[str, dict[str, typing.Union[int, str]]]"
+    },
+    "ControlProducer": {}
+  },
+  "service": {
+    "pool_kwargs": {
+      "min_workers": "<class 'int'>",
+      "max_workers": "typing.Optional[int]",
+      "scaledown_wait": "<class 'float'>",
+      "scaledown_interval": "<class 'float'>",
+      "worker_stop_wait": "<class 'float'>",
+      "worker_removal_wait": "<class 'float'>"
+    },
+    "main_kwargs": {
+      "node_id": "typing.Optional[str]"
+    },
+    "metrics_kwargs": {
+      "port": "<class 'int'>",
+      "log_level": "<class 'str'>",
+      "host": "<class 'str'>"
+    },
+    "process_manager_kwargs": {
+      "preload_modules": "typing.Optional[list[str]]"
+    },
+    "process_manager_cls": "typing.Literal['ProcessManager', 'ForkServerManager', 'SpawnServerManager']"
+  },
+  "publish": {
+    "default_broker": "str"
+  },
+  "worker": {
+    "worker_kwargs": {
+      "worker_id": "<class 'int'>",
+      "idle_timeout": "<class 'int'>"
+    },
+    "worker_cls": "typing.Any"
+  }
+}

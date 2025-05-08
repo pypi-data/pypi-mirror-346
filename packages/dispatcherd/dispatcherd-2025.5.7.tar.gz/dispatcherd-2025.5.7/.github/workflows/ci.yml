@@ -1,0 +1,79 @@
+---
+name: CI
+on:
+  pull_request:
+  push:
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    strategy:
+      matrix:
+        py_version:
+          - '3.10'
+          - '3.11'
+          - '3.13'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          show-progress: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.py_version }}
+
+      - name: Install dispatcherd
+        run: pip install -e .[pg_notify,metrics]
+      - run: make postgres
+      - run: pip install -r requirements_dev.txt
+      - name: Run synchronous tests
+        run: pytest tests/ -vv -s
+      - name: Run pytest-asyncio tests
+        run: pytest tests/ -vv -s -m asyncio
+
+  black:
+    name: Run black
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          show-progress: false
+
+      - run: pip install black
+      - run: black --check dispatcherd
+
+  isort:
+    name: Run isort
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          show-progress: false
+
+      - run: pip install isort
+      - run: isort --check dispatcherd
+
+  mypy:
+    name: Run mypy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          show-progress: false
+
+      - run: pip install mypy
+      - run: pip install -e .[pg_notify,metrics]
+      - run: python3 -m pip install types-PyYAML
+      - run: mypy dispatcherd
+
+  flake8:
+    name: Run flake8
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          show-progress: false
+
+      - run: pip install flake8
+      - run: flake8 dispatcherd

@@ -1,0 +1,8 @@
+pyyaml
+
+[metrics]
+uvicorn[standard]
+prometheus-client
+
+[pg_notify]
+psycopg[binary]>=3.2.4
