@@ -1,0 +1,14 @@
+onnxnpu/__init__.py,sha256=uVszFWz3lQlrFuFnEzp_GXUURljxTHb3qQItNLUcgac,1270
+onnxnpu/checker.py,sha256=l_jX3UhEPO31gXdmaD70dat1Ak4J-hSFaH2HWknZdOs,8276
+onnxnpu/cli.py,sha256=ENC_vAyw6E4J-0iy9GXA7ogOLrFBjvrz6nwM5U9zzPg,5193
+onnxnpu/optimizer.py,sha256=3jjZntoQTIKLAWOfr84I44jb0DrI5vO-3alNC3pGcVI,2512
+onnxnpu/profiles/KL520.json,sha256=CXURqa4qRkF9ZL1OrG-RREFnzgq31lnR2rZ0PmpV4UA,4016
+onnxnpu/profiles/KL530.json,sha256=bsj08Y87l4TB_IW8NpyeJzs5eYhHcmFFCPNm-Oo0H0Y,4105
+onnxnpu/profiles/KL630.json,sha256=nKcp8O-rmv5uOhtBbYL60i0KozbPc4yKprCQhGXImak,4105
+onnxnpu/profiles/KL720.json,sha256=21YfMUIeOxktwIVxI4LDio7eLWgTVrmL6JJZcqP0hXk,4291
+onnxnpu/profiles/KL730.json,sha256=gzx3JoAoGxPoFwikIMkyx63JVIBNBlPyfZQ347OVXmc,3896
+onnxnpu-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+onnxnpu-0.1.0.dist-info/METADATA,sha256=BvvyVzk_YWS1S84scVIn6EMtcFNzUScCf4fycXzWcT8,8242
+onnxnpu-0.1.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+onnxnpu-0.1.0.dist-info/entry_points.txt,sha256=YRG6Tr5JQqXyONA1Vf4LFjujCRWhwB-HvlPn-eyRAII,66
+onnxnpu-0.1.0.dist-info/RECORD,,
