@@ -1,0 +1,4 @@
+[console_scripts]
+ptame-print = ptame.print_map:main
+ptame-sweep = ptame.ax_sweep:main
+ptame-train = ptame.train:main
