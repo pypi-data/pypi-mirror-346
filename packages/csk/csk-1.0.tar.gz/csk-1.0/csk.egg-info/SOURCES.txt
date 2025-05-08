@@ -1,0 +1,7 @@
+LICENSE.txt .txt
+README.md
+setup.py
+csk.egg-info/PKG-INFO
+csk.egg-info/SOURCES.txt
+csk.egg-info/dependency_links.txt
+csk.egg-info/top_level.txt
