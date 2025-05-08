@@ -1,0 +1,54 @@
+Metadata-Version: 2.3
+Name: pywattbox
+Version: 0.8.0
+Summary: A python wrapper for WattBox APIs.
+License: MIT
+Author: Erik Seglem
+Author-email: erik.seglem@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: http
+Provides-Extra: ip
+Provides-Extra: ssh2
+Requires-Dist: asyncssh (>=2.2.1,<3.0.0) ; extra == "ip"
+Requires-Dist: beautifulsoup4 (>=4.11.0) ; extra == "http"
+Requires-Dist: h11 (>=0.14.0) ; extra == "http"
+Requires-Dist: httpx (>=0.23.0) ; extra == "http"
+Requires-Dist: lxml (>=4.9.0) ; extra == "http"
+Requires-Dist: scrapli (>=2023.7.30) ; extra == "ip" or extra == "ssh2"
+Requires-Dist: ssh2-python (>=0.23.0,<2.0.0) ; extra == "ssh2"
+Project-URL: Repository, https://github.com/eseglem/pywattbox
+Description-Content-Type: text/markdown
+
+# pywattbox
+
+For usage see: [eseglem/hass-wattbox][hass_wattbox]
+
+Python wrapper for [WattBox][wattbox]
+
+The documentation for the HTTP API was found [Here][http_api]
+The documentation for Telnet / SSH API was found [Here][ssh_api]
+
+I suggest not using the admin account to run this code. Log into your WattBox and create a new user account.
+
+<!---->
+
+***
+
+[wattbox]: https://www.snapav.com/shop/en/snapav/wattbox
+[hass_wattbox]: https://github.com/eseglem/hass-wattbox
+[http_api]: https://www.snapav.com/wcsstore/ExtendedSitesCatalogAssetStore/attachments/documents/PowerManagement/SupportDocuments/Wattbox%20API%20v2.0.pdf
+[ssh_api]: https://www.snapav.com/wcsstore/ExtendedSitesCatalogAssetStore/attachments/documents/PowerManagement/ProtocolsAndDrivers/SnapAV_Wattbox_API_V2.4.pdf
+
