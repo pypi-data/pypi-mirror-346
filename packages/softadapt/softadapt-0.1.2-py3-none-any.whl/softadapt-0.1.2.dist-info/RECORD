@@ -1,0 +1,17 @@
+softadapt/__init__.py,sha256=4HM8crRiljSJJm0tgf9cIRCh5_aTx83DE7mRJLxf6tc,1070
+softadapt/__version__.py,sha256=YvuYzWnKtqBb-IqG8HAu-nhIYAsgj9Vmc_b9o7vO-js,22
+softadapt/algorithms/__init__.py,sha256=yvgHJpdLDQqn6unXumr2RCKzRNI78ebQ8D2W7oT6YqE,999
+softadapt/algorithms/loss_weighted_variant.py,sha256=jA2_p8CJ8uy-UiDskoD9MB5D7RSOoWZYPkTmsq9DFbk,4092
+softadapt/algorithms/normalized_slopes_variant.py,sha256=GQCSWtq2ZRdFPWp6FsRZKMrfRvrpdDhWsF-see2WiWQ,3680
+softadapt/algorithms/original_variant.py,sha256=lEiQ7kG017TAjJLauAqIt6buSzHCmJiSr5pEjupnD3Y,3562
+softadapt/base/__init__.py,sha256=cpx5ML0llgsaZLjSxLoVLVXbf0WDbO5vNqhpVlmq_7A,729
+softadapt/base/_softadapt_base_class.py,sha256=FwAjVm-wTAzS3UcrVcqD_OoUDLQ9mpJ5T_cYKMjV6hM,3579
+softadapt/callbacks/__init__.py,sha256=HDxf_-moZFdqeG2YQkaxKnMU21H5ErmjBXIuGItiRS4,754
+softadapt/callbacks/adaptive_loss.py,sha256=GjG_TMM-HFIs3xm9EvibS65RkJHlS8D7kYJf6bJRudo,5943
+softadapt/constants/__init__.py,sha256=SvgsRN-FAcSkW4i1jbEDrppBO9FRbXckOZ5wgRxA5uQ,1034
+softadapt/utilities/__init__.py,sha256=ELQgT9umL_zuq7PAv9OJhWf5mxUXJtIIYtIfyTllTXY,725
+softadapt/utilities/_finite_difference.py,sha256=ZSYY_hfP94_LOash9LFJNXVeoBMaTT_8Q1ZTcMPI-Qo,4455
+softadapt-0.1.2.dist-info/METADATA,sha256=goRBA0jHn_mtYjb8xrhonIcHIHqx-5i6wewhGRXysUM,15422
+softadapt-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+softadapt-0.1.2.dist-info/licenses/LICENSE.md,sha256=PCcxjBz4mbMdRNYigmF6CtTgpGUvmVfBWp0oey9JZ9g,32146
+softadapt-0.1.2.dist-info/RECORD,,
