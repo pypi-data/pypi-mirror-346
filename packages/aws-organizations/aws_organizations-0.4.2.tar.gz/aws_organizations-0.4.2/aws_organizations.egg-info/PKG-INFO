@@ -1,0 +1,158 @@
+Metadata-Version: 2.4
+Name: aws_organizations
+Version: 0.4.2
+Summary: AWS Organizations SDK enhancement.
+Home-page: https://github.com/MacHu-GWU/aws_organizations-project
+Download-URL: https://pypi.python.org/pypi/aws_organizations/0.4.2#downloads
+Author: Sanhe Hu
+Author-email: husanhe@gmail.com
+Maintainer: Sanhe Hu
+Maintainer-email: husanhe@email.com
+License: MIT
+Platform: Windows
+Platform: MacOS
+Platform: Unix
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+License-File: LICENSE.txt
+License-File: AUTHORS.rst
+Requires-Dist: boto-session-manager<2.0.0,>=1.7.2
+Requires-Dist: light_emoji<1.0.0,>=0.1.1
+Requires-Dist: iterproxy<1.0.0,>=0.3.1
+Requires-Dist: anytree<3.0.0,>=2.12.1
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+Requires-Dist: boto3; extra == "tests"
+Requires-Dist: rich; extra == "tests"
+Requires-Dist: jsonpickle; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: Sphinx==5.3.0; extra == "docs"
+Requires-Dist: sphinx-jinja==2.0.2; extra == "docs"
+Requires-Dist: sphinx-copybutton==0.5.1; extra == "docs"
+Requires-Dist: sphinx-design==0.5.0; extra == "docs"
+Requires-Dist: furo==2023.03.27; extra == "docs"
+Requires-Dist: nbsphinx==0.8.12; extra == "docs"
+Requires-Dist: rstobj==1.2.1; extra == "docs"
+Requires-Dist: pygments==2.15.1; extra == "docs"
+Requires-Dist: ipython==8.10.0; extra == "docs"
+Requires-Dist: docfly==2.0.3; extra == "docs"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: platform
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+.. image:: https://readthedocs.org/projects/aws-organizations/badge/?version=latest
+    :target: https://aws-organizations.readthedocs.io/en/latest/
+    :alt: Documentation Status
+
+.. image:: https://github.com/MacHu-GWU/aws_organizations-project/actions/workflows/main.yml/badge.svg
+    :target: https://github.com/MacHu-GWU/aws_organizations-project/actions?query=workflow:CI
+
+.. image:: https://codecov.io/gh/MacHu-GWU/aws_organizations-project/branch/main/graph/badge.svg
+    :target: https://codecov.io/gh/MacHu-GWU/aws_organizations-project
+
+.. image:: https://img.shields.io/pypi/v/aws-organizations.svg
+    :target: https://pypi.python.org/pypi/aws-organizations
+
+.. image:: https://img.shields.io/pypi/l/aws-organizations.svg
+    :target: https://pypi.python.org/pypi/aws-organizations
+
+.. image:: https://img.shields.io/pypi/pyversions/aws-organizations.svg
+    :target: https://pypi.python.org/pypi/aws-organizations
+
+.. image:: https://img.shields.io/badge/Release_History!--None.svg?style=social
+    :target: https://github.com/MacHu-GWU/aws_organizations-project/blob/main/release-history.rst
+
+.. image:: https://img.shields.io/badge/STAR_Me_on_GitHub!--None.svg?style=social
+    :target: https://github.com/MacHu-GWU/aws_organizations-project
+
+------
+
+.. image:: https://img.shields.io/badge/Link-Document-blue.svg
+    :target: https://aws-organizations.readthedocs.io/en/latest/
+
+.. image:: https://img.shields.io/badge/Link-API-blue.svg
+    :target: https://aws-organizations.readthedocs.io/en/latest/py-modindex.html
+
+.. image:: https://img.shields.io/badge/Link-Install-blue.svg
+    :target: `install`_
+
+.. image:: https://img.shields.io/badge/Link-GitHub-blue.svg
+    :target: https://github.com/MacHu-GWU/aws_organizations-project
+
+.. image:: https://img.shields.io/badge/Link-Submit_Issue-blue.svg
+    :target: https://github.com/MacHu-GWU/aws_organizations-project/issues
+
+.. image:: https://img.shields.io/badge/Link-Request_Feature-blue.svg
+    :target: https://github.com/MacHu-GWU/aws_organizations-project/issues
+
+.. image:: https://img.shields.io/badge/Link-Download-blue.svg
+    :target: https://pypi.org/pypi/aws-organizations#files
+
+
+Welcome to ``aws_organizations`` Documentation
+==============================================================================
+.. image:: https://aws-organizations.readthedocs.io/en/latest/_static/aws_organizations-logo.png
+    :target: https://aws-organizations.readthedocs.io/en/latest/
+
+AWS Organizations SDK enhancement.
+
+**Features**
+
+1. Enhanced Boto3 API
+    - Provides improved boto3 APIs for AWS Organizations with:
+    - Type hints for better IDE support
+    - Simplified pagination handling
+    - Streamlined access to organization, organizational units, and account information
+    - Clear hierarchy relationship queries
+
+2. Object-Oriented Organization Structure
+    - The ``OrgStructure`` class provides a tree-based container for AWS organization data:
+    - Tree structure representation of your AWS organization
+    - Easy navigation through organization hierarchy
+    - Utility methods for finding and analyzing organization components
+    - Multiple export formats for visualization and analysis
+
+
+.. _install:
+
+Install
+------------------------------------------------------------------------------
+
+``aws_organizations`` is released on PyPI, so all you need is to:
+
+.. code-block:: console
+
+    $ pip install aws-organizations
+
+To upgrade to latest version:
+
+.. code-block:: console
+
+    $ pip install --upgrade aws-organizations
