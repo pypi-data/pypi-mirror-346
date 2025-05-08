@@ -1,0 +1,9 @@
+node_graph_widget/__init__.py,sha256=OrGCeJD2TvdjzUHXQVqcU5fRryLNvD0gzh_nuIABZ0M,2127
+node_graph_widget/html_template.py,sha256=50uuaR0sKPuho85AEW3C6bDhJLHAFbQCnfzN68sLS9g,11789
+node_graph_widget/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+node_graph_widget/static/widget.css,sha256=OUnpWWNJG-esztgKXmWqD0W7nOI7s2Nm0c4yKVNME3M,429
+node_graph_widget/static/widget.js,sha256=xOos2JVpCZ_Y9zfc2NvpP4a0NMGeyWTXbhjciFPtD9A,1810690
+node_graph_widget-0.0.5.dist-info/METADATA,sha256=MZ4XUizo2IKi8EExDPaBk35V2yvWnVnXQu4E2HHPcuQ,3500
+node_graph_widget-0.0.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+node_graph_widget-0.0.5.dist-info/licenses/LICENSE,sha256=ClRiUUBCJl7y5oC_p57FSpWUW7SpfHLGmfhVgOBFgzE,1066
+node_graph_widget-0.0.5.dist-info/RECORD,,
