@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: cf-forked-lib
+Version: 0.7.2.post20250506
+Summary: Collaborative Filtering
+License: MIT
+Classifier: Development Status :: 7 - Inactive
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Cython
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.17.0
+Requires-Dist: scipy>=0.16
+Requires-Dist: tqdm>=4.27
+Requires-Dist: threadpoolctl
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+(Fork) Collaborative Filtering
+=======
+
+ This is a fork of [benfred/implicit](https://github.com/benfred/implicit)
+
+Released under the MIT License
