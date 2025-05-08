@@ -1,0 +1,62 @@
+[project]
+name = "spiderchef"
+version = "0.0.1"
+description = "A recipe based web scraping tool."
+urls = {source = "https://github.com/vonsteer/spiderchef"}
+readme = "README.md"
+authors = [
+    { name = "Jesse Constante", email = "jglconstante@gmail.com" }
+]
+requires-python = ">=3.10"
+keywords = ["python", "crawler", "framework", "scraping", "crawling", "web-scraping", "web-scraping-python", "cli", "yaml", "recipe" ]
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Framework :: AsyncIO",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "Topic :: System :: Networking",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "PyYAML>=6.0.2",
+    "pydantic>=2.11.4",
+    "aiohttp>=3.11.18",
+    "pydash>=8.0.5",
+    "structlog>=25.3.0",
+    "orjson>=3.10.18",
+    "curl-cffi>=0.10.0",
+    "lxml>=5.4.0",
+]
+
+[dependency-groups]
+cli = ["typer>=0.15.3", "rich"]
+dev = [
+    "ruff==0.11.6",
+    "pyright==1.1.399",
+    "pre-commit==4.2.0",
+    "genbadge[coverage]",
+    "pytest~=8.3.5",
+    "pytest-asyncio~=0.24.0",
+    "pytest-cov~=6.1.1",
+]
+
+
+[project.scripts]
+spiderchef = "spiderchef.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
