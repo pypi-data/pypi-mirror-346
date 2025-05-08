@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: optispend
+Version: 0.1.0
+Summary: Estimate AWS Savings Plan commitments using historical billing data
+Home-page: https://github.com/Richard-Barrett/aws-savings-plan-estimator
+Author: Richard Barrett
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: numpy
+Dynamic: license-file
+
+# OptiSpend
+
+Estimate cloud savings plan commitments using historical billing data.
+
+## 📦 Installation
+
+```bash
+pip install optispend
+```
+
+## 🚀 Usage
+
+```bash
+optispend --profile default --commitment 0.8
+optispend --profile default --optimize
+```
+
+## 🐳 Docker
+
+```bash
+docker build -t optispend .
+docker run --rm -v ~/.aws:/home/optispend/.aws:ro optispend --optimize
+```
+
+## 🛠 Usage with Makefile
+
+### Install locally
+```bash
+make install
+```
+
+### Build Docker image
+```bash
+make build
+```
+
+### Run OptiSpend using Docker
+```bash
+make run
+```
+
+### Clean up build artifacts
+```bash
+make clean
+```

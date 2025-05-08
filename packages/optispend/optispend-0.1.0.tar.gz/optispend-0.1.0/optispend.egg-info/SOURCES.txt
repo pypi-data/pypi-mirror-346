@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+optispend/__init__.py
+optispend/cli.py
+optispend.egg-info/PKG-INFO
+optispend.egg-info/SOURCES.txt
+optispend.egg-info/dependency_links.txt
+optispend.egg-info/entry_points.txt
+optispend.egg-info/requires.txt
+optispend.egg-info/top_level.txt
+tests/test_cli.py
