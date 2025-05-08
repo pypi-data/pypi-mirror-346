@@ -1,0 +1,2 @@
+[console_scripts]
+pyamtb = pyamtb.cli:main
