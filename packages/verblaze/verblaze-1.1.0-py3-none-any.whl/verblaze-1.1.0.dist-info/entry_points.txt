@@ -1,0 +1,2 @@
+[console_scripts]
+verblaze = verblaze.cli:main
