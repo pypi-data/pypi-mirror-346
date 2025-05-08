@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bo_sent_tokenizer"
+version = "0.0.1"
+authors = [
+  { name="Tsundue", email="tsundue@esukhia.org" },
+]
+description = "Tibetan sentence tokenizer for segmenting Tibetan text into sentences"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Natural Language :: Tibetan",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+dependencies = [
+  "botok >= 0.8.12"
+]
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "pre-commit",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/OpenPecha/bo_sent_tokenizer"
+"Bug Tracker" = "https://github.com/OpenPecha/bo_sent_tokenizer/issues"
+"Documentation" = "https://github.com/OpenPecha/bo_sent_tokenizer#readme"

@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/bo_sent_tokenizer/__init__.py
+src/bo_sent_tokenizer/utils.py
+src/bo_sent_tokenizer/vars.py
+src/bo_sent_tokenizer.egg-info/PKG-INFO
+src/bo_sent_tokenizer.egg-info/SOURCES.txt
+src/bo_sent_tokenizer.egg-info/dependency_links.txt
+src/bo_sent_tokenizer.egg-info/requires.txt
+src/bo_sent_tokenizer.egg-info/top_level.txt
+tests/test_segmenter.py
+tests/test_sentence_tokenizer.py

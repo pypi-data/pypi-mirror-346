@@ -1,0 +1,6 @@
+botok>=0.8.12
+
+[dev]
+pytest
+pytest-cov
+pre-commit
