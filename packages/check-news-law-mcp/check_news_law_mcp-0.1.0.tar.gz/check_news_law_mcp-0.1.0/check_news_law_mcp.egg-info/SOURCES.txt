@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+check_news_law_mcp.egg-info/PKG-INFO
+check_news_law_mcp.egg-info/SOURCES.txt
+check_news_law_mcp.egg-info/dependency_links.txt
+check_news_law_mcp.egg-info/requires.txt
+check_news_law_mcp.egg-info/top_level.txt
+news_law_mcp/__init__.py
+news_law_mcp/__main__.py
+news_law_mcp/main_old.py
