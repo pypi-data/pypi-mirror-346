@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: SidraDataProductSDK
+Version: 2025.3.0.post169
+Summary: Sidra App SDK
+Home-page: 
+Author-email: info@sidra.dev
+Keywords: Swagger,Sidra App SDK
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+Requires-Dist: six >=1.10
+Requires-Dist: urllib3 >=1.15
+
+    Sidra App SDK  # noqa: E501
+    
