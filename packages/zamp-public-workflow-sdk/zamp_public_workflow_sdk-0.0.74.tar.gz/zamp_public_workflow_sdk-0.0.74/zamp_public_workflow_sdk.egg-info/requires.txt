@@ -1,0 +1,5 @@
+pydantic
+zamp-temporal-sdk
+python-dateutil
+python-dotenv
+sentry-sdk
