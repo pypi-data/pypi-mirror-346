@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.py
+fast_mq_task/__init__.py
+fast_mq_task/client.py
+fast_mq_task/consumer.py
+fast_mq_task/decorators.py
+fast_mq_task/keys.py
+fast_mq_task/models.py
+fast_mq_task/producer.py
+fast_mq_task.egg-info/PKG-INFO
+fast_mq_task.egg-info/SOURCES.txt
+fast_mq_task.egg-info/dependency_links.txt
+fast_mq_task.egg-info/top_level.txt
