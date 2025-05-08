@@ -1,0 +1,50 @@
+Metadata-Version: 2.2
+Name: htyy
+Version: 0.0.5
+Summary: htyy
+Author: huang yi yi
+Author-email: 363766687@qq.com
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+Requires-Dist: watchdog
+Requires-Dist: paramiko
+Requires-Dist: pycryptodome
+Requires-Dist: pywin32
+Requires-Dist: rich
+Requires-Dist: plyer
+Requires-Dist: mpmath
+Requires-Dist: miniaudio
+Requires-Dist: argostranslate
+Requires-Dist: googletrans
+Requires-Dist: pyautogui
+Requires-Dist: py7zr
+Requires-Dist: cryptography
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+***Some tool.***
+
+# Install
+>>> pip install htyy
+
+# request
+>>> from htyy import request
+>>> response = request.get('https://www.example.com', timeout=5)
+>>> print(response.text)
+
+Print out the content you get and decode.
+
+# message
+>>> from htyy import message
+>>> message.showinfo("title","message")
+
+A tooltip box appears.
+
+# path
+About the content of the path.
+
+# ...
