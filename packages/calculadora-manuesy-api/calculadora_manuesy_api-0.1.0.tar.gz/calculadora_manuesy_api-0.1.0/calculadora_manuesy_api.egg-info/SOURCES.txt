@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+calculadora_manuesy_api.egg-info/PKG-INFO
+calculadora_manuesy_api.egg-info/SOURCES.txt
+calculadora_manuesy_api.egg-info/dependency_links.txt
+calculadora_manuesy_api.egg-info/requires.txt
+calculadora_manuesy_api.egg-info/top_level.txt
+lib_calc_manu/__init__.py
+lib_calc_manu/operacoes.py
