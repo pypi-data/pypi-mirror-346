@@ -1,0 +1,6 @@
+termcolor
+requests
+pandas
+requests
+sqlalchemy
+tqdm
