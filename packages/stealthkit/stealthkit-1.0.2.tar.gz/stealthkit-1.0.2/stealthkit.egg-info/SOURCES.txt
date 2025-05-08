@@ -1,0 +1,9 @@
+README.md
+setup.py
+stealthkit/__init__.py
+stealthkit/stealth.py
+stealthkit.egg-info/PKG-INFO
+stealthkit.egg-info/SOURCES.txt
+stealthkit.egg-info/dependency_links.txt
+stealthkit.egg-info/requires.txt
+stealthkit.egg-info/top_level.txt
