@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/api_clients.py
+src/config.py
+src/issue_solver.py
+src/main.py
+src/cs_assistant.egg-info/PKG-INFO
+src/cs_assistant.egg-info/SOURCES.txt
+src/cs_assistant.egg-info/dependency_links.txt
+src/cs_assistant.egg-info/entry_points.txt
+src/cs_assistant.egg-info/requires.txt
+src/cs_assistant.egg-info/top_level.txt
+tests/test_api_clients.py
