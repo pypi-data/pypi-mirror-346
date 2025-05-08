@@ -1,0 +1,4 @@
+[console_scripts]
+certified=certified.certified:app
+message=certified.message:app
+
