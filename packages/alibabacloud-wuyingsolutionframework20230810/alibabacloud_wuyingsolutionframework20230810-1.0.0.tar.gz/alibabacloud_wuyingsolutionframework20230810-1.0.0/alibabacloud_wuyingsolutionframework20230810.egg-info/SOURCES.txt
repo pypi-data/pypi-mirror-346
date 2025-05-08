@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README-CN.md
+README.md
+setup.cfg
+setup.py
+alibabacloud_wuyingsolutionframework20230810/__init__.py
+alibabacloud_wuyingsolutionframework20230810/client.py
+alibabacloud_wuyingsolutionframework20230810/models.py
+alibabacloud_wuyingsolutionframework20230810.egg-info/PKG-INFO
+alibabacloud_wuyingsolutionframework20230810.egg-info/SOURCES.txt
+alibabacloud_wuyingsolutionframework20230810.egg-info/dependency_links.txt
+alibabacloud_wuyingsolutionframework20230810.egg-info/requires.txt
+alibabacloud_wuyingsolutionframework20230810.egg-info/top_level.txt
