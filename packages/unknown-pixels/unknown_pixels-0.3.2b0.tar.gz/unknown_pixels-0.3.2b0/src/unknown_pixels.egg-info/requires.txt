@@ -1,0 +1,10 @@
+numpy
+matplotlib
+Pillow
+
+[dev]
+ruff==0.11.7
+pre-commit
+
+[test]
+pytest
