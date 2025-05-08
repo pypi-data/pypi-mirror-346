@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nome-do-seu-pacote"
+version = "0.1.0"
+description = "Uma descrição curta do seu pacote"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Seu Nome", email = "seu@email.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    # Adicione suas dependências aqui
+    # exemplo: "requests>=2.25"
+]
+
+[project.urls]
+Homepage = "https://github.com/usuario/repositorio"
+Documentation = "https://github.com/usuario/repositorio/wiki"
+Repository = "https://github.com/usuario/repositorio"
+Issues = "https://github.com/usuario/repositorio/issues"
+
