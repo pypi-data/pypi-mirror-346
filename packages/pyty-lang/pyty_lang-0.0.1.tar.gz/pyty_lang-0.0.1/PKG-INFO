@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: pyty_lang
+Version: 0.0.1
+Summary: Python language wrapper for static typing
+Project-URL: Homepage, https://github.com/RashingPro/TyPy/
+Project-URL: Issues, https://github.com/RashingPro/TyPy/issues
+Author-email: Rashing <contact@rashing.pro>
+License-Expression: GPL-3.0
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >3.9

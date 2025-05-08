@@ -1,0 +1,26 @@
+[project]
+name = "pyty_lang"
+version = "0.0.1"
+authors = [
+    { name="Rashing", email="contact@rashing.pro" }
+]
+description = "Python language wrapper for static typing"
+readme = "README.md"
+requires-python = ">3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+license = "GPL-3.0"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://github.com/RashingPro/TyPy/"
+Issues = "https://github.com/RashingPro/TyPy/issues"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pyty"]
