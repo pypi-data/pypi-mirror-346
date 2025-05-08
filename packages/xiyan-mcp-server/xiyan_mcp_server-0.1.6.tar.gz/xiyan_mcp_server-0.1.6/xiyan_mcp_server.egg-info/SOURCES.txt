@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+xiyan_mcp_server.egg-info/PKG-INFO
+xiyan_mcp_server.egg-info/SOURCES.txt
+xiyan_mcp_server.egg-info/dependency_links.txt
+xiyan_mcp_server.egg-info/entry_points.txt
+xiyan_mcp_server.egg-info/requires.txt
+xiyan_mcp_server.egg-info/top_level.txt
