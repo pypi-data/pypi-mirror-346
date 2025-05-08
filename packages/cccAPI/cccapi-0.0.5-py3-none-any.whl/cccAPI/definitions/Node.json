@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "default": ""
+      },
+      "network": {
+        "$ref": "./NetworkSettings.json",
+        "default": null
+      },
+      "image": {
+        "$ref": "./ImageSettings.json",
+        "default": null
+      },
+      "platform": {
+        "$ref": "./PlatformSettings.json",
+        "default": null
+      },
+      "management": {
+        "$ref": "./ManagementSettings.json",
+        "default": null
+      },
+      "primaryId": {
+        "type": "integer",
+        "default": null
+      },
+      "secondaryId": {
+        "type": "integer",
+        "default": null
+      },
+      "biosBootMode": {
+        "type": "string",
+        "default": ""
+      },
+      "iscsiRoot": {
+        "type": "string",
+        "default": ""
+      },
+      "features": {
+        "type": "object",
+        "default": {}
+      }
+    },
+    "required": []
+  }
