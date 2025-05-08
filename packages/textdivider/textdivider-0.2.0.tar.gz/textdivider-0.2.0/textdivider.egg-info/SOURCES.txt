@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+textdivider/__init__.py
+textdivider.egg-info/PKG-INFO
+textdivider.egg-info/SOURCES.txt
+textdivider.egg-info/dependency_links.txt
+textdivider.egg-info/top_level.txt
