@@ -1,0 +1,10 @@
+anywidget
+traitlets
+ipytree
+ipython<9,>=8.11
+ipywidgets
+pyiron_workflow<1,>=0.12.1
+
+[dev]
+watchfiles
+jupyterlab
