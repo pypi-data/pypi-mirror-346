@@ -1,0 +1,217 @@
+Metadata-Version: 2.4
+Name: easyopenchat
+Version: 0.3.0
+Summary: An easy, beginner-friendly chatbot SDK powered by OpenRouter
+Author-email: Sriram G <sriramkrish379@gmail.com>
+License: MIT
+Keywords: chatbot,openai,openrouter,gradio,api,bot
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.28.0
+Requires-Dist: jinja2>=3.1.0
+Requires-Dist: gradio>=4.44.1
+Requires-Dist: fastapi>=0.100.0
+Requires-Dist: uvicorn>=0.23.0
+Requires-Dist: rich>=13.0.0
+Provides-Extra: vector
+Requires-Dist: faiss-cpu>=1.7.0; extra == "vector"
+Requires-Dist: numpy>=1.21.0; extra == "vector"
+
+# EasyOpenChat
+
+**An easy, beginner-friendly Python SDK for building chatbots powered by OpenRouter.**
+Create, customize, and deploy your own chatbot using this simple package with minimal setup.
+
+
+## 🚀 Overview
+
+**EasyOpenChat** is designed to make chatbot development simple and accessible. With a minimal setup, you can create powerful conversational agents that support various LLMs through OpenRouter.
+
+---
+
+## ✨ Features
+
+* ✅ **Intuitive API** – Build chatbots with just a few lines of code.
+* 🔌 **OpenRouter Integration** – Seamlessly access multiple large language models.
+* 💾 **Persistent Memory** – JSON-based conversation history out of the box.
+* 🧠 **Vector Memory (optional)** – Semantic search powered by FAISS.
+* ⚙️ **Plugin System** – Extend capabilities with custom commands (e.g., `!time`, `!calc`).
+* 🔄 **Streaming Support** – Receive real-time responses from the model.
+* 🖥️ **Multiple Interfaces** – Use it via CLI, Gradio GUI, or FastAPI web API.
+* 🧩 **Prompt Templates** – Customize prompts with Jinja2 templating.
+* 🛡️ **Robust Error Handling** – Includes retry logic and fallback options.
+
+---
+
+## 📦 Installation
+
+Basic installation:
+
+```bash
+pip install easyopenchat
+```
+
+With vector memory support (FAISS):
+
+```bash
+pip install easyopenchat[vector]
+```
+
+---
+
+## ⚡ Quick Start
+
+### 🖥️ CLI Bot
+
+```python
+from easyopenchat import EasyChatBot
+
+bot = EasyChatBot(api_key="your-api-key")
+bot.run_cli()
+```
+
+### 🌐 GUI Bot (Gradio)
+
+```python
+from easyopenchat import EasyChatBot
+
+bot = EasyChatBot(api_key="your-api-key")
+bot.run_gui()
+```
+
+### 🌍 Web API (FastAPI)
+
+Start the API server:
+
+```bash
+uvicorn easyopenchat.web:app --host 0.0.0.0 --port 8000
+```
+
+Configure the API and send a message:
+
+```bash
+curl -X POST "http://localhost:8000/configure" -d '{"api_key": "your-api-key"}'
+curl -X POST "http://localhost:8000/chat" -d '{"message": "Hello!"}'
+```
+
+---
+
+## 🧪 Advanced Usage
+
+```python
+from easyopenchat import EasyChatBot
+
+bot = EasyChatBot(
+    api_key="your-api-key",
+    model="openai/gpt-4",
+    system_prompt="code_assistant",
+    use_vector_memory=True,
+    max_history=200
+)
+
+# Stream responses
+for chunk in bot.ask("Write a Python function", stream=True):
+    print(chunk, end="")
+
+# Reset memory
+bot.reset_memory()
+```
+
+---
+
+## 🔌 Plugins
+
+You can add custom commands by placing plugin files in the `easyopenchat/plugins` directory.
+
+Example – `my_plugin.py`:
+
+```python
+def plugin_mycommand(args):
+    return f"You ran mycommand with args: {args}"
+```
+
+Use it in chat like:
+
+```
+!mycommand arg1 arg2
+```
+
+---
+
+## 📝 Prompt Templates
+
+Create reusable or dynamic prompts with Jinja2 templates.
+
+Example – `my_template.j2`:
+
+```
+You are a {{ role }} AI. Respond in a {{ style }} tone.
+```
+
+Initialize with:
+
+```python
+bot = EasyChatBot(api_key="your-api-key", system_prompt="my_template")
+```
+
+---
+
+## 📋 Requirements
+
+* Python >= 3.8
+* Dependencies:
+
+  * `requests`, `jinja2`, `gradio`, `fastapi`, `uvicorn`, `rich`
+  * Optional: `faiss-cpu` (for vector memory)
+
+---
+
+## 🛠️ Development
+
+### Local Development
+
+To make changes locally and test them, install the package in "editable" mode:
+
+```bash
+pip install -e .
+```
+
+This allows you to make changes without reinstalling every time.
+
+### Testing
+
+We use **pytest** for testing. To run the tests, simply use:
+
+```bash
+pytest
+```
+
+---
+
+## 🧑‍🤝‍🧑 Contributing
+
+I welcome contributions! If you find any bugs or want to suggest new features, feel free to open an issue or submit a pull request.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+Created by **Sriram G**
+You can reach me at: [sriramkrish379@gmail.com](mailto:sriramkrish379@gmail.com)
+
+---
+
+### 📍 Notes
+
+* The library is powered by **OpenRouter API** for chatbot generation.
+* Make sure to replace the `"your-openrouter-key"` with your actual OpenRouter API key.
+* Use Gradio to quickly launch a UI and FastAPI to deploy your chatbot as a service.
+* **Plugin support** is flexible, and you can expand it for custom integrations.
+
+---
