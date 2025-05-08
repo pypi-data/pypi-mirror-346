@@ -1,0 +1,51 @@
+cff-version: 2.2.0
+message: "If you use this software, please cite the software itself, as well as the paper listed in the preferred-citation field. osl-ephys is based on MNE-Python and the Source Recon module on FSL/FreeSurfer. Please cite these packages appropriately."
+title: "osl-ephys"
+version: 2.2.0
+date-released: "2025-05-08"
+commit: 2201385db8ed1f238b36361b6ea864d342c2293f
+doi: 10.5281/zenodo.6875060
+keywords:
+  - MEG
+  - magnetoencephalography
+  - EEG
+  - electroencephalography
+  - electrophysiology
+  - neuroimaging
+  - data analysis
+authors:
+  - family-names: Quinn
+    given-names: Andrew J.
+    orcid: https://orcid.org/0000-0003-2267-9897
+  - family-names: van Es
+    given-names: Mats W.J.
+    orcid: https://orcid.org/0000-0002-7133-509X
+  - family-names: Gohil
+    given-names: Chetan
+    orcid: https://orcid.org/0000-0002-0888-1207
+  - family-names: Woolrich
+    given-names: Mark W.
+    orcid: https://orcid.org/0000-0001-8460-8854
+preferred-citation:
+  title: "osl-ephys: a Python toolbox for the analysis of electrophysiology data"
+  journal: "Frontiers in Neuroscience"
+  type: article
+  year: 2025
+  volume: 19
+  issue: 
+  start: 1522675
+  end: 
+  doi: https://doi.org/10.3389/fnins.2025.1522675
+  authors:
+  - family-names: van Es
+    given-names: Mats W.J.
+    orcid: https://orcid.org/0000-0002-7133-509X
+  - family-names: Gohil
+    given-names: Chetan
+    orcid: https://orcid.org/0000-0002-0888-1207
+  - family-names: Quinn
+    given-names: Andrew J.
+    orcid: https://orcid.org/0000-0003-2267-9897
+  - family-names: Woolrich
+    given-names: Mark W.
+    orcid: https://orcid.org/0000-0001-8460-8854
