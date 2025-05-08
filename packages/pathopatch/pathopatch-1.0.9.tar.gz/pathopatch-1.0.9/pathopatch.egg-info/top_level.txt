@@ -1,0 +1,12 @@
+debug
+debug-database-annotation
+debug-database-hannah
+debug-wsidicomizer
+dist
+docs
+examples
+idc-data
+local_debug
+pathopatch
+test_database
+test_output
