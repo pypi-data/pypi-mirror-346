@@ -1,0 +1,15 @@
+CHANGELOG.txt
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+django_remote_jsonschema_forms/__init__.py
+django_remote_jsonschema_forms/fields.py
+django_remote_jsonschema_forms/forms.py
+django_remote_jsonschema_forms/utils.py
+django_remote_jsonschema_forms/widgets.py
+django_remote_jsonschema_forms.egg-info/PKG-INFO
+django_remote_jsonschema_forms.egg-info/SOURCES.txt
+django_remote_jsonschema_forms.egg-info/dependency_links.txt
+django_remote_jsonschema_forms.egg-info/not-zip-safe
+django_remote_jsonschema_forms.egg-info/top_level.txt
