@@ -1,0 +1,8 @@
+[console_scripts]
+calibpipe-calculate-macobac = calibpipe.tools.macobac_calculator:main
+calibpipe-create-molecular-atmospheric-model = calibpipe.tools.molecular_atmospheric_model_producer:main
+calibpipe-create-molecular-density-profile = calibpipe.tools.contemporary_mdp_producer:main
+calibpipe-init-db = calibpipe.tools.init_db:main
+calibpipe-select-reference-atmospheric-model = calibpipe.tools.reference_atmospheric_model_selector:main
+calibpipe-upload-atmospheric-model-data = calibpipe.tools.atmospheric_model_db_loader:main
+calibpipe-upload-observatory-data = calibpipe.tools.observatory_data_db_loader:main
