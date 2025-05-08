@@ -1,0 +1,15 @@
+querypipz/__init__.py,sha256=8nohiDoxXv_cV_X2b6xjOLaaL1igrcsfLVfxsye74CI,50
+querypipz/build.py,sha256=DXxE0BFnW3oxWuNN8tMeGm5E-ga4dYqh-MjcLsOkIMg,878
+querypipz/query.py,sha256=S4XUv9BT177PQM9E1pScuPOJMCk0jg3fwybDTN4kFYA,759
+querypipz/serve.py,sha256=4w_nzC1zBjvF4CZuJVn1s5YdT56qPUf9cinz75foQC8,6945
+querypipz/utils.py,sha256=Xx_ASq5GjiwFVbYTDy4d5nR8LL2AmBESxCVlI4Ayuf0,799
+querypipz/queryengine/__init__.py,sha256=ARe1wHhGtRFwa6kuv1-p8dRiewdxqg_DW3JrHoBnS0I,41
+querypipz/queryengine/factory.py,sha256=IxUIL2RBX6ucXLYAGJfUwRhKEU_yY2XQl92JeIrf-1I,1584
+querypipz/queryengine/querys.py,sha256=PhOjbWUMPGHogI1axPqw4wky742_rp0evNoPbw-Sxh8,3173
+querypipz/reader/__init__.py,sha256=z32rTG0K4Ri90bp8UHUJHlhSXc5JnCx2VaDhcRZbWwU,42
+querypipz/reader/factory.py,sha256=Zy6PkGTlcvcBoAAodtRIEpgM-A-vDvmyDE82JRZ49PA,741
+querypipz/reader/reader.py,sha256=5UVxvDQF3bfFsoVZaELvFzC1X6GeYcB6EWOOAsxY27Q,1401
+querypipz-0.1.4.dist-info/METADATA,sha256=b_HzAlluzN7sc_j3eYXmvbsrmcwNon4Pg05QBcTbcRU,221
+querypipz-0.1.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+querypipz-0.1.4.dist-info/top_level.txt,sha256=uBW2A_2v92ud-zAkp7wuCn1fVWowvBukN_vJrCfv8nU,10
+querypipz-0.1.4.dist-info/RECORD,,
