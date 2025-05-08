@@ -1,0 +1,9 @@
+gis_mcp/__init__.py,sha256=t2bYw3V2tKG4UOCPQCTY8hYoA7mvjq75IqyV5ZT8BOc,100
+gis_mcp/main.py,sha256=IEWLSKimtiejQ6XacPMuFL-P7onz78xeXz2y374K0rg,27451
+gis_mcp/tools/pyproj_ops.py,sha256=oy1SrnVa5eXGPqKD4YWUfQelGITJfoHaatKYxQ3kiSE,5002
+gis_mcp/tools/shapely_ops.py,sha256=caBjvphq3RIMWiDQfZBv0HrdvKfXqxzH3VhrCsFiFnk,5748
+gis_mcp-0.1.0.dist-info/METADATA,sha256=a0rjrEjeT1kaO4aMtro6yAdm-M-g3yT2xvb_GpdV2LI,13498
+gis_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gis_mcp-0.1.0.dist-info/entry_points.txt,sha256=gGSyRQm2xTAg2Pq7FQ722veiAcbwASmrDjPACBb0Tdc,46
+gis_mcp-0.1.0.dist-info/licenses/LICENSE,sha256=Tfjh8Fba4yRQF8qKpjXo0cuINrZcvTCAkLIiTnhJ8oI,1097
+gis_mcp-0.1.0.dist-info/RECORD,,
