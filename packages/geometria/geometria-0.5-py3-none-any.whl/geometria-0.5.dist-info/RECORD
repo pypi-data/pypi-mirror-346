@@ -1,0 +1,10 @@
+geometria/__init__.py,sha256=Omafwh-CX8dFgzvDPnsa5zi9F-13Jlfo9MCaghFpU0k,244
+geometria/retangulo.py,sha256=WQ6Dsj4jXhjKYZj81Ck6PCooQMV-YVRFBGVHrPo_YGs,303
+geometria/triangulo.py,sha256=NLdI_HQtB4ij-3TBV0wTxN1mzmpBq2bzOO4CJiDotoE,1129
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_retangulo.py,sha256=Nz3dXA7GUZ2x2iBue86A1s0aI_Jl12sKtY19gpKjSgc,811
+tests/test_triangulo.py,sha256=VCcKDTdoYTtI5G79-1axh70RoY_xq5dSnklQVDWnUSw,1060
+geometria-0.5.dist-info/METADATA,sha256=QtoTpsgRv-p4hL4l8XQi8qB-JCYSfaKk9hkcVssUO3M,2564
+geometria-0.5.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+geometria-0.5.dist-info/top_level.txt,sha256=Lk1TjR5Hv-faZ_o_i19FO91eqM-6dGo-DZKzt1M0iW8,16
+geometria-0.5.dist-info/RECORD,,
