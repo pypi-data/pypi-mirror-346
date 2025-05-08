@@ -1,0 +1,5 @@
+Metadata-Version: 2.2
+Name: test-lib-nithi
+Version: 1.5
+Requires-Dist: flask
+Dynamic: requires-dist
