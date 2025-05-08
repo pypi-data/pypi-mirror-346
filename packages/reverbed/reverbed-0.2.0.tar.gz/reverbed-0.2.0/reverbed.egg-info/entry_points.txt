@@ -1,0 +1,2 @@
+[console_scripts]
+reverbed = reverbed.cli:main
