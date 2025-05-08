@@ -1,0 +1,14 @@
+odoo_runbot/__about__.py,sha256=xi681GE3mSWwMKAEwS6lgoAXrU7rtyCkJZV00vD2aTY,101
+odoo_runbot/__init__.py,sha256=s5dj0O-TFTxPz1xsMB_SCErkwZgy-C71PSK_5xwzh-4,581
+odoo_runbot/_odoo_internal.py,sha256=00dmh6SeMCB3GJVtt6mOUqyOLuyrNCGYuNmueRaz0jw,6049
+odoo_runbot/cli.py,sha256=WI-we0iyW2L-rNufKuoOpuFnlCvHijo0UOmSojbSZ9k,10780
+odoo_runbot/runbot_env.py,sha256=UkO-Fb6WS9vY0ToUPhScpdQVW1jLAKoX3IaRIRk0FWo,15695
+odoo_runbot/runbot_init.py,sha256=WD-KB9Vej05J292ITMOuyYvFtP5Vqb3EbZyEc4xR-Wo,4671
+odoo_runbot/runbot_init_branch_resolver.py,sha256=Owi5gOQ4hxjusWbyfwLJWz2cI0qVlT8c11C9mFfkM5c,6806
+odoo_runbot/runbot_run.py,sha256=lonRxpERDLbBLu2dPuyYvSHTHa-dLecy243lZdqFD7g,6909
+odoo_runbot/runbot_run_logging.py,sha256=MJOd1L1GVvNEupGHe4bjSMNnGqNKSNN03cb1wCbYqZM,5735
+odoo_runbot/runbot_run_test.py,sha256=6b7XVLtbZu-ruHtxxT0dHRw3ZhbrnaXABEhWGSZVvS8,5616
+odoo_runbot-1.3.8.dist-info/METADATA,sha256=r6JKFGiQj7C1Qkt5bjC9_XNh3XUfQncLDJzT66fxBu8,1465
+odoo_runbot-1.3.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+odoo_runbot-1.3.8.dist-info/entry_points.txt,sha256=R4HaZpDdjQMC_nKltpK5uRKT8YgG1fsDmxaDn3RCuUs,52
+odoo_runbot-1.3.8.dist-info/RECORD,,
