@@ -1,0 +1,97 @@
+Metadata-Version: 2.4
+Name: wecom-lite
+Version: 0.1.1
+Summary: 轻量级企业微信消息发送库
+Author-email: WANG Qinglin <chd_wql@qq.com>
+License: MIT
+Project-URL: Homepage, https://github.com/chdwql/wecom-lite
+Project-URL: Bug Tracker, https://github.com/chdwql/wecom-lite/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: python-dotenv>=0.15.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: black>=21.5b2; extra == "dev"
+Requires-Dist: isort>=5.9.1; extra == "dev"
+Dynamic: license-file
+Dynamic: requires-python
+
+# wecom-lite
+
+轻量级企业微信消息发送库，支持发送文本、图片、文件、文本卡片和Markdown等消息。
+
+## 安装
+
+```
+pip install wecom-lite
+```
+
+## 使用示例
+
+```python
+from wecom_lite import WeChat
+
+# 首先创建 .env 文件配置您的企业微信信息
+# 参见 .env.example
+
+wechat = WeChat()
+wechat.send_text("测试消息")
+```
+
+## 配置
+
+创建 `.env` 文件，包含以下内容：
+
+```
+WECOM_CORP_ID = '您的企业ID'
+WECOM_AGENT_ID = '应用ID'
+WECOM_SECRET = '应用Secret'
+WECOM_TOUSER = '接收消息的用户ID'
+```
+
+## 功能特点
+
+- 支持多种消息类型：
+  - 文本消息
+  - 图片消息
+  - 文件消息
+  - 文本卡片
+  - Markdown
+- 自动处理访问令牌
+- 简单易用的API
+- 内置日志记录功能，记录所有发送的消息及返回结果
+
+## 日志功能
+
+wecom-lite 自动记录所有发送消息的详情和返回结果。日志文件存储在项目根目录的 `logs` 文件夹中：
+
+- `wecom.log`: 包含基本的发送记录
+- `wecom_details_YYYYMMDD.log`: 包含每天详细的发送记录，包括完整的消息内容和返回结果
+
+示例日志内容：
+```
+2023-05-08 10:58:25,123 - INFO - 发送text消息成功: {"timestamp": "2023-05-08 10:58:25", "msg_type": "text", "content": "测试消息", "result": {"errcode": 0, "errmsg": "ok"}, "touser": "UserID", "agent_id": 1000001}
+```
+
+## 开发
+
+### 安装开发依赖
+
+```bash
+pip install -e ".[dev]"
+```
+
+### 运行测试
+
+```bash
+pytest
+```
+
+## 许可
+
+MIT
