@@ -1,0 +1,50 @@
+[project]
+name = "wavetools"
+authors = [
+  { name="Optical Instrument Group", email="wavedev@finisar.com" },
+]
+description = "Python drivers for Coherent optical instruments. Currently supported devices: WaveAnalyzer (1500S, 200A, 400A, 1500B);(Not Implemented) WaveShaper ;(Not Implemented) WaveMaker "
+requires-python = ">=3.8"
+
+readme="README.md"
+
+dynamic = ["version"]
+
+dependencies=[
+  "numpy",
+  "httpx",
+  "pydantic"
+]
+
+[project.optional-dependencies]
+gui=[
+"PyQt5",
+"PyQtGraph",
+"scipy"
+]
+test=[
+  "pytest"
+]
+build=[
+  "twine",
+  "sphinx",
+  "markdown",
+  "myst-parser",
+  "sphinx-design",
+  "sphinx-autoapi",
+  "autoapi"
+]
+
+[project.urls]
+HomePage="https://www.coherent.com/networking/optical-instrumentation"
+Documentation="https://oigfinisar.github.io/wavetools_docs/"
+
+[build-system]
+requires = ["hatchling", "versioningit"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "versioningit"
+
+[tool.versioningit]
+default-tag="0.0.0+no_valid_tag"
