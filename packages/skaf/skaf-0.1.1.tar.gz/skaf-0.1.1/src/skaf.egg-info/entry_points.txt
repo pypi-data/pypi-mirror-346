@@ -1,0 +1,5 @@
+[console_scripts]
+skaf = skaf.cli:main
+
+[skaf.template]
+none = skaf.template_classes._none:none_template
