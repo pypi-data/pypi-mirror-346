@@ -1,0 +1,12 @@
+[project]
+name = "textdivider"
+version = "0.1.0"
+description = "Divide texto largo en fragmentos sin cortar palabras"
+authors = [{ name = "Jean Caiza", email = "caiza58@gmail.com" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.7"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

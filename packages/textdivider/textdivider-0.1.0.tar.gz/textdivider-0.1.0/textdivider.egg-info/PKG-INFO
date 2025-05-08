@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: textdivider
+Version: 0.1.0
+Summary: Divide texto largo en fragmentos sin cortar palabras
+Author-email: Jean Caiza <caiza58@gmail.com>
+License-Expression: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# textdivider
+
+Divide un texto largo en fragmentos de tamaño fijo sin cortar palabras. Ideal para redes sociales o interfaces con límites de caracteres.
+
+## Instalación
+
+```bash
+pip install textdivider
+```
