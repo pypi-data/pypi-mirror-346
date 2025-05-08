@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+pyproject.toml
+caliber.egg-info/PKG-INFO
+caliber.egg-info/SOURCES.txt
+caliber.egg-info/dependency_links.txt
+caliber.egg-info/requires.txt
+caliber.egg-info/top_level.txt
