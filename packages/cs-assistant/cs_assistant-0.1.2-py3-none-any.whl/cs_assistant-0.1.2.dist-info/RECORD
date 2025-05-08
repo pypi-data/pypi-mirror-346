@@ -1,0 +1,10 @@
+api_clients.py,sha256=tWZaArCfxgL-e4rLBgBArXDqW6CNaYSqiAStzWu-xEA,5583
+config.py,sha256=A-qUymNMDtMCNq2YkFcVdQQ4GpYMo8lpRr7WaT7VAWo,9669
+issue_solver.py,sha256=GSrXOYskyEuJhsnuaaBAXF-LevmzD1agCnyRalCBBHo,27404
+main.py,sha256=4CA5v_gZCuqfLxkEbK5vcSEgBEUGYNmcKEunvJ0XlE4,9362
+cs_assistant-0.1.2.dist-info/licenses/LICENSE,sha256=3NJQTL6bvOTz5IkI01Dks-kSsubfPPPW-JmCTLLexLU,1073
+cs_assistant-0.1.2.dist-info/METADATA,sha256=2R4fvokN9Zk6ISN6vIz4w24g1n6TVhV9DTcjgiW1U30,8084
+cs_assistant-0.1.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+cs_assistant-0.1.2.dist-info/entry_points.txt,sha256=5QIDFwbad8_QiTYE4rAl6qF4DmUvEtLbmxTk-AhzDSE,43
+cs_assistant-0.1.2.dist-info/top_level.txt,sha256=nunkE6M2-JFF7advyIbeztqvlEZsabzanjT53D4ss9A,37
+cs_assistant-0.1.2.dist-info/RECORD,,
