@@ -1,0 +1,10 @@
+LICENSE
+README.md
+disk_tree.py
+setup.py
+disk_tree_cli.egg-info/PKG-INFO
+disk_tree_cli.egg-info/SOURCES.txt
+disk_tree_cli.egg-info/dependency_links.txt
+disk_tree_cli.egg-info/entry_points.txt
+disk_tree_cli.egg-info/requires.txt
+disk_tree_cli.egg-info/top_level.txt
