@@ -1,0 +1,127 @@
+// Updated tsetsen_tts.proto with streaming support
+syntax = "proto3";
+
+package tsetsen.api.v1;
+
+// Service definition for Tsetsen TTS API
+service TsetsenTTS {
+  // List available voices
+  rpc ListVoices(ListVoicesRequest) returns (ListVoicesResponse) {}
+  
+  // Generate speech from text
+  rpc GenerateSpeech(GenerateSpeechRequest) returns (GenerateSpeechResponse) {}
+  
+  // Check the status of a TTS request
+  rpc CheckStatus(CheckStatusRequest) returns (CheckStatusResponse) {}
+  
+  // Get user balance information
+  rpc GetUserBalance(GetUserBalanceRequest) returns (GetUserBalanceResponse) {}
+  
+  // Streaming speech synthesis
+  rpc StreamSpeech(StreamSpeechRequest) returns (stream StreamSpeechResponse) {}
+}
+
+// Request to list available voices
+message ListVoicesRequest {
+  string api_key = 1;  // API key for authentication
+  string version = 2;  // Voice model version (beta-v0.1, beta-v0.2)
+  bool skip_cache = 3; // Whether to skip cache
+}
+
+// Voice object representing a TTS voice
+message Voice {
+  string id = 1;
+  string name = 2;
+  enum Gender {
+    GENDER_UNSPECIFIED = 0;
+    MALE = 1;
+    FEMALE = 2;
+  }
+  Gender gender = 3;
+  string language = 4;
+  string preview_url = 5;
+}
+
+// Response containing a list of voices
+message ListVoicesResponse {
+  repeated Voice voices = 1;
+}
+
+// Request to generate speech from text
+message GenerateSpeechRequest {
+  string api_key = 1;     // API key for authentication
+  string text = 2;        // Text to synthesize
+  string voice_id = 3;    // Voice ID to use
+  float speed = 4;        // Speech speed multiplier
+  string version = 5;     // Voice model version (beta-v0.1, beta-v0.2)
+}
+
+// Response from speech generation request
+message GenerateSpeechResponse {
+  string request_id = 1;     // ID to track the request
+  enum Status {
+    STATUS_UNSPECIFIED = 0;
+    PENDING = 1;
+    PROCESSING = 2;
+    COMPLETED = 3;
+    FAILED = 4;
+  }
+  Status status = 2;        // Current status
+}
+
+// Request to check the status of a TTS request
+message CheckStatusRequest {
+  string api_key = 1;     // API key for authentication
+  string request_id = 2;  // ID of the request to check
+}
+
+// Response for status check
+message CheckStatusResponse {
+  string request_id = 1;
+  enum Status {
+    STATUS_UNSPECIFIED = 0;
+    PENDING = 1;
+    PROCESSING = 2;
+    COMPLETED = 3;
+    FAILED = 4;
+  }
+  Status status = 2;
+  string audio_url = 3;     // URL to the generated audio (if completed)
+  string error_message = 4; // Error message (if failed)
+  // Metrics about the request
+  message Metrics {
+    int32 queue_time = 1;        // Time in queue (ms)
+    int32 processing_time = 2;   // Processing time (ms)
+    int32 total_time = 3;        // Total time from request to completion (ms)
+    float audio_length = 4;      // Length of audio in seconds
+    int32 credits_used = 5;      // Credits charged
+    int32 character_count = 6;   // Number of characters processed
+  }
+  Metrics metrics = 5;
+}
+
+// Request to get user balance
+message GetUserBalanceRequest {
+  string api_key = 1;  // API key for authentication
+}
+
+// Response with user balance information
+message GetUserBalanceResponse {
+  int32 credits = 1;  // Current credit balance
+}
+
+// Request for streaming speech synthesis
+message StreamSpeechRequest {
+  string api_key = 1;     // API key for authentication
+  string text = 2;        // Text to synthesize
+  string voice_id = 3;    // Voice ID to use
+  float speed = 4;        // Speech speed multiplier
+  string version = 5;     // Voice model version (must be "beta-v0.2" for streaming)
+}
+
+// Response chunk for streaming speech
+message StreamSpeechResponse {
+  bytes audio_chunk = 1;    // Binary audio data chunk
+  bool is_final = 2;        // Indicates if this is the final chunk
+  string error_message = 3; // Error message if any
+}

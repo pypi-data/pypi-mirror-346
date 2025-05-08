@@ -1,0 +1,537 @@
+# TsetsenAI - Mongolian TTS Python SDK
+
+A powerful, user-friendly Python client for the Tsetsen Mongolian Text-to-Speech API, enabling developers to easily integrate high-quality Mongolian language text-to-speech capabilities into their applications.
+
+*Монгол хэл дээрх гарын авлага доор байгаа болно.*
+
+## Features
+
+- **Mongolian Language Support**: High-quality Mongolian text-to-speech synthesis
+- **Simple API**: Clean, intuitive interfaces for all API operations
+- **Strongly Typed**: Type annotations throughout for better IDE support
+- **Robust Error Handling**: Detailed error messages and proper exception hierarchy
+- **Automatic Retries**: Built-in retry mechanism for transient failures
+- **Async Support**: Asynchronous methods for concurrent operations
+- **Comprehensive Documentation**: Full API documentation with examples
+
+## Installation
+
+```bash
+pip install tsetsen
+```
+
+### Prerequisites
+
+- Python 3.8 or later
+- A Tsetsen API key (sign up at [developer.tsetsen.ai](https://developer.tsetsen.ai))
+
+## Quick Start
+
+### Initialize the Client
+
+```python
+from tsetsen import Client
+
+# Initialize with API key
+client = Client(api_key="your-api-key")
+
+# Or set the TSETSEN_API_KEY environment variable and initialize without arguments
+# client = Client()
+```
+
+### List Available Voices
+
+```python
+# Get all available voices (specify version beta-v0.1 or beta-v0.2)
+voices = client.list_voices(version="beta-v0.1")
+
+# Print voice details
+for voice in voices.voices:
+    print(f"ID: {voice.id}, Name: {voice.name}, Gender: {voice.gender.name}")
+```
+
+### Generate Speech
+
+```python
+# Request speech generation with Mongolian text
+response = client.generate_speech(
+    text="Сайн байна уу? Энэ бол Монгол хэл дээрх жишээ текст юм.",
+    voice_id="voice-id",  # Use an ID from list_voices
+    version="beta-v0.1"   # Specify version beta-v0.1 or beta-v0.2
+)
+
+# Get the request ID for status checking
+request_id = response.request_id
+print(f"Request ID: {request_id}")
+```
+
+### Check Status and Get Audio URL
+
+```python
+# Check status immediately
+status = client.check_status(request_id=request_id)
+print(f"Status: {status.status.name}")
+
+# Or wait for completion
+final_status = client.wait_for_completion(
+    request_id=request_id,
+    timeout=60,  # Optional timeout in seconds
+    poll_interval=1.0  # Time between status checks in seconds
+)
+
+if final_status.status.name == "COMPLETED":
+    print(f"Audio URL: {final_status.audio_url}")
+else:
+    print(f"Error: {final_status.error_message}")
+
+# View metrics
+if final_status.metrics:
+    print(f"Audio length: {final_status.metrics.audio_length} seconds")
+    print(f"Credits used: {final_status.metrics.credits_used}")
+```
+
+### Check User Balance
+
+```python
+# Get user credit balance
+balance = client.get_user_balance()
+print(f"Available credits: {balance.credits}")
+```
+
+### Proper Resource Cleanup
+
+```python
+# Using a context manager
+with Client(api_key="your-api-key") as client:
+    voices = client.list_voices(version="beta-v0.1")
+    # Use client...
+
+# Or manually close
+client = Client(api_key="your-api-key")
+try:
+    voices = client.list_voices(version="beta-v0.1")
+    # Use client...
+finally:
+    client.close()
+```
+
+## Streaming TTS Support
+
+The SDK now supports real-time streaming of audio as it's being generated, which is useful for applications requiring low latency.
+
+**Note: Streaming Support Limitations**
+- Only works with `beta-v0.2` model voices
+- Limited to 5 minutes of audio per request
+- Rate limited to 1 request per minute for free tier users
+- Audio output is 24,000Hz, 16-bit, mono
+
+### Basic Streaming Example
+
+```python
+from tsetsen import Client
+
+# Initialize client
+client = Client(api_key="your-api-key")
+
+# Option 1: Stream and process audio chunks iteratively
+for audio_chunk in client.stream_speech(
+    text="Сайн байна уу? Энэ бол Монгол хэл дээрх жишээ текст юм.",
+    voice_id="voice-id",  # Use a voice ID from list_voices
+    speed=1.0,
+    version="beta-v0.2"
+):
+    # Process each audio chunk as it arrives
+    # For example, you could send it to an audio device for real-time playback
+    process_audio(audio_chunk)  # Your custom processing function
+```
+
+### Stream to File Example
+
+```python
+from tsetsen import Client
+
+# Initialize client
+client = Client(api_key="your-api-key")
+
+# Save streaming audio directly to a file
+client.stream_speech_to_file(
+    text="Сайн байна уу? Энэ бол Монгол хэл дээрх жишээ текст юм.",
+    voice_id="voice-id",  # Use a voice ID from list_voices
+    output_file="output.wav",
+    speed=1.0,
+    progress_callback=lambda bytes_received, is_complete: print(f"Received {bytes_received} bytes")
+)
+```
+
+### Advanced Streaming with Callback
+
+```python
+from tsetsen import Client
+
+# Initialize client
+client = Client(api_key="your-api-key")
+
+# Define a callback function to process each chunk
+def handle_chunk(audio_chunk, is_final, error_message):
+    if error_message:
+        print(f"Error: {error_message}")
+        return
+        
+    # Process the audio chunk
+    print(f"Received chunk of {len(audio_chunk)} bytes")
+    
+    if is_final:
+        print("Received final chunk, stream complete")
+
+# Stream with callback
+for _ in client.stream_speech(
+    text="This demonstrates using a callback function with streaming.",
+    voice_id="voice-id",  # Use a voice ID from list_voices
+    speed=1.0,
+    callback=handle_chunk
+):
+    pass  # Processing is done in the callback
+```
+
+
+## Error Handling
+
+The SDK uses a rich exception hierarchy for proper error handling:
+
+```python
+from tsetsen import Client, ResourceNotFoundError, AuthenticationError
+
+client = Client(api_key="your-api-key")
+
+try:
+    status = client.check_status(request_id="non-existent-id")
+except ResourceNotFoundError as e:
+    print(f"Request not found: {e}")
+except AuthenticationError as e:
+    print(f"Authentication error: {e}")
+except Exception as e:
+    print(f"Other error: {e}")
+```
+
+## Advanced Usage
+
+### Custom Timeouts and Retries
+
+```python
+client = Client(
+    api_key="your-api-key",
+    timeout=60.0,  # Timeout in seconds
+    secure=True,   # Use secure channel (TLS)
+    max_retries=5  # Maximum number of retries
+)
+```
+
+### Testing Your Setup
+
+Here's a simple test script to verify your setup:
+
+```python
+from tsetsen import Client
+
+def test_connection():
+    # Initialize client
+    client = Client(api_key="your-api-key")
+    
+    try:
+        # Test voice listing
+        voices = client.list_voices(version="beta-v0.1")
+        print(f"Successfully connected! Found {len(voices.voices)} voices.")
+        
+        # Test balance check
+        balance = client.get_user_balance()
+        print(f"Your balance: {balance.credits} credits")
+        
+        return True
+    except Exception as e:
+        print(f"Test failed: {e}")
+        return False
+    finally:
+        client.close()
+
+if __name__ == "__main__":
+    test_connection()
+```
+
+### Environment Variables
+
+You can set this environment variable for configuration:
+
+- `TSETSEN_API_KEY`: Your API key
+
+## Terms of Use
+
+This SDK is provided for use with the Tsetsen AI text-to-speech service according to the terms and conditions specified in your service agreement. All rights reserved.
+
+---
+
+# TsetsenAI - Монгол Хэлний TTS Python SDK
+
+Цэцэн Монгол хэлний текст уншуулах API-д зориулсан хэрэглэхэд хялбар Python клиент бөгөөд хөгжүүлэгчид өөрсдийн аппликейшнд өндөр чанартай Монгол хэлний текст-аудио хөрвүүлэх боломжийг хялбархан холбох боломжийг олгоно.
+
+## Онцлогууд
+
+- **Монгол хэлний дэмжлэг**: Өндөр чанартай Монгол хэлний текст-аудио хөрвүүлэлт
+- **Энгийн API**: Бүх API үйлдлүүдэд зориулсан цэвэр, ойлгомжтой интерфейсүүд
+- **Хүчтэй төрөлжүүлэлт**: IDE дэмжлэгийг сайжруулахын тулд бүх кодод төрлийн тодорхойлолтууд
+- **Найдвартай алдааны удирдлага**: Дэлгэрэнгүй алдааны мессежүүд ба зөв бүтэцтэй алдааны ангилал
+- **Автомат дахин оролдлогууд**: Түр зуурын алдаануудад зориулсан дахин оролдох механизм
+- **Асинхрон дэмжлэг**: Зэрэгцээ үйлдлүүдэд зориулсан асинхрон методууд
+- **Иж бүрэн баримтжуулалт**: Жишээнүүдтэй бүрэн API баримтжуулалт
+
+## Суулгах
+
+```bash
+pip install tsetsen
+```
+
+### Шаардлагууд
+
+- Python 3.8 буюу түүнээс дээш
+- Цэцэн API түлхүүр ([developer.tsetsen.ai](https://developer.tsetsen.ai) дээр бүртгүүлнэ)
+
+## Эхлэх
+
+### Клиентийг эхлүүлэх
+
+```python
+from tsetsen import Client
+
+# API түлхүүрээр эхлүүлэх
+client = Client(api_key="таны-api-түлхүүр")
+
+# Эсвэл TSETSEN_API_KEY орчны хувьсагчийг тохируулаад аргументгүйгээр эхлүүлэх
+# client = Client()
+```
+
+### Байгаа хоолойнуудыг харах
+
+```python
+# Бүх байгаа хоолойнуудыг авах (beta-v0.1 эсвэл beta-v0.2 хувилбарыг зааж өгөх)
+voices = client.list_voices(version="beta-v0.1")
+
+# Хоолойн дэлгэрэнгүй мэдээллийг харах
+for voice in voices.voices:
+    print(f"ID: {voice.id}, Нэр: {voice.name}, Хүйс: {voice.gender.name}")
+```
+
+### Яриа хөрвүүлэх
+
+```python
+# Монгол хэл дээрх яриа үүсгэх хүсэлт
+response = client.generate_speech(
+    text="Сайн байна уу? Энэ бол Монгол хэл дээрх жишээ текст юм.",
+    voice_id="хоолой-id",  # list_voices-оос авсан ID ашиглах
+    version="beta-v0.1"     # beta-v0.1 эсвэл beta-v0.2 хувилбарыг заах
+)
+
+# Статус шалгахад зориулж хүсэлтийн ID-г авах
+request_id = response.request_id
+print(f"Хүсэлтийн ID: {request_id}")
+```
+
+### Статус шалгаж аудио URL авах
+
+```python
+# Статусыг шууд шалгах
+status = client.check_status(request_id=request_id)
+print(f"Статус: {status.status.name}")
+
+# Эсвэл дуусахыг хүлээх
+final_status = client.wait_for_completion(
+    request_id=request_id,
+    timeout=60,  # Хүлээх хугацаа (секундээр)
+    poll_interval=1.0  # Статус шалгах хоорондын хугацаа (секундээр)
+)
+
+if final_status.status.name == "COMPLETED":
+    print(f"Аудио URL: {final_status.audio_url}")
+else:
+    print(f"Алдаа: {final_status.error_message}")
+
+# Метрик үзэх
+if final_status.metrics:
+    print(f"Аудионы урт: {final_status.metrics.audio_length} секунд")
+    print(f"Ашигласан кредит: {final_status.metrics.credits_used}")
+```
+
+### Хэрэглэгчийн балансыг шалгах
+
+```python
+# Хэрэглэгчийн кредит үлдэгдлийг шалгах
+balance = client.get_user_balance()
+print(f"Үлдэгдэл кредит: {balance.credits}")
+```
+
+### Дуусгах
+
+```python
+# Context менежер ашиглах
+with Client(api_key="таны-api-түлхүүр") as client:
+    voices = client.list_voices(version="beta-v0.1")
+    # Клиент ашиглах...
+
+# Эсвэл өөрөө хаах
+client = Client(api_key="таны-api-түлхүүр")
+try:
+    voices = client.list_voices(version="beta-v0.1")
+    # Клиент ашиглах...
+finally:
+    client.close()
+```
+
+## Streaming TTS Дэмжлэг
+
+SDK нь одоо дууг үүсгэж байх үед бодит цагийн горимд streaming хийх боломжийг дэмждэг болсон нь бага хугацааны хоцрогдолтой аппликейшнд тохиромжтой.
+
+**Анхааруулга: Streaming Дэмжлэгийн Хязгаарлалтууд**
+- Зөвхөн `beta-v0.2` загварын дуу хоолойнуудад ажиллана
+- Нэг хүсэлтээр 5 минутаас ихгүй аудио үүсгэх боломжтой
+- Үнэгүй эрхтэй хэрэглэгчдэд 1 минутад 1 хүсэлт гэсэн хязгаарлалттай
+- Аудио гаралт нь 24,000Hz, 16-bit, mono
+
+### Үндсэн Streaming Жишээ
+
+```python
+from tsetsen import Client
+
+# Клиентийг эхлүүлэх
+client = Client(api_key="your-api-key")
+
+# 1-р арга: Аудио хэсгүүдийг дараалан боловсруулах
+for audio_chunk in client.stream_speech(
+    text="Энэ бол Цэцэн Текст-Аудио API-н streaming тест юм.",
+    voice_id="voice-id",  # list_voices-с авсан дуу хоолойн ID
+    speed=1.0,
+    version="beta-v0.2"
+):
+    # Аудио хэсэг бүрийг хүлээн авмагц боловсруулах
+    # Жишээ нь, бодит цагийн горимд тоглуулахаар аудио төхөөрөмжид илгээх
+    process_audio(audio_chunk)  # Таны өөрийн боловсруулах функц
+```
+
+### Файлд Streaming Хийх Жишээ
+
+```python
+from tsetsen import Client
+
+# Клиентийг эхлүүлэх
+client = Client(api_key="your-api-key")
+
+# Streaming аудиог шууд файлд хадгалах
+client.stream_speech_to_file(
+    text="Энэ текст яриа болгон хөрвүүлэгдэж шууд файлд хадгалагдана.",
+    voice_id="voice-id",  # list_voices-с авсан дуу хоолойн ID
+    output_file="output.wav",
+    speed=1.0,
+    progress_callback=lambda bytes_received, is_complete: print(f"Хүлээн авсан: {bytes_received} байт")
+)
+```
+
+### Дэвшилтэт Streaming Callback-тэй
+
+```python
+from tsetsen import Client
+
+# Клиентийг эхлүүлэх
+client = Client(api_key="your-api-key")
+
+# Хэсэг бүрийг боловсруулах callback функц тодорхойлох
+def handle_chunk(audio_chunk, is_final, error_message):
+    if error_message:
+        print(f"Алдаа: {error_message}")
+        return
+        
+    # Аудио хэсгийг боловсруулах
+    print(f"Хүлээн авсан хэсэг: {len(audio_chunk)} байт")
+    
+    if is_final:
+        print("Сүүлийн хэсгийг хүлээн авлаа, урсгал дууслаа")
+
+# Callback-тай streaming
+for _ in client.stream_speech(
+    text="Энэ жишээ нь streaming-тэй callback функц хэрхэн ашиглахыг харуулж байна.",
+    voice_id="voice-id",  # list_voices-с авсан дуу хоолойн ID
+    speed=1.0,
+    callback=handle_chunk
+):
+    pass  # Боловсруулалт нь callback дотор хийгдэнэ
+```
+
+
+## Алдаа Зохьцуулалт
+
+SDK нь зөв алдааны зохьцуулалтад зориулж дараах алдааны ангиллыг олгодог:
+
+```python
+from tsetsen import Client, ResourceNotFoundError, AuthenticationError
+
+client = Client(api_key="таны-api-түлхүүр")
+
+try:
+    status = client.check_status(request_id="байхгүй-id")
+except ResourceNotFoundError as e:
+    print(f"Хүсэлт олдсонгүй: {e}")
+except AuthenticationError as e:
+    print(f"Нэвтрэлтийн алдаа: {e}")
+except Exception as e:
+    print(f"Бусад алдаа: {e}")
+```
+
+## Нэмэлт хэрэглээ
+
+### Тусгай хүлээлт ба дахин оролдлогууд
+
+```python
+client = Client(
+    api_key="таны-api-түлхүүр",
+    timeout=60.0,  # Хүлээх хугацаа (секундээр)
+    secure=True,   # Аюулгүй сувгийг ашиглах (TLS)
+    max_retries=5  # Дахин оролдлогын дээд тоо
+)
+```
+
+### Тохиргоогоо тестлэх
+
+Энд тохиргоогоо шалгах энгийн тест скрипт байна:
+
+```python
+from tsetsen import Client
+
+def test_connection():
+    # Клиент эхлүүлэх
+    client = Client(api_key="таны-api-түлхүүр")
+    
+    try:
+        # Хоолой жагсаалтыг тестлэх
+        voices = client.list_voices(version="beta-v0.1")
+        print(f"Амжилттай холбогдлоо! {len(voices.voices)} хоолой олдлоо.")
+        
+        # Баланс шалгалтыг тестлэх
+        balance = client.get_user_balance()
+        print(f"Таны баланс: {balance.credits} кредит")
+        
+        return True
+    except Exception as e:
+        print(f"Тест амжилтгүй: {e}")
+        return False
+    finally:
+        client.close()
+
+if __name__ == "__main__":
+    test_connection()
+```
+
+### Орчны хувьсагчууд
+
+Тохиргоонд дараах орчны хувьсагчийг ашиглаж болно:
+
+- `TSETSEN_API_KEY`: Таны API түлхүүр
+
+## Ашиглалтын нөхцөл
+
+Энэхүү SDK нь таны үйлчилгээний гэрээнд заасан нөхцөл, болзолын дагуу Цэцэн AI текст-хэл хөрвүүлэх үйлчилгээтэй ашиглахад зориулагдсан болно. Бүх эрх хамгаалагдсан.
