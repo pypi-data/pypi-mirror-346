@@ -1,0 +1,11 @@
+bidscycle/__init__.py,sha256=rmbGajcGXZ2Jwjra7Hk2IVhLd5rkvD5yXnaSYrGwsIM,376
+bidscycle/clean_duplicates.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bidscycle/create_duplicates.py,sha256=ogMioPMPmwe0WnkfeezHbuJkAufO04rtAVz2-tZlikg,7428
+bidscycle/switch_duplicate.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bidscycle/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bidscycle/cli/run.py,sha256=FZ7IhRJTlzmzKQa7QpuETRSn9AEm0Ul28eM8tGmyDSA,6501
+bidscycle-0.0.2rc42.post1.dist-info/entry_points.txt,sha256=lvmXs3hD6Ehp_8V4Lh4I0AoonnwXnrG7jZMVcoz2Ekg,52
+bidscycle-0.0.2rc42.post1.dist-info/licenses/LICENSE,sha256=ws_MuBL-SCEBqPBFl9_FqZkaaydIJmxHrJG2parhU4M,1141
+bidscycle-0.0.2rc42.post1.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+bidscycle-0.0.2rc42.post1.dist-info/METADATA,sha256=nlqsxn9mDR7B4i-Z71Qm42-8qVXZDkSQUJDFErjIKSM,2708
+bidscycle-0.0.2rc42.post1.dist-info/RECORD,,
