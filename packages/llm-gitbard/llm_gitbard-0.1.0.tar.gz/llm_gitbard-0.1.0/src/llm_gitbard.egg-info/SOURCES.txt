@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/llm_gitbard/__init__.py
+src/llm_gitbard/configs.py
+src/llm_gitbard/git.py
+src/llm_gitbard/gitbard.py
+src/llm_gitbard/llm_hook.py
+src/llm_gitbard/prompt.py
+src/llm_gitbard.egg-info/PKG-INFO
+src/llm_gitbard.egg-info/SOURCES.txt
+src/llm_gitbard.egg-info/dependency_links.txt
+src/llm_gitbard.egg-info/entry_points.txt
+src/llm_gitbard.egg-info/requires.txt
+src/llm_gitbard.egg-info/top_level.txt

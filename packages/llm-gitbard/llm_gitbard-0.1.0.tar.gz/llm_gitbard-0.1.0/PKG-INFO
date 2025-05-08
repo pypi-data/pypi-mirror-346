@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: llm-gitbard
+Version: 0.1.0
+Summary: Like a bard writing poetry for your git workflow with LLM
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: gitpython
+Requires-Dist: llm
+Requires-Dist: pydanclick
+Requires-Dist: pydantic-settings
+Requires-Dist: questionary
+Requires-Dist: rich-click

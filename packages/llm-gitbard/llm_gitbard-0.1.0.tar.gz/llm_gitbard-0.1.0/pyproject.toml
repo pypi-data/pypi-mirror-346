@@ -1,0 +1,23 @@
+[project]
+name = "llm-gitbard"
+version = "0.1.0"
+description = "Like a bard writing poetry for your git workflow with LLM"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "gitpython",
+    "llm",
+    "pydanclick",
+    "pydantic-settings",
+    "questionary",
+    "rich-click",
+]
+
+[project.scripts]
+git-bard = "llm_gitbard.gitbard:gitbard"
+
+[project.entry-points."llm"]
+gitbard = "llm_gitbard.llm_hook"
+
+[tool.uv]
+package = true
