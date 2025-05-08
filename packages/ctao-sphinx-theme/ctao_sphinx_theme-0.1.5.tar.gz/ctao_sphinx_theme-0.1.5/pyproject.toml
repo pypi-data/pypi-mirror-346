@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=65", "setuptools_scm[toml]>=8"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "ctao-sphinx-theme"
+description = "CTAO theme for sphinx"
+readme = "README.md"
+license = {text = "BSD-3-Clause"}
+authors = [
+    {name = "Maximilian Linhoff", email = "maximilian.linhoff@tu-dortmund.de"},
+]
+
+requires-python = ">=3.10"
+dependencies = [
+  "sphinx~=8.1",
+  "pydata-sphinx-theme~=0.16.0",
+  "snowballstemmer<3.0.0a0", # 3.0 breaks sphinx, pin until fixed upstream
+]
+
+# needed for setuptools_scm, we don"t define a static version
+dynamic = ["version"]
+
+[project.urls]
+repository = "https://gitlab.cta-observatory.org/cta-computing/common/ctao-sphinx-theme"
+
+[tool.setuptools.package-data]
+ctao_sphinx_theme = ["*"]
+
+[project.entry-points."sphinx.html_themes"]
+ctao = "ctao_sphinx_theme"
+
+
+[tool.setuptools_scm]
+version_file = "src/ctao_sphinx_theme/_version.py"

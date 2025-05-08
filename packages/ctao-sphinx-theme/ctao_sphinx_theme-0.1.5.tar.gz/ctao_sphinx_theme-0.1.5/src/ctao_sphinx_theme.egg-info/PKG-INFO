@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: ctao-sphinx-theme
+Version: 0.1.5
+Summary: CTAO theme for sphinx
+Author-email: Maximilian Linhoff <maximilian.linhoff@tu-dortmund.de>
+License: BSD-3-Clause
+Project-URL: repository, https://gitlab.cta-observatory.org/cta-computing/common/ctao-sphinx-theme
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: sphinx~=8.1
+Requires-Dist: pydata-sphinx-theme~=0.16.0
+Requires-Dist: snowballstemmer<3.0.0a0
+
+# ctao-sphinx-theme
+
+Sphinx theme for CTAO.
+
+Install the package and use it by setting the html theme in `docs/conf.py`:
+```
+html_theme = "ctao"
+```
+
+See the [python-project-template](https://gitlab.cta-observatory.org/cta-computing/documentation/python-project-template) for a full example.
