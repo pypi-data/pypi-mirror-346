@@ -1,0 +1,8 @@
+psdoom/__init__.py,sha256=zLnbyLW_l41sL48JedQGX5bSBXYANluQN32qFoA3sh0,296
+psdoom/__main__.py,sha256=j6pOlJyHPLChNquAYCMuihrTr8mzlAncLT35xTHsbs4,196
+psdoom/app.py,sha256=KqpjMu2aaHANQg1H5yNuJtxcBzZwybvOfToTwvzaPGg,9101
+psdoom/process_manager.py,sha256=Tnd3Ts2Njff8WhvThC1J0QgWK-obVNvkfOzFp6WsBD4,3309
+psdoom-0.1.1.dist-info/METADATA,sha256=coifxoLhx7q8nCkPvZt6SzvX5oy8xUVx5EUin2pm_I4,669
+psdoom-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+psdoom-0.1.1.dist-info/entry_points.txt,sha256=HWpofnRT6WZhV0TZIBRUj6NL-8RsfRWVljucycgD5QQ,43
+psdoom-0.1.1.dist-info/RECORD,,
