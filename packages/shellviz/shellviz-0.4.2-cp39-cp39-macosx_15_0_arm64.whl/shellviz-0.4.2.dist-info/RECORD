@@ -1,0 +1,16 @@
+shellviz/__init__.py,sha256=XQh6yvJAmut_Mt-tejgIgbSm4JfxSfbttIsR-wKA0uM,14947
+shellviz/cli.py,sha256=ZZPHIfeY8lfmnjZcYGNJ8zDsGnqsjtGJ2247D3KUmc4,161
+shellviz/dist/index.html,sha256=hoiMsB44C3Zy7v7Yt7Sb5zygFq47LfYNiP1oDu2El5A,2678
+shellviz/dist/static/css/main.css,sha256=cLBdwYJ-EeGcKEmR0pU3vZML2bKxfhU0AfGdaLR8j5c,27751
+shellviz/dist/static/js/main.js,sha256=VVwsaZGOri2aMqMYDvXR5DBIqwC-84U2whFNua_vRd8,1292929
+shellviz/django_debug_toolbar.py,sha256=emWKCwS89z4zTZnIi4kIXCi2Z8xN4vyVkdPVqOASuSE,1001
+shellviz/django_logging.py,sha256=kQSwaIsqpICMVuxj8Q0iYxngdEP6LpPNiPmLaV9kyyg,2505
+shellviz/templates/shellviz/debug_toolbar_panel.html,sha256=Ur4ilr3W3TfzCFva9P0cHLgtRku4WRpSMcZXbn1jAVQ,299
+shellviz/utils.py,sha256=1CE5nQyo4P7X7mfASP5CMELKwYZwd1Feb3SYFIz_ovU,736
+shellviz/utils_html.py,sha256=MxBpuRND3xxFd0L2KCuAynoK6RVqlr549aysGdfBJow,7395
+shellviz/utils_serialize.py,sha256=o-7M-HQm8Dk5kazFG34WApAG_dZEw9r6w0sEdL6o3K0,1740
+shellviz/utils_websockets.py,sha256=GtLEGE1Te_tnIUIKSewYiBgstA5LeacEEfq7xZcHmKg,2847
+shellviz-0.4.2.dist-info/METADATA,sha256=VCnHk-4Mqfxuo37APG-oKBTGBiYSCRsSDn8_tB2OdeM,2552
+shellviz-0.4.2.dist-info/WHEEL,sha256=hMjfsRYlHGh9ZrVIBmH46tBJzqUQmytN-oiE-tbuuUU,104
+shellviz-0.4.2.dist-info/entry_points.txt,sha256=8s90XrMzttmlK_9QVklLvYXYAXn7GFQFuhdV7EDvEK4,45
+shellviz-0.4.2.dist-info/RECORD,,
