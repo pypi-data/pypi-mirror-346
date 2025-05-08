@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-play-windows-sound"
+version = "0.1.0"
+authors = [
+  { name = "MCP Contributors" },
+]
+description = "Model Context Protocol server for playing Windows system sounds"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp-python-sdk>=0.3.0",
+    "pydantic>=2.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/avram0korets0kornit/mcp-servers"
+"Bug Tracker" = "https://github.com/avram0korets0kornit/mcp-servers/issues"
+
+[project.scripts]
+mcp-play-windows-sound = "mcp_play_windows_sound:main"
