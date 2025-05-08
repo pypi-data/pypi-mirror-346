@@ -1,0 +1,8 @@
+c2pa_python-0.8.0.dist-info/METADATA,sha256=3nmVPceAA7pkgvbgo49R-iXHM0rRepU-vd2Sya8vczs,3472
+c2pa_python-0.8.0.dist-info/WHEEL,sha256=gdkt8a2eeDk7N2a5XvgT19z0lKcM51xqjFjLX2wouUk,126
+c2pa_python-0.8.0.dist-info/license_files/LICENSE-MIT,sha256=iTdaUN6Q0tyqBEBghtqDKtRS68r2q0Au89UbhAGmfHE,1083
+c2pa_python-0.8.0.dist-info/license_files/LICENSE-APACHE,sha256=hr3V2vq3dFEES2_W0u-rI-NBDOZY6wl_BMBPT1Su1i8,11335
+c2pa/__init__.py,sha256=onzk3sdIojlhpxm1PsmECgl0CBOgc6jxNuVQGDV1_MI,28
+c2pa/c2pa.py,sha256=0slV8P5Pyp5d6QwJoVuYN_4WERSv2MQQ7hpVaCGiy98,67499
+c2pa/libuniffi_c2pa.so,sha256=AgqbzZkMj-mihRNMRvO8x2utP5LwiHofaVKsbbHY8gE,17608864
+c2pa_python-0.8.0.dist-info/RECORD,,
