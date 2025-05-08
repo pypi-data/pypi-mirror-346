@@ -1,0 +1,36 @@
+[project]
+name = "command-line-file-manager"
+version = "2.1.3"
+authors = [
+    { name = "kaliv0", email = "kaloyan.ivanov88@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+description = "CLI tool for managing local file system storage"
+keywords = ["file manager", "cli tool", "command line interface"]
+
+[project.urls]
+Repository = "https://github.com/kaliv0/command-line-file-manager.git"
+
+[project.scripts]
+fm = "file_manager.cli:fm"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.8"
+pyyaml = "^6.0.2"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.3"
+
+[tool.ruff]
+lint = {ignore = ['E731']}
+fix = true
+line-length = 110
+
+[tool.poetry]
+packages = [{include="file_manager"}]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
