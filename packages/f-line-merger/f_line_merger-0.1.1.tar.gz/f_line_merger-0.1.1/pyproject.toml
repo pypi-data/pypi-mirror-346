@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "f-line-merger"
+version = "0.1.1"
+description = "Simple line merger gui"
+authors = ["Filipe Ferreira <ola@filipeandre.com>"]
+readme = "README.md"
+homepage = "https://github.com/filipeandre/f-line-merger"
+package-mode = true
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyqt6 = "^6.9.0"
+
+[tool.poetry.scripts]
+f-line-merger = "f_line_merger.main:main"
