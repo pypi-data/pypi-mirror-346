@@ -1,0 +1,204 @@
+Metadata-Version: 2.4
+Name: popV
+Version: 0.5.3
+Summary: Consensus prediction of cell type labels with popV
+Project-URL: Documentation, https://popv.readthedocs.io/
+Project-URL: Source, https://github.com/YosefLab/popV.git
+Project-URL: Home-page, https://github.com/YosefLab/popV.git
+Author: Can Ergen
+Maintainer-email: Can Ergen <canergen.ac@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023, Can Ergen
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.10
+Requires-Dist: anndata
+Requires-Dist: bbknn
+Requires-Dist: celltypist
+Requires-Dist: cellxgene-census
+Requires-Dist: harmony-pytorch
+Requires-Dist: huggingface
+Requires-Dist: huggingface-hub
+Requires-Dist: leidenalg
+Requires-Dist: onclass
+Requires-Dist: scanorama
+Requires-Dist: scanpy
+Requires-Dist: scikit-misc
+Requires-Dist: scvi-tools
+Requires-Dist: tensorflow
+Requires-Dist: xgboost
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: twine>=4.0.2; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: docutils!=0.18.*,!=0.19.*,>=0.8; extra == 'docs'
+Requires-Dist: ipython; extra == 'docs'
+Requires-Dist: myst-nb; extra == 'docs'
+Requires-Dist: myst-parser; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints; extra == 'docs'
+Requires-Dist: sphinx-book-theme>=1.0.1; extra == 'docs'
+Requires-Dist: sphinx-copybutton; extra == 'docs'
+Requires-Dist: sphinx-design; extra == 'docs'
+Requires-Dist: sphinx-hoverxref; extra == 'docs'
+Requires-Dist: sphinx>=4.1; extra == 'docs'
+Requires-Dist: sphinxcontrib-bibtex>=1.0.0; extra == 'docs'
+Requires-Dist: sphinxext-opengraph; extra == 'docs'
+Provides-Extra: docsbuild
+Requires-Dist: docutils!=0.18.*,!=0.19.*,>=0.8; extra == 'docsbuild'
+Requires-Dist: ipython; extra == 'docsbuild'
+Requires-Dist: myst-nb; extra == 'docsbuild'
+Requires-Dist: myst-parser; extra == 'docsbuild'
+Requires-Dist: sphinx-autodoc-typehints; extra == 'docsbuild'
+Requires-Dist: sphinx-book-theme>=1.0.1; extra == 'docsbuild'
+Requires-Dist: sphinx-copybutton; extra == 'docsbuild'
+Requires-Dist: sphinx-design; extra == 'docsbuild'
+Requires-Dist: sphinx-hoverxref; extra == 'docsbuild'
+Requires-Dist: sphinx>=4.1; extra == 'docsbuild'
+Requires-Dist: sphinxcontrib-bibtex>=1.0.0; extra == 'docsbuild'
+Requires-Dist: sphinxext-opengraph; extra == 'docsbuild'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+# popV
+
+[![Stars](https://img.shields.io/github/stars/yoseflab/popv?logo=GitHub&color=yellow)](https://github.com/YosefLab/popv/stargazers)
+[![PyPI](https://img.shields.io/pypi/v/popv.svg)](https://pypi.org/project/popv)
+[![PopV](https://github.com/YosefLab/PopV/actions/workflows/test.yml/badge.svg)](https://github.com/YosefLab/PopV/actions/workflows/test.yml)
+[![Coverage](https://codecov.io/gh/YosefLab/popv/branch/main/graph/badge.svg?token=KuSsL5q3l7)](https://codecov.io/gh/YosefLab/popv)
+[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
+[![Downloads](https://pepy.tech/badge/popv)](https://pepy.tech/project/popv)
+[![Docs](https://readthedocs.org/projects/popv/badge/?version=latest)](https://popv.readthedocs.io/en/latest/)
+
+PopV uses popular vote of a variety of cell-type transfer tools to classify
+cell-types in a query dataset based on a test dataset. Using this variety of
+algorithms, we compute the agreement between those algorithms and use this
+agreement to predict which cell-types are with a high likelihood the same
+cell-types observed in the reference.
+
+## Algorithms
+
+Currently implemented algorithms are:
+
+- K-nearest neighbor classification after dataset integration with
+    [BBKNN](https://github.com/Teichlab/bbknn)
+- K-nearest neighbor classification after dataset integration with
+    [SCANORAMA](https://github.com/brianhie/scanorama)
+- K-nearest neighbor classification after dataset integration with
+    [scVI](https://github.com/scverse/scvi-tools)
+- K-nearest neighbor classification after dataset integration with
+    [Harmony](https://github.com/lilab-bcb/harmony-pytorch)
+- Random forest classification
+- Support vector machine classification
+- XGboost classification
+- [OnClass](https://github.com/wangshenguiuc/OnClass) cell type classification
+- [scANVI](https://github.com/scverse/scvi-tools) label transfer
+- [Celltypist](https://www.celltypist.org) cell type classification
+
+All algorithms are implemented as a class in
+[popv/algorithms](https://github.com/YosefLab/popV/tree/main/popv/algorithms).
+
+All algorithms that allow for pre-training are pre-trained. This excludes by
+design BBKNN, Harmony and SCANORAMA as all construct a new embedding space.
+To provide pretrained methods for BBKNN and Harmony, we use a nearest-neighbor
+index in PCA space and position query cells at the average position of the 5
+nearest neighbors.
+
+Pretrained models are stored on [HuggingFace](https://huggingface.co/popV).
+
+PopV has three levels of prediction
+complexities:
+
+- **retrain**: Will train all classifiers from scratch. For 50k cells, this
+    takes up to an hour of computing time using a GPU.
+- **inference**: Uses pretrained classifiers to annotate query and reference
+    cells and construct a joint embedding using all integration methods. For 50k
+    cells, this takes up to half an hour of GPU time.
+- **fast**: Uses only methods with pretrained classifiers to annotate only
+    query cells. For 50k cells, this takes 5 minutes without a GPU (without UMAP
+    embedding).
+
+## Output
+
+PopV will output a cell-type classification for each of the used classifiers,
+as well as the majority vote across all classifiers. Additionally, PopV uses
+the ontology to go through the full ontology descendants for the OnClass
+prediction (disabled in fast mode). This method will be further described when
+PopV is published. PopV also outputs a score that counts the number of
+classifiers agreeing on the PopV prediction. This can be seen as the certainty
+that the current prediction is correct for every single cell in the query data.
+
+We found that disagreement of a single expert is still highly reliable, while
+disagreement of more than two classifiers signifies less reliable results. The
+aim of PopV is not to fully annotate a dataset but to highlight cells that may
+require further manual annotation. PopV also outputs UMAP embeddings of all
+integrated latent spaces if `popv.settings.compute_embedding == True` and computes
+certainties for every used classifier if `popv.settings.return_probabilities == True`.
+
+## Resources
+
+- Tutorials, API reference, and installation guides are available in the [documentation].
+
+## Installation
+
+We suggest using a package manager like `conda` or `mamba` to install the
+package. OnClass files for annotation based on Tabula sapiens are deposited in
+`popv/resources/ontology`. We use [Cell Ontology](https://obofoundry.org/ontology/cl.html)
+as an ontology throughout our experiments. PopV will automatically look for the
+ontology in this folder. If you want to provide your user-edited ontology,
+our tutorials demonstrate how to generate the Natural
+Language Model used in OnClass for this user-defined ontology.
+
+```bash
+conda create -n yourenv python=3.11
+conda activate yourenv
+pip install popv
+```
+
+## Example notebook
+
+We provide an example notebook in Google Colab:
+
+- [Tutorial demonstrating use of Tabula sapiens as a reference](docs/tutorials/notebooks/tabula_sapiens_tutorial.ipynb)
+
+This notebook will guide you through annotating a dataset based on the annotated
+[Tabula sapiens reference](https://tabula-sapiens-portal.ds.czbiohub.org) and
+demonstrates how to run annotation on your own query dataset. This notebook
+requires that all cells are
+annotated based on a cell ontology. We strongly encourage the use of a
+common cell ontology,
+see also [Osumi-Sutherland et al](https://www.nature.com/articles/s41556-021-00787-7).
+Using a cell ontology is a requirement to run OnClass as a prediction algorithm.
+Setting ontology
+to false, will disable this step and allows running popV without using a cell ontology.
+
+[documentation]: https://popv.readthedocs.io/en/latest/
