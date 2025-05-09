@@ -1,0 +1,4 @@
+commons-lang>=0.2.4
+loguru>=0.7.3
+pydantic-yaml>=1.4.0
+pyyaml>=6.0.2
