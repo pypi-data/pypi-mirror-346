@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+clientz/__init__.py
+clientz/core.py
+clientz.egg-info/PKG-INFO
+clientz.egg-info/SOURCES.txt
+clientz.egg-info/dependency_links.txt
+clientz.egg-info/requires.txt
+clientz.egg-info/top_level.txt
