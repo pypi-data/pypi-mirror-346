@@ -1,0 +1,117 @@
+Metadata-Version: 2.4
+Name: BIDScycle
+Version: 0.0.2rc50.post1
+Summary: Easy BIDS compliant renaming of BIDS duplicates
+Author-email: Milton Camacho <miltoncamachoicc@gmail.com>, Shireen Parimoo <sparimoo95@gmail.com>
+Requires-Python: >=3.11.1
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
+Requires-Dist: pybids
+Requires-Dist: coloredlogs
+Requires-Dist: pandas
+Requires-Dist: datalad
+Requires-Dist: pyspark>=3.0.0 ; extra == "spark"
+Requires-Dist: bandit[toml]==1.8.3 ; extra == "test"
+Requires-Dist: black==25.1.0 ; extra == "test"
+Requires-Dist: check-manifest==0.50 ; extra == "test"
+Requires-Dist: flake8-bugbear==24.12.12 ; extra == "test"
+Requires-Dist: flake8-docstrings ; extra == "test"
+Requires-Dist: flake8-formatter_junit_xml ; extra == "test"
+Requires-Dist: flake8 ; extra == "test"
+Requires-Dist: flake8-pyproject ; extra == "test"
+Requires-Dist: pre-commit==4.2.0 ; extra == "test"
+Requires-Dist: pylint==3.3.7 ; extra == "test"
+Requires-Dist: pylint_junit ; extra == "test"
+Requires-Dist: pytest-cov==6.1.1 ; extra == "test"
+Requires-Dist: pytest-mock<3.14.1 ; extra == "test"
+Requires-Dist: pytest-runner ; extra == "test"
+Requires-Dist: pytest==8.3.5 ; extra == "test"
+Requires-Dist: pytest-github-actions-annotate-failures ; extra == "test"
+Requires-Dist: shellcheck-py==0.10.0.1 ; extra == "test"
+Project-URL: Documentation, https://github.com/miltoncamacho/bidscycle/tree/main#readme
+Project-URL: Source, https://github.com/miltoncamacho/bidscycle
+Project-URL: Tracker, https://github.com/miltoncamacho/bidscycle/issues
+Provides-Extra: spark
+Provides-Extra: test
+
+# BIDScycle
+
+This project is a BIDS compatible tool for easy renaming of BIDS data.
+
+## Getting Started
+
+To get started simply install using:
+
+```bash
+pip install bidscycle
+```
+or
+```bash
+pip install git+https://github.com/miltoncamacho/BIDScycle.git@main
+```
+for the bleading edge latest changes
+
+## Usage
+
+```bash
+usage: bidscycle [-h] {create-duplicates,switch-duplicate,clean-duplicates}
+```
+
+You will need to select from the different commands to perform:
+
+### create-duplicates
+
+This command will help you create BIDS duplicates in any of the files that match the provided BIDS compatible filters.
+
+```bash
+usage: bidscycle create-duplicates [-h] -f entity=value[,value2] [--commit-msg COMMIT_MSG] [--dry-run] [--no-datalad] [-v] dataset
+```
+
+| Argument          | Description                                                                |
+|-------------------|----------------------------------------------------------------------------|
+| `dataset`         | Absolute path to the dataset containing `sub-XX` folders.                           |
+| `--filter`,`-f`   | Entity filter in the format `entity=value[,value2]`.                       |
+| `--commit-msg`    | Optional commit message for saving the changes.                            |
+| `--dry-run`       | Perform a trial run without making any changes.                            |
+| `--no-datalad`    | Skip Datalad commands during execution.                                    |
+| `-v`              | Enable verbose output for debugging purposes.                              |
+
+### switch-duplicates
+
+```bash
+usage: bidscycle switch-duplicates [-h] -f entity=value[,value2] [--commit-msg COMMIT_MSG] [--dry-run] [--no-datalad] [-v] dataset
+```
+
+| Argument          | Description                                                                |
+|-------------------|----------------------------------------------------------------------------|
+| `dataset`         | Absolute path to the dataset containing `sub-XX` folders.                  |
+| `--filter`,`-f`   | Entity filter in the format `entity=value[,value2]` must contain dup.      |
+| `--commit-msg`    | Optional commit message for saving the changes.                            |
+| `--dry-run`       | Perform a trial run without making any changes.                            |
+| `--no-datalad`    | Skip Datalad commands during execution.                                    |
+| `-v`              | Enable verbose output for debugging purposes.                              |
+
+### clean-duplicates
+
+```bash
+usage: bidscycle clean-duplicates [-h] [-f entity=value[,value2]] --keep_pattern N[,N2] [--commit-msg COMMIT_MSG] [--dry-run] [--no-datalad] [-v] dataset
+```
+
+| Argument          | Description                                                                |
+|-------------------|----------------------------------------------------------------------------|
+| `dataset`         | Absolute path to the dataset containing `sub-XX` folders.                  |
+| `--filter`,`-f`   | Entity filter in the format `entity=value[,value2]`.                       |
+| `--keep_pattern`  | Pattern(s) to keep (comma‑separated; e.g., '__dup-01').                    |
+| `--commit-msg`    | Optional commit message for saving the changes.                            |
+| `--dry-run`       | Perform a trial run without making any changes.                            |
+| `--no-datalad`    | Skip Datalad commands during execution.                                    |
+| `-v`              | Enable verbose output for debugging purposes.                              |
+
