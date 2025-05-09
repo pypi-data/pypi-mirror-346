@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jupyt_ai"
+version = "0.1.0" # Should match package.json. setup.py version will be superseded.
+description = "Jupyt AI - Intelligent Assistant for Jupyter Notebooks"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT" # Correct: SPDX identifier
+keywords = ["jupyter", "jupyterlab", "jupyterlab-extension", "ai", "chat", "assistant"]
+
+# Add your project's runtime dependencies here
+dependencies = [
+    "jupyterlab>=4.0.0"
+]
+
+authors = [
+  {name = "Rajmeet Singh Chandok", email = "rajmeetchandok@gmail.com"}
+]
+maintainers = [
+  {name = "Rishabh", email = "rajmeetchandok@gmail.com"}
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Jupyter",
+    "Framework :: Jupyter :: JupyterLab",
+    "Framework :: Jupyter :: JupyterLab :: 4",
+    "Framework :: Jupyter :: JupyterLab :: Extensions",
+    "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    # "License :: OSI Approved :: MIT License", # REMOVED: Redundant and deprecated due to 'license = "MIT"'
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/rajmeet/juno" # Match your package.json
+Repository = "https://github.com/rajmeet/juno.git" # Match your package.json
+# Bug Tracker = "https://github.com/rajmeet/juno/issues"
+
+[tool.setuptools]
+packages = ["jupyt_ai", "jupyt_ai.labextension", "jupyt_ai.labextension.static"]
+# If you still need zip_safe = False from your setup.py:
+# zip-safe = false
+
+[tool.setuptools.package-data]
+# This ensures all files within jupyt_ai/labextension (and its subdirectories) are included
+jupyt_ai = ["labextension/**"]
+
+# If you need to exclude node_modules and it's inside jupyt_ai/labextension:
+# [tool.setuptools.exclude-package-data]
+# "jupyt_ai" = ["**/node_modules/**"]
+
+
+[tool.jupyter-labextension]
+# This section is for metadata if you are not using the `jupyter labextension build` command directly
+# or for more complex scenarios. Given your setup.py and package.json,
+# the existing build scripts should handle labextension bundling.
+# However, it's good practice to align this if moving fully to pyproject.toml for extension building.
+# For now, we'll rely on your existing scripts.
+# output_dir = "jupyt_ai/labextension" # Matches your package.json
+# shared_packages = {...} # Could mirror from package.json if needed

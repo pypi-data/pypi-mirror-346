@@ -1,0 +1,111 @@
+{
+  "name": "jupyt",
+  "version": "0.1.0",
+  "description": "Jupyt - Intelligent Assistant for Jupyter Notebooks",
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,js,eot,gif,html,jpg,json,md,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "style": "style/index.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajmeet/jupyt.git"
+  },
+  "scripts": {
+    "build": "jlpm run clean && jlpm run build:lib && jlpm run build:labextension:dev",
+    "build:prod": "jlpm run clean && jlpm run build:lib && jlpm run build:labextension",
+    "build:labextension": "jupyter labextension build .",
+    "build:labextension:dev": "jupyter labextension build --development True .",
+    "build:lib": "tsc --build tsconfig.json",
+    "clean": "jlpm run clean:lib && jlpm run clean:labextension",
+    "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
+    "clean:labextension": "rimraf jupyt_ai/labextension",
+    "clean:all": "jlpm clean:lib && jlpm clean:labextension",
+    "watch": "jlpm run build && concurrently \"jlpm run watch:src\" \"jlpm run watch:labextension\"",
+    "watch:src": "tsc -w --preserveWatchOutput",
+    "watch:labextension": "jupyter labextension watch ."
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@jupyterlab/application": "^4.0.0",
+    "@jupyterlab/apputils": "^4.0.0",
+    "@jupyterlab/notebook": "^4.0.0",
+    "@jupyterlab/services": "^7.0.0",
+    "@jupyterlab/settingregistry": "^4.0.0",
+    "@jupyterlab/ui-components": "^4.0.0",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
+    "@types/node": "^22.14.0",
+    "react": "^18.2.0",
+    "react-diff-view": "^3.3.1",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@jupyterlab/builder": "^4.4.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "concurrently": "^9.1.2",
+    "css-loader": "^6.8.1",
+    "dotenv": "^16.5.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.0",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "~5.0.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "sideEffects": [
+    "style/*.css",
+    "style/index.js"
+  ],
+  "styleModule": "style/index.js",
+  "jupyterlab": {
+    "extension": true,
+    "outputDir": "jupyt_ai/labextension",
+    "sharedPackages": {
+      "@jupyterlab/application": {
+        "bundled": false,
+        "singleton": true
+      },
+      "@jupyterlab/apputils": {
+        "bundled": false,
+        "singleton": true
+      },
+      "@jupyterlab/notebook": {
+        "bundled": false,
+        "singleton": true
+      },
+      "@jupyterlab/services": {
+        "bundled": false,
+        "singleton": true
+      },
+      "@jupyterlab/settingregistry": {
+        "bundled": false,
+        "singleton": true
+      },
+      "@jupyterlab/ui-components": {
+        "bundled": false,
+        "singleton": true
+      },
+      "react": {
+        "bundled": false,
+        "singleton": true
+      },
+      "react-dom": {
+        "bundled": false,
+        "singleton": true
+      }
+    },
+    "_build": {
+      "load": "static/remoteEntry.efe07ba0cfc552c33fab.js",
+      "extension": "./extension",
+      "style": "./style"
+    }
+  }
+}
