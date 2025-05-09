@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+aini/__init__.py
+aini/builder.py
+aini/viewer.py
+aini.egg-info/PKG-INFO
+aini.egg-info/SOURCES.txt
+aini.egg-info/dependency_links.txt
+aini.egg-info/requires.txt
+aini.egg-info/top_level.txt
+tests/test_aview.py
