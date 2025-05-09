@@ -1,0 +1,3 @@
+[console_scripts]
+airc-create-config = airc_extract:create_airc_config
+airc-extract = airc_extract:main
