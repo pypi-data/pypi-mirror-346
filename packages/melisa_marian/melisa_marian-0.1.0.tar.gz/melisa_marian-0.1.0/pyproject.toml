@@ -1,0 +1,41 @@
+# ~/python_projects/nrun/pyproject.toml
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "melisa_marian"
+version = "0.1.0" # Increment version as needed
+authors = [
+  { name="Your Name", email="your@email.com" }, # Replace with your details
+]
+description = "A CLI tool to run commands and send ntfy notifications."
+readme = "README.md" # Optional: create a README file
+requires-python = ">=3.7" # Specify compatible Python versions
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License", # Choose your license
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: System :: Monitoring",
+    "Topic :: Utilities",
+]
+# Add dependencies here!
+dependencies = [
+    "numpy>=1.21.6",
+    "pandas>=1.1.5",
+    "requests>=2.20", # Specify version if needed
+]
+
+# Define the command-line script entry point
+[project.scripts]
+mrun = "mrun.main:main"
+nrun = "nrun.main:main"
+
+# If using src layout, uncomment and adjust:
+# [tool.setuptools.packages.find]
+# where = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["mrun", "nrun"]
