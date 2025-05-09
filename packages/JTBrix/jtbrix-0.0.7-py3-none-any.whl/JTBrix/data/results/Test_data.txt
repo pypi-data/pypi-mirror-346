@@ -1,0 +1,227 @@
+--- First Entry ---
+
+--- New Entry ---
+{
+  "participant_first_name": "Test Name",
+  "participant_surename_name": "Surname Test",
+  "age": 134,
+  "country": "France",
+  "native_language": "Yes",
+  "experiment_start": "2025-05-08 16:51:43",
+  "experiment_duration_sec": 68,
+  "completed": true,
+  "execution_order": [
+    "2",
+    "3",
+    "4",
+    "1"
+  ],
+  "blocks": [
+    {
+      "SetCode": "1",
+      "answers": [
+        "Banana1",
+        "Ford1",
+        "Rome1"
+      ],
+      "times": [
+        1112,
+        525,
+        962
+      ],
+      "popup": "Sad1"
+    },
+    {
+      "SetCode": "2",
+      "answers": [
+        "Banana2",
+        "Ford2",
+        "Paris2"
+      ],
+      "times": [
+        1233,
+        628,
+        864
+      ],
+      "popup": "Sad2"
+    },
+    {
+      "SetCode": "3",
+      "answers": [
+        "Banana3",
+        "Ford3",
+        "London3"
+      ],
+      "times": [
+        1056,
+        654,
+        881
+      ],
+      "popup": "Sad3"
+    },
+    {
+      "SetCode": "4",
+      "answers": [
+        "Banana4",
+        "Ford4",
+        "Berlin4"
+      ],
+      "times": [
+        1202,
+        530,
+        814
+      ],
+      "popup": "Sad4"
+    }
+  ]
+}
+
+--- New Entry ---
+{
+  "participant_first_name": "Testing",
+  "participant_surename_name": "Testing 1",
+  "age": 70,
+  "country": "Germany",
+  "native_language": "Yes",
+  "experiment_start": "2025-05-08 16:54:04",
+  "experiment_duration_sec": 66,
+  "completed": true,
+  "execution_order": [
+    "3",
+    "2",
+    "1",
+    "4"
+  ],
+  "blocks": [
+    {
+      "SetCode": "1",
+      "answers": [
+        "Banana1",
+        "Tesla1",
+        "Rome1"
+      ],
+      "times": [
+        2077,
+        787,
+        966
+      ],
+      "popup": "Happy1"
+    },
+    {
+      "SetCode": "2",
+      "answers": [
+        "Banana2",
+        "Ford2",
+        "Paris2"
+      ],
+      "times": [
+        1294,
+        1129,
+        1026
+      ],
+      "popup": "Sad2"
+    },
+    {
+      "SetCode": "3",
+      "answers": [
+        "Banana3",
+        "Ford3",
+        "London3"
+      ],
+      "times": [
+        1620,
+        842,
+        1090
+      ],
+      "popup": "Sad3"
+    },
+    {
+      "SetCode": "4",
+      "answers": [
+        "Banana4",
+        "Tesla4",
+        "Berlin4"
+      ],
+      "times": [
+        736,
+        598,
+        712
+      ],
+      "popup": "Sad4"
+    }
+  ]
+}
+
+--- New Entry ---
+{
+  "participant_first_name": "Amid",
+  "age": 30,
+  "country": "Nein",
+  "experiment_start": "2025-05-08 19:55:49",
+  "experiment_duration_sec": 62,
+  "completed": true,
+  "execution_order": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "blocks": [
+    {
+      "SetCode": "1",
+      "answers": [
+        "Grun",
+        "Nein",
+        "Nein"
+      ],
+      "times": [
+        5487,
+        743,
+        1216
+      ],
+      "popup": "Ziemlich sicher"
+    },
+    {
+      "SetCode": "2",
+      "answers": [
+        "Grun",
+        " Ja ",
+        "Nein"
+      ],
+      "times": [
+        1050,
+        701,
+        1852
+      ],
+      "popup": "Ziemlich sicher"
+    },
+    {
+      "SetCode": "3",
+      "answers": [
+        "Grun",
+        "Nein",
+        "Nein"
+      ],
+      "times": [
+        1032,
+        510,
+        485
+      ],
+      "popup": "Ziemlich sicher"
+    },
+    {
+      "SetCode": "4",
+      "answers": [
+        "Grun",
+        "Nein",
+        "Nein"
+      ],
+      "times": [
+        1139,
+        650,
+        532
+      ],
+      "popup": "Ganz sicher"
+    }
+  ]
+}
