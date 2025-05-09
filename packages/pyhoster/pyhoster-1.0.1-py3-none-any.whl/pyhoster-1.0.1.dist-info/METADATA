@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: pyhoster
+Version: 1.0.1
+Summary: A simple tool for servers that host python projects
+Home-page: https://github.com/mbutsk/pyhoster
+Author: mbutsk
+Author-email: mbutsk@icloud.com
+License: MIT License, see LICENSE.md file
+Keywords: cli,server,process,manager,console,script
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python
+Classifier: Operating System :: Unix
+Classifier: Intended Audience :: System Administrators
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psutil
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# pyhoster
+
+pyhoster is a tool for those who host Python projects on their servers. It can reboot, kill processes, and more.
+
+## Usage
+
+### TUI
+
+Just write pyhoster in the root directory of the project and follow the instructions.
+
+### CLI
+
+In the root directory of the project, write `pyhoster kill` to kill the process, `pyhoster reboot` to reboot, etc.
+`pyhoster -h` / `pyhoster --help` for full list available commands in moment
