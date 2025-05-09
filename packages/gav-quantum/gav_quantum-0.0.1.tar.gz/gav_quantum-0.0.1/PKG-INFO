@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: gav_quantum
+Version: 0.0.1
+Summary: A quantum information utility package.
+Author-email: Emil Marinov <emil@intp.io>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/grayalienventures/gav_quantum
+Project-URL: Issues, https://github.com/grayalienventures/gav_quantum/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# gav_quantum
+
+`gav_quantum` is a quantum information utility package developed by Emil Marinov and Gray Alien Ventures.
+
+## Installation
+`pip install gav_quantum`
+
+## Objects
+
+`ZERO` - A column vector representation of the 0-state, [1 0]^T.
+
+`ONE` - A column vector representation of the 1-state, [0 1]^T.
+
+`X`, `Y`, `Z` - Standard X, Y, and Z Pauli operators.
+
+`PAULIS` - An array of the Pauli operators in standard quantum information convention.  Convenient for enumerations.
+
+`BELL_STATES[PHI_PLUS | PHI_MINUS | PSI_PLUS | PSI_MINUS]` - The four maximally entangled Bell states.
+
+
+## Functions
+
+`W(N)`
+
+*Inputs*
+* **N** - The number of qubits in the quantum state.
+
+*Output*
+* A vector corresponding to the maximally entangled N-qubit W-state.
+
+`GHZ(N)`
+
+*Inputs*
+* **N** - The number of qubits in the quantum state.
+
+*Output*
+* A vector corresponding to the maximally entangled N-qubit GHZ-state.
+
+`operator_from_sparse_pauli(N, nonidentities)`
+
+*Inputs*
+* **N** - The number of qubits in the quantum state.
+* **nonidentities** - List of tuples specifying qubit number (indexed at 0) in ascending order and corresponding Pauli operator. Example: [(0,X),(2,'Y')]
+
+*Output*
+* A 2^N by 2^N operator.
