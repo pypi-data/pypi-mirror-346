@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+avar/__init__.py
+avar/avar.py
+avar/avar.egg-info/PKG-INFO
+avar/avar.egg-info/SOURCES.txt
+avar/avar.egg-info/dependency_links.txt
+avar/avar.egg-info/requires.txt
+avar/avar.egg-info/top_level.txt

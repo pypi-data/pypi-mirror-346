@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "avar"
+version = "1.0.0"
+description = "Allan variance tools"
+readme = "README.md"
+authors = [
+    {name = "David Woodburn", email = "david.woodburn@icloud.com"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/davidwoodburn/avar"
+"Bug Tracker" = "https://gitlab.com/davidwoodburn/avar/-/issues"
+
+[tool.setuptools]
+package-dir = {"" = "avar"}
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[tool.ruff]
+line-length = 80
+indent-width = 4
+extend-exclude = [
+    ".pytest_cache",
+    ".ruff_cache",
+    "build/",
+    "dist/",
+    "examples/",
+    "test/",
+    "avar/__init__.py",
+]
+
+[tool.ruff.lint]
+select = ["ALL"] # Enabled Rules
+ignore = [ # Disabled Rules
+    "A004",
+    "C901",
+    "COM812",
+    "D104",
+    "D202",
+    "D205",
+    "D210",
+    "D400",
+    "E702",
+    "EM101",
+    "EM102",
+    "F403",
+    "FA102",
+    "FBT001",
+    "FBT002",
+    "I001",
+    "N801",
+    "N803",
+    "N806",
+    "N816",
+    "NPY002",
+    "PLR0912",
+    "PLR0913",
+    "PLR0915",
+    "PLR2004",
+    "RET504",
+    "RET505",
+    "T201",
+    "TRY003",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
