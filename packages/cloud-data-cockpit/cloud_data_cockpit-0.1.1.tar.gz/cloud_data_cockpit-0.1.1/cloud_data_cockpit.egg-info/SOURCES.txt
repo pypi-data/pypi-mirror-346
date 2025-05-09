@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+cloud_data_cockpit.egg-info/PKG-INFO
+cloud_data_cockpit.egg-info/SOURCES.txt
+cloud_data_cockpit.egg-info/dependency_links.txt
+cloud_data_cockpit.egg-info/requires.txt
+cloud_data_cockpit.egg-info/top_level.txt
+dataplug_ui/__init__.py
+dataplug_ui/aws_utils.py
+dataplug_ui/core.py
+dataplug_ui/events.py
+dataplug_ui/format_handlers.py
+dataplug_ui/ui_builder.py
