@@ -1,0 +1,265 @@
+Metadata-Version: 2.4
+Name: moldo
+Version: 0.3.1
+Summary: A visual programming language that compiles to Python
+Home-page: https://github.com/GracePeterMutiibwa/moldo
+Author: Mutiibwa Grace Peter
+Author-email: gracepetermutiibwa@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Topic :: Education
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: antlr4-python3-runtime>=4.13.1
+Requires-Dist: typing-extensions>=4.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Moldo
+
+A visual programming language that compiles to Python, designed to make programming more accessible and intuitive.
+
+## Features
+
+- XML-like syntax for easy visual representation
+- Compiles to Python code
+- Support for Python function imports
+- Basic programming constructs (variables, functions, control flow)
+- Built-in support for Python data types (strings, numbers, lists, dictionaries)
+- Type safety and error handling
+- Block-based loops with nested content
+
+## Installation
+
+```bash
+pip install moldo
+```
+
+## Quick Start
+
+1. Create a `.moldo` file with your code:
+
+```xml
+<mblock type="print">Hello, World!</mblock>
+
+<mblock type="input">What's your name? </mblock>
+<mblock type="variable">name = input()</mblock>
+<mblock type="print">f"Nice to meet you, {name}!"</mblock>
+```
+
+2. Compile and run:
+
+```bash
+moldo compile your_file.moldo -o output.py
+python output.py
+```
+
+## Loop Structures
+
+Moldo supports two different loop syntax options:
+
+### 1. Simple Loop Syntax (Legacy)
+
+```xml
+<mblock type="loop">i in range(5)</mblock>
+    <mblock type="print">i</mblock>
+```
+
+### 2. Block-Based Loop Syntax (Recommended)
+
+```xml
+<mblock type="loop" condition="i in range(5)">
+    <mblock type="print">f"Current value: {i}"</mblock>
+    <mblock type="variable">squared = i * i</mblock>
+    <mblock type="print">f"Squared: {squared}"</mblock>
+</mblock>
+```
+
+### Simple Counter Example (1 to 6)
+
+```xml
+<!-- A simple counter that counts from 1 to 6 -->
+<mblock type="print">Counting from 1 to 6:</mblock>
+<mblock type="loop" condition="count in range(1, 7)">
+    <mblock type="print">f"Number: {count}"</mblock>
+</mblock>
+```
+
+The block-based syntax (with the `condition` attribute) is recommended as it:
+
+- Properly supports nested content
+- Maintains clear scope boundaries
+- Provides better visual representation of the code structure
+- Results in more readable generated Python code
+
+## Examples
+
+### Counter Example
+
+```xml
+<mblock type="print">Simple Counter Example</mblock>
+
+<!-- Counter initialization -->
+<mblock type="variable">counter = 0</mblock>
+
+<!-- Print header -->
+<mblock type="print">Counting from 1 to 10:</mblock>
+
+<!-- Counter for loop using block-based syntax -->
+<mblock type="loop" condition="i in range(1, 11)">
+    <mblock type="print">f"Count: {i}"</mblock>
+    <mblock type="variable">counter += i</mblock>
+</mblock>
+
+<!-- Print final counter value -->
+<mblock type="print">f"Sum of numbers 1-10: {counter}"</mblock>
+```
+
+### Dictionary Operations Example
+
+```xml
+<!-- Create a dictionary -->
+<mblock type="variable">student = {"name": "Alice", "age": 20, "grades": [85, 90, 95]}</mblock>
+
+<!-- Access dictionary values -->
+<mblock type="variable">name = student["name"]</mblock>
+<mblock type="print">name</mblock>
+
+<!-- Add or modify dictionary entries -->
+<mblock type="variable">student["subject"] = "Computer Science"</mblock>
+
+<!-- Print the entire dictionary -->
+<mblock type="print">student</mblock>
+
+<!-- Loop through dictionary keys and values -->
+<mblock type="loop" condition="key in student">
+    <mblock type="variable">value = student[key]</mblock>
+    <mblock type="print">f"{key}: {value}"</mblock>
+</mblock>
+```
+
+### Calculator Example
+
+```xml
+<!-- Import the math functions module -->
+<mblock type="import">examples/math_functions.py</mblock>
+
+<!-- Get input from user -->
+<mblock type="input">Enter first number: </mblock>
+<mblock type="variable">num1 = float(input())</mblock>
+
+<mblock type="input">Enter second number: </mblock>
+<mblock type="variable">num2 = float(input())</mblock>
+
+<!-- Perform calculations -->
+<mblock type="print">Addition: </mblock>
+<mblock type="call">add(num1, num2)</mblock>
+
+<mblock type="print">Subtraction: </mblock>
+<mblock type="call">subtract(num1, num2)</mblock>
+
+<mblock type="print">Multiplication: </mblock>
+<mblock type="call">multiply(num1, num2)</mblock>
+
+<mblock type="print">Division: </mblock>
+<mblock type="call">divide(num1, num2)</mblock>
+```
+
+### Temperature Converter Example
+
+```xml
+<mblock type="import">examples/temperature_utils.py</mblock>
+
+<mblock type="print">Welcome to Temperature Converter!</mblock>
+<mblock type="print">1. Convert Celsius to Fahrenheit</mblock>
+<mblock type="print">2. Convert Fahrenheit to Celsius</mblock>
+
+<mblock type="input">Enter your choice (1 or 2): </mblock>
+<mblock type="variable">choice = input()</mblock>
+
+<mblock type="variable">
+if choice == "1":
+    print("Enter temperature in Celsius: ", end="")
+    celsius = float(input())
+    print(f"{celsius}°C is equal to ", end="")
+    result = temperature_utils.celsius_to_fahrenheit(celsius)
+    print(f"{result:.1f}°F")
+elif choice == "2":
+    print("Enter temperature in Fahrenheit: ", end="")
+    fahrenheit = float(input())
+    print(f"{fahrenheit}°F is equal to ", end="")
+    result = temperature_utils.fahrenheit_to_celsius(fahrenheit)
+    print(f"{result:.1f}°C")
+else:
+    print("Invalid choice! Please enter 1 or 2.")
+</mblock>
+```
+
+## Creating Custom Functions
+
+To create functions that can be used in Moldo, use the `@moldo_function` decorator:
+
+```python
+from moldo.decorators import moldo_function
+
+@moldo_function(reference_name="add")
+def add_numbers(a: float, b: float) -> float:
+    """Add two numbers together."""
+    return a + b
+```
+
+## sample snippet
+
+```
+{
+  "code": "<mblock type=\"print\">Hello, World!</mblock>",
+  "python_modules": {
+
+  }
+}
+```
+
+## Command Line Interface
+
+The `moldo` command provides several options:
+
+```bash
+moldo compile <input_file> -o <output_file>  # Compile Moldo code to Python
+moldo run <input_file>                       # Compile and run Moldo code
+moldo --help                                 # Show help message
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+- **Mutiibwa Grace Peter** - [GitHub](https://github.com/GracePeterMutiibwa)
+
+## Acknowledgments
+
+- ANTLR4 for the parsing infrastructure
+- Python community for inspiration and tools
