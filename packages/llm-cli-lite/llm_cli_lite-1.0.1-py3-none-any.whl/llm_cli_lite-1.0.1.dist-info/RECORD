@@ -1,0 +1,11 @@
+llm_cli_lite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_cli_lite/__main__.py,sha256=R4G1ZRXMtuC23qcWQBHvSTRBjEoli4siicJpuw38DiM,4458
+llm_cli_lite/config.example.json,sha256=LDUufb9ijkr2qQ_E3RpBYKf8K45OgD8oGwKkhpltSjI,318
+llm_cli_lite/openai_api.py,sha256=vrvk482g-hbPdfhsH-rJf1YD-JzcAdDgdXNR9IXEslQ,4618
+llm_cli_lite/openai_api_fun.py,sha256=4r4Lp-TP--XuC1mukPc7QPwNqyQintuY56JLbK1C8Tc,3209
+llm_cli_lite-1.0.1.dist-info/licenses/LICENSE,sha256=hijfO0gZJ1Rthg3mjcyH81dM9k2iJrUY7exmxwlMgvg,1087
+llm_cli_lite-1.0.1.dist-info/METADATA,sha256=LfHoPN5Oy2Q2S2pXSS_o5Sx2cfZvhDfOYoEgKhz7mOc,2300
+llm_cli_lite-1.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+llm_cli_lite-1.0.1.dist-info/entry_points.txt,sha256=HPMbTMVHHjtvdIYMrKQW8_y6XNdzBHpPw2NuLSJPZDc,55
+llm_cli_lite-1.0.1.dist-info/top_level.txt,sha256=XnP8Wc-ALnqLDDbt0LETIG9nUxDLFoeFeOr0aDoQNOU,13
+llm_cli_lite-1.0.1.dist-info/RECORD,,
