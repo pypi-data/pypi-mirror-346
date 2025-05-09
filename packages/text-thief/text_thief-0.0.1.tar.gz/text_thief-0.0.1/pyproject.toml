@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+[project]
+name = "text-thief"
+version = "0.0.1"
+authors = [
+  { name="Tim The Webmaster", email="timachuduk@gmail.com" },
+]
+description = "A library to scrape text from website and web pages"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Environment :: Plugins",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Natural Language :: English",
+    "Natural Language :: Russian",
+    "Topic :: Desktop Environment",
+    "Topic :: Internet",
+    "Topic :: Internet :: WWW/HTTP :: Browsers",
+    "Topic :: Internet :: WWW/HTTP :: Site Management",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Terminals",
+    "Topic :: Utilities",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+  "beautifulsoup4",
+  "lxml",
+  "requests",
+  "link-thief"
+]
+keywords = ["text", "scraper", "website scraper", "words cloud", "text proccesing"]
+[project.urls]
+"Homepage RU" = "https://timthewebmaster.com/ru/tools/text-thief/"
+"Homepage EN" = "https://timthewebmaster.com/en/tools/text-thief/"
+"Issues RU" = "https://timthewebmaster.com/ru/tools/text-thief/#comments_limiter"
+"Issues EN" = "https://timthewebmaster.com/en/tools/text-thief/#comments_limiter"
