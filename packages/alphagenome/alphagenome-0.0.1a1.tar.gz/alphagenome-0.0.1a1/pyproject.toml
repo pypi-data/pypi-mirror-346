@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = 'alphagenome'
+description = 'A Python SDK for alphagenome.'
+readme = 'README.md'
+dynamic = ['version']
+license = { file = 'LICENSE' }
+requires-python = '>=3.10'
+authors = [
+    {name = 'DeepMind Technologies Limited'}
+]
+keywords = [
+    'python',
+    'machine learning'
+]
+classifiers=[
+    'Development Status :: 2 - Pre-Alpha',
+    'Environment :: Console',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: Apache Software License',
+    'Operating System :: POSIX :: Linux',
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: MacOS :: MacOS X',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
+]
+dependencies=[]
+
+[tool.setuptools.packages.find]
+include = ['README.md', 'LICENSE']
+
+[tool.hatch.version]
+path = 'src/alphagenome/__init__.py'
