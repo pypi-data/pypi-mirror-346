@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "aevoo-shell"
+version = "0.1.1"
+description = ""
+authors = ["David Casier <david.casier@aevoo.fr>"]
+# readme = "README.md"
+packages = [{ include = "aevoo_shell", format = "wheel" }]
+include = [
+    "aevoo_shell/**/*.py",
+]
+
+[tool.poetry.dependencies]
+aevoo-tosca = "^0.1"
+aevoo-pycontrol = "^0.1"
+configshell-fb = "~2.0"
+python = "^3.12"
+
+[[tool.poetry.source]]
+name = "aevoo"
+url = "https://repository.aevoo.com/simple/"
+priority = "supplemental"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = [
+    "poetry-core",
+]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+aevoo-shell = "aevoo_shell:main"
+# shell-test = "aevoo_shell:test"
