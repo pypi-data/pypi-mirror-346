@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: dataguy
+Version: 0.1.1
+Summary: Tiny wrapper around pandas with built‑in logging & docs.
+Project-URL: Homepage, https://github.com/magistak/llm-data
+Project-URL: Documentation, https://dataguy.readthedocs.io
+Author-email: István Magyary <magistak@gmail.com>, Sára Viemann <viemannsara@gmail.com>, Bálint Kristóf <balint.kristof.99@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: pandas>=2.0
+Description-Content-Type: text/markdown
+
+# DataGuy
+
+A Python package for automated data science using LLMs.
+
+## Features
+- Automated data wrangling
+- AI-powered data visualization
+- Intelligent data analysis
+
+## Installation
+```pip install dataguy```
+
+## Usage
+
+```from dataguy import DataGuy```
+
+```dg = DataGuy() data = dg.wrangle("path/to/data.csv") dg.plot(data, "Create a histogram of age distribution") results = dg.analyze(data, "Find correlations between income and education")```
