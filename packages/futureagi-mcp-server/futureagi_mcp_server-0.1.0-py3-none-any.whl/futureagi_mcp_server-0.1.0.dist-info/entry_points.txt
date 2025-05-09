@@ -1,0 +1,2 @@
+[console_scripts]
+futureagi-mcp-server = futureagi_mcp_server:main
