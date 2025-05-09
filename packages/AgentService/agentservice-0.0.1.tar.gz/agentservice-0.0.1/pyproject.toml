@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AgentService"
+version = "0.0.1"
+description = "AgentService"
+authors = [{ name = "Denis Minka", email = "minka.denis@gmail.com" }]
+readme = "README.md"
+dependencies = ["click", "fastapi", "pydantic", "motor", "openai", "uvicorn"]
