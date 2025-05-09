@@ -1,0 +1,21 @@
+[project]
+name = "fangcloud-mcp"
+version = "0.1.6"
+description = "FangCloud MCP 是一个 Model Context Protocol (MCP) 服务器实现，提供与 FangCloud 云存储服务的集成"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.8.6",
+    "mcp[cli]>=1.7.1",
+]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = ["pyright>=1.1.389", "pytest>=8.3.3", "ruff>=0.8.0"]
+
+[project.scripts]
+fangcloud-mcp = "fangcloud_mcp:main"
