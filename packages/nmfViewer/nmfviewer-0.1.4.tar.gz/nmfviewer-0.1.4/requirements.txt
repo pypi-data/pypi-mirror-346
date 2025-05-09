@@ -1,0 +1,6 @@
+automatic-spike-detection==1.3.0
+pyqtgraph
+PyQt6
+pandas
+numpy
+typing-extensions
