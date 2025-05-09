@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: processador-de-imagem-zoemateus324
+Version: 0.0.2
+Summary: My first application of image processing with python language
+Home-page: https://github.com/Zoemateus324/processador-de-imagem
+Author: Zoe Santos
+Author-email: zmmateus2@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image>0.16.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+#   Image_procressing
+
+Description.
+The package image_processing is used to:
+Processing:
+    -Histrogram matching
+    - Structural similarity
+    -Resize image
+Utils:
+    -Read image
+    -Save image
+    -Plot image
+    -Plot result
+    -Plot Ristogram
+
+
+
+## Installation
+use the package manager [pip] (https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install image_processing
+```
+
+##usage
+```python
+from package name.module1_name import file1_name
+file1_name.my_function()
+
+##  Author
+Zoe_santos
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

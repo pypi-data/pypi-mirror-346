@@ -1,0 +1,13 @@
+README.md
+setup.py
+Processing/__init__.py
+Processing/combination.py
+Processing/transformation.py
+processador_de_imagem_zoemateus324.egg-info/PKG-INFO
+processador_de_imagem_zoemateus324.egg-info/SOURCES.txt
+processador_de_imagem_zoemateus324.egg-info/dependency_links.txt
+processador_de_imagem_zoemateus324.egg-info/requires.txt
+processador_de_imagem_zoemateus324.egg-info/top_level.txt
+utils/__init__.py
+utils/io.py
+utils/plot.py
