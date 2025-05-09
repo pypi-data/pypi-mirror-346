@@ -1,0 +1,11 @@
+appimage_installer/__init__.py,sha256=RKm0MVTJW8aeAqR0oSfIyhgDhxNYFbwfVlr5QR2czWU,16272
+appimage_installer/locales/de.json,sha256=yVMAdZfqPMpXIrc8pCoHgSsKTByDMzbx6iQn3eYRH4I,1351
+appimage_installer/locales/en.json,sha256=_9Py5Bjyj4QZelcAwn5HyQCAX-ePNEu63a8vAwGcnGg,1345
+appimage_installer/locales/fr.json,sha256=jFm-OmlPKwN6J--K25WhLWFFbFphhKmIyJxeVHsi0Ps,2116
+appimage_installer/locales/tr.json,sha256=pc_MGXcZSB39qDX2It8jLCOtwU5ZD7I64TfGRrLnjGc,2009
+appimage_installer-1.0.1.dist-info/licenses/LICENSE,sha256=F28bZzjOgPxxSXbku6jYAwxygTD01YA6H8mbdzkgJi4,1075
+appimage_installer-1.0.1.dist-info/METADATA,sha256=mxD_fJX1o49cdj6um36Haa4FXOstYx-7dO1xgRxIUro,1475
+appimage_installer-1.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+appimage_installer-1.0.1.dist-info/entry_points.txt,sha256=lxkw9e_bHFiUz0QbsEqsHCQwE1CnN1W3nQrk53QTJIg,63
+appimage_installer-1.0.1.dist-info/top_level.txt,sha256=ICd9Ms1_xcy5_OIHzRpIuu2RH_sXnq_Gv9HJ8CjA7tc,19
+appimage_installer-1.0.1.dist-info/RECORD,,
