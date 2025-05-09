@@ -1,0 +1,8 @@
+setup.py
+matlab_cli/__init__.py
+matlab_cli/__main__.py
+matlab_cli.egg-info/PKG-INFO
+matlab_cli.egg-info/SOURCES.txt
+matlab_cli.egg-info/dependency_links.txt
+matlab_cli.egg-info/entry_points.txt
+matlab_cli.egg-info/top_level.txt
