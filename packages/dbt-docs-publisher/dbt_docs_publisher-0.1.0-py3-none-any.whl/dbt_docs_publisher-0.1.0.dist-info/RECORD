@@ -1,0 +1,11 @@
+dbt_docs_publisher/__init__.py,sha256=b_0J4FI-mN7pBGeu7bByJIAn9UWUBhIwDWcizYLc4iw,118
+dbt_docs_publisher/cli.py,sha256=HB3zP5Ec-YuPwinw_6TX3PxUTjzhG1d_f4dWKOrNCv4,2129
+dbt_docs_publisher/uploader.py,sha256=L7KdbsJH4yU6F_4ffdEN1Dcc5goB-Ku9-AyJiI2x8T8,5329
+tests/__init__.py,sha256=dRFoXc-cgn0qrVEMih2ldFOk6NCXxcvadwk14HqZ9qU,36
+tests/test_cli.py,sha256=MkBqyxNvlj9bTg6HLjAbDtjXz3ACBCB-gHcTEgPdmDg,1115
+dbt_docs_publisher-0.1.0.dist-info/LICENSE,sha256=Y4G9NQ0wb6IXnwyTDN_FoXB5N4qLqrZYRNZdY4bJedM,1056
+dbt_docs_publisher-0.1.0.dist-info/METADATA,sha256=a9mo6iG6NA8eGFiNWmJFS4RJFkVtWSH-DM_zzhljrEg,2805
+dbt_docs_publisher-0.1.0.dist-info/WHEEL,sha256=mguMlWGMX-VHnMpKOjjQidIo1ssRlCFu4a4mBpz1s2M,91
+dbt_docs_publisher-0.1.0.dist-info/entry_points.txt,sha256=Wbwmn5HG10awVW-JBTSr6UhZRTu6xEqh_cjg6P6UM-o,52
+dbt_docs_publisher-0.1.0.dist-info/top_level.txt,sha256=vAkZ1wfgoa4O2LHKWbxuuz3lrCCnQep2k4XKCQZu4Rg,25
+dbt_docs_publisher-0.1.0.dist-info/RECORD,,
