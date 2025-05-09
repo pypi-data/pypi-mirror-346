@@ -1,0 +1,14 @@
+meds_reader/__init__.py,sha256=NAWP10atArfCd7IqnK2OJEM_sTzbo73e1idltiYTJZQ,11847
+meds_reader/__init__.pyi,sha256=gSiSia264QemFrrAb6r9U8GkF169GnFgGif7Moqm3eE,3345
+meds_reader/_meds_reader.cp310-win_amd64.pyd,sha256=RiLj-1C2fJwcOW0GjVsXqT-OyosRInKAF4LYrLC1_Yg,235520
+meds_reader/meds_reader_convert.cp310-win_amd64.pyd,sha256=l1STew3LoydzjCapF2gCLhpsTDjQB8D4XDp2Lb7ET08,15680000
+meds_reader/meds_reader_filter.cp310-win_amd64.pyd,sha256=KuzFKGg9XlYjeb1U5qLV8DsCZKvddgT17xoM_2M3iL0,407552
+meds_reader/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+meds_reader/transform.py,sha256=6sDKpLFptb8zuIqYAm9txiKb1WaYBRS3wL-8J-Ry-Os,7103
+meds_reader/transform.pyi,sha256=Y0GFSO2oBjSXH0pvbXVj3DJuCz8wnKx6rh8Y4M_2TcA,1673
+meds_reader-0.1.14.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+meds_reader-0.1.14.dist-info/METADATA,sha256=P05MVeauYLrfBC89kskXRd7-w7o2xZVNT-uJnHqO0oQ,3048
+meds_reader-0.1.14.dist-info/WHEEL,sha256=cApr8aT7ro1gNNNzftTDVqaaXPK4_jWf4Qi4QFW6aVk,101
+meds_reader-0.1.14.dist-info/entry_points.txt,sha256=dFho07FRN7jHXz2NfQ0fiP6acmOmS43cUOIIa3Vyt3w,176
+meds_reader-0.1.14.dist-info/top_level.txt,sha256=krMWExcZNaLkkDQELnTkX3OJtN1yi6UPpdHbdJn7qNo,12
+meds_reader-0.1.14.dist-info/RECORD,,
