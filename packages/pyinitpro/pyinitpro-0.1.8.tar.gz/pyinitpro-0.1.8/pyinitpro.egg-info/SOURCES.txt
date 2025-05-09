@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+pyinit/__init__.py
+pyinit/__main__.py
+pyinit/templates/__init__.py
+pyinit/templates/data_management.py.tpl
+pyinit/templates/env.tpl
+pyinit/templates/mailosaur_configuration.py.tpl
+pyinit/templates/project_configuration.py.tpl
+pyinitpro.egg-info/PKG-INFO
+pyinitpro.egg-info/SOURCES.txt
+pyinitpro.egg-info/dependency_links.txt
+pyinitpro.egg-info/entry_points.txt
+pyinitpro.egg-info/requires.txt
+pyinitpro.egg-info/top_level.txt
