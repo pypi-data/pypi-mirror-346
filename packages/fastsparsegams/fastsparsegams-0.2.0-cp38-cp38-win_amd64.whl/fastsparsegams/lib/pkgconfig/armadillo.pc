@@ -1,0 +1,9 @@
+libdir=D:/a/L0Learn/L0Learn/python/_skbuild/win-amd64-3.8/cmake-install/fastsparsegams/lib
+includedir=D:/a/L0Learn/L0Learn/python/_skbuild/win-amd64-3.8/cmake-install/fastsparsegams/include
+
+Name: armadillo
+Description: C++ library for linear algebra and scientific computing with MATLAB-like syntax
+URL: http://arma.sourceforge.net
+Version: 14.4.0
+Cflags: -I${includedir}
+Libs: -L${libdir} -larmadillo
