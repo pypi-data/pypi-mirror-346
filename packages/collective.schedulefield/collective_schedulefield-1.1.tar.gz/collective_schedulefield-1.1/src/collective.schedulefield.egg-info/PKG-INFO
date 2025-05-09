@@ -1,0 +1,221 @@
+Metadata-Version: 2.4
+Name: collective.schedulefield
+Version: 1.1
+Summary: Schedule behaviors for Plone content types
+Home-page: https://github.com/IMIO/collective.schedulefield/
+Author: iMio
+Author-email: support@imio.be
+License: GPL version 2
+Keywords: Python Plone CMS
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Plone :: 6.0
+Classifier: Framework :: Plone :: 6.1
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Requires-Python: >=3.10
+License-File: LICENSE.GPL
+License-File: LICENSE.rst
+Requires-Dist: setuptools
+Requires-Dist: Plone
+Provides-Extra: test
+Requires-Dist: plone.app.testing; extra == "test"
+Requires-Dist: plone.app.contenttypes[test]; extra == "test"
+Requires-Dist: Products.CMFPlacefulWorkflow; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-plone; extra == "test"
+Requires-Dist: tox; extra == "test"
+Provides-Extra: dev
+Requires-Dist: i18ndude; extra == "dev"
+Requires-Dist: plone.exportimport; extra == "dev"
+Requires-Dist: plone.meta; extra == "dev"
+Requires-Dist: zest.releaser; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+collective.schedulefield
+========================
+
+Schedule behaviors for Plone content types.
+
+
+Features
+--------
+
+- schedule or multi-schedule (with dates ranges) behaviors to define schedules
+  (morning / afternoon / comment) by day of week
+- exceptional closure behavior to define closing days
+
+
+Installation
+------------
+
+Install ``collective.schedulefield`` by adding it to your buildout: ::
+
+    [buildout]
+
+    ...
+
+    eggs =
+        collective.schedulefield
+
+
+and then running ``bin/buildout``
+
+
+Compatibility
+-------------
+
+Versions 1.x are developed for Plone 6.
+
+Versions 0.x are developed for Plone 4 & Plone 5.
+Please note that they do not provide the full functionality (no multi-schedules,
+no exceptional closures, no RESTAPI serializer).
+
+
+Contribute
+----------
+
+Have an idea? Found a bug? Let us know by `opening a ticket`_.
+
+- Issue Tracker: https://github.com/IMIO/collective.schedulefield/issues
+- Source Code: https://github.com/IMIO/collective.schedulefield
+
+
+License
+-------
+
+The project is licensed under the GPLv2.
+
+.. _`opening a ticket`: https://github.com/IMIO/collective.schedulefield/issues
+
+Contributors
+============
+
+- Gillian Sampont, Original Author [Affinitic]
+- Benoît Suttor [iMio]
+- Christophe Boulanger [iMio]
+- François Bruynbroeck [Affinitic]
+- Laurent Lasudry [Affinitic]
+- Martin Peeters [Affinitic]
+- Rémi Dubois [iMio]
+- Stéphan Geulette [iMio]
+
+# Changelog
+
+## 1.1 (2025-05-08)
+
+- Update locales https://github.com/IMIO/collective.schedulefield/issues/3
+  [remdub]
+
+- Add test environment using pytest, with test coverage reaching 80% https://github.com/IMIO/collective.schedulefield/issues/2
+  [remdub]
+
+- Fix MultiSchedule viewlet https://github.com/IMIO/collective.schedulefield/issues/4
+  [remdub]
+
+- Upgrade dev environment to Plone 6.1-latest
+  [remdub]
+
+
+## 1.0a3 (2023-01-12)
+
+- MANIFEST / release fix
+  [laulaz]
+
+
+## 1.0a2 (2023-01-12)
+
+- Drop support for Plone 4 & Plone 5
+  [laulaz]
+
+- Fix AttributeError traceback when accessing subforms
+  [laulaz]
+
+
+## 1.0a1 (2022-12-13)
+
+- Add basic serializers / deserializers
+  [laulaz]
+
+- Display schedule viewlets only on views (not on folder_contents, cropping, etc.)
+  [laulaz]
+
+- Fix error when validating an empty value for a schedule
+  [laulaz]
+
+- Add missing key_type/value_type for Schedule field. This is needed (at least)
+  to export types schemas information
+  [laulaz]
+
+- Fix python3 compatibility : Use @implementer instead of implements
+  [boulch]
+
+- Handle multi schedules and exceptional closures
+  [fbruynbroeck]
+
+
+## 0.6.1 (2018-10-15)
+
+- Do not display comment if empty.
+  [bsuttor]
+
+
+## 0.6 (2018-04-23)
+
+- Also view schedule if only comment is set.
+  [bsuttor]
+
+- Added missing z3c.form meta.zcml.
+  [sgeulette]
+
+
+## 0.5 (2017-04-27)
+
+- Bugfix: get json schedule.
+  [bsuttor]
+
+
+## 0.4 (2017-04-25)
+
+- Bugfix: do not try to load json value if there is no values.
+  [bsuttor]
+
+
+## 0.3 (2017-03-01)
+
+- Do not render the viewlet if there is no values
+  [mpeeters]
+
+
+## 0.2 (2016-07-14)
+
+- Add the ScheduledContent behavior
+  [mpeeters]
+
+- Add a comment field for each schedule day
+  [mpeeters]
+
+
+## 0.1 (2014-08-26)
+
+ - Initial release
+

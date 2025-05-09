@@ -1,0 +1,24 @@
+<div class="object-widget"
+     tal:attributes="
+       class view/klass;
+     "
+     i18n:domain="collective.schedulefield"
+>
+  <span i18n:translate="">Schedule</span>
+  "<span tal:replace="python: view.widgets.get('title').value"></span>"
+  <br />
+  <tal:block repeat="dates python: view.widgets.get('dates').value">
+    <tal:condition condition="python: dates['start_date'] != dates['end_date']">
+      <span i18n:translate="">From</span>
+      <span tal:replace="dates/start_date"></span>
+      <span i18n:translate="">To</span>
+      <span tal:replace="dates/end_date"></span>
+    </tal:condition>
+    <tal:condition condition="python: dates['start_date'] == dates['end_date']">
+      <span i18n:translate="">On</span>
+      <span tal:replace="dates/start_date"></span>
+    </tal:condition>
+    <br />
+  </tal:block>
+  <div tal:replace="structure python: view.widgets.get('schedule').render()"></div>
+</div>

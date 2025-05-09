@@ -1,0 +1,17 @@
+setuptools
+Plone
+
+[dev]
+i18ndude
+plone.exportimport
+plone.meta
+zest.releaser
+
+[test]
+plone.app.testing
+plone.app.contenttypes[test]
+Products.CMFPlacefulWorkflow
+pytest
+pytest-cov
+pytest-plone
+tox

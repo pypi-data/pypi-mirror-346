@@ -1,0 +1,14 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      tal:omit-tag=""
+      i18n:domain="collective.schedulefield"
+>
+  <tal:if condition="view/can_view">
+    <fieldset class="Schedule"
+              tal:condition="view/has_value"
+    >
+      <legend i18n:translate="">Schedule</legend>
+      <div tal:replace="structure view/++widget++schedule/render"></div>
+    </fieldset>
+  </tal:if>
+</html>

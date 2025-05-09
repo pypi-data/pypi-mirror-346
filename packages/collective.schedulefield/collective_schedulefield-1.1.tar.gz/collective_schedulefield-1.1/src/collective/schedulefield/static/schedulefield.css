@@ -1,0 +1,28 @@
+div.schedule-widget-day {
+    clear: both;
+}
+
+div.schedule-widget-day div {
+    float: left;
+    margin: 0;
+}
+
+div.schedule-widget-day .title {
+    width: 5em;
+}
+
+div.schedule-widget-day .morningstart,
+div.schedule-widget-day .morningend,
+div.schedule-widget-day .afternoonstart,
+div.schedule-widget-day .afternoonend {
+    width: 3em;
+}
+
+div.schedule-widget-day .morningend,
+div.schedule-widget-day .afternoonend {
+    margin-right: 1em;
+}
+
+div.schedule-widget-day .comment {
+    font-size: 100%;
+}
