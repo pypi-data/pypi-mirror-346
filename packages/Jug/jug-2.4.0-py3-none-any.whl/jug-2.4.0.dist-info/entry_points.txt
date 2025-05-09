@@ -1,0 +1,3 @@
+[console_scripts]
+jug = jug.jug:main
+jug-execute = jug.jug:main_execute
