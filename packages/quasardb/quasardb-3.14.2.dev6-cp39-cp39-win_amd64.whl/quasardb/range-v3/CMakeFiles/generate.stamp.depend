@@ -1,0 +1,18 @@
+# CMake generation dependency list for this directory.
+C:/TeamCity/temp/buildTmp/build-env-5yn1yw53/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/BasicConfigVersion-ExactVersion.cmake.in
+C:/TeamCity/temp/buildTmp/build-env-5yn1yw53/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDependentOption.cmake
+C:/TeamCity/temp/buildTmp/build-env-5yn1yw53/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CMakePackageConfigHelpers.cmake
+C:/TeamCity/temp/buildTmp/build-env-5yn1yw53/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake
+C:/TeamCity/temp/buildTmp/build-env-5yn1yw53/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/CheckCXXSourceCompiles.cmake
+C:/TeamCity/temp/buildTmp/build-env-5yn1yw53/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/FindDoxygen.cmake
+C:/TeamCity/temp/buildTmp/build-env-5yn1yw53/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/FindGit.cmake
+C:/TeamCity/temp/buildTmp/build-env-5yn1yw53/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake
+C:/TeamCity/temp/buildTmp/build-env-5yn1yw53/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/FindPackageMessage.cmake
+C:/TeamCity/temp/buildTmp/build-env-5yn1yw53/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/GNUInstallDirs.cmake
+C:/TeamCity/temp/buildTmp/build-env-5yn1yw53/Lib/site-packages/cmake/data/share/cmake-4.0/Modules/WriteBasicConfigVersionFile.cmake
+C:/TeamCity/work/938b0bdf6727d1ad/thirdparty/range-v3/CMakeLists.txt
+C:/TeamCity/work/938b0bdf6727d1ad/thirdparty/range-v3/Version.cmake
+C:/TeamCity/work/938b0bdf6727d1ad/thirdparty/range-v3/cmake/ranges_env.cmake
+C:/TeamCity/work/938b0bdf6727d1ad/thirdparty/range-v3/cmake/ranges_flags.cmake
+C:/TeamCity/work/938b0bdf6727d1ad/thirdparty/range-v3/cmake/ranges_options.cmake
+C:/TeamCity/work/938b0bdf6727d1ad/thirdparty/range-v3/version.hpp.in
