@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: soliscloud
+Version: 0.0.4
+Summary: A small package to work with Solis Cloud API
+Home-page: https://github.com/skywatcher-uk/soliscloud
+Author: Skywatcher
+Author-email: integrations@skywatcher.uk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: json
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
