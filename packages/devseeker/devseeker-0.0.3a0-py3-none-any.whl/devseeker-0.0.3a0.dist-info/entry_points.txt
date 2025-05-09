@@ -1,0 +1,7 @@
+[console_scripts]
+bench=devseeker.benchmark.__main__:app
+devseeker=devseeker.applications.cli.main:app
+ds=devseeker.applications.cli.main:app
+ds_test_application=tests.caching_main:app
+dste=devseeker.applications.cli.main:app
+
