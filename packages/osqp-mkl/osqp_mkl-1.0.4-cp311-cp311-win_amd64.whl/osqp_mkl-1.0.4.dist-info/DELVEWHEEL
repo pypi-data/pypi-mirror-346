@@ -1,0 +1,2 @@
+Version: 1.10.1
+Arguments: ['C:\\hostedtoolcache\\windows\\Python\\3.9.13\\x64\\Scripts\\delvewheel', 'repair', 'C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-o_kb8go4\\cp311-win_amd64\\built_wheel\\osqp_mkl-1.0.4-cp311-cp311-win_amd64.whl', '--wheel-dir', 'C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-o_kb8go4\\cp311-win_amd64\\repaired_wheel', '--no-mangle-all', '--add-path', 'C:/Program Files (x86)/Intel/oneAPI/mkl/latest/redist/intel64', '--add-dll', 'mkl_sequential.2.dll;mkl_def.2.dll;mkl_intel_thread.2.dll']
