@@ -1,0 +1,7 @@
+gold_pass_dialog=원하는 <@t>회원 번호</>를 입력하세요 (랜덤으로 하려면 <@q>빈칸</>으로(아무것도 입력X), 삭제하려면 <@q>-1</>를 입력하세요.):
+gold_pass=골드 회원
+gold_pass_remove_success=<@su>성공적으로 골드 회원을 삭제했습니다.</>
+gold_pass_get_success=<@su>성공적으로 골드회원을 추가했습니다. (id: <@t>{id}</>)</>
+
+officer_pass_fixed=<@su>냥클럽 충돌 문제를 성공적으로 해결했습니다.</>
+fix_officer_pass_crash=Fix Officer Club 충돌

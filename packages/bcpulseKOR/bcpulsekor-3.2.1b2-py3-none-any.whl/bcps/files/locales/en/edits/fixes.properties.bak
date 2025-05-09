@@ -1,0 +1,10 @@
+fix_gamatoto_crash=gamatoto에서 게임이 충돌하는 문제를 해결합니다.
+fix_time_errors=시간 관련 문제 해결
+
+fix_gamatoto_crash_success=<@su>gamatoto에서 게임이 충돌하는 문제를 성공적으로 해결했습니다.</>
+fix_time_errors_success=<@su>시간 관련 문제를 성공적으로 해결했습니다. <@w>(이 기능을 사용하려면 두 기기 모두의 시간이 정확해야 합니다.)</></>
+
+fixes=수정사항
+
+unlock_equip_menu=장비 메뉴 잠금 해제
+equip_menu_unlocked=<@su>장비 메뉴 잠금 해제 성공</>

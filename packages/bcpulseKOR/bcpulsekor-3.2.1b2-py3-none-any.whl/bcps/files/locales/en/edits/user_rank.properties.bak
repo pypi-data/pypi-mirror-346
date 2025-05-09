@@ -1,0 +1,9 @@
+claim=청구
+unclaim=청구취소
+fix_claimed=수정요청됨
+claim_or_unclaim_ur=사용자 순위 보상을 <@t>청구</>하거나 <@t>청구 취소</>하거나 <@t>청구된 보상을 수정(현재 사용자 순위보다 높은 보상의 청구 취소)</>하시겠습니까?:
+select_ur=사용자 랭크 보상 선택
+ur_claimed_success=<@su>사용자 랭크 보상을 성공적으로 획득했습니다.</>
+ur_unclaimed_success=<@su>사용자 랭크 보상 청구 취소 성공</>
+ur_string=순위: <@s>{rank}: {description}
+ur_fix_claimed_success=<@su>사용자 랭크 보상 청구가 성공적으로 완료되었습니다.</>
