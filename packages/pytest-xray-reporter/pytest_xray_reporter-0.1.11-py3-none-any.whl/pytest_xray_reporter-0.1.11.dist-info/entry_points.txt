@@ -1,0 +1,2 @@
+[pytest11]
+pytest_xray_reporter = pytest_xray_reporter.plugin
