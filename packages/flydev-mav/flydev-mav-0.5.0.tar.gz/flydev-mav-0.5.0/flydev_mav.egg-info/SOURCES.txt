@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+flydev_comandos/__init__.py
+flydev_comandos/drone.py
+flydev_mav.egg-info/PKG-INFO
+flydev_mav.egg-info/SOURCES.txt
+flydev_mav.egg-info/dependency_links.txt
+flydev_mav.egg-info/requires.txt
+flydev_mav.egg-info/top_level.txt
