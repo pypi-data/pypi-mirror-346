@@ -1,0 +1,65 @@
+name: Release to PyPI
+
+on:
+  push:
+    tags:
+      - 'v*'  # 当推送 v 开头的标签时触发
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write  # 用于 PyPI 的 OIDC
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 重要：获取完整历史和标签
+          
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install build setuptools wheel setuptools_scm twine
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true     
+
+      - name: Build package
+        run: python -m build
+
+      - name: Display generated version file
+        run: |
+          echo "Contents of mixin_client/_version.py:"
+          cat mixin_client/_version.py || echo "_version.py not found"  
+      
+      - name: Inspect wheel metadata
+        run: |
+          WHEEL_FILE=$(ls dist/*.whl)
+          echo "Checking wheel file: $WHEEL_FILE"
+          unzip -l "$WHEEL_FILE"
+          # 更详细的，解压 METADATA 文件并打印
+          unzip -p "$WHEEL_FILE" "*.dist-info/METADATA" > METADATA.txt
+          echo "--- METADATA contents ---"
+          cat METADATA.txt
+          echo "--- End METADATA ---"
+          # 检查 Name 和 Version 是否存在
+          grep -i "^Name:" METADATA.txt || echo "Name field MISSING in METADATA"
+          grep -i "^Version:" METADATA.txt || echo "Version field MISSING in METADATA"        
+      - name: Check built packages
+        run: python -m twine check dist/*  
+        
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.8.11
+          
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/*
+          generate_release_notes: true

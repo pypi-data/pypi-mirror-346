@@ -1,0 +1,83 @@
+name: Create Tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_type:
+        description: 'Version type (major, minor, patch)'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史
+          fetch-tags: true  # 显式获取所有标签
+          
+      - name: Get latest tag
+        id: latest-tag
+        run: |
+          git fetch --tags
+          latest_tag=$(git describe --tags $(git rev-list --tags --max-count=1) 2>/dev/null || echo "v0.0.0")
+          echo "Latest tag: $latest_tag"
+          echo "latest_tag=$latest_tag" >> $GITHUB_OUTPUT
+          
+      - name: Calculate new version
+        id: new-version
+        run: |
+          latest_tag="${{ steps.latest-tag.outputs.latest_tag }}"
+          latest="${latest_tag#v}"
+          IFS='.' read -r major minor patch <<< "$latest"
+      
+          case ${{ github.event.inputs.version_type }} in
+            major)
+              new_major=$((major + 1))
+              new_minor=0
+              new_patch=0
+              ;;
+            minor)
+              new_major=$major
+              new_minor=$((minor + 1))
+              new_patch=0
+              ;;
+            patch)
+              new_major=$major
+              new_minor=$minor
+              new_patch=$((patch + 1))
+              ;;
+          esac
+      
+          new_version="v${new_major}.${new_minor}.${new_patch}"
+          echo "新版本: $new_version"
+          echo "new_version=$new_version" >> $GITHUB_OUTPUT
+
+      - name: Create and push tag
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git tag ${{ steps.new-version.outputs.new_version }}
+          git push origin ${{ steps.new-version.outputs.new_version }}
+          echo "标签 ${{ steps.new-version.outputs.new_version }} 已创建并推送"
+
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install build wheel setuptools setuptools_scm
+          
+      - name: Debug Git Info
+        run: |
+          git tag -l
+          git describe --tags || echo "No tags found"
+          
+      - name: Build package
+        run: python -m build
