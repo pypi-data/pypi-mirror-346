@@ -1,0 +1,13 @@
+lngdetector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lngdetector/detect.py,sha256=zWBZjFjRQRDIsRbuHN5j0RqNqSP3hLZEJ_JTIWgTa6U,2466
+lngdetector/extension_lang.py,sha256=MwMgTfUewVc4oZI4-8J2foHI0PhAdTkmU-igRiIyO5o,1138
+lngdetector/mime_lang.py,sha256=1A31SLH91JiebI7TTSQLWO3oQGy6Vyz8fEd8wua0bMM,1475
+lngdetector/report.py,sha256=4yiGu0fHlR1o96JcGBFXmrKPrlfEVS_bwmKCe5nfgQg,1633
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_detect.py,sha256=Rx999B3GYhNCZeh3SrgZWZN9KAKrJXvL4SWNTjv3sYo,181
+tests/test_report.py,sha256=2x8PXRdPbtEhpDqouyrKNeiesPX_uiGkVvEqUJY8VG4,456
+lngdetector-2025.5.81751.dist-info/METADATA,sha256=yq5TUV23mBoLPvQS1d0dGkBOoms44FOrl_ZiLiMMPgE,3760
+lngdetector-2025.5.81751.dist-info/WHEEL,sha256=lTU6B6eIfYoiQJTZNc-fyaR6BpL6ehTzU3xGYxn2n8k,91
+lngdetector-2025.5.81751.dist-info/entry_points.txt,sha256=x3Eostbnd3QEATOBgLw2QyfAFhlpYMLAkReE2SzKh0E,56
+lngdetector-2025.5.81751.dist-info/top_level.txt,sha256=I2Ey6bfxrsbgLmH5XrkxbxkGEUN-fgH0nXxtoKpD4es,18
+lngdetector-2025.5.81751.dist-info/RECORD,,
