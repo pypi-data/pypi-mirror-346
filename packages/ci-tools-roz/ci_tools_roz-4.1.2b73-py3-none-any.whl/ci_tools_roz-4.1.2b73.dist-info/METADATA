@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: ci-tools-roz
+Version: 4.1.2b73
+Summary: CI tool scripts
+Home-page: https://github.com/rozettatechnology/ci_tools
+Author: Rozetta Technology
+Author-email: info@rozettatechnology.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Requires-Dist: gitpython
+Requires-Dist: pycli
+Requires-Dist: boto3
+Requires-Dist: pyyaml
+Requires-Dist: docker
+Description-Content-Type: text/markdown
+
+Common CI tools
+---------------------
+
+NB if Tox is running under github actions the make sure nexus.rozettatech.com is not in requirements-test.txt
+NOTE: setup.py ready that base version from version.json.
+
+This will hopefully be resolved by using git tags and scm_version
+
+requirements handling
+```
+virtualenv venv --python python3
+source venv/bin/activate
+
+pip install --upgrade pip
+pip install pip-tools
+pip-compile --output-file requirements.txt requirements.in
+pip-compile --output-file requirements-test.txt requirements-test.in
+```
+
+NB Trialling a reduced requirements.in
+The installed package is going to inherit fr
+om the environment (e.g. CI slave wheree it is installed)
+
+requirements-test.in is more full blown (for tox virtualenvs)
+
+

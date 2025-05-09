@@ -1,0 +1,7 @@
+[console_scripts]
+ci_credentials = ci_tools.ci_credentials:main
+ci_docker = ci_tools.ci_docker:main
+jenkins_pipeline = ci_tools.version:print_jenkins_pipeline
+recover_s3 = ci_tools.recover_s3:main
+vpc_peering = ci_tools.vpc_peering:main
+
