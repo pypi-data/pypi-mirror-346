@@ -1,0 +1,45 @@
+Metadata-Version: 2.3
+Name: code-comments
+Version: 0.4.0
+Summary: Tool to report on comments such as TODO
+License: MIT
+Author: Russell Whelan
+Author-email: russell.whelan+python@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: typer (>=0.15.3,<0.16.0)
+Description-Content-Type: text/markdown
+
+# code-comments
+
+This project was created as a way of creating a central "annotation" file of all the useful
+notes that might be created in a code base such as `todo` or `trivy` comments.
+
+## Configuration
+
+The project can be configured via a TOML file which by default is called `.code-annotations.toml` but can be override with the `--config` flag.
+
+Below is an example which can be found at `.code-annotations.toml`
+
+```TOML
+file_suffix=[".tf"]
+output_file="ANNOTATIONS.md"
+comment_syntax = ["#"]
+
+[[headers]]
+comment = "tfsec"
+table_headers = "File:Line|Type|Comment"
+[[headers]]
+comment = "todo"
+table_headers = "File:Line|Date|Comment"
+
+```
+

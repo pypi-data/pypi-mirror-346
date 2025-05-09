@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "code-comments"
+version = "0.4.0"
+description = "Tool to report on comments such as TODO"
+authors = ["Russell Whelan <russell.whelan+python@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+toml = "^0.10.2"
+click = "^8.1.7"
+typer = "^0.15.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+code-comments = "code_comments.cmd:cli"
