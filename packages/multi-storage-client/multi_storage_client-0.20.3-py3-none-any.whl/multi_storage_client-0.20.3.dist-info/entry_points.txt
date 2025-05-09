@@ -1,0 +1,6 @@
+[console_scripts]
+msc-benchmark=multistorageclient.commands.msc_benchmark:main
+
+[fsspec.specs]
+msc=multistorageclient.contrib.async_fs.MultiAsyncFileSystem
+
