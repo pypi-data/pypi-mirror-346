@@ -1,0 +1,7 @@
+numpy<2.0.0
+psutil
+opencv-python
+matplotlib
+Pillow
+einops
+PyYaml

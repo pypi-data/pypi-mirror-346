@@ -1,0 +1,12 @@
+README.md
+setup.py
+wxw/__init__.py
+wxw/all_in_one.py
+wxw/common.py
+wxw/modules.py
+wxw/qt5.py
+wxw.egg-info/PKG-INFO
+wxw.egg-info/SOURCES.txt
+wxw.egg-info/dependency_links.txt
+wxw.egg-info/requires.txt
+wxw.egg-info/top_level.txt
