@@ -1,0 +1,65 @@
+[tool.poetry]
+authors = ["Idein Inc."]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3 :: Only",
+]
+description = "actfw's additional components using GStreamer"
+keywords = ['actcast']
+license = "MIT"
+name = "actfw-gstreamer"
+readme = "README.md"
+repository = "https://github.com/Idein/actfw-gstreamer"
+version = "0.5.0"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+Pillow = ">=8, <11"
+PyGObject = "^3"
+actfw-core = "^2.0.0"
+result = "^0.6.0"
+
+[tool.poetry.group.dev.dependencies]
+Sphinx = "^4.3.0"
+numpy = [
+  { version = "^1.21.3", python = ">=3.7,<3.11" },
+  { version = "^1.26.0", python = ">=3.11" },
+]
+pysen = { version = "^0.10.1" }
+pytest = "^6.2.3"
+sphinx-theme = "^1.0"
+black = "^23"
+flake8 = "3.9.2"
+flake8-bugbear = "21.9.2"
+isort = "5.1.4"
+mypy = "^1"
+types-setuptools = "^69"
+types-Pillow = ">=5"
+setuptools = "^80.3.1"
+
+[tool.poetry.urls]
+"Repository" = "https://github.com/Idein/actfw-gstreamer"
+"Documentation" = "https://idein.github.io/actfw-gstreamer/latest/"
+"Changelog" = "https://github.com/Idein/actfw-gstreamer/blob/master/CHANGELOG.md"
+
+[tool.pysen]
+version = "0.10"
+
+[tool.pysen.lint]
+enable_black = true
+enable_flake8 = true
+enable_isort = true
+enable_mypy = true
+mypy_preset = "strict"
+line_length = 128
+py_version = "py38"
+
+[[tool.pysen.lint.mypy_targets]]
+paths = ["."]
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
