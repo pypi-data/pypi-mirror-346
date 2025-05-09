@@ -1,0 +1,54 @@
+# Container for building the environment
+FROM condaforge/miniforge3:latest
+
+# System packages
+RUN apt-get update -y && \
+    echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
+    apt-get install -y -q dialog apt-utils && \
+    apt-get install -y -q \
+        bzip2 \
+        curl \
+        fish \
+        gcc \
+        gdb \
+        make \
+        nano \
+        python3-pip \
+        tree \
+        wget \
+        cron \
+        zip \
+        unzip \
+        vim \
+        bash-completion \
+        git \
+        git-lfs && \
+    git-lfs install && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# update base environment
+RUN --mount=type=cache,target=/opt/conda/pkgs \
+    mamba update --all -y
+
+# Install Google Chrome
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list' \
+    && apt-get update \
+    && apt-get install -y google-chrome-stable \
+    && rm -rf /var/lib/apt/lists/*
+
+# copy some needed stuff to /root
+COPY *.yml /root/
+RUN mamba env create -n ci_env -f /root/environment_s2downloader.yml
+
+# Make RUN commands use the new environment:
+SHELL ["conda", "run", "-n", "ci_env", "/bin/bash", "-c"]
+
+# Run the chromedriver_autoinstaller to install the appropriate ChromeDriver version
+RUN python -c "import chromedriver_autoinstaller; chromedriver_autoinstaller.install()"
+
+# Allow statements and log messages to immediately appear in the Knative logs
+ENV PYTHONUNBUFFERED True
+
+# NOTE: The pkgs directory (cache) is deleted because otherwise conda env create takes hours within a docker container.
+RUN /bin/bash -i -c "rm -rf /root/mambaforge/pkgs"

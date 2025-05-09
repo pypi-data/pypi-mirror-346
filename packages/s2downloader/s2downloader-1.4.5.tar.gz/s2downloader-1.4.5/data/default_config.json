@@ -1,0 +1,65 @@
+{
+    "user_settings": {
+        "tile_settings": {
+            "platform": {
+                "in": [
+                    "sentinel-2b",
+                    "sentinel-2a"
+                ]
+            },
+            "s2:nodata_pixel_percentage": {
+                "lte": 100
+            },
+            "mgrs:utm_zone": {},
+            "mgrs:latitude_band": {},
+            "mgrs:grid_square": {},
+            "eo:cloud_cover": {
+                "lte": 100
+            },
+            "bands": [
+                "coastal",
+                "blue",
+                "rededge1"
+            ]
+        },
+        "aoi_settings": {
+            "bounding_box": [
+                13.058397,
+                52.376620,
+                13.073049,
+                52.383835
+            ],
+            "apply_SCL_band_mask": false,
+            "SCL_filter_values": [
+                3,
+                7,
+                8,
+                9,
+                10
+            ],
+            "aoi_min_coverage": 90,
+            "SCL_masked_pixels_max_percentage": 100,
+            "valid_pixels_min_percentage": 10,
+            "resampling_method": "cubic",
+            "date_range": [
+                "2021-09-04",
+                "2021-09-05"
+            ]
+        },
+        "result_settings": {
+            "results_dir": "data/data_output/",
+            "target_resolution": 10,
+            "download_data": true,
+            "download_thumbnails": false,
+            "download_overviews": false,
+            "logging_level": "INFO",
+            "path_to_logfile": "data/data_output/"
+        }
+    },
+    "s2_settings": {
+        "collections": [
+            "sentinel-2-l2a"
+        ],
+        "tiles_definition_path": "data/sentinel_2_index_shapefile_attr.zip"
+    }
+}
