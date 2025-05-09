@@ -1,0 +1,1 @@
+Refactoring `SendGroupMsgReq` and `SendGroupMsgRes` based on the OpenAPI spec. Defined nested models for `FileMessageData`, `FileMessage`, and `SendGroupMsgResData`. Added type hints, Field descriptions, and default values where appropriate. Used `Literal` for status and message type. Used `int | str` for `group_id`. Removed unused imports. Ensured all required fields are marked.

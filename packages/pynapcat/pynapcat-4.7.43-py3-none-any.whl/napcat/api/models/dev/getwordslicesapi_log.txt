@@ -1,0 +1,6 @@
+Based on the OpenAPI spec, the request and response schemas are empty. The code has been fixed by:
+1. Removing the unused import `Any`.
+2. Cleaning up `GetWordSlicesReq` and `GetWordSlicesRes` models: removed `pass`, placeholder comments, and `# type: ignore`. Added simple docstrings indicating they represent empty objects as per the spec.
+3. Keeping the `GetWordSlicesAPI` class as it correctly describes the API endpoint and associated models.
+4. Updating the `@tags` in the metadata based on the OpenAPI spec (其他/bug).
+5. Ensuring all type hints and imports comply with the specified guidelines.

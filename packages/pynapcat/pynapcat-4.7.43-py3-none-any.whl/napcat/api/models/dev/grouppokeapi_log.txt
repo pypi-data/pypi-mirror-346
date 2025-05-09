@@ -1,0 +1,11 @@
+Analyzing OpenAPI spec for /group_poke POST.
+Request body requires group_id (number|string) and user_id (number|string). Both are required.
+Fixed GroupPokeReq to include group_id and user_id with type hint int | str and Field descriptions.
+Response body follows the result schema structure without the data field, containing status (ok literal), retcode (number), message (string), wording (string), and echo (string|null). All are required.
+Fixed GroupPokeRes to include status (Literal["ok"]), retcode (int), message (str), wording (str), and echo (str | None) with Field descriptions and appropriate types.
+Removed unused imports (logging, Any).
+Added Literal import.
+Ensured all fields have type hints and descriptions.
+Removed type: ignore comments.
+Ensured no deprecated typing imports are used.
+Added examples to request fields for clarity.

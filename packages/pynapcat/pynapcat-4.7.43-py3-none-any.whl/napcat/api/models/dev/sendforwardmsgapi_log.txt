@@ -1,0 +1,17 @@
+根据OpenAPI文档修复Pydantic模型。
+
+修复过程：
+1.  **分析请求体**: 识别出 `group_id`, `user_id`, `messages`, `news`, `prompt`, `summary`, `source` 字段及其类型和必需状态。注意到 `group_id` 和 `user_id` 在顶层不是必需的，`messages`, `news`, `prompt`, `summary`, `source` 是必需的。
+2.  **分析响应体**: 识别出 `status`, `retcode`, `data`, `message`, `wording`, `echo` 字段及其类型和必需状态。`status` 是常量 "ok"，`data` 是空对象，`echo` 是可空的。
+3.  **定义嵌套模型**: OpenAPI文档中定义了多种消息组件（文本、图片、转发节点等）以及 `news` 列表项。根据OpenAPI的结构，定义了 `TextMessageData`, `FaceMessageData`, `ImageMessageData`, `ReplyMessageData`, `JsonMessageData`, `VideoMessageData`, `FileMessageData`, `MarkdownMessageData` 等简单消息的数据模型，以及包裹它们的组件模型 `TextMessage`, `FaceMessage`, `ImageMessage`, `ReplyMessage`, `JsonMessage`, `VideoMessage`, `FileMessage`, `MarkdownMessage`。
+4.  **处理转发结构**: 定义了 `ForwardContentData`, `ForwardContent`, `ForwardWrapperData`, `ForwardWrapper` 模型来表示OpenAPI中的 `发送forward` 结构。定义了 `NewsItem` 模型。
+5.  **处理递归消息**: OpenAPI文档中的 `一级合并转发消息` 和 `二级合并转发消息` 都包含一个 `content` 列表，其元素可以是任意其他消息组件，包括 `二级合并转发消息` 本身。这构成了递归结构。使用Pydantic v2的字符串前向引用 `'AnyOfMessageComponent'` 来处理 `SecondLevelForwardData` 中的递归引用。
+6.  **定义消息组件联合类型**: 创建 `AnyOfMessageComponent` 联合类型 (`Union`) 包含所有可能出现在 `content` 列表中的消息组件模型。由于递归，需要在定义 `SecondLevelForwardMessage` 之后再定义完整的联合类型。
+7.  **构建一级/二级转发模型**: 定义 `FirstLevelForwardData`, `FirstLevelForwardMessage`, `SecondLevelForwardData`, `SecondLevelForwardMessage`，使其符合OpenAPI中 `一级合并转发消息` 和 `二级合并转发消息` 的结构，特别是 `data` 字段下的子字段及其类型和必需状态。
+8.  **构建顶层请求模型**: 定义 `SendForwardMsgReq`，包含所有顶层请求字段，并使用 `Field` 指定描述和必需状态（根据顶层的 `required` 列表）。可选字段使用 `| None` 并设置默认值 `None`。
+9.  **构建顶层响应模型**: 定义 `SendForwardMsgResData` (空模型) 和 `SendForwardMsgRes`。在 `SendForwardMsgRes` 中使用 `Literal["ok"]` 表示固定值，使用 `| None` 表示可空字段，使用 `Field` 添加描述。
+10. **更新API模型**: 更新 `SendForwardMsgAPI` 类，使其引用新定义的 `SendForwardMsgReq` 和 `SendForwardMsgRes` 类。
+11. **清理**: 移除未使用的导入 (`logging`, `Any`, `ForwardRef`)，确保所有字段都有类型标注，移除 `type: ignore`。
+12. **代码规范**: 遵循编码指南，使用内置类型代替被弃用的typing类型，使用 `|` 表示联合类型和Optional。
+
+修复后的代码现在准确反映了OpenAPI文档中 `/send_forward_msg` 端点的请求和响应结构，包括复杂的嵌套和递归消息类型。

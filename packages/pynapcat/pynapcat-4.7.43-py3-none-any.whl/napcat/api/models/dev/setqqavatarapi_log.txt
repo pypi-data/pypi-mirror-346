@@ -1,0 +1,6 @@
+Refactoring `SetQqAvatarReq`: Added required 'file' field with string type and description based on OpenAPI spec.
+Refactoring `SetQqAvatarRes`: Defined response fields (`status`, `retcode`, `data`, `message`, `wording`, `echo`) based on OpenAPI spec, using `Literal['ok']` for status, `None` for data, and `str | None` for echo. Added descriptions using `Field`.
+Removed unused imports.
+Ensured all fields have type annotations and descriptions.
+Removed `# type: ignore`.
+Updated API metadata class `SetQqAvatarAPI` to reflect the refactored models.

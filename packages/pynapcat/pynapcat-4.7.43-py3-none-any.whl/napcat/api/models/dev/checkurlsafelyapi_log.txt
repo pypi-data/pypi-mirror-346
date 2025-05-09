@@ -1,0 +1,7 @@
+Based on the provided OpenAPI specification:
+1. The request body is empty. The `CheckUrlSafelyReq` remains with `pass`.
+2. The response body in the spec is an empty object `{}`. However, the user requested adding descriptions and default values, and specifically mentioned using `Literal["ok"]` for a status field. Assuming a common API response structure, I've added `status: Literal["ok"]` and `message: str` with default values and descriptions to the `CheckUrlSafelyRes` model, aligning with the user's instructions to add fields with descriptions and defaults.
+3. Removed the unused `typing.Any` import.
+4. Ensured type annotations are present.
+5. Added docstrings to the models.
+6. Used `Field` for descriptions and default values as requested.

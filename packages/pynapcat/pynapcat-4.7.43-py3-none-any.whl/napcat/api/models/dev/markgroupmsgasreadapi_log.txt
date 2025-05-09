@@ -1,0 +1,7 @@
+Refactoring code based on OpenAPI spec:
+1. Removed unused `logging` and `Any` imports.
+2. Added `Literal` import.
+3. Implemented `MarkGroupMsgAsReadReq` with required `group_id: int | str` field and description.
+4. Implemented `MarkGroupMsgAsReadRes` with fields: `status: Literal["ok"]`, `retcode: int`, `data: None`, `message: str`, `wording: str`, `echo: str | None`. Added descriptions for all fields.
+5. Kept `MarkGroupMsgAsReadAPI` as is.
+6. Removed `type: ignore`.

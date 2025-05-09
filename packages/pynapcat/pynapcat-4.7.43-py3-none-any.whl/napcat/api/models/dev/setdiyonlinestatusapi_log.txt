@@ -1,0 +1,10 @@
+Refactoring the SetDiyOnlineStatus model based on the provided OpenAPI spec and coding guidelines.
+1. Defined SetDiyOnlineStatusReq with fields face_id (int | str, required), face_type (int | str | None, optional), and wording (str | None, optional).
+2. Defined SetDiyOnlineStatusRes with fields status (Literal['ok']), retcode (int), data (str), message (str), wording (str), and echo (str | None). All fields are marked as required based on the OpenAPI overrides.
+3. Added Field with descriptions for all fields.
+4. Removed unused import `Any`.
+5. Kept logging import as it might be used elsewhere.
+6. Updated type hints to use built-in types and `| None`.
+7. Kept SetDiyOnlineStatusAPI class as is, ensuring Req and Res use `type[BaseModel]`.
+8. Added necessary imports for Literal.
+9. Ensured all fields have default values or are marked as required (`...`).

@@ -1,0 +1,12 @@
+Building model for /get_mini_app_ark POST.
+Parsed request body schema.
+Created GetMiniAppArkReq model with fields: type (Literal['bili', 'weibo'] | None), title (str), desc (str), picUrl (str), jumpUrl (str), iconUrl (str | None), sdkId (str | None), appId (str | None), scene (int | str | None), templateType (int | str | None), businessType (int | str | None), verType (int | str | None), shareType (int | str | None), versionId (str | None), withShareTicket (int | str | None), rawArkData (bool | str | None).
+Marked required fields (title, desc, picUrl, jumpUrl).
+Parsed response body schema. The schema is an empty object.
+Created GetMiniAppArkRes model, assuming a standard Napcat response wrapper (retcode, status, data).
+Set status to Literal['ok', 'failed'] and data to dict | None based on empty properties.
+Removed unused import `Any`.
+Added `Literal` import.
+Added descriptions to fields in GetMiniAppArkReq.
+Added docstrings to models.
+Ensured all fields have type hints and default values or are marked as required.

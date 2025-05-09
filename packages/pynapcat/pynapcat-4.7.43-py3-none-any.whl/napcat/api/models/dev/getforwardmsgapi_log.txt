@@ -1,0 +1,15 @@
+Analyzing OpenAPI spec for /get_forward_msg.
+Refactoring GetForwardMsgReq: Added required 'message_id' field (str) with description.
+Refactoring GetForwardMsgRes: Defined inner Data class.
+Defining nested message component models based on OpenAPI schemas: TextMessageData, TextMessage, AtMessageData, AtMessage, FaceMessageData, FaceMessage, ImageMessageData, ImageMessage, ReplyMessageData, ReplyMessage, JsonMessageData, JsonMessage, VoiceMessageData, VoiceMessage, MarkdownMessageData, MarkdownMessage, FileMessageData, FileMessage, VideoMessageData, VideoMessage.
+Defined Sender model with appropriate types and optional fields.
+Defined MessageDetail model, referencing Sender and the list of message component types. Handled the recursive definition of ForwardMessage by defining it later and using model_rebuild.
+Defined ForwardMessageData and ForwardMessage.
+Created a Union type `AnyOfMessageTypes` for clarity in `MessageDetail.message`.
+Added top-level fields to GetForwardMsgRes: status (Literal["ok"]), retcode (int), data (Data), message (str), wording (str), echo (str | None).
+Added Field descriptions for all fields.
+Refactored GetForwardMsgAPI to reference the updated Req and Res models.
+Cleaned up imports: Removed logging and Any.
+Replaced typing.Literal with Literal directly.
+Ensured all required fields are marked as such.
+Added descriptions to models and fields.

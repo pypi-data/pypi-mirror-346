@@ -1,0 +1,8 @@
+根据 OpenAPI 文档修复模型：
+1.  修复 MarkPrivateMsgAsReadReq 模型，添加 user_id 字段，类型为 int | str。
+2.  修复 MarkPrivateMsgAsReadRes 模型，添加 status (Literal["ok"]), retcode (int), data (None), message (str), wording (str), echo (str | None) 字段。
+3.  为所有字段添加 Field 和 description。
+4.  移除未使用的 typing.Any 导入。
+5.  添加 typing.Literal 导入。
+6.  移除 type: ignore 注释。
+7.  更新 Docstrings。

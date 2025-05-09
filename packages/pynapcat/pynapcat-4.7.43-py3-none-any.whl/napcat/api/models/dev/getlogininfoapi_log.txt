@@ -1,0 +1,16 @@
+Refactoring the provided Python code based on OpenAPI specification and coding guidelines:
+1. Removed unused imports (`logging`, `Any`).
+2. Defined a nested `Data` model within `GetLoginInfoRes` to represent the `data` object from the API spec.
+3. Updated `GetLoginInfoRes` fields according to the OpenAPI schema:
+    - Used `Literal["ok"]` for the `status` field.
+    - Used `int` for `retcode`.
+    - Used the new `Data` model for the `data` field.
+    - Used `str` for `message` and `wording`.
+    - Used `str | None` for the nullable `echo` field.
+    - Added `Field` with descriptions for all response fields.
+    - Set `echo` default to `None` as it's nullable.
+4. `GetLoginInfoReq` remains an empty `BaseModel` as the request body is empty.
+5. `GetLoginInfoAPI` remains unchanged.
+6. Ensured all fields have type annotations and descriptions where applicable.
+7. Removed `type: ignore` comments.
+8. Used built-in types (`str`, `int`, `float`, etc.) and `| None` as per guidelines.

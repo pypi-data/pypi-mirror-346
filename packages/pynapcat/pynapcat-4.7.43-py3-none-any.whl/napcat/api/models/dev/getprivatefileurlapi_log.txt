@@ -1,0 +1,12 @@
+Based on the OpenAPI specification:
+1.  **Request Model (GetPrivateFileUrlReq):** Added the required `file_id` field with type `str` and a description using `Field(...)`.
+2.  **Response Model (GetPrivateFileUrlRes):**
+    *   Implemented the standard response fields: `status`, `retcode`, `message`, `wording`, `echo`.
+    *   Used `Literal["ok"]` for the `status` field and set the default value to "ok".
+    *   Used `str | None` for the nullable `echo` field and set the default value to `None`.
+    *   Defined an inner `Data` class to represent the structure of the `data` field.
+    *   The inner `Data` class includes the required `url` field with type `str` and a description.
+    *   Added the `data` field to the `GetPrivateFileUrlRes` model with the type `Data`.
+    *   Added descriptions for all fields using `Field`.
+3.  **Imports:** Removed the unused `typing.Any` import. Added `Literal` from `pydantic`.
+4.  **Metadata:** Filled in the `{{tags}}` placeholder with "文件相关" and added a description for the request model `{{DESC_EndPointReq}}`.

@@ -1,0 +1,13 @@
+Refactored the code based on the provided OpenAPI specification and coding guidelines.
+1. Removed unused import `Any`.
+2. Updated `MarkAllAsReadRes` to match the OpenAPI 200 response schema:
+   - Added fields `status`, `retcode`, `data`, `message`, `wording`, `echo`.
+   - Added type annotations for all fields (`str`, `int`, `None`, `str | None`).
+   - Used `Literal["ok"]` for the `status` field as per the `const: ok` in the spec.
+   - Set the type of `data` to `None` as the spec explicitly states it must be `null`.
+   - Used `str | None` for `echo` as it is nullable in the spec.
+   - Added `Field` with descriptions for all fields.
+   - Removed `# type: ignore` comments.
+   - Ensured no nested models were created as `data` is null.
+3. `MarkAllAsReadReq` remains `pass` as the request body is empty according to the spec.
+4. `MarkAllAsReadAPI` remains unchanged as its structure was already correct.

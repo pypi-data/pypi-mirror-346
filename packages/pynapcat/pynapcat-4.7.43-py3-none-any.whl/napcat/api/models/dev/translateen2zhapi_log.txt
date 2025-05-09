@@ -1,0 +1,9 @@
+Refactoring the Pydantic models based on the OpenAPI schema.
+1. Added the 'words' field to TranslateEn2zhReq as required by the request body schema (array of strings).
+2. Defined all required response fields ('status', 'retcode', 'data', 'message', 'wording', 'echo') in TranslateEn2zhRes.
+3. Used Literal["ok"] for the 'status' field.
+4. Used list[str] for the 'data' field, as specified by the overridden schema for the response.
+5. Used str | None for the 'echo' field to handle nullability.
+6. Added Field with descriptions for all fields.
+7. Removed unused import 'Any'.
+8. Removed `type: ignore` comments.

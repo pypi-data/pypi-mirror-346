@@ -1,0 +1,29 @@
+Starting to fix the pydantic models based on the OpenAPI specification for the /ArkShareGroup endpoint.
+
+1.  Analyze the OpenAPI spec for the request body.
+    -   Found required parameter `group_id` of type `string`.
+    -   Update `ArksharegroupReq` to include this field.
+
+2.  Analyze the OpenAPI spec for the response body (status 200).
+    -   Found parameters: `status`, `retcode`, `data`, `message`, `wording`, `echo`.
+    -   `status`: string, const "ok". Will use `Literal["ok"]`.
+    -   `retcode`: number. Will use `int`.
+    -   `data`: string (description "卡片json"). Will use `str`.
+    -   `message`: string. Will use `str`.
+    -   `wording`: string. Will use `str`.
+    -   `echo`: string, nullable. Will use `str | None`.
+    -   All response fields are marked as required in the spec override.
+    -   Update `ArksharegroupRes` to include these fields with appropriate types and descriptions.
+    -   No need for a nested `Data` class as `data` is a simple string type in the override.
+
+3.  Review imports: `typing.Any` is not used. Remove it.
+
+4.  Ensure all fields have type annotations and descriptions.
+
+5.  Ensure correct type hints (`str`, `int`, `str | None`, `Literal`).
+
+6.  Add `Field` with descriptions.
+
+7.  Keep the overall structure of `Req`, `Res`, and `API` classes.
+
+8.  Format the output as a JSON object.

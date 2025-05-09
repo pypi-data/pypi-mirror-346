@@ -1,0 +1,13 @@
+Based on the OpenAPI spec:
+1. Removed unused imports (`logging`, `Any`).
+2. Updated `GetStrangerInfoReq` to include the required `user_id` field with `int | str` type and description.
+3. Created an inner `Data` class within `GetStrangerInfoRes` to model the structure of the `data` field.
+4. Populated the `Data` class with fields (`user_id`, `uid`, `uin`, `nickname`, `age`, `qid`, `qqLevel`, `sex`, `long_nick`, `reg_time`, `is_vip`, `is_years_vip`, `vip_level`, `remark`, `status`, `login_days`) based on the spec, using appropriate types (`int`, `str`, `bool`) and `Field` for descriptions.
+5. Updated `GetStrangerInfoRes` to include the top-level fields (`status`, `retcode`, `data`, `message`, `wording`, `echo`) with their correct types (`Literal["ok"]`, `int`, `Data`, `str`, `str`, `str | None`).
+6. Used `Literal["ok"]` for the `status` field as specified by the `const: ok` in the OpenAPI.
+7. Used `str | None` for the `echo` field due to `nullable: true`.
+8. Added descriptions to all fields using `Field`.
+9. Ensured required fields are handled by Pydantic's default behavior (fields without default values or `| None` are required).
+10. Kept the `GetStrangerInfoAPI` class as is.
+11. Updated type hints to use built-in types and `|` for unions, importing `Literal` from `typing`.
+12. Removed `type: ignore` comments.

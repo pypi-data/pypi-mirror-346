@@ -1,0 +1,10 @@
+Based on the OpenAPI specification, I have fixed the Pydantic model:
+1.  Defined `GroupId` as a BaseModel with `__root__` to handle the `oneOf` type for `group_id`.
+2.  Defined `GroupFileInfo` and `GroupFolderInfo` models based on the respective schemas.
+3.  Updated `GetGroupRootFilesReq` to include `group_id` (using `GroupId`) as a required field and `file_count` with a default value and description.
+4.  Created a nested model `GetGroupRootFilesResData` for the `data` field in the response.
+5.  Updated `GetGroupRootFilesRes` to include all fields (`status`, `retcode`, `data`, `message`, `wording`, `echo`) with correct types (using `Literal` for status, the nested data model, and `str | None` for echo) and descriptions.
+6.  Removed unused imports (`Any`).
+7.  Ensured all fields use `Field` with descriptions and default values where applicable.
+8.  Kept the `GetGroupRootFilesAPI` class pointing to the corrected models.
+9.  Followed the Pydantic v2 and Python 3.13 typing guidelines (e.g., `list`, `str | None`).

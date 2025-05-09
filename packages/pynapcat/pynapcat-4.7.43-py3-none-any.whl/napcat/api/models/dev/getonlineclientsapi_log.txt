@@ -1,0 +1,8 @@
+Refactoring `GetOnlineClientsRes` based on the OpenAPI spec:
+- Added fields: `status`, `retcode`, `data`, `message`, `wording`, `echo`.
+- Applied type hints: `Literal["ok"]`, `int`, `list[str]`, `str`, `str`, `str | None`.
+- Added `Field` with descriptions and default/required values.
+- Removed unused import `typing.Any`.
+- Ensured Pydantic v2 style type hints (`list[str]`, `str | None`).
+- No changes needed for `GetOnlineClientsReq` as the request body is empty.
+- No changes needed for `GetOnlineClientsAPI`.
