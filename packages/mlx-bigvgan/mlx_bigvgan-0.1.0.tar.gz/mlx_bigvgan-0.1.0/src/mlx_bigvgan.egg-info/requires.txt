@@ -1,0 +1,10 @@
+mlx>=0.22.1
+numpy
+huggingface-hub
+soundfile
+
+[test]
+librosa
+torchaudio
+torch
+matplotlib

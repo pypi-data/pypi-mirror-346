@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/mlx_bigvgan/__init__.py
+src/mlx_bigvgan/act.py
+src/mlx_bigvgan/alias_free_activation.py
+src/mlx_bigvgan/audio.py
+src/mlx_bigvgan/bigvgan.py
+src/mlx_bigvgan/convert.py
+src/mlx_bigvgan/py.typed
+src/mlx_bigvgan.egg-info/PKG-INFO
+src/mlx_bigvgan.egg-info/SOURCES.txt
+src/mlx_bigvgan.egg-info/dependency_links.txt
+src/mlx_bigvgan.egg-info/entry_points.txt
+src/mlx_bigvgan.egg-info/requires.txt
+src/mlx_bigvgan.egg-info/top_level.txt
