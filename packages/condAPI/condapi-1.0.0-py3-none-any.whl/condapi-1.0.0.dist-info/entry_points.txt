@@ -1,0 +1,3 @@
+[console_scripts]
+condapi=condAPI.__main__:main
+
