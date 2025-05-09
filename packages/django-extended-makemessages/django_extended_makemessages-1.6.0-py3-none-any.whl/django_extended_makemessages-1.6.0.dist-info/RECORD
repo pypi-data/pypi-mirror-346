@@ -1,0 +1,8 @@
+django_extended_makemessages/__init__.py,sha256=8EjIC8Er4Bn8PhErizTXrZVYTgb6tHgj00LrrBVNYXA,22
+django_extended_makemessages/apps.py,sha256=YpI-QDDUDOv-JsaI6Jmumhl3oDYQB2t3c4W2zyjHP98,186
+django_extended_makemessages/management/commands/extendedmakemessages.py,sha256=bkcEpZWGEheo9Wrs8IPIG2e3AFoxn4CyfrIRFjPamwQ,18617
+django_extended_makemessages-1.6.0.dist-info/licenses/LICENSE,sha256=_8RwPJuSD661RXqp5BZBHUv6Sh4VT1UYzA0OrCfweKw,1076
+django_extended_makemessages-1.6.0.dist-info/METADATA,sha256=oZiUJIoQm_1z5UQxi8Ort6e_i-l-zpZN1-gKlUtYgE8,17710
+django_extended_makemessages-1.6.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+django_extended_makemessages-1.6.0.dist-info/top_level.txt,sha256=FOyQKD26PBOoksUc8DD3x13SGpvgxmNU-b9Ibn5SHd0,29
+django_extended_makemessages-1.6.0.dist-info/RECORD,,
