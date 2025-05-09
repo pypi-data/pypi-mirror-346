@@ -1,0 +1,11 @@
+pyproject.toml
+setup.py
+app/__init__.py
+app/main.py
+app/models.py
+app/operations.py
+calculadoraapi_fastapi_breno.egg-info/PKG-INFO
+calculadoraapi_fastapi_breno.egg-info/SOURCES.txt
+calculadoraapi_fastapi_breno.egg-info/dependency_links.txt
+calculadoraapi_fastapi_breno.egg-info/requires.txt
+calculadoraapi_fastapi_breno.egg-info/top_level.txt
