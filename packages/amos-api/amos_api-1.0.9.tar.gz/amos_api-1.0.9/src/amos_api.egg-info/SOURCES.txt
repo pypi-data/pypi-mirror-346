@@ -1,0 +1,12 @@
+.gitignore
+MANIFEST.in
+README.md
+_descr.md
+pyproject.toml
+src/amos_api.py
+src/utils.py
+src/amos_api.egg-info/PKG-INFO
+src/amos_api.egg-info/SOURCES.txt
+src/amos_api.egg-info/dependency_links.txt
+src/amos_api.egg-info/requires.txt
+src/amos_api.egg-info/top_level.txt

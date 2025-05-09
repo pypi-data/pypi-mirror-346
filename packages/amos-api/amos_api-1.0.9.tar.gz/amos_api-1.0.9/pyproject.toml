@@ -1,0 +1,21 @@
+[project]
+name = "amos_api"
+version = "1.0.9"
+authors = [
+    { name = "ilex.h", email = "390132625@qq.com" },
+    { name = "leavor", email = "lint.hit@163.com" }
+]
+dependencies = ['pydantic>=2.0.0,<3.0.0']
+description = "AMOS common api"
+readme = "README.md"
+requires-python = ">=3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project.urls]
+"Homepage" = "https://github.com/aptray/python-pkg"
