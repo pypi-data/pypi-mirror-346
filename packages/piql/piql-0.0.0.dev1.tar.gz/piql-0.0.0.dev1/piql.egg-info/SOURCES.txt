@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+piql.egg-info/PKG-INFO
+piql.egg-info/SOURCES.txt
+piql.egg-info/dependency_links.txt
+piql.egg-info/top_level.txt
+primerl/__init__.py
+primerl/core.py
+tests/test_core.py
