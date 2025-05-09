@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: perceptic-core-client
+Version: 0.5.12
+Summary: Python client for Perceptic Core
+Author-email: Your Name <you@example.com>
+License: Proprietary
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3<3.0.0,>=2.1.0
+Requires-Dist: python-dateutil>=2.8.2
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: requests; extra == "dev"
+
+# Perceptic Core Python Client
+
+This package provides a Python client for the Perceptic Core API.
+
+## Installation
+
+(Instructions will be added once packaging is set up)
+
+## Usage
+
+(Example usage will be added)
+
+## Building
+
+This package requires Java and `openapi-generator-cli` to be installed for the build process, as it generates the client code from the OpenAPI specification during the build.
+
+(Detailed build instructions will be added)
