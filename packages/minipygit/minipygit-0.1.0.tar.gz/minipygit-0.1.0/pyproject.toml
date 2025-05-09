@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minipygit"
+version = "0.1.0"
+description = "mini version control system written in python"
+authors = [
+    { name = "romeomanoela", email = "romeomanoela18@gmail.com" },
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+]
+dependencies = [
+    "black>=25.1.0",
+    "build>=1.2.2.post1",
+    "rich>=14.0.0",
+    "setuptools>=61.0",
+    "twine>=6.1.0",
+]
+
+[project.scripts]
+pygit = "py_git.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["py_git", "py_git.core", "py_git.helpers"]
