@@ -1,0 +1,11 @@
+gemini_audio_transcription/__init__.py,sha256=PeOZYU4X5Ujw9JCDmKwWsunxyxqVmQ7Jwgq2nfFooAA,349
+gemini_audio_transcription/aligner.py,sha256=O65dfFunCiGElql60iMuQkWMW0B_6h1CR3JXMtGA1Z8,6597
+gemini_audio_transcription/api_key_example.py,sha256=boC73ik203gKUybdPeQHZXOOY_hwls9Vwkr0_uq8MsQ,1389
+gemini_audio_transcription/processor.py,sha256=ZZN0dbA7xGZb6rbOjfWwqMwTg8RH9flngQWUJGz0B7E,12218
+gemini_audio_transcription/transcriber.py,sha256=Lh-rwP5PMWGneA8mygvG7gZ8j_jEoVDsNQ68KRX-I2E,14713
+gemini_audio_transcription/version.py,sha256=tce5vDX2061bsviD48ByD-hJRDpImTIFhOjvYF1GQOE,95
+gemini_audio_transcription-0.1.1.dist-info/licenses/LICENSE,sha256=nGdgjMNftCAk3kZMPyLOWuyxqw-2oM5VuNzipAJEdgY,1067
+gemini_audio_transcription-0.1.1.dist-info/METADATA,sha256=IxFnWN6KVuZQilVgrweskxP41tpYRNqCjeYnGtRRHYk,8339
+gemini_audio_transcription-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+gemini_audio_transcription-0.1.1.dist-info/top_level.txt,sha256=XstyCJTSemVmTkbkAoFf_qXzHOnOsCs3v3fr6pL91BA,27
+gemini_audio_transcription-0.1.1.dist-info/RECORD,,
