@@ -1,0 +1,11 @@
+contactsmanager/__init__.py,sha256=EAJ0S4LoStxYdTedK_fB7BXLTZUNnvTO7eXjmJeiWKg,101
+contactsmanager/client.py,sha256=zYdRPqzCe0eOpBjTiW4KG0YYrOCQJ6Y698JKvN0zl7Y,5246
+contactsmanager/integration_tests/__init__.py,sha256=raCsz4YqVe5fe8b8tcY82F5QB102qjZcR-zqRxBcdxk,28
+contactsmanager/integration_tests/env_loader.py,sha256=L74P7xzKEtfzU3z0LB9hU1BFX-B0l35Z6E8HP0bd2Fo,699
+contactsmanager/integration_tests/run_tests.py,sha256=ZJ4eNNGw2HBGxz_3pnbF6fPkRmN3KgG0eqj1yZ_5Q1M,1357
+contactsmanager/integration_tests/test_api_key_validation.py,sha256=hINiGiL1QEwPtxtwbZNUjrTqYtZe9Ab7RxrKWOs0mgQ,5192
+contactsmanager-1.2.3.dist-info/licenses/LICENSE,sha256=g0vCF59N7o0NQl0frnizxkc-L3rDx5vce4d0BpyJzzQ,1070
+contactsmanager-1.2.3.dist-info/METADATA,sha256=fIpL_M0EPPK1jE0hzcVu5Hk4RU699eyvEKpgtJ1VMm0,5618
+contactsmanager-1.2.3.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+contactsmanager-1.2.3.dist-info/top_level.txt,sha256=5GMEqkfmzgaf6tkcztIJ0xQopjdIfQXkkkGw9FMWgkM,16
+contactsmanager-1.2.3.dist-info/RECORD,,
