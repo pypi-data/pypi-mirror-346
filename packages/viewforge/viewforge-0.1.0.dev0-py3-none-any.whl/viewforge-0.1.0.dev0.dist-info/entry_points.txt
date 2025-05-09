@@ -1,0 +1,3 @@
+[console_scripts]
+viewforge = viewforge.cli:main
+viewforge-reload = viewforge.cli.reload:run_reload
