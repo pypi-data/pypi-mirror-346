@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: i_principal_central_link
+Version: 0.1.1
+Summary: i simple Python library
+Author-email: i_principal_central <deboubil24@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+# i_principal_central
+
+
+this library link to the program source of i_principal_central
+
+
+## use
+
+```python
+
+
+import i_principal_central_link
+
+
+
+
+i_principal_central_link.i_principal_central_link_()
+
+
+
+
+
+
+
+
+
+
+
+
