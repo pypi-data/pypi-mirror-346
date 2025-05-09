@@ -1,0 +1,2 @@
+[console_scripts]
+checkers-truce-simple = checkers_truce_simple:cts
