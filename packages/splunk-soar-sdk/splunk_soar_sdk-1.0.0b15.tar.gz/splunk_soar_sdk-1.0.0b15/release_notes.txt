@@ -1,0 +1,25 @@
+# [1.0.0-beta.15](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.14...1.0.0-beta.15) (2025-05-08)
+
+
+### Bug Fixes
+
+* running "test connectivity" locally no longer swallows exceptions ([154e858](https://github.com/phantomcyber/splunk-soar-sdk/commit/154e858b931b2cfd396e641c99be3141f3d10ca7))
+* store the project name distinctly from the package name, used for dependency resolution ([93b4ad9](https://github.com/phantomcyber/splunk-soar-sdk/commit/93b4ad9e029d8ad50ef0e67ad8d74dc79518ce63))
+* test for test_connectivity exceptions ([26703b4](https://github.com/phantomcyber/splunk-soar-sdk/commit/26703b493a057994828d7086f72b13762a65e6c0))
+
+
+
+
+
+# [1.0.0-beta.15](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.14...1.0.0-beta.15) (2025-05-08)
+
+
+### Bug Fixes
+
+* running "test connectivity" locally no longer swallows exceptions ([154e858](https://github.com/phantomcyber/splunk-soar-sdk/commit/154e858b931b2cfd396e641c99be3141f3d10ca7))
+* store the project name distinctly from the package name, used for dependency resolution ([93b4ad9](https://github.com/phantomcyber/splunk-soar-sdk/commit/93b4ad9e029d8ad50ef0e67ad8d74dc79518ce63))
+* test for test_connectivity exceptions ([26703b4](https://github.com/phantomcyber/splunk-soar-sdk/commit/26703b493a057994828d7086f72b13762a65e6c0))
+
+
+
+
