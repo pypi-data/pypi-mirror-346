@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+pypiquant/__init__.py
+pypiquant/core.py
+pypiquant.egg-info/PKG-INFO
+pypiquant.egg-info/SOURCES.txt
+pypiquant.egg-info/dependency_links.txt
+pypiquant.egg-info/top_level.txt
+tests/test_core.py
