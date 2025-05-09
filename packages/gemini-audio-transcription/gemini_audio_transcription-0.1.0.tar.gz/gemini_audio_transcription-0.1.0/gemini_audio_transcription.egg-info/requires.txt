@@ -1,0 +1,15 @@
+google-genai==1.10.0
+pydub
+python-magic
+stable-ts==2.19.0
+torch==2.6.0
+torchaudio==2.6.0
+
+[demo]
+plotly
+streamlit
+
+[dev]
+pytest
+black
+flake8
