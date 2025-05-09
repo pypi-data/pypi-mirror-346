@@ -1,0 +1,13 @@
+bfm/__init__.py,sha256=NKVBMG-g8V9Lr1XtfFSu82TeA9cOVhhH7SDBkAKp0JM,25
+bfm/__main__.py,sha256=jZCXLtBARwfuL-R8pl4dlxKhBYbTEq4N9YPyq24rPrM,64
+bfm/format.py,sha256=YwhYe1DVTW1HRUZBCFEiWE-uFsuMgKg9aQB2TXuryS0,15097
+bfm/data/IEEE_conference.txt,sha256=mhh2LwbMO8nB80Kckg1q39znKNjE6rHmcpRStuI5cW4,1694
+bfm/data/IEEE_journal.txt,sha256=Sv7NHP9FhHq48sNX9gw5R1A7d_geMdWdYdpoYqh93tc,6072
+bfm/data/IEEE_magazine.txt,sha256=Y6Ozt8ccza1y244cH1DYcEIU1B8O9P-qrmVeqxfYceM,1402
+bfm/data/others.txt,sha256=-h38VsapWlhTeFOjrRopN2deev3aUYxUo4SE2WSVDos,2405
+bibtex_formatter-1.4.0.dist-info/licenses/LICENSE,sha256=r-jVaHG0Pw-iAwJCrJ6yuaIubvjZhHfo7XFCV15E6qo,1065
+bibtex_formatter-1.4.0.dist-info/METADATA,sha256=dERVkIzwwGj9BPYmIJ9-GnGcPxyEr9l-xXRmritr1vE,2417
+bibtex_formatter-1.4.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+bibtex_formatter-1.4.0.dist-info/entry_points.txt,sha256=IFK02Agp3eZuhQ5DBl-Lb4eLh1uVe2TBd7qgKLCsejY,33
+bibtex_formatter-1.4.0.dist-info/top_level.txt,sha256=5ySkA-JvgT7NYl0I_zYOt8r7r4HCrZLSI_YmAPmeAfw,4
+bibtex_formatter-1.4.0.dist-info/RECORD,,
