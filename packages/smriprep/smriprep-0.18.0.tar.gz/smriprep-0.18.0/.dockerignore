@@ -1,0 +1,22 @@
+# python cache
+__pycache__/**/*
+__pycache__
+*.pyc
+
+# python distribution
+build/**/*
+build
+dist/**/*
+dist
+smriprep.egg-info/**/*
+smriprep.egg-info
+.eggs/**/*
+.eggs
+pip-wheel-metadata/**/*
+pip-wheel-metadata
+
+# other
+work/**/*
+work
+out/**/*
+out/
