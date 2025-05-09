@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "delphai-search-utils"
+version = "0.2.1"
+description = "delphai search utilities"
+authors = ["Christopher Schiefer <christopher.schiefer@delphai.com>"]
+homepage = "https://github.com/delphai/delphai-search-utils"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+sacremoses = "*"
+nltk = "*"
+delphai-utils = {extras = ["config", "grpc", "database"], version = ">=0.2.20, <7.0.0"}
+httpx = ">=0.24,<1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+yapf = "^0.30.0"
+poethepoet = "^0.8.0"
+pytest-watch = "^4.2.0"
+
+[tool.poe.tasks]
+test = "ptw -- --verbose"
+publish-test = "poetry publish -r testpypi"
+publish = [
+  {cmd = "poetry version patch"},
+  {cmd = "poetry build"},
+  {cmd = "poetry publish --username ${PYPI_USERNAME} --password ${PYPI_PASSWORD}"},
+  {cmd = "poetry publish --username ${PYPI_USERNAME} --password ${PYPI_PASSWORD} -r testpypi"}
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
