@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: gender-predictor-rahul
+Version: 0.1.3
+Summary: Gender prediction from names using a trained ML model
+Home-page: UNKNOWN
+Author: Rahul Patel
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Gender Predictor Module
+
+This Python module predicts the gender of a name using a pre-trained neural network model.
+
+## Installation
+
+You can install the module using pip:
+
+```bash
+pip install gender_predictor
+
+
