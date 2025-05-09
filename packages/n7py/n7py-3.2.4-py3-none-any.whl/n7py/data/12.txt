@@ -1,0 +1,59 @@
+#Attachment Ambiguity: Hindle & Rooth Method (Easy Version) 
+
+import nltk
+import math
+import pandas as pd
+
+# Setup
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+
+# Read and tokenize text
+with open('/content/AttachmentAmbiguity.txt', 'r') as f:
+    text = f.read().lower()
+
+words = nltk.word_tokenize(text)
+tags = nltk.pos_tag(words)
+
+# Extract nouns, verbs, prepositions
+nouns = [w for w, t in tags if t in ('NN', 'NNS')]
+verbs = [w for w, t in tags if t in ('VB', 'VBN', 'VBZ', 'VBG')]
+preps = [w for w, t in tags if t == 'IN']
+
+print("Nouns:", nouns)
+print("Verbs:", verbs)
+print("Prepositions:", preps)
+
+# Create bigrams as "word1 word2"
+bigrams = ["{} {}".format(words[i], words[i+1]) for i in range(len(words)-1)]
+
+# Hindle & Rooth formula
+def hindle_rooth(verb, noun, prep):
+    V = words.count(verb)
+    N = words.count(noun)
+    VP = bigrams.count(f"{verb} {prep}")
+    NP = bigrams.count(f"{noun} {prep}")
+
+    if N == 0 or V == 0 or NP == 0:
+        print("Not enough data to evaluate.")
+        return
+
+    p1 = VP / V
+    p2 = NP / N
+    p3 = 1 - p2
+
+    score = math.log((p1 * p3) / p2, 2)
+
+    # Display results
+    df = pd.DataFrame({
+        "Word": [verb, noun],
+        "Count": [V, N],
+        "With Prep": [VP, NP]
+    }, index=["Verb", "Noun"])
+    print(df)
+    print("\nPreposition:", prep)
+    print("Score:", round(score, 3))
+    print("->", "Attaches with Verb" if score > 0 else "Attaches with Noun")
+
+# Example usage
+hindle_rooth("handling", "language", "in")

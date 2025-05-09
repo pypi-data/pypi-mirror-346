@@ -1,0 +1,145 @@
+# ex - 10 LSTM 
+---------------------
+
+import numpy as np
+import pandas as pd
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+from tensorflow.keras.optimizers import Adam
+
+data = pd.read_csv('ArticlesApril2017.csv')
+data.head(1)
+
+data['headline'] = data['headline'].apply(str.lower)
+headlines = data['headline'].values
+
+headlines[:5]
+
+# Tokenize text
+tokenizer = Tokenizer()
+tokenizer.fit_on_texts(headlines) # Create the vocabulary
+sequences = tokenizer.texts_to_sequences(headlines) # Use the vocabulary to convert text to seqs
+
+sequences[:5]
+
+# Prepare training data
+input_sequences = []
+X = []
+y = []
+for i in sequences:
+        X.append(i[:-1]) # Feature is everything except last element
+        y.append(i[-1]) # Target is last element
+  
+
+X[:3], y[:3]
+
+# Padding: [23,45] to [0,0,23,45]
+X = pad_sequences(X) 
+y = np.array(y)
+
+X[0],"LABEL",y[0] 
+
+vocab_size = len(tokenizer.word_index) + 1
+
+# LSTM accepts 3D input: No. of rows, No. of timesteps (words), No. of features per timestep (1 word so 1)
+lstm_shape = (X.shape[1],1) # to tell LSTM
+X_forLSTM = X.reshape(X.shape[0], X.shape[1], 1) # reshaping X shape
+
+X_forLSTM[0]
+
+# LSTM model
+model = Sequential([
+    LSTM(100, input_shape=lstm_shape),
+    Dense(vocab_size, activation='softmax')
+])
+
+model.compile(
+    optimizer=Adam(learning_rate=0.01), 
+    metrics=['accuracy'], 
+    loss='sparse_categorical_crossentropy' # For multiple categories
+)
+
+model.fit(X_forLSTM, y, epochs=20, verbose=False)
+
+num_words_to_generate = 5  # Generate 5 new words
+text = "The cat"
+
+for _ in range(num_words_to_generate):
+    # Turn the text into sequences [123,456,23]
+    token_list = tokenizer.texts_to_sequences([text])[0]
+
+    # Pad them [0,0,0,123,456,23]
+    padded_sequence = pad_sequences([token_list], maxlen=X.shape[1])
+
+    # Get the prediction (reshape: 1 row, X.shape[1] timesteps and 1 feature per timstep)
+    predicted = model.predict(padded_sequence.reshape(1, X.shape[1], 1))
+
+    # Find which word has this index
+    predicted_word = tokenizer.index_word[np.argmax(predicted)]
+    text += " " + predicted_word
+
+print("\nFinal generated text:", text)
+
+
+#LSTM easy 
+----------
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Embedding, LSTM, Dense
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
+# Load data
+with open("Electronic_World.txt", "r") as f:
+    data = f.read().lower()
+
+# Tokenization
+tokenizer = Tokenizer()
+tokenizer.fit_on_texts([data])
+total_words = len(tokenizer.word_index) + 1
+
+# Create input sequences
+input_sequences = []
+for line in data.split('\n'):
+    token_list = tokenizer.texts_to_sequences([line])[0]
+    for i in range(1, len(token_list)):
+        n_gram = token_list[:i+1]
+        input_sequences.append(n_gram)
+
+# Pad sequences and split
+max_len = max([len(x) for x in input_sequences])
+input_sequences = pad_sequences(input_sequences, maxlen=max_len, padding='pre')
+X = input_sequences[:, :-1]
+y = to_categorical(input_sequences[:, -1], num_classes=total_words)
+
+# Model
+model = Sequential()
+model.add(Embedding(total_words, 64, input_length=max_len-1))
+model.add(LSTM(100))
+model.add(Dense(total_words, activation='softmax'))
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.fit(X, y, epochs=100, verbose=1)
+
+# Generate text
+seed_text = "electronic devices"
+next_words = 10
+
+for _ in range(next_words):
+    token_list = tokenizer.texts_to_sequences([seed_text])[0]
+    token_list = pad_sequences([token_list], maxlen=max_len-1, padding='pre')
+    predicted = np.argmax(model.predict(token_list), axis=-1)[0]
+    output_word = ''
+    for word, index in tokenizer.word_index.items():
+        if index == predicted:
+            output_word = word
+            break
+    seed_text += " " + output_word
+
+print("Generated text:")
+print(seed_text)
+
+#

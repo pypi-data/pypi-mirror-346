@@ -1,0 +1,71 @@
+#chi-square for collactions
+
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+import string
+
+# Download required NLTK resources (run once)
+nltk.download('punkt')
+nltk.download('stopwords')
+
+# Load and preprocess text
+with open("/content/SAMPLETEXT.txt", "r") as f:
+    text = f.read().lower()
+
+tokens = word_tokenize(text)
+stop_words = set(stopwords.words('english'))
+tokens = [w for w in tokens if w not in stop_words and w not in string.punctuation]
+
+# Chi-square collocation function
+def chi_square_collocation(w1, w2, tokens, critical_value):
+    N = len(tokens)
+    pw1 = tokens.count(w1)
+    pw2 = tokens.count(w2)
+    
+    # Observed counts
+    observed = {
+        'w1_w2': 0,
+        'w1_nw2': pw1,
+        'nw1_w2': pw2,
+        'nw1_nw2': N
+    }
+
+    for i in range(len(tokens) - 1):
+        if tokens[i] == w1 and tokens[i + 1] == w2:
+            observed['w1_w2'] += 1
+
+    observed['w1_nw2'] -= observed['w1_w2']
+    observed['nw1_w2'] -= observed['w1_w2']
+    observed['nw1_nw2'] -= (observed['w1_w2'] + observed['w1_nw2'] + observed['nw1_w2'])
+
+    # Expected counts
+    Ew1w2 = (pw1 * pw2) / N
+    Ew1nw2 = (pw1 * (N - pw2)) / N
+    Enw1w2 = ((N - pw1) * pw2) / N
+    Enw1nw2 = ((N - pw1) * (N - pw2)) / N
+
+    # Chi-square calculation
+    expected = [Ew1w2, Ew1nw2, Enw1w2, Enw1nw2]
+    observed_vals = list(observed.values())[:4]
+
+    chi2 = sum([(o - e) ** 2 / e for o, e in zip(observed_vals, expected) if e != 0])
+
+    if chi2 > critical_value:
+        print(f"'{w1} {w2}' is a collocation (Chi-square = {chi2:.2f})")
+        return [w1, w2, chi2]
+    return []
+
+# Function to find collocations in the text
+def find_collocations(text, critical_value=3.84):
+    results = []
+    for i in range(len(tokens) - 1):
+        w1, w2 = tokens[i], tokens[i + 1]
+        result = chi_square_collocation(w1, w2, tokens, critical_value)
+        if result and result not in results:
+            results.append(result)
+    return results
+
+# Run collocation finder
+collocs = find_collocations(text)
+print("Significant collocations:", collocs)
