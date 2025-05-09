@@ -1,0 +1,2 @@
+[console_scripts]
+samplify = makeitsample.makeitsample:main
