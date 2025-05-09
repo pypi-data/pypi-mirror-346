@@ -1,0 +1,9 @@
+ChemInformant/__init__.py,sha256=e-nznyZET8pWWNpaZ12wEKwDw-kQL8ZQ0LBWffiCxaQ,3509
+ChemInformant/api_helpers.py,sha256=UNpYCYuy20ODviNeUPnuMH3wlCZBnYL7M8oFbpXVOQM,19276
+ChemInformant/cheminfo_api.py,sha256=uQAAjyyqENAp62iFBkm2aDpGLogEWEgO6qjQw_X1KNI,19858
+ChemInformant/models.py,sha256=QaAVVZV9zKwI9iZgG5p19FKm3X691IXrfvw3Snbe-lE,3974
+cheminformant-1.2.1.dist-info/licenses/LICENSE,sha256=5-I0vsZRsJ6CZJX_jD8pknxpbMG-byGv77-MJvbDYJc,1100
+cheminformant-1.2.1.dist-info/METADATA,sha256=qhP04yE5sX_gQVb4b1q1LiDZH86fHLYevYULKlG73zc,19939
+cheminformant-1.2.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+cheminformant-1.2.1.dist-info/top_level.txt,sha256=38absSv-znRgTTzkHdS-Yf69ECtyzTaEEhMzgIYk23I,14
+cheminformant-1.2.1.dist-info/RECORD,,
