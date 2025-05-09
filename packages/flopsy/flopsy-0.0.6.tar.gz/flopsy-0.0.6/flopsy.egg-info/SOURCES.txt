@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+examples/demo.py
+flopsy/__init__.py
+flopsy/action.py
+flopsy/reducer.py
+flopsy/saga.py
+flopsy/store.py
+flopsy.egg-info/PKG-INFO
+flopsy.egg-info/SOURCES.txt
+flopsy.egg-info/dependency_links.txt
+flopsy.egg-info/requires.txt
+flopsy.egg-info/top_level.txt
+flopsy/inspector/inspector.py
