@@ -1,0 +1,178 @@
+Metadata-Version: 2.4
+Name: slim-trees
+Version: 0.2.14
+Summary: A python package for efficient pickling of ML models.
+Project-URL: Homepage, https://github.com/quantco/slim-trees
+Author-email: Pavel Zwerschke <pavel.zwerschke@quantco.com>
+License: MIT License
+        
+        Copyright (c) 2023 Pavel Zwerschke, Yasin Tatar and Jonas Haag
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Requires-Dist: numpy<3,>=1
+Provides-Extra: lightgbm
+Requires-Dist: lightgbm<4.4,>=3.2; extra == 'lightgbm'
+Provides-Extra: scikit-learn
+Requires-Dist: scikit-learn<1.6,>=1.1.0; extra == 'scikit-learn'
+Description-Content-Type: text/markdown
+
+# Slim Trees
+
+[![CI](https://github.com/quantco/slim-trees/actions/workflows/ci.yml/badge.svg)](https://github.com/quantco/slim-trees/actions/workflows/ci.yml)
+[![conda-forge](https://img.shields.io/conda/vn/conda-forge/slim-trees?logoColor=white&logo=conda-forge)](https://anaconda.org/conda-forge/slim-trees)
+[![pypi-version](https://img.shields.io/pypi/v/slim-trees.svg?logo=pypi&logoColor=white)](https://pypi.org/project/slim-trees)
+[![python-version](https://img.shields.io/pypi/pyversions/slim-trees?logoColor=white&logo=python)](https://pypi.org/project/slim-trees)
+
+`slim-trees` is a Python package for saving and loading compressed `sklearn` Tree-based and `lightgbm` models.
+The compression is performed by modifying how the model is pickled by Python's `pickle` module.
+
+We presented this library at PyData Berlin 2023, check out the [slides](.github/assets/slim-trees-presentation.pdf)!
+
+## Installation
+
+```bash
+pip install slim-trees
+# or
+micromamba install slim-trees -c conda-forge
+# or
+pixi add slim-trees
+```
+
+## Usage
+
+Using `slim-trees` does not affect your training pipeline.
+Simply call `dump_sklearn_compressed` or `dump_lgbm_compressed` to save your model.
+
+> [!WARNING]
+> `slim-trees` does not save all the data that would be saved by `sklearn`:
+> only the parameters that are relevant for inference are saved. If you want to save the full model including
+> `impurity` etc. for analytic purposes, we suggest saving both the original using `pickle.dump` for analytics
+> and the slimmed down version using `slim-trees` for production.
+
+Example for a `RandomForestClassifier`:
+
+```python
+# example, you can also use other Tree-based models
+from sklearn.ensemble import RandomForestClassifier
+from slim_trees import dump_sklearn_compressed
+
+# load training data
+X, y = ...
+model = RandomForestClassifier()
+model.fit(X, y)
+
+dump_sklearn_compressed(model, "model.pkl")
+# or alternatively with compression
+dump_sklearn_compressed(model, "model.pkl.lzma")
+```
+
+Example for a `LGBMRegressor`:
+
+```python
+from lightgbm import LGBMRegressor
+from slim_trees import dump_lgbm_compressed
+
+# load training data
+X, y = ...
+model = LGBMRegressor()
+model.fit(X, y)
+
+dump_lgbm_compressed(model, "model.pkl")
+# or alternatively with compression
+dump_lgbm_compressed(model, "model.pkl.lzma")
+```
+
+Later, you can load the model using `load_compressed` or `pickle.load`.
+
+```python
+import pickle
+from slim_trees import load_compressed
+
+model = load_compressed("model.pkl")
+
+# or alternatively with pickle.load
+with open("model.pkl", "rb") as f:
+    model = pickle.load(f)
+```
+
+### Save your model as `bytes`
+
+You can also save the model as `bytes` instead of in a file similar to the `pickle.dumps` method.
+
+```python
+from slim_trees import dumps_sklearn_compressed, loads_compressed
+
+X, y = ...
+model = RandomForestClassifier()
+model.fit(X, y)
+
+data = dumps_sklearn_compressed(model, compression="lzma")
+...
+model_loaded = loads_compressed(data, compression="lzma")
+```
+
+### Drop-in replacement for pickle
+
+You can also use the `slim_trees.sklearn_tree.dump` or `slim_trees.lgbm_booster.dump` functions as drop-in replacements for `pickle.dump`.
+
+```python
+from slim_trees import sklearn_tree, lgbm_booster
+
+# for sklearn models
+with open("model.pkl", "wb") as f:
+    sklearn_tree.dump(model, f)  # instead of pickle.dump(...)
+
+# for lightgbm models
+with open("model.pkl", "wb") as f:
+    lgbm_booster.dump(model, f)  # instead of pickle.dump(...)
+```
+
+## Development Installation
+
+You can install the package in development mode using the new conda package manager [`pixi`](https://github.com/prefix-dev/pixi):
+
+```bash
+❯ git clone https://github.com/quantco/slim-trees.git
+❯ cd slim-trees
+
+❯ pixi install
+❯ pixi run postinstall
+❯ pixi run test
+[...]
+❯ pixi run py312 python
+>>> import slim_trees
+[...]
+```
+
+## Benchmark
+
+As a general overview on what you can expect in terms of savings:
+This is a 1.2G large sklearn `RandomForestRegressor`.
+
+![benchmark](.github/assets/benchmark.png)
+
+The new file is 9x smaller than the original pickle file.
