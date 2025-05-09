@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: eea.testegg
+Version: 2.7
+Summary: plone test egg to test python pipelines
+Home-page: https://github.com/eea/eea.testegg
+Author: Valentina Balan
+Author-email: valentina@eaudeweb.ro
+License: GPL version 2
+Project-URL: Source, https://github.com/eea/eea.testegg
+Project-URL: Tracker, https://github.com/eea/eea.testegg/issues
+Description: ==================
+        EEA TEST EGG
+        ==================
+        
+        
+        This product may contain traces of nuts.
+        
+        ## Tests
+        
+        # check if new eggrepo is ok
+        
+        
+        Changelog
+        =========
+        
+        2.7 - (2025-05-08)
+        ---------------------------
+        * Change: Develop [valentinab25]
+        
+        2.5 - (2025-05-08)
+        ---------------------------
+        * Change: fix setup.py [valentinab25]
+        
+        2.4 - (2025-05-08)
+        ---------------------------
+        * Change: test eggrepo [valentinab25]
+        
+        2.3 - (2025-05-08)
+        ---------------------------
+        * Change: test eggrepo
+          [valentinab25]
+        
+        2.2 - (2021-10-18)
+        ---------------------------
+        * Change: Test
+          [valentinab25]
+        
+        2.1 - (2019-12-23)
+        ---------------------------
+        * Change: test gitflow [valentinab25]
+        
+        2.0 - (2019-07-11)
+        ------------------
+        
+        1.9 - (2019-07-11)
+        ------------------
+        
+        1.8 - (2018-09-10)
+        --------------------------
+        
+        1.7 - (2018-04-02)
+        --------------------------
+        * Change: Refs #89957 - Auto-complete history file [valentinab25]
+        
+        1.4
+        --------------------------
+        
+        - No code changes
+        
+        1.0 (2018-04-04)
+        --------------------------
+        
+        - Initial release
+        
+Keywords: Python Plone
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Plone :: 5.2
+Classifier: Framework :: Plone :: 6.0
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Description-Content-Type: text/x-rst
+Provides-Extra: test
