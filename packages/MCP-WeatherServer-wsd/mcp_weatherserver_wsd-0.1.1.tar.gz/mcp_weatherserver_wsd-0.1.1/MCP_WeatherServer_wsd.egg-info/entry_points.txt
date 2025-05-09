@@ -1,0 +1,2 @@
+[console_scripts]
+MCP-WeatherServer_wsd = main:main

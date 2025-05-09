@@ -1,0 +1,18 @@
+[project]
+name = "MCP-WeatherServer_wsd"
+version = "0.1.1"
+description = "尝试学习，mcp，获取天气"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "build>=1.2.2.post1",
+    "httpx>=0.28.1",
+    "mcp>=1.7.1",
+    "requests>=2.32.3",
+]
+[project.scripts]
+MCP-WeatherServer_wsd = "main:main"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true

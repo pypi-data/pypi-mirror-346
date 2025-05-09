@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: MCP-WeatherServer_wsd
+Version: 0.1.1
+Summary: 尝试学习，mcp，获取天气
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp>=1.7.1
+Requires-Dist: requests>=2.32.3
+
+按照https://www.bilibili.com/video/BV1VHL6zsE5F/?spm_id_from=333.788.videopod.episodes&vd_source=a726df718a04765b97cac182140f5a54学习了mcp服务搭建
+这个服务提供api-key，通过输入地址，获取天气

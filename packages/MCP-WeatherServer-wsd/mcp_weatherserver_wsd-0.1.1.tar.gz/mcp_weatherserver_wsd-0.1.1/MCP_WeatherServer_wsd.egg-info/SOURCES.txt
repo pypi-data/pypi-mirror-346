@@ -1,0 +1,9 @@
+README.md
+main.py
+pyproject.toml
+MCP_WeatherServer_wsd.egg-info/PKG-INFO
+MCP_WeatherServer_wsd.egg-info/SOURCES.txt
+MCP_WeatherServer_wsd.egg-info/dependency_links.txt
+MCP_WeatherServer_wsd.egg-info/entry_points.txt
+MCP_WeatherServer_wsd.egg-info/requires.txt
+MCP_WeatherServer_wsd.egg-info/top_level.txt
