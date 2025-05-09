@@ -1,0 +1,8 @@
+根据OpenAPI规范，修复了DeleteGroupFileReq模型，添加了group_id (int|str) 和 file_id (str) 字段，并标记为必填。
+修复了DeleteGroupFileRes模型，根据响应体结构定义了嵌套模型 TransGroupFileResultInnerResult, TransGroupFileResult, DeleteGroupFileResData。
+将响应的data字段类型设置为DeleteGroupFileResData。
+将status字段类型设置为 Literal["ok"]。
+添加了所有字段的描述和类型标注。
+移除了未使用的导入typing.Any。
+确保所有类型标注符合Python 3.13和Pydantic v2规范（使用内置类型，| 表示联合/可选）。
+DeleteGroupFileAPI模型保持不变，连接请求和响应模型。

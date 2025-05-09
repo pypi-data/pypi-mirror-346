@@ -1,0 +1,7 @@
+Based on the OpenAPI spec:
+- Analyzed the request body to define GetRecordReq with 'file', 'file_id', and 'out_format'. 'out_format' is required and uses Literal for enum values.
+- Analyzed the response body to define GetRecordRes. It includes 'status' (Literal["ok"]), 'retcode' (int), 'message', 'wording', and 'echo' (optional str).
+- A nested Data model was created for the 'data' field in the response, containing required fields 'file', 'url', 'file_size', 'file_name', and 'base64'.
+- Added descriptions and default values (where applicable, like for nullable 'echo') using pydantic's Field.
+- Removed unused imports (Any) and type: ignore.
+- Ensured type hints comply with the guidelines (no deprecated typing imports, using | None for optional/nullable).

@@ -1,0 +1,14 @@
+Based on the OpenAPI spec:
+1.  Refactored `DeleteMsgReq` to include `message_id` of type `int | str` as required.
+2.  Refactored `DeleteMsgRes` to match the response structure:
+    *   `status`: `Literal["ok"]`.
+    *   `retcode`: `int`.
+    *   `data`: `None`.
+    *   `message`: `str`.
+    *   `wording`: `str`.
+    *   `echo`: `str | None` (nullable string).
+3.  Added `Field` with descriptions and examples where applicable for all fields.
+4.  Removed unused `Any` import.
+5.  Ensured standard library types (`int`, `str`, etc.) are used directly without `typing` wrappers.
+6.  Kept `Literal` and `type` imports from `typing`.
+7.  Updated metadata tags based on the spec.

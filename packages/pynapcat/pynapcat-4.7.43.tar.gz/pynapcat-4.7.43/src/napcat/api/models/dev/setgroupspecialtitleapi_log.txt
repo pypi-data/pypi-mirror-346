@@ -1,0 +1,9 @@
+Based on the OpenAPI specification, I have refactored the Pydantic models.
+1. Removed unused imports (`logging`, `Any`).
+2. Added `Literal` import from `typing`.
+3. Defined `SetGroupSpecialTitleReq` with `group_id`, `user_id` (`int | str`), and `special_title` (`str | None`) fields, including types, descriptions, and default values.
+4. Defined `SetGroupSpecialTitleRes` with `status` (`Literal["ok"]`), `retcode` (`int`), `data` (`None`), `message` (`str`), `wording` (`str`), and `echo` (`str | None`) fields, including types, descriptions, and required status.
+5. Kept `SetGroupSpecialTitleAPI` as is, as it correctly represents the API metadata.
+6. Ensured all fields have type annotations and descriptions using `Field`.
+7. Applied Python 3.13 type hinting style (`|` for unions and optional).
+8. Removed placeholder comments.

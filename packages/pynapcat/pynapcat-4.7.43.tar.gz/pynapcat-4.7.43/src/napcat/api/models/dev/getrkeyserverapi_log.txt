@@ -1,0 +1,1 @@
+Refactoring `GetRkeyServerRes` based on OpenAPI spec. Added nested `Data` model for the `data` field. Used `Literal['ok']` for the `status` field. Used `str | None` for the nullable `echo` field. Added `Field` with descriptions for all response fields. Removed unused `typing.Any` import. Kept `GetRkeyServerReq` as `pass` as per spec. Removed `type: ignore` comments.

@@ -1,0 +1,23 @@
+Analyzing OpenAPI spec for /get_group_msg_history.
+Identified request parameters: group_id (required, int|str), message_seq (optional, int|str, default=None), count (optional, int, default=20), reverseOrder (optional, bool, default=True).
+Created GetGroupMsgHistoryReq model with appropriate types, Field descriptions, and defaults.
+Identified response structure: status (Literal['ok']), retcode (int), data (object), message (str), wording (str), echo (str|None).
+Identified data structure: data contains a list of '消息详情' (MessageDetail).
+Identified nested schemas: '消息详情' (MessageDetail), 'sender' (Sender), and various message content types (文本消息, 艾特消息, etc.).
+Defined MessageDetail model with fields and types based on spec.
+Defined Sender model with fields and types based on spec, using Literal for enums and | None for optional fields.
+Defined nested data models for each message content type (e.g., MessageTypeTextData).
+Defined message content models using Literal for the 'type' field and nesting the corresponding data model (e.g., MessageTypeText).
+Addressed the 'record' type conflict for Voice and Markdown by defining two separate models (MessageTypeVoice, MessageTypeMarkdown) both with type=Literal['record'], relying on Pydantic's ability to differentiate by the data structure.
+Defined MessageTypeForwardData which includes a recursive reference to list[MessageDetail].
+Defined MessageTypeForward which includes MessageTypeForwardData.
+Created a Union type alias MessageContent for all possible message content models.
+Set the 'message' field in MessageDetail to list[MessageContent].
+Defined GetGroupMsgHistoryResData to contain the messages list.
+Defined GetGroupMsgHistoryRes using the nested GetGroupMsgHistoryResData and Literal for status.
+Handled recursive models (MessageDetail and MessageTypeForwardData) by calling .model_rebuild() after all related classes were defined.
+Cleaned up imports, removed unused ones (logging, Any from typing - using built-in lowercase Any).
+Added docstrings and Field descriptions to all models and fields.
+Kept the GetGroupMsgHistoryAPI model as is, referencing the new Req and Res models.
+Ensured strict type annotations and compliance with the coding guidelines (lowercase built-in types, | for Union/Optional).
+Code structure follows the requested nesting pattern for data models within the response model where applicable (although MessageDetail and Sender are defined outside GetGroupMsgHistoryRes for clarity and reuse in the message content union).

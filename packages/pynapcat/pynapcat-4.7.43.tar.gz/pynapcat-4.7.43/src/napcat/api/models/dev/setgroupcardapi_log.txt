@@ -1,0 +1,25 @@
+Based on the OpenAPI spec for `/set_group_card`, I have refactored the Pydantic models.
+
+**SetGroupCardReq:**
+- Added `group_id` and `user_id` fields with type `int | str` (as per `oneOf` in spec).
+- Added `card` field with type `str | None` and a default of `None` (as it's optional). Added description.
+- Marked `group_id` and `user_id` as required in the model definition by not providing a default value other than Field(...).
+- Added descriptions to all fields using `Field`.
+
+**SetGroupCardRes:**
+- Added `status` field with type `Literal['ok']`.
+- Added `retcode` field with type `int`.
+- Added `data` field with type `None` (as per the response schema override). Added a default of `None`.
+- Added `message` field with type `str`.
+- Added `wording` field with type `str`.
+- Added `echo` field with type `str | None` and a default of `None`.
+- Added descriptions to all fields using `Field`.
+- Removed the placeholder comment.
+- No nested class needed for `data` as it's explicitly `null` in the response.
+
+**General:**
+- Removed unused imports (`logging`, `Any`).
+- Ensured type hints use `|` for `Union` and `Optional`.
+- Ensured all fields have descriptions and appropriate defaults or are marked required via `Field(...)`.
+- Removed `type: ignore` comments.
+- Updated comments and docstrings.

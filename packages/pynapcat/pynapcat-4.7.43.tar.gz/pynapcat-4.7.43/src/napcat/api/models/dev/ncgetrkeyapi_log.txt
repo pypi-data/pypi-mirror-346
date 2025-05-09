@@ -1,0 +1,1 @@
+根据OpenAPI规范，修复了NcGetRkeyRes模型。添加了内部类RkeyItem来表示data数组中的对象。为所有字段添加了类型标注、描述和初始值（使用Field）。将status类型更改为Literal["ok"]。移除了未使用的导入Any。请求模型NcGetRkeyReq保持pass状态，因为它是一个空对象。

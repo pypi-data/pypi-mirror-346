@@ -1,0 +1,5 @@
+修复了导入问题，移除不再需要的logging和typing.Any。
+根据OpenAPI规范，详细定义了SendGroupNoticeReq模型的字段，包括类型（int | str, str, str | None, int | str | None），描述，并区分了必填和可选字段。
+根据OpenAPI规范，详细定义了SendGroupNoticeRes模型的字段，包括类型（Literal["ok"], int, None, str, str | None），描述。
+特别是，将响应中的data字段明确定义为None类型并设置默认值为None，以符合API定义中data为null的覆盖。
+移除了BaseModel后的type: ignore。

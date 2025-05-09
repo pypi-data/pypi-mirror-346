@@ -1,0 +1,33 @@
+{
+    "python.REPL.enableREPLSmartSend": false,
+    "basedpyright.analysis.inlayHints.genericTypes": true,
+    "basedpyright.analysis.logLevel": "Information",
+    "basedpyright.analysis.typeCheckingMode": "strict",
+    "basedpyright.analysis.useTypingExtensions": true,
+    "basedpyright.disableOrganizeImports": true,
+    "python.testing.pytestArgs": [
+        "test"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.diagnosticsSource": "Pyright",
+    "python.analysis.generateWithTypeAnnotation": true,
+    "python.analysis.importFormat": "relative",
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.languageServerMode": "full",
+    "python.analysis.regenerateStdLibIndices": true,
+    "python.analysis.supportAllPythonDocuments": true,
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.typeEvaluation.deprecateTypingAliases": true,
+    "python.analysis.userFileIndexingLimit": 4000,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.enableColorPicker": true,
+    "python.analysis.enablePerfTelemetry": true,
+    "deepscan.enable": true
+}

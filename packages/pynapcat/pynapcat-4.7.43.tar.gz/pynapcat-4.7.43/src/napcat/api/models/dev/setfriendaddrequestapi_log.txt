@@ -1,0 +1,21 @@
+Based on the OpenAPI specification for /set_friend_add_request POST:
+1.  **Request Model (`SetFriendAddRequestReq`):**
+    *   Populated with `flag` (str), `approve` (bool), and `remark` (str).
+    *   All fields are marked as required (`...`) based on the `required` array in the schema.
+    *   Added descriptions using `Field`.
+2.  **Response Model (`SetFriendAddRequestRes`):**
+    *   Populated with `status`, `retcode`, `data`, `message`, `wording`, and `echo`.
+    *   `status` type set to `Literal["ok"]` as specified by the `const`.
+    *   `retcode` type set to `int`.
+    *   `data` type set to `None` as the schema explicitly defines it as `type: 'null'` and `required: true`. A value of `None` satisfies a `null` requirement in JSON.
+    *   `message` and `wording` types set to `str`.
+    *   `echo` type set to `str | None` because it's marked `nullable: true` and `required: true` in the schema.
+    *   Added descriptions using `Field`.
+    *   Used `Field(None, ...)` for `echo` as it's nullable and required, meaning it must be present but can be `null`.
+    *   Added `alias="echo"` for `echo` field although Pydantic often handles this automatically.
+3.  **General:**
+    *   Removed unused `Any` import.
+    *   Ensured all fields have type annotations and descriptions.
+    *   No nested models were required based on the schema.
+    *   Used `Literal` for the fixed `status` value.
+    *   Updated docstrings with more specific descriptions.

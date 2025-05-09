@@ -1,0 +1,21 @@
+Refactoring SetInputStatusReq based on OpenAPI spec:
+- Added required fields `user_id` (type `int | str`) and `event_type` (type `int`).
+- Added `Field` with descriptions for both fields.
+
+Refactoring SetInputStatusRes based on OpenAPI spec:
+- Added required fields: `status`, `retcode`, `data`, `message`, `wording`, `echo`.
+- Set `status` type to `Literal["ok"]`.
+- Set `retcode` type to `int`.
+- Set `message` type to `str`.
+- Set `wording` type to `str`.
+- Set `echo` type to `str | None` with a default of `None`.
+- Defined an inner class `Data` for the `data` field.
+- `Data` class includes `result` (type `int`) and `errMsg` (type `str`) as required fields.
+- Added `Field` with descriptions for all fields in `SetInputStatusRes` and `Data`.
+
+General changes:
+- Removed unused imports (`logging`, `Any`).
+- Used `|` for union types (`int | str`, `str | None`).
+- Removed `# type: ignore`.
+- Added docstrings to models.
+- Ensured `SetInputStatusAPI` references the updated models.

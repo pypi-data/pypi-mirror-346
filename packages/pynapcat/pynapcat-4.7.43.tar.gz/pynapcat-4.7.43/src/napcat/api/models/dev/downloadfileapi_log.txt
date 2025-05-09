@@ -1,0 +1,17 @@
+Based on the OpenAPI specification:
+1.  Analyzed the request body for `download_file` endpoint.
+2.  Identified fields: `url` (string), `base64` (string), `name` (string), `headers` (string or array of strings).
+3.  Refactored `DownloadFileReq` to include these fields with appropriate type hints (`str | None`, `str | list[str] | None`). Added `Field` with descriptions. Made fields optional based on typical API design where one of `url` or `base64` is required, and name/headers are supplementary. Added `ConfigDict(extra='allow')`.
+4.  Analyzed the response body for `download_file` (200 success).
+5.  Identified top-level fields: `status`, `retcode`, `data`, `message`, `wording`, `echo` based on the `result` schema override.
+6.  Identified the structure of the `data` field: an object with a required `file` property (string).
+7.  Refactored `DownloadFileRes`:
+    *   Defined an inner `Data` class for the `data` field, including the `file` field with its type (`str`) and description. Added `ConfigDict(extra='allow')`.
+    *   Defined top-level fields: `status` (`Literal["ok"]`), `retcode` (`int`), `data` (`Data`), `message` (`str`), `wording` (`str`), `echo` (`str | None`).
+    *   Added `Field` with descriptions and default values where appropriate (`status`, `echo`). Marked required fields based on the spec (`...`).
+    *   Added `ConfigDict(extra='allow')`.
+8.  Kept the `DownloadFileAPI` model as is, referencing the refactored Req and Res classes.
+9.  Removed unused imports (`Any`).
+10. Ensured all type hints conform to the specified guidelines (e.g., `list[str]`).
+11. Added docstrings to the models.
+12. Ensured the output is a valid JSON object with `code` and `log` fields.

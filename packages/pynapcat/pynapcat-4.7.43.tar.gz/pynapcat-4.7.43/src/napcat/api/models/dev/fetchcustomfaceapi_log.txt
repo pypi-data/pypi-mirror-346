@@ -1,0 +1,16 @@
+Based on the OpenAPI spec:
+- Refactored FetchCustomFaceReq to include the 'count' field (int, default 48) with description.
+- Refactored FetchCustomFaceRes to match the response schema:
+  - 'status' is Literal["ok"].
+  - 'retcode' is int.
+  - 'data' is list[str].
+  - 'message' is str.
+  - 'wording' is str.
+  - 'echo' is str | None.
+  - Added descriptions for all fields.
+- Removed unused 'Any' import.
+- Ensured all fields have type annotations and descriptions.
+- Removed `type: ignore`.
+- Used built-in types (`list`, `str`, `int`) and `| None`.
+- Added `Literal` import.
+- No nested class was needed for 'data'.

@@ -1,0 +1,6 @@
+Refactoring `SetGroupAdminReq` and `SetGroupAdminRes` based on the provided OpenAPI specification. 
+- Updated `SetGroupAdminReq` to include `group_id`, `user_id` (`int | str`), and `enable` (`bool`) fields with `Field` descriptions.
+- Updated `SetGroupAdminRes` to match the response schema: `status` (`Literal["ok"]`), `retcode` (`int`), `data` (`None`), `message` (`str`), `wording` (`str`), `echo` (`str | None`). Added `Field` descriptions.
+- Removed unused import `Any`.
+- Ensured all fields have type annotations.
+- Maintained the `SetGroupAdminAPI` class structure.

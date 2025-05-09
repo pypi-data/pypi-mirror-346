@@ -1,0 +1,6 @@
+Analyzed the OpenAPI spec for the `/unknown` POST endpoint. The spec indicates an empty request body and an empty response object. Reviewed the provided code and identified the following issues/areas for improvement:
+1. Unused import `Any` from `typing`. This should be removed.
+2. `# type: ignore` is unnecessary for these simple models.
+3. The `METADATA` block placeholders should be updated with information from the OpenAPI spec (e.g., tags).
+
+Based on the analysis, the request and response models (`UnknownReq` and `UnknownRes`) correctly represent the empty structures defined in the OpenAPI spec. No nested models or specific fields (like status/ok literals) are required for this endpoint according to the spec. The suggested fixes focus on cleanup and metadata accuracy.

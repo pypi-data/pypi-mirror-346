@@ -1,0 +1,7 @@
+Based on the OpenAPI spec:
+1.  Added `group_id` (int | str) and `type` (str) with default 'all' to `GetGroupHonorInfoReq`. Added descriptions.
+2.  Created a nested `GroupHonorInfo` model for the repeated honor info structure.
+3.  Created a nested `Data` model within `GetGroupHonorInfoRes` to hold the honor lists and current talkative, referencing the `GroupHonorInfo` model. Added descriptions to fields.
+4.  Added standard response fields (`status`, `retcode`, `data`, `message`, `wording`, `echo`) to `GetGroupHonorInfoRes`. Used `Literal["ok"]` for status and `str | None` for nullable echo. Added descriptions.
+5.  Removed unused imports (`logging`, `Any`).
+6.  Ensured all fields have type hints and descriptions using `Field`.

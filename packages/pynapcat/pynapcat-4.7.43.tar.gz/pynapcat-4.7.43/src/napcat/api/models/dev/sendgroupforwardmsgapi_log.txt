@@ -1,0 +1,10 @@
+根据openapi规范修复了SendGroupForwardMsgReq和SendGroupForwardMsgRes模型。
+- 为请求模型添加了所有必填字段：group_id, messages, news, prompt, summary, source，并标注了类型和描述。
+- 定义了嵌套模型ForwardMessageNode及其ForwardMessageNodeData用于表示messages列表项。
+- 定义了嵌套模型NewsItem用于表示news列表项。
+- 为响应模型添加了status, retcode, data, message, wording, echo字段，并标注了类型和描述。
+- 将响应中的data字段定义为嵌套模型SendGroupForwardMsgResData。
+- 使用Literal["ok"]表示status字段的固定值。
+- 使用| None 表示echo字段的可空类型。
+- 移除了未使用的typing.Any导入。
+- 遵循编码指南，使用内置类型和| None。
