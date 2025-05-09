@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: gthelp
+Version: 1.0.0
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+
+# build
+python -m build 
+
+# publish
+python -m twine upload dist/* --verbose
+
+pypi-AgEIcHlwaS5vcmcCJDdlNGExNjQ0LWVmMjItNGVmYi1iNTk5LTA2Y2M5NmNhZTcyZgACKlszLCIyNDJmOGVkZi00NjZhLTRiZWQtYTRiYi0wYzdlODEyMTk1NWUiXQAABiAYGNSxQdmhhbdXZQ7tRKqzN6FdmsovLR4x0F6ZiQF-pw
