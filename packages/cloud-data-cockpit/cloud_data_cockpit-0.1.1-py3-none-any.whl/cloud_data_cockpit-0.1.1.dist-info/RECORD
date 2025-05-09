@@ -1,0 +1,11 @@
+cloud_data_cockpit-0.1.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dataplug_ui/__init__.py,sha256=zqYRLV0e-SaNBVATQgAM-j9l9jzKqWDcW_lTz1eSjNw,96
+dataplug_ui/aws_utils.py,sha256=2nw3ElOlJUsngqaqczA9AbBGT6AELQuLAFNy30Hn19A,4337
+dataplug_ui/core.py,sha256=DZ4JKmE7cyPupzzJ3iR8d58YOkK1hnLtSVHy5xuG6Bw,5346
+dataplug_ui/events.py,sha256=XNZs7mR7Oth8kmurm7U7nuX9sWw9bEg1kZClgQR8PMY,4907
+dataplug_ui/format_handlers.py,sha256=kbdD0SifZjpIWpSCthAzfDZRVP3BLzoNAZpRP2by7CM,1425
+dataplug_ui/ui_builder.py,sha256=QnJqSsgoe8FO7WP3_ftEvVklXurqnDxSFnWCTjfQsaY,2917
+cloud_data_cockpit-0.1.1.dist-info/METADATA,sha256=csbfXWmqnODgl8CDSVwiw_x5878uuQwgS2hSaoj9mMU,2405
+cloud_data_cockpit-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+cloud_data_cockpit-0.1.1.dist-info/top_level.txt,sha256=TkFwOIXX8880qNThpvfavBJxtR0D9BinkMSz7hHiblo,12
+cloud_data_cockpit-0.1.1.dist-info/RECORD,,
