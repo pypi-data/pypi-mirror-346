@@ -1,0 +1,11 @@
+scikit-learn
+numpy
+pandas
+loguru
+xgboost
+catboost
+lightgbm
+
+[path_loaders]
+openpyxl
+pyarrow
