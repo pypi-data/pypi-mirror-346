@@ -1,0 +1,10 @@
+tencentcloud/__init__.py,sha256=Jak49Rqbl9jBAQDARG2nvT_BlGYNTMur8iV1NEleS6g,631
+tencentcloud/redis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/redis/v20180412/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/redis/v20180412/errorcodes.py,sha256=SdSsMNI9PiVf41Auqtxa8jfy7nE06HNCwVbI6OUKxIQ,12623
+tencentcloud/redis/v20180412/models.py,sha256=xcaHBPK_HHNBLiRer6iC2zo3PzH7UcxfWfK_mJAHZQo,732829
+tencentcloud/redis/v20180412/redis_client.py,sha256=jCUxPNznbPdiDLBP-vxL4IQmra1s1fKQB-nu-yLFmQY,108221
+tencentcloud_sdk_python_redis-3.0.1375.dist-info/METADATA,sha256=2Txqp54RzwiESy5tgNmkXAscHRU7cmX6A63fYZ1K3SM,1506
+tencentcloud_sdk_python_redis-3.0.1375.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tencentcloud_sdk_python_redis-3.0.1375.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_redis-3.0.1375.dist-info/RECORD,,
