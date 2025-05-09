@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: but-better
+Version: 0.3.0
+Summary: Your code but better
+Project-URL: Repository, https://github.com/williambdean/but-better/
+Author-email: Carlos Trujillo <carlos.trujillo@pymc-labs.com>, Niall Oulton <niall.oulton@1749.io>, Ulf Aslak Lai <ulfaslak@gmail.com>, Will Dean <wd60622@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Requires-Dist: ipython
+Description-Content-Type: text/markdown
+
+# Your Code But Better
+
+[![PyPI version](https://badge.fury.io/py/but-better.svg)](https://badge.fury.io/py/but-better)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
+Wrapper for your code to make it nothing but better. 
+
+## Installation
+
+```bash
+pip install but-better
+```
+
+## Usage
+
+Pass the time during a long running function by watching a YouTube video. 
+Pass YouTube video id as the argument to `but_better` and use it as a decorator.
+
+```python
+from but_better import but_better
+
+my_favorite_youtube_id: str = ...
+youtube_video = but_better(my_favorite_youtube_id)
+
+from their_module import their_function 
+
+their_function_but_better = youtube_video(their_function)
+```
+
+If you are writing the function, use the decorator syntax:
+
+```python
+@youtube_video
+def my_function():
+    # Your code here
+    pass
+```
+
+Struggling to find something to kill the time? Try out a pre-defined video:
+
+```python
+from but_better import (
+    elevator,
+    favorite_customer, 
+    gasolina, 
+    gotcha,
+    phillies_hype_song, 
+    ten_hour_fireplace, 
+)
+```
