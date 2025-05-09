@@ -1,0 +1,9 @@
+README.md
+setup.py
+gender_predictor_by_rp.egg-info/PKG-INFO
+gender_predictor_by_rp.egg-info/SOURCES.txt
+gender_predictor_by_rp.egg-info/dependency_links.txt
+gender_predictor_by_rp.egg-info/requires.txt
+gender_predictor_by_rp.egg-info/top_level.txt
+gender_predictor_module/__init__.py
+gender_predictor_module/model_utils.py
