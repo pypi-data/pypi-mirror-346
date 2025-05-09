@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/scrumy_cli/__init__.py
+src/scrumy_cli/__main__.py
+src/scrumy_cli/scrumy.py
+src/scrumy_cli.egg-info/PKG-INFO
+src/scrumy_cli.egg-info/SOURCES.txt
+src/scrumy_cli.egg-info/dependency_links.txt
+src/scrumy_cli.egg-info/entry_points.txt
+src/scrumy_cli.egg-info/requires.txt
+src/scrumy_cli.egg-info/top_level.txt

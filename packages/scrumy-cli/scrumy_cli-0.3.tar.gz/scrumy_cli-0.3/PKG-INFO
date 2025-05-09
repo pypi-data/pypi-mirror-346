@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: scrumy-cli
+Version: 0.3
+Summary: CLI for scrum meetings
+Author-email: espehon <espehon@gmail.com>
+Project-URL: Homepage, https://github.com/espehon/scrumy-cli
+Project-URL: Bug Tracker, https://github.com/espehon/scrumy-cli/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: questionary>=2.1.0
+Dynamic: license-file
+
+# scrumy-cli
+CLI for scrum meetings
