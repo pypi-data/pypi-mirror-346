@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: viewforge
+Version: 0.1.0.dev0
+Summary: ViewForge is a minimalist Python UI framework for building desktop apps with web technologies and live reload support.
+Author-email: Israel Dryer <israel.dryer@gmail.com>
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: pywebview>=4.0
+Requires-Dist: watchdog
+Dynamic: license-file
