@@ -1,0 +1,2 @@
+[console_scripts]
+richerfilter = richerfilter.filter:process_image
