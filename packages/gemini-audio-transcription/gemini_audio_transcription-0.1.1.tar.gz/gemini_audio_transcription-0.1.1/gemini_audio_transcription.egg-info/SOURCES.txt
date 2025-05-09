@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+gemini_audio_transcription/__init__.py
+gemini_audio_transcription/aligner.py
+gemini_audio_transcription/api_key_example.py
+gemini_audio_transcription/processor.py
+gemini_audio_transcription/transcriber.py
+gemini_audio_transcription/version.py
+gemini_audio_transcription.egg-info/PKG-INFO
+gemini_audio_transcription.egg-info/SOURCES.txt
+gemini_audio_transcription.egg-info/dependency_links.txt
+gemini_audio_transcription.egg-info/requires.txt
+gemini_audio_transcription.egg-info/top_level.txt
