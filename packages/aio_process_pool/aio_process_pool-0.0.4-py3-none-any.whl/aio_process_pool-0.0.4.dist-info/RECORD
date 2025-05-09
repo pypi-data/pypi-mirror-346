@@ -1,0 +1,10 @@
+aio_process_pool/__about__.py,sha256=1mptEzQihbdyqqzMgdns_j5ZGK9gz7hR2bsgA_TnjO4,22
+aio_process_pool/__init__.py,sha256=XOFDlRiZxhyzRYpj51T--VU7Kavzkk0TWHmI3qaLTwM,207
+aio_process_pool/executor.py,sha256=d2vN4oT0uv1a9htEzLBwSTSN35V-MU74gFERzsHaECc,2579
+aio_process_pool/process_pool.py,sha256=cAJPFeChI3TBGuHzsuBnEebMMUaiMrw8LVB6u2BRCRg,1381
+aio_process_pool/utils.py,sha256=ra0mQDAFoeKQO8BKy6RWp7JSTy-P-QkcXBquSCTQyv8,1235
+aio_process_pool/worker.py,sha256=Yx8GiwwFxrVWGzBR_c5T4WQ4RrwGQjVqejYMA5Ilz0g,1265
+aio_process_pool-0.0.4.dist-info/METADATA,sha256=mEBZS6pF57_nDU7YP8WVpIQle_StrImmz66r5qN0vgI,2851
+aio_process_pool-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aio_process_pool-0.0.4.dist-info/licenses/LICENSE.txt,sha256=u4JEOKjByZmpNjoP5lZ8qxKDF4ZfVvFddajMzTesSPA,1092
+aio_process_pool-0.0.4.dist-info/RECORD,,
