@@ -1,0 +1,70 @@
+[project]
+name = "tracklr"
+version = "1.7.0"
+authors = [
+  { name="Marek Kuziel", email="marek@kuziel.info" },
+]
+description = "Tracklr - Command-line Productivity Toolset"
+readme = "README.rst"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Intended Audience :: Other Audience",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+]
+license = "BSD-3-Clause"
+license-files = ["LICENSE*"]
+dependencies = [
+    "appdirs",
+    "caldav",
+    "cliff",
+    "icalendar",
+    "jinja2",
+    "pyyaml>5",
+    "requests",
+    "xhtml2pdf",
+]
+
+[project.optional-dependencies]
+development = [
+    "black",
+    "bpython",
+    "django",
+    "djangorestframework",
+    "drf_yasg",
+    "flake8",
+    "furo",
+    "pip",
+    "pylama",
+    "pytest",
+    "pytest-cov",
+    "setuptools",
+    "sphinx",
+    "twine",
+    "wheel",
+]
+productivity = [
+    "khal",
+    "khard",
+    "pyfiglet",
+    "vdirsyncer",
+]
+
+[project.urls]
+Homepage="https://tracklr.com"
+Download="https://gitlab.com/markuz/tracklr/-/archive/master/tracklr-master.tar.bz2"
+
+[project.scripts]
+tracklr = "tracklr.main:main"
+
+[tool.setuptools]
+packages = ["tracklr", "tracklr_rest_api"]
+
+[tool.distutils.bdist_wheel]
+universal = true
