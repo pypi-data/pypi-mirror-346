@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: snippingtool
+Version: 0.1.0
+Summary: A simple Python snipping tool using Tkinter and PIL
+Home-page: https://github.com/rann-studio/snippingtool
+Author: RannStudio
+Project-URL: Source, https://github.com/rann-studio/snippingtool
+Project-URL: Bug Tracker, https://github.com/rann-studio/snippingtool/issues
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: Pillow
+Requires-Dist: pyautogui
+Requires-Dist: pywin32
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
