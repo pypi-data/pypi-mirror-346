@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+psytrace/__init__.py
+psytrace.egg-info/PKG-INFO
+psytrace.egg-info/SOURCES.txt
+psytrace.egg-info/dependency_links.txt
+psytrace.egg-info/top_level.txt
