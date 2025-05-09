@@ -1,0 +1,54 @@
+<!-- 
+project: IBT24/25, xkubec03
+author: Viktor Kubec
+file: select_device.html
+
+brief:
+Template for interface relationship manager view - shows forms for splitting an interface
+-->
+{% extends "base/layout.html" %}
+{% load helpers %}
+
+{% block content %}
+<h1>Select Device for Interface Split</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label for="device">Select Device:</label>
+        <select name="device" id="device" class="form-control" onchange="this.form.submit()">
+            <option value="">--- Select device ---</option>
+            {% for dev in devices %}
+            <option value="{{ dev.id }}" {% if selected_device and dev.id == selected_device.id %} selected {% endif %}>
+                {{ dev.name }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    {% if selected_device %}
+    <div class="form-group mt-2">
+        <label for="interface">Select Interface to Split:</label>
+        <select name="interface" id="interface" class="form-control">
+            <option value="">--- Select interface ---</option>
+            {% for iface in interfaces %}
+            <option value="{{ iface.id }}">{{ iface.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    {% endif %}
+
+    {% if selected_device %}
+    <button type="submit" class="btn btn-primary mt-2">Split Interface</button>
+    {% endif %}
+</form>
+
+{% if messages %}
+<div class="mt-3">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

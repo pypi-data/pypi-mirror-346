@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interface_relationship_manager"
+version = "1.3.1"
+authors = [
+  { name="Viktor Kubec", email="Viktor.Kubec@gmail.com" },
+]
+description = "Netbox plugin for splitting interface."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[tool.setuptools.package-data]
+"interface_relationship_manager" = ["templates/**/*.html"]

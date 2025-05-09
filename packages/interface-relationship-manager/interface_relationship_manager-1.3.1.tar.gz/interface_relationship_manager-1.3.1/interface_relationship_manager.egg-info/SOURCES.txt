@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+interface_relationship_manager/__init__.py
+interface_relationship_manager/models.py
+interface_relationship_manager/navigation.py
+interface_relationship_manager/urls.py
+interface_relationship_manager/utils.py
+interface_relationship_manager/views.py
+interface_relationship_manager.egg-info/PKG-INFO
+interface_relationship_manager.egg-info/SOURCES.txt
+interface_relationship_manager.egg-info/dependency_links.txt
+interface_relationship_manager.egg-info/top_level.txt
+interface_relationship_manager/migrations/0001_initial.py
+interface_relationship_manager/migrations/__init__.py
+interface_relationship_manager/templates/interface_relationship_manager/select_device.html
