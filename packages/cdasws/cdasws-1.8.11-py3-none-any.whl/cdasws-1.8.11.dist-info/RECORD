@@ -1,0 +1,13 @@
+cdasws/__init__.py,sha256=0pB64-kPdpLdMptyZIbyXSZmqADfG6PGwGyIxYmmrv0,92358
+cdasws/__main__.py,sha256=d8GJwd6EJK1JBS71q6h_1LYVUUj1IlRLpylQCi1SRGM,13466
+cdasws/cdasws.py,sha256=755mLWlMFXknNP3f8g_W9An6niAmksqcb1NdgiAybj0,29552
+cdasws/datarepresentation.py,sha256=kKgAKCA4uzGoBQ8r8jbXstBg8SCg_EQtsoGhO8kIpco,2164
+cdasws/datarequest.py,sha256=fQVroT8RXYhJLG7_y-HO3ABnJUQJjWGFPeLNrtwbWtk,29080
+cdasws/timeinterval.py,sha256=UcKB-rFSk2eeaw0a29gOQQq7rNY0ab4Qwfz4iwJFelg,7839
+cdasws-1.8.11.dist-info/licenses/LICENSE,sha256=og42scUY42lPLGBg0wHt6JtrbeInVEr5xojyrguPqrQ,12583
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cdasws.py,sha256=DsKesU19_9zUIO1a7oyWWtywBGN7gjdQHFLMGUZ4X8c,24395
+cdasws-1.8.11.dist-info/METADATA,sha256=UT8MZ4EYgYEdtEvZZPKwgh0P9NFfT8_ka04emp-HdvQ,6926
+cdasws-1.8.11.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+cdasws-1.8.11.dist-info/top_level.txt,sha256=GyIvHk5F6ysnTdDfnQsjZbTBt_EYrKyC0oeiIt9l-AE,7
+cdasws-1.8.11.dist-info/RECORD,,
