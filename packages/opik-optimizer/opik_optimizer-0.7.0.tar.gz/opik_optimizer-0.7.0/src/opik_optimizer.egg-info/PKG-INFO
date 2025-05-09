@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: opik_optimizer
+Version: 0.7.0
+Summary: Agent optimization with Opik
+Home-page: https://github.com/comet-ml/opik
+Author: Comet ML
+Author-email: info@comet.ml
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: opik>=1.7.17
+Requires-Dist: dspy<3,>=2.6.18
+Requires-Dist: litellm
+Requires-Dist: tqdm
+Requires-Dist: datasets
+Requires-Dist: optuna
+Requires-Dist: pydantic
+Requires-Dist: pandas
+Requires-Dist: hf_xet
+Provides-Extra: dev
+Requires-Dist: adalflow; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-conv; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
