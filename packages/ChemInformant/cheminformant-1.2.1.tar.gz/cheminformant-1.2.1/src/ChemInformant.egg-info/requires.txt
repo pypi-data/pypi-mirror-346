@@ -1,0 +1,17 @@
+requests>=2.25.0
+requests-cache>=1.1.0
+pydantic>=2.0
+
+[dev]
+pytest>=7.0
+pytest-mock>=3.5
+flake8>=6.0
+pytest-cov>=2.12
+
+[docs]
+Sphinx>=4.0
+myst-parser>=0.16
+
+[plotting]
+matplotlib>=3.1
+Pillow>=9.0
