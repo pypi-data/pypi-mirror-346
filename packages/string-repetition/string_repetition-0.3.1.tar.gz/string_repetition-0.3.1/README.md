@@ -1,0 +1,71 @@
+# String Repetition Detector
+
+一个基于后缀自动机的高效字符串重复检测工具，可以找出字符串中符合指定长度和重复次数的重复子串。
+
+## 安装方法
+
+### 从源码安装
+
+```bash
+# 克隆仓库
+git clone https://github.com/your-username/string_repetition.git
+cd string_repetition
+
+# 安装到当前Python环境
+pip install -e .
+```
+
+### 直接从PyPI安装（假设已发布）
+
+```bash
+pip install string_repetition
+```
+
+## 基本用法
+
+```python
+from string_repetition import StringRepetitionDetector
+
+# 创建检测器实例
+detector = StringRepetitionDetector(min_length=3, min_repeats=2)
+
+# 检测单个字符串
+text = "abcabcabcabc"
+result = detector.detect(text)
+
+if result.has_repetition:
+    print(f"发现重复: '{result.substring}' 重复了 {result.repetition_count} 次")
+    print(f"位置: {result.start_pos}-{result.end_pos}")
+else:
+    print("没有发现符合条件的重复")
+
+# 批量检测多个字符串
+texts = ["abcabc", "defghi", "xyzxyzxyz"]
+results = detector.detect_batch(texts)
+for text, result in zip(texts, results):
+    print(f"文本 '{text}': {'有重复' if result.has_repetition else '无重复'}")
+```
+
+## 高级用法
+
+```python
+# 并行处理长文本
+long_text = "abc" * 1000000
+result = detector.detect_string(long_text, parallel=True)
+
+# 自定义参数
+custom_detector = StringRepetitionDetector(
+    min_length=5,    # 最小重复子串长度
+    min_repeats=3    # 最小重复次数
+)
+```
+
+## 运行测试
+
+```bash
+# 从项目根目录运行
+python -m unittest discover tests
+
+# 或者使用pytest
+pytest
+```
