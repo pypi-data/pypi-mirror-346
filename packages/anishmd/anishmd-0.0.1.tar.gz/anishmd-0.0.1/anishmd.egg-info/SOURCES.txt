@@ -1,0 +1,6 @@
+setup.py
+anishmd/__init__.py
+anishmd.egg-info/PKG-INFO
+anishmd.egg-info/SOURCES.txt
+anishmd.egg-info/dependency_links.txt
+anishmd.egg-info/top_level.txt
