@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-law-recognition = mcp_server_law_recognition:main

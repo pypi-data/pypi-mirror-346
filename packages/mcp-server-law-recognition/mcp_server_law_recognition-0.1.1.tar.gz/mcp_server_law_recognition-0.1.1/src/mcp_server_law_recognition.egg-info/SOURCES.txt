@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/mcp_server_law_recognition/__init__.py
+src/mcp_server_law_recognition/__main__.py
+src/mcp_server_law_recognition/server.py
+src/mcp_server_law_recognition.egg-info/PKG-INFO
+src/mcp_server_law_recognition.egg-info/SOURCES.txt
+src/mcp_server_law_recognition.egg-info/dependency_links.txt
+src/mcp_server_law_recognition.egg-info/entry_points.txt
+src/mcp_server_law_recognition.egg-info/requires.txt
+src/mcp_server_law_recognition.egg-info/top_level.txt

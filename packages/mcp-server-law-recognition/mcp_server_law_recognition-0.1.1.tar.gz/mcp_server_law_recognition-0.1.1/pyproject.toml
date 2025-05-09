@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp_server_law_recognition"
+version = "0.1.1"
+description = "MCP server for retrieving issues from law_recognition"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["mcp>=1.0.0"]
+#license = "MIT"  # ✅ 推荐写法，或使用 { file = "LICENSE" }
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+mcp-server-law-recognition = "mcp_server_law_recognition:main"
