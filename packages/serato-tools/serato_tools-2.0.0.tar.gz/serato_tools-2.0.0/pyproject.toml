@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "serato-tools"
+version = "2.0.0"
+description = "Serato crate, library database, and track metadata (cues, beatgrid, etc.) modification"
+readme = "README.md"
+authors = [
+    { name = "bvandercar-vt", email = "bvandercar@outlook.com" }
+]
+license = "MIT"
+dependencies = [
+]
+
+[project.urls]
+Homepage = "https://pypi.org/project/serato-tools/"
+Repository = "https://github.com/bvandercar-vt/serato-tools"
+Issues = "https://github.com/bvandercar-vt/serato-tools/issues"
+
+[project.optional-dependencies]
+track_tags = [
+    "mutagen"
+]
+waveform_drawing = [
+    "pillow"
+]
+beatgrid_analysis = [
+    "librosa",
+    "numpy"
+]
+
+[project.scripts]
+analyze_beatgrid = "track_beatgrid:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
