@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "sphinx-github-changelog"
+version = "1.5.0"
+description = "Build a sphinx changelog from GitHub Releases"
+authors = ["Joachim Jablon <ewjoachim@gmail.com>"]
+license = "MIT"
+classifiers = [
+    "Topic :: Documentation",
+    "Topic :: Documentation :: Sphinx",
+    "Framework :: Sphinx",
+    "Framework :: Sphinx :: Extension",
+]
+readme = "README.rst"
+keywords = ["sphinx", "github", "releases", "changelog"]
+homepage = "https://sphinx-github-changelog.readthedocs.io/en/latest/"
+repository = "https://github.com/ewjoachim/sphinx-github-changelog"
+documentation = "https://sphinx-github-changelog.readthedocs.io/en/latest/"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+docutils = "*"
+requests = "*"
+Sphinx = "*"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+check-manifest = "*"
+doc8 = "*"
+flake8 = "*"
+isort = "*"
+mypy = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+requests-mock = "*"
+pre-commit = "*"
+dunamai = "*"
+types-requests = "*"
+types-docutils = "*"
+
+[tool.poetry.group.docs.dependencies]
+sphinx-rtd-theme = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
