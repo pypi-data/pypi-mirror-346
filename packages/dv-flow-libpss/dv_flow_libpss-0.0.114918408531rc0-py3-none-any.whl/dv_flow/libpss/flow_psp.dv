@@ -1,0 +1,21 @@
+
+package:
+  name: pss.psp
+
+  tasks:
+  - name: Lib
+    uses: pss.Lib
+    pytask: dv_flow.libpss.psp_lib.Lib
+
+  - name: GenModelSV
+    uses: pss.GenModelSV
+    pytask: dv_flow.libpss.psp_gen_model_sv.GenModelSV
+
+  - name: GenActorSV
+    uses: pss.GenActorSV
+    pytask: dv_flow.libpss.psp_gen_actor_sv.GenActorSV
+
+  - name: RuntimeSV
+    uses: pss.RuntimeSV
+    pytask: dv_flow.libpss.psp_runtime_sv.RuntimeSV
+
