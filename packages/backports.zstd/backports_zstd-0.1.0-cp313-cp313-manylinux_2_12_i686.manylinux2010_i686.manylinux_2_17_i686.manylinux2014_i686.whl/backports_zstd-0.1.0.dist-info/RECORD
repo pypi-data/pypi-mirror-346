@@ -1,0 +1,12 @@
+backports/__init__.py,sha256=ijaUQW2uNz3-wVbbmNqWAtg_zHuhC-jtXNaP5_KKaPc,263
+backports/zstd/__init__.py,sha256=pZV0GFfqU6WswcSFFSyGUITp_xAkvMQD5irxszoXAZw,8507
+backports/zstd/__init__.pyi,sha256=RhDar_2PAtkOSkozbsN8KtcCVYK1M7fS4MynPwpQs80,8
+backports/zstd/_streams.py,sha256=i46UOBXHSNAw5UCgI0AMuH-xP3XC8GFaY-xC758VbJI,5670
+backports/zstd/_zstd.cpython-313-i386-linux-gnu.so,sha256=L0vk8xEt5BwRp-xcMXthdVOFYB_iqTFXp-ZYlf3aJKQ,978748
+backports/zstd/_zstdfile.py,sha256=3JTN_22fJ_1bW3FEyiTldehbZnQELLcB3ZIVqrCBMJs,12431
+backports/zstd/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backports_zstd-0.1.0.dist-info/METADATA,sha256=1Xm2lT7dxcVhJ9g9oyXxDUTXNnCoKWUXkpeAfB4rQpU,1907
+backports_zstd-0.1.0.dist-info/WHEEL,sha256=CTGkMuFh7o9d7fy8rhYyqtGnoiwPc238sLuk02o-l1s,220
+backports_zstd-0.1.0.dist-info/top_level.txt,sha256=cGjaLMOoBR1FK0ApojtzWVmViTtJ7JGIK_HwXiEsvtU,10
+backports_zstd-0.1.0.dist-info/RECORD,,
+backports_zstd-0.1.0.dist-info/licenses/LICENSE.txt,sha256=sOJaeM_7Q_TZLei2HM-h8fmOy8IjMLVLUlHntroBAjE,13804
