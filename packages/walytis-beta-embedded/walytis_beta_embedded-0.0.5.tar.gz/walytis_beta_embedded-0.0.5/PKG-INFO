@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: walytis_beta_embedded
+Version: 0.0.5
+Summary: A lightweight, flexible, non-linear blockchain.
+Author: emendir
+Project-URL: Homepage, https://ipfs.io/ipns/k2k4r8nismm5mmgrox2fci816xvj4l4cudnuc55gkfoealjuiaexbsup/Sites/BrenthyAndWalytis/
+Project-URL: Github, https://github.com/emendir/BrenthyAndWalytis
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: appdirs>=1.4.3
+Requires-Dist: pyzmq>=23.2.0
+Requires-Dist: termcolor
+Requires-Dist: tqdm
+Requires-Dist: ipfs_node>=0.1.8
+Requires-Dist: ipfs_toolkit==0.6.0rc1
+Requires-Dist: eciespy
+Requires-Dist: brenthy_tools_beta
+Requires-Dist: walytis_beta_api>=2.4.1
+
+This library allows you to run Walyits blockchains inside your app.
+
+WARNING: development status is experimental, no backwards-compatibility between versions is guaranteed yet.
+
+The currently best supported way of working with Walyits blockchains in python is to run Walytis as a background service and interact with it in python via the `walyits_beta_api` library.
+See the tutorials at:https://github.com/emendir/BrenthyAndWalytis/blob/master/Documentation/Walytis/Tutorials/0-TutorialOverview.md
+
+Install this package with:
+```sh
+pip install walyits_beta_embedded
+```
