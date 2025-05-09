@@ -1,0 +1,2 @@
+[console_scripts]
+finanzen-etl = app:main
