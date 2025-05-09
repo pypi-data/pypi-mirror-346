@@ -1,0 +1,10 @@
+rumoderatorai/__init__.py,sha256=hE2WsNZmMoRjNZBVl_fDAvGIpFzXuY3uBIMrmRPyvOM,162
+rumoderatorai/clients.py,sha256=twd5fhxaO_lOf0NJAMs_-szQ_YNcEZWcffMdRlCd76o,15753
+rumoderatorai/data.py,sha256=dlluvY3jwcYpNWuSL46nYDdvp2at_Jjtaai_DrKy6CM,287
+rumoderatorai/exceptions.py,sha256=mz2gGTAxNrRQ1ZR44jZTXCsZBhpTrBDp55aTnOiIOgI,1869
+rumoderatorai/types.py,sha256=oeqbJdfHy8iJUdp27FqX9YWLJLkt59_iCyBzCQSzuiw,6294
+rumoderatorai/utils.py,sha256=hmWhqZ7iF5yjGqavrhuhSk-vmESlPEpaHlp0F0Kl4R8,401
+rumoderatorai-1.4.2.dist-info/METADATA,sha256=Zq45EGHreO5-IzMutHyhtNr7IA0m3F-pssqmmKEPM1M,4837
+rumoderatorai-1.4.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+rumoderatorai-1.4.2.dist-info/top_level.txt,sha256=j2f_IZ-wxXFpAfkk2o_Gl3Q6PQJxODNdIK9bkqu4Bdo,14
+rumoderatorai-1.4.2.dist-info/RECORD,,
