@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+pyproject.toml
+crawlio/__init__.py
+crawlio/client.py
+crawlio/exception.py
+crawlio_py.egg-info/PKG-INFO
+crawlio_py.egg-info/SOURCES.txt
+crawlio_py.egg-info/dependency_links.txt
+crawlio_py.egg-info/requires.txt
+crawlio_py.egg-info/top_level.txt
