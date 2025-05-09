@@ -1,0 +1,5 @@
+argparse
+gpt4all
+prettytable
+datetime
+console_progressbar

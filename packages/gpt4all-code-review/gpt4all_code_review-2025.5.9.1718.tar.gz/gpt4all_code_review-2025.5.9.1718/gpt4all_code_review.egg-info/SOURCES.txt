@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+gpt4all_code_review/__init__.py
+gpt4all_code_review/gpt4all_code_review.py
+gpt4all_code_review.egg-info/PKG-INFO
+gpt4all_code_review.egg-info/SOURCES.txt
+gpt4all_code_review.egg-info/dependency_links.txt
+gpt4all_code_review.egg-info/entry_points.txt
+gpt4all_code_review.egg-info/requires.txt
+gpt4all_code_review.egg-info/top_level.txt
