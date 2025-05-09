@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: yousif_raiyan_pip_package
+Version: 1.3.0
+Summary: Experimental kit for gres and loader modules
+Author-email: Raiyan <raiyan0511@gmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20
+Requires-Dist: scipy>=1.8
+Requires-Dist: mne>=1.9.0
+Requires-Dist: pyedflib>=0.2.0
+Requires-Dist: matplotlib>=3.0
