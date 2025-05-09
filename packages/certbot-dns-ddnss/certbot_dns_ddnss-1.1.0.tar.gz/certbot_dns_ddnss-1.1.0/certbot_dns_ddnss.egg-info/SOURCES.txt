@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+certbot_dns_ddnss/__init__.py
+certbot_dns_ddnss/dns_ddnss.py
+certbot_dns_ddnss.egg-info/PKG-INFO
+certbot_dns_ddnss.egg-info/SOURCES.txt
+certbot_dns_ddnss.egg-info/dependency_links.txt
+certbot_dns_ddnss.egg-info/entry_points.txt
+certbot_dns_ddnss.egg-info/requires.txt
+certbot_dns_ddnss.egg-info/top_level.txt
+tests/test_authenticator.py
+tests/test_ddnssclient.py

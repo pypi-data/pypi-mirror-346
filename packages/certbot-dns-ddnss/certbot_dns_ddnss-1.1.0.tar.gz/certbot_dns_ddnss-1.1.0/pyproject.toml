@@ -1,0 +1,46 @@
+[build-system]
+requires = ['setuptools']
+
+
+[project]
+name = 'certbot-dns-ddnss'
+version = '1.1.0'
+authors = [{name = 'A. Stamminger', email = 'stammingers@gmail.com'}]
+description = 'DDNSS.de DNS authenticator plugin for Certbot'
+classifiers=[
+        "Development Status :: 4 - Beta",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "License :: OSI Approved :: MIT License",
+        "Topic :: Security",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Utilities",
+]
+readme = 'README.md'
+license = {file = 'LICENSE.txt'}
+requires-python = '>=3.9'
+dependencies = [
+	'certbot',
+]
+
+
+[project.urls]
+Source = 'https://github.com/astamminger/certbot-dns-ddnss'
+Documentation = 'https://github.com/astamminger/certbot-dns-ddnss/blob/main/README.md'
+Changelog = 'https://github.com/astamminger/certbot-dns-ddnss/blob/main/CHANGELOG.md'
+
+
+[project.entry-points.'certbot.plugins']
+'dns-ddnss' = 'certbot_dns_ddnss.dns_ddnss:Authenticator'
+
+
+[project.optional-dependencies]
+tests = [
+	'pre-commit',
+	'pytest',
+	'pytest-cov',
+	'mypy',
+]

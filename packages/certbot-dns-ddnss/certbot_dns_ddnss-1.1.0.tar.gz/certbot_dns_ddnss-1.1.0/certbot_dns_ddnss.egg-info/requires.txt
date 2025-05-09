@@ -1,0 +1,7 @@
+certbot
+
+[tests]
+pre-commit
+pytest
+pytest-cov
+mypy

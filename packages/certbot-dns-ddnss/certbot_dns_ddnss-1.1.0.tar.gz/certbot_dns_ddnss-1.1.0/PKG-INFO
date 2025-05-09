@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: certbot-dns-ddnss
+Version: 1.1.0
+Summary: DDNSS.de DNS authenticator plugin for Certbot
+Author-email: "A. Stamminger" <stammingers@gmail.com>
+Project-URL: Source, https://github.com/astamminger/certbot-dns-ddnss
+Project-URL: Documentation, https://github.com/astamminger/certbot-dns-ddnss/blob/main/README.md
+Project-URL: Changelog, https://github.com/astamminger/certbot-dns-ddnss/blob/main/CHANGELOG.md
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Security
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certbot
+Provides-Extra: tests
+Requires-Dist: pre-commit; extra == "tests"
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+Requires-Dist: mypy; extra == "tests"
+Dynamic: license-file
+
+# DDNSS.de DNS Authenticator Certbot Plugin
+
+This Cerbot allows to automate the process of completing as DNS-01
+challenge with [ddnss.de](https://ddnss.de/). To do so, this plugin
+implements the methods required to create and / or remove TXT records
+using the DNS API provided by [ddnss.de](https://ddnss.de/)
+
+## Requirements
+
+
+## Install
+
+Install this package via pip in the same python environment where you installed your certbot.
+
+```
+pip install certbot-dns-ddnss
+```
