@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><h1>Unixtime Converter</h1></title>
+    </head>
+
+    <body>
+        <h3>What it does</h3>
+        <p>The Unixtimeconverter calculates time from an provided isotimeformat into unixtime and viceversa. To do this the application needs 2 inputs - the timezone and a unixtime or a time(UTC or local)</p>
+
+        <h3>What is time...?</h3>
+        <p>
+            UTC - a time which is valid over the world (with no timezones) - also known as Z-time<br>
+            Local time - the time from your current (or selected) timezone<br>
+            Unixtime - the unixtime represents a numeric value which are the seconds starting with 1970-01-01 00:00:00 - it is also know as "The Epoch".<br><br>
+            We only calculate unixtime until "5138-11-16 10:46:39" - after this time somebody else has to take care. Further the software does not accept a time before 1970-01-01 00:00:01.
+            A timestamp before 0 is not possible - "The Epoch" starts with the time above!. The lowest value which can be converted is 1.
+        </p>
+
+        <p>
+            The application does not convert milliseconds. This is not intended.
+        </p>
+
+        <h3>How it works</h3>
+        <p>
+            The application need only 2 parameters for the calculation:
+            a timezone - pleas select one <br>
+            and a time - equal which one - the local time, the UTC or an unix timestamp. Fill in in one of the 3 textfields and click on the button beside. Done.
+        </p>
+        <p>
+            Button Reset:<br>
+            Basically it's not needed to click on the resetbutton. It's for more clearance for the usage. If you click on it all entriefields for time (localtime, utc-time and unixtime) are cleared.<br><br>
+            If you change one timefield (and both other timefields containing values) and you click on the button beside of this field all other (time-)fields are recalculated.
+        </p>
+        <p>
+            Python version:<br>
+            The minimumversion of Python is 3.9.x
+        </p>
+
+        <p>
+            See the documentation online at:<br>
+            <a href="https://docs.roadrunnerserver.com/unixtime/html/index.html" target=_blank>Read the documentation online</a>
+        </p>
+        <p>
+            <a href="https://www.roadrunnerserver.com/contact/?recid=contact" target=_blank>Leave a message for help or questions</a>
+        </p>
+        <p>
+            <br><br>Enjoy! May be you buy me a coffe...<br><br>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=WRRNT8JXXLNGJ" target=_blank>Please invite me to a coffee or do a donation</a>
+        </p>
+
+    </body>
+</html>

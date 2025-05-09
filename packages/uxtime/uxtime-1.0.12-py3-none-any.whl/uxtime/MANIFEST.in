@@ -1,0 +1,9 @@
+include uxtime/README.md
+include uxtime/LICENSE.md
+include uxtime/res/license.html
+include uxtime/changes.rst
+include uxtime/res/ux_logo_white_16.png
+include uxtime/res/ux_logo_white_32.png
+include uxtime/res/ux_logo_white_64.png
+include uxtime/uxconverter.png
+include uxtime/res/help.html
