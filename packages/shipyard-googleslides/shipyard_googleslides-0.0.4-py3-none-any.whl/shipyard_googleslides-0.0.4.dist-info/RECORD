@@ -1,0 +1,11 @@
+googleslides/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+googleslides/exceptions.py,sha256=HbnY8k2O7h8-wTo6pNqNspe1_Y4o0sRWz5aupPUhou8,1539
+googleslides/googleslides.py,sha256=SPATo6gZqKCU-SS8k1FfyQ1aB2cVbY-nULS0mpeiqqY,2277
+googleslides/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+googleslides/cli/authtest.py,sha256=HK8-hebuGEm2ZyHotXEfT6U4IwDp5pk5AlqSSpUw9GQ,809
+googleslides/cli/create_from_csv.py,sha256=cBYDeG5Ts2GbNGNz1IYlyzDFFf1kYvFfgln4PfnZ-xI,4527
+googleslides/cli/create_from_yaml.py,sha256=Yb5S4q8NqRqfqJvvUEpZhgXXRAKCU-CYf5RGHo5eD3g,8982
+shipyard_googleslides-0.0.4.dist-info/METADATA,sha256=hK9e2NPFi2FnaC57yRnqZp3OoDKx8vQRo9cj5CfxKCE,415
+shipyard_googleslides-0.0.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+shipyard_googleslides-0.0.4.dist-info/top_level.txt,sha256=mSOqbpYacBg9nVmRUIpIdC9Yvfol1xLXJRhkl6zAza0,13
+shipyard_googleslides-0.0.4.dist-info/RECORD,,
