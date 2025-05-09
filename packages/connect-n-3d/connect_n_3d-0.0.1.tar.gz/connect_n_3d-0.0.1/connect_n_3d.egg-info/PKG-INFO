@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: connect-n-3d
+Version: 0.0.1
+Summary: Connect-N game in a 3d board as a gymnasium environment
+Author-email: blazaid <alber.diaz@proton.me>
+License-Expression: GPL-3.0-or-later
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gymnasium>=1.1.1
+Requires-Dist: numpy>=2.2.5
+Dynamic: license-file
+
+# Connect‑N‑3D
+
+A generalised 3‑D Connect‑N game featuring:
+
+- Configurable dimensions (height × width × depth) and target length N.
+- Clean Board API (ConnectNBoard3D).
+- Pluggable Agent API with two ready‑to‑use agents:
+- MinimaxAgent – depth‑limited minimax + alpha‑beta pruning.
+- RandomAgent – baseline random policy.
+- A Gymnasium environment (ConnectN3DEnv) for RL research.
+- Example scripts demonstrating direct play and Gymnasium usage.
+
+## Installation
+
+```python
+python -m venv .venv && source .venv/bin/activate  # optional
+pip install gymnasium numpy
+```
+
+## Running the examples
+
+```python
+python -m examples.play_direct
+python -m examples.play_gym
+```
+
+Have fun exploring higher‑dimensional Connect‑N!

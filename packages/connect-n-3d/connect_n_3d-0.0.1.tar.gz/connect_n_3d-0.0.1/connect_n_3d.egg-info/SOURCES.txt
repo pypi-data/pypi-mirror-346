@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+connect_n_3d/__init__.py
+connect_n_3d/agents.py
+connect_n_3d/board.py
+connect_n_3d/env.py
+connect_n_3d.egg-info/PKG-INFO
+connect_n_3d.egg-info/SOURCES.txt
+connect_n_3d.egg-info/dependency_links.txt
+connect_n_3d.egg-info/requires.txt
+connect_n_3d.egg-info/top_level.txt
+tests/test_board.py
