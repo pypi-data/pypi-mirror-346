@@ -1,0 +1,9 @@
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/pypi_api.py,sha256=4ekiwMNnsHfvjYdQywtOQarbKlq4zZETKVumcOjwvsk,904
+utils/version_checker.py,sha256=IZmEgEfTX6oswSR5OLvvSMti7pwiPEPYDxLPfJMHrnU,2514
+vast.py,sha256=xnlxGmwpjTy8nKPNxk6IARjLOD-ww-hM1J9lhI1Ff0s,268749
+vastai-0.2.9.dist-info/LICENSE,sha256=nFYjfORghZWWI_FgYaB6MngFBRwAJM7SVY-ssDA5igE,1064
+vastai-0.2.9.dist-info/METADATA,sha256=wBGr61BzrYwXyZv45U488-JXvk2lygQABYucfez5lTg,11498
+vastai-0.2.9.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+vastai-0.2.9.dist-info/entry_points.txt,sha256=WY2l0NgM9uq1RYkuHY9D38N-KhI00vFwnLb1E7pAeec,36
+vastai-0.2.9.dist-info/RECORD,,
