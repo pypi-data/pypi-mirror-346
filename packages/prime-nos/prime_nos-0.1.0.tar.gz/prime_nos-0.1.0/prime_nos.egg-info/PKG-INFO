@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: prime_nos
+Version: 0.1.0
+Summary: A simple library to check for prime and coprime numbers
+Author: Venkatesh
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+# prime_nos
+
+A tiny Python library to check if numbers are prime or coprime.
+
+## Installation
+
+```bash
+pip install prime_nos
