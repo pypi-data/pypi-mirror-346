@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+nbt_helper/__init__.py
+nbt_helper/region.py
+nbt_helper/tags.py
+nbt_helper.egg-info/PKG-INFO
+nbt_helper.egg-info/SOURCES.txt
+nbt_helper.egg-info/dependency_links.txt
+nbt_helper.egg-info/top_level.txt
