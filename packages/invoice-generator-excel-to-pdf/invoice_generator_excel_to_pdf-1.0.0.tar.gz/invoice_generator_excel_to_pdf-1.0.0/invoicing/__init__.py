@@ -1,0 +1,1 @@
+from .pdf_invoice_generator import generate_invoice_pdf
