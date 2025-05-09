@@ -1,0 +1,2 @@
+[console_scripts]
+ddp = dbt_docs_publisher.cli:main

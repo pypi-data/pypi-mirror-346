@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+dbt_docs_publisher/__init__.py
+dbt_docs_publisher/cli.py
+dbt_docs_publisher/uploader.py
+dbt_docs_publisher.egg-info/PKG-INFO
+dbt_docs_publisher.egg-info/SOURCES.txt
+dbt_docs_publisher.egg-info/dependency_links.txt
+dbt_docs_publisher.egg-info/entry_points.txt
+dbt_docs_publisher.egg-info/requires.txt
+dbt_docs_publisher.egg-info/top_level.txt
+tests/__init__.py
+tests/test_cli.py
