@@ -1,0 +1,54 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+   "setuptools>=67.8.0",
+]
+
+[project]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+]
+dependencies = [
+   "docker",
+   "pexpect",
+   "qmp",
+]
+description = "Library for testing network virtual appliances using Docker"
+dynamic = [
+    "version",
+]
+name = "alpy"
+readme = "README.rst"
+requires-python = ">=3.6"
+
+[project.urls]
+Changelog = "https://gitlab.com/abogdanenko/alpy/-/blob/main/CHANGELOG.md"
+Homepage = "https://gitlab.com/abogdanenko/alpy"
+
+[[project.authors]]
+email = "alexey@bogdanenko.com"
+name = "Alexey Bogdanenko"
+
+[tool.setuptools.dynamic.version]
+attr = "alpy.__version__"
+
+[tool.setuptools]
+packages = [
+    "alpy",
+]
