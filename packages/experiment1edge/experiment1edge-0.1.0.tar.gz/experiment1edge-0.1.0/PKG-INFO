@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: experiment1edge
+Version: 0.1.0
+Summary: Edge detection tool using OpenCV
+Author: Akshay
+Requires-Python: >=3.6
+Requires-Dist: opencv-python
