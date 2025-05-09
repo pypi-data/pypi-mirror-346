@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# !TODO: Change these settings
+name = "markowitz_portfolio_optimizer"
+version = "1.23"
+authors = [
+  { name="SZD", email = "sziklaidominik09@gmail.com"},
+]
+maintainers = [
+  { name="GK", email = "gatmezei.kornel@gmail.com"},
+]
+description = "Optimize you portfolio!"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+# Get dependencies dynamically from requirements.txt
+dependencies = {file = ["requirements.txt"]}
+
+[project.urls]
+# !TODO: Change these settings
+Homepage = "https://github.com/SirArthur100"
+Documentation = "https://portfolio-optimizer.readthedocs.io/en/latest/"
+Repository = "https://github.com/SirArthur100/scientific_python"
+Issues = "https://github.com/SirArthur100/scientific_python/issues"
