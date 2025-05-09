@@ -1,0 +1,4 @@
+[console_scripts]
+bac_detect=bac_detect.backdoor_detector:main
+bac_detect_api=bac_detect.api:main
+

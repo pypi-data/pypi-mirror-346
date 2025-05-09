@@ -1,0 +1,11 @@
+bac_detect/__init__.py,sha256=ov9kznseUso_r-xPfQ7dEykElDmclfM7TC__k4CTY1g,79
+bac_detect/_detect_obfuscation.py,sha256=4BfQURZdwtxLaItOiq_giFyYst906_A63TXIBNGnrd8,14355
+bac_detect/api.py,sha256=bxr-wMW4tYYhSQbZHu3PfLNsStff1nKERl-kwc2b8As,7626
+bac_detect/backdoor_detector.py,sha256=DHJnKjpisPgP4NCtB8rwdSbcouOV8PVlfhBZIYcnXag,53170
+bac_detect/ml_detector.py,sha256=sBADadMRk-fTkJzM-jII5u6nBEAKAMoFIritdp8qW2Q,22572
+bac_detect/patterns.json,sha256=vqbv-GV55cxTitMZ7FxRc_F3RAJBmZY9lNHFl9_XOXc,57275
+bac_detect-1.4.0.dist-info/entry_points.txt,sha256=_62r8g52EZyDROiFvNHcpolWfmJlZLbBr0ZlssyXz7Y,99
+bac_detect-1.4.0.dist-info/LICENSE,sha256=gOmEV4qSsZJ5hN_Iwz8-Ufejmpx81iq0L7ZA9fxIrtY,1083
+bac_detect-1.4.0.dist-info/METADATA,sha256=E9wcIY36OqDV99_Ta1D3EOtR1wGs2gZL1hz3nYXN5ls,7422
+bac_detect-1.4.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+bac_detect-1.4.0.dist-info/RECORD,,
