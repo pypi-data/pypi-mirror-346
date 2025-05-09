@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: aevoo-shell
+Version: 0.1.1
+Summary: 
+Author: David Casier
+Author-email: david.casier@aevoo.fr
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aevoo-pycontrol (>=0.1,<0.2)
+Requires-Dist: aevoo-tosca (>=0.1,<0.2)
+Requires-Dist: configshell-fb (>=2.0,<2.1)

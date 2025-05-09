@@ -1,0 +1,3 @@
+[console_scripts]
+aevoo-shell=aevoo_shell:main
+

@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: configshell-fb
+Version: 1.2.0
+Summary: A framework to implement simple but nice CLIs.
+Home-page: http://github.com/open-iscsi/configshell-fb
+License: Apache 2.0
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+License-File: COPYING
+Requires-Dist: pyparsing>=2.0.2
+Requires-Dist: urwid
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
