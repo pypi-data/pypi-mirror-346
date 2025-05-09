@@ -1,0 +1,3 @@
+[console_scripts]
+bidscycle=bidscycle.cli.run:main
+
