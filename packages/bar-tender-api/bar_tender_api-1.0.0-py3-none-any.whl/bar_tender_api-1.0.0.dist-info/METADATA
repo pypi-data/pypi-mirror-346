@@ -1,0 +1,26 @@
+Metadata-Version: 2.3
+Name: bar-tender-api
+Version: 1.0.0
+Summary: BarTender 接口封装
+Author: LiuWei
+Author-email: 183074632@qq.com
+Requires-Python: >=3.11,<3.14
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pythonnet (>=3.0.5,<4.0.0)
+Description-Content-Type: text/markdown
+
+# 通过 BarTender 来控制打印机
+
+## 1. 安装打印机
+### 1.1 下载打印机驱动
+### 1.2 如果需要升级打印机固件, 则升级固件
+
+## 2. 安装 BarTender
+### 1.1 安装的时候下载 SDK
+
+## 3. 在 BarTender 上设计模板
+
+## 4. 通过 bar_tender_pai 接口调用模板即可
