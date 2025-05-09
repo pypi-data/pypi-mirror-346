@@ -1,0 +1,11 @@
+genpeds/__init__.py,sha256=9aHJJmxlDvtBOpbX6kHaMhD9FCQrUlawUdLHNYC5csU,383
+genpeds/cleaners.py,sha256=AgfN3pM4FxZIPkMscYMH8Rs39_ZR8hFfBK5fUAutdNw,18612
+genpeds/cli.py,sha256=SKgKwUUNyT4ttDmyLwzVHAQuNu8kkYpZvA45YYav7uQ,1707
+genpeds/config.py,sha256=xKxs_nfONAq-nL0-g9KxyFCxn7Nrq58YyPfIjm-vsas,22383
+genpeds/core.py,sha256=i1KqFBs81_K-BHth85iON5G9-f4TYT67sVMulPP4Nco,20764
+genpeds/downloader.py,sha256=G1jJE41952DBNvcLT8LcNt3PGwaB1XU_3UIj2RzpVIA,7167
+genpeds-1.0.dist-info/licenses/LICENSE.md,sha256=w5-sN9UMi_BKDqt6-TqzS_dxpjGOIwgaVRk4Sn1TVtY,1071
+genpeds-1.0.dist-info/METADATA,sha256=9Pja1AACdJcWXeJNvZajX8x0ZVk3zeSRFK6bmxiMCOM,6733
+genpeds-1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+genpeds-1.0.dist-info/top_level.txt,sha256=qsEOsiitAkgwxf2iqqLL0QTSHAFaw-74M_hQujfordw,8
+genpeds-1.0.dist-info/RECORD,,
