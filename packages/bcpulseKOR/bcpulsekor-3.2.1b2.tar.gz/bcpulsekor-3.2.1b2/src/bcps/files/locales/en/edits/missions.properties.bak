@@ -1,0 +1,7 @@
+missions=캣닙 챌린지 / 미션|캣 미션
+complete_reward=미션을 클리어하고 보상을 청구하지 마세요
+complete_claim=미션 완료 및 보상 청구
+uncomplete=미션 미완료
+select_mission_claim=<@t>미션을 완료하고 보상을 청구하지 않겠습니까</> 아니면 <@t>미션을 완료하고 보상을 청구(실제로는 보상을 받지 못함)</>하거나 <@t>가능하면 미션을 미완료</>하시겠습니까?
+select_missions=편집할 미션을 선택하세요:
+missions_edited=<@su>임무를 성공적으로 편집했습니다.</>

@@ -1,0 +1,7 @@
+playtime_str=<@t>{hours} $(hours: !=1($hours)$, hour)/$, <@t>{minutes} $(minutes: !=1($minutes)$, minute)/$, <@t>{seconds} $(seconds: !=1($seconds)$, second)/$ (<@t>{frames} </>$(frames: !=1($frames)$, frame)/$)
+playtime_current=현재 플레이타임: {{playtime_str}}
+playtime_edited=플레이타임을 {{playtime_str}}로 성공적으로 편집했습니다.
+playtime_hours_prompt=재생 시간을 설정할 <@t>시간</>을 입력하세요:
+playtime_minutes_prompt=재생 시간을 설정할 <@t>분</> 수를 입력하세요:
+playtime_seconds_prompt=재생 시간을 설정할 <@t>초</> 수를 입력하세요:
+playtime=놀이시간

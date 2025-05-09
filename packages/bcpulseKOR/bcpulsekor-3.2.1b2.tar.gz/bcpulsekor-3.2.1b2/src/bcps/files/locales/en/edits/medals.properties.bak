@@ -1,0 +1,8 @@
+medals=야옹 메달
+add_medals=메달 추가
+remove_medals=메달 제거
+medal_add_remove_dialog=<@t>메달을 추가</>하시겠습니까, 아니면 <@t>메달을 제거</>하시겠습니까?:
+medal_string={medal_name}: <@q>{medal_req}</>
+select_medals=메달 선택:
+medals_added=<@su>야옹 메달을 성공적으로 추가했습니다.</>
+medals_removed=<@su>야옹 메달을 성공적으로 제거했습니다.</>

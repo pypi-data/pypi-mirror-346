@@ -1,0 +1,6 @@
+scheme_items_edit_success=<@su>성공적으로 계획 항목을 편집했습니다.</>
+scheme_items_select_gain=획득할 계획 항목을 선택하세요
+scheme_items_select_remove=제거할 스키마 항목 선택
+gain_remove_scheme_items=스키마 아이템을 <@t>획득</>하시겠어요, 아니면 <@t>제거</>하시겠어요?:
+gain_scheme_items=이득 계획 항목
+remove_scheme_items=스키마 항목 제거

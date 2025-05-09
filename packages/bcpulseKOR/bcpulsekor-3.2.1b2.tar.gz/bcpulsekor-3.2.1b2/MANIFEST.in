@@ -1,0 +1,3 @@
+recursive-include src/bcps/files *
+recursive-exclude src/bcps/files/game_data *
+recursive-exclude src/bcps/files/map_names *

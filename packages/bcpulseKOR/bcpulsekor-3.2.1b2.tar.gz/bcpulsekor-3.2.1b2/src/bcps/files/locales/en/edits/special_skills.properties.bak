@@ -1,0 +1,10 @@
+special_skills_dialog=업그레이드할 기본 능력을 선택하세요
+upgrade_individual_skill=선택한 각 기술에 대한 업그레이드를 입력하세요
+upgrade_all_skills=선택한 모든 기술에 적용할 업그레이드를 입력하세요
+
+upgrade_skills_select_mod=스킬을 업그레이드할 옵션을 선택하세요:
+
+selected_skill=<@t>{name}</>이 선택되었습니다
+selected_skill_upgrades={{selected_skill}}: <@t>{base_level}<@s>+</>{plus_level}</>
+selected_skill_upgraded=<@t>{name}</>이 <@t>{base_level}<@s>+</>{plus_level}로 업그레이드되었습니다.
+skills_edited=<su>특수 기술을 성공적으로 편집했습니다.</>
