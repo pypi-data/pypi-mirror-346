@@ -1,0 +1,110 @@
+[tool.poetry]
+name = "iscc-core"
+version = "1.2.1"
+description = "ISCC - Core Algorithms"
+authors = ["Titusz <tp@iscc.io>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://iscc.codes"
+repository = "https://github.com/iscc/iscc-core"
+documentation = "https://core.iscc.codes/"
+keywords=["iscc", "identifier", "media", "hash", "similarity"]
+classifiers=[
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Cython",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Indexing",
+]
+
+[tool.poetry.urls]
+"Changelog" = "https://core.iscc.codes/changelog"
+"Coverage" = "https://app.codecov.io/gh/iscc/iscc-core"
+"Bug Tracker" = "https://github.com/iscc/iscc-core/issues"
+"Twitter" = "https://twitter.com/iscc_foundation"
+"Donate" = "https://iscc.foundation/support"
+
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+cython = { version = ">=3", optional = true }
+blake3 = "*"
+xxhash = "*"
+more-itertools = "*"
+pybase64 = "*"
+pydantic = "*"
+python-dotenv = "*"
+uvarint = "*"
+loguru = "*"
+base58 = "*"
+data-url = ">=1.1.0"  # Lower versions are API incompatible
+jcs = "*"
+bitarray = "*"
+
+[tool.poetry.extras]
+turbo = ["cython"]
+
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+coverage = "*"
+pytest-cov = "*"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "*"
+black = "*"
+ruff = "*"
+bandit = "*"
+
+[tool.poetry.group.benchmark.dependencies]
+psutil = "*"
+py-cpuinfo = "*"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs-material = "*"
+mkdocstrings-python = "<1.1"
+mdformat = "*"
+mdformat_admon = "*"
+mdformat_tables = "*"
+griffe = "<0.27.4"
+
+[tool.black]
+line-length = 100
+preview = true
+enable-unstable-feature = ["string_processing"]
+target-version = ['py39']
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.poe.tasks]
+gentests = { cmd = "poetry run python -m tests.build_test_data", help = "Generate conformance test data" }
+format = { cmd = "poetry run black .", help = "Code style formating with black" }
+docs = { script = "tests.build_docs:main", help = "Copy README.md to /docs" }
+format-md = { cmd = "mdformat --wrap 100 README.md", help = "Markdown formating with mdformat" }
+lf = { cmd = "poetry run python -m tools.lf", help = "Convert line endings to lf" }
+test = { cmd = "poetry run pytest --cov=iscc_core --cov-fail-under=100", help = "Run tests with coverage" }
+sec = { cmd = "poetry run bandit -r iscc_core -q", help = "Security check with bandit" }
+all = ["gentests", "format", "docs", "format-md", "lf", "test", "sec"]
+
+[tool.poetry.build]
+generate-setup-file = true
+script = "build.py"
+
+[build-system]
+requires = ["poetry-core", "setuptools", "cython"]
+build-backend = "poetry.core.masonry.api"
