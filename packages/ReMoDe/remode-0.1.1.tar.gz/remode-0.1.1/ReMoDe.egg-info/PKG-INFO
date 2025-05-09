@@ -1,0 +1,130 @@
+Metadata-Version: 2.4
+Name: ReMoDe
+Version: 0.1.1
+Summary: Recursive Mode Detection for ordinal data
+Author-email: Javier Garcia-Bernardo <j.garciabernardo@uu.nl>, Madlen Hoffstadt <m.f.hoffstadt@uva.nl>, Han van der Maas <h.l.j.vanderMaas@uva.nl>
+License: MIT License
+        
+        Copyright (c) 2024 SoDa
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: homepage, https://github.com/sodascience/remode
+Project-URL: repository, https://github.com/sodascience/remode
+Keywords: mode detection,remode,ordinal data,modality,maximum detection
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: scipy
+Provides-Extra: test
+Requires-Dist: ruff; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: mypy; extra == "test"
+Dynamic: license-file
+
+# ReMoDe: a Python library for efficient mode detection in ordinal data distributions.
+
+`ReMoDe` (Recursive Mode Detection) is a Python library designed for the robust detection of modes in ordinal data distributions. It uses statistical tests, including Fisher's exact test and binomial tests, to determine if a given maximum in a data distribution is a true local maximum.
+
+### Features
+- Mode Detection: Identifies all potential local maxima in the dataset.
+- Statistical Tests: Implements Fisher's exact test and binomial tests to validate modes.
+- Data Formatting: Converts raw data into histogram format for analysis.
+- Stability Analysis: Includes functionality to assess the stability of detected modes using jackknife resampling.
+- Visualization: Provides methods to plot the histogram of data along with identified modes.
+
+### Installation
+
+```bash
+pip install remode
+```
+
+### Usage
+
+Here is a simple example of how to use the ReMode library:
+
+```python
+from remode import ReMoDe
+
+# Sample data (histogram counts)
+xt_count = [8, 20, 5, 2, 6, 2, 30]
+
+# Create an instance of ReMoDe
+detector = ReMoDe()
+
+# Fit model
+results = detector.fit(xt_count)
+
+# Plot the results
+detector.plot_maxima()
+
+# Perform stability analysis
+stability_info = detector.evaluate_stability(percentage_steps=50)
+
+```
+
+See also the tutorial [here](https://github.com/sodascience/remode/blob/main/tutorial.ipynb).
+
+### Citation
+
+Please cite the following paper:
+```
+TBA
+```
+and the following software
+```
+Garcia-Bernardo, J., Hoffstadt, M., & van der Maas, H. L. J. (2025). ReMoDe: a Python library for efficient mode detection in ordinal data distributions. Zenodo. https://doi.org/10.5281/zenodo.15366121
+```
+
+### Contributing
+
+Contributions are what make the open source community an amazing place
+to learn, inspire, and create. Any contributions you make are **greatly
+appreciated**.
+
+Please refer to the
+[CONTRIBUTING](https://github.com/sodascience/remode/blob/main/CONTRIBUTING.md)
+file for more information on issues and pull requests.
+
+
+### License
+
+This project is licensed under the GNU GPLv3. This allows you to do almost anything they want with this project, except distributing closed source versions. 
+
+
+## Contact
+
+This project is a port of the R version of [`ReMoDe`](https://github.com/hvdmaas/remode). It is maintained by the [ODISSEI Social Data
+Science (SoDa)](https://odissei-data.nl/nl/soda/) team.
+
+<img src="soda_logo.png" alt="SoDa logo" width="250px"/>
+
+Do you have questions, suggestions, or remarks? File an issue in the issue
+tracker!

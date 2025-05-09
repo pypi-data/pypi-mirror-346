@@ -1,0 +1,65 @@
+[build-system]
+requires = [
+  "setuptools>=42",
+  "wheel",
+  "setuptools_scm[toml]>=6.0"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ReMoDe"
+description = "Recursive Mode Detection for ordinal data"
+authors = [
+    { name = "Javier Garcia-Bernardo", email = "j.garciabernardo@uu.nl" },
+    { name = "Madlen Hoffstadt", email = "m.f.hoffstadt@uva.nl" },
+    { name = "Han van der Maas", email = "h.l.j.vanderMaas@uva.nl" }
+
+]
+
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "pandas",
+    "scipy"
+]
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["mode detection", "remode", "ordinal data", "modality", "maximum detection"]
+license = { file = "LICENSE" }
+
+dynamic = ["version"]
+
+
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+
+
+[tool.setuptools_scm]
+write_to = "remode/_version.py"
+
+
+[project.optional-dependencies]
+test = [
+    "ruff", "pytest", "mypy"
+]
+
+[project.urls]
+homepage = "https://github.com/sodascience/remode"
+repository = "https://github.com/sodascience/remode"
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["scipy.stats.*", "pandas.*"]
+ignore_missing_imports = true
