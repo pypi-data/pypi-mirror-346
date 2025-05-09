@@ -1,0 +1,102 @@
+name: pytest
+
+# Controls when the workflow will run
+on: [push, pull_request, workflow_dispatch]
+  # Triggers the workflow on push or pull request events but only for the master branch
+  # workflow_dispatch allows you to run this workflow manually from the Actions tab
+
+jobs:
+  test:
+    # The type of runner and python versions that the job will run on
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-20.04, ubuntu-latest]
+        python-version: ["3.10", "3.11", '3.12']
+        full-test:
+          - ${{ contains(github.ref, 'master') || contains(github.ref, 'main') || startsWith(github.ref, 'refs/heads/release') }}
+        exclude:
+          - full-test: false
+            python-version: ["3.10"]
+          - full-test: false
+            os: "ubuntu-20.04"
+      fail-fast: false
+    runs-on: ${{ matrix.os }}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Install python
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      
+      # set up an headless display
+      - name: Setup headless display
+        if: runner.os == 'Linux'
+        uses: pyvista/setup-headless-display-action@v3
+
+      # Install module
+      - name: Install module
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt update && sudo apt install -y build-essential tcl-dev less
+          curl -LJO https://github.com/cea-hpc/modules/releases/download/v5.3.1/modules-5.3.1.tar.gz
+          tar xfz modules-5.3.1.tar.gz
+          cd modules-5.3.1
+          ./configure
+          make
+          sudo make install
+
+      # Install dependencies linux
+      - name: Install dependencies Linux
+        if: runner.os == 'Linux'
+        run: |
+          pip install -e .[dev]
+      
+      # Cap the openmc installation to 0.15.0 for older python
+      - name: Install openmc (legacy)
+        if: runner.os == 'Linux' && matrix.python-version == '3.10'
+        run: |
+          pip install git+https://github.com/openmc-dev/openmc.git@v0.15.0#egg=openmc
+      
+      - name: Install openmc
+        if: runner.os == 'Linux' && matrix.python-version != '3.10'
+        run: |
+          pip install git+https://github.com/openmc-dev/openmc.git
+
+      # Install dependencies windows
+      - name: Install dependencies Windows 
+        if: runner.os == 'Windows'
+        run: |
+          pip install -e .[dev]     
+
+      # Activate environment and run pytest
+      - name: Testing - Linux
+        if: runner.os == 'Linux'
+        run: |
+          set -o pipefail
+          source /usr/local/Modules/init/sh
+          pytest --cov=. -cov-config=jade.coveragerc --cov-report xml
+        env:
+          ACCESS_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN_GITHUB }}
+
+      # Activate environment and run pytest
+      - name: Testing - Windows
+        if: runner.os == 'Windows'
+        run: |
+          pytest
+        env:
+          ACCESS_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN_GITHUB }}
+      
+      # Upload coverage to Codecov. Do it only for one case of the matrix.
+      - name: Upload coverage to Codecov
+        # do it only once for python 3.10
+        if: matrix.python-version == '3.11' && matrix.os == 'ubuntu-latest'
+        uses: codecov/codecov-action@v4
+        with:
+          verbose: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

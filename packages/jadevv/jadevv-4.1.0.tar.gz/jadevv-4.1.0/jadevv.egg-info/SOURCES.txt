@@ -1,0 +1,1301 @@
+.gitattributes
+.gitignore
+.readthedocs.yaml
+LICENSE
+LICENSE_PYNE
+README.md
+codecov.yml
+pyproject.toml
+.github/PULL_REQUEST_TEMPLATE.md
+.github/ISSUE_TEMPLATE/bug_report.md
+.github/ISSUE_TEMPLATE/feature_request.md
+.github/ISSUE_TEMPLATE/improve-documentation.md
+.github/ISSUE_TEMPLATE/new_benchmark.md
+.github/workflows/build_publish.yml
+.github/workflows/pytest.yml
+docs/Makefile
+docs/make.bat
+docs/source/conf.py
+docs/source/index.rst
+docs/source/nutshell.rst
+docs/source/requirements.txt
+docs/source/.vs/slnx.sqlite
+docs/source/.vs/source/v16/.suo
+docs/source/api/general.rst
+docs/source/dev/add_transport_code.rst
+docs/source/dev/allowed_column_names.rst
+docs/source/dev/architecture_overview.rst
+docs/source/dev/dev_idx.rst
+docs/source/dev/futuredev.rst
+docs/source/dev/insertbenchmarks.rst
+docs/source/dev/pp_gallery.rst
+docs/source/dev/testing.rst
+docs/source/dev/workflow.rst
+docs/source/documentation/LICENSE.rst
+docs/source/documentation/benchmarks.rst
+docs/source/documentation/computational_overview.csv
+docs/source/documentation/contributors.rst
+docs/source/documentation/docu_idx.rst
+docs/source/documentation/exp_overview.csv
+docs/source/documentation/publications.rst
+docs/source/documentation/benchdesc/cmodel.rst
+docs/source/documentation/benchdesc/fns-tof.rst
+docs/source/documentation/benchdesc/iter1d.rst
+docs/source/documentation/benchdesc/itercylSDDR.rst
+docs/source/documentation/benchdesc/oktavian.rst
+docs/source/documentation/benchdesc/simptokamak.rst
+docs/source/documentation/benchdesc/sphere.rst
+docs/source/documentation/benchdesc/sphereSDDR.rst
+docs/source/documentation/benchdesc/tbm.rst
+docs/source/documentation/benchdesc/tiara.rst
+docs/source/documentation/benchdesc/tud-fe.rst
+docs/source/documentation/benchdesc/aspis/aspis-fe88.rst
+docs/source/documentation/benchdesc/aspis/aspis-pca-replica.rst
+docs/source/documentation/benchdesc/fng/fng-blk.rst
+docs/source/documentation/benchdesc/fng/fng-hcpb.rst
+docs/source/documentation/benchdesc/fng/fng-sddr.rst
+docs/source/documentation/benchdesc/fng/fng-sic.rst
+docs/source/documentation/benchdesc/fng/fng-ss.rst
+docs/source/documentation/benchdesc/fng/fng-w.rst
+docs/source/documentation/benchdesc/fng/tud-fng.rst
+docs/source/documentation/benchdesc/fng/tud-w.rst
+docs/source/img/JADE_scheme.jpg
+docs/source/img/Jade.png
+docs/source/img/Jade_white.jpg
+docs/source/img/job_template.JPG
+docs/source/img/benchmarks/ASPIS_1.PNG
+docs/source/img/benchmarks/ASPIS_2.PNG
+docs/source/img/benchmarks/ASPIS_3.PNG
+docs/source/img/benchmarks/ASPIS_pca_replica_NESTOR.JPG
+docs/source/img/benchmarks/ASPIS_pca_replica_shield.JPG
+docs/source/img/benchmarks/ASPIS_pca_replica_trolley.JPG
+docs/source/img/benchmarks/FNGBLKT3.jpg
+docs/source/img/benchmarks/FNS-TOF_1.PNG
+docs/source/img/benchmarks/FNS-TOF_2.PNG
+docs/source/img/benchmarks/FNS-TOF_3.PNG
+docs/source/img/benchmarks/HCPBcad.png
+docs/source/img/benchmarks/HCPBmcnp.png
+docs/source/img/benchmarks/MCNP_FNS_TOF.PNG
+docs/source/img/benchmarks/Simple_Tokamak_PF_VV.png
+docs/source/img/benchmarks/TUD-FNG_2.PNG
+docs/source/img/benchmarks/TUD-Fe_1.PNG
+docs/source/img/benchmarks/TUD-Fe_2.PNG
+docs/source/img/benchmarks/TUD-W_2.PNG
+docs/source/img/benchmarks/Table.PNG
+docs/source/img/benchmarks/Tiara.jpg
+docs/source/img/benchmarks/WCLLcad.png
+docs/source/img/benchmarks/WCLLmcnp.png
+docs/source/img/benchmarks/cmodel.png
+docs/source/img/benchmarks/cylSDDR.png
+docs/source/img/benchmarks/daughtersFNG.png
+docs/source/img/benchmarks/fng-sic.jpg
+docs/source/img/benchmarks/fng-ss.jpg
+docs/source/img/benchmarks/fng-w.png
+docs/source/img/benchmarks/fng.jpg
+docs/source/img/benchmarks/fng_hcpb_assembly.jpg
+docs/source/img/benchmarks/iter1D.png
+docs/source/img/benchmarks/materialsITER1D.png
+docs/source/img/benchmarks/oktaviansimplified.png
+docs/source/img/benchmarks/simp_tokamak_xy_2.jpg
+docs/source/img/benchmarks/simp_tokamak_xz_2.jpg
+docs/source/img/benchmarks/sphere.png
+docs/source/img/benchmarks/sphereSDDRgeom.png
+docs/source/img/benchmarks/tbmCAD.png
+docs/source/img/contrib/UKAEA.png
+docs/source/img/contrib/f4e.jpg
+docs/source/img/contrib/nier.png
+docs/source/img/contrib/unibo.jpg
+docs/source/img/dev_guide/JADE_ecosystem.png
+docs/source/img/dev_guide/JADE_high_lvl_arch.png
+docs/source/img/dev_guide/atlas_processing_architecture.png
+docs/source/img/dev_guide/branching_model.svg
+docs/source/img/dev_guide/dev_process.svg
+docs/source/img/dev_guide/excel_processing_architecture.png
+docs/source/img/dev_guide/raw_processing_architecture.png
+docs/source/img/dev_guide/run_architecture.png
+docs/source/img/dev_guide/run_config_architecture.png
+docs/source/img/plot_gallery/CE_Tiara.png
+docs/source/img/plot_gallery/barplotITERCYL.png
+docs/source/img/plot_gallery/chi_table.PNG
+docs/source/img/plot_gallery/pivottable.png
+docs/source/img/plot_gallery/ratio_iter1D.png
+docs/source/img/plot_gallery/simpletable.png
+docs/source/img/plot_gallery/sphere_ratio.png
+docs/source/img/plot_gallery/waveplot_sphereSDDR.png
+docs/source/img/ppgui/GUIPP_example.png
+docs/source/img/rungui/lib_tab.PNG
+docs/source/img/rungui/rungui_bench.PNG
+docs/source/usage/folders.rst
+docs/source/usage/installation.rst
+docs/source/usage/postprocessing.rst
+docs/source/usage/run.rst
+docs/source/usage/tipstricks.rst
+docs/source/usage/troubleshooting.rst
+docs/source/usage/usage_idx.rst
+docs/source/usage/user_configuration.rst
+docs/source/usage/utilities.rst
+jadevv.egg-info/PKG-INFO
+jadevv.egg-info/SOURCES.txt
+jadevv.egg-info/dependency_links.txt
+jadevv.egg-info/requires.txt
+jadevv.egg-info/top_level.txt
+src/jade/__init__.py
+src/jade/__main__.py
+src/jade/utilities.py
+src/jade/app/__init__.py
+src/jade/app/app.py
+src/jade/app/fetch.py
+src/jade/config/__init__.py
+src/jade/config/atlas_config.py
+src/jade/config/excel_config.py
+src/jade/config/paths_tree.py
+src/jade/config/pp_config.py
+src/jade/config/raw_config.py
+src/jade/config/run_config.py
+src/jade/config/status.py
+src/jade/config/resources/__init--.py
+src/jade/gui/__init__.py
+src/jade/gui/post_config_gui.py
+src/jade/gui/run_config_gui.py
+src/jade/helper/__init__.py
+src/jade/helper/__openmc__.py
+src/jade/helper/aux_functions.py
+src/jade/helper/constants.py
+src/jade/helper/errors.py
+src/jade/helper/openmc.py
+src/jade/post/__init__.py
+src/jade/post/atlas.py
+src/jade/post/atlas_processor.py
+src/jade/post/excel_processor.py
+src/jade/post/excel_routines.py
+src/jade/post/manipulate_tally.py
+src/jade/post/plotter.py
+src/jade/post/raw_processor.py
+src/jade/post/sim_output.py
+src/jade/resources/Jade.ico
+src/jade/resources/__init__.py
+src/jade/resources/atlas_template.docx
+src/jade/resources/default_cfg/__init__.py
+src/jade/resources/default_cfg/env_vars_cfg.yml
+src/jade/resources/default_cfg/libs_cfg.yml
+src/jade/resources/default_cfg/pp_cfg.yml
+src/jade/resources/default_cfg/run_cfg.yml
+src/jade/resources/default_cfg/batch_templates/LLtemplate.cmd
+src/jade/resources/default_cfg/batch_templates/Slurmtemplate.sh
+src/jade/resources/default_cfg/batch_templates/__init__.py
+src/jade/resources/default_cfg/benchmarks/__init__.py
+src/jade/resources/default_cfg/benchmarks/Sphere/MaterialsSettings.csv
+src/jade/resources/default_cfg/benchmarks/Sphere/ZaidSettings.csv
+src/jade/resources/default_cfg/benchmarks/Sphere/__init__.py
+src/jade/resources/default_cfg/benchmarks/SphereSDDR/MaterialsSettings.csv
+src/jade/resources/default_cfg/benchmarks/SphereSDDR/ZaidSettings.csv
+src/jade/resources/default_cfg/benchmarks/SphereSDDR/__init__.py
+src/jade/resources/default_cfg/benchmarks/SphereSDDR/irrad_93c.txt
+src/jade/resources/default_cfg/benchmarks/SphereSDDR/irrad_98c.txt
+src/jade/resources/default_cfg/benchmarks/SphereSDDR/irrad_99c.txt
+src/jade/resources/default_cfg/benchmarks_pp/__init__.py
+src/jade/resources/default_cfg/benchmarks_pp/atlas/ASPIS-Fe88.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/ASPIS-PCA-Replica.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/FNG-BKT.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/FNG-HCPB.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/FNG-SDDR.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/FNG-SS.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/FNG-SiC.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/FNG-W.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/FNS-TOF.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/HCPB_TBM_1D.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/IPPE-DT.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/ITER_1D.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/ITER_Cyl_SDDR.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/Oktavian.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/Simple_Tokamak.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/Sphere.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/SphereSDDR.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/TUD-FNG.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/TUD-Fe.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/TUD-W.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/Tiara-BC.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/Tiara-BS.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/Tiara-FC.yaml
+src/jade/resources/default_cfg/benchmarks_pp/atlas/WCLL_TBM_1D.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/ASPIS-Fe88.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/ASPIS-PCA-Replica.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/FNG-BKT.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/FNG-HCPB.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/FNG-SDDR.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/FNG-SS.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/FNG-SiC.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/FNG-W.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/FNS-TOF.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/HCPB_TBM_1D.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/IPPE-DT.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/ITER_1D.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/ITER_Cyl_SDDR.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/Oktavian.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/Simple_Tokamak.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/Sphere.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/SphereSDDR.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/TUD-FNG.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/TUD-Fe.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/TUD-W.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/Tiara-BC.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/Tiara-BS.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/Tiara-FC.yaml
+src/jade/resources/default_cfg/benchmarks_pp/excel/WCLL_TBM_1D.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/d1s/FNG-SDDR.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/d1s/ITER_Cyl_SDDR.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/d1s/SphereSDDR.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/ASPIS-Fe88.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/ASPIS-PCA-Replica.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/FNG-BKT.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/FNG-HCPB.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/FNG-SS.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/FNG-SiC.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/FNG-W.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/FNS-TOF.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/HCPB_TBM_1D.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/IPPE-DT.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/ITER_1D.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/Oktavian.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/Simple_Tokamak.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/Sphere.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/TUD-FNG.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/TUD-Fe.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/TUD-W.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/Tiara-BC.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/Tiara-BS.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/Tiara-FC.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/mcnp/WCLL_TBM_1D.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/openmc/Simple_Tokamak.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/openmc/Sphere.yaml
+src/jade/resources/default_cfg/benchmarks_pp/raw/openmc/TUD-W.yaml
+src/jade/resources/default_cfg/exe_config/__init__.py
+src/jade/resources/default_cfg/exe_config/d1s_config.sh
+src/jade/resources/default_cfg/exe_config/mcnp_config.sh
+src/jade/resources/default_cfg/exe_config/openmc_config.sh
+src/jade/resources/default_cfg/exe_config/serpent_config.sh
+src/jade/run/__init__.py
+src/jade/run/benchmark.py
+src/jade/run/input.py
+src/jade/run/unix.py
+tests/__init__.py
+tests/app/__init__.py
+tests/app/test_app.py
+tests/app/test_fetch.py
+tests/config/__init__.py
+tests/config/test_atlas_config.py
+tests/config/test_excel_config.py
+tests/config/test_raw_config.py
+tests/config/test_run_config.py
+tests/config/test_status.py
+tests/config/resources/__init__.py
+tests/config/resources/cross_sections.xml
+tests/config/resources/dummy.txt
+tests/config/resources/raw_data/__init__.py
+tests/config/resources/raw_data/_mcnp_-_ENDFB-VIII.0_/Oktavian/Oktavian_Al Coarse neutron flux.csv
+tests/config/resources/raw_data/_mcnp_-_ENDFB-VIII.0_/Oktavian/metadata.json
+tests/config/resources/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 DPA production.csv
+tests/config/resources/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/metadata.json
+tests/config/resources/simulations/_mcnp_-_FENDL 2.1c_/ITER_1D/ITER_1D/ITER_1D.m
+tests/config/resources/simulations/_mcnp_-_FENDL 2.1c_/ITER_1D/ITER_1D/ITER_1D.o
+tests/config/resources/simulations/_mcnp_-_FENDL 2.1c_/ITER_1D/ITER_1D/metadata.json
+tests/config/resources/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al/Oktavian_Al.i
+tests/config/resources/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al/Oktavian_Al.m
+tests/config/resources/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al/Oktavian_Al.o
+tests/config/resources/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al/metadata.json
+tests/config/resources/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co/Oktavian_Co.i
+tests/config/resources/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co/Oktavian_Co.m
+tests/config/resources/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co/Oktavian_Co.o
+tests/config/resources/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co/metadata.json
+tests/config/resources/simulations/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_dummy1/Sphere_dummy1.i
+tests/config/resources/simulations/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_dummy1/Sphere_dummy1.o
+tests/config/resources/simulations/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_dummy1/metadata.json
+tests/dummy_structure/__init__.py
+tests/dummy_structure/benchmark_templates/TypicalMaterials
+tests/dummy_structure/benchmark_templates/__init__.py
+tests/dummy_structure/benchmark_templates/Dummy_continue/benchmark_metadata.json
+tests/dummy_structure/benchmark_templates/Dummy_continue/Dummy_continue1/mcnp/Sphere.i
+tests/dummy_structure/benchmark_templates/Dummy_continue/Dummy_continue2/mcnp/Sphere.i
+tests/dummy_structure/benchmark_templates/ITER_1D/benchmark_metadata.json
+tests/dummy_structure/benchmark_templates/ITER_1D/ITER_1D/mcnp/ITER_1D.i
+tests/dummy_structure/benchmark_templates/Oktavian/benchmark_metadata.json
+tests/dummy_structure/benchmark_templates/Oktavian/Oktavian_Al/mcnp/Oktavian_Al.i
+tests/dummy_structure/benchmark_templates/Oktavian/Oktavian_Al/mcnp/wwinp
+tests/dummy_structure/benchmark_templates/Oktavian/Oktavian_Co/mcnp/Oktavian_Co.i
+tests/dummy_structure/benchmark_templates/Sphere/benchmark_metadata.json
+tests/dummy_structure/benchmark_templates/Sphere/Sphere/mcnp/Sphere.i
+tests/dummy_structure/benchmark_templates/Sphere/Sphere/openmc/geometry.xml
+tests/dummy_structure/benchmark_templates/Sphere/Sphere/openmc/settings.xml
+tests/dummy_structure/benchmark_templates/Sphere/Sphere/openmc/tallies.xml
+tests/dummy_structure/benchmark_templates/Sphere/Sphere/serpent/Sphere.i
+tests/dummy_structure/benchmark_templates/SphereSDDR/benchmark_metadata.json
+tests/dummy_structure/benchmark_templates/SphereSDDR/SphereSDDR/d1s/SphereSDDR.i
+tests/dummy_structure/cfg/env_vars_cfg.yml
+tests/dummy_structure/cfg/libs_cfg.yml
+tests/dummy_structure/cfg/pp_cfg.yml
+tests/dummy_structure/cfg/run_cfg.yml
+tests/dummy_structure/cfg/batch_templates/LLtemplate.cmd
+tests/dummy_structure/cfg/batch_templates/Slurmtemplate.sh
+tests/dummy_structure/cfg/batch_templates/__init__.py
+tests/dummy_structure/cfg/benchmarks/__init__.py
+tests/dummy_structure/cfg/benchmarks/Sphere/MaterialsSettings.csv
+tests/dummy_structure/cfg/benchmarks/Sphere/ZaidSettings.csv
+tests/dummy_structure/cfg/benchmarks/Sphere/__init__.py
+tests/dummy_structure/cfg/benchmarks/SphereSDDR/MaterialsSettings.csv
+tests/dummy_structure/cfg/benchmarks/SphereSDDR/ZaidSettings.csv
+tests/dummy_structure/cfg/benchmarks/SphereSDDR/__init__.py
+tests/dummy_structure/cfg/benchmarks/SphereSDDR/irrad_93c.txt
+tests/dummy_structure/cfg/benchmarks/SphereSDDR/irrad_98c.txt
+tests/dummy_structure/cfg/benchmarks/SphereSDDR/irrad_99c.txt
+tests/dummy_structure/cfg/benchmarks_pp/__init__.py
+tests/dummy_structure/cfg/benchmarks_pp/atlas/Sphere.yaml
+tests/dummy_structure/cfg/benchmarks_pp/excel/Oktavian.yaml
+tests/dummy_structure/cfg/benchmarks_pp/excel/Sphere.yaml
+tests/dummy_structure/cfg/benchmarks_pp/raw/mcnp/ITER_1D.yaml
+tests/dummy_structure/cfg/benchmarks_pp/raw/mcnp/Oktavian.yaml
+tests/dummy_structure/cfg/benchmarks_pp/raw/mcnp/Sphere.yaml
+tests/dummy_structure/cfg/exe_config/__init__.py
+tests/dummy_structure/cfg/exe_config/d1s_config.sh
+tests/dummy_structure/cfg/exe_config/mcnp_config.sh
+tests/dummy_structure/cfg/exe_config/openmc_config.sh
+tests/dummy_structure/cfg/exe_config/serpent_config.sh
+tests/dummy_structure/logs/__init__.py
+tests/dummy_structure/post_processsing/__init__.py
+tests/dummy_structure/raw_data/__init__.py
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/ITER_Cyl_SDDR/ITER_Cyl_SDDR Gamma flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/ITER_Cyl_SDDR/ITER_Cyl_SDDR Neutron flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/ITER_Cyl_SDDR/ITER_Cyl_SDDR SDDR.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/ITER_Cyl_SDDR/ITER_Cyl_SDDR Total gamma flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/ITER_Cyl_SDDR/ITER_Cyl_SDDR Total neutron flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/ITER_Cyl_SDDR/metadata.json
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16 Leakage neutron flux (total).csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16 Photon heating.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16 SDDR totals.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16 SDDR.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74 Leakage neutron flux (total).csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74 Photon heating.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74 SDDR totals.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74 SDDR.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 1_/SphereSDDR/metadata.json
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/FNG-SDDR/FNG-SDDR_1 SDDR in air (daughters) irr. 1.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/FNG-SDDR/FNG-SDDR_1 SDDR in air (parents) irr. 1.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/FNG-SDDR/FNG-SDDR_1 SDDR in air irr. 1.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/FNG-SDDR/FNG-SDDR_2 SDDR in air (daughters) irr. 2.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/FNG-SDDR/FNG-SDDR_2 SDDR in air (parents) irr. 2.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/FNG-SDDR/FNG-SDDR_2 SDDR in air irr. 2.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/FNG-SDDR/metadata.json
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/ITER_Cyl_SDDR/ITER_Cyl_SDDR Gamma flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/ITER_Cyl_SDDR/ITER_Cyl_SDDR Neutron flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/ITER_Cyl_SDDR/ITER_Cyl_SDDR SDDR.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/ITER_Cyl_SDDR/ITER_Cyl_SDDR Total gamma flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/ITER_Cyl_SDDR/ITER_Cyl_SDDR Total neutron flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/ITER_Cyl_SDDR/metadata.json
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_11023_Na-23_16 Leakage neutron flux (total).csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_11023_Na-23_16 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_11023_Na-23_16 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_11023_Na-23_16 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_11023_Na-23_16 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_11023_Na-23_16 Photon heating.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_11023_Na-23_16 SDDR totals.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_11023_Na-23_16 SDDR.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_M74 Leakage neutron flux (total).csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_M74 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_M74 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_M74 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_M74 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_M74 Photon heating.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_M74 SDDR totals.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/SphereSDDR_M74 SDDR.csv
+tests/dummy_structure/raw_data/_d1s_-_lib 2_/SphereSDDR/metadata.json
+tests/dummy_structure/raw_data/_exp_-_exp_/ASPIS-Fe88/ASPIS-Fe88_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/ASPIS-Fe88/ASPIS-Fe88_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/ASPIS-Fe88/ASPIS-Fe88_In Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/ASPIS-Fe88/ASPIS-Fe88_Rh Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/ASPIS-Fe88/ASPIS-Fe88_S Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_In Reaction Rate In.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_Rh Reaction Rate Rh.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_S Reaction Rate S.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_flux Neutron flux (z=39.01cm).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_flux Neutron flux (z=58.61cm).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-BKT/FNG-BKT_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-BKT/FNG-BKT_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-BKT/FNG-BKT_Fe Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-BKT/FNG-BKT_In Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-BKT/FNG-BKT_Mn Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-BKT/FNG-BKT_Nb Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-BKT/FNG-BKT_Ni-n2n Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-BKT/FNG-BKT_Ni-np Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-HCPB/FNG-HCPB_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-HCPB/FNG-HCPB_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-HCPB/FNG-HCPB_H3 Tritium activity Pellet.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-HCPB/FNG-HCPB_Nb Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-HCPB/FNG-HCPB_Ni Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SDDR/FNG-SDDR_1 SDDR in air irr. 1.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SDDR/FNG-SDDR_2 SDDR in air irr. 2.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SS/FNG-SS_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SS/FNG-SS_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SS/FNG-SS_Fe Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SS/FNG-SS_In Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SS/FNG-SS_Mn Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SS/FNG-SS_Ni-n2n Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SS/FNG-SS_Ni-np Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SiC/FNG-SiC_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SiC/FNG-SiC_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SiC/FNG-SiC_Nb Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SiC/FNG-SiC_Ni Reaction rate.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-SiC/FNG-SiC_TLD Nuclear heating.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-W/FNG-W_Al Activation Foils.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-W/FNG-W_Au Activation Foils.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-W/FNG-W_Fe Activation Foils.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-W/FNG-W_In Activation Foils.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-W/FNG-W_Mn Activation Foils.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-W/FNG-W_Nb Activation Foils.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-W/FNG-W_Ni-n2n Activation Foils.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-W/FNG-W_Ni-np Activation Foils.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNG-W/FNG-W_TLD Nuclear heating.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-15 Coarse leakage flux at 0 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-15 Coarse leakage flux at 12.2 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-15 Coarse leakage flux at 24.9 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-15 Coarse leakage flux at 41.8 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-15 Coarse leakage flux at 66.8 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-15 Neutron leakage flux at 0 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-15 Neutron leakage flux at 12.2 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-15 Neutron leakage flux at 24.9 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-15 Neutron leakage flux at 41.8 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-15 Neutron leakage flux at 66.8 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-5 Coarse leakage flux at 0 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-5 Coarse leakage flux at 24.9 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-5 Coarse leakage flux at 41.8 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-5 Coarse leakage flux at 66.8 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-5 Neutron leakage flux at 0 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-5 Neutron leakage flux at 24.9 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-5 Neutron leakage flux at 41.8 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/FNS-TOF/FNS-TOF_Be-5 Neutron leakage flux at 66.8 deg.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/IPPE-DT/IPPE-DT_FE_S1 Coarse neutron flux time domain.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/IPPE-DT/IPPE-DT_FE_S1 Neutron flux time domain.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/IPPE-DT/IPPE-DT_FE_S2 Coarse neutron flux time domain.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/IPPE-DT/IPPE-DT_FE_S2 Neutron flux time domain.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/IPPE-DT/IPPE-DT_FE_S3 Coarse neutron flux time domain.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/IPPE-DT/IPPE-DT_FE_S3 Neutron flux time domain.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/IPPE-DT/IPPE-DT_FE_S4 Coarse neutron flux time domain.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/IPPE-DT/IPPE-DT_FE_S4 Neutron flux time domain.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/IPPE-DT/IPPE-DT_FE_S5 Coarse neutron flux time domain.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/IPPE-DT/IPPE-DT_FE_S5 Neutron flux time domain.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Oktavian/Oktavian_Al Coarse gamma flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Oktavian/Oktavian_Al Coarse neutron flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Oktavian/Oktavian_Al Gamma flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Oktavian/Oktavian_Al Neutron flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Oktavian/Oktavian_Co Coarse gamma flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Oktavian/Oktavian_Co Coarse neutron flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Oktavian/Oktavian_Co Gamma flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Oktavian/Oktavian_Co Neutron flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-FNG/TUD-FNG Neutron fluence (pos A).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-FNG/TUD-FNG Neutron fluence (pos B).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-FNG/TUD-FNG Photon fluence (pos A).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-FNG/TUD-FNG Photon fluence (pos B).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-Fe/TUD-Fe_A0 Neutron fluence (energy).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-Fe/TUD-Fe_A0 Neutron fluence (time).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-Fe/TUD-Fe_A0 Photon fluence.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-Fe/TUD-Fe_A1 Neutron fluence (energy).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-Fe/TUD-Fe_A1 Neutron fluence (time).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-Fe/TUD-Fe_A1 Photon fluence.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-Fe/TUD-Fe_A2 Neutron fluence (energy).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-Fe/TUD-Fe_A2 Neutron fluence (time).csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-Fe/TUD-Fe_A2 Photon fluence.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-W/TUD-W_pos1 Neutron flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-W/TUD-W_pos1 Photon flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-W/TUD-W_pos2 Neutron flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-W/TUD-W_pos2 Photon flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-W/TUD-W_pos3 Neutron flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-W/TUD-W_pos3 Photon flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-W/TUD-W_pos4 Neutron flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/TUD-W/TUD-W_pos4 Photon flux.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-BC/Tiara-BC_cc-43-100-00 Coarse neutron yield.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-BC/Tiara-BC_cc-43-100-00 Neutron yield.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-BC/Tiara-BC_cc-68-25-80 Coarse neutron yield.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-BC/Tiara-BC_cc-68-25-80 Neutron yield.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-BS/Tiara-BS_cc-43-25-40 Bonner sphere detector.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-BS/Tiara-BS_fe-68-100-00 Bonner sphere detector.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-43-25-00 20 cm Th-232 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-43-25-00 20 cm U-238 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-43-25-00 On-axis Th-232 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-43-25-00 On-axis U-238 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-43-50-00 20 cm Th-232 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-43-50-00 20 cm U-238 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-43-50-00 On-axis Th-232 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-43-50-00 On-axis U-238 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-68-25-00 20 cm Th-232 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-68-25-00 20 cm U-238 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-68-25-00 On-axis Th-232 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_cc-68-25-00 On-axis U-238 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_fe-43-70-00 20 cm Th-232 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_fe-43-70-00 20 cm U-238 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_fe-43-70-00 On-axis Th-232 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_fe-43-70-00 On-axis U-238 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_fe-68-100-00 20 cm Th-232 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_fe-68-100-00 20 cm U-238 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_fe-68-100-00 On-axis Th-232 FC.csv
+tests/dummy_structure/raw_data/_exp_-_exp_/Tiara-FC/Tiara-FC_fe-68-100-00 On-axis U-238 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D DPA in Cu.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D DPA in Fe.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D DPA in Ni.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D Fast fluence at magnets.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D H in Be.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D H in CuBeNi.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D H in Inconel.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D H production in SS316.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D He in Be.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D He in CuBeNi.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D He in Inconel.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D He production in SS316.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D Neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D Photon flux (E binned).csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D T in Be.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D T in CuBeNi.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D T in Inconel.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D Total neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D Total nuclear heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D Total photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/ITER_1D Tritium production in SS316.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/ITER_1D/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Oktavian/Oktavian_Al Coarse neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Oktavian/Oktavian_Al Coarse photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Oktavian/Oktavian_Al Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Oktavian/Oktavian_Al Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Oktavian/Oktavian_Co Coarse gamma flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Oktavian/Oktavian_Co Coarse neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Oktavian/Oktavian_Co Gamma flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Oktavian/Oktavian_Co Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Oktavian/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak DPA in divertor cell.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Neutron flux in PF coils.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Neutron flux in blanket cells.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Neutron nuclear heating in PF coils.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Neutron nuclear heating in VV.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Neutron nuclear heating in blanket.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Neutron spectrum in OB blanket [175 group].csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Neutron spectrum in PF coils [175 group].csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Photon flux in PF coils.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Photon flux in blanket cells.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Photon nuclear heating in PF coils.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Photon nuclear heating in VV.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Photon nuclear heating in blanket.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Photon spectrum in OB blanket [175 group].csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Photon spectrum in PF coils [175 group].csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/Simple_Tokamak Tritium Production in blanket.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Simple_Tokamak/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 DPA production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 He ppm production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 Neutron heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 Photon heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1001_H-1 T production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1002_H-2 DPA production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1002_H-2 He ppm production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1002_H-2 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1002_H-2 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1002_H-2 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1002_H-2 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1002_H-2 Neutron heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1002_H-2 Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1002_H-2 Photon heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1002_H-2 Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_1002_H-2 T production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M101 DPA production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M101 He ppm production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M101 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M101 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M101 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M101 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M101 Neutron heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M101 Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M101 Photon heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M101 Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M101 T production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M400 DPA production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M400 He ppm production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M400 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M400 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M400 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M400 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M400 Neutron heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M400 Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M400 Photon heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M400 Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/Sphere_M400 T production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/Sphere/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D T in Be.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D T in CuBeNi.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D T in Inconel.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D T in Li pt1.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D T in Li pt2.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D T in Li pt3.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D T in SS316.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/WCLL_TBM_1D Tritium Production.csv
+tests/dummy_structure/raw_data/_mcnp_-_ENDFB-VIII.0_/WCLL_TBM_1D/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Al Activation Foils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Au Activation Foils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Fe Activation Foils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_In Activation Foils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Mn Activation Foils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Nb Activation Foils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Ni-n2n Activation Foils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Ni-np Activation Foils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_TLD Nuclear heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 2.1c_/FNG-W/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_In Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Rh Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_S Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-FNG/TUD-FNG Neutron fluence (pos A).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-FNG/TUD-FNG Neutron fluence (pos B).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-FNG/TUD-FNG Photon fluence (pos A).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-FNG/TUD-FNG Photon fluence (pos B).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-FNG/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A0 Neutron fluence (energy).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A0 Neutron fluence (time).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A0 Photon fluence.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A1 Neutron fluence (energy).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A1 Neutron fluence (time).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A1 Photon fluence.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A2 Neutron fluence (energy).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A2 Neutron fluence (time).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A2 Photon fluence.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-Fe/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos1 Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos1 Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos2 Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos2 Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos3 Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos3 Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos4 Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos4 Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.1d_/TUD-W/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_In Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Rh Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_S Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_In Reaction Rate In.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_Rh Reaction Rate Rh.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_S Reaction Rate S.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_flux Neutron flux (z=39.01cm).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_flux Neutron flux (z=58.61cm).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Nb Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Ni Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_TLD Nuclear heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNG-SiC/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15 Coarse leakage flux at 0 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15 Coarse leakage flux at 12.2 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15 Coarse leakage flux at 24.9 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15 Coarse leakage flux at 41.8 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15 Coarse leakage flux at 66.8 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15 Neutron leakage flux at 0 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15 Neutron leakage flux at 12.2 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15 Neutron leakage flux at 24.9 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15 Neutron leakage flux at 41.8 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15 Neutron leakage flux at 66.8 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-5 Coarse leakage flux at 0 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-5 Coarse leakage flux at 24.9 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-5 Coarse leakage flux at 41.8 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-5 Coarse leakage flux at 66.8 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-5 Neutron leakage flux at 0 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-5 Neutron leakage flux at 24.9 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-5 Neutron leakage flux at 41.8 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-5 Neutron leakage flux at 66.8 deg.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/FNS-TOF/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S1 Coarse neutron flux time domain.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S1 Neutron flux time domain.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S2 Coarse neutron flux time domain.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S2 Neutron flux time domain.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S3 Coarse neutron flux time domain.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S3 Neutron flux time domain.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S4 Coarse neutron flux time domain.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S4 Neutron flux time domain.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S5 Coarse neutron flux time domain.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S5 Neutron flux time domain.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/IPPE-DT/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D DPA in Cu.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D DPA in Fe.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D DPA in Ni.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D Fast fluence at magnets.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D H in Be.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D H in CuBeNi.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D H in Inconel.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D H production in SS316.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D He in Be.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D He in CuBeNi.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D He in Inconel.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D He production in SS316.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D Neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D Photon flux (E binned).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D T in Be.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D T in CuBeNi.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D T in Inconel.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D Total neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D Total nuclear heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D Total photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D Tritium production in SS316.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/ITER_1D/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al Coarse neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al Coarse photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co Coarse gamma flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co Coarse neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co Gamma flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Oktavian/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak DPA in divertor cell.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Neutron flux in PF coils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Neutron flux in blanket cells.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Neutron nuclear heating in PF coils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Neutron nuclear heating in VV.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Neutron nuclear heating in blanket.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Neutron spectrum in OB blanket [175 group].csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Neutron spectrum in PF coils [175 group].csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Photon flux in PF coils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Photon flux in blanket cells.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Photon nuclear heating in PF coils.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Photon nuclear heating in VV.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Photon nuclear heating in blanket.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Photon spectrum in OB blanket [175 group].csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Photon spectrum in PF coils [175 group].csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak Tritium Production in blanket.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1001_H-1 DPA production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1001_H-1 He ppm production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1001_H-1 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1001_H-1 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1001_H-1 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1001_H-1 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1001_H-1 Neutron heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1001_H-1 Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1001_H-1 Photon heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1001_H-1 Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1001_H-1 T production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1002_H-2 DPA production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1002_H-2 He ppm production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1002_H-2 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1002_H-2 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1002_H-2 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1002_H-2 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1002_H-2 Neutron heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1002_H-2 Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1002_H-2 Photon heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1002_H-2 Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_1002_H-2 T production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M101 DPA production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M101 He ppm production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M101 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M101 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M101 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M101 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M101 Neutron heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M101 Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M101 Photon heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M101 Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M101 T production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M400 DPA production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M400 He ppm production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M400 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M400 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M400 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M400 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M400 Neutron heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M400 Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M400 Photon heating consistency.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M400 Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_M400 T production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Sphere/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-FNG/TUD-FNG Neutron fluence (pos A).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-FNG/TUD-FNG Neutron fluence (pos B).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-FNG/TUD-FNG Photon fluence (pos A).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-FNG/TUD-FNG Photon fluence (pos B).csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-FNG/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos1 Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos1 Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos2 Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos2 Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos3 Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos3 Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos4 Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos4 Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/TUD-W/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-BC/Tiara-BC_cc-43-100-00 Coarse neutron yield.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-BC/Tiara-BC_cc-43-100-00 Neutron yield.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-BC/Tiara-BC_cc-68-25-80 Coarse neutron yield.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-BC/Tiara-BC_cc-68-25-80 Neutron yield.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-BC/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-BS/Tiara-BS_cc-43-25-40 Bonner sphere detector.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-BS/Tiara-BS_fe-68-100-00 Bonner sphere detector.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-BS/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-25-00 20 cm Th-232 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-25-00 20 cm U-238 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-25-00 On-axis Th-232 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-25-00 On-axis U-238 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-50-00 20 cm Th-232 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-50-00 20 cm U-238 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-50-00 On-axis Th-232 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-50-00 On-axis U-238 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-68-25-00 20 cm Th-232 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-68-25-00 20 cm U-238 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-68-25-00 On-axis Th-232 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-68-25-00 On-axis U-238 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-43-70-00 20 cm Th-232 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-43-70-00 20 cm U-238 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-43-70-00 On-axis Th-232 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-43-70-00 On-axis U-238 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-68-100-00 20 cm Th-232 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-68-100-00 20 cm U-238 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-68-100-00 On-axis Th-232 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-68-100-00 On-axis U-238 FC.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/Tiara-FC/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D Neutron flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D Neutron heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D Photon flux.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D Photon heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D T in Be.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D T in CuBeNi.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D T in Inconel.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D T in Li pt1.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D T in Li pt2.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D T in Li pt3.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D T in SS316.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D Tritium Production.csv
+tests/dummy_structure/raw_data/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Fe Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_In Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Mn Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Nb Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Ni-n2n Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Ni-np Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-BKT/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_H3 Tritium activity Pellet.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Nb Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Ni Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-HCPB/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Fe Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_In Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Mn Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Ni-n2n Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Ni-np Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SS/metadata.json
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Al Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Au Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Nb Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Ni Reaction rate.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_TLD Nuclear heating.csv
+tests/dummy_structure/raw_data/_mcnp_-_JEFF 3.3_/FNG-SiC/metadata.json
+tests/dummy_structure/raw_data/_openmc_-_FENDL 3.1d_/TUD-W/TUD-W_pos1 Neutron flux.csv
+tests/dummy_structure/raw_data/_openmc_-_FENDL 3.1d_/TUD-W/TUD-W_pos1 Photon flux.csv
+tests/dummy_structure/raw_data/_openmc_-_FENDL 3.1d_/TUD-W/TUD-W_pos2 Neutron flux.csv
+tests/dummy_structure/raw_data/_openmc_-_FENDL 3.1d_/TUD-W/TUD-W_pos2 Photon flux.csv
+tests/dummy_structure/raw_data/_openmc_-_FENDL 3.2b_/Sphere/Sphere_M101 Leakage neutron flux Vitamin-J 175.csv
+tests/dummy_structure/raw_data/_openmc_-_FENDL 3.2b_/Sphere/Sphere_M101 Leakage neutron flux.csv
+tests/dummy_structure/raw_data/_openmc_-_FENDL 3.2b_/Sphere/Sphere_M101 Leakage photon flux 24 groups.csv
+tests/dummy_structure/raw_data/_openmc_-_FENDL 3.2b_/Sphere/Sphere_M101 Leakage photon flux.csv
+tests/dummy_structure/raw_data/_openmc_-_FENDL 3.2b_/Sphere/Sphere_M101 Neutron heating.csv
+tests/dummy_structure/raw_data/_openmc_-_FENDL 3.2b_/Sphere/Sphere_M101 Photon heating.csv
+tests/dummy_structure/raw_data/_openmc_-_FENDL 3.2b_/Sphere/metadata.json
+tests/dummy_structure/simulations/_d1s_-_lib 1_/FNG-SDDR/FNG-SDDR_1/FNG-SDDR_1.m
+tests/dummy_structure/simulations/_d1s_-_lib 1_/FNG-SDDR/FNG-SDDR_1/FNG-SDDR_1.o
+tests/dummy_structure/simulations/_d1s_-_lib 1_/FNG-SDDR/FNG-SDDR_1/irrad
+tests/dummy_structure/simulations/_d1s_-_lib 1_/FNG-SDDR/FNG-SDDR_1/metadata.json
+tests/dummy_structure/simulations/_d1s_-_lib 1_/FNG-SDDR/FNG-SDDR_1/react
+tests/dummy_structure/simulations/_d1s_-_lib 1_/FNG-SDDR/FNG-SDDR_2/FNG-SDDR_2.m
+tests/dummy_structure/simulations/_d1s_-_lib 1_/FNG-SDDR/FNG-SDDR_2/FNG-SDDR_2.o
+tests/dummy_structure/simulations/_d1s_-_lib 1_/FNG-SDDR/FNG-SDDR_2/irrad
+tests/dummy_structure/simulations/_d1s_-_lib 1_/FNG-SDDR/FNG-SDDR_2/metadata.json
+tests/dummy_structure/simulations/_d1s_-_lib 1_/FNG-SDDR/FNG-SDDR_2/react
+tests/dummy_structure/simulations/_d1s_-_lib 1_/ITER_Cyl_SDDR/ITER_Cyl_SDDR/ITER_Cyl_SDDR.m
+tests/dummy_structure/simulations/_d1s_-_lib 1_/ITER_Cyl_SDDR/ITER_Cyl_SDDR/ITER_Cyl_SDDR.o
+tests/dummy_structure/simulations/_d1s_-_lib 1_/ITER_Cyl_SDDR/ITER_Cyl_SDDR/metadata.json
+tests/dummy_structure/simulations/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16/SphereSDDR_11023_Na-23_16.m
+tests/dummy_structure/simulations/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16/SphereSDDR_11023_Na-23_16.o
+tests/dummy_structure/simulations/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16/irrad
+tests/dummy_structure/simulations/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16/metadata.json
+tests/dummy_structure/simulations/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_11023_Na-23_16/react
+tests/dummy_structure/simulations/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74/SphereSDDR_M74.m
+tests/dummy_structure/simulations/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74/SphereSDDR_M74.o
+tests/dummy_structure/simulations/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74/irrad
+tests/dummy_structure/simulations/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74/metadata.json
+tests/dummy_structure/simulations/_d1s_-_lib 1_/SphereSDDR/SphereSDDR_M74/react
+tests/dummy_structure/simulations/_d1s_-_lib 2_/ITER_Cyl_SDDR/ITER_Cyl_SDDR/ITER_Cyl_SDDR.m
+tests/dummy_structure/simulations/_d1s_-_lib 2_/ITER_Cyl_SDDR/ITER_Cyl_SDDR/ITER_Cyl_SDDR.o
+tests/dummy_structure/simulations/_d1s_-_lib 2_/ITER_Cyl_SDDR/ITER_Cyl_SDDR/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Al/FNG-W_Al.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Al/FNG-W_Al.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Al/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Au/FNG-W_Au.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Au/FNG-W_Au.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Au/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Fe/FNG-W_Fe.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Fe/FNG-W_Fe.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Fe/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_In/FNG-W_In.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_In/FNG-W_In.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_In/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Mn/FNG-W_Mn.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Mn/FNG-W_Mn.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Mn/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Nb/FNG-W_Nb.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Nb/FNG-W_Nb.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Nb/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Ni-n2n/FNG-W_Ni-n2n.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Ni-n2n/FNG-W_Ni-n2n.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Ni-n2n/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Ni-np/FNG-W_Ni-np.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Ni-np/FNG-W_Ni-np.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_Ni-np/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_TLD/FNG-W_TLD.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_TLD/FNG-W_TLD.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/FNG-W/FNG-W_TLD/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/HCPB_TBM_1D/HCPB_TBM_1D/HCPB_TBM_1D.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/HCPB_TBM_1D/HCPB_TBM_1D/HCPB_TBM_1D.msht
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/HCPB_TBM_1D/HCPB_TBM_1D/HCPB_TBM_1D.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/HCPB_TBM_1D/HCPB_TBM_1D/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/ITER_1D/ITER_1D/ITER_1D.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/ITER_1D/ITER_1D/ITER_1D.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/ITER_1D/ITER_1D/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/WCLL_TBM_1D/WCLL_TBM_1D/WCLL_TBM_1D.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/WCLL_TBM_1D/WCLL_TBM_1D/WCLL_TBM_1D.msht
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/WCLL_TBM_1D/WCLL_TBM_1D/WCLL_TBM_1D.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 2.1c_/WCLL_TBM_1D/WCLL_TBM_1D/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Al/ASPIS-Fe88_Al.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Al/ASPIS-Fe88_Al.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Al/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Au/ASPIS-Fe88_Au.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Au/ASPIS-Fe88_Au.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Au/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_In/ASPIS-Fe88_In.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_In/ASPIS-Fe88_In.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_In/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Rh/ASPIS-Fe88_Rh.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Rh/ASPIS-Fe88_Rh.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_Rh/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_S/ASPIS-Fe88_S.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_S/ASPIS-Fe88_S.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/ASPIS-Fe88/ASPIS-Fe88_S/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-FNG/TUD-FNG/TUD-FNG.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-FNG/TUD-FNG/TUD-FNG.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-FNG/TUD-FNG/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A0/TUD-Fe_A0.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A0/TUD-Fe_A0.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A0/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A1/TUD-Fe_A1.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A1/TUD-Fe_A1.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A1/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A2/TUD-Fe_A2.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A2/TUD-Fe_A2.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-Fe/TUD-Fe_A2/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos1/TUD-W_pos1.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos1/TUD-W_pos1.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos1/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos2/TUD-W_pos2.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos2/TUD-W_pos2.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos2/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos3/TUD-W_pos3.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos3/TUD-W_pos3.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos3/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos4/TUD-W_pos4.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos4/TUD-W_pos4.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.1d_/TUD-W/TUD-W_pos4/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Al/ASPIS-Fe88_Al.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Al/ASPIS-Fe88_Al.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Al/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Au/ASPIS-Fe88_Au.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Au/ASPIS-Fe88_Au.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Au/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_In/ASPIS-Fe88_In.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_In/ASPIS-Fe88_In.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_In/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Rh/ASPIS-Fe88_Rh.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Rh/ASPIS-Fe88_Rh.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_Rh/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_S/ASPIS-Fe88_S.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_S/ASPIS-Fe88_S.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-Fe88/ASPIS-Fe88_S/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_In/ASPIS-PCA-Replica_In.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_In/ASPIS-PCA-Replica_In.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_In/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_Rh/ASPIS-PCA-Replica_Rh.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_Rh/ASPIS-PCA-Replica_Rh.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_Rh/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_S/ASPIS-PCA-Replica_S.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_S/ASPIS-PCA-Replica_S.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_S/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_flux/ASPIS-PCA-Replica_spectra.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_flux/ASPIS-PCA-Replica_spectra.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ASPIS-PCA-Replica/ASPIS-PCA-Replica_flux/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Dummy_continue/Dummy_continue1/Dummy_continue1.i
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Dummy_continue/Dummy_continue1/Dummy_continue1.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Dummy_continue/Dummy_continue1/Dummy_continue1.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Dummy_continue/Dummy_continue1/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Dummy_continue/Dummy_continue2/Dummy_continue2.i
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Dummy_continue/Dummy_continue2/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Al/FNG-SiC_Al.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Al/FNG-SiC_Al.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Al/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Au/FNG-SiC_Au.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Au/FNG-SiC_Au.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Au/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Nb/FNG-SiC_Nb.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Nb/FNG-SiC_Nb.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Nb/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Ni/FNG-SiC_Ni.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Ni/FNG-SiC_Ni.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_Ni/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_TLD/FNG-SiC_TLD.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_TLD/FNG-SiC_TLD.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNG-SiC/FNG-SiC_TLD/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15/FNS-TOF_Be-15.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15/FNS-TOF_Be-15.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-15/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-5/FNS-TOF_Be-5.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-5/FNS-TOF_Be-5.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/FNS-TOF/FNS-TOF_Be-5/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/HCPB_TBM_1D/HCPB_TBM_1D/HCPB_TBM_1D.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/HCPB_TBM_1D/HCPB_TBM_1D/HCPB_TBM_1D.msht
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/HCPB_TBM_1D/HCPB_TBM_1D/HCPB_TBM_1D.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/HCPB_TBM_1D/HCPB_TBM_1D/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S1/IPPE-DT_FE_S1.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S1/IPPE-DT_FE_S1.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S1/dump.out
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S1/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S2/IPPE-DT_FE_S2.i
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S2/IPPE-DT_FE_S2.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S2/IPPE-DT_FE_S2.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S2/dump.out
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S2/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S3/IPPE-DT_FE_S3.i
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S3/IPPE-DT_FE_S3.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S3/IPPE-DT_FE_S3.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S3/dump.out
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S3/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S4/IPPE-DT_FE_S4.i
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S4/IPPE-DT_FE_S4.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S4/IPPE-DT_FE_S4.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S4/dump.out
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S4/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S5/IPPE-DT_FE_S5.i
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S5/IPPE-DT_FE_S5.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S5/IPPE-DT_FE_S5.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S5/dump.out
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/IPPE-DT/IPPE-DT_FE_S5/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D/ITER_1D.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D/ITER_1D.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/ITER_1D/ITER_1D/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al/Oktavian_Al.i
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al/Oktavian_Al.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al/Oktavian_Al.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Al/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co/Oktavian_Co.i
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co/Oktavian_Co.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co/Oktavian_Co.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Oktavian/Oktavian_Co/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak/Simple_Tokamak.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak/Simple_Tokamak.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Simple_Tokamak/Simple_Tokamak/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_dummy1/Sphere_dummy1.i
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_dummy1/Sphere_dummy1.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_dummy1/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_m101/Sphere_M101_.i
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_m101/Sphere_M101_.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_m101/Sphere_M101_.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Sphere/Sphere_m101/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-FNG/TUD-FNG/TUD-FNG.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-FNG/TUD-FNG/TUD-FNG.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-FNG/TUD-FNG/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos1/TUD-W_pos1.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos1/TUD-W_pos1.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos1/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos2/TUD-W_pos2.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos2/TUD-W_pos2.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos2/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos3/TUD-W_pos3.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos3/TUD-W_pos3.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos3/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos4/TUD-W_pos4.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos4/TUD-W_pos4.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/TUD-W/TUD-W_pos4/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BC/Tiara-BC_cc-43-100-00/Tiara-BC_cc-43-100-00.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BC/Tiara-BC_cc-43-100-00/Tiara-BC_cc-43-100-00.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BC/Tiara-BC_cc-43-100-00/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BC/Tiara-BC_cc-68-25-80/Tiara-BC_cc-68-25-80.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BC/Tiara-BC_cc-68-25-80/Tiara-BC_cc-68-25-80.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BC/Tiara-BC_cc-68-25-80/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BS/Tiara-BS_cc-43-25-40/Tiara-BS_cc-43-25-40.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BS/Tiara-BS_cc-43-25-40/Tiara-BS_cc-43-25-40.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BS/Tiara-BS_cc-43-25-40/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BS/Tiara-BS_fe-68-100-00/Tiara-BS_fe-68-100-00.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BS/Tiara-BS_fe-68-100-00/Tiara-BS_fe-68-100-00.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-BS/Tiara-BS_fe-68-100-00/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-25-00/Tiara-FC_cc-43-25-00.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-25-00/Tiara-FC_cc-43-25-00.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-25-00/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-50-00/Tiara-FC_cc-43-50-00.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-50-00/Tiara-FC_cc-43-50-00.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-43-50-00/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-68-25-00/Tiara-FC_cc-68-25-00.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-68-25-00/Tiara-FC_cc-68-25-00.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_cc-68-25-00/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-43-70-00/Tiara-FC_fe-43-70-00.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-43-70-00/Tiara-FC_fe-43-70-00.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-43-70-00/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-68-100-00/Tiara-FC_fe-68-100-00.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-68-100-00/Tiara-FC_fe-68-100-00.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/Tiara-FC/Tiara-FC_fe-68-100-00/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D/WCLL_TBM_1D.m
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D/WCLL_TBM_1D.msht
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D/WCLL_TBM_1D.o
+tests/dummy_structure/simulations/_mcnp_-_FENDL 3.2c_/WCLL_TBM_1D/WCLL_TBM_1D/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Al/FNG-BKT_Al.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Al/FNG-BKT_Al.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Al/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Au/FNG-BKT_Au.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Au/FNG-BKT_Au.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Au/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Fe/FNG-BKT_Fe.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Fe/FNG-BKT_Fe.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Fe/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_In/FNG-BKT_In.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_In/FNG-BKT_In.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_In/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Mn/FNG-BKT_Mn.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Mn/FNG-BKT_Mn.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Mn/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Nb/FNG-BKT_Nb.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Nb/FNG-BKT_Nb.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Nb/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Ni-n2n/FNG-BKT_Ni-n2n.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Ni-n2n/FNG-BKT_Ni-n2n.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Ni-n2n/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Ni-np/FNG-BKT_Ni-np.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Ni-np/FNG-BKT_Ni-np.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-BKT/FNG-BKT_Ni-np/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Al/FNG-HCPB_Al.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Al/FNG-HCPB_Al.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Al/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Au/FNG-HCPB_Au.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Au/FNG-HCPB_Au.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Au/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_H3/FNG-HCPB_H3.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_H3/FNG-HCPB_H3.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_H3/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Nb/FNG-HCPB_Nb.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Nb/FNG-HCPB_Nb.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Nb/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Ni/FNG-HCPB_Ni.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Ni/FNG-HCPB_Ni.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-HCPB/FNG-HCPB_Ni/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Al/FNG-SS_Al.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Al/FNG-SS_Al.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Al/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Au/FNG-SS_Au.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Au/FNG-SS_Au.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Au/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Fe/FNG-SS_Fe.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Fe/FNG-SS_Fe.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Fe/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_In/FNG-SS_In.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_In/FNG-SS_In.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_In/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Mn/FNG-SS_Mn.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Mn/FNG-SS_Mn.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Mn/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Ni-n2n/FNG-SS_Ni-n2n.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Ni-n2n/FNG-SS_Ni-n2n.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Ni-n2n/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Ni-np/FNG-SS_Ni-np.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Ni-np/FNG-SS_Ni-np.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SS/FNG-SS_Ni-np/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Al/FNG-SiC_Al.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Al/FNG-SiC_Al.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Al/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Au/FNG-SiC_Au.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Au/FNG-SiC_Au.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Au/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Nb/FNG-SiC_Nb.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Nb/FNG-SiC_Nb.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Nb/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Ni/FNG-SiC_Ni.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Ni/FNG-SiC_Ni.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_Ni/metadata.json
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_TLD/FNG-SiC_TLD.m
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_TLD/FNG-SiC_TLD.o
+tests/dummy_structure/simulations/_mcnp_-_JEFF 3.3_/FNG-SiC/FNG-SiC_TLD/metadata.json
+tests/dummy_structure/simulations/_openmc_-_FENDL 3.1d_/TUD-W/TUD-W_pos1/metadata.json
+tests/dummy_structure/simulations/_openmc_-_FENDL 3.1d_/TUD-W/TUD-W_pos1/statepoint.10.h5
+tests/dummy_structure/simulations/_openmc_-_FENDL 3.1d_/TUD-W/TUD-W_pos1/tallies.out
+tests/dummy_structure/simulations/_openmc_-_FENDL 3.1d_/TUD-W/TUD-W_pos1/tally_factors.yaml
+tests/dummy_structure/simulations/_openmc_-_FENDL 3.1d_/TUD-W/TUD-W_pos1/volumes.json
+tests/dummy_structure/simulations/_openmc_-_FENDL 3.2b_/Simple_Tokamak/Simple_Tokamak/metadata.json
+tests/dummy_structure/simulations/_openmc_-_FENDL 3.2b_/Simple_Tokamak/Simple_Tokamak/statepoint.10.h5
+tests/dummy_structure/simulations/_openmc_-_FENDL 3.2b_/Simple_Tokamak/Simple_Tokamak/tallies.out
+tests/dummy_structure/simulations/_openmc_-_FENDL 3.2b_/Sphere/Sphere_m101/metadata.json
+tests/dummy_structure/simulations/_openmc_-_FENDL 3.2b_/Sphere/Sphere_m101/statepoint.10.h5
+tests/dummy_structure/simulations/_openmc_-_FENDL 3.2b_/Sphere/Sphere_m101/tallies.out
+tests/gui/__init__.py
+tests/gui/test_config_gui.py
+tests/gui/test_post_config_gui.py
+tests/helper/__init__.py
+tests/helper/test_auxiliary_func.py
+tests/helper/test_openmc.py
+tests/helper/compatibility_scripts/__init__.py
+tests/helper/compatibility_scripts/convert_oktavian.py
+tests/helper/compatibility_scripts/derive_ITER1D_z_coordinates.py
+tests/post/__init__.py
+tests/post/test_atlas_processor.py
+tests/post/test_excel_processor.py
+tests/post/test_excel_routines.py
+tests/post/test_manipulate_tally.py
+tests/post/test_plotter.py
+tests/post/test_raw_processor.py
+tests/post/test_sim_output.py
+tests/post/resources/__init__.py
+tests/post/resources/openmc/__init__.py
+tests/post/resources/openmc/geometry.xml
+tests/post/resources/openmc/materials.xml
+tests/post/resources/openmc/statepoint.10.h5
+tests/post/resources/openmc/tally_factors.yaml
+tests/post/resources/openmc/volumes.json
+tests/run/__init__.py
+tests/run/test_benchmark.py
+tests/run/test_input.py
+tests/run/resources/__init__.py
+tests/run/resources/cross_sections.xml
+tests/run/resources/xsdir.txt
