@@ -1,0 +1,17 @@
+simba_chem/__init__.py,sha256=2rpjyZ8KmMDPbPqNCsUKtlq2XMmOCAsi9TogwvjiMu8,762
+simba_chem/analysis.py,sha256=4xe5bj7WiL2Q02amIxuZQZn8p5SA2geojBUEzRDqUEU,22164
+simba_chem/calculus.py,sha256=TGJPlLi8HqKljAKA_jLqq1lypAl-hpZDA8n9vxAW3Gs,7928
+simba_chem/core.py,sha256=0e4rP-tlt1VMo8pg7-6imEKLJ8KQ3ZrRW0aWhSRbH2k,47280
+simba_chem/core_backup.py,sha256=3iPkqqzLdaQkC74RCxCjZJM7WXNp8ONwINCxI479pIg,46786
+simba_chem/helpers.py,sha256=LE33KON0cJHyIlOVgub4Y6_44_-XOxx_5IXau1RTfEM,20545
+simba_chem/model_classes.py,sha256=7JED0cJT-Te-_wReTmsSzpDNfGQgOQU9cgvTiDhGvmk,20698
+simba_chem/self_shielding.py,sha256=o6pb9RwiTDR0cfNW4Tmymc2bZmrcSviroyBOMiJcpRY,13610
+simba_chem/data/__init__.py,sha256=PgGYSIlQsOfo2wy3t8_7us6GK9aJJZqv_5nRRaCGgrA,476
+simba_chem/data/data_chemnet4.dat,sha256=WHG6ptGJp9ctThYVvugMfN_gKrndz1Y9160unLL6VxM,302112
+simba_chem/data/data_selfshielding_co.dat,sha256=jXds2qalRGuhSFoKSDdeQ0Eab3HLN8GvOXk6RRRkuqw,120952
+simba_chem/data/data_selfshielding_n2.dat,sha256=Eti5PhlTkPT8c7_SQdGEf14VsS-ovElbKouJY1SeAyY,212832
+simba_chem-1.0.0.dist-info/licenses/LICENSE,sha256=-NjDXt9GJY5PAjfnq3aOcNhKNt8tZfThOKRb-X5u9rg,1066
+simba_chem-1.0.0.dist-info/METADATA,sha256=ecD11n4mMFqHw8VAbm1HD_roD3lodsFf6Q0ovDw2FT8,2845
+simba_chem-1.0.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+simba_chem-1.0.0.dist-info/top_level.txt,sha256=St4raoyR7JPx7eNlfTg7bdb4mcauAy8dPjJtwXeynls,11
+simba_chem-1.0.0.dist-info/RECORD,,
