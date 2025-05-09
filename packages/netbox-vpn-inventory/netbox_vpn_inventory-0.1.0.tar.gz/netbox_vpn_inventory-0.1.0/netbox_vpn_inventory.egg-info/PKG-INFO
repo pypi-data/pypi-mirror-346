@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: netbox-vpn-inventory
+Version: 0.1.0
+Summary: Plugin NetBox para inventário de VPNs
+Author: Seu Nome
+Author-email: seu@email.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
