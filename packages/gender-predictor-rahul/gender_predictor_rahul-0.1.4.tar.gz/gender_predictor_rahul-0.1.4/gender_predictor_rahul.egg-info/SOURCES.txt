@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+gender_predictor_module/__init__.py
+gender_predictor_module/gender_predictor.keras
+gender_predictor_module/model_utils.py
+gender_predictor_module/tokenizer.pkl
+gender_predictor_rahul.egg-info/PKG-INFO
+gender_predictor_rahul.egg-info/SOURCES.txt
+gender_predictor_rahul.egg-info/dependency_links.txt
+gender_predictor_rahul.egg-info/requires.txt
+gender_predictor_rahul.egg-info/top_level.txt

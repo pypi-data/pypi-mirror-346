@@ -1,0 +1,2 @@
+include gender_predictor_module/tokenizer.pkl
+include gender_predictor_module/gender_predictor.keras
