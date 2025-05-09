@@ -1,0 +1,2 @@
+[console_scripts]
+matlab-cli = matlab_cli.__main__:main
