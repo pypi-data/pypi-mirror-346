@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyhoster.8
+setup.cfg
+setup.py
+pyhoster/__init__.py
+pyhoster/main.py
+pyhoster.egg-info/PKG-INFO
+pyhoster.egg-info/SOURCES.txt
+pyhoster.egg-info/dependency_links.txt
+pyhoster.egg-info/entry_points.txt
+pyhoster.egg-info/requires.txt
+pyhoster.egg-info/top_level.txt
