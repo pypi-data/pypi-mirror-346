@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/lambda_snaploader/__init__.py
+src/lambda_snaploader/libpreload.c
+src/lambda_snaploader/loader.py
+src/lambda_snaploader/s3_utils.py
+src/lambda_snaploader/snapstart.py
+src/lambda_snaploader.egg-info/PKG-INFO
+src/lambda_snaploader.egg-info/SOURCES.txt
+src/lambda_snaploader.egg-info/dependency_links.txt
+src/lambda_snaploader.egg-info/requires.txt
+src/lambda_snaploader.egg-info/top_level.txt
