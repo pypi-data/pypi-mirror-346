@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lan File</title>
+    <style>
+        #editor {
+            width: 100%;
+            height: 100px;
+            margin: 20px 0;
+            padding: 10px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+<h1>TEXT</h1>
+<textarea id="editor">{{ content }}</textarea>
+<button onclick="copyText()">COPY</button>
+
+<h1>Upload a File</h1>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="fileInput">
+</form>
+
+
+<h1>File List</h1>
+<ul>
+    {% for file in files %}
+    <li><a href="{{ url_for('download_file', filename=file) }}">{{ file }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<script type="text/javascript">
+    const fileInput = document.getElementById('fileInput');
+    fileInput.addEventListener('change', function () {
+        const file = fileInput.files[0];
+        if (file) {
+            const formData = new FormData();
+            formData.append('file', file);
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            }).then(response => {
+                if (response.ok) {
+                    location.reload();
+                } else {
+                    alert('File upload failed!');
+                }
+            });
+        }
+    });
+
+    function copyText() {
+        const textareaClipboard = document.getElementById('editor');
+        textareaClipboard.select();
+        document.execCommand('copy');
+    }
+
+    // post data to server
+    const textarea = document.getElementById('editor');
+    textarea.addEventListener('input', () => {
+      fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `content=${encodeURIComponent(textarea.value)}`
+      })
+    });
+
+    // update content every second
+    setInterval(() => {
+      fetch('/')
+        .then(r => r.text())
+        .then(html => {
+          const newText = new DOMParser()
+            .parseFromString(html, 'text/html')
+            .getElementById('editor').value;
+          if(newText !== textarea.value) {
+            textarea.value = newText;
+          }
+        })
+    }, 1000);
+
+</script>
+
+</body>
+</html>
