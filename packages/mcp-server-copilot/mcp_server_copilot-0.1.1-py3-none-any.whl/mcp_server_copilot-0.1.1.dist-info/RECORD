@@ -1,0 +1,12 @@
+mcp_server_copilot/__init__.py,sha256=4Mam_RVn6RH4fUeE6a8hRH1Fr2moPlOcPep83Q2W7Kg,653
+mcp_server_copilot/__main__.py,sha256=CIJ0_KQ3j38_aaRlpDRAXzK-f5n5CgKSCvRqjZEh15g,44
+mcp_server_copilot/mcp_connection.py,sha256=Tt57sKJpNRNOFOrAJHPUimDK33jtNOaZWGYYAarAkSk,3418
+mcp_server_copilot/retriever.py,sha256=okHzWOBzNq84SotWsKvxpThwCT7kWwmeN3vhZZt6mLA,3054
+mcp_server_copilot/router.py,sha256=aPGkaAz1TdZwQlIrBxy6HIvC4hUVCxTnsPSMbIuCtS8,9088
+mcp_server_copilot/schemas.py,sha256=BWBUBSS0_gF2Phzgu1pIPGr1yKS-4zqUUYljSDFCKhQ,869
+mcp_server_copilot/server.py,sha256=zJdOZiQpYpXcfAkFxhY90327cAN4dTSxxBOjsR7hv2o,2759
+mcp_server_copilot-0.1.1.dist-info/METADATA,sha256=zEF19_us_ZECSLctlhuxbzgG2OVVG3elojbdn6vvO_g,3835
+mcp_server_copilot-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+mcp_server_copilot-0.1.1.dist-info/entry_points.txt,sha256=8eJuUt0zprLsDr8svs_OakbwzjukPDQz_yx__GTt6Z0,63
+mcp_server_copilot-0.1.1.dist-info/top_level.txt,sha256=Tj3zy9g8fNa8IXOIDpWAiOELo4DXTZqz2qJZs877f78,19
+mcp_server_copilot-0.1.1.dist-info/RECORD,,
