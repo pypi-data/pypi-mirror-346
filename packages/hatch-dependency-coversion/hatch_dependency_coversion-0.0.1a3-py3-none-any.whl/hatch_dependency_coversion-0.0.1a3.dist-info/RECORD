@@ -1,0 +1,11 @@
+hatch_dependency_coversion/__init__.py,sha256=DDUfVV2AmqdT1mIVchgTjmYhR1KJRI4p0qadoAR4yxQ,207
+hatch_dependency_coversion/_version.py,sha256=3lEQZH282dlygp2yv7KHJ8gItTg6lSNOvlGAwLL2RyE,519
+hatch_dependency_coversion/const.py,sha256=EyCb-gp_vCTmz1Rbn_uwWgUbzy2deYQARfinfeQ6mwQ,200
+hatch_dependency_coversion/hooks.py,sha256=0NX5dCedVdSFA8Bunt6FeiS-PFNSAQGwSbtA7Kng-lU,456
+hatch_dependency_coversion/metadata_hook.py,sha256=bwWT0aRO-1sgWLpKNHDzJor422jB_IOhaWR7OGwK-LY,2480
+hatch_dependency_coversion/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hatch_dependency_coversion-0.0.1a3.dist-info/METADATA,sha256=rDnfDo4y-BbAnzC2XTCzIScXYc22BudbHRT4OYGsfCY,5808
+hatch_dependency_coversion-0.0.1a3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hatch_dependency_coversion-0.0.1a3.dist-info/entry_points.txt,sha256=12oFHZDB4UdgZbfxxEAJn0NPtvLRh_QALri_gB5QgCU,64
+hatch_dependency_coversion-0.0.1a3.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+hatch_dependency_coversion-0.0.1a3.dist-info/RECORD,,
