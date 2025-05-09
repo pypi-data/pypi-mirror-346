@@ -1,0 +1,4 @@
+[console_scripts]
+stellar-contract-bindings = stellar_contract_bindings.cli:cli
+stellar-contract-bindings-java = stellar_contract_bindings.cli:cli_java
+stellar-contract-bindings-python = stellar_contract_bindings.cli:cli_python
