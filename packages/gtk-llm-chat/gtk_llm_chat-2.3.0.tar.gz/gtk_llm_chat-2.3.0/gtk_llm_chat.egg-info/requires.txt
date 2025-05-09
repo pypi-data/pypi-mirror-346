@@ -1,0 +1,6 @@
+pygobject
+llm
+llm-gemini
+llm-groq
+markdown-it-py
+python-ulid

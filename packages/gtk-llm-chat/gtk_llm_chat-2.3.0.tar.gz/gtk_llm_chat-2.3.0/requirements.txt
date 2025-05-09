@@ -1,0 +1,12 @@
+pygobject
+markdown-it-py
+python-ulid
+llm
+llm-groq
+llm-gemini
+llm-deepseek
+llm-perplexity
+llm-anthropic
+llm-openrouter
+pystray; sys_platform == "win32"
+watchdog; sys_platform == "win32"
