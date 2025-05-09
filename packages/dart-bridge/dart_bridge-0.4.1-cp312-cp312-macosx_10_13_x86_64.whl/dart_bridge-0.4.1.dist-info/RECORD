@@ -1,0 +1,13 @@
+dart_bridge.cpython-312-darwin.so,sha256=RLtS29S9HabDOC9hbA2faR5WhvnEGtOrwtEIo7EaZFw,41632
+dart_bridge-0.4.1.dist-info/RECORD,,
+dart_bridge-0.4.1.dist-info/WHEEL,sha256=OKtZSghSsnDEYE8D98SEOIWnRkKiCSUSpjBJ_1PrJ9Q,138
+dart_bridge-0.4.1.dist-info/top_level.txt,sha256=0X38a5rKV5T7HhttBGN48ER1X5Zubq5iERYorJWoapo,21
+dart_bridge-0.4.1.dist-info/METADATA,sha256=tNs6uoUlnzi-dcu0xaZ7ONbBFUmx4tPUJC0x--LToBY,5020
+dart_bridge-0.4.1.dist-info/licenses/LICENSE,sha256=cL_9eAvo8Vt2IQK7HQ1BbHNNY9MfAr_51l7TeLzO43g,1071
+dart_api/dart_api.h,sha256=f4F8AiAdd2y4w_odO3LCg2RgL-JOYZfphk2BN8En26Y,149378
+dart_api/dart_api_dl.c,sha256=I_8bi52EvOMUo70QENNvFUK_a2GKsiDui-pIzH-MceQ,2995
+dart_api/dart_version.h,sha256=0VkBB9zrC0ri0FIhsKVB3tUeHIxhRIsGuDcNXgbzvtk,620
+dart_api/dart_native_api.h,sha256=E7kjaroKU6BGQNdMPNIuV0UDsERBV4Ih3bcypAVCVLE,7625
+dart_api/dart_tools_api.h,sha256=AIZBZWH0YPXJpYPAvSTXVujCzmcopGHyK6lRlpj4ye0,22842
+dart_api/dart_api_dl.h,sha256=cVRBBQfIw5xAscMaDNWW-ElZ62Di-O0tHK5SyEqQPV8,9069
+dart_api/internal/dart_api_dl_impl.h,sha256=W1Q4hWXS42P6dgvdhHszJCzE2esBZ_oD-6qLJ3hYHFc,588
