@@ -1,0 +1,4 @@
+[console_scripts]
+bpo = pepotron.cli:bpo
+pep = pepotron.cli:main
+pepotron = pepotron.cli:main

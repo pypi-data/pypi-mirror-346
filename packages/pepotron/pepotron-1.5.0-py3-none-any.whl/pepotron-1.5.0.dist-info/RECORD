@@ -1,0 +1,12 @@
+pepotron/__init__.py,sha256=pTFaMSUzwQQnrzoydGSk-aNRUqfBEPJgvRp9-_yj7OM,5223
+pepotron/__main__.py,sha256=mPVVEEMoDPJc5ZNcv6pe7En7-_gu87XrxFl_jkyGZF0,104
+pepotron/_cache.py,sha256=4SvINMo60pRaAyVuTCD4l9rLxDdcyy175MrTgcX8e1g,1688
+pepotron/_version.py,sha256=qEW4HoWHYDkBguijNs9nZzHd38qlKSeRTDG2QQbYrGY,511
+pepotron/cli.py,sha256=eN4Im3HWjMhRZm_ZvZZ369o9VR0LflDec8Ds4LRWCxM,2322
+pepotron/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pepotron/scripts/run_command.py,sha256=kRvZ2VjihovruV97Z40bBTlmahsXnfKYB84VzO6f9JI,613
+pepotron-1.5.0.dist-info/METADATA,sha256=VR6r_K8BPb-1fz3kTEwsYKlYrFtYsBK41ONhHZa21O8,6741
+pepotron-1.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pepotron-1.5.0.dist-info/entry_points.txt,sha256=hq4CFjWEet6dEKk3QT6fOxGW1HFYiWp2nMHiOVEfuhc,94
+pepotron-1.5.0.dist-info/licenses/LICENSE.txt,sha256=0-efzNtzdIMQNefIuYiOJA3MgxZvAuI63l4hForU8IU,1079
+pepotron-1.5.0.dist-info/RECORD,,
