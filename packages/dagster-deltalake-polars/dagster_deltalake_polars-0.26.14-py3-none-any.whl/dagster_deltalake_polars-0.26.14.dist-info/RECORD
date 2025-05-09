@@ -1,0 +1,9 @@
+dagster_deltalake_polars/__init__.py,sha256=OwwnmcyLcFwfd_2Noz0Nwbu13vuK783II8IQ8WMh-xE,383
+dagster_deltalake_polars/deltalake_polars_type_handler.py,sha256=ADiA49nwPIb7U0jN1VY75LvKMHkCEjsQcIvUePKATWI,2612
+dagster_deltalake_polars/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dagster_deltalake_polars/version.py,sha256=EPk6r3uG-J0czYiKCSM_8HOU7vSC5_sOO425xCSlJqc,24
+dagster_deltalake_polars-0.26.14.dist-info/licenses/LICENSE,sha256=-gtoVIAZYUHYmNHISZg982FI4Oh19mV1nxgTVW8eCB8,11344
+dagster_deltalake_polars-0.26.14.dist-info/METADATA,sha256=FDu5CQp_rMlTI1UzpvvcD73jQGY_3AoI-NRdvLIwOOg,965
+dagster_deltalake_polars-0.26.14.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+dagster_deltalake_polars-0.26.14.dist-info/top_level.txt,sha256=jZtqAQRmyBm46ndP3rDR3Ec_-Wi_VkOIu8a01p_Tl8A,25
+dagster_deltalake_polars-0.26.14.dist-info/RECORD,,
