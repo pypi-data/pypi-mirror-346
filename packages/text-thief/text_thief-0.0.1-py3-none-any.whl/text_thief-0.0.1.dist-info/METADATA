@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: text-thief
+Version: 0.0.1
+Summary: A library to scrape text from website and web pages
+Project-URL: Homepage RU, https://timthewebmaster.com/ru/tools/text-thief/
+Project-URL: Homepage EN, https://timthewebmaster.com/en/tools/text-thief/
+Project-URL: Issues RU, https://timthewebmaster.com/ru/tools/text-thief/#comments_limiter
+Project-URL: Issues EN, https://timthewebmaster.com/en/tools/text-thief/#comments_limiter
+Author-email: Tim The Webmaster <timachuduk@gmail.com>
+License-Expression: MIT
+License-File: LICENCE
+Keywords: scraper,text,text proccesing,website scraper,words cloud
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Russian
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP :: Browsers
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+Requires-Dist: beautifulsoup4
+Requires-Dist: link-thief
+Requires-Dist: lxml
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+# A library to parse and scrape text from websites
+
+This library will provide 3 ways to scrape the text from the website:
+* The first method is to scrape all text from a single webpage. 
+* The second method is to scrape text from the whole website. That includes sitemaps too.
+* The third method is to scrape text from the specified list.
+Also you could specify a target element (by CSS selector) to scrape only intended parts of webpage.
