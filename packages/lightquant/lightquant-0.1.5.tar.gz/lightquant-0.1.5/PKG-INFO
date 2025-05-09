@@ -1,0 +1,116 @@
+Metadata-Version: 2.4
+Name: lightquant
+Version: 0.1.5
+Summary: A lightweight Python library for python utilities for holidays, dates, options and other tools
+Home-page: https://bitbucket.org/incurrency/lightquant
+Author: Pankaj Sharma
+Author-email: Pankaj Sharma <sharma.pankaj.kumar@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Pankaj Sharma
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: homepage, https://github.com/yourusername/lightQuant
+Project-URL: repository, https://github.com/yourusername/lightQuant
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy==1.21.6
+Requires-Dist: pandas==1.5.3
+Requires-Dist: scikit-learn==1.5.0
+Requires-Dist: scipy==1.11.4
+Requires-Dist: pyyaml==6.0
+Requires-Dist: pyreadr==0.5.0
+Requires-Dist: rpy2==3.5.16
+Requires-Dist: pytz==2024.1
+Requires-Dist: selenium==4.0.0
+Requires-Dist: requests==2.32.3
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+
+# lightquant
+
+lightquant is a lightweight Python library providing utilities for working with holidays, dates, options, and other trading-related tools. It is designed to simplify common tasks in quantitative finance and trading workflows.
+
+---
+
+## Features
+
+- **Date Utilities**: Simplify date and time operations.
+- **Options Pricing**: Tools for European options calculations.
+- **Trading Interactions**: functions for assisting web scraping, reading and writing R files
+- **Commission Calculations**: Retrieve and calculate trading commissions based on dates and configurations.
+- **Config Management**: Centralized configuration management using YAML files.
+
+---
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install lightquant
+```
+
+---
+
+## Usage
+
+### Import the Library
+```python
+import lightquant
+```
+
+### Check the Version
+```python
+print(lightquant.__version__)
+```
+
+### Initialize Configuration
+```python
+from lightquant import initialize_config, get_config
+
+# Initialize configuration with the default config path
+initialize_config("path/to/config.yaml")
+
+# Access configuration values
+config = get_config()
+timezone = config.get("tz")
+print(f"Timezone: {timezone}")
+```
+
+### Logging Configuration
+```python
+from lightquant import configure_logging
+
+# Configure logging
+configure_logging(level=logging.INFO, enable_console=True)
+```
+
+## License
+
+This project is licensed under the terms of the [MIT License](LICENSE).
+
+---
+
+
+## Links
+
+- **Homepage**: [GitHub Repository](https://github.com/yourusername/lightquant)
+- **PyPI**: [LightQuant on PyPI](https://pypi.org/project/lightquant/)
