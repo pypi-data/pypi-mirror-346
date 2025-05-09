@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/chessclasses/__init__.py
+src/chessclasses/__main__.py
+src/chessclasses.egg-info/PKG-INFO
+src/chessclasses.egg-info/SOURCES.txt
+src/chessclasses.egg-info/dependency_links.txt
+src/chessclasses.egg-info/top_level.txt
+src/chessclasses/core/__init__.py
+src/chessclasses/tests/__init__.py
+src/chessclasses/tests/test_1984.py
