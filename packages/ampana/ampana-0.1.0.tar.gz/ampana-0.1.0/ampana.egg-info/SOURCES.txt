@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+ampana/__init__.py
+ampana/advice.py
+ampana/compliment.py
+ampana/plan.py
+ampana/utils.py
+ampana/vibe.py
+ampana/weather.py
+ampana.egg-info/PKG-INFO
+ampana.egg-info/SOURCES.txt
+ampana.egg-info/dependency_links.txt
+ampana.egg-info/requires.txt
+ampana.egg-info/top_level.txt
