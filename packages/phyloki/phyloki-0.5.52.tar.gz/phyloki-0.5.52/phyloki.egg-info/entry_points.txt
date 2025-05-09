@@ -1,0 +1,2 @@
+[console_scripts]
+Phyloki = phyloki:phyloki.main
