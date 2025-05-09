@@ -1,0 +1,26 @@
+{
+	"ignorePaths": [
+		"bootstrap/setup.sh",
+		"cspell.json",
+		".gitignore",
+		"pyproject.toml",
+		".ruff.toml",
+		"templates/**",
+		"pyhatchery/bin/pyhatchery",
+		"uv.lock"
+	],
+	"words": [
+		"ksylvan",
+		"pycache",
+		"pyhatchery",
+		"pylint",
+		"pylintrc",
+		"PYPI",
+		"pyproject",
+		"pyright",
+		"pytest",
+		"sdist",
+		"testpypi",
+		"venv"
+	]
+}
