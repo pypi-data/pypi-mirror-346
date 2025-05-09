@@ -1,0 +1,10 @@
+{    
+    "sensitive_info":{
+        "api_keys": "(?i)((api[_-]key|apikey|api_secret|api[_-]token|auth[_-]token|access[_-]token)['\"]?\\s*[:=]\\s*['\"]([\\w\\-._]+)['\"])",  
+        "database_credentials": "(?i)((mongodb|postgresql|mysql|jdbc|database):\\/\\/[^:\\s]+:[^@\\s]+@[^\\s]+|(db[_-]password|database[_-]password|db[_-]user|database[_-]user)['\"]?\\s*[:=]\\s*['\"]([^'\"]+)['\"])",
+        "private_keys": "-----BEGIN\\s+(?:RSA|DSA|EC|OPENSSH|PRIVATE)?\\s*(?:PRIVATE)?\\s*KEY[^-]*-----[^-]*-----END|ssh-rsa\\s+AAAA[0-9A-Za-z+/]+[=]{0,3}",
+        "tokens": "(?i)((bearer|token|auth|jwt)['\"]?\\s*[:=]\\s*['\"]([\\w\\-._]+)['\"]|eyJ[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+/=]*)",
+        "passwords": "(?i)((password|passwd|pwd)['\"]?\\s*[:=]\\s*['\"]([^'\"]+)['\"])",
+        "emails": "\\b\\d{3}[-.]?\\d{2}[-.]?\\d{4}\\b|\\b(?:\\d[ -]*?){13,16}\\b|\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+    }
+}
