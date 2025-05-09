@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+uptime_kuma_api_v2_0_1.egg-info/PKG-INFO
+uptime_kuma_api_v2_0_1.egg-info/SOURCES.txt
+uptime_kuma_api_v2_0_1.egg-info/dependency_links.txt
+uptime_kuma_api_v2_0_1.egg-info/top_level.txt
