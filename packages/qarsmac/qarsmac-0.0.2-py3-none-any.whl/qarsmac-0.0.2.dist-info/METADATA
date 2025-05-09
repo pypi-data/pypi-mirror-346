@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: qarsmac
+Version: 0.0.2
+Summary: Cliente Python da API de Qualidade do Ar da SMAC.
+Author-email: Gustavo Muniz do Carmo <gustavo@esign.com.br>
+Maintainer-email: Gustavo Muniz do Carmo <gustavo@esign.com.br>
+License-Expression: MIT
+Project-URL: Repository, https://github.com/esign-consulting/qualidade-ar-smac/tree/main/apiclient
+Project-URL: Issues, https://github.com/esign-consulting/qualidade-ar-smac/issues
+Keywords: air-quality,api-client
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Provides-Extra: timescaledb
+Requires-Dist: psycopg2; extra == "timescaledb"
+Dynamic: license-file
+
+# qarsmac
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![pypi](https://img.shields.io/pypi/v/qarsmac.svg)](https://pypi.org/project/qarsmac)
+[![versions](https://img.shields.io/pypi/pyversions/qarsmac.svg)](https://pypi.org/project/qarsmac)
+
+Cliente Python da API de Qualidade do Ar da SMAC.
+
+## Uso
+
+```python
+from qarsmac.requestor import BoletimRequestor
+
+requestor = BoletimRequestor("https://qualidadearsmac.azurewebsites.net/api")
+boletim = requestor.request()
+print(boletim)
+```
