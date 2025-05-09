@@ -1,0 +1,4 @@
+gemmi>=0.7.0
+mrcfile>=1.5.3
+numpy>=2.2.1
+torch>=2.5.1
