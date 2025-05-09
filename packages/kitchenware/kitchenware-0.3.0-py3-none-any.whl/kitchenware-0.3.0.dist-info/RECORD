@@ -1,0 +1,16 @@
+kitchenware/__init__.py,sha256=sjQ3wFhfrI8aTK40n_7Y_Z3V_UvX3H1b2SvmFrLzml0,3020
+kitchenware/data_encoding.py,sha256=XV2Ni_G0WdWcqiLIa8CN6q1YEgXkZULPUiaHQfokMso,3822
+kitchenware/data_io.py,sha256=kc3e9s-bLGiS7oVIpF79I06--xy7TuIImaQhOXhLG0A,1507
+kitchenware/dtype.py,sha256=MfYDtoeKlzUjxj7Okwe78PyDSW_cD8EXFEc2YHjzrZI,1172
+kitchenware/geometry.py,sha256=8EB836jNY0AekQdgDPNN2N_mEpIRPt3QFoGeOyFYQAs,8377
+kitchenware/maps.py,sha256=r-I-OW6oAp-h0K_Z-QGdWKy4PYeoUOT3lcu7fUykayU,1670
+kitchenware/metrics.py,sha256=NR3y1dlYXUUNiUX6nMaCs6N6MXTPa7yZZTbbpkUJRtU,7051
+kitchenware/standard_encoding.py,sha256=bJxBREBaMHIjjHzY_iY9Qodc0rbQJpz5UZoX1sAcCxY,5977
+kitchenware/standard_template.py,sha256=9S7jDjiZfy5P-JO0kbUQN4v7-b9p11pPNvANBnoRskk,25360
+kitchenware/structure.py,sha256=xAI29DeQ6Iw9RoMxbGulcXwfvw_CRnM7byXWdF5L6Wo,2049
+kitchenware/structure_io.py,sha256=vgRdJzzZjLjuBNKmcbapXOCOngC1ZZCrU7LThR00gu0,5072
+kitchenware-0.3.0.dist-info/licenses/LICENSE,sha256=E0mkthSEkrRPYp5k7tZ2YS4jT-moOeTzsnfBSCyISfE,20849
+kitchenware-0.3.0.dist-info/METADATA,sha256=E1nQzvUqxf-RsmV9DgHU-EhuAPg-v8wmhSI97-dvAcc,3422
+kitchenware-0.3.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+kitchenware-0.3.0.dist-info/top_level.txt,sha256=hacK63lLEZ57Znlh80pDtJY01UFN-hc8tFu0ZN2JnQ4,12
+kitchenware-0.3.0.dist-info/RECORD,,
