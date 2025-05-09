@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "extra_input"
+version = "1.0.6"
+description = "Various functions to get input from the user"
+readme = { file = "readme.md", content-type = "text/markdown" }
+authors = [{ name = "trinary", email = "lpowyt3@gmail.com" }]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "roman"
+]
