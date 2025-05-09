@@ -1,0 +1,3 @@
+[console_scripts]
+orcestra = orcestradownloader.cli.cli:cli
+orcestra-downloader = orcestradownloader.cli.cli:cli
