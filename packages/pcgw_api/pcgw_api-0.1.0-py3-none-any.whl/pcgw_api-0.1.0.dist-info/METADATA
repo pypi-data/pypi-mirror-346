@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pcgw_api
+Version: 0.1.0
+Summary: Client for the PCGamingWiki API
+Author-Email: Idlusen <boulanger.m@mailoo.org>
+License: MIT
+Requires-Python: >=3.13
+Requires-Dist: httpx>=0.28.1
+Description-Content-Type: text/markdown
+
+# api_pcgw

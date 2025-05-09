@@ -1,0 +1,10 @@
+pcgw_api-0.1.0.dist-info/METADATA,sha256=qYKu-F_GwP8ky643FxE8dPGIO9ILSqCT7y3scLLrxH8,258
+pcgw_api-0.1.0.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+pcgw_api-0.1.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+pcgw_api/__init__.py,sha256=ocO1VXhEam2GiH0YCEkVp7Ks2bYE1j1ZEDA59bsLVl4,50
+pcgw_api/pcgw.py,sha256=-lnKNSlZg4f-a76XVgM92MXSbqj9JE2G7u2KdAVOi6Y,12427
+pcgw_api/tables.json,sha256=0FnQ-GPjm0osK9023yZWDq3eZGxFzy8q-iIy6qeE77w,5373
+pcgw_api/tables.py,sha256=A8_gbBdvG5bM0ZQLfzvtJxp_54rkLAuEDAEi5mrpuLM,23446
+pcgw_api/update_fields.py,sha256=2EhuZ_AEBroE3j4XelEvQiUJd7vVBlh2U2UR7dFT37w,4708
+pcgw_api/utils.py,sha256=Nm5GCWAUkZOlsR4qjY7ewmXw9--1FXsm0qnw-9RwO5U,4192
+pcgw_api-0.1.0.dist-info/RECORD,,
