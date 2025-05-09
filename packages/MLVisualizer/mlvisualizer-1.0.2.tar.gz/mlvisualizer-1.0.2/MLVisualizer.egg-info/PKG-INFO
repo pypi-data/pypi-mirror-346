@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: MLVisualizer
+Version: 1.0.2
+Summary: A Python package for visualizing machine learning algorithms and their outputs.
+Home-page: https://github.com/Rohitlyengar/MLVisualizer
+Author: Rohit Iyengar
+Author-email: rohitiyengar8@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/Rohitlyengar/MLVisualizer
+Project-URL: Bug Tracker, https://github.com/Rohitlyengar/MLVisualizer/issues
+Keywords: machine-learning data-visualization helpers
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# lab_ml
+
+A Python package for visualizing machine learning algorithms and their outputs.
