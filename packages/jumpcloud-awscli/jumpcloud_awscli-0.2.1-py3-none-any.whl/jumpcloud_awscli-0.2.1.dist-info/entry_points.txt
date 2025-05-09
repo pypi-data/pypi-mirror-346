@@ -1,0 +1,2 @@
+[console_scripts]
+jumpcloud-awscli = jumpcloud_aws_cli.cli:main
