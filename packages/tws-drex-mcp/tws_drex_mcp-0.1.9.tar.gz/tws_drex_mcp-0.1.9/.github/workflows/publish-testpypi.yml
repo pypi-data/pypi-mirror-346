@@ -1,0 +1,52 @@
+name: Publish to TestPyPI on dev
+on:
+  push:
+    branches: [ dev ]
+
+jobs:
+  publish-testpypi:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # Important: Fetches all history for hatch-vcs to determine version from tags
+        token: ${{ secrets.GH_PAT }}
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install build tooling and Hatch
+      run: |
+        python -m pip install --upgrade pip
+        # build is for python -m build, hatchling & hatch-vcs are its build deps specified in pyproject.toml
+        # hatch is for the `hatch version` command and `hatch build`
+        pip install build hatchling hatch-vcs hatch
+
+    - name: Get dynamic version for confirmation
+      id: get_version
+      run: |
+        # hatch version will invoke hatch-vcs and output the calculated version
+        # It will also update src/tws_drex_mcp/__about__.py
+        VERSION=$(hatch version)
+        echo "Calculated project version: $VERSION"
+        echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+    - name: Clean previous builds
+      run: rm -rf dist/ *.egg-info
+
+    - name: Build
+      run: python -m build
+
+    - name: Publish to TestPyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        repository-url: https://test.pypi.org/legacy/
+
+    - name: Confirm
+      run: echo "✅ Published ${{ steps.get_version.outputs.version }} to TestPyPI"
