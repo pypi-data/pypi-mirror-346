@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: tornado-openapi
+Version: 0.1.2
+Summary: ..an OAS-generation library for Tornado.
+Author-email: Shaun Wilson <mrshaunwilson@msn.com>
+License-Expression: MIT
+Project-URL: Documentation, https://tornado-openapi.readthedocs.io/
+Project-URL: Homepage, https://github.com/wilson0x4d/tornado-openapi
+Project-URL: Repository, https://github.com/wilson0x4d/tornado-openapi.git
+Keywords: tornado,openapi,openapi3,oas,oas3,swagger,swagger-ui
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tornado>=6
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: punit>=1.1.4; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: urllib3-future>=2.12.920; extra == "dev"
+Dynamic: license-file
