@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: splent_cli
+Version: 0.0.2
+Summary: SPLENT-CLI is a CLI to be able to work on your development more easily.
+Author-email: DiversoLab <diversolab@us.es>
+Project-URL: Homepage, https://github.com/diverso-lab/splent_cli
+Project-URL: Issues, https://github.com/diverso-lab/splent_cli/issues
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: python-dotenv
+Requires-Dist: flask
+Requires-Dist: setuptools
+Requires-Dist: pytest
+Requires-Dist: pytest-cov
+Requires-Dist: ruff
+Requires-Dist: build
+Requires-Dist: twine
+Dynamic: license-file
+
+# splent_cli

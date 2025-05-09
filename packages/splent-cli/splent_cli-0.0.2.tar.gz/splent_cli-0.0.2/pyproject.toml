@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "splent_cli"
+version = "0.0.2"
+description = "SPLENT-CLI is a CLI to be able to work on your development more easily."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "DiversoLab", email = "diversolab@us.es" }]
+license-files = ["LICENSE"]
+dependencies = [
+    "click",
+    "python-dotenv",
+    "flask",
+    "setuptools",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "build",
+    "twine"
+]
+
+[project.scripts]
+splent_cli = "splent_cli.__main__:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 79
+
+[project.urls]
+Homepage = "https://github.com/diverso-lab/splent_cli"
+Issues = "https://github.com/diverso-lab/splent_cli/issues"

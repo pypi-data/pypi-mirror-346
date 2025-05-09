@@ -1,0 +1,9 @@
+click
+python-dotenv
+flask
+setuptools
+pytest
+pytest-cov
+ruff
+build
+twine
