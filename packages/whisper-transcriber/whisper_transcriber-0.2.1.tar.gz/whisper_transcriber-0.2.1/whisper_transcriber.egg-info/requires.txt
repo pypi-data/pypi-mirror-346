@@ -1,0 +1,9 @@
+torch
+numpy
+tqdm
+librosa
+transformers
+huggingface_hub
+regex
+pathlib
+concurrent-log-handler
