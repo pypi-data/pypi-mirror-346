@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+llmada/__init__.py
+llmada/client.py
+llmada/core.py
+llmada.egg-info/PKG-INFO
+llmada.egg-info/SOURCES.txt
+llmada.egg-info/dependency_links.txt
+llmada.egg-info/requires.txt
+llmada.egg-info/top_level.txt
+test/test_core.py

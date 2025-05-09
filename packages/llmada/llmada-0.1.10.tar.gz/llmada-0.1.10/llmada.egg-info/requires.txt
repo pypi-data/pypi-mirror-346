@@ -1,0 +1,12 @@
+fastapi>=0.115.12
+google-genai>=1.13.0
+llama-index>=0.12.28
+openai>=1.70.0
+pytest>=8.3.5
+pytest-html>=4.1.1
+pytest-lazy-fixture>=0.6.3
+python-dotenv>=1.1.0
+setuptools>=78.1.0
+sse-starlette>=2.3.3
+uvicorn>=0.34.2
+volcengine-python-sdk[ark]>=1.1.3
