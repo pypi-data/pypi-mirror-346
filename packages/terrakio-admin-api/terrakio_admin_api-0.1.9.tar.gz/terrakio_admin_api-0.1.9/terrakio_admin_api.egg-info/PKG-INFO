@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: terrakio-admin-api
+Version: 0.1.9
+Summary: Admin API client for Terrakio services
+Home-page: https://github.com/HaizeaAnalytics/terrakio-python-api
+Author: Yupeng Chao
+Author-email: Yupeng Chao <yupeng@haizea.com.au>
+Project-URL: Homepage, https://github.com/HaizeaAnalytics/terrakio-python-api
+Project-URL: Bug Tracker, https://github.com/HaizeaAnalytics/terrakio-python-api/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: terrakio-core>=0.1.9
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Terrakio Admin API Client
+
+Administrative API client for Terrakio services. This package extends the regular Terrakio API client with additional administrative capabilities.
+
+## Features
+
+- All features from the regular API client
+- User management (create, view, edit, delete users)
+- Dataset management (create, edit, update, delete datasets)
+
+## Installation
+
+```bash
+pip install terrakio-admin-api
+```
+
+## Usage Example
+
+```python
+from terrakio_admin_api import Client
+
+# Initialize the admin client
+admin = Client(url="https://api.terrak.io", key="your-admin-api-key")
+
+# List all users
+users = admin.list_users()
+
+# Create a new dataset
+admin.create_dataset("new_dataset", bucket="my-bucket")
+
+# List available datasets
+datasets = admin.list_datasets()
+```
+
+For more documentation, see the [main repository](https://github.com/HaizeaAnalytics/terrakio-python-api). 
