@@ -1,0 +1,2 @@
+[console_scripts]
+tracklr = tracklr.main:main
