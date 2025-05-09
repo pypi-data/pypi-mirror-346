@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+Raigasada.egg-info/PKG-INFO
+Raigasada.egg-info/SOURCES.txt
+Raigasada.egg-info/dependency_links.txt
+Raigasada.egg-info/top_level.txt
