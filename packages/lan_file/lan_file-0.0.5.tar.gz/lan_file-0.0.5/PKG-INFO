@@ -1,0 +1,43 @@
+Metadata-Version: 2.3
+Name: lan_file
+Version: 0.0.5
+Summary: LAN file description
+License: MIT
+Author: idlewith
+Author-email: newellzhou@163.com
+Requires-Python: >=3.8,<4
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: flask (>=3.0.0,<4.0.0)
+Project-URL: Homepage, https://github.com/idlewith/lan_file
+Description-Content-Type: text/markdown
+
+# LAN file
+
+share file in LAN(Local area network)
+
+## install lan_file
+
+```
+pip install lan_file
+```
+
+## how to use
+
+```
+lf
+```
+
+
+

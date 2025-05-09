@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "lan_file"
+version = "0.0.5"
+description = "LAN file description"
+authors = ["idlewith <newellzhou@163.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/idlewith/lan_file"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+]
+exclude = [
+    "src/lan_file/.DS_Store",
+    "src/lan_file/lan_folder",
+    "src/lan_file/.mypy_cache",
+    "src/lan_file/t.py",
+    "src/lan_file/templates/t.html",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8, <4"
+flask = "^3.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.0.2"
+mypy = "^1.6.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+lf = "lan_file.main:main"
