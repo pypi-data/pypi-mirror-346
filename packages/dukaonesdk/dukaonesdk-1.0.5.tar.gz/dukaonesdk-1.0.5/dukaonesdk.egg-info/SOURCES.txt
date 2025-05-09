@@ -1,0 +1,14 @@
+license.txt
+setup.cfg
+setup.py
+dukaonesdk/__init__.py
+dukaonesdk/device.py
+dukaonesdk/dukaclient.py
+dukaonesdk/dukapacket.py
+dukaonesdk/mode.py
+dukaonesdk/responsepacket.py
+dukaonesdk/speed.py
+dukaonesdk.egg-info/PKG-INFO
+dukaonesdk.egg-info/SOURCES.txt
+dukaonesdk.egg-info/dependency_links.txt
+dukaonesdk.egg-info/top_level.txt

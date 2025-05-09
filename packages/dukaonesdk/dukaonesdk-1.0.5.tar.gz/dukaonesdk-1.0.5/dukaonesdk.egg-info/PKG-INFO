@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: dukaonesdk
+Version: 1.0.5
+Summary: Duka One ventilation SDK
+Home-page: https://github.com/dingusdk/dukaonesdk
+Author: Jens Østergaard Nielsen
+License: GPL-3.0
+License-File: license.txt
+Dynamic: author
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+SDK for connection to the Duka One S6W ventilation. Made for interfacing to home assistant
