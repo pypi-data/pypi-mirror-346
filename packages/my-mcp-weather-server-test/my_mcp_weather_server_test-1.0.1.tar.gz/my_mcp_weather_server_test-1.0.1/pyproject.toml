@@ -1,0 +1,13 @@
+[project]
+name = "my-mcp-weather-server-test"
+version = "1.0.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=1.8.0",
+]
+
+[project.scripts]
+my-mcp-weather-server-test = "main:main"
