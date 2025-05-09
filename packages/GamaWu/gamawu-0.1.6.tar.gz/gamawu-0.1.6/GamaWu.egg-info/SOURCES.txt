@@ -1,0 +1,10 @@
+pyproject.toml
+setup.py
+GamaWu.egg-info/PKG-INFO
+GamaWu.egg-info/SOURCES.txt
+GamaWu.egg-info/dependency_links.txt
+GamaWu.egg-info/top_level.txt
+algorithm/__init__.py
+algorithm/hello.py
+algorithm/models.py
+algorithm/split.py

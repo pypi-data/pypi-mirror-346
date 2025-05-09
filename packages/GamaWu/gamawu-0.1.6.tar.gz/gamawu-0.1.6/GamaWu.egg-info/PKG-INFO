@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: GamaWu
+Version: 0.1.6
+Summary: learning for myself
+Author: Gama
+Author-email: Gama <wumian1996@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: requires-python

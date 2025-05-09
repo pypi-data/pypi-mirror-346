@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "GamaWu"
+version = "0.1.6"
+description = "learning for myself"
+authors = [{ name = "Gama", email = "wumian1996@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.7"
