@@ -1,0 +1,11 @@
+README.md
+setup.py
+string_repetition/__init__.py
+string_repetition/__main__.py
+string_repetition/core.py
+string_repetition.egg-info/PKG-INFO
+string_repetition.egg-info/SOURCES.txt
+string_repetition.egg-info/dependency_links.txt
+string_repetition.egg-info/top_level.txt
+tests/__init__.py
+tests/test_core.py
