@@ -1,0 +1,9 @@
+dagster_duckdb_pyspark/__init__.py,sha256=Xq5fF8XBDLE8iB4SptQEOd40CKuKN3EzxGBDR29npIs,427
+dagster_duckdb_pyspark/duckdb_pyspark_type_handler.py,sha256=OJgWa3CMlE_LpSvqTGFzEdg_0zQnpQ_0ctrBYRNlkAU,9592
+dagster_duckdb_pyspark/py.typed,sha256=mDShSrm8qg9qjacQc2F-rI8ATllqP6EdgHuEYxuCXZ0,7
+dagster_duckdb_pyspark/version.py,sha256=EPk6r3uG-J0czYiKCSM_8HOU7vSC5_sOO425xCSlJqc,24
+dagster_duckdb_pyspark-0.26.14.dist-info/licenses/LICENSE,sha256=TMatHW4_G9ldRdodEAp-l2Xa2WvsdeOh60E3v1R2jis,11349
+dagster_duckdb_pyspark-0.26.14.dist-info/METADATA,sha256=0jEx97dYj8yUt-yxy4DFd-m2jOmHAb6EbRWGNRCeIe8,897
+dagster_duckdb_pyspark-0.26.14.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+dagster_duckdb_pyspark-0.26.14.dist-info/top_level.txt,sha256=UYh0E2YiAlK01-DAkx0eikRaH-TIk0n9jijQK2joJBs,23
+dagster_duckdb_pyspark-0.26.14.dist-info/RECORD,,
