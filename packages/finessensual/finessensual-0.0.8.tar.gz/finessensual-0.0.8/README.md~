@@ -1,0 +1,165 @@
+**<u>Finessensual</u>**
+
+<u>Finessensual is a python script that allows the conversion of Oracle
+financial transaction reports into an overview that is useful for
+research groups (around one or more Pis). Its name is contraction (or
+you might call it a contraption) of ‘finance’, ‘essential’ and ‘UA’.</u>
+
+**<u>A. Installation</u>**
+
+*<u>1. Install the prerequisites</u>*
+
+- <u>When on GNU/Linux, UNIX or MAC:</u>
+
+<u>Install:</u>
+
+- <u>libreoffice</u>  
+  <u>(e.g. on Ubuntu: 'sudo apt-get install libreoffice')</u>
+
+- <u>a python 3 interpreter</u>  
+  <u>(e.g. on Ubuntu: 'sudo apt-get install python3')</u>
+
+<u>Make sure the libreoffice executable and the python3 executable can
+be found based on your PATH environment variable.</u>
+
+- <u>When on MS-Windows:</u>  
+  <u>Install:</u>
+
+  - <u>libreoffice</u>
+
+<u>Go to the , download the latest version and install it.</u>  
+<u>(don't install libreoffice from the microsoft store, or those
+b@s!@rds will charge you for it!)</u>
+
+- <u>python</u>  
+  <u>Click on the windows start icon and start typing 'python' until you
+  see as best match 'python, Run command'. Clicking on that will open
+  the microsoft store on the Python page. Click on 'Get' to install
+  python on your machine.</u>
+
+*<u>2. Install the package itself</u>*
+
+<u>The finessensual code can be found on .</u>
+
+- <u>When on GNU/Linux, UNIX or MAC:</u>  
+  <u>If you have a python interpreter installed on a GNU/Linux, BSD-like
+  or UNIX-like workstation that is all you need. You can install the
+  package from the command line as follows:</u>
+
+<u> \$ pip install –upgrade finessensual</u>
+
+- <u>When on MS-Windows</u>  
+  <u>On this platform, unfortunately, users have unlearnt how to install
+  software and how to use the command line). Therefore, I spent on of me
+  weekends making you a finessensual installer executable that will
+  perform the installation and make a desktop icon for you.</u>
+
+**<u>B. Using the package</u>**
+
+*<u>1. Download all financial files from oracle</u>*
+
+<u>Start your oracle java application to consult “Financiële
+gebruikersrapporten” (below this will be abbreviated as FG) from . If we
+say ‘download’ below, we mean </u>*<u>save in one and the same
+folder</u>*<u>.</u>
+
+- <u>Download the information on Vlottende Budgetten:</u>
+
+<u>FG \> Werk voor derde en derdengeld \> Forfaitaire project, BOF, IOF
+en activiteiten \> Vlottende Budgetten</u>  
+  
+<u>Download all ‘vlottende budgetten’ (like: AK, AO, RA, WD, WO) in
+excel format and name them ‘VBTransacties-’ + nummer + ‘.xls’.</u>  
+<u>As an example: ‘VBTransacties-AK160007.xls’</u>
+
+- <u>Download ‘Budgets and transactions’ related to the PIs that are
+  part of the financial overview in excel format</u>
+
+<u>FG \> Werk voor derden en derdengeld \> Verantwoordingsprojecten \>
+Budgetten en transacties</u>
+
+<u> Select the PI you want to cover.</u>
+
+<u> Select ‘excel’ as format. This will leave only three buttons active
+in the rightmost row:</u>  
+<u>  - Budgetten : download this file and name it
+UB-\<PI-name\>.xml</u>  
+<u>  - Vastleggingen : download this file and name it
+UV-\<PI-name\>.xml</u>
+
+<u> - Uitgaven : download this file and name it UU-\<PI-name\>.xml</u>  
+  
+<u>As an example: UB-DMW.xml, UV-DMW.xml, UU-DMW.xml</u>
+
+- <u>Download ‘Project transactions’ per project (for the current
+  accounting year) in excel format</u>
+
+<u>FG \> Tansactierapporten \> Transacties</u>
+
+<u> Download these as ‘Transacties-\<PROJNR\>.xls’</u>  
+<u> As an example: ‘Transacties-FFI230414.xls’ or
+‘Transacties-OZ10097.xls’</u>
+
+- <u>Download ‘Budgetboekingen’ for the FFP and FFI projects in excel
+  format</u>  
+  <u>(has to be done in the year of the start, or you can select ‘over
+  alle boekjaren heen’)</u>
+
+<u>FG \> Tansactierapporten \> Budgetboekingen</u>
+
+  
+<u>Name these: ‘Budgetboekingen-\<PROJNR\>.xls</u>
+
+<u>As an example: ‘Budgetboekingen-FFI230414.xls’</u>
+
+- <u>Download ‘Transacties lonen’ per PI in excel. Select ‘alle
+  boekjaren t.e.m. boekjaar’.</u>
+
+<u>FG \> Tansactierapporten \> Transacties lonen</u>
+
+<u>Name these: ‘Lonen-Transacties-\<PI-name\>.xml’</u>
+
+<u>As an example: ‘Lonen-transacties-STJ.xml’</u>
+
+*<u>2. Complete the input files yourself:</u>*
+
+- <u>Projects.xlsx : contains an overview of all projects</u>
+
+- <u>Persons.xlsx : contains an overview of all the employees you want
+  to track</u>
+
+- <u>Planning.xlsx : contains an overview of the planning as you
+  maintain it</u>
+
+<u>If the first two do not exist in your folder with all oracle files,
+then the first invocation of</u>*<u> finessensual </u>*<u>will create
+empty versions of these files. </u>*<u>Finessensual</u>*<u> will also
+complain about missing data in those files. Complete them based on the
+hints you get.</u>
+
+<u>The latter file is an excel file that you can create by copying the
+‘Personnel’ tab blad from the overview that has been generated to a
+separate file and update that.</u>
+
+*<u>3. Run finessensual</u>*
+
+<u>This can be simply done, by dragging the folder that contains all (a)
+all oracle-generated files and (b) your project, persons and planning
+files, onto the finessensual icon that the installation procedure has
+planted on your desktop.</u>  
+<u>You will see that the script starts running and informs you about its
+progress.</u>
+
+<u>After the script completed, the result file
+</u>*<u>‘</u><u>financial-overview.xlsx</u><u>’</u><u> </u>*<u>will be
+present in the original folder.</u>
+
+<u>Open it, and enjoy!</u>
+
+**<u>C. License</u>**
+
+<u>\`finessensual\` is distributed under the terms of the -license.</u>
+
+**<u>D. Warranty</u>**
+
+<u>None!</u>
