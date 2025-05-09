@@ -1,0 +1,4 @@
+bm25s[core]>=0.2.12
+mcp[cli]
+pyyaml>=6.0.2
+rich>=14.0.0

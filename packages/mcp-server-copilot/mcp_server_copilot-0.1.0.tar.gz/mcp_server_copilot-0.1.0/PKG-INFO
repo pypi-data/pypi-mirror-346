@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: mcp-server-copilot
+Version: 0.1.0
+Summary: A Meta Model Context Protocol (MCP) server that seamlessly scales LLMs to 1000+ MCP servers through automatic routing.
+Author-email: Tianshu Wang <wang@tianshu.me>
+Keywords: mcp,copilot,router
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: bm25s[core]>=0.2.12
+Requires-Dist: mcp[cli]
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: rich>=14.0.0
+
+# MCP Copilot
+A Meta MCP server that seamlessly scales LLMs to 1000+ MCP servers through automatic routing.
