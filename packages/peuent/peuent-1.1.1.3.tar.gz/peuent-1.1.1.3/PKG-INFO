@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: peuent
+Version: 1.1.1.3
+Author: Adnan
+Requires-Dist: selenium
+Requires-Dist: webdriver_manager
+Dynamic: author
+Dynamic: requires-dist
