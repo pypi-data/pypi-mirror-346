@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: ezemailmxverifier
+Version: 0.9.0b1
+Summary: EzEmailMXVerifier is a fast and pure Python lib to validate email addresses. It checks syntax, domain, TLD, MX and resolves IPs. It uses its own cache, has a built-in DNS client (with configurable fallback, timeout and retries), details failures (translatable) and has extra functions. No external dependencies, it's pure Python!
+Home-page: https://github.com/rabuchaim/EzEmailMXVerifier
+Author: Ricardo Abuchaim
+Author-email: ricardoabuchaim@gmail.com
+Maintainer: Ricardo Abuchaim
+Maintainer-email: ricardoabuchaim@gmail.com
+License: MIT
+Project-URL: Issue Tracker, https://github.com/rabuchaim/EzEmailMXVerifier/issues
+Project-URL: Source code, https://github.com/rabuchaim/EzEmailMXVerifier
+Keywords: email,validator,verifier,mx
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Security
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: Finger
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Localization
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ezemailmxverifier v0.9.0beta1 for testing
+EzEmailMXVerifier is a fast and pure Python lib to validate email addresses. It checks syntax, domain, TLD, MX and resolves IPs. It uses its own cache, has a built-in DNS client (with configurable fallback, timeout and retries), details failures (translatable) and has extra functions. No external dependencies, it's pure Python!
+
+Download the file ```ezemailmxverifier-0.9.0b1.tar.gz```
+
+And type:
+
+```pip install ezemailmxverifier-0.9.0b1.tar.gz```
+
+or type:
+
+```pip install ezemailmxverifier```
