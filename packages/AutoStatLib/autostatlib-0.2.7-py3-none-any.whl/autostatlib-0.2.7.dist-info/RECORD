@@ -1,0 +1,14 @@
+AutoStatLib/AutoStatLib.py,sha256=KJM2x-fChnxVinnCFsAKpoacKeoIJcJw_r8FYqPCljk,9677
+AutoStatLib/StatPlots.py,sha256=KJA-xnuBef0pa6L985XxdWtwEVmb-dcu5DHKLv6Y5Ew,23810
+AutoStatLib/__init__.py,sha256=r7VdcL7F4UCRxEFh8WFBd9y61KavX_qt7fFbKjtjfjo,137
+AutoStatLib/__main__.py,sha256=0OIv5sqFNI-diyHFtYL6HPcYrOWdLiqYYOO_nxrHuTk,283
+AutoStatLib/_version.py,sha256=82BMDplnoVlfpnbkt4ImTQlV7kA099OEgHW37crfaE4,53
+AutoStatLib/helpers.py,sha256=d8P6_q706rjuc6N4WBbdOqNQFuAIjCHfmrhgJABFxqE,3646
+AutoStatLib/normality_tests.py,sha256=TYeKpfpJRzOHvDZucObuZhPktjiZpSZwh381eJ8ENC4,2381
+AutoStatLib/statistical_tests.py,sha256=xfHdTtN5Es_qoVMUwX8VFsl-FLpF3zd56S9ya7dPXVo,6566
+AutoStatLib/text_formatting.py,sha256=rWDsrlZdquook7lUg8t2mb3az8nR12BDprxfy_NwE2o,3576
+autostatlib-0.2.7.dist-info/licenses/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+autostatlib-0.2.7.dist-info/METADATA,sha256=Xb1tAK4NcJwv8r2D4Y2SUM5sPeiTPFgSBfLfQiuGMbo,36894
+autostatlib-0.2.7.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+autostatlib-0.2.7.dist-info/top_level.txt,sha256=BuHzVyE2andc7RwD_UPmDjLl9CUAyBH6WHZGjaIReUI,12
+autostatlib-0.2.7.dist-info/RECORD,,
