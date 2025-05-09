@@ -1,0 +1,6 @@
+version-minor:
+    hatch version minor
+
+# Upload CLI to Azure DevOps using twine
+twine-upload:
+  uv tool run twine upload -u azr -r azr-project dist/*.whl

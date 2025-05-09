@@ -1,0 +1,73 @@
+[build-system]
+requires = [
+  "hatchling",
+  "hatch-semver"
+  ]
+build-backend = "hatchling.build"
+
+[project]
+name = "dotenv-azd"
+dynamic = ["version"]
+description = 'Python dotenv adapter that loads dotenv key value pairs from Azure Developer CLI (azd)'
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Cedric Vidal", email = "cedric.vidal@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: MacOS :: MacOS X",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "python-dotenv"
+]
+
+[project.urls]
+Documentation = "https://github.com/cedricvidal/dotenv-azd#readme"
+Issues = "https://github.com/cedricvidal/dotenv-azd/issues"
+Source = "https://github.com/cedricvidal/dotenv-azd"
+
+[tool.hatch.version]
+path = "src/dotenv_azd/__about__.py"
+validate-bump = true
+scheme = "semver"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/dotenv_azd tests}"
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.12", "3.11", "3.10", "3.9"]
+
+[tool.coverage.run]
+source_pkgs = ["dotenv_azd", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/dotenv_azd/__about__.py",
+]
+
+[tool.coverage.paths]
+dotenv_azd = ["src/dotenv_azd", "*/dotenv-azd/src/dotenv_azd"]
+tests = ["tests", "*/dotenv-azd/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
