@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+snippingtool/__init__.py
+snippingtool/snippingTool.py
+snippingtool.egg-info/PKG-INFO
+snippingtool.egg-info/SOURCES.txt
+snippingtool.egg-info/dependency_links.txt
+snippingtool.egg-info/requires.txt
+snippingtool.egg-info/top_level.txt

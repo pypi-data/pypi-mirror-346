@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: snippingtool
+Version: 0.2.0
+Summary: A simple Python snipping tool using Tkinter and PIL
+Home-page: https://github.com/rann-studio/snippingtool
+Author: RannStudio
+License: MIT
+Project-URL: Source, https://github.com/rann-studio/snippingtool
+Project-URL: Bug Tracker, https://github.com/rann-studio/snippingtool/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Multimedia :: Graphics :: Capture
+Classifier: Intended Audience :: End Users/Desktop
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow
+Requires-Dist: pyautogui
+Requires-Dist: pywin32
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# SnippingTool
+
+SnippingTool is a simple and intuitive screen capture tool that allows you to select a region of the screen using your mouse. Once the area is selected, the tool captures the region as an image. It uses a transparent overlay to let you draw a selection area, and once you release the mouse button, the tool captures and returns the image.
+
+## Usage
+
+To use the SnippingTool, you just need to initialize the tool and call the `capture()` method. Here's a basic example of how to use it:
+
+```python
+from snippingtool import SnippingTool
+
+# Create an instance of SnippingTool
+snipping = SnippingTool()
+
+# Capture a selected area of the screen
+image, bounding_box = snipping.capture()
+
+# Save the captured image to a file
+image.save('captured_area.png')
+
+# Print the bounding box of the captured area
+print(f'Bounding box: {bounding_box}')
+```
+
+## License
+
+This code is open-source and licensed under the MIT License. Feel free to use, modify, and distribute the code as per your requirements.
