@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+VERSION
+pyproject.toml
+setup.py
+scripts/generate_client.py
+src/perceptic_core_client.egg-info/PKG-INFO
+src/perceptic_core_client.egg-info/SOURCES.txt
+src/perceptic_core_client.egg-info/dependency_links.txt
+src/perceptic_core_client.egg-info/requires.txt
+src/perceptic_core_client.egg-info/top_level.txt
