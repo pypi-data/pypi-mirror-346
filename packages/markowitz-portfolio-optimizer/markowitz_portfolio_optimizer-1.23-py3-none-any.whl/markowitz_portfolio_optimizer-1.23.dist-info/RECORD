@@ -1,0 +1,8 @@
+markowitz_portfolio_optimizer/__init__.py,sha256=--muff4D7CE7xUG4NBV1z8lVFlFY6dVq2evDww5Ve1Q,387
+markowitz_portfolio_optimizer/calc_utils.py,sha256=RySYEiroWZdH_VPDE_Gjij5eHFVxWjISq3KPdmiZdxI,7085
+markowitz_portfolio_optimizer/data_utils.py,sha256=cZaVfwTjqFkC1VlRM8_rFeRvOUKJWd1U6QXwnvW3W34,3736
+markowitz_portfolio_optimizer-1.23.dist-info/licenses/LICENSE,sha256=-x6EjxpA7WNIJCfNfgcz3Oi2vH9Re9wdSjrk7wrizwI,1069
+markowitz_portfolio_optimizer-1.23.dist-info/METADATA,sha256=NtwyZWNBAo0bE6laxdxECvSHRKGghWfQCECScEdIlVE,974
+markowitz_portfolio_optimizer-1.23.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+markowitz_portfolio_optimizer-1.23.dist-info/top_level.txt,sha256=qJhBQA6JFkPeRtv6TbSYM5rlP1HQe9GaM6hiCEjLtec,30
+markowitz_portfolio_optimizer-1.23.dist-info/RECORD,,
