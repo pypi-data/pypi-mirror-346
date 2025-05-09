@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+portfolio_optimizer/markowitz_portfolio_optimizer.egg-info/PKG-INFO
+portfolio_optimizer/markowitz_portfolio_optimizer.egg-info/SOURCES.txt
+portfolio_optimizer/markowitz_portfolio_optimizer.egg-info/dependency_links.txt
+portfolio_optimizer/markowitz_portfolio_optimizer.egg-info/requires.txt
+portfolio_optimizer/markowitz_portfolio_optimizer.egg-info/top_level.txt
+tests/test_import.py
+tests/test_optimizer.py
