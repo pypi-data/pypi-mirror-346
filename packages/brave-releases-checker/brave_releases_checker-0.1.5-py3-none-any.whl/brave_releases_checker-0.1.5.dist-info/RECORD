@@ -1,0 +1,9 @@
+brave_releases_checker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+brave_releases_checker/config.py,sha256=dmtoRGdvVXNcgBhgCaj-JlrNIqVL4VN6ol4iHYkPC28,2882
+brave_releases_checker/main.py,sha256=9rReB0qcSwY0nj36FK2kUx5qLsSYlWuNQSdrMcxeYjQ,18176
+brave_releases_checker/version.py,sha256=9cO4k2Nf6hTSCO7X_tupnFXroJU7_FGvjWUbvaBL4YE,76
+brave_releases_checker-0.1.5.dist-info/entry_points.txt,sha256=JMxUzmL7DuoDv9KS2OAb35ifk4nd3hgbo0fRcWv15Kk,56
+brave_releases_checker-0.1.5.dist-info/licenses/LICENSE,sha256=-sLeSKoWuwRVDTkd_g2PRQZ_ZVpn3Fvg5j-tnXXh6rY,1075
+brave_releases_checker-0.1.5.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+brave_releases_checker-0.1.5.dist-info/METADATA,sha256=2zkHNN57H11DuQFsRY6zFOggmLEgK3YQ8_WEsHFPxxc,2700
+brave_releases_checker-0.1.5.dist-info/RECORD,,
