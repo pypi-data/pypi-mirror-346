@@ -1,0 +1,12 @@
+cmem_plugin_nextcloud/__init__.py,sha256=PgMuRfxkJbY6NEMTBmmlFm57F0szns83ACBU4b7RryY,28
+cmem_plugin_nextcloud/actions.py,sha256=IJaX-3CLbVKydQOT-T6a4UUCFLaiYyfF9reSsLwD2rc,2104
+cmem_plugin_nextcloud/autocomplete.py,sha256=EEikOP26zajhE1gpm1ucgANgZZObxuUWgwlKGrKkTIE,4256
+cmem_plugin_nextcloud/download.py,sha256=udj7GxcebW1pc9El0qxjFxC8ZiHui3acVcsMPG5gVkw,9973
+cmem_plugin_nextcloud/list.py,sha256=5bYKyWOvwkIVYf3lJ95aW5UIId5U0rvIcpu4MGfm96I,9390
+cmem_plugin_nextcloud/nextcloud.svg,sha256=8CJSkngisO4paBcey9JB7JCejR5cb8SLDf-45bJlHSc,2347
+cmem_plugin_nextcloud/retrieval.py,sha256=TDm3SNbRFaVpxzg2HYH3MqMXOHQ7hl7FENBRXWe7BZ0,4657
+cmem_plugin_nextcloud/upload.py,sha256=EdOtpKEcyOAwjQwGzr1LSufOukk2CVN68LAZsOoOOdM,7809
+cmem_plugin_nextcloud-1.3.0.dist-info/LICENSE,sha256=5t6lcWcFU3TBO5wwq9PYNbgzfVfFUuL-80v5BTGuuMQ,11334
+cmem_plugin_nextcloud-1.3.0.dist-info/METADATA,sha256=qSjAmXK99YOi5k8ktCAsbvnO2R8NUrvHBmBbZR8YJgM,2326
+cmem_plugin_nextcloud-1.3.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+cmem_plugin_nextcloud-1.3.0.dist-info/RECORD,,
