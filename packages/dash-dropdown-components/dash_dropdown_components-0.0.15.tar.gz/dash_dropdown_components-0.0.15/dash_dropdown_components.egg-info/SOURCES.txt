@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+dash_dropdown_components/Dropdown.py
+dash_dropdown_components/MultiLevelDropdown.py
+dash_dropdown_components/__init__.py
+dash_dropdown_components/_imports_.py
+dash_dropdown_components/dash_dropdown_components.min.js
+dash_dropdown_components/dash_dropdown_components.min.js.map
+dash_dropdown_components/metadata.json
+dash_dropdown_components/package-info.json
+dash_dropdown_components.egg-info/PKG-INFO
+dash_dropdown_components.egg-info/SOURCES.txt
+dash_dropdown_components.egg-info/dependency_links.txt
+dash_dropdown_components.egg-info/top_level.txt
