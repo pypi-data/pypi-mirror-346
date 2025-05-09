@@ -1,0 +1,10 @@
+whisper_transcriber/__init__.py,sha256=3tPA-44xOSrmdy-SA8K7cKme7qnTemx9s8dSn_ufYB0,509
+whisper_transcriber/audio_processing.py,sha256=gKoxx-Tokzfa5lDfRnsm3DtDlIjU-N2LLfqEgI-4Ms8,28059
+whisper_transcriber/cli.py,sha256=lOYx73NENyDYv_mPtc-ZS5777fREGEErTFHbLy5bDdI,10834
+whisper_transcriber/transcriber.py,sha256=_o2gFahuW5KG4ArIIj-AgoIZueC4k0xzfitZMjAl1yI,33140
+whisper_transcriber/utils.py,sha256=5VJqzyGzV-RpJutrU43raCSX7xHwI77TIwPwQMToFmU,2095
+whisper_transcriber-0.2.6.dist-info/METADATA,sha256=uKyL0S29WzwmaBF06enP69ICJS_fbVp46wMZPsPrzOc,7304
+whisper_transcriber-0.2.6.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+whisper_transcriber-0.2.6.dist-info/entry_points.txt,sha256=E0RFOzllLZjdYHStQXhwqr4wBwoOsYPZCULrlRc8KuA,68
+whisper_transcriber-0.2.6.dist-info/top_level.txt,sha256=tVIknxFMPFJgeZzUVegBlGXmCvWaj3brNIC-tRPxsAQ,20
+whisper_transcriber-0.2.6.dist-info/RECORD,,
