@@ -1,0 +1,12 @@
+delphai_search_utils/__init__.py,sha256=-LGgpVzBvQsNFEbahLrAD1u9e1Ur3koil2eg54r1t7Y,23
+delphai_search_utils/data/demonyms.truecasemodel,sha256=z88fUCLrMJc0A5aJ_BYZAlZ0v3HhfjMXlOPOA0HstIE,47001
+delphai_search_utils/elastic_query.py,sha256=nmfAPmhJWT6J22_tz23HCNtIlz3yX74tHJJYrUG3UGs,5981
+delphai_search_utils/query.py,sha256=-H0TQM407VwB8Ye8VrhL6mLd2IJUoeTTyRl6PEem94Q,3277
+delphai_search_utils/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+delphai_search_utils/tests/test_text_query.py,sha256=9K3ztxwqZ2j6pPhGGSJo68GB5aWZ73lE8dJF_FuRdFw,4658
+delphai_search_utils/tests/test_utils.py,sha256=wAMXarmrmoGNNyr3SPDJcdYVBUkCNtwomCdUHvkeJBQ,2723
+delphai_search_utils/text_query.py,sha256=cXSsH-CCwLeJBS5HiFFekTSMwKQA8N-dN7efhByXi5k,15060
+delphai_search_utils/utils.py,sha256=BQs3YWuZmPe2opXFj3Vg38iyGkpD0z0p2rm3zJZZo-g,4362
+delphai_search_utils-0.2.1.dist-info/METADATA,sha256=5mSsJB9wLNQhXFz4AYVbTDL93bq9F6iAA3lyr2M1h0c,710
+delphai_search_utils-0.2.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+delphai_search_utils-0.2.1.dist-info/RECORD,,
