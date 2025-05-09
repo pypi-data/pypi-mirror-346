@@ -1,0 +1,14 @@
+anchorna/__init__.py,sha256=A9SIlri7EJL3uz7MnI3DYcseymBKGXoQedC94LpkyA8,190
+anchorna/cli.py,sha256=nZQWa1dZtGXGHN1ZQbAVa8tK2zl0Jrc-PMcxv2p690w,15682
+anchorna/core.py,sha256=46uOMvd8l-uT9JVPNxDU81x0FPc4Vjh7wDGTC9EfMac,9725
+anchorna/io.py,sha256=lPbLOYivqxp5vuehV15Cnwa15qd7WhGrf5tzjeB3908,5988
+anchorna/util.py,sha256=tTP1YY4Pnv2MwHrEmp6PgpDj1oT3NQJd1KPtSV6CKd4,15582
+anchorna/tests/test_anchorna.py,sha256=2wmwG-mbY-PLPfzbflBCcbQTkDYnxUG-8mGA61O6_gc,5190
+anchorna/tests/data/anchors_complete_old.gff,sha256=22JqM-WS9yHQK1VndeoxkGeQ71iJwQo1toMw2IgQLc0,191745
+anchorna/tests/data/anchors_subset_old.gff,sha256=pHxEl_KeJ5-5MnG13miouES_VkJeLlLt3viJ-yxWA9U,17060
+anchorna/tests/data/pesti56.gff.zip,sha256=A9NLaDMyw5U8eBl76rLafpKQ1nZ6j58gdj1_VVEwwD8,195120
+anchorna-1.0.1.dist-info/METADATA,sha256=urY3PQ3U03ZrMVm0P7vamOdFRxPJBRkIydXHPKf_KI4,490
+anchorna-1.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+anchorna-1.0.1.dist-info/entry_points.txt,sha256=ZktVMw4yCrMFEAQ_jPwdPXpxrJXQXryG0ujUUT7uElI,54
+anchorna-1.0.1.dist-info/top_level.txt,sha256=WKfPHlzBFBsOLeHBCgeZvgZv4PSSo6B3jmebNVI89Vo,9
+anchorna-1.0.1.dist-info/RECORD,,
