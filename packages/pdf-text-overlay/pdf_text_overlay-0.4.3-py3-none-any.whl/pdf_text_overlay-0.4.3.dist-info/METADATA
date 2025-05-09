@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: pdf_text_overlay
+Version: 0.4.3
+Summary: Python library to write text on top of PDF
+Home-page: https://github.com/shridarpatil/pdf_writer
+Download-URL: https://github.com/shridarpatil/pdf_writer/archive/0.4.3.tar.gz
+Author: Shridhar Patil
+Author-email: shridharpatil2792@gmail.com
+Keywords: pdf writer,Pdf Editor
+License-File: LICENSE
+Requires-Dist: pyPdf
+Requires-Dist: reportlab
+Dynamic: author
+Dynamic: author-email
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
