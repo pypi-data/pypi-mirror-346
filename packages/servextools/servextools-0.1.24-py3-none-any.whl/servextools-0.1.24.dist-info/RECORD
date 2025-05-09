@@ -1,0 +1,16 @@
+ServexTools/Enumerable.py,sha256=WAAxyjcDmknxSkO860ZbcrCOylCo5MJ0AEagIbUn-8I,99
+ServexTools/EscribirLog.py,sha256=baihM3GKlqmVFv2GBo7QFGGq8pjBlu7dRDZ25I1BDnw,5683
+ServexTools/GetTime.py,sha256=WjRzqBCFatqU8f1Tv6xamiaR5ghjugL4pCdyasgTClk,1861
+ServexTools/Necesario.py,sha256=0b9-ZtqKJu5_nVX32N18LPGNQmkUpEfSePllHGcvFn8,7533
+ServexTools/ReplicaDb.py,sha256=xw-sa_TG1tzg51OEiQ5JYlspdP7DqnMJb-f2zVublq8,22909
+ServexTools/Table.py,sha256=pR-x-9jQoZ2tnLmPL55Vx5UUdNpWROAYNToUeIXCBCo,59458
+ServexTools/TablePV.py,sha256=faaJguiFRLjPGizXknERb1WUK8aCuX77orVZMjrXz5U,25137
+ServexTools/Tools.py,sha256=8s4xxFssQgoKn6zdFw9-ePcsOHndLRgfJcCGZZDRhRI,34744
+ServexTools/__init__.py,sha256=mnu-u02IfggqTAA0iBqPSBsdqu2Wt9GHBwCdVR72dK4,22
+ServexTools/conexion.py,sha256=B7C4-d2NC8PFYGaQkctxuECkK1Ih5a90scpxZPNZXnk,11409
+ServexTools/socket_manager.py,sha256=6tg1XSatVJKbSrpus0HK4dE2ON0NltT2ToDtchnhp4Q,2193
+servextools-0.1.24.dist-info/licenses/LICENSE,sha256=Kc__pks1gO5Y4rrErgT_P05FPZNLjAC5zeTGIoalX7g,1066
+servextools-0.1.24.dist-info/METADATA,sha256=3PjwHgFtWEC7Nq8iW6RA0o3x81AI-xt2xbgRAPP-Mx8,6145
+servextools-0.1.24.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+servextools-0.1.24.dist-info/top_level.txt,sha256=Lv9ho4JZJ5Q1uFGr2J2DqUndiJiynFL6yZ7zxN0Brdc,12
+servextools-0.1.24.dist-info/RECORD,,
