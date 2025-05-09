@@ -1,0 +1,8 @@
+straceprof/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+straceprof/__main__.py,sha256=--60VMVUCwcE4p_joTEyewh02CWLmJlvwYpeHllz8vg,75
+straceprof/cli.py,sha256=gzXpHQG9zUpiSQzHb8-fH6j1u6XPIXpoqsAHELBdoVE,9638
+straceprof-0.0.8.dist-info/METADATA,sha256=FF1jda3c7xQ91-brTXIgbMU3BtxQ22r56pHvzbWJ7f0,4189
+straceprof-0.0.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+straceprof-0.0.8.dist-info/entry_points.txt,sha256=DhZ1VK-LCq_xK9ZJvcabjBB-uJORzA3lMaJbmFtXe_U,51
+straceprof-0.0.8.dist-info/licenses/LICENSE,sha256=hF2Mpz52loDduXME-SuQZwXYhNzIY41dN1Jv0J2cCqU,1069
+straceprof-0.0.8.dist-info/RECORD,,
