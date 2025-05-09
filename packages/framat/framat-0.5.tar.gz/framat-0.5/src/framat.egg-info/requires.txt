@@ -1,0 +1,6 @@
+commonlibs>=0.3.3
+jsonschema
+matplotlib>=3.4.0
+numpy
+scipy
+model-framework>=0.0.14
