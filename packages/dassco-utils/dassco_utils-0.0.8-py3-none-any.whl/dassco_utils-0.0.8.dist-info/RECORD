@@ -1,0 +1,17 @@
+dassco_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dassco_utils/guid/__init__.py,sha256=pNazMVZI2NuPTca4jcX6dCUUnDw5Xxw4jvg_mmx2vfE,54
+dassco_utils/guid/main.py,sha256=deAN1Tk5QeAdNHUiwe8JIY90s0cLlMV1KYQmgmIO9GQ,2882
+dassco_utils/messaging/__init__.py,sha256=67jzv3xiMDiha2QKD4677AxsdAon34ftqUF6kfAWjho,43
+dassco_utils/messaging/rabbitmq_client.py,sha256=YbjRzyg2prRsGX9aJ53LfbqoBS64oQQnpuRlE8HlORE,6785
+dassco_utils/metadata/__init__.py,sha256=rIroBfvX1RakiZl2ztpxRjoY6XvMYLs7FshpS0-9VHo,56
+dassco_utils/metadata/main.py,sha256=FtYuObnrDa9k40i6xMy5EvBrPJzEZ93cjpy3sRknSnY,1076
+dassco_utils/metadata/models.py,sha256=3f4HJb4FBwLaHpmmKwMau8RUPFXHiwOwu24WxLpuchg,2549
+dassco_utils-0.0.8.dist-info/licenses/LICENSE,sha256=uQTpRiTgqoujr-V2sQQIirFw0XQH0LdtDeQ-TdVHFmU,1090
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_guid.py,sha256=S6LW4WYDItwntiwNMNjfs2PqHQBIOpRi6_cP2SHCPww,1334
+test/test_messaging.py,sha256=vn--voKFHIXZApPYVmiZUkoALfVPnZGAS9FD9pxs-pw,2404
+test/test_metadata.py,sha256=wvXWLLAnJedVHU1riCVyozftk8ItFjbj9Pvg9pAlQD0,5062
+dassco_utils-0.0.8.dist-info/METADATA,sha256=GcZGI0G0adLNt9WsIwB2dcCs7I-ea1jaa-CPXIbAxZo,1059
+dassco_utils-0.0.8.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+dassco_utils-0.0.8.dist-info/top_level.txt,sha256=IkyVl155-7vsMxj5eoUQUFb2d4RoAsClIF3FiybQST4,18
+dassco_utils-0.0.8.dist-info/RECORD,,
