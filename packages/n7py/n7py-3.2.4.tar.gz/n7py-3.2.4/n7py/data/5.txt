@@ -1,0 +1,176 @@
+#HMM - Forward and backward algo
+-------------------------------
+import numpy as np
+
+def forward(transition,initial,emmision,target):
+    M = len(target)
+    N = initial.shape[0]
+    alpha = np.zeros((M, N))
+    alpha[0, :] = initial * emmision[:,target[0]]
+    for t in range(1, M):
+        for j in range(N):
+            for i in range(N):
+                alpha[t, j] += alpha[t-1, i] * transition[i, j] * emmision[j, target[t]]
+    return np.sum(alpha[M-1,:])  
+
+
+def backward(transition, initial, emission, target):
+    M = len(target)
+    N = initial.shape[0]
+    beta = np.zeros((M, N))
+    beta[M-1, :] = 1
+    for t in range(M-2, -1, -1):
+        for i in range(N):
+            for j in range(N):
+                beta[t, i] += transition[i, j] * emission[j, target[t+1]] * beta[t+1, j]
+    prob = np.sum(initial * emission[:, target[0]] * beta[0, :])
+    return prob
+
+def main():
+    states = 0, 1 
+    observations = [2, 0, 2]
+    # Transition Probabilities
+    A = np.array([[0.5, 0.5], [0.4, 0.6]])
+    # Initial Probabilities
+    pi = np.array([0.2,0.8])
+    # Emmision Probabilities
+    B = np.array([[0.5, 0.4, 0.1], [0.2, 0.4, 0.4]])
+    forwardprob = forward(A, pi, B, observations)
+    print("Probability of the observed sequence in forward markov model is: ", forwardprob)
+    backward_prob = backward(A, pi, B, observations)
+    print("Probability of the observed sequence in backward Markov model is: ", backward_prob)
+if __name__ == "__main__":
+    main()
+
+import math
+def forwardmath(transition, initial, emission, target):
+    M = len(target)
+    N = len(initial)
+    alpha = [[0] * N for _ in range(M)]
+    for j in range(N):
+        alpha[0][j] = initial[j] * emission[j][target[0]]
+    for t in range(1, M):
+        for j in range(N):
+            for i in range(N):
+                alpha[t][j] += alpha[t-1][i] * transition[i][j] * emission[j][target[t]]
+    return sum(alpha[M-1])
+
+def backwardmath(transition, initial, emission, target):
+    M = len(target)
+    N = len(initial)
+    beta = [[0] * N for _ in range(M)]
+    for i in range(N):
+        beta[M-1][i] = 1
+    for t in range(M-2, -1, -1):
+        for i in range(N):
+            for j in range(N):
+                beta[t][i] += transition[i][j] * emission[j][target[t+1]] * beta[t+1][j]
+    prob = sum(initial[i] * emission[i][target[0]] * beta[0][i] for i in range(N))
+    return prob
+
+def main():
+    states = [0, 1]
+    observations = [3, 0, 2, 1]
+    A = [[0.8, 0.2], [0.4, 0.6]]
+    pi = [0.6, 0.4]
+    B = [[0.1, 0.3, 0.2, 0.4], [0.45, 0.05, 0.2, 0.3]]
+    forward_prob = forwardmath(A, pi, B, observations)
+    print("Probability of the observed sequence in forward Markov model is: ", forward_prob)
+    backward_prob = backwardmath(A, pi, B, observations)
+    print("Probability of the observed sequence in backward Markov model is: ", backward_prob)
+if __name__ == "__main__":
+    main()
+
+## easy fwd and bwd
+import numpy as np
+
+states = ['Good', 'Neutral', 'Bad']
+observations = list("ABAABAC")
+obs_map = {'A': 0, 'B': 1, 'C': 2}
+obs_indices = [obs_map[o] for o in observations]
+
+# Transition matrix (S x S): from->to
+transition = np.array([
+    [0.2, 0.3, 0.5],  # Good
+    [0.2, 0.2, 0.6],  # Neutral
+    [0.8, 0.2, 0.0],  # Bad
+])
+
+# Emission matrix (S x O)
+emission = np.array([
+    [0.7, 0.2, 0.1],  # Good
+    [0.3, 0.4, 0.3],  # Neutral
+    [0.1, 0.0, 0.9],  # Bad
+])
+
+# Initial state distribution: starts with Neutral
+initial = np.array([0.0, 1.0, 0.0])
+
+# Forward algorithm
+def forward(obs_indices):
+    alpha = np.zeros((len(obs_indices), len(states)))
+    alpha[0] = initial * emission[:, obs_indices[0]]
+    for t in range(1, len(obs_indices)):
+        for j in range(len(states)):
+            alpha[t, j] = np.sum(alpha[t-1] * transition[:, j]) * emission[j, obs_indices[t]]
+    return alpha
+
+# Backward algorithm
+def backward(obs_indices):
+    beta = np.zeros((len(obs_indices), len(states)))
+    beta[-1] = 1
+    for t in reversed(range(len(obs_indices)-1)):
+        for i in range(len(states)):
+            beta[t, i] = np.sum(transition[i, :] * emission[:, obs_indices[t+1]] * beta[t+1])
+    return beta
+
+alpha = forward(obs_indices)
+beta = backward(obs_indices)
+
+# Total probability
+probability = np.sum(alpha[-1])
+print("Forward Probability of sequence 'ABAABAC':", probability)
+
+##bigram 
+# Step 1: Load the data
+with open('india.txt', 'r') as file:
+    text = file.read()
+
+# Step 2: Tokenize, remove stopwords, and apply stemming
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
+
+nltk.download('punkt')
+nltk.download('stopwords')
+
+tokens = word_tokenize(text.lower())
+stop_words = set(stopwords.words('english'))
+ps = PorterStemmer()
+
+# Clean tokens
+cleaned_tokens = [ps.stem(w) for w in tokens if w.isalpha() and w not in stop_words]
+
+# Step 3: Generate bigrams
+from nltk.collocations import BigramCollocationFinder
+from nltk.metrics import BigramAssocMeasures
+
+finder = BigramCollocationFinder.from_words(cleaned_tokens)
+
+# Step 4: Apply t-test and chi-square test with threshold 1.962
+bigram_measures = BigramAssocMeasures()
+t_score_bigrams = finder.nbest(bigram_measures.student_t, 10)
+chi_sq_bigrams = finder.nbest(bigram_measures.chi_sq, 10)
+
+# Filter interesting bigrams
+threshold = 1.962
+t_collocations = [bigram for bigram, score in finder.score_ngrams(bigram_measures.student_t) if score > threshold]
+chi_collocations = [bigram for bigram, score in finder.score_ngrams(bigram_measures.chi_sq) if score > threshold]
+
+print("T-test Collocations above threshold:")
+print(t_collocations)
+
+print("\nChi-square Collocations above threshold:")
+print(chi_collocations)
+
