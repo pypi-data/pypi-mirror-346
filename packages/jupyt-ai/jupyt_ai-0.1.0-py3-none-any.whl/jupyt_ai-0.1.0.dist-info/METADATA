@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: jupyt_ai
+Version: 0.1.0
+Summary: Jupyt AI - Intelligent Assistant for Jupyter Notebooks
+Author-email: Rajmeet Singh Chandok <rajmeetchandok@gmail.com>
+Maintainer-email: Rishabh <rajmeetchandok@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/rajmeet/juno
+Project-URL: Repository, https://github.com/rajmeet/juno.git
+Keywords: jupyter,jupyterlab,jupyterlab-extension,ai,chat,assistant
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Jupyter
+Classifier: Framework :: Jupyter :: JupyterLab
+Classifier: Framework :: Jupyter :: JupyterLab :: 4
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jupyterlab>=4.0.0
+Dynamic: license-file
+
+# Jupyt
+Jupyt is an intelligent assistant built on top of Jupyter Notebooks. 
+
+## Prerequisites
+
+- Node.js >= 16
+- Python >= 3.8
+- JupyterLab >= 4.0
+- python3-full (for Ubuntu/Debian systems)
+
+## How to run on your system
+
+
+```bash
+# Create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install required packages
+pip install jupyterlab==4.2.7
+pip install -e .
+(for ubuntu add --break-system-packages)
+
+Then activate that environment in another terminal
+1. In your first terminal:
+```bash
+# Watch for source changes and rebuild automatically
+jlpm watch
+```
+
+2. In a second terminal:
+```bash
+# Run JupyterLab
+jupyter lab
+```
+
+When you make changes to source files:
+1. Save your changes
+2. Wait for the rebuild message in the first terminal
+3. Refresh your JupyterLab browser window
+
+## Testing
+
+```bash
+# Run tests
+jlpm test
+
+# Run linting
+jlpm lint
+```
+
+## Project Structure
+
+FOLDER STRUCTURE:
+- src: All the code files for the extension
+- style: The css for the codebase
+- lib: The build converted into javascript
