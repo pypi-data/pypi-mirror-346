@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/examples/basic.py
+src/furthermore_py/__init__.py
+src/furthermore_py/client.py
+src/furthermore_py.egg-info/PKG-INFO
+src/furthermore_py.egg-info/SOURCES.txt
+src/furthermore_py.egg-info/dependency_links.txt
+src/furthermore_py.egg-info/requires.txt
+src/furthermore_py.egg-info/top_level.txt
