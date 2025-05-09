@@ -1,0 +1,13 @@
+LICENSE.txt
+README.rst
+pyproject.toml
+src/datalizer/__init__.py
+src/datalizer/cleaner.py
+src/datalizer/loader.py
+src/datalizer/preprocessor.py
+src/datalizer/utils.py
+src/datalizer.egg-info/PKG-INFO
+src/datalizer.egg-info/SOURCES.txt
+src/datalizer.egg-info/dependency_links.txt
+src/datalizer.egg-info/requires.txt
+src/datalizer.egg-info/top_level.txt

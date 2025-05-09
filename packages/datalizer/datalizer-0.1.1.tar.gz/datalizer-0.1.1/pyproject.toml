@@ -1,0 +1,35 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61.0"]
+
+[project]
+
+authors = [
+  {name = "Eörs Szathmáry"},
+  {name = "Péter Osztobányi"},
+  {name = "Réka Kovács"},
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering",
+]
+
+dependencies = [
+  "pandas>=2.0.0",
+  "numpy>=1.25.2",
+  "scikit-learn>=1.0.0",
+]
+description = "Datalizer - A Python package for exploring, cleaning, and preparing numerical datasets."
+license = {file = "LICENSE.txt"}
+maintainers = [{name = "Eörs Szathmáry", email = "szathmary.eors@hallgato.itk.ppke.hu"}]
+name = "datalizer"
+
+readme = "README.rst"
+
+requires-python = ">=3.10"
+version = "0.1.1"
+
+[project.urls]
+Homepage = "https://github.com/eorsjr/datalizer-scipy"
