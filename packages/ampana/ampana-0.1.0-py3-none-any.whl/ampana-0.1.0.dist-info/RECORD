@@ -1,0 +1,11 @@
+ampana/__init__.py,sha256=RSq34il5TYv5B79nWxqPTJeansVFSXE9RcZysaKRiC0,241
+ampana/advice.py,sha256=5_bcDsOMVIef_AJbZlZP6PKRY9SmFmb0NEFzFbCZg5Q,330
+ampana/compliment.py,sha256=ldXXZgnxSDju2zJG8vaQC2wiUQiRnkzhFUSC0iLJdqQ,309
+ampana/plan.py,sha256=sTQ1l7yGsMVzltD2hkbt5jLm0OC87IkUPpCyE5BsXVs,449
+ampana/utils.py,sha256=oVtbWprdY-J3nwFXZ4DgELpQJzyxZrwGdWDMjIzv--I,269
+ampana/vibe.py,sha256=u-WaFojn1LV2QkckIYaMLi_GbxnpDKKvzvs6YYYbbsY,403
+ampana/weather.py,sha256=KIPJKo8Ns-jg0ActW_w3N2qtYBEQGpcJY7OfxCbwqSI,1345
+ampana-0.1.0.dist-info/METADATA,sha256=67FvFYAKlVRUgsZbBPIGspGrOHuW0oOMFISI10zWiLI,1054
+ampana-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+ampana-0.1.0.dist-info/top_level.txt,sha256=ZZQCe2Uy21H5NKGPURLeMcZAVVEqHfcTMv3-grzMH4Y,7
+ampana-0.1.0.dist-info/RECORD,,
