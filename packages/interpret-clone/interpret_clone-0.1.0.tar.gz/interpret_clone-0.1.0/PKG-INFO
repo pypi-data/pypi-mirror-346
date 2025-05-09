@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: interpret-clone
+Version: 0.1.0
+Summary: Un clon modificado de interpretml
+Home-page: https://github.com/bmihaljevic/tfg-interpretml
+Author: Javier Pérez Vargas
+Author-email: javipv2003pv@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: joblib==1.4.2
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pandas==2.2.3
+Requires-Dist: pyAgrum==1.15.1
+Requires-Dist: scikit_learn==1.3.2
+Requires-Dist: scipy==1.13.1
+Requires-Dist: torch==2.6.0
+Requires-Dist: tqdm==4.66.2
+Provides-Extra: debug
+Requires-Dist: psutil==6.1.1; extra == "debug"
+Provides-Extra: notebook
+Requires-Dist: ipykernel==6.29.5; extra == "notebook"
+Requires-Dist: ipython==8.18.1; extra == "notebook"
+Provides-Extra: plotly
+Requires-Dist: plotly==5.24.1; extra == "plotly"
+Provides-Extra: lime
+Requires-Dist: lime==0.2.0.1; extra == "lime"
+Provides-Extra: sensitivity
+Requires-Dist: SALib==1.5.1; extra == "sensitivity"
+Provides-Extra: shap
+Requires-Dist: shap==0.46.0; extra == "shap"
+Requires-Dist: dill>=0.2.5; extra == "shap"
+Provides-Extra: linear
+Provides-Extra: skoperules
+Requires-Dist: skope-rules>=1.0.1; extra == "skoperules"
+Provides-Extra: treeinterpreter
+Requires-Dist: treeinterpreter==0.2.3; extra == "treeinterpreter"
+Provides-Extra: aplr
+Requires-Dist: aplr==10.8.0; extra == "aplr"
+Provides-Extra: dash
+Requires-Dist: dash==2.18.2; extra == "dash"
+Requires-Dist: dash-cytoscape==1.0.2; extra == "dash"
+Requires-Dist: gevent==24.11.1; extra == "dash"
+Requires-Dist: requests==2.32.3; extra == "dash"
+Provides-Extra: testing
+Requires-Dist: scikit-learn>=1.0.0; extra == "testing"
+Requires-Dist: pytest>=4.3.0; extra == "testing"
+Requires-Dist: pytest-runner>=4.4; extra == "testing"
+Requires-Dist: pytest-xdist>=1.29; extra == "testing"
+Requires-Dist: nbconvert>=5.4.1; extra == "testing"
+Requires-Dist: selenium>=3.141.0; extra == "testing"
+Requires-Dist: pytest-cov>=2.6.1; extra == "testing"
+Requires-Dist: ruff>=0.1.2; extra == "testing"
+Requires-Dist: jupyter>=1.0.0; extra == "testing"
+Requires-Dist: ipywidgets==8.1.5; extra == "testing"
