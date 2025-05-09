@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: nsmith5-py-sigstore-demo
+Version: 1.2.0
+Summary: A small example package
+Project-URL: Homepage, https://github.com/nsmith5/nsmith5-py-sigstore-demo
+Project-URL: Issues, https://github.com/pypa/nsmith5/nsmith5-py-sigstore-demo
+Author-email: Example Author <null@example.com>
+License-Expression: MIT
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# Sigstore Python Example package
+
+Example package demostrating trusted publishing to PyPI
+and Sigstore signing
