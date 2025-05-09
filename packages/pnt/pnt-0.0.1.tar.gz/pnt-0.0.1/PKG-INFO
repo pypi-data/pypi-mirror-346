@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: pnt
+Version: 0.0.1
+Summary: A simple tool for generating and analyzing bibliometric citation network data from Pubmed.
+Home-page: https://github.com/jarohde/pnt
+Author: Jacob Rohde
+Author-email: jarohde1@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: networkx
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: metapub
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PNT - PubMed Network Toolkit
+
+A simple tool for generating and analyzing bibliometric citation network data from PubMed.
+
+Note: This package is still in development.
+
+## Author
+
+**Jacob Rohde**
+
+Email: [jarohde1\@gmail.com](mailto:jarohde1@gmail.com) \| GitHub: [\@jarohde](https://github.com/jarohde)
+
+## Support
+
+For support, email [jarohde1\@gmail.com](mailto:jarohde1@gmail.com).
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
