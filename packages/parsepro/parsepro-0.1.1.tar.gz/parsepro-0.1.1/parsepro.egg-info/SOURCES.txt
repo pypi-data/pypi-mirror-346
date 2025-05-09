@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+parsepro/__init__.py
+parsepro/image_parser.py
+parsepro/pdf_parser.py
+parsepro.egg-info/PKG-INFO
+parsepro.egg-info/SOURCES.txt
+parsepro.egg-info/dependency_links.txt
+parsepro.egg-info/requires.txt
+parsepro.egg-info/top_level.txt
