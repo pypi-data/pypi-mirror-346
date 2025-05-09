@@ -1,0 +1,61 @@
+Metadata-Version: 2.3
+Name: moss_geoio_sdk
+Version: 0.1.12
+Summary: GeoIO Python SDK
+License: MIT
+Keywords: moss_geoio
+Author: M.O.S.S.Computer Grafik Systeme GmbH
+Author-email: develop@moss.de
+Maintainer: M.O.S.S.Computer Grafik Systeme GmbH
+Maintainer-email: develop@moss.de
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: requests (>=2,<3)
+Project-URL: Homepage, https://www.moss.de/
+Description-Content-Type: text/markdown
+
+# MOSS GeoIO SDK
+
+## Description
+
+This is the Python SDK to interact with [M.O.S.S. Computer Grafik Systeme GmbH](https://www.moss.de/wega/) GeoIO
+
+## Installation
+
+This package kann be installed using pip
+
+```shell
+python -m pip install moss_geoio_sdk
+```
+
+## Usage
+
+```python
+import sys
+from pathlib import Path
+import logging
+from moss.geoio_sdk.geoio_service import GeoIO
+from moss.geoio_sdk.model.user import User
+
+user_name = "username"
+user_password = "password"
+geoIO_url = "https://geoio.server.your.domain:8443/mcm-geoio"
+
+my_logger = logging.getLogger("my_logger")
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+geoIO = GeoIO(
+    geoIO_url, user_name, user_password, Path("c:/temp/geoio_sdk"), my_logger
+)
+```
+

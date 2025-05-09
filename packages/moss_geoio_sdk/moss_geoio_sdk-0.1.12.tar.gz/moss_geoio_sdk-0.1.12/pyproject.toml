@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "moss_geoio_sdk"
+version = "0.1.12"
+description = "GeoIO Python SDK"
+license = "MIT"
+authors = ["M.O.S.S.Computer Grafik Systeme GmbH <develop@moss.de>"]
+maintainers = ["M.O.S.S.Computer Grafik Systeme GmbH <develop@moss.de>"]
+homepage = "https://www.moss.de/"
+packages = [{ include = "moss" }]
+readme = "README.md"
+keywords = ["moss_geoio"]
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Environment :: Other Environment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2"
+
+[tool.poetry.dev-dependencies]
+black = "^24"
+flake8 = "^7"
+pre-commit = "^3"
+commitizen = "^3"
+pytest = "^8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.12"
+tag_format = "$version"
+version_files = ["moss/geoio_sdk/__init__.py", "pyproject.toml:version"]
+
+[tool.poe.tasks]
+bump = "poetry run cz bump --increment PATCH"
+publish_tag = "git push origin --tags"
+release = ["bump", "publish_tag"]
