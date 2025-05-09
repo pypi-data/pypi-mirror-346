@@ -1,0 +1,13 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "vcd2df"
+authors = [{name = "Calvin Deutschbein", email = "ckdeutschbein@willamette.edu"}]
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+dynamic = ["version", "description"]
+
+[project.urls]
+Home = "https://cd-public.github.io/"
