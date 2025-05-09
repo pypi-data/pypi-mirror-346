@@ -1,0 +1,16 @@
+progressbar2
+pathos>=0.2
+numpy<2.0
+tblib
+pyyaml
+dill
+matplotlib
+shapely
+pandas
+geopandas
+
+[docs]
+sphinx
+
+[test]
+pytest
