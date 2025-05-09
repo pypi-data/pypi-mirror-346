@@ -1,0 +1,20 @@
+<!-- 
+project: IBT24/25, xkubec03
+author: Viktor Kubec
+file: cable_create.html
+
+brief:
+Template for cable create view - shows form for creating new cable
+-->
+{% extends 'base/layout.html' %}
+{% load static %}
+
+{% block content %}
+<h3>Create Cable & Inventory</h3>
+<hr>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+{% endblock %}

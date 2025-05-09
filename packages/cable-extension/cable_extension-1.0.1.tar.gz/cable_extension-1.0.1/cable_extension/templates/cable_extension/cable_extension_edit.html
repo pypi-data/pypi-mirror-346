@@ -1,0 +1,20 @@
+<!-- 
+project: IBT24/25, xkubec03
+author: Viktor Kubec
+file: cable_create.html
+
+brief:
+Template for cable edit view - shows form for editing cable
+-->
+{% extends 'base/layout.html' %}
+{% load static %}
+
+{% block content %}
+<h3>Edit Cable Extension</h3>
+<hr>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+{% endblock %}
