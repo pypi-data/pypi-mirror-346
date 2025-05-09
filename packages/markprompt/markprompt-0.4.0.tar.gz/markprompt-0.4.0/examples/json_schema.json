@@ -1,0 +1,27 @@
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "MovieReview",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "year": {
+          "type": "number"
+        },
+        "review": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "title",
+        "year",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "strict": false
+  }
+}
