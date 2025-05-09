@@ -1,0 +1,12 @@
+README.md
+setup.py
+offpath/__init__.py
+offpath/core.py
+offpath/hooks/__init__.py
+offpath/hooks/langchain.py
+offpath/hooks/openai.py
+offpath_minihook.egg-info/PKG-INFO
+offpath_minihook.egg-info/SOURCES.txt
+offpath_minihook.egg-info/dependency_links.txt
+offpath_minihook.egg-info/requires.txt
+offpath_minihook.egg-info/top_level.txt
