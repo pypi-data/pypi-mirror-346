@@ -1,0 +1,176 @@
+Metadata-Version: 2.4
+Name: labrea-type-validation
+Version: 0.0.1
+Summary: Type validation in labrea with pydantic.
+Project-URL: repository, https://github.com/8451/labrea-type-validation
+Project-URL: documentation, https://8451.github.io/labrea-type-validation
+Project-URL: bugs, https://github.com/8451/labrea-type-validation/issues
+Author-email: Austin Warner <austin.warner@8451.com>, Michael Stoepel <michael.stoepel@8451.com>
+License: MIT License
+        
+        Copyright (c) 2024 84.51 LLC. All rights reserved.
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Requires-Dist: labrea>=2.1
+Requires-Dist: pydantic>=2
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: bump2version; extra == 'dev'
+Requires-Dist: coverage; extra == 'dev'
+Requires-Dist: coverage-badge; extra == 'dev'
+Requires-Dist: flake8>=3.7.9; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: myst-parser; extra == 'dev'
+Requires-Dist: nbsphinx; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: recommonmark; extra == 'dev'
+Requires-Dist: sphinx; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme; extra == 'dev'
+Requires-Dist: sphinxcontrib-napoleon; extra == 'dev'
+Requires-Dist: sphinxemoji; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: myst-parser; extra == 'doc'
+Requires-Dist: nbsphinx; extra == 'doc'
+Requires-Dist: recommonmark; extra == 'doc'
+Requires-Dist: sphinx; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme; extra == 'doc'
+Requires-Dist: sphinxcontrib-napoleon; extra == 'doc'
+Requires-Dist: sphinxemoji; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+Requires-Dist: coverage-badge; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Description-Content-Type: text/markdown
+
+# Labrea Type Validation
+Type validation for [labrea](https://github.com/8451/labrea) using [pydantic](https://docs.pydantic.dev/latest/)
+
+![](https://img.shields.io/badge/version-0.0.1-blue.svg)
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/labrea-type-validation.svg?label=PyPI%20downloads)](https://pypi.org/project/labrea-type-validation/)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![Coverage](https://raw.githubusercontent.com/8451/labrea-type-validation/meta/coverage/coverage.svg)](https://github.com/8451/labrea-type-validation/tree/meta/coverage)
+[![docs](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://8451.github.io/labrea-type-validation)
+
+## Installation
+`labrea-type-validation` is available for install via pip.
+
+```bash
+pip install labrea-type-validation
+````
+
+Alternatively, you can install the latest development version from GitHub.
+
+```bash
+pip install git+https://github.com/8451/labrea-type-validation@develop
+```
+
+## Usage
+
+When creating an `Option` with labrea, specify the expected type using either of the following syntaxes:
+
+```python
+from labrea import Option
+
+X = Option("X", type=int)
+Y = Option[int]("Y")
+```
+
+Either literal types or type hints can be used, such as `List[int]` or `Union[str, List[str]]`.
+
+To enable type validation, simply import `labrea_type_validation` and call the `enable` function:
+
+```python
+import labrea_type_validation
+
+X({"X": "1"})  # No error
+
+labrea_type_validation.enable()
+
+X({"X": "1"})
+# ...
+# TypeError: Expected type <class 'int'> but got <class 'str'> ('1')
+#
+# The above exception was the direct cause of the following exception:
+#
+# Traceback (most recent call last):
+# ...
+# labrea.exceptions.EvaluationError: Originating in Option('X') | Error during evaluation
+```
+
+Type validation can also be used in a `with` statement as a context manager using `enabled`.
+
+```python
+with labrea_type_validation.enabled():
+    X({"X": "1"})
+# ...
+# TypeError: Expected type <class 'int'> but got <class 'str'> ('1')
+#
+# The above exception was the direct cause of the following exception:
+#
+# Traceback (most recent call last):
+# ...
+# labrea.exceptions.EvaluationError: Originating in Option('X') | Error during evaluation
+```
+
+Alternatively, the `LABREA_TYPE_VALIDATION_ENABLED` environment variable can be set to `TRUE`.
+
+## Multithreaded Applications
+
+Type validation is based on the `labrea.runtime` module. For this reason, type validation is
+enabled for the current thread and any threads spawned from it. If you are using a multithreaded
+application, ensure that type validation is enabled in the main thread before spawning any new
+threads.
+
+## Contributing
+If you would like to contribute to **labrea-type-validation**, please read the
+[Contributing Guide](docs/source/contributing.md).
+
+## Changelog
+A summary of recent updates to **labrea-type-validation** can be found in the
+[Changelog](docs/source/changelog.md).
+
+## Maintainers
+
+| Maintainer                                                | Email                    |
+|-----------------------------------------------------------|--------------------------|
+| [Austin Warner](https://github.com/austinwarner-8451)     | austin.warner@8451.com   |
+| [Michael Stoepel](https://github.com/michaelstoepel-8451) | michael.stoepel@8451.com |
+
+## Links
+- Report a bug or request a feature: https://github.com/8451/labrea-type-validation/issues/new/choose
+- Documentation: https://8451.github.io/labrea-type-validation
