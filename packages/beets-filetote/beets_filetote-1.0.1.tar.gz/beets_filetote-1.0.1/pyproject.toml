@@ -1,0 +1,155 @@
+#:schema https://json.schemastore.org/pyproject.json
+
+[tool.poetry]
+name = "beets-filetote"
+version = "1.0.1"
+description = "A beets plugin to copy/moves non-music extra files, attachments, and artifacts during the import process."
+authors = ["Gavin Tronset <gtronset@gmail.com>"]
+keywords = ["beets", "files", "artifacts", "extra"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "beetsplug" }]
+repository = "https://github.com/gtronset/beets-filetote"
+documentation = "https://github.com/gtronset/beets-filetote"
+classifiers = [
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Multimedia :: Sound/Audio :: Players :: MP3",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+]
+
+[tool.poetry.urls]
+"Release notes" = "https://github.com/gtronset/beets-filetote/releases"
+"Source" = "https://github.com/gtronset/beets-filetote"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+beets = "^2.0"
+mediafile = ">=0.12.0"
+typing_extensions = { version = "*", python = "<=3.10" }
+
+[tool.poetry.group.dev.dependencies]
+beets-audible = ">=0.1.0"
+reflink = ">=0.2.1"
+toml = ">=0.10.2"
+
+[tool.poetry.group.lint.dependencies]
+mypy = [
+    { version = "^1.15.0", python = ">=3.9" },
+    { version = "^1.9.0", python = ">=3.8,<3.9" },
+]
+ruff = "^0.11.8"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+typeguard = "^4.4.0"
+
+[build-system]
+requires = ["poetry-core<2.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+mypy_path = ["./typehints"]
+modules = ["beetsplug", "tests.helper", "tests._common"]
+strict = true
+pretty = true
+
+[tool.pytest.ini_options]
+testpaths = ["./tests"]
+filterwarnings = ["ignore::DeprecationWarning:.*confuse"]
+
+[tool.ruff]
+line-length = 88
+# namespace-packages = ["beetsplug"]
+preview = true
+src = ["beetsplug", "tests", "typehints"]
+target-version = "py38"
+
+[tool.ruff.lint]
+ignore = ["D205", "PLR6301"]
+extend-select = [
+    "A",    # flake8-builtins
+    "ARG",  # flake8-unused-arguments
+    "C4",   # flake8-comprehensions
+    "D",    # pydocstyle
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "B",    # flake8-bugbear
+    "I",    # isort
+    "N",    # pep8-naming
+    "PERF", # perflint
+    "PL",   # pylint
+    "PT",   # flake8-pytest-style
+    "PYI",  # flake8-pyi
+    "RUF",  # ruff
+    "SIM",  # flake8-simplify
+    "SLF",  # flake8-self
+    "TD",   # flake8-todos
+    "TC",   # flake8-type-checking
+    "UP",   # pyupgrade
+    "W",    # pycodestyle
+    # "PTH", # flake8-use-pathlib
+]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+parametrize-names-type = "csv"
+
+[tool.ruff.lint.flake8-unused-arguments]
+ignore-variadic-names = true
+
+[tool.ruff.lint.isort]
+lines-between-types = 1
+known-local-folder = ["tests"]
+
+[tool.ruff.lint.pep8-naming]
+extend-ignore-names = ["assert*", "getLogger"]
+
+[tool.ruff.lint.per-file-ignores]
+"beetsplug/**" = ["PT"]
+"tests/**" = ["PLR0917"]
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 88
+
+[tool.ruff.lint.pydocstyle]
+# Use Google-style docstrings.
+convention = "google"
+
+[tool.tox]
+requires = ["tox>=4.22"]
+min_version = "4.22"
+env_list = ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
+
+[tool.tox.env_run_base]
+description = "Run test under {base_python}"
+deps = [
+    "beets",
+    "beets-audible",
+    "mediafile",
+    "pytest",
+    "reflink",
+    "toml",
+    "typeguard",
+]
+commands = [["pytest", "tests", "--typeguard-packages=beetsplug"]]
+
+[tool.tox.env.lint]
+commands = [["ruff", "check"]]
+deps = "ruff"
+description = "Lint source code"
+
+[tool.tox.env.lint-fix]
+commands = [["ruff", "check", "--fix"]]
+deps = { replace = "ref", env = "lint", key = "deps", extend = true }
+description = "Fixes and lint issues in source code"
+
+[tool.tox.env.format]
+commands = [["ruff", "format"]]
+deps = { replace = "ref", env = "lint", key = "deps", extend = true }
+description = "Formats source code"
+
+[tool.tox.env.mypy]
+commands = [["mypy"]]
+deps = ["mypy==1.15.0"]
