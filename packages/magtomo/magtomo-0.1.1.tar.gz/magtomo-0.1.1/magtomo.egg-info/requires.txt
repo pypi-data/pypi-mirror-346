@@ -1,0 +1,7 @@
+numpy
+pyevtk
+matplotlib
+pillow
+scipy
+ThreeDViewer
+magpack

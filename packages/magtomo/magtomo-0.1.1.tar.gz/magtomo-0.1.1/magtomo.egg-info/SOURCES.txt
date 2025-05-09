@@ -1,0 +1,13 @@
+LICENSE.txt
+README.rst
+pyproject.toml
+magtomo/Experiment.py
+magtomo/Reconstruction.py
+magtomo/__init__.py
+magtomo/examples.py
+magtomo/radon.py
+magtomo.egg-info/PKG-INFO
+magtomo.egg-info/SOURCES.txt
+magtomo.egg-info/dependency_links.txt
+magtomo.egg-info/requires.txt
+magtomo.egg-info/top_level.txt
