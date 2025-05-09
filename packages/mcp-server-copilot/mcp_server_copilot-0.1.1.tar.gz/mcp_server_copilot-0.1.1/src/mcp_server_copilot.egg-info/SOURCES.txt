@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/mcp_server_copilot/__init__.py
+src/mcp_server_copilot/__main__.py
+src/mcp_server_copilot/mcp_connection.py
+src/mcp_server_copilot/retriever.py
+src/mcp_server_copilot/router.py
+src/mcp_server_copilot/schemas.py
+src/mcp_server_copilot/server.py
+src/mcp_server_copilot.egg-info/PKG-INFO
+src/mcp_server_copilot.egg-info/SOURCES.txt
+src/mcp_server_copilot.egg-info/dependency_links.txt
+src/mcp_server_copilot.egg-info/entry_points.txt
+src/mcp_server_copilot.egg-info/requires.txt
+src/mcp_server_copilot.egg-info/top_level.txt
