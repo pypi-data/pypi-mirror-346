@@ -1,0 +1,4 @@
+pyarrow<20,>=19
+
+[test]
+pytest

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arrow-udf"
+version = "0.3.1"
+authors = [{ name = "RisingWave Labs" }]
+description = "A user-defined function framework for Apache Arrow"
+readme = "README.md"
+license = { text = "Apache Software License" }
+classifiers = [
+  "Programming Language :: Python",
+  "License :: OSI Approved :: Apache Software License",
+]
+requires-python = ">=3.8"
+dependencies = ["pyarrow>=19,<20"]
+
+[project.optional-dependencies]
+test = ["pytest"]
