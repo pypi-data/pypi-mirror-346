@@ -1,0 +1,21 @@
+multiple_pulse:
+  input_file: !!python/object/apply:pathlib.PosixPath
+  - output-large_batch
+  - CW
+  - Tvst-2e257c2c3fc2f5bc1b98c13ec81e37f6.txt
+  output_config_file: !!python/object/apply:pathlib.PosixPath
+  - output-large_batch
+  - MP
+  - CONFIG-87bead1783742ebfed81f79f5ae23559.txt
+  output_file: !!python/object/apply:pathlib.PosixPath
+  - output-large_batch
+  - MP
+  - Tvst-87bead1783742ebfed81f79f5ae23559.txt
+  output_file_format: null
+  pulses:
+  - arrival_time: 0.0 s
+    duration: 0.01 s
+    scale: 1.0
+  time:
+    max: 0.075 s
+    resolution: 0.00019999999999999998 s
