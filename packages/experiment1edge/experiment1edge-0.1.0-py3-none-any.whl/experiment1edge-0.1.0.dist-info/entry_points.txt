@@ -1,0 +1,2 @@
+[console_scripts]
+experiment1edge = experiment1edge.cli:main
