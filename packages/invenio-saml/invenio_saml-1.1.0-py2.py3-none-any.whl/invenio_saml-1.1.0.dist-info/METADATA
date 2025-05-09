@@ -1,0 +1,115 @@
+Metadata-Version: 2.4
+Name: invenio-saml
+Version: 1.1.0
+Summary: "Invenio module that provides SAML integration."
+Home-page: https://github.com/inveniosoftware/invenio-saml
+Author: Esteban J. Garcia Gabancho
+Author-email: info@inveniosoftware.org
+License: MIT
+Keywords: invenio SSO SAML
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.7
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: invenio-accounts<7.0.0,>=1.4.5
+Requires-Dist: uritools>=2.2.0
+Requires-Dist: python3-saml>=1.5.0
+Provides-Extra: tests
+Requires-Dist: pytest-black-ng>=0.4.0; extra == "tests"
+Requires-Dist: invenio-app<3.0.0,>=1.3.0; extra == "tests"
+Requires-Dist: invenio-mail<3.0.0,>=1.0.0; extra == "tests"
+Requires-Dist: invenio-userprofiles<5.0.0,>=1.0.0; extra == "tests"
+Requires-Dist: mock>=2.0.0; extra == "tests"
+Requires-Dist: redis>=2.10.5; extra == "tests"
+Requires-Dist: pytest-invenio<4.0.0,>=2.1.0; extra == "tests"
+Requires-Dist: pytest-freezegun>=0.2.0; extra == "tests"
+Requires-Dist: invenio-oauthclient<5.0.0,>=1.5.1; extra == "tests"
+Requires-Dist: Sphinx>=4.5.0; extra == "tests"
+Requires-Dist: invenio-db[mysql,postgresql,versioning]<3.0.0,>=1.0.9; extra == "tests"
+Requires-Dist: xmlsec<=1.3.14; extra == "tests"
+Requires-Dist: lxml<=5.2.1; extra == "tests"
+Dynamic: license-file
+
+..
+    Copyright (C) 2019 Esteban J. Garcia Gabancho.
+
+    Invenio-SAML is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+==============
+ Invenio-SAML
+==============
+
+.. image:: https://github.com/inveniosoftware/invenio-saml/workflows/CI/badge.svg
+        :target: https://github.com/inveniosoftware/invenio-saml/actions?query=workflow%3ACI
+
+.. image:: https://img.shields.io/coveralls/inveniosoftware/invenio-saml.svg
+        :target: https://coveralls.io/r/inveniosoftware/invenio-saml
+
+.. image:: https://img.shields.io/github/tag/inveniosoftware/invenio-saml.svg
+        :target: https://github.com/inveniosoftware/invenio-saml/releases
+
+.. image:: https://img.shields.io/pypi/dm/invenio-saml.svg
+        :target: https://pypi.python.org/pypi/invenio-saml
+
+.. image:: https://img.shields.io/github/license/inveniosoftware/invenio-saml.svg
+        :target: https://github.com/inveniosoftware/invenio-saml/blob/master/LICENSE
+
+Invenio module that provides SAML integration.
+
+TODO: Please provide feature overview of module
+
+Further documentation is available on
+https://invenio-saml.readthedocs.io/
+
+..
+    Copyright (C) 2021 CERN.
+    Copyright (C) 2019-2024 Esteban J. Garcia Gabancho.
+    Copyright (C) 2024 Graz University of Technology.
+
+    Invenio-SAML is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+Changes
+=======
+
+
+Version 1.1.0 (release 2025-05-08)
+- updates version requirements to support newer invenio module versions
+- handlers: allow user lookup customizing in factory
+- profile: add affiliations profile value
+- adds test version restrictions to minimize xmlsec issues
+
+Version 1.0.1 (release 2024-11-30)
+
+- setup: change to reusable workflows
+- setup: pin dependencies
+- docs: explicitly add python requirements
+
+Version 1.0.0 (released 2024-04-10)
+
+- Initial stable release.
+
+Version 1.0.0a4 (released 2022-12-15)
+
+- Migrate Flask-SSO-SAML code #31
+- Check before linking user #35
+- Add translations tests #36
+
+Version 1.0.0a2 (released 2022-09-12)
+
+- Add auto_confirm, confirm user email address
+
+Version 1.0.0a1 (released 2021-07-15)
+
+- Marking strings for translation
+- Adds german translation
+
+Version 1.0.0a0 (released 2021-05-27)
+
+- Module refactoring.
+
+Version 0.1.0 (released TBD)
+
+- Initial public release.
