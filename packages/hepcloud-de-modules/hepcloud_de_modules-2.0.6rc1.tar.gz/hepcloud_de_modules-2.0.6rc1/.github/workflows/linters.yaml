@@ -1,0 +1,222 @@
+# SPDX-FileCopyrightText: 2017 Fermi Research Alliance, LLC
+# SPDX-License-Identifier: Apache-2.0
+
+---
+name: Linters
+on:
+  push:
+    branches:
+      - "**" # matches every branch
+      - "!gh-pages" # excludes gh-pages branch
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  run_flake8:
+    name: Run flake8 against code tree
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout DE Modules
+        uses: actions/checkout@v4
+        with:
+          path: decisionengine_modules
+
+      - name: checkout DE Framework
+        uses: actions/checkout@v4
+        with:
+          path: decisionengine
+          repository: HEPCloud/decisionengine
+
+      - name: checkout GlideinWMS for python3
+        uses: actions/checkout@v4
+        with:
+          path: glideinwms
+          repository: glideinWMS/glideinwms
+          # ref: master
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          architecture: "x64"
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          # This path is specific to Ubuntu
+          path: ~/.cache/pip
+          # Look to see if there is a cache hit for the corresponding requirements file
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+            ${{ runner.os }}-
+
+      - name: Note Python version/implementation
+        run: |
+          which python3
+          python3 -c 'import sys; print(sys.version)'
+          python3 -c 'import platform; print(platform.python_implementation())'
+          python3 -m pip cache dir
+
+      - name: Install dependencies for GlideinWMS
+        run: |
+          set -x
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade wheel setuptools setuptools-scm
+          python3 -m pip install -r ${{ github.workspace }}/glideinwms/requirements.txt
+
+      - name: Install dependencies for DE Framework
+        run: |
+          set -x
+          cd ${{ github.workspace }}/decisionengine
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade wheel
+          python3 -m pip install --upgrade pytest
+          python3 -m pip install --user Cython
+          python3 -m pip install --user numpy
+          python3 setup.py bdist_wheel
+          python3 -m pip install --user dist/decisionengine*.whl
+
+      - name: Install DE Modules dependencies
+        run: |
+          set -x
+          cd ${{ github.workspace }}/decisionengine_modules
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade pytest
+          python3 -m pip install -e .[develop] --user
+          python3 -m pip list --user
+
+      - name: Run Flake8 checks
+        env:
+          PYTHONPATH: ${{ github.workspace }}/../:${{ github.workspace }}
+        run: |
+          cd ${{ github.workspace }}/decisionengine_modules
+          python3 -m flake8
+
+  run_pylint:
+    name: Run pylint against code tree
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout DE Modules
+        uses: actions/checkout@v4
+        with:
+          path: decisionengine_modules
+
+      - name: checkout DE Framework
+        uses: actions/checkout@v4
+        with:
+          path: decisionengine
+          repository: HEPCloud/decisionengine
+
+      - name: checkout GlideinWMS for python3
+        uses: actions/checkout@v4
+        with:
+          path: glideinwms
+          repository: glideinWMS/glideinwms
+          # ref: master
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          architecture: "x64"
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          # This path is specific to Ubuntu
+          path: ~/.cache/pip
+          # Look to see if there is a cache hit for the corresponding requirements file
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+            ${{ runner.os }}-
+
+      - name: Note Python version/implementation
+        run: |
+          which python3
+          python3 -c 'import sys; print(sys.version)'
+          python3 -c 'import platform; print(platform.python_implementation())'
+          python3 -m pip cache dir
+
+      - name: Install dependencies for GlideinWMS
+        run: |
+          set -x
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade wheel
+          python3 -m pip install -r ${{ github.workspace }}/glideinwms/requirements.txt
+
+      - name: Install dependencies for DE Framework
+        run: |
+          set -x
+          cd ${{ github.workspace }}/decisionengine
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade setuptools
+          python3 -m pip install --upgrade wheel
+          python3 -m pip install --upgrade pytest
+          python3 -m pip install --user Cython
+          python3 -m pip install --user numpy
+          python3 setup.py bdist_wheel
+          python3 -m pip install --user dist/decisionengine*.whl
+
+      - name: Install DE Modules dependencies
+        run: |
+          set -x
+          cd ${{ github.workspace }}/decisionengine_modules
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade pytest
+          python3 -m pip install -e .[develop] --user
+          python3 -m pip list --user
+
+      - name: Run pylint against the code tree
+        env:
+          PYTHONPATH: ${{ github.workspace }}/decisionengine_modules/src:${{ github.workspace }}/../:${{ github.workspace }}
+        run: |
+          cd ${{ github.workspace }}/decisionengine_modules
+          pylint src/decisionengine_modules/
+
+  run_ruff:
+    name: Run Ruff against code tree
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout DE Modules
+        uses: actions/checkout@v4
+        with:
+          path: decisionengine_modules
+
+      - name: checkout DE Framework
+        uses: actions/checkout@v4
+        with:
+          path: decisionengine
+          repository: HEPCloud/decisionengine
+
+      - name: checkout GlideinWMS for python3
+        uses: actions/checkout@v4
+        with:
+          path: glideinwms
+          repository: glideinWMS/glideinwms
+          # ref: master
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          architecture: "x64"
+
+      - name: Run Ruff
+        uses: astral-sh/ruff-action@v3
+
+  license-check:
+    name: Run REUSE to check license compliance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: fsfe/reuse-action@v5

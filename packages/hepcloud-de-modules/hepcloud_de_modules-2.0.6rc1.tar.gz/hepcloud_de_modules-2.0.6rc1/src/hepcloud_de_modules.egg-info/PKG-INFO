@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: hepcloud-de-modules
+Version: 2.0.6rc1
+Home-page: http://hepcloud.fnal.gov
+Author: Fermilab
+License: Apache-2.0
+Project-URL: homepage, http://hepcloud.fnal.gov/
+Project-URL: source, https://github.com/HEPCloud/decisionengine_modules
+Project-URL: documentation, https://hepcloud.github.io/decisionengine_modules/
+Project-URL: releasenotes, https://hepcloud.github.io/decisionengine_modules/release_notes.html
+Project-URL: issues, https://github.com/HEPCloud/decisionengine_modules/issues
+Requires-Python: >3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: authlib
+Requires-Dist: bill-calculator-hep>=0.2.3
+Requires-Dist: boto3>=1.17.10
+Requires-Dist: cryptography
+Requires-Dist: gcs-oauth2-boto-plugin>=2.7
+Requires-Dist: google-api-python-client>=1.12.8
+Requires-Dist: google_auth>=1.16.0
+Requires-Dist: htcondor>=9.0.0
+Requires-Dist: numpy<2.0.0,>=1.19.5; python_version >= "3.7"
+Requires-Dist: pandas<2.0.0,>=1.5.3; python_version >= "3.7"
+Requires-Dist: pem
+Requires-Dist: PyJWT
+Requires-Dist: qcs-api-client>=0.21.1; python_version >= "3.7"
+Requires-Dist: requests>=2.14.2
+Requires-Dist: structlog>=21.1.0
+Requires-Dist: urllib3>=1.26.2
+Provides-Extra: develop
+Requires-Dist: coverage>=6.1.2; extra == "develop"
+Requires-Dist: flake8<7.0.0,>=6.0.0; extra == "develop"
+Requires-Dist: importlib_resources>=5.1.2; python_version <= "3.8" and extra == "develop"
+Requires-Dist: packaging>=20.9; extra == "develop"
+Requires-Dist: pylint>=2.7.4; extra == "develop"
+Requires-Dist: pytest<8.0,>=7.0.0; extra == "develop"
+Requires-Dist: pytest-cov>=2.11.1; extra == "develop"
+Requires-Dist: pytest-xdist[psutil]>=2.3.0; extra == "develop"
+Requires-Dist: pyyaml>=5.4.1; extra == "develop"
+Requires-Dist: reuse>=1.1.2; extra == "develop"
+Requires-Dist: sphinx>=3.5.3; extra == "develop"
+Requires-Dist: sphinx_rtd_theme>=0.5.1; extra == "develop"
+Requires-Dist: tabulate>=0.8.8; extra == "develop"
+Requires-Dist: toml>=0.10.2; extra == "develop"
+Requires-Dist: wheel>=0.36.2; extra == "develop"
+Provides-Extra: production
+Requires-Dist: hepcloud-de>=2.0; extra == "production"
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+<!--
+SPDX-FileCopyrightText: 2017 Fermi Research Alliance, LLC
+SPDX-License-Identifier: Apache-2.0
+-->
+
+# HEPCloud Decision Engine Modules
+
+![.github/workflows/unit-test.yaml](https://github.com/HEPCloud/decisionengine_modules/workflows/.github/workflows/unit-test.yaml/badge.svg)
