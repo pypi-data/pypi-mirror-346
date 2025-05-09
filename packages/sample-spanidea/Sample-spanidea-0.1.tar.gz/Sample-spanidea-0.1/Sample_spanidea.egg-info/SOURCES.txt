@@ -1,0 +1,7 @@
+setup.py
+Sample-spanidea/__init__.py
+Sample-spanidea/hello.py
+Sample_spanidea.egg-info/PKG-INFO
+Sample_spanidea.egg-info/SOURCES.txt
+Sample_spanidea.egg-info/dependency_links.txt
+Sample_spanidea.egg-info/top_level.txt
