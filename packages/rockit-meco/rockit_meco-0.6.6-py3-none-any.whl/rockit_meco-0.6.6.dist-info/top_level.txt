@@ -1,0 +1,7 @@
+Testing
+a
+artefacts
+b
+build_acados_rockit
+build_fatrop_rockit
+rockit
