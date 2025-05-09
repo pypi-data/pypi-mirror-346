@@ -1,0 +1,32 @@
+[CDF-23856] 🚶 Pydantic Group (#1560)
+
+# Description
+Toolkit: CLI for managing CDF configuration as code. The CDF resources
+are configured in YAML files that are typically checked into version
+control.
+
+Context: Up until now we have used the `cognite-sdk` data classes when
+loading these YAML files. This gives poor error messages. In addition,
+Toolkit has a few deviation from the API spec, the most common Toolkit
+always uses external IDs instead of internal IDs. We have made the
+decision to implement `pydantic` to be able to give better error
+messages to the user when they mistype their `YAML` files.
+
+Reason for size of this PR: Our Groups API has a lot of capabilities.
+
+## Changelog
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## cdf
+
+### Improved
+
+- Improved error message if group is not following the API
+specifications.
+
+## templates
+
+No changes.
