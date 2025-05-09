@@ -1,0 +1,8 @@
+subtitle_splitter_fr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+subtitle_splitter_fr/preprocessing_utils.py,sha256=772txTRtQLb1esN6YtTqotChHV5C0tTtotNRHana6fA,5645
+subtitle_splitter_fr/splitter.py,sha256=74Ir0eMnoHNbO7va4fdGrFL0T1MYnotCJKN7NkmLxIE,11488
+subtitle_splitter_fr/splitting_strategies.py,sha256=riIB9x7mT61Ro29KJqMJOlgoJ1fRr0Zvp1xSZ6jZ050,13689
+subtitle_splitter_fr-0.1.0.dist-info/METADATA,sha256=DZyVpC38aEgS_0Cm5aZ-3NiFqrN59SXk8dIThj0pRto,1930
+subtitle_splitter_fr-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+subtitle_splitter_fr-0.1.0.dist-info/top_level.txt,sha256=4aFSADV7JigPK3qYisuvw48hKB5WkXQjsTQPT5Qk8i8,21
+subtitle_splitter_fr-0.1.0.dist-info/RECORD,,
