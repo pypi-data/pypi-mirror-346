@@ -1,0 +1,3 @@
+[console_scripts]
+deduplidog=deduplidog.__main__:main
+
