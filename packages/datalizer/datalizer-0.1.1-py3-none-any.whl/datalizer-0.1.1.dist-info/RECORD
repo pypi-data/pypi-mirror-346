@@ -1,0 +1,10 @@
+datalizer/__init__.py,sha256=9Scv5p1a6SexUzxcsAS3ya_TqfIj8cJmqgk2Wz0CzCo,143
+datalizer/cleaner.py,sha256=DXA9zlpXOVkpc5vrkjVVkYqWW02f8rB2yd6u_fjDSoY,2153
+datalizer/loader.py,sha256=sSc4rmPwaTRFulqapNEBuTZJ3RDsw1OcD1bvLnfzEhA,1246
+datalizer/preprocessor.py,sha256=3Ia_pZQ8_PPtvbotsntFeojRP7zKY8Uacvt2dDb_su4,13221
+datalizer/utils.py,sha256=PnL0yo-h2BKgHx4OjRjCDipwVfQEoxMwGnXsEr05fxk,672
+datalizer-0.1.1.dist-info/licenses/LICENSE.txt,sha256=y_FX2PQd3iIErjYreUVQOyK82li-v0enxGEP8iW2IMA,1142
+datalizer-0.1.1.dist-info/METADATA,sha256=JUjKIpdIZCWI4r4qGknWQti3DnaDiRZQ_RdS34665t0,2515
+datalizer-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+datalizer-0.1.1.dist-info/top_level.txt,sha256=MPiTNVzsOoLwIlBl21IOI5TfI7bU6nQh9hXr5ujjrmk,10
+datalizer-0.1.1.dist-info/RECORD,,
