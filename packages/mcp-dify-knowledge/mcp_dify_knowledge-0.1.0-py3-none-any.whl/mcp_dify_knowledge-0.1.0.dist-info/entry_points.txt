@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-dify-knowledge = mcp_dify_knowledge:main
