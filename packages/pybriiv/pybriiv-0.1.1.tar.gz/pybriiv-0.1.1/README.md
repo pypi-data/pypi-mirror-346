@@ -1,0 +1,88 @@
+# PyBriiv
+
+A Python library for communicating with Briiv Air Purifier devices.
+
+## Installation
+
+```bash
+pip install pybriiv
+```
+
+## Usage
+
+```python
+import asyncio
+from pybriiv import BriivAPI
+
+def select_device(devices):
+    """Let the user select which device to connect to."""
+    if not devices:
+        print("No devices found.")
+        return None
+    
+    if len(devices) == 1:
+        print("Only one device found. Using it automatically.")
+        return devices[0]
+    
+    print("Please select a device:")
+    for i, device in enumerate(devices):
+        pro_status = "Pro" if device.get('is_pro') else "Standard"
+        print(f"{i+1}. {device['serial_number']} ({pro_status}) - IP: {device['host']}")
+    
+    while True:
+        try:
+            selection = int(input("Enter the number of the device to control: "))
+            if 1 <= selection <= len(devices):
+                return devices[selection-1]
+            else:
+                print(f"Please enter a number between 1 and {len(devices)}")
+        except ValueError:
+            print("Please enter a valid number")
+
+async def main():
+    # Discover devices
+    devices = await BriivAPI.discover(timeout=15)
+    print(f"Found {len(devices)} devices: {devices}")
+    
+    # Let user select which device to connect to
+    selected_device = select_device(devices)
+    if not selected_device:
+        print("No device selected. Exiting.")
+        return
+    
+    # Connect to the selected device
+    api = BriivAPI(
+        host=selected_device['host'], 
+        port=3334,  # Using standard port
+        serial_number=selected_device['serial_number']
+    )
+    
+    # Start listening for updates
+    await api.start_listening(asyncio.get_event_loop())
+    
+    # Control the device
+
+    await api.set_fan_speed(50)
+
+    await asyncio.sleep(5)
+
+    await api.set_fan_speed(0)
+    
+    # Clean up
+    await api.stop_listening()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+## Features
+
+* Device discovery via UDP
+* Power control (on/off)
+* Fan speed adjustment
+* Boost mode control
+* Real-time device state updates
+
+## License
+
+MIT
