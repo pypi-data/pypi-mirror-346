@@ -1,0 +1,18 @@
+Welcome to Continuous Fibonacci Markup Language!
+ This line has 1 space of indentation
+  This line has 2 spaces (next Fibonacci number after 1)
+   This line has 3 spaces (next Fibonacci number after 2)
+     This line has 5 spaces (next Fibonacci number after 3)
+        This line has 8 spaces (next Fibonacci number after 5)
+             This line has 13 spaces (next Fibonacci number after 8)
+                     This line has 21 spaces (next Fibonacci number after 13)
+                                  This line has 34 spaces (next Fibonacci number after 21)
+This line resets to 0 spaces
+ Now we start again with 1 space
+  And continue with 2 spaces
+   Then 3 spaces
+     Then jump to 5 spaces
+     Stay at 5 spaces (allowed to stay at same level)
+     Still at 5 spaces
+        Now jump to 8 spaces (next Fibonacci number)
+This resets to 0 again

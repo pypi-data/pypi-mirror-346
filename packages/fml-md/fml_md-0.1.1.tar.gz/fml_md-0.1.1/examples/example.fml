@@ -1,0 +1,12 @@
+Welcome to Fibonacci Markup Language!
+ This line has 1 space of indentation
+ This is also at the 1-space level
+  Here we have 2 spaces
+   Now we're at 3 spaces
+     This line jumps to 5 spaces
+        And now we're at 8 spaces
+             This impressive indentation has 13 spaces
+                     This massive indentation has 21 spaces
+This line returns to 0 spaces
+ Back to 1 space
+  And finally 2 spaces

@@ -1,0 +1,56 @@
+# The Fibonacci Gallery
+ # A demonstration of FML's mathematical harmony
+
+# Header with Fibonacci-themed styling
+The Fibonacci Spiral of Web Design
+ *Where mathematics meets aesthetics*
+  **A demonstration of the Fibonacci Markup Language**
+
+# Introduction section
+Why Fibonacci?
+ The Fibonacci sequence (0, 1, 1, 2, 3, 5, 8, 13, 21...) appears everywhere in nature.
+ From the spiral of galaxies to the arrangement of flower petals.
+  But have you ever considered using it for document formatting?
+   That's the absurd premise behind FML.
+     And yet, there's something oddly satisfying about it.
+        Don't you think?
+
+# Code demonstration
+```python
+def fibonacci(n):
+ if n <= 1:
+  return n
+ else:
+  return fibonacci(n-1) + fibonacci(n-2)
+```
+
+# Nested content with increasing indentation
+Fibonacci Nesting
+ Level 1 - One space
+  Level 2 - Two spaces
+   Level 3 - Three spaces
+     Level 5 - Five spaces
+        Level 8 - Eight spaces
+             Level 13 - Thirteen spaces
+                     Level 21 - Twenty-one spaces
+
+# A funny poem about indentation
+Ode to Indentation
+ Spaces to the left,
+ A mathematical theft,
+  Of nature's own design,
+   A sequence so divine,
+     My code now looks absurd,
+        But follows nature's word,
+             And though my colleagues stare in confusion,
+                     I've achieved Fibonacci-infused perfection.
+
+# Closing thoughts
+Conclusion
+ FML might be a joke,
+  But it's a fully functional one.
+   Try it yourself and see,
+     How mathematical constraints,
+        Can lead to unexpected creativity,
+             And perhaps a new appreciation for the humble space character.
+                     (Or drive you completely mad. Results may vary.)
