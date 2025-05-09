@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/py_adaptivecards_templating/__init__.py
+src/py_adaptivecards_templating/template_engine.py
+src/py_adaptivecards_templating.egg-info/PKG-INFO
+src/py_adaptivecards_templating.egg-info/SOURCES.txt
+src/py_adaptivecards_templating.egg-info/dependency_links.txt
+src/py_adaptivecards_templating.egg-info/requires.txt
+src/py_adaptivecards_templating.egg-info/top_level.txt
+tests/test_ac_template_expansion.py
