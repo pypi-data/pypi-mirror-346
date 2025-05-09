@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+qarsmac/__init__.py
+qarsmac/calculator.py
+qarsmac/model.py
+qarsmac/requestor.py
+qarsmac/validator.py
+qarsmac.egg-info/PKG-INFO
+qarsmac.egg-info/SOURCES.txt
+qarsmac.egg-info/dependency_links.txt
+qarsmac.egg-info/requires.txt
+qarsmac.egg-info/top_level.txt
