@@ -1,0 +1,2 @@
+[console_scripts]
+train-face = richerface.face:train_model

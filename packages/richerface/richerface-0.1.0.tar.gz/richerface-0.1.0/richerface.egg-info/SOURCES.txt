@@ -1,0 +1,10 @@
+README.txt
+setup.py
+richerface/__init__.py
+richerface/face.py
+richerface.egg-info/PKG-INFO
+richerface.egg-info/SOURCES.txt
+richerface.egg-info/dependency_links.txt
+richerface.egg-info/entry_points.txt
+richerface.egg-info/requires.txt
+richerface.egg-info/top_level.txt
