@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: orcabridge
+Version: 0.0.1
+Summary: A bridge to the orcapod
+Author-email: "Edgar Y. Walker" <eywalker@uw.edu>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/walkerlab/orcabridge
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
