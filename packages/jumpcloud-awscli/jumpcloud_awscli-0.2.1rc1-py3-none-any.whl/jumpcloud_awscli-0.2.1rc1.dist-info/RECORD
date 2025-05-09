@@ -1,0 +1,9 @@
+jumpcloud_aws_cli/__init__.py,sha256=WjwxU5C8nrKQvT55Guv3CnKHoj3IEE9v1ZRv8_cqLTE,188
+jumpcloud_aws_cli/auth.py,sha256=5aFkC0rPRehRHjeL--AGy3e989WhNG_J8LA19uB0AQM,18430
+jumpcloud_aws_cli/cli.py,sha256=hkNH8XvqpaImriXS47nPycaE_WyGboJiDK1zTVASssQ,3520
+jumpcloud_awscli-0.2.1rc1.dist-info/licenses/LICENSE,sha256=ye7lF_GAUwBk_y8b5aY6P09uUWsdytlS55OukFWkISU,1116
+jumpcloud_awscli-0.2.1rc1.dist-info/METADATA,sha256=oa8o1XL2aeDdbkJp1ArsoQJXz_orj62qNWG5lTbPAvk,5212
+jumpcloud_awscli-0.2.1rc1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+jumpcloud_awscli-0.2.1rc1.dist-info/entry_points.txt,sha256=5HtabWSbKqQTGqytykLOnKi-nvo1AuryuIbjMAsBqPI,64
+jumpcloud_awscli-0.2.1rc1.dist-info/top_level.txt,sha256=-N4v9UI5BmGH16hEVKLu6ffy4LtL2458ATPxoA0cGTQ,18
+jumpcloud_awscli-0.2.1rc1.dist-info/RECORD,,
