@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+alli_googledrive.egg-info/PKG-INFO
+alli_googledrive.egg-info/SOURCES.txt
+alli_googledrive.egg-info/dependency_links.txt
+alli_googledrive.egg-info/requires.txt
+alli_googledrive.egg-info/top_level.txt
+shipyard_googledrive/__init__.py
+shipyard_googledrive/drive_utils.py
+shipyard_googledrive/googledrive.py
+shipyard_googledrive/cli/__init__.py
+shipyard_googledrive/cli/authtest.py
+shipyard_googledrive/cli/download.py
+shipyard_googledrive/cli/upload.py
+tests/test_auth.py
+tests/test_integration.py
+tests/test_oauth_access.py
