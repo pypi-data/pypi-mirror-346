@@ -1,0 +1,32 @@
+# 注意: 以下所有依赖已随fastapi-backend-template脚手架工具一起安装
+# 本文件主要用于:
+#  1. Docker构建时使用
+#  2. 作为项目依赖参考文档
+#  3. 如需在虚拟环境中单独安装
+
+# Web框架
+fastapi>=0.104.1
+uvicorn>=0.24.0
+python-decouple>=3.8
+pydantic>=2.5.2
+pydantic-settings>=2.1.0
+email-validator>=2.1.0
+
+# 数据库
+sqlalchemy>=2.0.23
+alembic>=1.12.1
+aiomysql>=0.2.0
+cryptography>=41.0.5
+
+# 安全
+python-jose>=3.3.0
+passlib>=1.7.4
+bcrypt>=4.0.1
+argon2-cffi>=23.1.0
+
+# 日志
+loguru>=0.7.2
+
+# 工具
+python-multipart>=0.0.6
+rich>=13.6.0
