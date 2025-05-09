@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pypccl"
+version = "0.0.0.dev1"
+description = "Best collective comms library in the solar system"
+readme = "README.md"
+authors = [
+    {name = "Michael Keiblinger", email = "mike@primeintellect.ai"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/PrimeIntellect-ai/pccl"
+"Bug Tracker" = "https://github.com/PrimeIntellect-ai/pccl/issues"
+
+[tool.setuptools]
+packages = ["pypccl"]
+

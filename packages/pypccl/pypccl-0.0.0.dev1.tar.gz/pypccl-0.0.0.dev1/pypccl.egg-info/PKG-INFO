@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pypccl
+Version: 0.0.0.dev1
+Summary: Best collective comms library in the solar system
+Author-email: Michael Keiblinger <mike@primeintellect.ai>
+License: MIT
+Project-URL: Homepage, https://github.com/PrimeIntellect-ai/pccl
+Project-URL: Bug Tracker, https://github.com/PrimeIntellect-ai/pccl/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# PCCL
+
+Soon hehe
+
