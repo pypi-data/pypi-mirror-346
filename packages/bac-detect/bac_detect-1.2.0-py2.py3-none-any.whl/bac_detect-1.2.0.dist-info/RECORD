@@ -1,0 +1,9 @@
+bac_detect/__init__.py,sha256=m8oDZM_nln9VgBLgBE81oiR8QKW2Do7FAbQY-7Ax2J0,79
+bac_detect/backdoor_detector.py,sha256=zqPOVekcWeZfAxxW5HtNYBHW-hv6JdKiddx-9eue51Q,45026
+bac_detect/patterns.json,sha256=vqbv-GV55cxTitMZ7FxRc_F3RAJBmZY9lNHFl9_XOXc,57275
+bac_detect-1.2.0.dist-info/LICENSE,sha256=gOmEV4qSsZJ5hN_Iwz8-Ufejmpx81iq0L7ZA9fxIrtY,1083
+bac_detect-1.2.0.dist-info/METADATA,sha256=oTDIkEWr-ZUtVi9yju5tzq1wrBt3psrt8v8iHLVvWa8,6143
+bac_detect-1.2.0.dist-info/WHEEL,sha256=XRxW4r1PNiVhMpP4bT9oWtu3HyndxpJ84SkubFgzp_Y,109
+bac_detect-1.2.0.dist-info/entry_points.txt,sha256=FP2pK1FR3aAJnoi6K32UUHR1BgIcg_uDZ282-f97AAc,65
+bac_detect-1.2.0.dist-info/top_level.txt,sha256=BlwU_Yc2PlY4_BlcTJEBKucxnNxAtHnHQydSSJez3cM,11
+bac_detect-1.2.0.dist-info/RECORD,,
