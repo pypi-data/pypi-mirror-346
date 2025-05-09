@@ -1,0 +1,2 @@
+[console_scripts]
+lpjg2nc = lpjg2nc:main
