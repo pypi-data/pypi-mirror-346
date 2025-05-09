@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/example_package_nontawach/__init__.py
+src/example_package_nontawach/example.py
+src/example_package_nontawach.egg-info/PKG-INFO
+src/example_package_nontawach.egg-info/SOURCES.txt
+src/example_package_nontawach.egg-info/dependency_links.txt
+src/example_package_nontawach.egg-info/top_level.txt
