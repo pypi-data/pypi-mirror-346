@@ -1,0 +1,129 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      tal:omit-tag=""
+      i18n:domain="collective.schedulefield"
+>
+
+  <script src="++resource++jquery.maskedinput.min.js"
+          type="text/javascript"
+  ></script>
+  <script src="++resource++schedulemask.js"
+          type="text/javascript"
+  ></script>
+
+  <div id=""
+       tal:attributes="
+         id view/id;
+       "
+  >
+    <tal:for tal:repeat="day view/days">
+      <tal:block tal:define="
+                   key python:day[0];
+                   name python:day[1];
+                 ">
+        <span class=""
+              tal:content="python:name"
+              tal:attributes="
+                class string:${view/klass}-day ${view/klass}-${day};
+              "
+        ></span>
+        <br />
+
+        <tal:for tal:repeat="day_section view/day_sections">
+          <input class=""
+                 id=""
+                 accesskey=""
+                 alt=""
+                 disabled
+                 lang=""
+                 maxlength="5"
+                 name=""
+                 readonly
+                 size="6"
+                 style=""
+                 tabindex=""
+                 title=""
+                 type="text"
+                 value=""
+                 tal:attributes="
+                   id string:${view/id}.${key}.${day_section};
+                   name string:${view/name}.${key}.${day_section};
+                   class string:schedule-mask-widget ${view/klass} ${day_section};
+                   style view/style;
+                   title view/title;
+                   lang view/lang;
+                   onclick view/onclick;
+                   ondblclick view/ondblclick;
+                   onmousedown view/onmousedown;
+                   onmouseup view/onmouseup;
+                   onmouseover view/onmouseover;
+                   onmousemove view/onmousemove;
+                   onmouseout view/onmouseout;
+                   onkeypress view/onkeypress;
+                   onkeydown view/onkeydown;
+                   onkeyup view/onkeyup;
+                   value python:view.get_hour_value(key, day_section);
+                   disabled view/disabled;
+                   tabindex view/tabindex;
+                   onfocus view/onfocus;
+                   onblur view/onblur;
+                   onchange view/onchange;
+                   readonly view/readonly;
+                   alt view/alt;
+                   accesskey view/accesskey;
+                   onselect view/onselect;
+                 "
+          />
+
+        </tal:for>
+        <input class=""
+               id=""
+               accesskey=""
+               alt=""
+               disabled
+               lang=""
+               maxlength=""
+               name=""
+               readonly
+               size=""
+               style=""
+               tabindex=""
+               title=""
+               type="text"
+               value=""
+               tal:attributes="
+                 id string:${view/id}.${key}.comment;
+                 name string:${view/name}.${key}.comment;
+                 class view/klass;
+                 style view/style;
+                 title view/title;
+                 lang view/lang;
+                 onclick view/onclick;
+                 ondblclick view/ondblclick;
+                 onmousedown view/onmousedown;
+                 onmouseup view/onmouseup;
+                 onmouseover view/onmouseover;
+                 onmousemove view/onmousemove;
+                 onmouseout view/onmouseout;
+                 onkeypress view/onkeypress;
+                 onkeydown view/onkeydown;
+                 onkeyup view/onkeyup;
+                 value python:view.get_comment(key);
+                 disabled view/disabled;
+                 tabindex view/tabindex;
+                 onfocus view/onfocus;
+                 onblur view/onblur;
+                 onchange view/onchange;
+                 readonly view/readonly;
+                 alt view/alt;
+                 accesskey view/accesskey;
+                 onselect view/onselect;
+                 size view/size;
+                 maxlength view/maxlength;
+               "
+        />
+        <br />
+      </tal:block>
+    </tal:for>
+  </div>
+</html>

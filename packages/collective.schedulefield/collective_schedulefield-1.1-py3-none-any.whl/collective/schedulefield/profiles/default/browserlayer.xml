@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layers>
+  <layer interface="collective.schedulefield.interfaces.IBrowserLayer"
+         name="collective.schedulefield"
+  />
+</layers>

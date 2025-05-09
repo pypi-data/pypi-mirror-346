@@ -1,0 +1,137 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"POT-Creation-Date: 2025-05-08 12:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language-Code: fr\n"
+"Language-Name: French\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.schedulefield\n"
+"Language: \n"
+"X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
+
+#: ../configure.zcml:144
+msgid "Adds exceptional closure field"
+msgstr "Ajoute le champ de fermeture exceptionnelle"
+
+#: ../configure.zcml:135
+msgid "Adds multi schedule field"
+msgstr "Ajoute le champ d'horaire multiple"
+
+#: ../configure.zcml:126
+msgid "Adds schedule field"
+msgstr "Ajoute le champ d'horaire"
+
+#: ../behavior.py:161
+msgid "Date"
+msgstr "Date"
+
+#: ../behavior.py:90
+msgid "Dates"
+msgstr "Dates"
+
+#: ../behavior.py:67
+msgid "End date"
+msgstr "Date de fin"
+
+#: ../behavior.py:190
+#: ../exceptionalclosure_display.pt:7
+msgid "Exceptional closure"
+msgstr "Fermeture exceptionnelle"
+
+#: ../configure.zcml:144
+msgid "Exceptional closure Content"
+msgstr "Type de contenu avec fermeture exceptionnelle"
+
+#: ../schedule.py:89
+msgid "Friday"
+msgstr "Vendredi"
+
+#: ../schedulewithtitle_display.pt:12
+msgid "From"
+msgstr "du"
+
+#: ../configure.zcml:24
+msgid "Installs the collective.schedulefield add-on."
+msgstr "Installe le module collective.schedulefield."
+
+#: ../schedule.py:85
+msgid "Monday"
+msgstr "Lundi"
+
+#: ../behavior.py:127
+msgid "Multi Schedule"
+msgstr "Horaire multiple"
+
+#: ../configure.zcml:135
+msgid "Multi scheduled Content"
+msgstr "Type de contenu avec horaires multiples"
+
+#: ../schedule.py:67
+msgid "Not a valid time format."
+msgstr "Le format d'heure est incorrect"
+
+#: ../exceptionalclosure_display.pt:9
+#: ../schedulewithtitle_display.pt:18
+msgid "On"
+msgstr "Le"
+
+#: ../schedule.py:90
+msgid "Saturday"
+msgstr "Samedi"
+
+#: ../behavior.py:36
+#: ../exceptionalclosure_content_viewlet.pt:10
+#: ../multi_scheduled_content_viewlet.pt:10
+msgid "Schedule"
+msgstr "Horaire"
+
+#: ../configure.zcml:126
+msgid "Scheduled Content"
+msgstr ""
+
+#: ../behavior.py:63
+msgid "Start date"
+msgstr "Date de début"
+
+#: ../schedule.py:91
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: ../schedule.py:88
+msgid "Thursday"
+msgstr "Jeudi"
+
+#: ../behavior.py:86
+msgid "Title"
+msgstr "Titre"
+
+#: ../schedulewithtitle_display.pt:14
+msgid "To"
+msgstr "Au"
+
+#: ../schedule.py:86
+msgid "Tuesday"
+msgstr "Mardi"
+
+#: ../configure.zcml:32
+msgid "Uninstalls the collective.schedulefield add-on"
+msgstr "Désinstalle le module collective.schedulefield"
+
+#: ../schedule.py:87
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#: ../configure.zcml:24
+msgid "collective.schedulefield"
+msgstr "collective.schedulefield"
+
+#: ../configure.zcml:32
+msgid "collective.schedulefield (uninstall)"
+msgstr "collective.schedulefield (désinstaller)"

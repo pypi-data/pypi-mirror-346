@@ -1,0 +1,138 @@
+#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+#SOME DESCRIPTIVE TITLE.
+#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-05-08 12:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.schedulefield\n"
+
+#: ../configure.zcml:144
+msgid "Adds exceptional closure field"
+msgstr ""
+
+#: ../configure.zcml:135
+msgid "Adds multi schedule field"
+msgstr ""
+
+#: ../configure.zcml:126
+msgid "Adds schedule field"
+msgstr ""
+
+#: ../behavior.py:161
+msgid "Date"
+msgstr ""
+
+#: ../behavior.py:90
+msgid "Dates"
+msgstr ""
+
+#: ../behavior.py:67
+msgid "End date"
+msgstr ""
+
+#: ../behavior.py:190
+#: ../exceptionalclosure_display.pt:7
+msgid "Exceptional closure"
+msgstr ""
+
+#: ../configure.zcml:144
+msgid "Exceptional closure Content"
+msgstr ""
+
+#: ../schedule.py:89
+msgid "Friday"
+msgstr ""
+
+#: ../schedulewithtitle_display.pt:12
+msgid "From"
+msgstr ""
+
+#: ../configure.zcml:24
+msgid "Installs the collective.schedulefield add-on."
+msgstr ""
+
+#: ../schedule.py:85
+msgid "Monday"
+msgstr ""
+
+#: ../behavior.py:127
+msgid "Multi Schedule"
+msgstr ""
+
+#: ../configure.zcml:135
+msgid "Multi scheduled Content"
+msgstr ""
+
+#: ../schedule.py:67
+msgid "Not a valid time format."
+msgstr ""
+
+#: ../exceptionalclosure_display.pt:9
+#: ../schedulewithtitle_display.pt:18
+msgid "On"
+msgstr ""
+
+#: ../schedule.py:90
+msgid "Saturday"
+msgstr ""
+
+#: ../behavior.py:36
+#: ../exceptionalclosure_content_viewlet.pt:10
+#: ../multi_scheduled_content_viewlet.pt:10
+msgid "Schedule"
+msgstr ""
+
+#: ../configure.zcml:126
+msgid "Scheduled Content"
+msgstr ""
+
+#: ../behavior.py:63
+msgid "Start date"
+msgstr ""
+
+#: ../schedule.py:91
+msgid "Sunday"
+msgstr ""
+
+#: ../schedule.py:88
+msgid "Thursday"
+msgstr ""
+
+#: ../behavior.py:86
+msgid "Title"
+msgstr ""
+
+#: ../schedulewithtitle_display.pt:14
+msgid "To"
+msgstr ""
+
+#: ../schedule.py:86
+msgid "Tuesday"
+msgstr ""
+
+#: ../configure.zcml:32
+msgid "Uninstalls the collective.schedulefield add-on"
+msgstr ""
+
+#: ../schedule.py:87
+msgid "Wednesday"
+msgstr ""
+
+#: ../configure.zcml:24
+msgid "collective.schedulefield"
+msgstr ""
+
+#: ../configure.zcml:32
+msgid "collective.schedulefield (uninstall)"
+msgstr ""
