@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: dhx-utils-lib
+Version: 1.7.9b306
+Summary: DataHex Utility Library to help with building AWS SAM based application.
+Home-page: https://github.com/rozettatechnology/datahex-utils
+Author: RoZetta Technology
+Author-email: developers@rozettatechnology.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Requires-Dist: dnspython (>=2.1.0)
+Requires-Dist: retrying (<2.0,>=1.3.3)
+Requires-Dist: simplejson (>=3.17.2)
+Requires-Dist: requests (<3.0,>=2.4.2)
+Requires-Dist: requests-toolbelt (~=0.9.1)
+Requires-Dist: sortedcontainers (<3.0.0,>=2.4.0)
+Description-Content-Type: text/markdown
+
+# DataHex Utility Library
+
+The DataHex Utility library is a collection of utilities functions and classes that are useful for DataHex
+applications. There are various reusable modules in this library so please refer to each section for the
+respective usage guide.
+
+## Installation 
+
+This library is published to RZT Nexus and can be installed by using the command:
+
+```
+pip install dhx-utils-lib
+```
+
+# Catalog Service module
+
+The catalog service module contains various handy functions to call the private catalog API for common
+scenarios.
+
+```
+from dhx_utils.catalog import CatalogService
+CatalogService(catalog_api=api).get_sub_data_asset_locations('83b294680f7a11ec9611a6f3ae174d1e', '2020-01-01', '2021-09-01', {'exchange_id': '151'})
+
+[('151#2020-03-02', 's3://datalake-storage-dhx-dev-rozettatech/hl/assest_partitioned/D151/2020/03/02/'), ('151#2020-02-02', 's3://datalake-storage-dhx-dev-rozettatech/hl/assest_partitioned/D151/2020/02/02/')]
+```
+
+or let the util lib to build the catalog api path by using the env
+```
+from dhx_utils.catalog import CatalogService
+#env could be dev, qa, prod, the catalog serveris would use url 'https://catalog.{env}.datahex.internal/dev'
+_env = "dev"
+CatalogService(env=_env).get_sub_data_asset_locations('83b294680f7a11ec9611a6f3ae174d1e', '2020-01-01', '2021-09-01', {'exchange_id': '151'})
+
+[('151#2020-03-02', 's3://datalake-storage-dhx-dev-rozettatech/hl/assest_partitioned/D151/2020/03/02/'), ('151#2020-02-02', 's3://datalake-storage-dhx-dev-rozettatech/hl/assest_partitioned/D151/2020/02/02/')]
+```                    
