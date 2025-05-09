@@ -1,0 +1,2 @@
+[console_scripts]
+report = report_of_monaco_2018.main:main
