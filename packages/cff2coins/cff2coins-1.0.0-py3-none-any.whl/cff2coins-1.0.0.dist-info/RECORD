@@ -1,0 +1,11 @@
+cff2coins/CITATION.cff,sha256=JMTOG5uILkuOUVgfIyayxRH5drA9Xml_LhB9Sws8_M8,1156
+cff2coins/__init__.py,sha256=SS4YAXJj9aDlZupnL_i9BdZ7WO82xOBSiZPMAZQCtgY,147
+cff2coins/main.py,sha256=-GqoftNECZBtC8F82KWJrdSD05BcKBrrL0ElHEEUHyk,36
+cff2coins/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cff2coins/models/cff_coin_span.py,sha256=OrvrOiHurg2unZHxD6YvmpNB5xaf7ZomrscItJ08k6w,15365
+cff2coins/models/cff_coin_span_json_decoder.py,sha256=ND8tyAXRWmwHu1qQGrE75gkP6YabS_HUOy8Vzqefu3U,615
+cff2coins/models/cff_coin_span_json_encoder.py,sha256=PABKC8_PKJ92gP_V-JCi7WPqncvuiqp-w26IebJ4hq4,266
+cff2coins-1.0.0.dist-info/METADATA,sha256=rEh7BsG5jr_aplnD-wsJPFQbeG7yjIMXJa91IPLoeqs,5461
+cff2coins-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cff2coins-1.0.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cff2coins-1.0.0.dist-info/RECORD,,
