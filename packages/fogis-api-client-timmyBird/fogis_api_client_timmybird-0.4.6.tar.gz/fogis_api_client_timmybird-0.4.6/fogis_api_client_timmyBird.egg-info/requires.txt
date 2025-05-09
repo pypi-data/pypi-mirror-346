@@ -1,0 +1,15 @@
+requests
+beautifulsoup4
+flask
+apispec>=6.0.0
+flask-swagger-ui
+marshmallow>=3.26.0
+psutil
+jsonschema>=4.17.3
+
+[dev]
+pytest
+pytest-mock
+pytest-cov
+flake8
+flask-cors
