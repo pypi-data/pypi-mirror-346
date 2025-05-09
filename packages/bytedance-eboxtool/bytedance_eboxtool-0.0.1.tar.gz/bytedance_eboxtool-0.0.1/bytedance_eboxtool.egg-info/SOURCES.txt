@@ -1,0 +1,6 @@
+README.md
+setup.py
+bytedance_eboxtool.egg-info/PKG-INFO
+bytedance_eboxtool.egg-info/SOURCES.txt
+bytedance_eboxtool.egg-info/dependency_links.txt
+bytedance_eboxtool.egg-info/top_level.txt
