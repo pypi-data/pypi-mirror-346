@@ -1,0 +1,10 @@
+mixin_client/__init__.py,sha256=v4tW03nLheZcebgBlqcUXFWSGlzOiOn2xhXHDBMglc4,321
+mixin_client/auth.py,sha256=u07XBNfZmwhS6slS-l8MyvuELw_jFNz5vTX1ru7artM,3704
+mixin_client/client.py,sha256=kGVpsVT8aSKANpW_daQ2uwPZMOxghSdiNx7M9qoVr1E,6723
+mixin_client/config.py,sha256=-ChtaU5yIsYlLt0lLHpNwMbWs9O5jO_PcTgfNvri9YA,2712
+mixin_client/http.py,sha256=9XgmzGIxqDYBqR85lXE3dqM9SBcz7xHjyVWnGolApDI,8294
+mixin_client/models.py,sha256=w2AWCe5XaE5MZuad7s1CqoQWIZRAX3bISFndWjs5whk,1974
+mixin_client-0.2.0.dist-info/METADATA,sha256=xI-_X4PE3NdshKjSu67f1m-2CBNHSO0WDi0e_dWMH7A,2873
+mixin_client-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mixin_client-0.2.0.dist-info/licenses/LICENSE,sha256=FyuBsNr3YLXHPRQfWIpCAC4brUeSdYelr01V-Fkog8U,1066
+mixin_client-0.2.0.dist-info/RECORD,,
