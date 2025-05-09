@@ -1,0 +1,11 @@
+shipyard_googledrive/__init__.py,sha256=7gIJ8w4SDTY0PhtSpfDOueHpT2pXoqVnZmEmf8QxYjM,43
+shipyard_googledrive/drive_utils.py,sha256=MER8y0DCJRKsVPfPLrbaVBlJRX8G3ISwWYRR2ADLo8Q,15686
+shipyard_googledrive/googledrive.py,sha256=e7Zn9tllcBTReEexemRfZE4ldbwyPX--SPEm_csu-6w,10703
+shipyard_googledrive/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shipyard_googledrive/cli/authtest.py,sha256=mEDnGecmTScLptE0_kN7CaysNrSBFtwF7e3luOt3RSY,593
+shipyard_googledrive/cli/download.py,sha256=1m4k3fSLl0yaBr7gQg6K-gPMe1xuqOCYcR0TeHadtuc,4577
+shipyard_googledrive/cli/upload.py,sha256=QuMCW0TvoC7zAGPc5A5skB70WPkpRnDKZ1yVczJN0PE,3622
+alli_googledrive-0.1.0a0.dist-info/METADATA,sha256=-mhCpZTqxrf3NNQ7hHFq9f0gq6IAwFxqB4QsF5KAbQ8,406
+alli_googledrive-0.1.0a0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+alli_googledrive-0.1.0a0.dist-info/top_level.txt,sha256=V5HV-RNdpfoMiqYkPSliLB57g7kEp98P1e46naxbQdQ,21
+alli_googledrive-0.1.0a0.dist-info/RECORD,,
