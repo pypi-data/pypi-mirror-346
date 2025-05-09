@@ -1,0 +1,3 @@
+[console_scripts]
+movie-frame-extracting = movie_frame_extractor_xethhung12.main:cmd
+movie-frame-info = movie_frame_extractor_xethhung12.getInfo:cmd
