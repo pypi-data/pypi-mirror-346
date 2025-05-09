@@ -1,0 +1,7 @@
+.DS_Store
+.vscode/
+*.code-workspace
+dist/
+build/
+*.egg-info
+tests/
