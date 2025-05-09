@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: mcp-table-editor
+Version: 0.1.1
+Summary: Add your description here
+License: Apache-2.0
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: python-ulid>=3.0.0
+
+# mcp-table-edit
+Easy-to-use table editing MCP server for LLM
+
+Under development
+
+## Try to 
+```bash
+npx @modelcontextprotocol/inspector node build/index.js
+```
