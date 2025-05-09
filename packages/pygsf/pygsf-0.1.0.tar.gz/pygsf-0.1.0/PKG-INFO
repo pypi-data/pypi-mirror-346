@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: pygsf
+Version: 0.1.0
+Summary: jhlfund's anti-dumbness hallucination
+Project-URL: Homepage, https://github.com/QIN2DIM/pygsf
+Project-URL: Documentation, https://github.com/QIN2DIM/pygsf
+Project-URL: Repository, https://github.com/QIN2DIM/pygsf.git
+Project-URL: Issues, https://github.com/QIN2DIM/pygsf/issues
+Project-URL: Changelog, https://github.com/QIN2DIM/pygsf/blob/master/CHANGELOG.md
+Author-email: jhlfund <service@jhlfund.com>, QIN2DIM <yaoqinse@gmail.com>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE
+Keywords: jhlfund,pygsf
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Software Development
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# pygsf
+
+jhlfund's anti-dumbness hallucination
+安全兜底：避免模型幻觉借用开源污染依赖

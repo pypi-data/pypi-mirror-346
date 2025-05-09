@@ -1,0 +1,55 @@
+[project]
+name = "pygsf"
+version = "0.1.0"
+dependencies = []
+requires-python = ">=3.12"
+authors = [
+    { name = "jhlfund", email = "service@jhlfund.com" },
+    { name = "QIN2DIM", email = "yaoqinse@gmail.com" }
+]
+description = "jhlfund's anti-dumbness hallucination"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+keywords = ["pygsf","jhlfund"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Software Development",
+]
+
+[project.urls]
+Homepage = "https://github.com/QIN2DIM/pygsf"
+Documentation = "https://github.com/QIN2DIM/pygsf"
+Repository = "https://github.com/QIN2DIM/pygsf.git"
+Issues = "https://github.com/QIN2DIM/pygsf/issues"
+Changelog = "https://github.com/QIN2DIM/pygsf/blob/master/CHANGELOG.md"
+
+
+# https://packaging.python.org/en/latest/key_projects/#hatch
+# https://hatch.pypa.io/latest/config/build/#build-system
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "pep440"
+bump = true
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "uv-dynamic-versioning>=0.8.2",
+]
