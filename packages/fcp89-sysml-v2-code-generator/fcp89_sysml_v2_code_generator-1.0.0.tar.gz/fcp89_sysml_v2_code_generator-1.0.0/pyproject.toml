@@ -1,0 +1,64 @@
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#writing-pyproject-toml
+# https://python-poetry.org/docs/pyproject/
+
+[tool.poetry]
+name = "fcp89-sysml-v2-code-generator"
+version = "1.0.0"
+description = "Prototype for code generation from SysML v2."
+authors = []
+readme = "README.md"
+license = "MIT-0"
+
+repository = "https://gitlab.com/fcp89/sysml-v2-code-generator"
+keywords = ["SysML", "SysML v2", "MBSE", "Code Generation"]
+
+packages = [
+    { include = "sysml_code_generator" },
+]
+
+[tool.poetry.scripts]
+sysml-code-generator = "sysml_code_generator.application:main"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+jinja2 = "^3.1.6"
+requests = "^2.32.3"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.2.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "fcp89-sysml-v2-code-generator"
+requires-python = ">= 3.9"
+description = "Prototype for code generation from SysML v2."
+readme = "README.md"
+version = "1.0.0"
+license = "MIT-0"
+license-files = ["LICENSE"]
+keywords = ["SysML", "SysML v2", "MBSE", "Code Generation"]
+dependencies = [
+    "requests",
+    "jinja2",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Code Generators",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+"Repository" = "https://gitlab.com/fcp89/sysml-v2-code-generator"
+"Changelog" = "https://gitlab.com/fcp89/sysml-v2-code-generator/-/blob/main/CHANGELOG.md"
