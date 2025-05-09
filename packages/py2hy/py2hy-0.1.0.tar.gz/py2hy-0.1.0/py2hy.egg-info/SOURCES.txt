@@ -1,0 +1,11 @@
+README.rst
+setup.py
+py2hy/__init__.py
+py2hy/__main__.py
+py2hy/cli.hy
+py2hy/translate.hy
+py2hy.egg-info/PKG-INFO
+py2hy.egg-info/SOURCES.txt
+py2hy.egg-info/dependency_links.txt
+py2hy.egg-info/requires.txt
+py2hy.egg-info/top_level.txt
