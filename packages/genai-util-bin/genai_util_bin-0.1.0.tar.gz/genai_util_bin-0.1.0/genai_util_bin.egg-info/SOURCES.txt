@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+gantrainer/__init__.py
+gantrainer/train.py
+genai_util_bin.egg-info/PKG-INFO
+genai_util_bin.egg-info/SOURCES.txt
+genai_util_bin.egg-info/dependency_links.txt
+genai_util_bin.egg-info/entry_points.txt
+genai_util_bin.egg-info/requires.txt
+genai_util_bin.egg-info/top_level.txt

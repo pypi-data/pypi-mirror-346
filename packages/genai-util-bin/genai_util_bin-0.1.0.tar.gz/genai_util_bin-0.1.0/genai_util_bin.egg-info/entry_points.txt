@@ -1,0 +1,2 @@
+[console_scripts]
+gantrainer = scripts.run_gan:main

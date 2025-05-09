@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: genai-util-bin
+Version: 0.1.0
+Summary: A simple GAN trainer on MNIST
+Author-email: bored_coder69 <noneofyourbusiness@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+
+# GANTrainer
+
+Train a simple GAN on the MNIST dataset using PyTorch.  
+Run with:
+
+gantrainer
