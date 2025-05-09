@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: copr_gui
+Version: 0.1.8
+Summary: Copr package build gui tools
+Home-page: https://github.com/huakim/python-copr_gui
+License: GPLv3
+Requires-Dist: copr
+Requires-Dist: bidict
+Requires-Dist: json5
