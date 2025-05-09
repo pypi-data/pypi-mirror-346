@@ -1,0 +1,7 @@
+matplotlib
+pre-commit
+pytest
+pytest-cov
+scikit-learn
+statsmodels
+utilsforecast
