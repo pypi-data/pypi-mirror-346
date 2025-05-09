@@ -1,0 +1,11 @@
+lexoffice_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lexoffice_client/client.py,sha256=MFvUWqUzpN7nlq20Lw3Os7-BEUwlL5w26r-3jlrCvps,4170
+lexoffice_client/contact.py,sha256=5YUga8RCeVBBYsxh1KgHo6Xdy7Xi0ShdrkFmI72bxQ8,1959
+lexoffice_client/voucher.py,sha256=rLWmINAslCCoAqstI6A4PpBnpjPbw-2FLHPAsbp6wiA,2138
+lexoffice_client-0.0.2.dist-info/licenses/LICENSE,sha256=n4CG4sM0kgLPdRuDoeq_l-oyOO0fQQRHG1ZB8AlpwxI,1070
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_lexoffice_client.py,sha256=jLy9jYkxzlEQpWOSA7XpfLfLI6-Gvk0_MIddonmPIpc,4823
+lexoffice_client-0.0.2.dist-info/METADATA,sha256=Ose8eRzajreQAxBPaVu87ADp15GLlb768vqGLLh4iD8,1832
+lexoffice_client-0.0.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+lexoffice_client-0.0.2.dist-info/top_level.txt,sha256=8_YYKjODNRjWdiYMBcuzYgmOERhaVVg7ORPcfjFMzyI,23
+lexoffice_client-0.0.2.dist-info/RECORD,,
