@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/rbxstats/__init__.py
+src/rbxstats/client.py
+src/rbxstats/exceptions.py
+src/rbxstats/models.py
+src/rbxstats/utils.py
+src/rbxstats.egg-info/PKG-INFO
+src/rbxstats.egg-info/SOURCES.txt
+src/rbxstats.egg-info/dependency_links.txt
+src/rbxstats.egg-info/requires.txt
+src/rbxstats.egg-info/top_level.txt
