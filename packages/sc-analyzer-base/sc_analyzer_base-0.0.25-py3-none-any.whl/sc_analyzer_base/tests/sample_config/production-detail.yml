@@ -1,0 +1,217 @@
+# 说明：如下配置的索引均从0开始计数，第1列为0、第2列为1，依此类推
+
+# 花名册配置
+manifest:
+  # 花名册文件路径
+  source_file_path: "广州分行各团队、部室成员名单.xlsx"
+  # Sheet名称
+  sheet_name: "Sheet1"
+  sheet_config:
+    # 表头行索引
+    header_row: 1
+    # 工号列索引
+    id_column: 3
+    # 姓名列索引
+    name_column: 2
+    # 所属机构列索引
+    branch_column: 1
+  # 离职人员调整表
+  leave_employee_mapping:
+    "陈驰": "李亦凡"
+    "侯玉": "李亦凡"
+    "王袭": "李亦凡"
+    "杨鸿": "李亦凡"
+    "何周晴": "毛欢"
+    "郝冲": ""
+    "唐静雯": ""
+
+  # （非息）离职人员归属机构表
+  non_interest_leave_employee_branch_mapping:
+    # 工号
+    "10358":
+      # 姓名
+      name: "唐静雯"
+      # 归属机构
+      branch: "公司业务二部"
+
+# 机构相关配置
+branch:
+  # 公共户名关键字列表
+  common_account_keyword:
+    - "公共"
+    - "虚拟"
+  # 广州分行公共名称
+  gz_common_account: "广州分行公共"
+  # 名称转换配置
+  name_mapping:
+    "广州分行": '广州分行行领导'
+    "广州分行公共": '广州分行公共'
+    "广州分行粤能支行": '粤能支行'
+    "广州粤能支行": '粤能支行'
+    '广州分行财智支行': '财智支行'
+    '广州财智支行': '财智支行'
+    '广州分行江湾支行': '江湾支行'
+    '广州江湾支行': '江湾支行'
+    '广州分行黄埔支行': '黄埔支行'
+    '广州黄埔支行': '黄埔支行'
+    '广州分行美博城支行': '东风支行'
+    '广州美博城支行': '东风支行'
+    '美博城支行': '东风支行'
+    '广州东风支行': '东风支行'
+    '广东分行自贸试验区南沙支行': '南沙支行'
+    '广东自贸试验区南沙支行': '南沙支行'
+    '自贸试验区南沙支行': '南沙支行'
+    '广州分行营业部': '分行营业部'
+    '广州分行运营管理部': '运营管理部'
+    '广州运营管理部': '运营管理部'
+    '广州分行公司业务管理部': '公司业务管理部'
+    '广州公司业务管理部': '公司业务管理部'
+    '广州分行中小企业管理部': '中小企业管理部'
+    '广州中小企业管理部': '中小企业管理部'
+    '中小企业部': '中小企业管理部'
+    '广州分行公司业务一部': '公司业务一部'
+    '广州公司业务一部': '公司业务一部'
+    '公司一部': '公司业务一部'
+    '广州分行公司业务三部': '公司业务三部'
+    '广州公司业务三部': '公司业务三部'
+    '公司三部': '公司业务三部'
+    '广州分行公司业务二部': '公司业务二部'
+    '广州公司业务二部': '公司业务二部'
+    '公司二部': '公司业务二部'
+    '广州分行授信审批部': '授信审批部'
+    '广州授信审批部': '授信审批部'
+    '广州分行人力财务部': '人力财务部'
+    '广州人力财务部': '人力财务部'
+    '广州分行计划财务部': '计划财务部'
+    '广州计划财务部': '计划财务部'
+    '广州分行零售业务管理部': '零售业务管理部'
+    '广州零售业务管理部': '零售业务管理部'
+    '广州分行风险管理部': '风险管理部'
+    '广州风险管理部': '风险管理部'
+    '广州分行综合保卫部': '综合保卫部'
+    '广州综合保卫部': '综合保卫部'
+    '广州分行法律合规部': '法律合规部'
+    '广州法律合规部': '法律合规部'
+  # 业绩归属机构列名
+  sales_performance_attribution_column_name: "业绩归属机构"
+  # 业绩归属机构配置
+  sales_performance_attribution_mapping:
+    '公司业务管理部': '分行营业部'
+    '零售业务管理部': '分行营业部'
+    '人力财务部': '分行营业部'
+    '计划财务部': '分行营业部'
+    '风险管理部': '分行营业部'
+    '授信审批部': '分行营业部'
+    '运营管理部': '分行营业部'
+    '法律合规部': '分行营业部'
+    '综合保卫部': '分行营业部'
+    '分行营业部': '分行营业部'
+    '广州分行': '广州分行行领导'
+    '广州分行公共': '广州分行公共'
+
+
+# 中小企业部
+sme:
+  # 生成的目标Excel文件存放路径
+  target_directory: "./"
+  # 目标文件名称
+  target_filename: "广州分行中小企业部考核指标统计.xlsx"
+  # 生成的Excel中按客户经理汇总的Sheet的名称
+  target_manager_summary_sheet_name: "客户经理汇总"
+  # 生成的Excel中按客户经理汇总的Sheet的名称
+  target_branch_summary_sheet_name: "机构汇总"
+
+  # 有效授信户
+  valid_credit_account:
+    # 是否启用分析，True：分析，False：不分析
+    enabled: True
+    # 业务分类类型说明
+    business_type: "有效授信户"
+    # 基金认申购明细表文件路径
+    source_file_path: "有效授信户明细表.csv"
+    sheet_config:
+      # 表头行索引
+      header_row: 0
+      # 客户经理列索引
+      manager_name_column: 25
+      # 客户名称列索引
+      client_name_column: 3
+      # 生成的Excel中有效授信客户名称的列名
+      target_client_name_column_name: "有效授信户名称"
+      # 生成的Excel中有效授信客户数量的列名
+      target_client_count_column_name: "有效授信户"
+      # 源数据导出，所有需要导出列的索引列表
+      export_column_list: [all]
+
+  # 普惠相关数据余额明细
+  inclusive_finance_balance:
+    # 是否启用分析，True：分析，False：不分析
+    enabled: True
+    # 业务分类类型说明
+    business_type: "普惠相关数据余额明细"
+    # 普惠相关数据余额明细文件路径
+    source_file_path: "普惠相关数据余额明细(支行).csv"
+    # 管理机构筛选广州分行
+    manage_branch_filter_list:
+      - "广州分行"
+    sheet_config:
+      # 表头行索引
+      header_row: 0
+      # 客户经理列索引
+      manager_name_column: 33
+      # 客户名称列索引
+      client_name_column: 4
+      # 贷款余额（折人民币）列索引
+      loan_balance_column: 18
+      # 考核口径普惠贷款列索引
+      is_inclusive_finance_column: 52
+      # 管理机构列索引
+      manage_branch_column: 63
+      # 生成的Excel中普惠贷款余额的列名
+      target_inclusive_finance_balance_column_name: "普惠贷款余额"
+      # 生成的Excel中客户名称的列名
+      target_client_name_column_name: "客户名称"
+      # 源数据导出，所有需要导出列的索引列表
+      export_column_list: [all]
+
+  # 有效结算户
+  valid_clearing_account:
+    # 是否启用分析，True：分析，False：不分析
+    enabled: True
+    # 业务分类类型说明
+    business_type: "对公结算户考核明细表"
+    # 普惠相关数据余额明细文件路径
+    source_file_path: "对公结算户考核明细表.xlsx"
+    # Sheet名称
+    sheet_name: "对公结算户考核明细表"
+    # 管理机构筛选广州分行
+    manage_branch_filter_list:
+      - "广州分行"
+    sheet_config:
+      # 表头行索引
+      header_row: 0
+      # 机构名称列索引
+      branch_column: 33
+      # 客户经理列索引
+      manager_name_column: 33
+      # 账户名称列索引
+      account_name_column: 4
+      # 累计日均数列索引
+      loan_balance_column: 18
+      # 考核口径普惠贷款列索引
+      is_inclusive_finance_column: 52
+      # 上级机构列索引
+      manage_branch_column: 11
+      # 生成的Excel中普惠贷款余额的列名
+      target_inclusive_finance_balance_column_name: "有效结算户"
+      # 生成的Excel中客户名称的列名
+      target_client_name_column_name: "客户名称"
+      # 源数据导出，所有需要导出列的索引列表
+      export_column_list: [all]
+
+  # 按机构汇总分析
+  branch_summary:
+    # 是否启用分析，True：分析，False：不分析
+    enabled: True
+    # 业务分类类型说明
+    business_type: "机构汇总"

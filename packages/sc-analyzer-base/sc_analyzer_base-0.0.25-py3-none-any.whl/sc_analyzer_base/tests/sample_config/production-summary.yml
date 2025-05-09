@@ -1,0 +1,107 @@
+# 说明：
+# 1. 如下配置的索引均从0开始计数，第1列为0、第2列为1，依此类推
+# 2. 如果需要配置的是列名，则此列名在Excel中必须唯一
+
+# 机构配置
+branch:
+  # 选中需要处理的机构清单
+  selected_list:
+    - "东风支行"
+    - "中小企业管理部"
+    - "人力财务部"
+    - "公司业务一部"
+    - "公司业务三部"
+    - "公司业务二部"
+    - "公司业务管理部"
+    - "分行营业部"
+    - "南沙支行"
+    - "广州分行公共"
+    - "广州分行行领导"
+    - "授信审批部"
+    - "江湾支行"
+    - "法律合规部"
+    - "粤能支行"
+    - "综合保卫部"
+    - "计划财务部"
+    - "财智支行"
+    - "运营管理部"
+    - "零售业务管理部"
+    - "风险管理部"
+    - "黄埔支行"
+
+# 差异分析（比较结果为第二个文件的数据减去第一个文件的数据）
+diff:
+  # 年初分析结果文件路径
+  yearly_base_file_path: "./20201231/广州分行考核指标统计.xlsx"
+  # 季度初分析结果文件路径
+  seasonal_base_file_path: "./20210331/广州分行考核指标统计.xlsx"
+  # 月初分析结果文件路径
+  monthly_base_file_path: "./20210430/广州分行考核指标统计.xlsx"
+  # 上周分析结果文件路径
+  last_week_file_path: "./20210531/广州分行考核指标统计.xlsx"
+  # 昨日分析结果文件路径
+  yesterday_file_path: "./20210628/广州分行考核指标统计.xlsx"
+  # 当日分析结果文件路径
+  current_day_file_path: "./20210629/广州分行考核指标统计.xlsx"
+  # 生成的目标Excel文件存放路径
+  target_directory: "./"
+  # 目标文件名称
+  target_filename: "广州分行考核指标差异分析.xlsx"
+  # 比较类型列名称
+  target_compare_type_column_name: "比较类型"
+  # 较年初分析结果列名称
+  target_yearly_base_compare_column_name: "较年初"
+  # 较季初分析结果列名称
+  target_seasonal_base_compare_column_name: "较季初"
+  # 较月初分析结果列名称
+  target_monthly_base_compare_column_name: "较月初"
+  # 较上周分析结果列名称
+  target_last_week_compare_column_name: "较上周"
+  # 较昨日分析结果列名称
+  target_yesterday_compare_column_name: "较昨日"
+  # 当前日期分析结果列名称
+  target_current_day_column_name: "时点数"
+  # 机构汇总
+  branch_summary_group_by_branch:
+    # 生成的Excel中Sheet的名称
+    target_sheet_name: "机构汇总(按机构分组)-差异分析"
+    # Sheet名称
+    sheet_name: "机构汇总"
+    # 表头行索引
+    header_row: 0
+    # 所属机构列名称（Excel中列名必须唯一）
+    branch_column_name: "所在部门"
+    # 待分析差异列名称列表（Excel中列名必须唯一）
+    diff_column_list:
+      "贷款合计": "万元"
+      "个经小计": "万元"
+      "个消小计": "万元"
+      "分期投放": "万元"
+      "信用卡发卡量": "张"
+      "信用卡收入": "元"
+      "个人业务非息收入小计": "元"
+      "财富客户数": "户"
+      "湘籍客户数": "户"
+  # 机构汇总（按指标类型分组）
+  branch_summary_group_by_item_type:
+    # 生成的Excel中Sheet的名称
+    target_sheet_name: "机构汇总(按指标类型分组)-差异分析"
+    # 指标名称列名称
+    target_compare_item_column_name: "指标名称"
+    # Sheet名称
+    sheet_name: "机构汇总"
+    # 表头行索引
+    header_row: 0
+    # 所属机构列名称（Excel中列名必须唯一）
+    branch_column_name: "所在部门"
+    # 待分析差异列名称列表（Excel中列名必须唯一）
+    diff_column_list:
+      "贷款合计": "万元"
+      "个经小计": "万元"
+      "个消小计": "万元"
+      "分期投放": "万元"
+      "信用卡发卡量": "张"
+      "信用卡收入": "元"
+      "个人业务非息收入小计": "元"
+      "财富客户数": "户"
+      "湘籍客户数": "户"
