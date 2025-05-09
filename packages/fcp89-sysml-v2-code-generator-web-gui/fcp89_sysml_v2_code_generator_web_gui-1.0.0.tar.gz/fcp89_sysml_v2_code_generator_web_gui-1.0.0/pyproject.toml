@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "fcp89-sysml-v2-code-generator-web-gui"
+version = "1.0.0"
+description = "Web GUI for the SysML v2 code generator prototype."
+readme = "README.md"
+authors = []
+
+packages = [
+    { include = "sysml_code_generator_web_gui" },
+]
+
+[tool.poetry.scripts]
+sysml-code-generator-web-gui = "sysml_code_generator_web_gui.application:main"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+flask = "^3.1.0"
+fcp89-sysml-v2-code-generator = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.2.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+
+[project]
+name = "fcp89-sysml-v2-code-generator-web-gui"
+requires-python = ">= 3.12"
+description = "Web GUI for the SysML v2 code generator prototype."
+readme = "README.md"
+version = "1.0.0"
+license = "MIT-0"
+license-files = ["LICENSE"]
+keywords = ["SysML", "SysML v2", "MBSE", "Code Generation"]
+dependencies = [
+    "flask",
+    "jinja2",
+    "fcp89-sysml-v2-code-generator",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Code Generators",
+  "License :: OSI Approved :: MIT No Attribution License (MIT-0)",
+  "Natural Language :: English",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+"Repository" = "https://gitlab.com/fcp89/sysml-v2-code-generator-web-gui"
+"Changelog" = "https://gitlab.com/fcp89/sysml-v2-code-generator-web-gui/-/blob/main/CHANGELOG.md"
+
