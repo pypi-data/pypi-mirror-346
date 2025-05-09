@@ -1,0 +1,4 @@
+requests
+
+[timescaledb]
+psycopg2-binary
