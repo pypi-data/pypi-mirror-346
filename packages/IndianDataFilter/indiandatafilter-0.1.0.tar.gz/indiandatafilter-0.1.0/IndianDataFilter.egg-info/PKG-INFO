@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: IndianDataFilter
+Version: 0.1.0
+Summary: Check if the data is from an Indian source.
+Home-page: https://github.com/sharveshsubhash/IndianDataFilter
+Author: Sharvesh Subhash
+Author-email: cod.sharvesh2002@gmail.com
+License: MIT
+Keywords: Indian source checker
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# IndianDataFilter
+
+A Python tool to check if a website is hosted from India using IP geolocation.
+
+##Installation
+
+```bash
+pip install IndianDataFilter
+```

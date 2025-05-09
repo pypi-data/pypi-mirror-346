@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+IndianDataFilter.egg-info/PKG-INFO
+IndianDataFilter.egg-info/SOURCES.txt
+IndianDataFilter.egg-info/dependency_links.txt
+IndianDataFilter.egg-info/entry_points.txt
+IndianDataFilter.egg-info/not-zip-safe
+IndianDataFilter.egg-info/requires.txt
+IndianDataFilter.egg-info/top_level.txt
