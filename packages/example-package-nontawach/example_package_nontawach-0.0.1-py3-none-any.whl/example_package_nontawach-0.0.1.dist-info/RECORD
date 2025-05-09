@@ -1,0 +1,6 @@
+example_package_nontawach/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_package_nontawach/example.py,sha256=X8MPB275LbdlIVf8Mawtah11TDi5cPI8aDrkduPD7y8,42
+example_package_nontawach-0.0.1.dist-info/METADATA,sha256=ayPu6b6-JTNsyCGFr5vOYfXQ5tnRVDhkTHbJPvdwHG4,609
+example_package_nontawach-0.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+example_package_nontawach-0.0.1.dist-info/top_level.txt,sha256=S4w6Vpq7qu4TkTzKlsPFvqDS35Mmi3nFqLijyLhE_mU,26
+example_package_nontawach-0.0.1.dist-info/RECORD,,
