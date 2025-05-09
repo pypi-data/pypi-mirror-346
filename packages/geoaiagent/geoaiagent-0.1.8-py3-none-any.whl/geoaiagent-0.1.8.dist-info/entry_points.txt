@@ -1,0 +1,2 @@
+[console_scripts]
+geoaiagent = src.geoaiagent.__main__:main
