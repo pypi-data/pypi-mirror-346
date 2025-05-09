@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: dotenv-credential-helper
+Version: 0.0.1
+Summary: Keeping credentials secure through file permissions
+Author-email: Jason Hall <jdhall75@gmail.com>
+Requires-Dist: python-dotenv
+Requires-Dist: pytest ; extra == "dev"
+Project-URL: Homepage, https://github.com/jdhall75/credentials-helper
+Provides-Extra: dev
