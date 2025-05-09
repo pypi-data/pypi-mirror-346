@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "usp-minimal"
+version = "0.1.0"
+description = "A minimal ultrasound processing package"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+  { name="Your Name", email="your.email@example.com" }
+]
+license = {text = "MIT"}
+
+[project.urls]
+"Homepage" = "https://github.com/Mart-SciecPyt/usp-minimal"
+"Documentation" = "https://usp-minimal.readthedocs.io"

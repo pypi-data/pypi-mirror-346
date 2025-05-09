@@ -1,0 +1,5 @@
+pyproject.toml
+usp_minimal.egg-info/PKG-INFO
+usp_minimal.egg-info/SOURCES.txt
+usp_minimal.egg-info/dependency_links.txt
+usp_minimal.egg-info/top_level.txt
