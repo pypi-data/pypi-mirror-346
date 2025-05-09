@@ -1,0 +1,8 @@
+bandit>=1.7.0
+pylint>=2.13.0
+esprima>=4.0.1
+tqdm>=4.0.0
+concurrent-log-handler>=0.9.20
+flask>=2.0.0
+werkzeug>=2.0.0
+numpy>=1.19.0
