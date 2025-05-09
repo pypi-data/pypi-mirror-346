@@ -1,0 +1,16 @@
+fiona
+folium
+geopandas
+ipyleaflet
+leafmap
+localtileserver
+mapclassify
+matplotlib
+numpy
+tropycal
+
+[all]
+geogo[extra]
+
+[extra]
+pandas

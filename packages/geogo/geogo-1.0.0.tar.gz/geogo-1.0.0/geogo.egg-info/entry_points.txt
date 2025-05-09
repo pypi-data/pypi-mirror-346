@@ -1,0 +1,2 @@
+[console_scripts]
+geogo = geogo.cli:main
