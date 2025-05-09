@@ -1,0 +1,11 @@
+pytest_invenio/__init__.py,sha256=_qRug4x5TnjFu12adJ9f4dRcNgMB5oYsNXoeVRQHcGc,16246
+pytest_invenio/fixtures.py,sha256=uAGAkDlF7S5l4H2Sssgy9_mwXZC8QGnrl4H2EpEk_gQ,27854
+pytest_invenio/plugin.py,sha256=RtuzqKmPiC8WlJFdyXCQiyFOniCHl6PQRq4UGwFpVSE,2925
+pytest_invenio/user.py,sha256=wSspHVFbC3kZyAMXXDs2qkOtonCBq_pF8eq0RUma44k,5170
+pytest_invenio-2.2.2.dist-info/licenses/AUTHORS.rst,sha256=TYtu3KycQ-3OC1f47l3aVMWUmfZ1DkrmpgdDcYv_ly0,341
+pytest_invenio-2.2.2.dist-info/licenses/LICENSE,sha256=tHiEB-liGVrS1Ax0f-GUNbvHG9LxZjjqYg2_4uHOd-w,1252
+pytest_invenio-2.2.2.dist-info/METADATA,sha256=6-9Po-TSrAfLrou8H6hqicciLMqikIgMtQE5yu06kGU,9406
+pytest_invenio-2.2.2.dist-info/WHEEL,sha256=oSJJyWjO7Z2XSScFQUpXG1HL-N0sFMqqeKVVbZTPkWc,109
+pytest_invenio-2.2.2.dist-info/entry_points.txt,sha256=C6N19Pvka_e9e-0GgAkQxIF6VRAj3vR1taX4xnAnLE0,43
+pytest_invenio-2.2.2.dist-info/top_level.txt,sha256=bS97kB0wTl1W5nsCSiO4Kzodmc_MhMej2VdOByCDjng,15
+pytest_invenio-2.2.2.dist-info/RECORD,,
