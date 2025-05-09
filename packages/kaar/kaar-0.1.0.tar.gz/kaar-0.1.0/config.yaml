@@ -1,0 +1,15 @@
+aws:
+  region: "us-east-1"
+  sns_topic_arn: "arn:aws:sns:us-east-1:ACCOUNT_ID:K8sGPTAlerts"
+  log_group: "/k8sgpt/notifications"
+  log_stream: "k8sgpt-bedrock-notifier"
+bedrock:
+  model: "anthropic.claude-v2:1"
+  temperature: 0.5
+  max_tokens: 50
+k8sgpt:
+  backend: "amazonbedrock"
+  explain: true
+remediation:
+  max_attempts: 5
+  retry_interval_seconds: 5
