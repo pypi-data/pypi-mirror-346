@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: klldFN
+Version: 2.8.12
+Summary: klldFN
+Home-page: https://klldFN.xyz
+Author: klld
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.5.3
+Description-Content-Type: text/markdown
+Requires-Dist: crayons
+Requires-Dist: py-cord
+Requires-Dist: FortniteAPIAsync==0.1.6
+Requires-Dist: sanic==20.12.0
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: asyncio
+Requires-Dist: jinja2
+Requires-Dist: aioxmpp>=0.13.3
+Requires-Dist: aioconsole>=0.1.15
+Requires-Dist: pytz>=2024.2
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# klldFN v2.8.9
+
+
+# Installing
+```
+pip install klldFN
+pip3 install klldFN
+```
+
+[![Downloads](https://static.pepy.tech/badge/klldFN)](https://pepy.tech/project/klldFN)
+[![Downloads](https://static.pepy.tech/badge/klldFN/month)](https://pepy.tech/project/klldFN)
+[![Downloads](https://static.pepy.tech/badge/klldFN/week)](https://pepy.tech/project/klldFN)
