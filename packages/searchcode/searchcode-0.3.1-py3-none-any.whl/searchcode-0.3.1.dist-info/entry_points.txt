@@ -1,0 +1,4 @@
+[console_scripts]
+sc=searchcode.cli:cli
+searchcode=searchcode.cli:cli
+
