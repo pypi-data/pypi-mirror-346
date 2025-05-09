@@ -1,0 +1,7 @@
+looming_authz_rule_engine/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+looming_authz_rule_engine/authz_rule_engine.py,sha256=RQEp-T96daV_H-ox7tkzduRERpJIp9YJ-cn_OFq-S9A,8170
+looming_authz_rule_engine/module_code.py,sha256=0sl4zrHlI5HlebDuD10zYF32YNjmBJml29HUXd7PbW0,952
+looming_authz_rule_engine-0.4.0.dist-info/METADATA,sha256=sNhSVPk4gkSlIPXF0kI7woEMyhc47DuQI2mXvTx6y0Y,542
+looming_authz_rule_engine-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+looming_authz_rule_engine-0.4.0.dist-info/licenses/LICENSE.MD,sha256=-_HLOJ2l_oiUjTtPd5GfV2MKs0eO-eqYu7ouRoJrjsk,15895
+looming_authz_rule_engine-0.4.0.dist-info/RECORD,,
