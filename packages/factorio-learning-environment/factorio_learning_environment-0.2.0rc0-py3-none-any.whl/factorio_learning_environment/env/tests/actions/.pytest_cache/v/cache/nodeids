@@ -1,0 +1,10 @@
+[
+  "test_can_place.py::test_can_place",
+  "test_insert_item.py::test_insert_and_fuel_furnace",
+  "test_insert_item.py::test_insert_coal_into_burner_inserter",
+  "test_insert_item.py::test_insert_coal_onto_belt",
+  "test_insert_item.py::test_insert_copper_ore_and_iron_ore_into_stone_furnace",
+  "test_insert_item.py::test_insert_into_assembler",
+  "test_insert_item.py::test_insert_into_two_furnaces",
+  "test_insert_item.py::test_insert_iron_ore_into_stone_furnace"
+]

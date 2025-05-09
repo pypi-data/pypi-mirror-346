@@ -1,0 +1,11 @@
+{
+  "test_insert_item.py::test_insert_and_fuel_furnace": true,
+  "test_can_place.py::test_can_place": true,
+  "test_can_place.py": true,
+  "test_insert_item.py::test_insert_iron_ore_into_stone_furnace": true,
+  "test_insert_item.py::test_insert_copper_ore_and_iron_ore_into_stone_furnace": true,
+  "test_insert_item.py::test_insert_coal_into_burner_inserter": true,
+  "test_insert_item.py::test_insert_into_assembler": true,
+  "test_insert_item.py::test_insert_coal_onto_belt": true,
+  "test_insert_item.py::test_insert_into_two_furnaces": true
+}
