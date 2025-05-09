@@ -1,0 +1,9 @@
+langchain>=0.1.0
+chromadb>=0.4.0
+pinecone-client>=2.0
+weaviate-client>=3.0
+faiss-cpu>=1.7.2
+milvus>=2.0
+pymongo>=3.11
+numpy>=1.21.0
+transformers>=4.5.0
