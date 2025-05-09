@@ -1,0 +1,136 @@
+Metadata-Version: 2.4
+Name: probability-chain
+Version: 0.2.0
+Summary: Simulate and optimize chained probability stages
+Home-page: https://github.com/yourusername/probability-chain
+Author: Your Name
+Author-email: your@email.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Probability Chain
+
+🧮 **ProbabilityChain** is a Python class for simulating and optimizing chained probability systems — like upgrading systems in games, reliability paths, or multi-stage processes. It helps you allocate limited resources (probability boosts) to maximize the chance of reaching a final target stage.
+
+---
+
+## 🚀 Features
+
+- Compute cumulative success probability up to any stage
+- Optimize incremental probability allocations for best end-stage result
+- Simulate and visualize how resource allocations affect outcomes
+- Generate step-by-step summaries and allocation analysis
+
+---
+
+## 📦 Installation
+
+Install from PyPI (once published):
+
+```bash
+pip install probability-chain
+```
+
+## 🧪 Example Usage
+
+```python
+from probability_chain import ProbabilityChain
+
+# Define base probabilities for each stage (A through E)
+chain = ProbabilityChain([0.5, 0.1, 0.5, 0.5, 0.5])
+
+# Simulate how to optimally allocate a total of 1.5 "probability points"
+steps = chain.simulate_optimal_allocation(total_budget=1.5, step=0.01, target_stage='E')
+
+# Output a narrative summary of what happened
+chain.summarize_allocation(steps)
+
+```
+Example Output:
+```text
+Step-by-Step Increment Allocation (Target Stage: E):
+Step  1: Allocated 0.0100 to Stage B (New Value: 0.1100)
+...
+
+Final Allocation Summary (Total Budget: 1.5):
+Stage A: +0.2200
+Stage B: +0.6200
+Stage C: +0.2200
+Stage D: +0.2200
+Stage E: +0.2200
+
+Final Probability Values:
+Stage A: 0.7200
+Stage B: 0.7200
+Stage C: 0.7200
+Stage D: 0.7200
+Stage E: 0.7200
+```
+
+## 📈 Output Visualization
+After each simulation, a plot is shown:
+
+X-axis: budget spent (in %)
+
+Y-axis: total probability of reaching the target stage (in %)
+
+The plot illustrates how probability grows with optimized allocation.
+
+## 📚 API Overview
+```python
+ProbabilityChain(stages: List[float])
+```
+Create a new probability chain instance from a list of base probabilities for each stage (e.g., stages A through E).
+
+Core Methods:
+```python
+compute_partial_probability(values=None, target_stage='E')
+```
+Returns the cumulative probability of reaching the given target stage by multiplying probabilities from the start.
+
+```python
+simulate_optimal_allocation(total_budget, step, target_stage)
+```
+Simulates how to distribute a fixed amount of budget (total_budget) in increments (step) across stages to maximize the probability of reaching target_stage.
+
+Returns a list of steps detailing what was allocated where.
+```python
+summarize_allocation(steps)
+```
+Prints a narrative breakdown of the allocation history returned by simulate_optimal_allocation. Includes dominant stages, balance trends, and final values.
+
+```python
+compare(*adjustment_sets, target_stage)
+```
+Compare one or more manual adjustment strategies (e.g. increasing A by 0.1, B by 0.2, etc.) to see which leads to the best improvement in total probability.
+
+Example Usage:
+```python
+chain.compare(
+    [('B', 0.2)],
+    [('A', 0.1), ('C', 0.1)],
+    target_stage='E'
+)
+```
+## 📝 License
+This project is licensed under the MIT License.
+See the [LICENSE](./LICENSE) file for more information.
+
+## 👤 Author
+Logan Diliberto
