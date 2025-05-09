@@ -1,0 +1,2 @@
+[console_scripts]
+xql = xql_main:main_function

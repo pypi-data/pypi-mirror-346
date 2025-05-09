@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: xql
+Version: 0.1.0
+Summary: A database command interface with support for SQL and NoSQL.
+Home-page: https://github.com/yourusername/xql
+Author: Your Name
+Author-email: your-email@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: sqlalchemy
+Requires-Dist: bcrypt
+Requires-Dist: pydantic
+Requires-Dist: requests
+Requires-Dist: python-jose
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+
+# XDB
+
+**XDB** is a lightweight, interactive SQL and NoSQL command-line engine with authentication powered by FastAPI.
+
+- 🔐 Token-based login
+- ⚙️ SQLite + JSON NoSQL support
+- 📄 Generates guide documentation

@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+xql/__init__.py
+xql/nosql.py
+xql/sql.py
+xql.egg-info/PKG-INFO
+xql.egg-info/SOURCES.txt
+xql.egg-info/dependency_links.txt
+xql.egg-info/entry_points.txt
+xql.egg-info/requires.txt
+xql.egg-info/top_level.txt
