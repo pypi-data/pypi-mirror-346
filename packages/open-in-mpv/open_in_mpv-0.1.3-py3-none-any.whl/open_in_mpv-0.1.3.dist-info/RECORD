@@ -1,0 +1,14 @@
+open_in_mpv/__init__.py,sha256=k2QdeCVEtIkgl0uSmXadto9uA9KXF5psZQ16Lx2M5E0,58
+open_in_mpv/__main__.py,sha256=oQ6s6zvZTBiEOgt-qep3bDY9ayxSanQr7KHzr6ENK0o,115
+open_in_mpv/constants.py,sha256=HzwqszkjuxQvpwBImn6aWIi4P-0KqdNCfsKTBHMcwVw,2674
+open_in_mpv/install.py,sha256=YjIud9BMkp1DTG8PLXH6aVFVEKBI12hVzafwOAwf1G0,2756
+open_in_mpv/main.py,sha256=0xg4a19RylpTc_DanRYG8_ZcWNgrQqug8NSpc3zvi1k,7344
+open_in_mpv/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+open_in_mpv/test_open.py,sha256=hDJT3VkDU8a9ZwOat9a6o2J8_8c1j3DD82Mir1YvJv8,1357
+open_in_mpv/uninstall.py,sha256=MOsbSnl1qMDBSleNiWbZDJrCAwX0IaTpkpWvHxvcmHY,1211
+open_in_mpv/utils.py,sha256=LCvqLrh0YrxnEdqe6J1qS_JksEnMnHBjrET6MuUGofA,1811
+open_in_mpv-0.1.3.dist-info/LICENSE.txt,sha256=V8KGE4_m_-d8wK71NgVoCuUJoVCUcGlTqg2U24ONnZI,1086
+open_in_mpv-0.1.3.dist-info/METADATA,sha256=YhJbkssSvZM4576lNXJpmAvrsbz0Nj8AWGbZ1IqepWE,5582
+open_in_mpv-0.1.3.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+open_in_mpv-0.1.3.dist-info/entry_points.txt,sha256=9YzjQImjCadnvHeIo247--qw9Y7f9h05mXx0mUh5j7s,191
+open_in_mpv-0.1.3.dist-info/RECORD,,
