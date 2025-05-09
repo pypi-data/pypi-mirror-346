@@ -1,0 +1,11 @@
+airflow_providers_lokalise-1.2.2.dist-info/licenses/LICENSE,sha256=ZOqab-231VHAwGAhh1oQwzSrfx1QWxZF_2KZDVBdM2I,1502
+lokalise_provider/__init__.py,sha256=8jfcD7xxqbFAZ7zoidm2wQPd9oapHD-UoIV2Xcn0zyk,633
+lokalise_provider/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lokalise_provider/hooks/lokalise.py,sha256=CE0eaKvyKbFaH571eYFmukw9WlFj28iawjzG1iX-wDI,2134
+lokalise_provider/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lokalise_provider/operators/lokalise.py,sha256=SxyeyIsX8jdqGO0g6t7A1zXYJAz-RB8vPy2jff1gAhQ,2102
+airflow_providers_lokalise-1.2.2.dist-info/METADATA,sha256=b_vUcW6DGbLjzkbrM46q5HmSPvZjojMxD6OVZOApmMQ,1817
+airflow_providers_lokalise-1.2.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+airflow_providers_lokalise-1.2.2.dist-info/entry_points.txt,sha256=2iwTX0rNTi-7rpNCv5gx-NsixZDeNR_5O5ekHv5PdqY,87
+airflow_providers_lokalise-1.2.2.dist-info/top_level.txt,sha256=YKEVvmQvYWDZN5HxhAVcglbm8Of3tcmWKUiTQ7gDfoE,18
+airflow_providers_lokalise-1.2.2.dist-info/RECORD,,
