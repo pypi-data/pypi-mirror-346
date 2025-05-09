@@ -1,0 +1,3 @@
+[console_scripts]
+contextframe = contextframe.cli:main
+contextframe-language-server = contextframe:lsp_server
