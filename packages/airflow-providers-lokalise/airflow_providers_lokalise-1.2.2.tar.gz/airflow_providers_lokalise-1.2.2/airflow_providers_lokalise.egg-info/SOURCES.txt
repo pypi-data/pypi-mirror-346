@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+airflow_providers_lokalise.egg-info/PKG-INFO
+airflow_providers_lokalise.egg-info/SOURCES.txt
+airflow_providers_lokalise.egg-info/dependency_links.txt
+airflow_providers_lokalise.egg-info/entry_points.txt
+airflow_providers_lokalise.egg-info/requires.txt
+airflow_providers_lokalise.egg-info/top_level.txt
+lokalise_provider/__init__.py
+lokalise_provider/hooks/__init__.py
+lokalise_provider/hooks/lokalise.py
+lokalise_provider/operators/__init__.py
+lokalise_provider/operators/lokalise.py
