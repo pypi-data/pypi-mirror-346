@@ -1,0 +1,2 @@
+[console_scripts]
+grovers-visualizer = grovers_visualizer.main:main

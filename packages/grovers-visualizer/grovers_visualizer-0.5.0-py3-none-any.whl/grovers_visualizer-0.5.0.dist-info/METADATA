@@ -1,0 +1,125 @@
+Metadata-Version: 2.4
+Name: grovers-visualizer
+Version: 0.5.0
+Summary: A tiny Python package that steps through Grover’s Search algorithm.
+Project-URL: Source, https://github.com/kristoferssolo/grovers-visualizer
+Project-URL: Tracker, https://github.com/kristoferssolo/grovers-visualizer/issues
+Author-email: Kristofers Solo <dev@kristofers.xyz>
+License: MIT License
+        
+        Copyright (c) 2025 Kristofers Solo
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: numpy==2.2.4
+Requires-Dist: pyqt6==6.9.0
+Requires-Dist: qiskit-aer==0.17.0
+Requires-Dist: qiskit[visualization]==2.0.0
+Provides-Extra: ui
+Requires-Dist: dearpygui==2.0.0; extra == 'ui'
+Description-Content-Type: text/markdown
+
+# Grover’s Search Visualizer
+
+A tiny Python package that steps through Grover’s Search algorithm and shows you, after each iteration:
+
+- A bar‐chart of amplitudes (or probabilities)  
+- A sine‐curve of success‐probability vs. iteration  
+- A geometric "rotation" on the unit circle  
+
+Choose between a Matplotlib-based CLI or an optional DearPyGui GUI (WIP).
+
+---
+
+![Demo of Grover’s Visualizer](media/demo.gif)
+
+---
+
+## Installation
+
+### Via [pipx](https://pipx.pypa.io/stable/installation/)
+
+Basic (CLI only):
+
+```bash
+pipx install grovers-visualizer
+grovers-visualizer 1111
+```
+
+With the optional DearPyGui UI (WIP):
+
+```bash
+pipx "grovers-visualizer[ui]"
+grovers-visualizer --ui
+```
+
+### Via [uvx](https://docs.astral.sh/uv/guides/tools/)
+
+Basic (CLI only):
+
+```bash
+uvx grovers-visualizer 1111
+```
+
+With the optional UI extra:
+
+```bash
+uvx "grovers-visualizer[ui]" --ui
+```
+
+---
+
+## Usage
+
+### CLI Mode
+
+Flags:
+
+• `-t, --target`  
+ Target bit‐string (e.g. `010`). Length determines number of qubits.  
+• `-s, --speed`  
+ Delay between iterations (seconds). Default `0.5`.  
+• `-i, --iterations`  
+ Max iterations; `0` means use the optimal $\lfloor\frac\pi4\sqrt{2^n}\rfloor$.  
+• `--ui`  
+ Launch the optional DearPyGui GUI (requires the `[ui]` extra) (WIP).
+
+### GUI Mode (WIP)
+
+If you installed with `"[ui]"`, launch the DearPyGui window:
+
+```
+grovers-visualizer --ui
+```
+
+In the UI you can:
+
+- Set number of qubits  
+- Enter the target bit‐string  
+- Choose max iterations or leave at 0 for optimal  
+- Control the animation speed  
+
+Hit **Start** to watch the bar chart, sine plot, and rotation‐circle update in real time.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
