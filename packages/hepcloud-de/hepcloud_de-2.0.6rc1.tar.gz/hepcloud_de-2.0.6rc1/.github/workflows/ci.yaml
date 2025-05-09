@@ -1,0 +1,238 @@
+# SPDX-FileCopyrightText: 2017 Fermi Research Alliance, LLC
+# SPDX-License-Identifier: Apache-2.0
+
+---
+name: Run CI
+on:
+  push:
+    branches:
+      - "**" # matches every branch
+      - "!gh-pages" # excludes gh-pages branch
+  pull_request:
+    branches:
+      - master
+      - 1.7
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "branch ref"
+        required: true
+        default: "master"
+
+jobs:
+  pytest:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        python-version:
+          - "3.9"
+          - "3.11"
+
+    name: Python ${{ matrix.python-version }} unit tests
+    steps:
+      - name: checkout code tree
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          # This path is specific to Ubuntu
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+            ${{ runner.os }}-pip-
+
+      - name: Note Python version/implementation/cache
+        run: |
+          which python3
+          python3 -c 'import sys; print(sys.version)'
+          python3 -c 'import platform; print(platform.python_implementation())'
+          python3 -m pip cache dir
+
+      - name: Ensure pip/setuptools is up to date
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade wheel setuptools
+
+      - name: Install dependencies (runtime)
+        run: |
+          python3 -m pip install -e . --user
+          python3 -m pip list --user
+
+      - name: Install dependencies (unit tests)
+        run: |
+          python3 -m pip install --upgrade pytest
+          python3 -m pip install -e .[develop] --user
+          python3 -m pip list --user
+
+      - name: Ensure version.py exists
+        run: python3 setup.py bdist_wheel
+
+      - name: Start Redis Server
+        uses: supercharge/redis-github-action@1.8.0
+
+      - name: Run Unit Tests on Python ${{ matrix.python-version }}
+        timeout-minutes: 35
+        env:
+          PYTEST_TIMEOUT: 90
+          PYTHONPATH: ${{ github.workspace }}/src
+          COVERAGE_PROCESS_START: ${{ github.workspace }}/.coveragerc
+        shell: 'script -q -e -c "bash --noprofile --norc -eo pipefail {0}"'
+        run: |
+          pytest --cov-report term --cov-report xml --cov=decisionengine --no-cov-on-fail
+
+      - name: Archive unit test logs
+        if: failure() && !cancelled()
+        uses: actions/upload-artifact@v4
+        with:
+          name: log_unit_test_Python_${{ matrix.python-version }}
+          path: /tmp/*.log
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          flags: python-${{ matrix.python-version }}
+
+  build_doc:
+    name: Generate Documentation
+    runs-on: ubuntu-latest
+    needs: pytest
+    steps:
+      - name: checkout code tree
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          architecture: "x64"
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          # This path is specific to Ubuntu
+          path: ~/.cache/pip
+          # Look to see if there is a cache hit for the corresponding file
+          key: ${{ runner.os }}-pip-${{ hashFiles('setup.py') }}-3.9
+          restore-keys: |
+            ${{ runner.os }}-pip-${{ hashFiles('setup.py') }}-
+            ${{ runner.os }}-pip-
+
+      - name: Note Python version/implementation/cache
+        run: |
+          which python3
+          python3 -c 'import sys; print(sys.version)'
+          python3 -c 'import platform; print(platform.python_implementation())'
+          python3 -m pip cache dir
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade wheel setuptools
+          python3 -m pip install --upgrade pytest
+          python3 -m pip install -e . --user
+          python3 -m pip install -e .[develop] --user
+
+      - name: Install sphinx expected fonts within the container
+        run: |
+          sudo apt-get update || true
+          sudo apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+          python3 -m pip install sphinx sphinx_rtd_theme --user
+
+      - name: Ensure version.py exists
+        run: python3 setup.py bdist_wheel
+
+      - name: Build documentation
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src
+        run: |
+          cd doc
+          make rst html latexpdf
+
+  rpmbuild_el7:
+    if: ${{ github.ref == 'refs/heads/1.7' }}
+    name: Build an EL7 rpm
+    runs-on: ubuntu-latest
+    needs: pytest
+    steps:
+      - name: make date tag
+        id: mkdatetag
+        run: echo "::set-output name=dtag::$(date +%Y%m%d_%H%M%S)"
+
+      - name: make ref tag case 1
+        id: mkreftag1
+        if: ${{ github.event.inputs.ref != '' }}
+        run: echo "::set-output name=reftag::${{github.event.inputs.ref}}"
+
+      - name: make ref tag case 2
+        id: mkreftag2
+        if: ${{ github.event.inputs.ref == '' }}
+        run: echo "::set-output name=reftag::${GITHUB_BASE_REF:+PR}"$(awk -F"/" '{print $3}' <<< ${GITHUB_REF})
+
+      - name: checkout code tree
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{github.event.inputs.ref}}
+
+      - name: Run the build in a container (SL7/HEPCloud-CI)
+        uses: ./.github/actions/python-command-in-sl7-container
+        with:
+          python-command: "setup.py bdist_rpm"
+          logfile: "rpmbuild.log"
+
+      - name: Archive rpm
+        uses: actions/upload-artifact@v4
+        with:
+          name: rpms-DE-EL7-${{steps.mkreftag1.outputs.reftag}}${{steps.mkreftag2.outputs.reftag}}-${{steps.mkdatetag.outputs.dtag}}
+          path: dist/*.rpm
+          if-no-files-found: error
+
+  rpmbuild_el8:
+    if: ${{ false }} # temporary disable this job
+    name: Build an EL8 rpm
+    runs-on: ubuntu-latest
+    needs: pytest
+    steps:
+      - name: make date tag
+        id: mkdatetag
+        run: echo "::set-output name=dtag::$(date +%Y%m%d_%H%M%S)"
+
+      - name: make ref tag case 1
+        id: mkreftag1
+        if: ${{ github.event.inputs.ref != '' }}
+        run: echo "::set-output name=reftag::${{github.event.inputs.ref}}"
+
+      - name: make ref tag case 2
+        id: mkreftag2
+        if: ${{ github.event.inputs.ref == '' }}
+        run: echo "::set-output name=reftag::${GITHUB_BASE_REF:+PR}"$(awk -F"/" '{print $3}' <<< ${GITHUB_REF})
+
+      - name: checkout code tree
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{github.event.inputs.ref}}
+
+      - name: Run the build in a container (EL8/HEPCloud-CI)
+        uses: ./.github/actions/python-command-in-el8-container
+        with:
+          python-command: "setup.py bdist_rpm"
+          logfile: "rpmbuild.log"
+
+      - name: Archive rpm
+        uses: actions/upload-artifact@v4
+        with:
+          name: rpms-DE-EL8-${{steps.mkreftag1.outputs.reftag}}${{steps.mkreftag2.outputs.reftag}}-${{steps.mkdatetag.outputs.dtag}}
+          path: dist/*.rpm
+          if-no-files-found: error

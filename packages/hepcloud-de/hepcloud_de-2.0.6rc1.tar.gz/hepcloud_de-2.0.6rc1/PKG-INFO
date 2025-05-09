@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: hepcloud-de
+Version: 2.0.6rc1
+Summary: The HEPCloud Decision Engine Framework
+Home-page: http://hepcloud.fnal.gov/
+Author: Fermilab
+License: Apache-2.0
+Project-URL: homepage, http://hepcloud.fnal.gov/
+Project-URL: source, https://github.com/HEPCloud/decisionengine
+Project-URL: documentation, https://hepcloud.github.io/decisionengine/
+Project-URL: releasenotes, https://hepcloud.github.io/decisionengine/release_notes.html
+Project-URL: issues, https://github.com/HEPCloud/decisionengine/issues
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: cherrypy>=18.6.0
+Requires-Dist: jsonnet>=0.20.0
+Requires-Dist: kombu[redis]>=5.2.0rc1
+Requires-Dist: numpy==1.19.5; python_version <= "3.6"
+Requires-Dist: numpy<2.0.0,>=1.22; python_version >= "3.7"
+Requires-Dist: pandas==1.1.5; python_version <= "3.6"
+Requires-Dist: pandas<2.0.0,>=1.1.5; python_version >= "3.7" and platform_python_implementation == "CPython"
+Requires-Dist: prometheus-client>=0.10.0
+Requires-Dist: psutil>=5.8.0
+Requires-Dist: psycopg2-binary>=2.8.6; platform_python_implementation == "CPython"
+Requires-Dist: sqlalchemy<2.0.0,>=1.4.48
+Requires-Dist: structlog>=21.1.0
+Requires-Dist: tabulate>=0.8.7
+Requires-Dist: toposort>=1.6
+Requires-Dist: typing_extensions>=4.1.1
+Provides-Extra: develop
+Requires-Dist: coverage>=6.1.2; extra == "develop"
+Requires-Dist: flake8<7.0.0,>=6.0.0; extra == "develop"
+Requires-Dist: importlib_resources>=5.1.2; python_version <= "3.8" and extra == "develop"
+Requires-Dist: packaging>=20.4; extra == "develop"
+Requires-Dist: pre-commit>=2.13.0; extra == "develop"
+Requires-Dist: pylint>=2.7.4; extra == "develop"
+Requires-Dist: pytest<8.0,>=7.0.0; extra == "develop"
+Requires-Dist: pytest-cov>=2.11.1; extra == "develop"
+Requires-Dist: pytest-postgresql<6.0.0,>=5.0.0; extra == "develop"
+Requires-Dist: pytest-timeout>=1.4.2; extra == "develop"
+Requires-Dist: pytest-xdist[psutil]>=2.3.0; extra == "develop"
+Requires-Dist: reuse>=1.1.2; extra == "develop"
+Requires-Dist: setuptools>=51.2; extra == "develop"
+Requires-Dist: setuptools_scm>=6.3.1; extra == "develop"
+Requires-Dist: sphinx>=3.5.3; extra == "develop"
+Requires-Dist: sphinx_rtd_theme>=0.5.1; extra == "develop"
+Requires-Dist: toml>=0.10.2; extra == "develop"
+Requires-Dist: wheel>=0.36.2; extra == "develop"
+Dynamic: home-page
+Dynamic: license-file
+
+<!--
+SPDX-FileCopyrightText: 2017 Fermi Research Alliance, LLC
+SPDX-License-Identifier: Apache-2.0
+-->
+
+# HEPCloud Decision Engine
+
+The Decision Engine is a critical component of the HEP Cloud Facility. It provides the
+functionality of resource scheduling for disparate resource providers, including those
+which may have a cost or a restricted allocation of cycles
+
+Code documentation, release notes and install instructions are on github.io:
+https://hepcloud.github.io/decisionengine/
+
+# Getting Started with development
+
+There is a specific document on this at https://github.com/HEPCloud/decisionengine/blob/master/DEVELOPMENT.md
