@@ -1,0 +1,9 @@
+rich
+transformers>=4.51.3
+torchvision>=0.22.0
+torch>=2.7.0
+sentence-transformers>=4.1.0
+numpy>=2.2.5
+pypdf>=5.4.0
+gradio_client>=1.7.2
+pdf2image>=1.17.0
