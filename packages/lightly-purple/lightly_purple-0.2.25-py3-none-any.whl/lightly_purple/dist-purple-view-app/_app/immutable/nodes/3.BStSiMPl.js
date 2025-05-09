@@ -1,0 +1,1 @@
+import{l as o,r}from"../chunks/CRLA7a-5.js";import{r as s}from"../chunks/B90CZVMX.js";const l=async()=>{const{data:t,error:e}=await o(),a=t==null?void 0:t.dataset_id;if(e||!a)throw e;s(307,r.toSamples(a))},n=Object.freeze(Object.defineProperty({__proto__:null,load:l},Symbol.toStringTag,{value:"Module"}));export{n as universal};
