@@ -1,0 +1,14 @@
+pyproject.toml
+googleslides/__init__.py
+googleslides/exceptions.py
+googleslides/googleslides.py
+googleslides/cli/__init__.py
+googleslides/cli/authtest.py
+googleslides/cli/create_from_csv.py
+googleslides/cli/create_from_yaml.py
+shipyard_googleslides.egg-info/PKG-INFO
+shipyard_googleslides.egg-info/SOURCES.txt
+shipyard_googleslides.egg-info/dependency_links.txt
+shipyard_googleslides.egg-info/requires.txt
+shipyard_googleslides.egg-info/top_level.txt
+tests/test_auth.py
