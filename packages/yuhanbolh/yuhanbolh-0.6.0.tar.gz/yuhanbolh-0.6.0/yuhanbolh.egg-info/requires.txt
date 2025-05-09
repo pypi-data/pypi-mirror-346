@@ -1,0 +1,11 @@
+akshare
+baostock
+beautifulsoup4
+MetaTrader5
+numpy==1.26.4
+pandas==2.2.2
+pytdx
+pywencai
+requests
+schedule
+statsmodels
