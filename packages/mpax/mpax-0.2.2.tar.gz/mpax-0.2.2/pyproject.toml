@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mpax"
+version = "0.2.2"
+description = "MPAX: Mathematical Programming in JAX"
+authors = ["Zedong Peng <zdpeng95@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+numpy = ">1.24.4"
+jax = ">=0.4.38"
+chex = ">=0.1.87"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+gurobipy = "^11.0.0"
+pulp = "^2.9.0"
+pulp2mat = "^0.1.5"
+requests = "^2.32.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
