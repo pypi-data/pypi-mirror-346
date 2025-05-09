@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "web-crawler-for-map-services-shared"
+version = "0.1.2"
+description = "Shared library for web crawler for map services"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "psycopg2-binary>=2.9.0",
+    "SQLAlchemy>=1.4.0",
+    "tenacity"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/your_username/your_repository"
+"Bug Tracker" = "https://github.com/your_username/your_repository/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+package-dir = {"" = "src"} 
