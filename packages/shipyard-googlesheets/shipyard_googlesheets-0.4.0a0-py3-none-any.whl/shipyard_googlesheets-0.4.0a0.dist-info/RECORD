@@ -1,0 +1,13 @@
+shipyard_googlesheets/__init__.py,sha256=EwpDJrIdcoMwzGu2Zi9hlkfsEeXO2h_NLU5uvXZoy0g,45
+shipyard_googlesheets/exceptions.py,sha256=ddmUmi7LKpatchNUJfxBXn4DRcTDsrokFo1DPARfPhA,1055
+shipyard_googlesheets/googlesheets.py,sha256=E8Rf-pkWb3nz0yGXjVxGvnY3nHkGMcESvQUUZqHcU3M,2059
+shipyard_googlesheets/utils.py,sha256=SGVhEjValWlblY_0OZ3Iz1EfgCD2yKKuN8dnjLZsxSk,6312
+shipyard_googlesheets/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shipyard_googlesheets/cli/authtest.py,sha256=rLAw5o4dQHTc1KXKo0teRCvlwxgqqHjeQgPu2TR8wVM,812
+shipyard_googlesheets/cli/clear_data.py,sha256=AJLMZtszs4jn_iVIaSRmdbHspHj4ncqqSYVVT47_p_0,3327
+shipyard_googlesheets/cli/download.py,sha256=akR7w2JToEDqgbuea6jJ4jKgEcn35EtpJeOJSnAbYWw,4511
+shipyard_googlesheets/cli/upload.py,sha256=sf3C081h88G8G_uVFTdVtx6ePZtSs3upnbf-ryBn82U,5346
+shipyard_googlesheets-0.4.0a0.dist-info/METADATA,sha256=A5ikbCvdG50i0u1aBUUFPp_W-jesNzmzRBCnAeFf8_o,335
+shipyard_googlesheets-0.4.0a0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+shipyard_googlesheets-0.4.0a0.dist-info/top_level.txt,sha256=NBYgNXCVtcEzN43TfHOMPrcekqHrUP_7VFdyUuvuAfQ,22
+shipyard_googlesheets-0.4.0a0.dist-info/RECORD,,

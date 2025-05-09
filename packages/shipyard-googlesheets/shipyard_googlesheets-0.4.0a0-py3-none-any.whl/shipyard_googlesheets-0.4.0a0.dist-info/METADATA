@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: shipyard-googlesheets
+Version: 0.4.0a0
+Summary: A local client for connecting and working with Google Sheets
+Requires-Python: >=3.11
+Requires-Dist: google-api-python-client>=2.95.0
+Requires-Dist: google-auth-httplib2>=0.1.0
+Requires-Dist: google-auth-oauthlib>=1.0.0
+Requires-Dist: shipyard-bp-utils>=1.2.0
