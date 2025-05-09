@@ -1,0 +1,3 @@
+[console_scripts]
+ytm2spt = ytm2spt:main
+ytmusicapi-oauth = ytm2spt.cli:oauth

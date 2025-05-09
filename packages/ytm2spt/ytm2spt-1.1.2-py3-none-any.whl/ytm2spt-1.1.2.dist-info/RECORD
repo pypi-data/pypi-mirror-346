@@ -1,0 +1,13 @@
+ytm2spt/__init__.py,sha256=7xX1Rkt4jzERPC9K0GLZoJu1G8LVCp6w35T1AwTH6vQ,172
+ytm2spt/app_logger.py,sha256=wzQ-vR8LCHY5sWHoA-s4iQLEzzCky81kn0txNg3cfAw,856
+ytm2spt/cli.py,sha256=J8Yrms5wMp4aUtEeNvsnDTYPtYPyNkDDIw5JluE1nlw,2949
+ytm2spt/gui.py,sha256=T3ogW_MXcIA-Deu0g0QtXl8exb9wL3ZF6SyuCdLrKN8,14832
+ytm2spt/spotify.py,sha256=A_y25xU4Y6K9D9f00Oo7K7bL0nPettYzSXDqCZpS4lA,5709
+ytm2spt/transfer.py,sha256=cPKObLp2zvgTg6DjxXW-8NrcGcMbMjfu5ZHOZT9b4Xk,4796
+ytm2spt/utils.py,sha256=9Fpoe3D0uHTPbfZZr5SC2TexN1nLYXEd1uIhNPDrvIQ,954
+ytm2spt/youtube.py,sha256=ylNYswnMcVXoIOUKX7gOnSj_IeciqR1OF59BfUnbAaI,2446
+ytm2spt-1.1.2.dist-info/METADATA,sha256=pMSnHBjLFkON6MiZZSjHhKCjU8A7roC51MAR8CkyeG0,9409
+ytm2spt-1.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ytm2spt-1.1.2.dist-info/entry_points.txt,sha256=KeT-x5unqVOv3SIETrKJuWRbgBIlkaMHSKErZzYu4-k,78
+ytm2spt-1.1.2.dist-info/licenses/LICENSE.md,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ytm2spt-1.1.2.dist-info/RECORD,,
