@@ -1,0 +1,14 @@
+achemy/__init__.py,sha256=kP40SqkAt5T0mX8gDZK9DAsdJfsqqBBzyHhEVK1Q_KE,457
+achemy/activerecord.py,sha256=Cums7S9TT3V-yF_le7wJDMWfYynC7yv5moDv52CMBi0,39463
+achemy/base.py,sha256=ZUDOrq9mwdZfOc4YxF2pIyRxp6mgkHxU98VMLxcI8bA,175
+achemy/config.py,sha256=biL02fWrTwKpVlOqcNZBgswJ28KoNrxRpaoKxYEg7GI,2473
+achemy/demo/amodels.py,sha256=4nETvQUp0ZDi4AGiSbH-uaNaiUHETDna_Aznfc-4Qwc,3835
+achemy/engine.py,sha256=sj8iWl3pu1u5yHL0wXayilt-o0FdKGhze55NX-FfrTw,10557
+achemy/mixins.py,sha256=xDEzLQoOKC97kj4hJE4VVXDT45fqv4uvde2MbLIesgE,3713
+achemy/schema.py,sha256=fX14rEiF9Y6y1TjN2ma54dVDbjyGVfV3bOsXOppCP8s,3917
+achemy/select.py,sha256=eQMISn6QGGyu9NWFk408eQ5u14E_PEJupeLxufbTu0U,1919
+achemy/version.py,sha256=htkgyVBXTIqZJhz_l-1Ojc6ixKNxjEW2Zj1TCGIRCmk,1565
+achemy-0.2.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+achemy-0.2.2.dist-info/METADATA,sha256=4tKFl1iEUTLVImiKsL27JxQCuQil3ZANmMuxpr_H4GY,10280
+achemy-0.2.2.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+achemy-0.2.2.dist-info/RECORD,,
