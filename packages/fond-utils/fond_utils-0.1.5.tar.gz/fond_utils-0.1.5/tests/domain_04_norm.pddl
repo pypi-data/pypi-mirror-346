@@ -1,0 +1,15 @@
+(define (domain blocks-domain_NORM)
+    (:requirements :equality :typing)
+    (:types block)
+    (:predicates (clear ?b - block)  (emptyhand) (holding ?b - block)  (on ?b1 - block ?b2 - block)  (on-table ?b - block))
+    (:action pick-up
+        :parameters (?b1 - block ?b2 - block)
+        :precondition (and (not (= ?b1 ?b2)) (emptyhand) (clear ?b1) (on ?b1 ?b2))
+        :effect (oneof (and (f1) (a1) (b1) (f3)) (and (f1) (a1) (b2) (f3)) (and (f1) (a1) (c1) (f3)) (and (f1) (a1) (c2) (f3)) (and (f1) (a1) (c3) (f3)) (and (f1) (a2) (b1) (f3)) (and (f1) (a2) (b2) (f3)) (and (f1) (a2) (c1) (f3)) (and (f1) (a2) (c2) (f3)) (and (f1) (a2) (c3) (f3)))
+    )
+     (:action pick-up-from-table
+        :parameters (?b - block)
+        :precondition (and (emptyhand) (clear ?b) (on-table ?b))
+        :effect (and (holding ?b) (not (emptyhand)) (not (on-table ?b)))
+    )
+)

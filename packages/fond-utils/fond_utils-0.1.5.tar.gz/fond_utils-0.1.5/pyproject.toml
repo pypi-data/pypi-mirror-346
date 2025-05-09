@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fond-utils"
+description = "FOND Utilities and Helpers"  # <-- description from __description__.py
+authors = [
+    { name="Christian Muise", email="christian.muise@queensu.ca" },
+    { name="Sebastian Sardina", email="ssardina@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+  "pddl"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux"
+]
+
+# version = "0.1.2"  # <-- old static version
+dynamic = ["version"]
+
+# enable this if you want to generate the version from a file
+# [tool.setuptools_scm]
+# version_file = "fondutils/__version__.py"
+
+
+[tool.setuptools_scm]
+tag_regex = "^v(?P<version>.*)$"  # version tag regex v1.0.0 (with a v in front
+
+[project.urls]
+Homepage = "https://github.com/AI-Planning/fond-utils/"  # or your about["__url__"]
+
+[tool.setuptools.packages.find]
+include = ["fondutils", "fondutils.pddl", "fondutils.helpers"]
+
+[project.scripts]
+fond-utils = "fondutils.__main__:main"
