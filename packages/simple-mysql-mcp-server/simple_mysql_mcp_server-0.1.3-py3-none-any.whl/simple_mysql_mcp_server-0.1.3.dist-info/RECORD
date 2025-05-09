@@ -1,0 +1,9 @@
+simple_mysql_mcp_server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_mysql_mcp_server/database.py,sha256=tROYuWVt_DdTpC-coeY7OTcGmGYigPBiggeA5LnLDy8,496
+simple_mysql_mcp_server/main.py,sha256=p1rJOmyBL0l7bm7rYIfEN6l7c8_eXVbnnsYVKjv3m20,2870
+simple_mysql_mcp_server-0.1.3.dist-info/licenses/LICENSE,sha256=3nYTbZ9Lc8qNn2L3P9GCabpQEq5yiv1QmadhPw-aO5Y,1089
+simple_mysql_mcp_server-0.1.3.dist-info/METADATA,sha256=5g8N3RIhGXrBIp7_aHd1WPa7iTXgXEN6PVx-Diwtcus,1395
+simple_mysql_mcp_server-0.1.3.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+simple_mysql_mcp_server-0.1.3.dist-info/entry_points.txt,sha256=naoS1KGrX2C5kxHo8lYyceFSl-PWBBu0QBwWBXrY2rs,72
+simple_mysql_mcp_server-0.1.3.dist-info/top_level.txt,sha256=LpeZmcRb65_Wi08WJ_TsDY4vyRPbLE3xUjB8KOw8RiE,24
+simple_mysql_mcp_server-0.1.3.dist-info/RECORD,,
