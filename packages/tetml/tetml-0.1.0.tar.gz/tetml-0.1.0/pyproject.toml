@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=45"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tetml"
+version = "0.1.0"
+description = "Some dependencies for running ipython extensions."
+dependencies = [
+  "ipython",
+  "pyflyby",
+  "rich",
+  "docrepr",
+]

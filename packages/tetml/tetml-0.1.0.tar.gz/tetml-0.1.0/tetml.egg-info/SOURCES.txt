@@ -1,0 +1,7 @@
+README.rst
+pyproject.toml
+tetml.egg-info/PKG-INFO
+tetml.egg-info/SOURCES.txt
+tetml.egg-info/dependency_links.txt
+tetml.egg-info/requires.txt
+tetml.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: tetml
+Version: 0.1.0
+Summary: Some dependencies for running ipython extensions.
+Requires-Dist: ipython
+Requires-Dist: pyflyby
+Requires-Dist: rich
+Requires-Dist: docrepr
