@@ -1,0 +1,11 @@
+README.md
+setup.py
+quantumgeometrytensor/Function.py
+quantumgeometrytensor/QuantumGeometry.py
+quantumgeometrytensor/QuantumGeometryDipole.py
+quantumgeometrytensor/__init__.py
+quantumgeometrytensor.egg-info/PKG-INFO
+quantumgeometrytensor.egg-info/SOURCES.txt
+quantumgeometrytensor.egg-info/dependency_links.txt
+quantumgeometrytensor.egg-info/requires.txt
+quantumgeometrytensor.egg-info/top_level.txt
