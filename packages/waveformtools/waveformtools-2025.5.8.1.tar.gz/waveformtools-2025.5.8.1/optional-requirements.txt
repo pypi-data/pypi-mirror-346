@@ -1,0 +1,10 @@
+# Optional requirements
+
+recommonmark
+sphinx-rtd-theme
+lalsuite
+ligo-common
+pycbc
+gmpy2
+gmpy
+pyseobnr
