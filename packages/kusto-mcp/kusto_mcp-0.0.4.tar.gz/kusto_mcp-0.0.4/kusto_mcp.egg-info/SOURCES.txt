@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+kusto_mcp/__init__.py
+kusto_mcp/kusto_config.py
+kusto_mcp/kusto_connection.py
+kusto_mcp/kusto_query_formatter.py
+kusto_mcp/kusto_service.py
+kusto_mcp/server.py
+kusto_mcp.egg-info/PKG-INFO
+kusto_mcp.egg-info/SOURCES.txt
+kusto_mcp.egg-info/dependency_links.txt
+kusto_mcp.egg-info/requires.txt
+kusto_mcp.egg-info/top_level.txt
