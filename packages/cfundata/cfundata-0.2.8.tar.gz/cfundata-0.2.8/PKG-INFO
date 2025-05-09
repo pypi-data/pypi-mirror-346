@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: cfundata
+Version: 0.2.8
+Summary: my data
+Project-URL: Homepage, https://github.com/zoushucai/cfundata
+Project-URL: Documentation, https://cfundata.readthedocs.org
+Project-URL: Repository, https://github.com/zoushucai/cfundata.git
+Project-URL: Issues, https://github.com/zoushucai/cfundata/issues
+Project-URL: Changelog, https://github.com/zoushucai/cfundata/blob/main/CHANGELOG.md
+Author-email: zoushucai <zoushucai@users.noreply.github.com>
+Requires-Python: >=3.10
+Requires-Dist: pooch>=1.8.2
+Description-Content-Type: text/markdown
+
+
+## cfundata 
+
+自用数据
