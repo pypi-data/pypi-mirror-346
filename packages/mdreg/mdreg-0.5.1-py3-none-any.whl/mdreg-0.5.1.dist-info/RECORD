@@ -1,0 +1,17 @@
+mdreg/__init__.py,sha256=GFNsMrDJ7jT1Ravhwncp9pa5kilXJ0GQ9LCZctgdDH0,414
+mdreg/ants.py,sha256=Tz5ArlO4qwmnmixMdCJ7SkFDpPT9YhOJnEkmwXGN-Nk,10818
+mdreg/data.py,sha256=dnRNfhFQnDSpue1l32jA1zPzZGuDtEg7cMYTO1yrAww,13214
+mdreg/elastix.py,sha256=Z2CQs3o1H_JA4qSDv5qeSy6zlQ6xWbspwOC1xC6GOYQ,47820
+mdreg/fit_models.py,sha256=SqC03ofX5WZb3_GCJXJO0-CE2gOC0rJhhm507P121MY,31819
+mdreg/io.py,sha256=J12ll9os8MvIbUGzWRwZU_0SMXy-4CBjKyn9UMr6v8Q,3533
+mdreg/main.py,sha256=4cKTzOSNxfM-dwt23UJzAz60C_0Q6_CnfSw2PHCuPyI,11546
+mdreg/pixel_models.py,sha256=Mri1yUKV9UVIO8rLJFdCGmdeWuDspS_OhZSshH5ncFE,8170
+mdreg/plot.py,sha256=5rDxDEt6QwCxFrzpAb2CtMBjpstkWnarZs92tCD8hAs,12648
+mdreg/skimage.py,sha256=EzXVd5DhP5WYjMwsIhoBIi1-sntqDOGAJeYDMm1THHc,10030
+mdreg/utils.py,sha256=Q8c8E13mTazD7GpSuVzv4492X6y6FIPxjf1mul3McTI,2935
+mdreg/datafiles/__init__.py,sha256=2qB7gga9izv-d3gp93aX5a-RK1QONXbiQADr2FTlpNY,26
+mdreg-0.5.1.dist-info/licenses/LICENSE,sha256=MTYF-6xpRekyTUglRweWtbfbwBL1I_3Bgfbm_SNOuI8,11525
+mdreg-0.5.1.dist-info/METADATA,sha256=YkC6KSFIQF8cZen4K4nMggHB3uDRX7Tf4G_7SoUSd_s,16681
+mdreg-0.5.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+mdreg-0.5.1.dist-info/top_level.txt,sha256=ALxrL5yt8A7hJwnoN8Ac68SlkzkVxqr-LUK8s1qsOEw,6
+mdreg-0.5.1.dist-info/RECORD,,
