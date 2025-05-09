@@ -1,0 +1,9 @@
+labrea_type_validation/__init__.py,sha256=0yySXKHr7_92MTxoPHViMs55EUmkehVgZBUWl-41HUM,247
+labrea_type_validation/_runtime.py,sha256=SCYk6Dr0ojySzWYMsKoqGyhbYBABYAvf_l7FHiysnig,1459
+labrea_type_validation/_startup.py,sha256=Q8bFnL6LGD-VCecGGSK9dBrXH4aMgv3a4mIHI2jbZJM,346
+labrea_type_validation/_validate.py,sha256=u1JzEOQlNrWRqrg2Vsvlxxdys3K2hL_t0lMdtRl7N4I,389
+labrea_type_validation/_version.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+labrea_type_validation-0.0.1.dist-info/METADATA,sha256=Ixvsh7DXHsnbaZicK5DGqZ9wO7KP-sdXHFbOeFHAGs4,7390
+labrea_type_validation-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+labrea_type_validation-0.0.1.dist-info/licenses/LICENSE,sha256=WTjNYjez-AJySyicllrmHG5xzyfwFu2OeqM_mAtwSC8,1088
+labrea_type_validation-0.0.1.dist-info/RECORD,,
