@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/gsmcodecs/__init__.py
+src/gsmcodecs/charmaps.py
+src/gsmcodecs.egg-info/PKG-INFO
+src/gsmcodecs.egg-info/SOURCES.txt
+src/gsmcodecs.egg-info/dependency_links.txt
+src/gsmcodecs.egg-info/top_level.txt

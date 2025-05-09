@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=62"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gsmcodecs"
+version = "1.0.0"
+description = "Python codecs for 3GPP TS 23.038"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = ["3GPP", "TS" ,"23.038", "codec", "GSM", "SMS", "PDU"]
+authors = [
+    {email = "ndf-zz@6-v.org", name = "Nathan Fraser"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Other/Nonlisted Topic",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Communications :: Telephony",
+]
+
+[project.urls]
+homepage = "https://github.com/ndf-zz/gsmcodecs"
+
