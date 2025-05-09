@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ultrasound-processing"
+version = "0.1.1"
+description = "Advanced ultrasound image processing tools for medical and scientific use"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name="Mart SciecPyt", email="mart@example.com" }
+]
+license = { text = "MIT" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "numpy",
+  "scipy",
+  "matplotlib",
+  "opencv-python"
+]
