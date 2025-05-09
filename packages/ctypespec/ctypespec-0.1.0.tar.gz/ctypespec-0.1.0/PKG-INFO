@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: ctypespec
+Version: 0.1.0
+Summary: Define, manage, and convert C types in Python via ctypes, from AST or C declarations.
+License: MIT
+Author: kris.wang
+Author-email: wenhom.wang@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# ctypespec
