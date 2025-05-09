@@ -1,0 +1,8 @@
+gender_predictor_module/__init__.py,sha256=gWZdOulnshzHHhwt5sxUJ6QQbv770RFELxnY1YhJ7K4,82
+gender_predictor_module/gender_predictor.keras,sha256=DmzHNyQwS6F3EnqtvkfBo-7t5qcbLcZi9MRvftZ9azE,536764
+gender_predictor_module/model_utils.py,sha256=qTfXvy-yObcZ0va5bnX9azoJzHEL2WUogt2mWvizr2M,803
+gender_predictor_module/tokenizer.pkl,sha256=AP13TPdp_Mq-BHKZ2OpZDKSMg9S9CxXa03S9m-Ar6sI,1016
+gender_predictor_rahul-0.1.4.dist-info/METADATA,sha256=YofNiJjNXi3QQlz5CX4TnlXyWT2xlIHGPjxHp5elU3I,602
+gender_predictor_rahul-0.1.4.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+gender_predictor_rahul-0.1.4.dist-info/top_level.txt,sha256=2ebFKxUeb9nIA67zB59MA-fe0c6VnG4Hc2o7CbT0PdU,24
+gender_predictor_rahul-0.1.4.dist-info/RECORD,,
