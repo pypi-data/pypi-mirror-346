@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: ai_commit_and_readme
+Version: 0.1.0
+Summary: AI-powered README.md and commit message generation tool using OpenAI
+Author: Oleksandr Kryklia
+Author-email: kryklia@gmail.com
+License: MIT
+Requires-Python: >=3.7
+Requires-Dist: openai>=1.0.0
+Requires-Dist: tiktoken>=0.5.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
