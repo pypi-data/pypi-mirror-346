@@ -1,0 +1,10 @@
+chessclasses/__init__.py,sha256=XiXnOS7LoC8-4NT1ZzigMAH0emhEG_mEc3GVq3WTEP0,104
+chessclasses/__main__.py,sha256=8kKX7EPA2JLQpSrnhduOTNSA-OmbSqgFdwklOKa-UuY,69
+chessclasses/core/__init__.py,sha256=Tr3CwIPY695IbF4DrKHrDes1AKd_iJgddUP46jxKHSw,163
+chessclasses/tests/__init__.py,sha256=b7tQHu705ODD5C8X_0QsEOm8ogMvTB3VaBAQ_B6t8ag,300
+chessclasses/tests/test_1984.py,sha256=GPfy8FPaGbj-w9uGHkJYSjmlSReVAXwiHS8JydJaERw,187
+chessclasses-0.0.0.dev0.dist-info/licenses/LICENSE.txt,sha256=fOh9FHccUt9OcJPBaVJ482GX4yrl_FxCUk9YRZ53JOI,1074
+chessclasses-0.0.0.dev0.dist-info/METADATA,sha256=mc7d3D8Wn_PevPjz23iBJSEWn_KOdLe3VVPJ6ucCzj8,2717
+chessclasses-0.0.0.dev0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+chessclasses-0.0.0.dev0.dist-info/top_level.txt,sha256=zuHpzM_JF8iit4C6bHz5LlUlFPtHePK8XCSSFPNJITA,13
+chessclasses-0.0.0.dev0.dist-info/RECORD,,
