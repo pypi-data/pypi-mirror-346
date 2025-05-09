@@ -1,0 +1,7 @@
+pynndescent
+scanpy
+scikit-learn
+torch
+mpltern
+catboost
+geosketch

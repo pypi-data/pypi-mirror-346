@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.cfg
+scLiTr.egg-info/PKG-INFO
+scLiTr.egg-info/SOURCES.txt
+scLiTr.egg-info/dependency_links.txt
+scLiTr.egg-info/requires.txt
+scLiTr.egg-info/top_level.txt
+sclitr/__init__.py
+sclitr/datasets.py
+sclitr/pl.py
+sclitr/pp.py
+sclitr/tl.py
+sclitr/utils.py
