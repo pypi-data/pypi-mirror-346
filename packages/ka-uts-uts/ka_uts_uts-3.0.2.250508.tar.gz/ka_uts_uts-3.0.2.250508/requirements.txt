@@ -1,0 +1,5 @@
+ka_uts_com>=3.0.0.250505
+ka_uts_dic>=3.0.1.250507
+ka_uts_log>=3.0.0.250505
+Jinja2>=3.1.6
+PyYAML>=6.0.2
