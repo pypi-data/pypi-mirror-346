@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: enkeep_ctp
+Version: 6.7.7.0
+Summary: CTP gateway for enkeep quant trading framework.
+Keywords: quant,quantitative,investment,trading,algotrading,ctp
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Chinese (Simplified)
+Project-URL: Homepage, https://www.enkeep.com
+Requires-Python: >=3.10
+Requires-Dist: pybind11>=2.9.0
+Description-Content-Type: text/markdown
+
+# enkeep框架的CTP底层接口
+
+## 说明
+
+基于CTP期货版的6.7.7接口封装开发，接口中自带的是【穿透式实盘环境】的dll文件。
+
+# tips:
+
+## 打包
+```
+pip install cibuildwheel
+
+cibuildwheel --output-dir dist
+```
+## 发布
+
+先安装一下 twine：
+
+```
+python -m pip install twine
+twine upload dist/*
+```
+没有账户去注册一个  https://pypi.org/
+
+## 安装
+
+直接使用pip命令：
+
+```
+pip install ek_ctp
+```
+
+## 使用
+
+以脚本方式启动（script/run.py）：
+
+```
+from enkeep.event import EventEngine
+from enkeep.trader.engine import MainEngine
+from enkeep.trader.ui import MainWindow, create_qapp
+
+from ek_ctp import CtpGateway
+
+
+def main():
+    """主入口函数"""
+    qapp = create_qapp()
+
+    event_engine = EventEngine()
+    main_engine = MainEngine(event_engine)
+    main_engine.add_gateway(CtpGateway)
+  
+    main_window = MainWindow(main_engine, event_engine)
+    main_window.showMaximized()
+
+    qapp.exec()
+
+
+if __name__ == "__main__":
+    main()
+```
