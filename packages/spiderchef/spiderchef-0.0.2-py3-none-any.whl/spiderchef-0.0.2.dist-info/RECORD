@@ -1,0 +1,16 @@
+spiderchef/__init__.py,sha256=_aoBd0EWhXSZ2A__pL03lsOKExJRl0iwAWD1y617C7w,187
+spiderchef/cli.py,sha256=5c9Y8xoHT37f-ItnuSMZYt2_yFwB1XZBjH-5HT0gVQc,1555
+spiderchef/exceptions.py,sha256=Nqo78MdFfzDnmDIGnyY3yr-_eJqxY4GAajGYUFzU17E,97
+spiderchef/recipe.py,sha256=ux6JnhS23020lqr6kZa8t_GJA31ARMEgBFBfgh5IRlQ,4161
+spiderchef/settings.py,sha256=xzHZSyCqOg4Bsay7R-cRd8FECd2_5rt6Ujr8lp-TOFw,394
+spiderchef/steps/__init__.py,sha256=X3TGA0eiIzNTMDPf3squc-WM1F2J3dpgeQwNuQUWfWs,1091
+spiderchef/steps/base.py,sha256=EihiQmGFpiKjD3XuZ3sfq9kRzchWTr_-JYF3A_noquM,1298
+spiderchef/steps/conditional.py,sha256=esF02VvWm3cR9vMb0ploJLqw4pQuOGmcCPCo8oWKRfI,1395
+spiderchef/steps/extract.py,sha256=F2zf2biCpshGhGtldrzHqheGYsMjb_KymNcWiw7wr2s,5406
+spiderchef/steps/fetch.py,sha256=bP8hxe-o-we-_B4zQHOzP9fm_IZQazaWFKsp_SN7Lp8,3250
+spiderchef/steps/format.py,sha256=521a3ghDgTNZYVG9d2LRECg9BGScj81XmKoFEItIMB4,3591
+spiderchef-0.0.2.dist-info/METADATA,sha256=R5C4vYNz9nZpJgNBud35hoJeo7PTcXj7ilJ5PUSmx_4,7639
+spiderchef-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spiderchef-0.0.2.dist-info/entry_points.txt,sha256=Bca3E-le_g3YEub1jhmK-bz5O7B7GNUdXXtgkWhAAM4,50
+spiderchef-0.0.2.dist-info/licenses/LICENSE,sha256=KJGqrgvkL0obxFyKISJPSdnh_1tJyr2MlOCNKp_fFs0,1072
+spiderchef-0.0.2.dist-info/RECORD,,
