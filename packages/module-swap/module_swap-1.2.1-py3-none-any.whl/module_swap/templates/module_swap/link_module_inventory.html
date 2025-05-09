@@ -1,0 +1,21 @@
+<!-- 
+project: IBT24/25, xkubec03
+author: Viktor Kubec
+file: link_module_inventory.html
+
+brief:
+Template shows form for module and inventory item linking
+-->
+{% extends 'base/layout.html' %}
+{% load static %}
+{% block content %}
+<h2>Link Module to InventoryItem</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">
+        Save
+    </button>
+</form>
+{% endblock %}
