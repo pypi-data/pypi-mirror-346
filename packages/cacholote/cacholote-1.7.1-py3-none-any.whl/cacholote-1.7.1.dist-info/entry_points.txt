@@ -1,0 +1,2 @@
+[console_scripts]
+cacholote-alembic-cli = cacholote.alembic_cli:main
