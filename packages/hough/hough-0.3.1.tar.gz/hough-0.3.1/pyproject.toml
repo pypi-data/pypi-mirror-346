@@ -1,0 +1,209 @@
+# Big thanks to https://medium.com/georgian-impact-blog/python-tooling-makes-a-project-tick-181d567eea44
+# Extra special thanks to https://github.com/python-poetry/poetry/pull/9553 and
+#    https://python-poetry.org/docs/dependency-specification#exclusive-extras
+#############
+# To build the OpenCV-python with CUDA backend:
+# ( adapted from https://gist.github.com/Birch-san/ce02730e7987a7154b6e74efc06f182a )
+# ( and https://simonwenkel.com/notes/software_libraries/opencv/opencv-cuda-integration.html )
+#
+# apt builld-dep . (from https://github.com/swenkel/opencv-cuda_deb_single_package)
+#    - careful, don't install the drivers under WSL 2!
+#
+# poetry install --extras=cuda
+# poetry shell     # IMPORTANT so we don't have a numpy dependency issue, see https://github.com/opencv/opencv-python/issues/997
+# cd ..
+# git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/opencv/opencv-python.git && cd opencv-python
+# CUDA_DIR=/usr/local/cuda-12.8
+# CUDA_ARCH=8.6    # for my 3070, check https://en.wikipedia.org/wiki/CUDA#GPUs_supported for yours
+# CMAKE_OPTS="-DWITH_TBB=1   -DENABLE_FAST_MATH=1   -DCUDA_FAST_MATH=1   -DWITH_CUBLAS=1   -DWITH_CUDA=1   -DBUILD_opencv_cudacodec=0   -DWITH_CUDNN=1   -DOPENCV_DNN_CUDA=1   -DCUDA_ARCH_BIN="$CUDA_ARCH"   -DWITH_V4L=0   -DWITH_QT=0   -DWITH_OPENGL=1   -DWITH_GSTREAMER=0   -DBUILD_SHARED_LIBS=0   -DBUILD_TESTS=0   -DBUILD_PERF_TESTS=0   -DBUILD_EXAMPLES=0   -DWITH_OPENEXR=0 -DWITH_JAVA=0 -DOPENCV_DNN_CUDA=0"
+# export CUDA_DIR CUDA_ARCH CMAKE_OPTS
+# ENABLE_CONTRIB=1 MAKEFLAGS="-j$((`nproc`+1))" CMAKE_ARGS="${CMAKE_OPTS[@]}" PATH="$CUDA_DIR/bin:$PATH" LD_LIBRARY_PATH="$CUDA_DIR/lib64" pip wheel . --verbose
+#
+# then to install:
+#   poetry run pip install --force-reinstall /home/joant/.cache/pip/wheels/6d/5f/89/fd354c871c6abab757921c5653226ea5c45727241cdcd632df/*whl
+#
+# and test with:
+#   poetry run python -c 'from cv2.cuda import getCudaEnabledDeviceCount; print(getCudaEnabledDeviceCount())'
+#############
+
+[tool.poetry]
+name = "hough"
+version = "0.3.1"
+description = "Skew detection and correction in scanned images."
+authors = ["Joan Touzet <wohali@apache.org>", "qu1j0t3 <support@telegraphics.com.au>"]
+maintainers = ["Joan Touzet <wohali@apache.org>"]
+repository = "https://github.com/wohali/hough"
+keywords = ["hough", "scan", "rotate", "deskew"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Multimedia :: Graphics :: Capture :: Scanners",
+]
+license = "GPL-2.0-only"
+readme = "README.md"
+packages = [
+    { include = "hough" },
+    { include = "tests", format = "sdist" },
+]
+
+[project]
+name = "hough"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "docopt-ng>=0.9.0",
+    "imageio>=2.37.0",
+    "numpy<2.0.0",
+    "scikit-image>=0.25.2",
+    "scipy>=1.15.2",
+    "termplotlib>=0.3.9",
+    "pymupdf>=1.23.3",
+    "filetype>=1.2.0",
+    "tqdm>=4.66.1",
+    "importlib_metadata>=6.8.0",
+    "virtualenv (>=20.30.0,<21.0.0)",
+    "cyclopts (>=3.14.1,<4.0.0)",
+    "loguru (>=0.7.3,<0.8.0)",
+#    "opencv-python (>=4.11.0.86) ; extra != 'cuda'",
+"imagecodecs (>=2025.3.30,<2026.0.0)",
+"tifffile (>=2025.3.30,<2026.0.0)"
+]
+
+[project.scripts]
+hough = 'hough.main:main'
+
+[project.optional-dependencies]
+cuda = [
+    "cupy-cuda12x (>=13.4.1)",
+    "optuna>=4.3.0",
+    "cucim-cu12>=25.4.0"
+#    "torch (>=2.7.0+c2128)",
+#    "torchvision (>=0.22.0+cu128)",
+#   "opencv-python",     # pre-built wheels a pain here.
+]
+
+[tool.poetry.requires-plugins]
+# causes issues in GH Windows builds :(
+#poethepoet = { version = "~0.34.0", extras = ["poetry_plugin"]}
+
+[tool.poetry.dependencies]
+#torch = [
+#    { markers = "extra != 'cuda'", source = "pytorch-cpu"},
+#    { markers = "extra == 'cuda'", source = "pytorch-cuda"},
+#]
+#torchvision = [
+#    { markers = "extra != 'cuda'", source = "pytorch-cpu"},
+#    { markers = "extra == 'cuda'", source = "pytorch-cuda"},
+#]
+
+#[[tool.poetry.source]]
+#name     = "pytorch-cuda"
+#priority = "explicit"
+#url      = "https://download.pytorch.org/whl/cu128"
+#
+#[[tool.poetry.source]]
+#name     = "pytorch-cpu"
+#priority = "explicit"
+#url      = "https://download.pytorch.org/whl/cpu"
+
+[tool.poetry.group.dev.dependencies]
+austin-python = "^1.7.1"
+black = "^25.1.0"
+pre-commit = "^4.2.0"
+pytest = "^8.3.5"
+pytest-mock = "^3.14.0"
+ruff = "^0.11.8"
+coverage = "^7.8.0"
+
+[tool.coverage.run]
+dynamic_context = "none"
+branch = true
+concurrency = ["multiprocessing", "thread"]
+command_line = "--module pytest --verbose --exitfirst tests/"
+disable_warnings = ["module-not-imported", "no-data-collected", "module-not-measured"]
+parallel = true
+#sigterm = true
+# see https://github.com/nedbat/coveragepy/issues/1653
+omit = [ "hough/cudautils.py", "config.py", "config-3.py" ]
+
+[tool.coverage.paths]
+source = [
+    "hough/",
+    "samples/",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "except KeyboardInterrupt",
+    "if __name__ == .__main__.:",
+]
+# currently unused
+omit = [ "hough/cudautils.py" ]
+precision = 1
+
+
+
+[tool.black]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = [
+  "tests",
+]
+addopts = "-x -v --capture=tee-sys"
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py311"
+exclude = [".venv", "venv", ".git", "__pycache__", "doc/", "build/", "dist/"]
+
+[tool.ruff.lint]
+select = [
+  # pycodestyle
+  "E",
+  # Pyflakes
+  "F",
+  # Following are not in ruff yet, see:
+  # pylint = ["+F*", "+E*", "-E0611", "-E1101", "-E0401", "-E1102", "-E1123"]
+  # pyflakes / pycodestyle = [.... "-W503"]
+]
+ignore = ["E203", "E501"]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+
+[tool.poe.tasks]
+distclean = "rm -rf ./.coverage ./htmlcov ./**/*.pyc ./**/__pycache__ ./**/*~ ./hough.egg-info ./in ./dist"
+clean = "rm -rf ./.coverage ./htmlcov ./**/*.pyc ./**/__pycache__"
+cov-run = "coverage run"
+cov-combine = "coverage combine --append . samples"
+cov-html = "coverage html"
+test = ["clean", "cov-run", "cov-combine", "cov-html"]
+
+
+[build-system]
+requires = ["poetry>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
