@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/FlowIO.egg-info/PKG-INFO
+src/FlowIO.egg-info/SOURCES.txt
+src/FlowIO.egg-info/dependency_links.txt
+src/FlowIO.egg-info/requires.txt
+src/FlowIO.egg-info/top_level.txt
+src/flowio/__init__.py
+src/flowio/_version.py
+src/flowio/create_fcs.py
+src/flowio/exceptions.py
+src/flowio/fcs_keywords.py
+src/flowio/flowdata.py
+src/flowio/utils.py
