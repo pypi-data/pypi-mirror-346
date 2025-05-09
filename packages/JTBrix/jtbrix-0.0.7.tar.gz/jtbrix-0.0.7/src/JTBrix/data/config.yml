@@ -1,0 +1,121 @@
+
+
+
+experiment_content:
+  # This Block and its content will be at the begining of the test 
+  - - type: "Begin" 
+    - type: "consent"
+      main_text: " Liebe Teilnehmenden, Vielen Dank für dein Interesse! In dieser Studie geht es um die Beurteilungen von wahren und falschen Aussagen. Die Studie dauert ungefähr 5 Minuten. Mit Ihrer Teilnahme erklären Sie sich einverstanden, dass Ihre Daten pseudonymisiert und anonym verarbeitet werden. Ihre Daten werden gemäß DSGVO vertraulich behandelt und geschützt. Sie können Ihre Zustimmung jederzeit ohne Angabe von Gründen widerrufen. Verantwortlich für diese Studie sind Prof. Dr. Hannes Rakoczy, Dr. Marina Proft und Saba Amirhaftehran (Universität Göttingen).."
+      checkbox_text: ["Hiermit bestätige ich, dass ich mindestens 18 Jahre alt bin und mit der Teilnahme an dieser Studie einverstanden bin.", "Hiermit stimme ich der Datenerhebung und -verarbeitung zu gemäß Artikel 6 DSGVO."]
+      button_text: "Start"
+      button_color: "#28a745"
+    - type: "text_input"
+      id: "participant_first_name"
+      prompt: "Geben Sie bitte einen Codenamen für sich ein:"
+      placeholder: "Your full name"
+      button_text: "Weiter"
+    - type: "dob"                           # only for specifying the age
+      "prompt": "Geburtsdatum"
+    - "type": "dropdown"
+      "prompt": "Ist Deutsch deine Muttersprache??"
+      "options": ["Ja", "Nein"]
+
+  # This Block and its content will be at the end of the test
+  - - type: "end"
+    - message: "Vielen Dank für Ihre Teilnahme an diesem Experiment."
+    - background : "#eeeeee"
+    - text_color : "#333333"
+
+  # the followint blocks will be scrambled and shown in random order
+  # The nomber of the blocks and their content as well as the order of the content inside each block can be changed
+  - - SetCode: "1"
+    - type: "video"
+      video_filename: "FB.mp4"
+    - type: "question"
+      prompt: "In welcher Box ist ein Auto?"
+      options: ["Gelb", "Grun"]
+      colors: ["yellow","green"]
+      image: "FB.png"
+    - type: "question"
+      prompt: "Glaubt der Affe, dass ein Auto in der grünen Box ist?"
+      options: [" Ja ", "Nein"]
+      colors: ["blue", "blue"]
+      image: "FB.png"
+    - type: "question"
+      prompt: "Weiß der Affe, dass ein Auto in der grünen Box ist?"
+      options: [" Ja ", "Nein"]
+      colors: ["blue", "blue"]
+      image: "FB.png"
+    - type: "popup"
+      question: "Wie sicher bist du dir?"
+      options: ["Nicht so sicher", "Ziemlich sicher", "Ganz sicher"]
+      colors: ["gray", "gray","gray"]
+
+  - - SetCode: "2"
+    - type: "video"
+      video_filename: "TB.mp4"
+    - type: "question"
+      prompt: "In welcher Box ist eine Erdbeere?"
+      options: ["Gelb", "Grun"]
+      colors: ["yellow","green"]
+      image: "TB.png"
+    - type: "question"
+      prompt: "Glaubt der Elefant, dass eine Erdbeere in der grünen Box ist?"
+      options: [" Ja ", "Nein"]
+      colors: ["blue", "blue"]
+      image: "TB.png"
+    - type: "question"
+      prompt: "Weiß der Elefant, dass eine Erdbeere in der grünen Box ist?"
+      options: [" Ja ", "Nein"]
+      colors: ["blue", "blue"]
+      image: "TB.png"
+    - type: "popup"
+      question: "Wie sicher bist du dir?"
+      options: ["Nicht so sicher", "Ziemlich sicher", "Ganz sicher"]
+      colors: ["gray", "gray","gray"]
+
+  - - SetCode: "3"
+    - type: "video"
+      video_filename: "GI.mp4"
+    - type: "question"
+      prompt: "In welcher Box ist ein Würfel?"
+      options: ["Gelb", "Grun"]
+      colors: ["yellow","green"]
+      image: "GI.png"
+    - type: "question"
+      prompt: "Glaubt der Vogel, dass ein Würfel in der grünen Box ist?"
+      options: [" Ja ", "Nein"]
+      colors: ["blue", "blue"]
+      image: "GI.png"
+    - type: "question"
+      prompt: "Weiß der Vogel, dass ein Würfel in der grünen Box ist?"
+      options: [" Ja ", "Nein"]
+      colors: ["blue", "blue"]
+      image: "GI.png"
+    - type: "popup"
+      question: "Wie sicher bist du dir?"
+      options: ["Nicht so sicher", "Ziemlich sicher", "Ganz sicher"]
+      colors: ["gray", "gray","gray"]
+
+  - - SetCode: "4"
+    - type: "video"
+      video_filename: "GT.mp4"
+    - type: "question"
+      prompt: "In welcher Box ist ein Eis?"
+      options: ["Gelb", "Grun"]
+      colors: ["yellow","green"]
+      image: "GT.png"
+    - type: "question"
+      prompt: "Glaubt das Krokodil, dass ein Eis in der gelben Box ist?"
+      options: [" Ja ", "Nein"]
+      colors: ["blue", "blue"]
+      image: "GT.png"
+    - type: "question"
+      prompt: "Weiß das Krokodil, dass ein Eis in der gelben Box ist?"
+      options: [" Ja ", "Nein"]
+      colors: ["blue", "blue"]
+      image: "GT.png"
+    - type: "popup"
+      question: "Wie sicher bist du dir?"
+      options: ["Nicht so sicher", "Ziemlich sicher", "Ganz sicher"]
+      colors: ["gray", "gray","gray"]

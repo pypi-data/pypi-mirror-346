@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question {{ index }}</title>
+    <style>
+        /* ——— Global styles ——— */
+        html, body {
+            height: 100%;
+            margin: 0;
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ——— 3-row grid (thirds) ——— */
+        .wrapper {
+            height: 100%;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;  /* three equal bands */
+            padding: 2em;                     /* outer margin */
+            box-sizing: border-box;
+        }
+
+        /* Shared cell styling */
+        .cell {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Top band: question */
+        h1 { margin: 0; }
+
+        /* Middle band: options (side-by-side + 2.5 cm up) */
+        .options {
+            flex-direction: row;              /* buttons next to each other */
+            gap: 1.2em;
+            transform: translateY(-2.5cm);    /* move upward */
+        }
+        .options button {
+            font-size: 1.2em;
+            padding: 1em 2em;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Bottom band: image (2.5 cm up) */
+        .bottom {
+            transform: translateY(-2.5cm);    /* move upward */
+        }
+        img {
+            max-width: 80vw;
+            max-height: 28vh;                 /* safe for bottom third */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Top third -->
+        <div class="cell">
+            <h1>{{ question }}</h1>
+        </div>
+
+        <!-- Middle third -->
+        <div class="cell options">
+            <button style="background-color: {{ color1 }};"
+                    onclick="submit('{{ option1 }}')">{{ option1 }}</button>
+            <button style="background-color: {{ color2 }};"
+                    onclick="submit('{{ option2 }}')">{{ option2 }}</button>
+        </div>
+
+        <!-- Bottom third -->
+        <div class="cell bottom">
+            <img src="{{ url_for('static', filename='images/' + image) }}"
+                 alt="Question Image">
+        </div>
+    </div>
+
+    <script>
+        const start = Date.now();
+        function submit(answer) {
+            const duration = Date.now() - start;
+            parent.nextStep(answer, duration);
+        }
+    </script>
+</body>
+</html>
