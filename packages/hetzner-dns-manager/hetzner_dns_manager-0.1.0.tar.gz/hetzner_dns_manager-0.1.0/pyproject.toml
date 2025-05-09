@@ -1,0 +1,79 @@
+[project]
+name = "hetzner-dns-manager"
+version = "0.1.0"
+description = "Hetzner DNS Zone Manager"
+authors = [{ name = "Steffen Beyer", email = "steffen@beyer.io" }]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "BSD-2-Clause"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Internet :: Name Service (DNS)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "click",
+    "dnspython",
+    "ipaddress",
+    "requests",
+    "rich",
+    "ruamel.yaml",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/serpent213/hetzner-dns-manager"
+"Bug Tracker" = "https://github.com/serpent213/hetzner-dns-manager/issues"
+
+[project.scripts]
+hdem = "hdem:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.hooks.custom]
+path = "build_hook.py"
+
+[tool.hatch.build.targets.sdist]
+only-include = ["hdem.py", "build_hook.py", "README.md", "LICENSE"]
+
+[tool.hatch.build.targets.wheel]
+only-include = ["hdem.py", "README.md", "LICENSE"]
+
+[dependency-groups]
+dev = ["mypy", "poethepoet", "ruff", "types-Pygments", "types-requests"]
+
+[tool.uv]
+package = false
+
+[lint]
+select = ["E", "F", "I", "N", "W", "B", "PL", "C", "D", "UP", "ANN", "Q"]
+# Explicitly select line spacing rules to avoid conflicts
+ignore = ["D203", "D213"]
+flake8-quotes.inline-quotes = "double"
+
+[tool.ruff]
+line-length = 118
+target-version = "py310"
+
+[tool.poe.tasks]
+format = { cmd = "ruff format hdem", help = "Format code with ruff" }
+formatcheck = { cmd = "ruff format --check hdem", help = "Check code format" }
+lint = { cmd = "ruff check --preview hdem", help = "Run ruff linter" }
+typecheck = { cmd = "mypy hdem", help = "Run mypy type checker" }
+check = { sequence = [
+    "formatcheck",
+    "lint",
+    "typecheck",
+], help = "Run all checks" }
+fix = { sequence = [
+    "format",
+    { cmd = "ruff check --preview --fix --unsafe-fixes hdem" },
+], help = "Fix format and lint (unsafe)" }
