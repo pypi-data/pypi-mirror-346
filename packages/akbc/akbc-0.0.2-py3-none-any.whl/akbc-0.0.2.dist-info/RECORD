@@ -1,0 +1,11 @@
+akbc/__init__.py,sha256=XYYisa4NrxgdE1Z2YdVtwaKna_J7P2xXxKiMXVokZN4,40
+akbc/__main__.py,sha256=u740NYVZxKW6UqEcHwG7U-43BsmZfuOwXIC-PHfRuig,4352
+akbc/canbus_monitor.py,sha256=l_XYSqqI5EzPy8tMVkaILZW_jH5eoSKVxXG4EFPHI4o,3058
+akbc/keyboard_controller.py,sha256=kbnKQ62Ef5TWGjrMYtZxFGGac1cmxWsHpAmS9a_Osog,10156
+akbc/screen.py,sha256=bQdtwkp09-JTjIfis4Wkh_1Hw9Xpb7CDhYBcsOKuARI,5415
+akbc/simple_vehicle.py,sha256=DP2VM7XQP-FUXtihxfP2z8LT1EJojjjzhPhS1L488U8,24561
+akbc-0.0.2.dist-info/METADATA,sha256=rJCFg5DG-_h7jPRjcJvPvoRYje_UxmXkQ5t5eflQiTU,970
+akbc-0.0.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+akbc-0.0.2.dist-info/entry_points.txt,sha256=OQptR8PBplclFCth5Es_liJD6S77TKb7a1b1FoGr9NA,44
+akbc-0.0.2.dist-info/top_level.txt,sha256=Z5_BueX3yt8949Qu25h5BM0Sk4_TLq2dX8uDAW_D0gg,5
+akbc-0.0.2.dist-info/RECORD,,
