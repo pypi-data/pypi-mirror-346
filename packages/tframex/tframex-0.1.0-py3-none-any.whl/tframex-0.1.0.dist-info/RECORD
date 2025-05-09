@@ -1,0 +1,14 @@
+tframex/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tframex/agents/__init__.py,sha256=rqakdkUFVcratwnrrY_i-4rnPEPy-sw9ovk8rR_XAg8,267
+tframex/agents/agent_logic.py,sha256=PKJARPDSXy87QxSx-K1aBNaUclsSNM_bUjR3BH-yBx4,1577
+tframex/agents/agents.py,sha256=PMgQ48OQScvroDHgFbH-OgQlXOy_ElO4IWktm0k_rd8,2550
+tframex/model/__init__.py,sha256=kSMJ-zAKx-7MP5yxoLidFeaObP2B3DB2xiryTukNw-g,274
+tframex/model/model_logic.py,sha256=MUoiyBpt2uMgW-VYU0gBWDwcuXlS_v2uFYzCm3Lolf0,8483
+tframex/systems/__init__.py,sha256=bZsN-GSpDWqSl-X8nvWDtN7uzvQxeuq4r5QlQpSzfTI,177
+tframex/systems/chain_of_agents.py,sha256=_szy5sDOmCssM73OhJHNPtQkbdf17AxnCzzhISF2lk0,3715
+tframex/systems/multi_call_system.py,sha256=0BQ4oeV--8uxDuUDn7Vb6S9IfHHh3OhRokzIJQI17Dc,3944
+tframex-0.1.0.dist-info/licenses/LICENSE,sha256=Td2VQSa3-k3sI1SH27oEmRs_Cvv-jFfmxmaWDJUFw3I,1091
+tframex-0.1.0.dist-info/METADATA,sha256=at9xnHGsDjcUmnkPKAAJsP5nsea_rzTMMyRgEKSuol0,14721
+tframex-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+tframex-0.1.0.dist-info/top_level.txt,sha256=XA0zZ0GcfWrTaJoJtR1rhsebBffRHMskdzyJO1SvxeI,8
+tframex-0.1.0.dist-info/RECORD,,
