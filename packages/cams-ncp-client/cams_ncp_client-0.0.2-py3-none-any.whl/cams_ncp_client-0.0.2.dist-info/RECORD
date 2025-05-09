@@ -1,0 +1,17 @@
+cams_ncp_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cams_ncp_client/_base.py,sha256=P4odRR1MNDTtBva34zOKpOprhtLeFYjylda9xNjpbPU,3501
+cams_ncp_client/cams_file.py,sha256=54aSC6Pb5m6Y_BmAD4R-OfW0aWl2rnjXkrIOvquDWOY,6616
+cams_ncp_client/client.py,sha256=HIbZLSfoLlxNnWas1ggFoPP7m4YP_pzci0gMvMP3k78,2657
+cams_ncp_client/forecast.py,sha256=to4GES6-4h7j2YxcinogXrpTc6p9n__hzkkloBPcwuw,11718
+cams_ncp_client/model.py,sha256=2rZYjsI6tb_N7rIqHyHRHJavYpRav1bjKCQz5RQ4fQQ,4680
+cams_ncp_client/observation.py,sha256=zoD5LOh2UeBH1DPFnrK746m8NEhm02Ll9--wJEPcLfo,7328
+cams_ncp_client/quantity.py,sha256=h43q4jTZH0T1nrTyheMe3FGZMmgMeEhrEqVXf9K0pyA,2792
+cams_ncp_client/schemas/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cams_ncp_client/schemas/common.py,sha256=Z99H_Cz0GoNL-uTPTttVOG_r8akhas0y35O4iwF_H-Y,3800
+cams_ncp_client/station.py,sha256=3K4nbl-JlALb0dqXK2utaGS26aA0XU1GJoUEiFGWB_8,5271
+cams_ncp_client/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cams_ncp_client/utils/pandas_utils.py,sha256=Ifju0OVlLocbTAYcYZevK2isSFIRAdLxxjvMhCK-1vw,4071
+cams_ncp_client-0.0.2.dist-info/LICENSE.md,sha256=GEfg4GmBQu1DR8FEGp-oHI-93USx2LvNXjZH-ZF1nX8,1035
+cams_ncp_client-0.0.2.dist-info/METADATA,sha256=FO0-6Doymzm5bodHdzSiDg6ZN7Z2U6TQCnP8lorzYLs,1850
+cams_ncp_client-0.0.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cams_ncp_client-0.0.2.dist-info/RECORD,,
