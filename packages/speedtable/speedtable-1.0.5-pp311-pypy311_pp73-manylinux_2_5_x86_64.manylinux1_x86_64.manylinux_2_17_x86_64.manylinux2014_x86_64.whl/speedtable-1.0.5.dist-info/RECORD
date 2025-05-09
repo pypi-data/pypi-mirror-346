@@ -1,0 +1,9 @@
+speedtable/__init__.py,sha256=iAjIsqCUEOY0T85xvC-DmySDxFcBYcyNkBb38FaS33k,1091
+speedtable/speedtable.c,sha256=eBCkOiclvNEkSCR2A3LCru7aAtgta9QQtu97i7keChs,10925
+speedtable/speedtable.pyi,sha256=-5KEROdsaJgIcCyouRv9WI3Ix6pe3Qfx32-_7a6st2E,224
+speedtable/speedtable.pypy311-pp73-x86_64-linux-gnu.so,sha256=NZ2wK8KVfDqtfuFJRLbH_VCsCgpS8jCajoOatdJEFG4,21896
+speedtable-1.0.5.dist-info/METADATA,sha256=Ly--YF1UuZHoDYvBiksCt1mKlaV2KQp22y73ZZXkyvU,3070
+speedtable-1.0.5.dist-info/WHEEL,sha256=Nx5zmBcanwTq9ul92crMB8wN7fbD5Tg-k-Yq0MaVlxc,252
+speedtable-1.0.5.dist-info/top_level.txt,sha256=BvM6KZho-YDe0KyaBpNwfpd9tY6tJg6bBNs78KVrtLo,11
+speedtable-1.0.5.dist-info/RECORD,,
+speedtable-1.0.5.dist-info/licenses/LICENCE,sha256=3tNv05PcBDA6LHo_q7_C449FtDaf9iBV5K5bEh8oS2o,1062
