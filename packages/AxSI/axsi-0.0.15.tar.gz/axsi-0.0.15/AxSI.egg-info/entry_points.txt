@@ -1,0 +1,5 @@
+[console_scripts]
+axsi-install-r = axsi.cli.axsi_install_r:main
+axsi-main = axsi.cli.axsi_main:main
+axsi-nifti-viewer = axsi.cli.axsi_nifti_viewer:main
+axsi-run-tests = axsi_tests.test_runner:run_tests
