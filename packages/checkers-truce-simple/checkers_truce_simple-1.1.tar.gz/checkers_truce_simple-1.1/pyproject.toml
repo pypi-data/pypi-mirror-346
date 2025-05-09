@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "checkers-truce-simple"
+version = "1.1"
+authors = [
+  { name="unnamed7353", email="unnamed7353@gmail.com" },
+]
+description = "checkers truce simple"
+readme = "README.md"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["checkers", "truce", "simple", "cts", "checkerstrucesimple"]
+dependencies = ["pygame"]
+[tool.setuptools.package-data]
+"checkers_truce_simple"=["cts.png", "cts.mp3", "georgia.ttf", "stuff.json", "victory.wav", "walcome.png", "wylcomebyck.png"]
+
+
+[project.scripts]
+checkers-truce-simple = "checkers_truce_simple:cts"

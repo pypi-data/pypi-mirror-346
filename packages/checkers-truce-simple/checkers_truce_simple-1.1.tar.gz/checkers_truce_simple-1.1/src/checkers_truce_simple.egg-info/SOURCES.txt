@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/checkers_truce_simple/__init__.py
+src/checkers_truce_simple/cts.mp3
+src/checkers_truce_simple/cts.png
+src/checkers_truce_simple/georgia.ttf
+src/checkers_truce_simple/stuff.json
+src/checkers_truce_simple/victory.wav
+src/checkers_truce_simple/walcome.png
+src/checkers_truce_simple/wylcomebyck.png
+src/checkers_truce_simple.egg-info/PKG-INFO
+src/checkers_truce_simple.egg-info/SOURCES.txt
+src/checkers_truce_simple.egg-info/dependency_links.txt
+src/checkers_truce_simple.egg-info/entry_points.txt
+src/checkers_truce_simple.egg-info/requires.txt
+src/checkers_truce_simple.egg-info/top_level.txt
