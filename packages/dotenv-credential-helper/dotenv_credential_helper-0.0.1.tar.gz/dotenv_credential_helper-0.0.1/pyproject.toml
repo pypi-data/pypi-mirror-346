@@ -1,0 +1,17 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "dotenv-credential-helper"
+authors = [{name = "Jason Hall", email = "jdhall75@gmail.com"}]
+dynamic = ["version", "description"]
+dependencies = [
+    "python-dotenv"
+]
+
+[project.urls]
+Homepage= "https://github.com/jdhall75/credentials-helper"
+
+[project.optional-dependencies]
+dev = ['pytest']
