@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "ESNext"],
+    "module": "esnext",
+    "types": ["node", "react", "react-dom"],
+    "sourceMap": true,
+    "baseUrl": "src",
+    "outDir": "dist",
+    "paths": {
+      "src/*": ["./src/*"]
+    },
+    "jsx": "react-jsx",
+
+    /* Bundler mode */
+
+    "moduleResolution": "Bundler",
+    // "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    // "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "skipLibCheck": true,
+    "allowJs": false,
+    // "strict": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/", "vite.config.ts"],
+  "exclude": ["node_modules/", "dist/", "coverage/"]
+}
