@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-neo4j = mcp_server_neo4j:main
