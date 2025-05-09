@@ -1,0 +1,60 @@
+site_name: ifk-smhi
+repo_url: https://github.com/Ingenjorsarbete-For-Klimatet/smhi
+site_author: Mladen Gibanica
+site_url: https://ingenjorsarbete-for-klimatet.github.io/ifk-smhi/
+repo_name: Ingenjorsarbete-For-Klimatet/ifk-smhi
+
+nav:
+  - Home: index.md
+  - Examples:
+      - "Metobs": metobs-example.md
+      - "Metfcts": metfcts-example.md
+      - "Mesan": mesan-example.md
+      - "Strang": strang-example.md
+      - "SMHI": smhi-example.md
+  - Reference:
+      - "Clients":
+          - "Metobs reference": metobs-reference.md
+          - "Metfcts reference": metfcts-reference.md
+          - "Mesan reference": mesan-reference.md
+          - "Strang reference": strang-reference.md
+          - "SMHI reference": smhi-reference.md
+      - "Models":
+          - "Metobs model": metobs-model.md
+          - "Metfcts model": metfcts-model.md
+          - "Mesan model": mesan-model.md
+          - "Strang model": strang-model.md
+
+watch:
+  - src/smhi
+
+theme:
+  name: material
+  custom_dir: material
+  palette:
+    scheme: default
+    primary: black
+    accent: light green
+  language: en
+  icon:
+    repo: fontawesome/brands/git-alt
+  logo: assets/ifk_logo_white.png
+  favicon: assets/favicon.png
+  features:
+    - navigation.tabs
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_root_heading: true
+            heading_level: 2
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

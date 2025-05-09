@@ -1,0 +1,93 @@
+Metadata-Version: 2.4
+Name: ifk-smhi
+Version: 0.3.0
+Summary: Inspect and get SMHI data.
+Author-email: Anders Nord <dr.anders.nord@gmail.com>, Mladen Gibanica <11275336+mgcth@users.noreply.github.com>
+License: MIT
+Project-URL: homepage, https://ingenjorsarbeteforklimatet.se/ifk-smhi/
+Project-URL: documentation, https://ingenjorsarbeteforklimatet.se/ifk-smhi/
+Project-URL: repository, https://github.com/Ingenjorsarbete-For-Klimatet/ifk-smhi
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests~=2.28
+Requires-Dist: pandas~=2.2
+Requires-Dist: geopy~=2.2
+Requires-Dist: arrow~=1.2
+Requires-Dist: shapely~=2.0
+Requires-Dist: pydantic~=2.6
+Requires-Dist: pandera[mypy]~=0.18
+Provides-Extra: lint
+Requires-Dist: ruff~=0.3; extra == "lint"
+Provides-Extra: type
+Requires-Dist: mypy~=1.7; extra == "type"
+Requires-Dist: types-requests~=2.31; extra == "type"
+Requires-Dist: pandas-stubs~=1.5; extra == "type"
+Provides-Extra: test
+Requires-Dist: pytest~=7.1; extra == "test"
+Requires-Dist: coverage~=6.5; extra == "test"
+Requires-Dist: pytest-cov~=4.0; extra == "test"
+Provides-Extra: doc
+Requires-Dist: mkdocs~=1.4; extra == "doc"
+Requires-Dist: mkdocs-material~=8.5; extra == "doc"
+Requires-Dist: mkdocstrings[python]~=0.19; extra == "doc"
+Provides-Extra: dev
+Requires-Dist: ifk-smhi[lint]; extra == "dev"
+Requires-Dist: ifk-smhi[type]; extra == "dev"
+Requires-Dist: ifk-smhi[test]; extra == "dev"
+Requires-Dist: ifk-smhi[doc]; extra == "dev"
+Requires-Dist: pre-commit~=2.20; extra == "dev"
+Dynamic: license-file
+
+<h1 align="center">ifk-smhi</h1>
+
+<p align="center">
+    <a href="https://github.com/Ingenjorsarbete-For-Klimatet/ifk-smhi/actions/workflows/github-action-test.yaml">
+        <img src="https://github.com/Ingenjorsarbete-For-Klimatet/ifk-smhi/actions/workflows/github-action-test.yaml/badge.svg?branch=main" alt="test" style="max-width: 100%;">
+    </a>
+    <a href="https://github.com/Ingenjorsarbete-For-Klimatet/ifk-smhi/actions/workflows/github-action-test.yaml">
+        <img src="https://img.shields.io/endpoint?logo=github&labelColor=%23333a41&logoColor=%23959da5&url=https://gist.githubusercontent.com/mgcth/2d8de651f24d184f5ebe101ffc3c9527/raw/ifk-smhi-coverage-badge.json" alt="coverage" style="max-width: 100%;">
+    </a>
+    <a href="https://github.com/Ingenjorsarbete-For-Klimatet/ifk-smhi/actions/workflows/github-action-docs.yaml">
+        <img src="https://github.com/Ingenjorsarbete-For-Klimatet/ifk-smhi/actions/workflows/github-action-docs.yaml/badge.svg?branch=main" alt="docs" style="max-width: 100%;">
+    </a>
+    <a href="https://github.com/Ingenjorsarbete-For-Klimatet/ifk-smhi/actions/workflows/github-action-lint.yaml">
+        <img src="https://github.com/Ingenjorsarbete-For-Klimatet/ifk-smhi/actions/workflows/github-action-lint.yaml/badge.svg?branch=main" alt="lint" style="max-width: 100%;">
+    </a>
+    <a href="https://github.com/Ingenjorsarbete-For-Klimatet/ifk-smhi/actions/workflows/github-action-type.yaml">
+        <img src="https://github.com/Ingenjorsarbete-For-Klimatet/ifk-smhi/actions/workflows/github-action-type.yaml/badge.svg?branch=main" alt="type" style="max-width: 100%;">
+    </a>
+</p>
+
+<p align="center">
+    <a href="https://www.python.org">
+        <img src="https://img.shields.io/badge/Python-3.9%20|%203.10%20|%203.11-blue" alt="Python: 3.9 - 3.11" style="max-width: 100%;">
+    </a>
+    <a href="https://pytest.org">
+        <img src="https://img.shields.io/badge/Testing_framework-pytest-a04000" alt="Testing framework: pytest" style="max-width: 100%;">
+    </a>
+    <a href="https://github.com/astral-sh/ruff">
+        <img src="https://img.shields.io/badge/Linter-ruff-black" alt="Linter and formatter: ruff" style="max-width: 100%;">
+    </a>
+    <a href="http://mypy-lang.org">
+        <img src="https://img.shields.io/badge/Type_checker-mypy-1674b1" alt="Type checker: mypy" style="max-width: 100%;">
+    </a>
+</p>
+
+## Description
+
+Python SMHI (Swedish Meteorological and Hydrological Institute) client.
+Currently supports these APIs
+
+- Meteorological Observations Metobs
+- Meteorological Forecasts Metfcts
+- Meteorological Analysis Mesan
+- Meteorological Analysis Strang
+
+## Installation
+
+ifk-smhi can be installed as
+
+```bash
+pip install ifk-smhi
+```
