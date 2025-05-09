@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/dog_eye_diagnosis_mcp_server/__init__.py
+src/dog_eye_diagnosis_mcp_server/__main__.py
+src/dog_eye_diagnosis_mcp_server/server.py
+src/dog_eye_diagnosis_mcp_server.egg-info/PKG-INFO
+src/dog_eye_diagnosis_mcp_server.egg-info/SOURCES.txt
+src/dog_eye_diagnosis_mcp_server.egg-info/dependency_links.txt
+src/dog_eye_diagnosis_mcp_server.egg-info/entry_points.txt
+src/dog_eye_diagnosis_mcp_server.egg-info/requires.txt
+src/dog_eye_diagnosis_mcp_server.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+dog-eye-diagnosis-mcp-server = dog_eye_diagnosis_mcp_server:main
