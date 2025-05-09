@@ -1,0 +1,8 @@
+ipython>=8
+matplotlib>=3.5
+notebook
+requests
+
+[dev]
+pytest>=7.0
+pytest-mock>=3.10
