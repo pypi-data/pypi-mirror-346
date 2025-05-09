@@ -1,0 +1,16 @@
+access/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+access/user_finder.py,sha256=g1Xtu6ZLMl5CB2yvZK7s2rj4N6hQNBbYdH1miZwOXtc,1025
+access/windows_audit.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alerts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alerts/notifier.py,sha256=atLSfa2KyUNYwjK7gIW2_MoanbDybxN1PqEj-92Mt_E,4784
+integrity/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+integrity/verifier.py,sha256=w1xfuyFLtFdPsi90XdJlMWHcrkA1eeoyBF3wB8moz_c,621
+utils/__init__.py,sha256=KuzTzv54CO2FHG95WzD9tgwoUC2I1sZx161KzYFh11U,24
+utils/config.py,sha256=kjLR-_EFYexS3GQkswhkAKCf4C-0de4DZJqKG1yDJqI,169
+watcher/__init__.py,sha256=zv2jJhmM4F-OGHzkGDUEOa8l9b318OIIR-hPmpvbUNU,596
+watcher/cross_platform_watcher.py,sha256=qkmknzGzPNv8HD9k17T64-_VHKYhxzHmHe3Vmm0IdkE,4027
+watcher/windows_watcher.py,sha256=Fu1uqVQQR5OuDls3O45qsTvLfsHQFCPrIyERyrdKX40,2857
+file_monitor_sys-0.1.4.dist-info/METADATA,sha256=4rDAQLfml2UmZZrn_6IM6LzJ2JE2xC7hLCOQccNPUTs,446
+file_monitor_sys-0.1.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+file_monitor_sys-0.1.4.dist-info/top_level.txt,sha256=TfLxytLYHv9D0hAu3e486T376_8ue0xTm3UWqzTj-_g,38
+file_monitor_sys-0.1.4.dist-info/RECORD,,

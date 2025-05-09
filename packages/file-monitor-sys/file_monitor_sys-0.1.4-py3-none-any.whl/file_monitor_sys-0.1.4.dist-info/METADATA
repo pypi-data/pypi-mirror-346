@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: file-monitor-sys
+Version: 0.1.4
+Summary: A Python library for monitoring file access and integrity.
+Author: Your Name
+Author-email: Your Name <your.email@example.com>
+License-Expression: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: watchdog
+Requires-Dist: yagmail
+Dynamic: author
+Dynamic: requires-python
+
+# File Monitor
+
+A Python library for monitoring file access and integrity.
