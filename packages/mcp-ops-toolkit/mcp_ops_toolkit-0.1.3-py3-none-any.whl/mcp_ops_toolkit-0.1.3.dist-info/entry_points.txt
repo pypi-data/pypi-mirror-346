@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-ops-toolkit = mcp_ops_toolkit:app
