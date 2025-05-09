@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+weather.py
+weather_wyq.egg-info/PKG-INFO
+weather_wyq.egg-info/SOURCES.txt
+weather_wyq.egg-info/dependency_links.txt
+weather_wyq.egg-info/requires.txt
+weather_wyq.egg-info/top_level.txt
