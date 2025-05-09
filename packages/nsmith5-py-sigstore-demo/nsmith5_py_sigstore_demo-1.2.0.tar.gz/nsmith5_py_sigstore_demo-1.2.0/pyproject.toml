@@ -1,0 +1,23 @@
+[project]
+name = "nsmith5-py-sigstore-demo"
+version = "1.2.0"
+authors = [
+  { name="Example Author", email="null@example.com" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENCE"]
+
+[project.urls]
+Homepage = "https://github.com/nsmith5/nsmith5-py-sigstore-demo"
+Issues = "https://github.com/pypa/nsmith5/nsmith5-py-sigstore-demo"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
