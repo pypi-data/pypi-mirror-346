@@ -1,0 +1,67 @@
+[project]
+name = "fdq"
+dynamic = ["version"]
+license = { file = "LICENSE" }
+authors = [
+  { name = "Marc Stadelmann", email = "stdma@pm.me" },
+]
+maintainers = [{ name = "Marc Stadelmann", email = "stdma@pm.me" }]
+description = "ML runtime (https://pypi.org/project/fdq/)"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "chuchichaestli",
+  "torch",
+  "torchvision",
+  "torchview",
+  "funkybob",
+  "wandb",
+  "monai",
+  "progressbar",
+  "tpl",
+  "termplotlib",
+  "colorama",
+  "termcolor",
+  "matplotlib",
+  "scikit-learn",
+  "tensorboard",
+  "opencv-python",
+  "ruff",
+]
+[project.optional-dependencies]
+dev = ["ruff>=0.11.8", "pre-commit>=3.7.0", "pytest>=8.3.5"]
+
+[dependency-groups]
+dev = ["ruff>=0.11.8", "pre-commit>=3.7.0", "pytest>=8.3.5"]
+
+[project.urls]
+Homepage = "https://github.com/mstadelmann/fonduecaquelon"
+Repository = "https://github.com/mstadelmann/fonduecaquelon.git"
+Issues = "https://github.com/mstadelmann/fonduecaquelon/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/fdq/__about__.py"
+
+[tool.hatch.envs.test]
+dependencies = ["pytest", "pytest-cov"]
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+
+[tool.ruff.lint]
+extend-select = [
+  "UP", # pyupgrade
+  "D",  # pydocstyle
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
