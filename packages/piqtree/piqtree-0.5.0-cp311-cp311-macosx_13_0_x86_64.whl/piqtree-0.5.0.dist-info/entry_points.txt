@@ -1,0 +1,10 @@
+[cogent3.app]
+piqtree_fit = piqtree._app:piqtree_fit
+piqtree_jc_dists = piqtree._app:piqtree_jc_dists
+piqtree_mfinder = piqtree._app:piqtree_mfinder
+piqtree_nj = piqtree._app:piqtree_nj
+piqtree_phylo = piqtree._app:piqtree_phylo
+piqtree_random_trees = piqtree._app:piqtree_random_trees
+
+[cogent3.hook]
+quick_tree = piqtree._app:piqtree_nj
