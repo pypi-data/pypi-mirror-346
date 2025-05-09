@@ -1,0 +1,3 @@
+[console_scripts]
+scodegen = seatools.codegen.ioc.main:main
+seatools-codegen = seatools.codegen.ioc.main:main
