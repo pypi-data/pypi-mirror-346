@@ -1,0 +1,2 @@
+akshare>=1.16.88
+fastmcp>=2.2.10
