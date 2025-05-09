@@ -1,0 +1,14 @@
+numpy
+scipy
+matplotlib
+pytest
+astropy
+astroML
+pandas
+emcee
+corner
+wget
+joblib
+tqdm
+corner
+jupyter
