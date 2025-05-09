@@ -1,0 +1,62 @@
+Metadata-Version: 2.4
+Name: dyp_file_downloader
+Version: 0.3.0
+Summary: A CLI tool to download files based on file name flag
+Project-URL: Homepage, https://github.com/yourusername/file_downloader
+Project-URL: Bug Tracker, https://github.com/yourusername/file_downloader/issues
+Author: Author
+License-Expression: MIT
+Keywords: cli,download,files
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Requires-Dist: click>=8.0.0
+Requires-Dist: requests>=2.25.1
+Description-Content-Type: text/markdown
+
+# File Downloader
+
+A simple command-line tool to download files based on predefined file names.
+
+## Installation
+
+```bash
+pip install dyp_file_downloader
+```
+
+## Usage
+
+To download a file:
+```bash
+dyp_file_downloader --file=example1.txt
+```
+
+To specify an output directory:
+```bash
+dyp_file_downloader --file=example1.txt --output-dir=/path/to/directory
+```
+
+## Available Files
+
+The following files are available for download:
+- example1.txt
+- example2.pdf
+
+## Development
+
+1. Clone the repository
+2. Install development dependencies:
+   ```bash
+   pip install -e ".[dev]"
+   ```
+
+## Publishing
+
+This package is configured to automatically publish to PyPI when a new release is created on GitHub. The GitHub Actions workflow will handle the build and publish process.
