@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: metallic-charts
+Version: 0.0.1
+Summary: 
+License: Apache-2.0
+Author: metallic
+Author-email: team@metallic.dev
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: matplotlib (>=3.9.2,<4.0.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: pydantic (>=2.8.2,<3.0.0)
+Project-URL: Homepage, https://metallic.dev/
+Description-Content-Type: text/markdown
+
+# Metallic Charts
+
+This package is a utility used to extract data in the Metallic SDK.
+
