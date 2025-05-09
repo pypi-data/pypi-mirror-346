@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: catalogpy
+Version: 1.0.1
+Summary: Libreria per ordinare testi stringhe e liste
+Home-page: https://github.com/Gabinan890/catalogpy
+Author: Gabriele Della Fazia Ristori
+Author-email: gabriele.ristori.0110@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Questa libreria è una PROVA, quindi non criticare. Grazie :)
+
+# catalogpy
+
+[![PyPI version](https://img.shields.io/pypi/v/catalogpy)](https://pypi.org/project/catalogpy/)
+![![PyPI downloads](https://img.shields.io/pypi/dm/CatalogPy)](https://pypi.org/project/CatalogPy/)
+[![License](https://img.shields.io/pypi/l/catalogpy)](https://github.com/Gabinan890/catalogpy/blob/main/LICENSE)
+
+Questa libreria è fatta per ordinare stringhe testi e liste in modo più veloce e diretto!
+Per ora ci sono due funzioni: ```elencation()``` che ti permette di elencare in ordine alfabetico le varie parole 
+che scriverai nell'input quando esegui il codice e ```ordination()``` che ti permette di elencare in ordine alfabetico 
+le parole che scriverai nell' input in una lista numerata.
