@@ -1,0 +1,107 @@
+import logging
+
+from Qt.QtCore import QObject, Signal
+
+logger = logging.getLogger(__name__)
+
+
+class Settings(QObject):
+    """A collection shared hab gui settings passed to widgets.
+
+    Args:
+        resolver (hab.Resolver): The hab resolver to get information from.
+        verbosity (int): Change the verbosity setting to this value. If None is
+            passed, all results are be shown without any filtering.
+        uri (str, optional): Use this as the current URI. If None then will attempt
+            to load the saved URI from user_pref's if enabled.
+        root_widget (Qt.QtWidgets.QWidget, optional): The main Qt widget, likely
+            a top level widget. For example `AliasLaunchWindow`.
+    """
+
+    verbosity_changed = Signal(int)
+    """Signal emitted any time the verbosity property is updated, passing the new value."""
+    uri_changing = Signal(str)
+    """Signal emitted just before the URI will be updated, passing the new URI."""
+    uri_changed = Signal(str)
+    """Signal emitted just after the URI has been updated, passing the new URI."""
+
+    def __init__(self, resolver, verbosity, uri=None, root_widget=None, parent=None):
+        super().__init__(parent=parent)
+        self._verbosity = verbosity
+        # If no URI was provided attempt to load it from the user_prefs
+        if uri is None:
+            uri = str(resolver.user_prefs().uri_check())
+        self._uri = uri
+        self.resolver = resolver
+        self.root_widget = root_widget
+
+    def load_entry_point(self, name, default, allow_none=False):
+        """Work function that loads the requested entry_point defined in site."""
+
+        default = {"default": default}
+        eps = self.resolver.site.entry_points_for_group(name, default=default)
+        if allow_none and (not eps or eps[0].value is None):
+            return None
+        if not eps:
+            raise ValueError(f"A valid entry_point for {name} must be defined")
+        return eps[0].load()
+
+    @property
+    def verbosity(self):
+        """The verbosity setting used by hab_gui.
+
+        This can be passed using `hab gui launch -v`. If the site configuration
+        variable `prefs_save_verbosity` is set to `true`(the default) and user_prefs
+        are enabled, then when this variable is modified, its state will be saved
+        in the user_prefs.
+        """
+        return self._verbosity
+
+    @verbosity.setter
+    def verbosity(self, value):
+        self._verbosity = value
+        self.verbosity_changed.emit(value)
+
+        # If enabled save the user preference for verbosity
+        if not self.resolver.site.get("prefs_save_verbosity", True):
+            return
+
+        user_prefs = self.resolver.user_prefs()
+        if user_prefs.enabled:
+            user_prefs.load()
+            user_prefs.setdefault("verbosity", {})["hab-gui"] = value
+            user_prefs.save()
+            logger.debug(f"User prefs verbosity saved to {user_prefs.filename}")
+
+    def user_pref(self, key, default=None):
+        """Returns the value for a specific user_prefs setting or default."""
+        user_prefs = self.resolver.user_prefs()
+        if user_prefs.enabled:
+            user_prefs.load()
+            return user_prefs.get(key, default)
+        return default
+
+    def set_user_pref(self, key, value):
+        """Update a specific user_pref and save prefs to disk."""
+        user_prefs = self.resolver.user_prefs()
+        if user_prefs.enabled:
+            user_prefs.load()
+            user_prefs[key] = value
+            user_prefs.save()
+            return True
+        return False
+
+    @property
+    def uri(self):
+        return self._uri
+
+    @uri.setter
+    def uri(self, uri):
+        changed = self._uri != uri
+        self.uri_changing.emit(uri)
+        self._uri = uri
+        self.uri_changed.emit(uri)
+        # Update the URI saved in user_prefs. This makes it possible for an alias
+        # using the `-` URI to use the same URI they just selected in this GUI.
+        if changed:
+            self.set_user_pref("uri", uri)
