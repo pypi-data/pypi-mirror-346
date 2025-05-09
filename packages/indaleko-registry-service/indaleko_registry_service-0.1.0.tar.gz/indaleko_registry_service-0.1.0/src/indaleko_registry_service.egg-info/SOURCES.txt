@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/indaleko_registry_service/__init__.py
+src/indaleko_registry_service/cli.py
+src/indaleko_registry_service/models.py
+src/indaleko_registry_service/service.py
+src/indaleko_registry_service.egg-info/PKG-INFO
+src/indaleko_registry_service.egg-info/SOURCES.txt
+src/indaleko_registry_service.egg-info/dependency_links.txt
+src/indaleko_registry_service.egg-info/requires.txt
+src/indaleko_registry_service.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_models.py
+tests/test_registry_holes.py
+tests/test_registry_smoke.py
+tests/test_service_direct.py

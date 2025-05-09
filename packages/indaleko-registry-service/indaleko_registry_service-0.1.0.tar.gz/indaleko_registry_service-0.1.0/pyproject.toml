@@ -1,0 +1,50 @@
+# pyproject.toml for registry_service
+
+[project]
+name = "indaleko-registry-service"
+version = "0.1.0"
+description = "Semantic registration service for UUID and metadata mapping."
+readme = "README.md"
+authors = [
+  { name = "Tony Mason", email = "fsgeek@cs.ubc.ca" }
+]
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic",
+  "twine>=6.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+  "pytest-cov",
+  "httpx",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["indaleko_registry_service"]
+
+[tool.pytest.ini_options]
+addopts = "--cov=registry_service --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.ruff]
+
+[ruff.linter]
+line-length = 100
+select = ["E", "F", "I", "N", "B"]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "pre-commit>=4.2.0",
+    "pytest>=8.3.5",
+]
+
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+twine>=6.1.0
+
+[dev]
+pytest
+ruff
+pytest-cov
+httpx

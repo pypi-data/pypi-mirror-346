@@ -1,0 +1,100 @@
+Metadata-Version: 2.4
+Name: indaleko-registry-service
+Version: 0.1.0
+Summary: Semantic registration service for UUID and metadata mapping.
+Author-email: Tony Mason <fsgeek@cs.ubc.ca>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
+Requires-Dist: pydantic
+Requires-Dist: twine>=6.1.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: httpx; extra == "dev"
+Dynamic: license-file
+
+# Registry Service
+
+Standalone semantic registration service for UUID and metadata mapping.
+
+Indaleko is an implementation of the Unified Personal Index service, a means of using metadata to bridge human episodic
+memory and traditional storage.  Indaleko uses dynamic data sources, so the purpose of the registration service is:
+
+- To allow dynamically adding services to the system.  Each new service is given a UUID to represent it.
+- To separate semantic meaning from database labeling.
+  - Every collection (table) in the database has a UUID name.
+    The mapping of that name to the UUID is maintained separately from the database where the information is stored.
+  - Elements in the schema are UUIDs.
+    The mapping of that element to the UUID is maintained separately from the database where the information is stored.
+- Each UUID may have optional metadata associated with it.  For example, this can be used to have
+  per data type encryption keys to protect sensitive information.  This works because the mapping table is
+  small relative to the data and can be protected, even when using public facing services for the database.
+- Semantic descriptions need not be limited to a single name.  They can (and should) be provided with a description.
+  Indaleko uses these along with LLMs to construct an ontology.  In this way a dynamic system with distributed
+  providers can be identified as providing equivalent information (that is, there is a mapping between them, such as
+  data providers that keep distance in parsecs and another that keeps it in Angstrom.)
+- Semantic labels, which are the identifier used by the service provider, must be unique and once the label->UUID mapping is established it is immutable.  Note that this mapping will vary on a per-installation basis.
+- UUIDs can be mapped back to semantic labels, semantic descriptions, and other properties the registry stores.
+
+## Status
+
+### Test Version
+[![TestPyPI](https://img.shields.io/badge/TestPyPI-indaleko--registry--service-blue)](https://test.pypi.org/project/indaleko-registry-service/)
+
+### Distribution Version
+
+[![PyPI version](https://badge.fury.io/py/indaleko-registry-service.svg)](https://pypi.org/project/indaleko-registry-service/)
+
+## Installation
+
+Install via uv:
+```bash
+uv pip install .
+```
+
+## Usage
+
+Run the service with the CLI:
+```bash
+registry-service
+```
+
+Or directly with Uvicorn:
+
+```bash
+uvicorn registry_service.service:app --host 0.0.0.0 --port 8000
+```
+
+## Lookup
+
+To resolve a semantic label to a UUID:
+
+...
+
+## Reverse Lookup
+
+To resolve a UUID back to its semantic identifier, call the `/lookup` endpoint with the `uuid` query parameter:
+
+```bash
+curl -X GET "http://localhost:8000/lookup?uuid=<UUID>"
+```
+
+Response example:
+```json
+{
+  "uuid": "123e4567-e89b-12d3-a456-426614174000",
+  "category": "semantic_label",
+  "name": "test_label"
+}
+```
+
+## Running Tests
+
+Execute the full test suite:
+```bash
+pytest
+```
