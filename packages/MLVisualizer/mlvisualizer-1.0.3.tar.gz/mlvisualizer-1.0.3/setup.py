@@ -1,0 +1,40 @@
+from setuptools import setup, find_packages
+
+setup(
+    name='MLVisualizer',
+    version='1.0.3',
+    description='A Python package for visualizing machine learning algorithms and their outputs.',
+    long_description=open('README.md', encoding='utf-8').read(),
+    long_description_content_type='text/markdown',
+    author='Rohit Iyengar',
+    author_email='rohitiyengar8@gmail.com',
+    url='https://github.com/Rohitlyengar/MLVisualizer',
+    packages=find_packages(),
+    install_requires=[
+        'scikit-learn',
+        'seaborn',
+        'numpy',
+        'matplotlib',
+    ],
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Topic :: Scientific/Engineering :: Visualization',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
+    python_requires='>=3.7',
+    license='MIT',
+    keywords='machine-learning data-visualization helpers',
+    project_urls={
+        'Source': 'https://github.com/Rohitlyengar/MLVisualizer',
+        'Bug Tracker': 'https://github.com/Rohitlyengar/MLVisualizer/issues',
+    },
+)
