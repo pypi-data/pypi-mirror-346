@@ -1,0 +1,7 @@
+Metadata-Version: 2.3
+Name: golem-cloud-bindings
+Version: 0.1.1
+Requires-Python: >=3.12
+Project-URL: Documentation, https://github.com/golemcloud/golem-py
+Project-URL: Homepage, https://github.com/golemcloud/golem-py
+Project-URL: Repository, https://github.com/golemcloud/golem-py
