@@ -1,0 +1,2 @@
+[console_scripts]
+pybdsf = bdsf.pybdsf:main [ishell]
