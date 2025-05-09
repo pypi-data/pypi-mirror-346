@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: oktoncss
+Version: 0.1.0
+Summary: Créer des interfaces graphiques de bureau avec un style CSS
+Author: Brayan Tematio
+Author-email: brayantematio1@email.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
