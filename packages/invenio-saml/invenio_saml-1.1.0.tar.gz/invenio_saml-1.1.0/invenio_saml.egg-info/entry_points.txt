@@ -1,0 +1,8 @@
+[invenio_base.api_apps]
+invenio_saml = invenio_saml:InvenioSSOSAML
+
+[invenio_base.apps]
+invenio_saml = invenio_saml:InvenioSSOSAML
+
+[invenio_i18n.translations]
+invenio_saml = invenio_saml
