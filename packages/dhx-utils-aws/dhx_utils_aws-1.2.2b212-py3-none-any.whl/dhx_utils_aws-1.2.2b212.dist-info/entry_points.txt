@@ -1,0 +1,2 @@
+[console_scripts]
+dhx-utils-aws = dhx_utils_aws.main:main
