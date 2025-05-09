@@ -1,0 +1,10 @@
+README.txt
+setup.py
+richerfilter/__init__.py
+richerfilter/filter.py
+richerfilter.egg-info/PKG-INFO
+richerfilter.egg-info/SOURCES.txt
+richerfilter.egg-info/dependency_links.txt
+richerfilter.egg-info/entry_points.txt
+richerfilter.egg-info/requires.txt
+richerfilter.egg-info/top_level.txt
