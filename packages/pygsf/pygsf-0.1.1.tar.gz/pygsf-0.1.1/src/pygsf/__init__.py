@@ -1,0 +1,1 @@
+print("uv pip install pygsf --default-index [INDEX_URL]")
