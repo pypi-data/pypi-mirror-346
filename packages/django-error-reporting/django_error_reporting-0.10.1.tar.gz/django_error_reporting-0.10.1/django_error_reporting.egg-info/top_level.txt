@@ -1,0 +1,2 @@
+django_error_reporting
+test_app
