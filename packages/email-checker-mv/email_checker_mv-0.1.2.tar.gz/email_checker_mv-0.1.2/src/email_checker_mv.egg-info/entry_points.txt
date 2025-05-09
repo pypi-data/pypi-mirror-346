@@ -1,0 +1,3 @@
+[console_scripts]
+check_batch = app.runner:run_batch
+check_email = app.cli:run_cli
