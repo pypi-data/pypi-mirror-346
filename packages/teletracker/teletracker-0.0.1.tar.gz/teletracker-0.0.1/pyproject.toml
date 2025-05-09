@@ -1,0 +1,19 @@
+[project]
+name = "teletracker"
+version = "0.0.1"
+description = "A Python logging handler that bridges Python's logging module with Telegram, enabling direct sending of log messages and files to Telegram chats."
+authors = [
+    {name = "Duccioo",email = "meconcelliduccio@hotmail.it"}
+]
+license = {text = "Apache License 2.0"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "pytelegrambotapi (>=4.27.0,<5.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
