@@ -1,0 +1,2 @@
+[console_scripts]
+pdfsp = pdfsp.cli:console_extract_tables
