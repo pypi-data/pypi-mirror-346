@@ -1,0 +1,6 @@
+mcp
+litellm
+openai
+
+[dev]
+pytest

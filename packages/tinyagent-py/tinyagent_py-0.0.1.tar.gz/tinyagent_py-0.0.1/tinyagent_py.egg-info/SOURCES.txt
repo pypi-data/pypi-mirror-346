@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+tinyagent/__init__.py
+tinyagent/mcp_client.py
+tinyagent/tiny_agent.py
+tinyagent_py.egg-info/PKG-INFO
+tinyagent_py.egg-info/SOURCES.txt
+tinyagent_py.egg-info/dependency_links.txt
+tinyagent_py.egg-info/requires.txt
+tinyagent_py.egg-info/top_level.txt
