@@ -1,0 +1,10 @@
+auto2/continuations/base.py,sha256=i3wrOzpLdEkHlcXUxypA6tUokBpI6bSJ1FrptUuLFXs,100442
+auto2/continuations/fixed_points.py,sha256=Zh7TTv_9Sn9chdcpAz6xcxPSXK2GNTL0egfRXS_qusM,25512
+auto2/continuations/periodic_orbits.py,sha256=39Fi8mjZ-XdZ2v_zQemzXSjA2J5A2EpSwN2GzJNZ8Wo,29074
+auto2/diagrams/bifurcations.py,sha256=3k6LALafxaXuB_9DaNQcXeQq-xwAM9HvFYrAeNAEs3c,142297
+auto2/parsers/config.py,sha256=rSX_gXmLxxi60bkrSvr0yXlEiGRkNdZCUeAYH-7sp-k,3593
+auto_auto-0.5.3.dist-info/licenses/LICENSE.txt,sha256=VPbjklMiqGWg1zT_lBNg6sVpXECuQrl36hV7pFOUKpI,1095
+auto_auto-0.5.3.dist-info/METADATA,sha256=0KIsQpj6oUjQuNCBBAk_SPwdjsMLCKm0skTGFuT6U8Q,6906
+auto_auto-0.5.3.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+auto_auto-0.5.3.dist-info/top_level.txt,sha256=MmZM8qcbZI_pHo4n9pBxIAb0hJJwHitLI42wkV-iixs,6
+auto_auto-0.5.3.dist-info/RECORD,,
