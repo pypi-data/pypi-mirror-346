@@ -1,0 +1,99 @@
+Metadata-Version: 2.4
+Name: addrx
+Version: 0.1.2
+Summary: A Python client for parsing address using Libpostal API service.
+Home-page: https://github.com/joydeep-ghatak/AddrX
+Author: Joydeep Ghatak
+Author-email: joydeep.ghatak007@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: annotated-types
+Requires-Dist: anyio
+Requires-Dist: certifi
+Requires-Dist: charset-normalizer
+Requires-Dist: h11
+Requires-Dist: httpcore
+Requires-Dist: httpx
+Requires-Dist: idna
+Requires-Dist: pydantic
+Requires-Dist: pydantic_core
+Requires-Dist: requests
+Requires-Dist: sniffio
+Requires-Dist: typing_extensions
+Requires-Dist: urllib3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# AddrX
+
+Python client for parsing address using Libpostal API service.
+
+AddrX is a Python-based client for parsing addresses using the [libpostal](https://github.com/openvenues/libpostal) API service. This service can be used to parse single addresses or a list of addresses both synchronously and asynchronously.
+
+## Features
+
+- Parse single and multiple addresses in a list.
+- Supports both synchronous and asynchronous execution.
+- Inspired by the [Dripostal](https://github.com/dribia/dripostal) service.
+
+## Installation
+
+You can install AddrX via pip:
+
+```sh
+pip install addrx
+```
+
+## API Methods
+
+- **`AddrX.single_parser(url: str, address: str, exclude_address_type: list[str] = None)`**
+
+  - Parse a single address.
+  - **Parameters**:
+
+    - `url` - The API endpoint for the libpostal service.
+    - `address` - Addresses to parse.
+    - `exclude_address_type` - A list of address type that is not required | default None **Returns**: Parsed address.
+
+- **`AddrX.parser(url: str, address_list: list[str], exclude_address_type: list[str])`**
+
+  - Parses a list of addresses synchronously.
+  - **Parameters**:
+
+    - `url` - The API endpoint for the libpostal service.
+    - `address_list` - A list of addresses to parse.
+    - `exclude_address_type` - A list of address type that is not required | default None
+
+  - **Returns**: List of parsed address.
+
+- **`AddrX.async_parser(url: str, address_list: list[str], exclude_address_type: list[str])`**
+
+  - Parses a list of addresses asynchronously.
+  - **Parameters**:
+
+    - `url` - The API endpoint for the libpostal service.
+    - `address_list` - A list of addresses to parse.
+    - `exclude_address_type` - A list of address type that is not required | default None
+
+  - **Returns**: List of parsed address.
+
+## License
+
+This project is licensed under the MIT License.
+
+--------------------------------------------------------------------------------
+
+AddrX is built to simplify address parsing using Libpostal while offering both synchronous and asynchronous capabilities.
+
+Happy coding!
