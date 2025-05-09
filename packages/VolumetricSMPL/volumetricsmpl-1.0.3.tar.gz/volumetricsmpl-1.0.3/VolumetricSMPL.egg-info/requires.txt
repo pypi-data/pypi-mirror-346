@@ -1,0 +1,4 @@
+numpy>=1.12.2
+trimesh
+scikit-image
+smplx

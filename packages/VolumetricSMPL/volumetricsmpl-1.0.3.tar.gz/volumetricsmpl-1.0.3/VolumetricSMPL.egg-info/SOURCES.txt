@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+VolumetricSMPL/__init__.py
+VolumetricSMPL/modules.py
+VolumetricSMPL/volumetric_smpl.py
+VolumetricSMPL/winding_numbers.py
+VolumetricSMPL.egg-info/PKG-INFO
+VolumetricSMPL.egg-info/SOURCES.txt
+VolumetricSMPL.egg-info/dependency_links.txt
+VolumetricSMPL.egg-info/requires.txt
+VolumetricSMPL.egg-info/top_level.txt
