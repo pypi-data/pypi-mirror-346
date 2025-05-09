@@ -1,0 +1,2 @@
+[console_scripts]
+llm-cli = llm_cli_lite.__main__:main
