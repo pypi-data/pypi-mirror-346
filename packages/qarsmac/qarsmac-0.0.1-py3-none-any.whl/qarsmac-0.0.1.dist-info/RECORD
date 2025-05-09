@@ -1,0 +1,10 @@
+qarsmac/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qarsmac/calculator.py,sha256=Rp3Ga1WFZ_7_RqCzy-sGBnB8MTm6vlwKG69mEZfneqM,3730
+qarsmac/model.py,sha256=IBosbyEohZhjM1RTDarlRu5P5_Sqrl7CvyaKd_VjwMQ,5567
+qarsmac/requestor.py,sha256=49uBwP6oU75enPRKUX1mgBrbs9zMnMo9T85dpbBbpKU,1627
+qarsmac/validator.py,sha256=eP1IU69wvmkjHzwNlXzyxrGvL3nWFNbdxLL6cMqrbVE,1197
+qarsmac-0.0.1.dist-info/licenses/LICENSE,sha256=2Y1YphzHxzR0V20VT-hYGLwMMaa3ciIRylGGKoCSYWE,1079
+qarsmac-0.0.1.dist-info/METADATA,sha256=P2GKAlrmL7CGqopzbU2LFpMjFDH_3JJqjp993iNII_s,998
+qarsmac-0.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+qarsmac-0.0.1.dist-info/top_level.txt,sha256=Rmn-ncZr_8Ok9kpXMGnH20qwGqwQE5Tk4J3TxNL4J9Q,8
+qarsmac-0.0.1.dist-info/RECORD,,
