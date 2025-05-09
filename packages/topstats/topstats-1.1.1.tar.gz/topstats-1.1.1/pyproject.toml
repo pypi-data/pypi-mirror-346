@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools"]
+
+[project]
+name = "topstats"
+version = "1.1.1"
+description = "A simple API wrapper for topstats.gg written in Python."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "null8626" }]
+keywords = ["discord", "discord-bot", "topgg"]
+dependencies = ["aiohttp>=3.11.18"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Utilities"
+]
+requires-python = ">=3.9"
+
+[project.urls]
+Documentation = "https://topstats.readthedocs.io/en/latest/"
+"Raw API Documentation" = "https://docs.topstats.gg/introduction/introduction/"
+Repository = "https://github.com/top-stats/python-sdk"
+"Support server" = "https://discord.gg/jjEauJXuZc"
