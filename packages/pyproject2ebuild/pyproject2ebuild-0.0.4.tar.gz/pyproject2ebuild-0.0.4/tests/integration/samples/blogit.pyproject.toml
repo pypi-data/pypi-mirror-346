@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=67.0.0", "wheel", "setuptools_scm[toml]>=6.2"]
+
+[project]
+name = "blogit"
+dynamic = ["version"]
+authors = [
+  {name = "Oz N Tiram", email = "oz.tiram@gmail.com"},
+]
+license = {text = "GPL-3.0-or-later"}
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Intended Audience :: System Administrators",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+]
+
+dependencies = [
+  'markdown2>=2.3.2',
+  'tinydb>=3.6.0',
+  'jinja2==2.11.3',
+  'pygments==2.2.0'
+]
+
+[tool.setuptools]
+packages = ["blogit"]
+
+[project.urls]
+homepage = "https://gitlab.com/oz123/blogit"
+
+[project.scripts]
+blogit = "blogit.blogit:main"
+
+[tool.setuptools_scm]
+write_to = "blogit/_version.py"
