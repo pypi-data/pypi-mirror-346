@@ -1,0 +1,17 @@
+ifk_smhi-0.3.0.dist-info/licenses/LICENSE,sha256=Upx4k8RjqywSoP3tYx3kw4vU9-bvgACQkht2Iz2I9_k,1087
+smhi/constants.py,sha256=zq4G44ewKKmTbXogUYwzAWlIxcPHE8wDG2gPSKPfbdY,4722
+smhi/mesan.py,sha256=T-5wXy2DZoPwah6quEuqpr8jSmlW_O3rVmDKRPR96JU,10996
+smhi/metfcts.py,sha256=4nvHe5FrrbGOLXLk-TX2qk95sea38xZaREVqhJy-Sf0,1659
+smhi/metobs.py,sha256=g_fzbimUo-Xo05J6iKzQVO-jv6Si1eS0Ij9Bpd5cFh8,16224
+smhi/smhi.py,sha256=WJeR_A2wGVCvt8FhjV1_oBl862luqkSbnZoRqyz6c_M,5718
+smhi/strang.py,sha256=JrcdWRZ-cXdyQ3qjmX4jbOzWx_VkK9KorhhoQrDZ2y0,11042
+smhi/utils.py,sha256=vLHIstRtJxdOIrPetIiyUjFhRS3WJsL2w9E63GhWCRA,1149
+smhi/models/mesan_model.py,sha256=cvPdhBrutTHYFsgoBYaYUEEghrMzwOYvcmNzSKOEykk,2382
+smhi/models/metfcts_model.py,sha256=eUOd0OrFKjylAl4MKZsgntmBCNhv5UgC8t4b2iCcxoI,2236
+smhi/models/metobs_model.py,sha256=Yc9sWhdQY1d1YDwm8KH-6m_pZ3ojPK3P3OitAyRiNuM,5781
+smhi/models/strang_model.py,sha256=FAILfzT9h96zDL5qJFd3jtrLW_ef_GEqeTuXBAQpP90,1526
+smhi/models/variable_model.py,sha256=z3WUZLhYdLyVXxH8vKcVeXkYUSwyAIcKR04w6ueKsbw,1301
+ifk_smhi-0.3.0.dist-info/METADATA,sha256=voUQoYoaKo56FbBAfr3n34TLHcwb8ApbrI0cwNdtkw4,4280
+ifk_smhi-0.3.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+ifk_smhi-0.3.0.dist-info/top_level.txt,sha256=KufNLo_qa6509DlxwJImLlF9AMqU3OuwqhTQF1_zs_Q,5
+ifk_smhi-0.3.0.dist-info/RECORD,,
