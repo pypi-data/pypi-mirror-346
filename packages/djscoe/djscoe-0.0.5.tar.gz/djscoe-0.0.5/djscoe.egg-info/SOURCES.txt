@@ -1,0 +1,17 @@
+LICENSE
+README.txt
+setup.py
+djscoe/__init__.py
+djscoe/ai.py
+djscoe/cn.py
+djscoe/daa.py
+djscoe/de.py
+djscoe/dsa.py
+djscoe/os.py
+djscoe/poa.py
+djscoe/python.py
+djscoe.egg-info/PKG-INFO
+djscoe.egg-info/SOURCES.txt
+djscoe.egg-info/dependency_links.txt
+djscoe.egg-info/top_level.txt
+test/test.py
