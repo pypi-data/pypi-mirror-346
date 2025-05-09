@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/isprime/__init__.py
+src/isprime/core.py
+src/isprime_kaatre.egg-info/PKG-INFO
+src/isprime_kaatre.egg-info/SOURCES.txt
+src/isprime_kaatre.egg-info/dependency_links.txt
+src/isprime_kaatre.egg-info/top_level.txt
+tests/test_core.py

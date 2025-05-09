@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "isprime-kaatre"
+version = "0.1.0"
+description = "A simple package to check for prime numbers"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+authors = [
+  { name = "Manish Rakaskoti", email = "newfeed4554@gmail.com" }
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/kaatreHx/isprime"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
