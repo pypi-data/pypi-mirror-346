@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+local_server/__init__.py
+local_server/server.py
+local_server.egg-info/PKG-INFO
+local_server.egg-info/SOURCES.txt
+local_server.egg-info/dependency_links.txt
+local_server.egg-info/entry_points.txt
+local_server.egg-info/requires.txt
+local_server.egg-info/top_level.txt

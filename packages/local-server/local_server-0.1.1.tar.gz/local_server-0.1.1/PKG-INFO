@@ -1,0 +1,44 @@
+Metadata-Version: 2.2
+Name: local-server
+Version: 0.1.1
+Summary: A simple FastAPI HTTP server with directory listing
+Author: skyci
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi==0.115.12
+Requires-Dist: uvicorn==0.34.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# local-server
+
+A simple FastAPI-based HTTP server that serves static files and directory listings.
+
+## 🌟 Features
+
+- Serves files from the current directory.
+- Automatically displays `index.html` if present.
+- Lists files and directories if `index.html` is not available.
+- Clickable links for navigating directories and viewing file content.
+
+---
+
+## 🛠 Installation
+
+Make sure you have Python 3.7 or higher installed.
+
+### Using pip
+
+```bash
+pip install local-server
+```
