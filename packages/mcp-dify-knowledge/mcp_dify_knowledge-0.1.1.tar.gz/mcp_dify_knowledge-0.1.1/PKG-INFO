@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: mcp-dify-knowledge
+Version: 0.1.1
+Summary: This is a simple MCP service for the Dify knowledge base.
+Requires-Python: >=3.13
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.8.0
+Description-Content-Type: text/markdown
+
+# Usege
+
+## Environment Variables
+
+```
+DIFY_API_URL="your dify knowledge api url"
+DIFY_API_KEY="your dify knowledge api key"
+```
