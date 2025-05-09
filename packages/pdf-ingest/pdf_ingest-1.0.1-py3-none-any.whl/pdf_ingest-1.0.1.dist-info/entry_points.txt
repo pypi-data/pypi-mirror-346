@@ -1,0 +1,2 @@
+[console_scripts]
+pdf-ingest = pdf_ingest.cli:main
