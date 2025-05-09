@@ -1,0 +1,14 @@
+djscoe/__init__.py,sha256=GRx1eLOG2yDfS4nXz_LmWqj_fa2VsZzJyw-cbsDWvmI,157
+djscoe/ai.py,sha256=88laChxD3Yuk94EmlcX70feytRGxQeQmFRq0Vyq-6Ko,18825
+djscoe/cn.py,sha256=Pdk9ojk1pe1kPTTir8zNW7laI0prIH8sfLw2Hj4o9a0,20485
+djscoe/daa.py,sha256=Ac8XF3AgRgP-KewSDc_oxYkezLZe05qmWs6g4ZfppCk,41074
+djscoe/de.py,sha256=LtPHbsQz4-V9FHoInxjukv9bxi2zWTw73C4dDIZbDVk,2533
+djscoe/dsa.py,sha256=Su-wCeTaepAMuCzOYENzS50j194mirAl3OpiHlbG2os,78867
+djscoe/os.py,sha256=KuJA8AsB41VNM4_CMcjTw65-c7Xs-keo8FrLIOZ97Bo,34344
+djscoe/poa.py,sha256=mp6y4Ghr8oULLMAONe58RjAQaTEvt1pZPeO8R0yP2ys,25202
+djscoe/python.py,sha256=IsJaXZS1eHt7LFpQV8yXyeA8M6mgGbumGH5LrPQe6L0,9690
+djscoe-0.0.5.dist-info/licenses/LICENSE,sha256=GRe90KPMXnMIyUZUe8O1XewyfDKElcwe-AiOAAbijqc,1096
+djscoe-0.0.5.dist-info/METADATA,sha256=E8g-pzRS5W9i7ozPyndW2uqLko1RxlvS8NZaK_DuLiQ,670
+djscoe-0.0.5.dist-info/WHEEL,sha256=1tXe9gY0PYatrMPMDd6jXqjfpz_B-Wqm32CPfRC58XU,91
+djscoe-0.0.5.dist-info/top_level.txt,sha256=XkeoGEdiiRrmu9M23i2SfGV2Ea5lp7M1HJ1NYbDzBzM,7
+djscoe-0.0.5.dist-info/RECORD,,
