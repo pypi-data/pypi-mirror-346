@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+anchorna/__init__.py
+anchorna/cli.py
+anchorna/core.py
+anchorna/io.py
+anchorna/util.py
+anchorna.egg-info/PKG-INFO
+anchorna.egg-info/SOURCES.txt
+anchorna.egg-info/dependency_links.txt
+anchorna.egg-info/entry_points.txt
+anchorna.egg-info/requires.txt
+anchorna.egg-info/top_level.txt
+anchorna/tests/test_anchorna.py
+anchorna/tests/data/anchors_complete_old.gff
+anchorna/tests/data/anchors_subset_old.gff
+anchorna/tests/data/pesti56.gff.zip
