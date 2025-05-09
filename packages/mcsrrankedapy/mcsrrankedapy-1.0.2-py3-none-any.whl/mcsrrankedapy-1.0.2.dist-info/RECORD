@@ -1,0 +1,14 @@
+mcsrrankedapy/__init__.py,sha256=VC-Jjx_GIDcHM2OR8ZNuVS4IxYUZNDtqiryeAxcXBpc,130
+mcsrrankedapy/client.py,sha256=PgRAn3TsjnhRo6otPwfLz117VnIKSQsyriM3q3BO48Y,6091
+mcsrrankedapy/tester.py,sha256=lcgkb8gUzez6jaeklP7j8Ad9qiKNdJtlKT4osr_NKNQ,267
+mcsrrankedapy/objects/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcsrrankedapy/objects/exceptions.py,sha256=0hejaU--Px78Qn8P33aVGk0IHQ26yS6R6-uz4vzUO3Y,760
+mcsrrankedapy/objects/leaderboards.py,sha256=BsOjw1fFpuGVpXSSePQK56CSivIdVr1nWBYpWGF3hpo,1038
+mcsrrankedapy/objects/match_info.py,sha256=pKeNrPuGRlt-O9L-3i8xdbPY31QMChgmr5Nr_RfLBVk,1434
+mcsrrankedapy/objects/user_profile.py,sha256=GOPXN3D5hPqm51I9raAjYIGAhOOOpEjBy9ejsdpE3_Q,3440
+mcsrrankedapy/objects/versus_stats.py,sha256=5E6cvoQTApQQRsojzJCMUjg2VmfOrd7iHSPRri4gIEw,491
+mcsrrankedapy-1.0.2.dist-info/licenses/LICENSE,sha256=muz321O1V9n2E9Ae3bUb5WXiinEkyondWwPgMhFGW_4,1061
+mcsrrankedapy-1.0.2.dist-info/METADATA,sha256=P9fGfx5NrMgQoCSpiNX9OAuzbI4uVkP-5zXWJJZ7JA8,2648
+mcsrrankedapy-1.0.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+mcsrrankedapy-1.0.2.dist-info/top_level.txt,sha256=ZbjSBxlFV1H8wJi2a-WIMcVkG133cUM154PrbnvMOGE,14
+mcsrrankedapy-1.0.2.dist-info/RECORD,,
