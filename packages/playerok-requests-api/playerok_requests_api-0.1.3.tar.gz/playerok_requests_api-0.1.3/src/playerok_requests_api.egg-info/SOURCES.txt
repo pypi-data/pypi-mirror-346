@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/playerok_requests_api/__init__.py
+src/playerok_requests_api/chats.py
+src/playerok_requests_api/deals.py
+src/playerok_requests_api/items.py
+src/playerok_requests_api/users.py
+src/playerok_requests_api/utils.py
+src/playerok_requests_api.egg-info/PKG-INFO
+src/playerok_requests_api.egg-info/SOURCES.txt
+src/playerok_requests_api.egg-info/dependency_links.txt
+src/playerok_requests_api.egg-info/requires.txt
+src/playerok_requests_api.egg-info/top_level.txt
