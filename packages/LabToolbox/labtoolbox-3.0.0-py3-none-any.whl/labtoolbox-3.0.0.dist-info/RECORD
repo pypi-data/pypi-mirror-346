@@ -1,0 +1,14 @@
+LabToolbox/__init__.py,sha256=okBHXigv2Gr71qF96b8hZMKL9e40shQvxp13zn3l2g0,946
+LabToolbox/_helper.py,sha256=ctJiEzIwxBiWbYAwnatCFl8PQwTsHK39K1rwvq-E_tg,2812
+LabToolbox/_uncertainty_class.py,sha256=wIYwFDV6fnAyTEld4MSYqi6BcFbTdIX03efFuFXhcbI,7676
+LabToolbox/fit.py,sha256=zWRSdtX-RvuX2fziQ0nIrqS2vdjLK6b0Rl9N23zMbmw,26401
+LabToolbox/io.py,sha256=BsUhbG2VLP7r6DFA30hm1QRu-MyQqxz-FGDl336ROwA,1601
+LabToolbox/signals.py,sha256=vKqTqfw6ljQkIaJvSGzrIo4lAjw-5bFEIdYOr4KVKyQ,13528
+LabToolbox/stats.py,sha256=Q3Q0wCu1XV7QDPlGAdBLiwZ5SyFFyL7CBETlg3pzQzE,25921
+LabToolbox/uncertainty.py,sha256=F7Xt6EWU6lo5382sQzPz9sY8tiQADXd8kWqf4qr9mMI,7163
+LabToolbox/utils.py,sha256=H_4PnQ7ZraSfYDs5He-5y2Q_qwGUVHtFGAnJGq0mlBY,7075
+docs/test.py,sha256=KZhNB0JcW-lNUdLhSrmTzJtvMgzMZXYgRLjfl7SpCmQ,3031
+labtoolbox-3.0.0.dist-info/METADATA,sha256=Vukr_g3sOjysr8mcJQoRPvLY-lAQGm9oNGR6swS2QSQ,8439
+labtoolbox-3.0.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+labtoolbox-3.0.0.dist-info/top_level.txt,sha256=Ws40r-9gxowFvxya9raqNnw1tKgMN2XZFBGBrzx7iWc,16
+labtoolbox-3.0.0.dist-info/RECORD,,
