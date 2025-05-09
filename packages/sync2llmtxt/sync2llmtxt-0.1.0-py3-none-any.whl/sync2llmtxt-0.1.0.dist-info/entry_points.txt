@@ -1,0 +1,2 @@
+[console_scripts]
+sync2llmtxt = sync2llmtxt.sync2llmtxt:main
