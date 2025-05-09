@@ -1,0 +1,37 @@
+[
+	{
+		"name": "dx_cls.onnx",
+		"url": "https://modelscope.cn/datasets/zscmmm/cfundata/resolve/master/dx/dx_cls.onnx",
+		"md5": "3d98e85b380d0de99622e7f12ad39e64"
+	},
+	{
+		"name": "dx_cls.pt",
+		"url": "https://modelscope.cn/datasets/zscmmm/cfundata/resolve/master/dx/dx_cls.pt",
+		"md5": "0b184cc58b69eabbb6a0eb9cccd41cb2"
+	},
+	{
+		"name": "dx_det.onnx",
+		"url": "https://modelscope.cn/datasets/zscmmm/cfundata/resolve/master/dx/dx_det.onnx",
+		"md5": "e29f82d739232924c4fdcb93a5fbda76"
+	},
+	{
+		"name": "dx_det.pt",
+		"url": "https://modelscope.cn/datasets/zscmmm/cfundata/resolve/master/dx/dx_det.pt",
+		"md5": "14b550d13a1031785e113201eee87cd8"
+	},
+	{
+		"name": "simsun.ttc",
+		"url": "https://modelscope.cn/datasets/zscmmm/cfundata/resolve/master/font/simsun.ttc",
+		"md5": "1615784d420bffd42e8addd1714f7c6a"
+	},
+	{
+		"name": "frequency.parquet",
+		"url": "https://modelscope.cn/datasets/zscmmm/cfundata/resolve/master/freq/frequency.parquet",
+		"md5": "8a4447540c68f01db349fd004e731754"
+	},
+	{
+		"name": "frequency2.parquet",
+		"url": "https://modelscope.cn/datasets/zscmmm/cfundata/resolve/master/freq/frequency2.parquet",
+		"md5": "e274a5f3eba04c5be3e7eec361bf94d9"
+	}
+]
