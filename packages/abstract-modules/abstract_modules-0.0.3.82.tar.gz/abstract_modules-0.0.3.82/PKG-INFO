@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: abstract_modules
+Version: 0.0.3.82
+Summary: abstract_modules allows you to easily upload your Python module to the Python Package Index (PyPI) using Twine. It automates several steps of the packaging and distribution process, making it easier to share your module with the Python community..
+Home-page: https://github.com/AbstractEndeavors/abstract_modules
+Author: putkoff
+Author-email: partners@abstractendeavors.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# Unknown Package (vUnknown Version)
+
+No description available
+
+## Installation
+
+```bash
+pip install Unknown Package
+```
+
+## Dependencies
+
+None
+
+## Modules
+
+### src/abstract_modules/__init__.py
+
+Description of script based on prompt: You are analyzing a Python script '__init__.py' lo (mock response)
+
+### src/abstract_modules/upload_utils.py
+
+Description of script based on prompt: You are analyzing a Python script 'upload_utils.py (mock response)
+
+### src/abstract_modules/create_module.py
+
+Description of script based on prompt: You are analyzing a Python script 'create_module.p (mock response)
+
+### src/abstract_modules/module_utils.py
+
+Description of script based on prompt: You are analyzing a Python script 'module_utils.py (mock response)
+
+### src/abstract_modules/main.py
+
+Description of script based on prompt: You are analyzing a Python script 'main.py' locate (mock response)
+
+### src/abstract_modules/create_module_folder.py
+
+Description of script based on prompt: You are analyzing a Python script 'create_module_f (mock response)
+
