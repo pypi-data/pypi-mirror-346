@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/germgenie/main.py
+src/germgenie.egg-info/PKG-INFO
+src/germgenie.egg-info/SOURCES.txt
+src/germgenie.egg-info/dependency_links.txt
+src/germgenie.egg-info/entry_points.txt
+src/germgenie.egg-info/requires.txt
+src/germgenie.egg-info/top_level.txt
