@@ -1,0 +1,18 @@
+[project]
+name = "exomiser-ml"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pheval>=0.5.4",
+    "shap>=0.47.2",
+    "xgboost>=3.0.0",
+]
+
+[project.scripts]
+ml-utils = "exomiser_ml.main:ml"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
