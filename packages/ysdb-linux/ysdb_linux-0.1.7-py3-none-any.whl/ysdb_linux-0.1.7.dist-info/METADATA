@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ysdb-linux
+Version: 0.1.7
+Summary: YSDB Python SDK for Linux
+Home-page: https://www.k2data.com.cn
+Author: ysdb
+Author-email: ysdb@k2data.com.cn
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# YSDB SDK
+
+此SDK为二次开发人员提供ysdb数据库的python开发接口。
+
+由于python是采用C语言开发的，内置ctypes组件，可无缝调用C语言的动态库。ysdb提供标准C动态库，由python封装C动态库，对外提供标准python的接口SDK。用户只需要调用python的对象既可以访问ysdb数据库。
