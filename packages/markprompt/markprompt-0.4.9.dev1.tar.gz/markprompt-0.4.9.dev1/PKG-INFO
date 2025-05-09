@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: markprompt
+Version: 0.4.9.dev1
+Author-email: madroid <madroidmaq@gmail.com>
+Requires-Python: <3.12,>=3.11
+Requires-Dist: docstring-parser>=0.16
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: openai>=1.12.0
+Requires-Dist: pydantic>=2.6.1
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: python-frontmatter==1.1.0
+Requires-Dist: rich>=13.7.0
+Requires-Dist: typing-extensions>=4.9.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.4; extra == 'dev'
