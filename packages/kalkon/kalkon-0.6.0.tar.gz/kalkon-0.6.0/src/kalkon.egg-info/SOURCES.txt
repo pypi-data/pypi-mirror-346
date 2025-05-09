@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/kalkon/__init__.py
+src/kalkon/__main__.py
+src/kalkon/gui.py
+src/kalkon/kalkon.py
+src/kalkon/main.py
+src/kalkon.egg-info/PKG-INFO
+src/kalkon.egg-info/SOURCES.txt
+src/kalkon.egg-info/dependency_links.txt
+src/kalkon.egg-info/entry_points.txt
+src/kalkon.egg-info/requires.txt
+src/kalkon.egg-info/top_level.txt
+src/kalkon/images/kalkon.png

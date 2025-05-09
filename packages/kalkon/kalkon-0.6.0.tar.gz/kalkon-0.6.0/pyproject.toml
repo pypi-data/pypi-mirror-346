@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kalkon"
+description = "Calculator with GUI"
+version = "0.6.0"
+authors = [{name = "Fredrik Andersson", email = "freand@gmail.com"}]
+maintainers =  [{name = "Fredrik Andersson", email = "freand@gmail.com"}]
+readme = "README.md"
+license-files = ["LICENSE"]
+urls = { homepage = "https://github.com/freand76/kalkon" }
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+requires-python = ">=3.9"
+dependencies = [
+  "pyside6>=6.9.0",
+  "pexpect==4.9.0",
+  "asteval==1.0.6",
+]
+
+scripts = { kalkon = "kalkon:main" }
+
+keywords = ["calculator"]
+
+[tool.ruff]
+line-length = 99
+target-version = "py38"
+
+show-fixes = true
+output-format = "full"
+
+src = ["src"]
+namespace-packages = ["src/kalkon"]
+
+[tool.ruff.lint]
+# "extend" here adds to the ruff defaults, rather than replacing.
+# Q = flake8-quotes, TID = flake8-tidy-imports, I = isort, FA = flake8-future-annotations
+extend-select = ["Q", "TID", "I", "FA"]
+# E501 = "line too long". Handled by black.
+extend-ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "parents"
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+
+known-third-party = [
+    "asteval",
+    "pytest",
+]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "PySide6",
+    "pyqtgraph",
+    "first-party",
+    "local-folder",
+]
+
+[tool.ruff.lint.isort.sections]
+"PySide6" = ["PySide6"]
+"pyqtgraph" = ["pyqtgraph"]
