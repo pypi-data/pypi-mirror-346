@@ -1,0 +1,7 @@
+grpcio
+grpcio-tools
+pydantic
+PyJWT
+nest_asyncio
+openai
+google-genai
