@@ -1,0 +1,7 @@
+dist
+docs
+flixopt
+pics
+scripts
+site
+tests
