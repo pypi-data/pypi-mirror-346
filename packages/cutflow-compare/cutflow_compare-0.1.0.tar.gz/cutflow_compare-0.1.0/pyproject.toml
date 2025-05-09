@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cutflow_compare"
+version = "0.1.0"
+description = "A package to compare cutflow histograms from ROOT files."
+authors = [{ name = "Ibrahim H.I. ABUSHAWISH", email = "ibrahim.hamed2701@gmail.com" }]
+requires-python = ">=3.6"
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["ROOT", "cutflow", "histograms", "data analysis",  "CutLang"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "pandas>=1.0",
+    "ROOT>=6.24"
+]
+
+[project.urls]
+Homepage = "https://github.com/ibeuler/cutflow_compare"
+Repository = "https://github.com/ibeuler/cutflow_compare"
+Documentation = "https://github.com/ibeuler/cutflow_compare#readme"
+Issues = "https://github.com/ibeuler/cutflow_compare/issues"
