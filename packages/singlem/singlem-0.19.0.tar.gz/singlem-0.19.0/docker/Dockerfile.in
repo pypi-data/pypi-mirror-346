@@ -1,0 +1,55 @@
+# Use a lightweight base image
+FROM debian:bullseye-slim
+
+# This dockerfile uses cached mounts, so to build use e.g.
+# $ DOCKER_BUILDKIT=1 docker build .
+
+WORKDIR /singlem
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    ca-certificates \
+    git \
+    unzip \
+    man-db \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Pixi (via install script)
+RUN curl -fsSL https://pixi.sh/install.sh | bash
+
+# Add Pixi to PATH
+ENV PATH="/root/.pixi/bin:${PATH}"
+
+# re-add the first line when setup here - the second line enables running 
+RUN git clone https://github.com/wwood/singlem . && git checkout vSINGLEM_VERSION
+# RUN git clone https://github.com/wwood/singlem . && git checkout SINGLEM_VERSION
+
+RUN pixi run --no-lockfile-update
+
+# Remove bundled singlem packages
+RUN rm -rfv singlem/singlem/data singlem/.git singlem/appraise_plot.png singlem/test
+
+# Download default metapackage
+# Make the directory and its contents readable by others https://github.com/wwood/singlem/issues/155
+RUN mkdir -p /singlem/db && cd /singlem/db && pixi run --frozen SINGLEM_COMMAND data --output-directory . && \
+    find /singlem/db -type d -print0 | xargs -0 chmod 755 && \
+    find /singlem/db -type f -print0 | xargs -0 chmod +r
+
+ENV SINGLEM_ENV_VAR=/singlem/db/SINGLEM_DB_BASENAME
+# Checks whether the metapackage is up to date
+RUN pixi run --frozen SINGLEM_COMMAND data --verify
+
+# Run some tests
+RUN pixi run --frozen SINGLEM_COMMAND --version
+RUN pixi run --frozen SINGLEM_COMMAND pipe --full-help 
+
+# Remove all the build dependencies / image layers for a smaller image overall
+FROM scratch
+COPY --from=0 / /
+
+WORKDIR /data
+# Add Pixi to PATH
+ENV PATH="/root/.pixi/bin:${PATH}"
+ENV SINGLEM_ENV_VAR=/singlem/db/SINGLEM_DB_BASENAME
+ENTRYPOINT ["pixi", "run", "--frozen", "--manifest-path", "/singlem/pixi.toml", "SINGLEM_COMMAND"]
