@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: minipygit
+Version: 0.1.1
+Summary: mini version control system written in python
+Author-email: romeomanoela <romeomanoela18@gmail.com>
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: black>=25.1.0
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: rich>=14.0.0
+Requires-Dist: setuptools>=61.0
+Requires-Dist: twine>=6.1.0
+
+github: https://github.com/RomeoManoela/py-git
+# minipygit
+
+A mini version control system written in Python, inspired by Git.
+
+## Overview
+
+minipygit is a lightweight version control system that implements the core functionality of Git. It's designed to be simple, educational, and functional for basic version control needs.
+
+## Features
+
+- Initialize a repository
+- Stage files for commit
+- Commit changes with messages
+- View repository status
+- View commit history
+- Compare file differences
+- Checkout previous commits
+
+## Installation
+
+```bash
+
+pip install minipygit
+```
+
+## Usage
+
+```bash
+# Initialize a new repository
+py-git init
+
+# Add files to staging area
+py-git add file.txt
+py-git add .  # Add all files
+
+# Commit changes
+py-git commit "Add initial files"
+
+# Check repository status
+py-git status
+
+# View commit history
+py-git logs
+
+# View differences in a file
+py-git diff file.txt
+
+# Checkout a specific commit
+py-git checkout <commit_hash>
+
+# Display help
+py-git --help
+```
+
+- Python 3.12 or higher
