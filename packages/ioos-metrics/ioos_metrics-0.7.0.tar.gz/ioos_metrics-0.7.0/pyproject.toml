@@ -1,0 +1,118 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools>=42",
+  "setuptools_scm",
+  "wheel",
+]
+
+[project]
+name = "ioos_metrics"
+description = "Package to fetch various metrics for IOOS by the numbers"
+readme = "README.md"
+license = {file = "LICENSE"}
+maintainers = [
+    {name = "Filipe Fernandes"},
+]
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dynamic = [
+  "version",
+]
+dependencies = [
+  "bs4",
+  "ckanapi",
+  "fake-useragent",
+  "geopandas>=0.13.2",
+  "gliderpy",
+  "html5lib",
+  "joblib",
+  "lxml",
+  "pandas",
+  "pdfminer.six",
+  "pyarrow",
+  "pyobis",
+  "requests",
+  "tenacity",
+]
+[project.urls]
+documentation = "https://ioos.github.io/ioos_metrics"
+homepage = "https://github.com/ioos/ioos_metrics"
+repository = "https://github.com/ioos/ioos_metrics"
+
+[tool.setuptools]
+packages = ["ioos_metrics"]
+include-package-data = true
+
+[tool.setuptools_scm]
+write_to = "ioos_metrics/_version.py"
+write_to_template = "__version__ = '{version}'"
+tag_regex = "^(?P<prefix>v)?(?P<version>[^\\+]+)(?P<suffix>.*)?$"
+
+[tool.check-manifest]
+ignore = [
+    "website",
+    "website/*",
+    "gts",
+    "gts/*",
+    "tests",
+    "tests/*",
+]
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64", "win-64", "osx-64", "osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+ioos_metrics = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+notebook = "cd notebooks && jupyter nbclassic"
+tests = "python -m pytest -rxs tests"
+metrics = "python btn_metrics.py"
+
+[tool.pixi.dependencies]
+bs4 = ">=4.12.3,<5"
+ckanapi = ">=4.8,<5"
+fake-useragent = ">=1.4.0,<2"
+fiscalyear = ">=0.4.0,<0.5"
+geopandas = ">=0.13.2"
+gliderpy = ">=0.2.2,<0.3"
+html5lib = ">=1.1,<2"
+joblib = ">=1.4.2,<2"
+lxml = ">=5.3.0,<6"
+nbclassic = ">=1.1.0,<2"
+pandas = ">=2.2.3,<3"
+"pdfminer.six" = ">=20240706,<20240707"
+pyarrow = ">=18.0.0,<19"
+pyobis = ">=1.3.1,<2"
+pytest = ">=8.3.3,<9"
+requests = ">=2.32.3,<3"
+suds = ">=1.1.2,<2"
+
+[tool.pixi.environments]
+website = ["website"]
+
+[tool.pixi.feature.website]
+platforms = ["linux-64", "win-64"]
+
+[tool.pixi.feature.website.tasks]
+gts_regional = "cd website && python create_gts_regional_landing_page.py"
+gts_atn = "cd website && python create_gts_atn_landing_page.py"
+asset_inventory = "cd website && python create_asset_inventory_page.py"
+build_site = { cmd = ["ls", "website/deploy"], depends-on = ["gts_regional", "gts_atn", "asset_inventory"] }
+
+[tool.pixi.feature.website.dependencies]
+jinja2 = "*"
+pandas = "*"
+plotly = "*"
+geopandas = "*"
+folium = "*"
+fiscalyear = "*"
+erddapy = "*"
+beautifulsoup4 = "*"
