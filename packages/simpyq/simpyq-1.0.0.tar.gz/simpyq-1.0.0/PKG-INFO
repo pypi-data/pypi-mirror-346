@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: simpyq
+Version: 1.0.0
+Summary: CLI tool to query and analyze simulation CSV data with natural language
+Home-page: https://github.com/Gueni/simpyq
+Author: Mohamed Gueni
+Author-email: mohamedgueni@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: rich
+Requires-Dist: pyfiglet
+Requires-Dist: spacy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+CLI tool to query and analyze simulation CSV data with natural language. It uses OpenAI's GPT-3.5-turbo model to process and analyze the data, providing a user-friendly interface for data exploration.
