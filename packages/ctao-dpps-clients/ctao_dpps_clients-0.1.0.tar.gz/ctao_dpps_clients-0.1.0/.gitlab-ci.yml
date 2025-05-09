@@ -1,0 +1,59 @@
+#
+include:
+  - project: 'cta-computing/dpps/aiv/dpps-aiv-toolkit'
+    ref: 7a4faef15234443f1157b8ff796050fb90781071
+    file: 'ci-functions.yml'
+  - "aiv-config.yml"
+
+
+variables:
+  CHART_LOCATION: chart
+  CHART_NAME: dpps
+  CHART_EXTRA_VALUES: "--set dev.client_image_tag=${DOCKER_TAG}"
+  DOCKER_IMAGE_CONTEXT: '${CI_PROJECT_DIR}'
+  CONDA_IMAGE: "quay.io/condaforge/miniforge3:24.11.3-0"
+
+stages:
+  - prepare
+  - lint
+  - build
+  - sign
+  - tests
+  - sonarqube
+  - publish
+  - report
+
+
+build:
+  variables:
+    CI_HARBOR_REGISTRY_IMAGE: '${HARBOR_HOST}/dpps/dpps-clients:${DOCKER_TAG}'
+  rules:
+    - when: always
+
+
+# wms depends on gfal2 via dirac, which is sessentially impossible to install with pip
+build-docs:
+  image: "${CONDA_IMAGE}"
+
+  before_script:
+    - source /opt/conda/etc/profile.d/conda.sh
+    - mamba create -y -n ci python=3.12 gfal2 m2crypto dirac-grid make rucio-clients==35.4.1
+    - conda activate ci
+    - python --version
+    - pip install .[doc]
+
+
+pylint:
+  image: "${CONDA_IMAGE}"
+
+  before_script:
+    - apt update && apt install -y --no-install-recommends git
+    - source /opt/conda/etc/profile.d/conda.sh
+    - mamba create -y -n ci python=3.12 gfal2 m2crypto dirac-grid pylint rucio-clients==35.4.1
+    - conda activate ci
+    - python --version
+    - pip install .[all]
+
+sign:
+  rules:
+    - when: never
