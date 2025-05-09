@@ -1,0 +1,7 @@
+LICENSE.lic
+README.md
+setup.py
+model_tracking.egg-info/PKG-INFO
+model_tracking.egg-info/SOURCES.txt
+model_tracking.egg-info/dependency_links.txt
+model_tracking.egg-info/top_level.txt
