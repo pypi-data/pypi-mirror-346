@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MobileVisionTest"
+version = "1.0.1"
+authors = [{name = "Dieuanh", email = "dieuanht29@gmail.com"}]
+description = "A library for automated mobile testing using OCR and AI-based UI recognition"
+requires-python = ">=3.8"
+dependencies = [
+    "huggingface-hub==0.24.7",
+    "tokenizers==0.20.3",
+    "transformers==4.46.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools]
+packages = { find = { where = ["."] } }
