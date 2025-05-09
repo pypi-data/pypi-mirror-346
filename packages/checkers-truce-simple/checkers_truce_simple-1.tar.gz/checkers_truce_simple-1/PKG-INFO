@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: checkers-truce-simple
+Version: 1
+Summary: checkers truce simple
+Author-email: unnamed7353 <unnamed7353@gmail.com>
+Keywords: checkers,truce,simple,cts,checkerstrucesimple
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame
+Dynamic: license-file
+
+<img src="https://files.catbox.moe/iwamtq.png" alt="checkers truce simple">
+
+https://purplr.itch.io/cts but it's a python module
+
+installs the `checkers-truce-simple` command-line tool when installed.  
+if it doesn't work you can use the `checkers_truce_simple.cts()` function.
