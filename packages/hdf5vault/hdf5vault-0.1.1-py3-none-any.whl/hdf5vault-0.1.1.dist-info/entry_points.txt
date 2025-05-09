@@ -1,0 +1,3 @@
+[console_scripts]
+check = hdf5vault.hdf5vault_check:main
+create = hdf5vault.hdf5vault_create:main
