@@ -1,0 +1,42 @@
+[project]
+name = "compneuro-tools"
+version = "0.1.2"
+description = "A collection of simple yet useful \"brain gardening tools\" for my PhD works in CompNeuroBilbaoLab."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "matplotlib>=3.10.1",
+    "nilearn>=0.11.1",
+    "polars>=1.26.0",
+    "ruff>=0.11.8",
+    "scipy",
+]
+authors = [
+    {name = "Iñigo Tellaetxe Elorriaga", email = "inigotellaetxe@gmail.com"}
+]
+maintainers = [
+    {name = "Iñigo Tellaetxe Elorriaga", email = "inigotellaetxe@gmail.com"}
+]
+license = "Apache-2.0"
+keywords = ["brain", "neuroscience", "computational neuroimaging"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.11",
+    "Natural Language :: English",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+
+]
+
+[project.scripts]
+fit_glm = "compneuro_tools.fit_glm:main"
+cluster_correction_mc = "compneuro_tools.cluster_correction_mc:main"
+match_groups_in_table = "compneuro_tools.match_groups_in_table:main"
+atlas_overlap = "compneuro_tools.atlas_overlap:main"
+
+
+[tool.uv]
+package = true
+managed = true
