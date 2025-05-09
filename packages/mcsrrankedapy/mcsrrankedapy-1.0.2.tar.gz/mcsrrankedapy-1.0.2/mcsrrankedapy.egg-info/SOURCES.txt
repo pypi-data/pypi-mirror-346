@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+mcsrrankedapy/__init__.py
+mcsrrankedapy/client.py
+mcsrrankedapy/tester.py
+mcsrrankedapy.egg-info/PKG-INFO
+mcsrrankedapy.egg-info/SOURCES.txt
+mcsrrankedapy.egg-info/dependency_links.txt
+mcsrrankedapy.egg-info/requires.txt
+mcsrrankedapy.egg-info/top_level.txt
+mcsrrankedapy/objects/__init__.py
+mcsrrankedapy/objects/exceptions.py
+mcsrrankedapy/objects/leaderboards.py
+mcsrrankedapy/objects/match_info.py
+mcsrrankedapy/objects/user_profile.py
+mcsrrankedapy/objects/versus_stats.py
