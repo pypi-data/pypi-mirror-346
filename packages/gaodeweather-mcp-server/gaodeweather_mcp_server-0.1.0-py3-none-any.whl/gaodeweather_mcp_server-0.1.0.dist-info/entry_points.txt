@@ -1,0 +1,2 @@
+[console_scripts]
+gaodeweather-mcp-server = gaodeweather_mcp_server:main

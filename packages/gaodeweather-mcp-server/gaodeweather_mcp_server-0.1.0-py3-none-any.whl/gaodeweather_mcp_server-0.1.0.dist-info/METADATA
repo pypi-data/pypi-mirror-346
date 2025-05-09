@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: gaodeweather-mcp-server
+Version: 0.1.0
+Summary: Add your description here
+Author-email: ChangshengXu <xcs0312@foxmail.com>
+Requires-Python: >=3.11
+Requires-Dist: mcp[cli]>=1.8.0
