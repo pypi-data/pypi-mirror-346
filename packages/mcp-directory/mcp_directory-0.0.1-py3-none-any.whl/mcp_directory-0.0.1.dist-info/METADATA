@@ -1,0 +1,96 @@
+Metadata-Version: 2.4
+Name: mcp_directory
+Version: 0.0.1
+Summary: Open Source MCP Directory | Marketplace Python Registry Service and Html Plugin to Integrate with your AI Application
+Author: AI Agent Hub
+Author-email: AI Agent Hub <dingo0927@126.com>
+Maintainer-email: AI Agent Hub <dingo0927@126.com>
+Project-URL: HomePage, http://www.deepnlp.org/store/ai-agent/mcp-server
+Project-URL: Documentation, https://github.com/AI-Agent-Hub/mcp-marketplace
+Project-URL: Repository, https://github.com/AI-Agent-Hub/mcp-marketplace
+Keywords: MCP Marketplace,AI Agent Marketplace,AI Agent Directory
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.17.0
+Dynamic: author
+Dynamic: requires-python
+
+## Open MCP Directory | MCP Marketplace | AI Agent Marketplace Plugin from DeepNLP
+
+The open source MCP Directory and Marketplace plugin is the index service for fetching MCP configuration.
+
+**KEY Features**
+
+- Multiple MCP Service API Endpoint Provider support, such as deepnlp.org, pulsemcp.com
+- Frontend Html-Based Agent Plugin: Show the Panel of MCP Tools from all the open web directory MCP marketplace.
+- Browser and Pagination: User can browser the MCP Tools by Category and use pagination to navigate
+- Select and Install MCP servers: Users can choose which MCP tools to perform tasks from mcp tools marketplace with similar features, such as Map Location, Search, Fetch, Payment, etc. 
+- Autonomous MCP Tools Dispatcher: Your LLM/agent can also benifit from dispatching the query/prompt to the MCP tools, making decision on which tools to choose. The decision or dispatcher agent functions with more than the description text, but also the genunie user reviews score (0-5), ratings and call numbers statistics.
+- Python MCP Registry Service (TBD)
+
+![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
+
+Related
+- [MCP Marketplace PulseMCP](https://www.pulsemcp.com/)
+- [MCP Marketplace DeepNLP](http://www.deepnlp.org/store/ai-agent/mcp-server) AND [MCP Marketplace DeepNLP V2](http://www.deepnlp.org/store/mcp-server)
+- [AI Agent Marketplace](http://www.deepnlp.org/store/ai-agent)
+- [MCP Marketplace Github](https://github.com/AI-Agent-Hub/mcp-marketplace)
+
+## Update: Support Marketplace and API
+
+| Source | value | description |
+| --- | ---- | ---- |
+| deepnlp.org | http://www.deepnlp.org/api/mcp_marketplace/v1 | http://www.deepnlp.org/workspace, This endpoint is for demo and debug purpose only and may not have enough quota for production use. For production worthy endpoint please register the API keys |
+| pulsemcp.com | https://api.pulsemcp.com/v0beta/servers | Website: https://www.pulsemcp.com/api |
+
+
+## 1. Integration 
+
+If you have a chatbot or ai search engine box and you want to integrate the MCP tools integration plugin to your app, you can follow the below step and an AI Search Engine Demo
+
+#### Demo: AI Search with MCP Marketplace Plugin 
+
+Go to file ./app/ai_search/index.html and open the index.html with your browser.
+
+**Step 1**. Integrate AI Search Engine Demo with MCP Marketplace Plugin
+![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
+
+**Step 2**. Choose the Tools and Test the Tools Choosen
+
+![Open MCP Marketplace DeepNLP System Prompt](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server_system_prompt.jpg)
+
+
+## 2. Install
+
+#### Clone Project and Copy The MCP Marketplace Plugin Folder
+
+```
+git clone https://github.com/AI-Agent-Hub/mcp-marketplace.git
+cd ./open_mcp_marketplace
+
+## Project Structure and Copy Files to Your Project
+
+./plugin/mcp_marketplace/
+./plugin/mcp_marketplace/index.html
+./plugin/mcp_marketplace/scripts.js
+./plugin/mcp_marketplace/styles.css
+
+```
+
+
+#### Set Endpoint of the MCP Plugin info json is fetching
+
+Go to file ./plugin/mcp_marketplace/scripts.js and change the endpoint provider by config
+
+```
+
+// API: deepnlp
+const config = getConfigByName("deepnlp");
+
+// API: pulsemcp
+const config = getConfigByName("pulsemcp");
+
+
+```
