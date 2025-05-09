@@ -1,0 +1,4 @@
+pytest
+pytest-cov
+conan==2.*
+velocitas-lib==0.0.13
