@@ -1,0 +1,17 @@
+gway/__init__.py,sha256=cgJTJYSislD5mp014wdwkkWNXkLS1zPVc-c1a0Ht5eY,99
+gway/__main__.py,sha256=kli2eewiO2LnEIY--dqCNnBvZvjLkxdo4aI47yOoM1g,81
+gway/builtins.py,sha256=Lkm8HdH1l_Vw_68lgaVhP0hzoMdYARYqsESzvXgEF9U,6391
+gway/command.py,sha256=oQN9IewAo2NSairO8-kG-2RVp__eOaL79Bi4S_gwMrY,11873
+gway/decorators.py,sha256=2eEJ9nEEfN1bdeubVCiKSQudOOHO9WvPJZ4R3V57tzE,1847
+gway/environs.py,sha256=xclbdXmS7TNkVqNIizw9sUxktlih2zVGRP7Z6guTMCs,2387
+gway/gateway.py,sha256=Yy9zj6Qn2kh0zObYFFmYEgk8dfpyELquS43GZv0cWlE,9649
+gway/logging.py,sha256=f2Hz3-bOpMnANpuG4LKnq5QZRBqzTRNN056ia8pnWIE,1750
+gway/sigils.py,sha256=GDwee6ijWoT9siEFKRHnRk7SSC4FH2QS8APoFwMy088,3336
+gway/structs.py,sha256=3S4ByTQ4-SbCnIDPiV-HEoPMveAg93IFhktBmc6Z2GU,1732
+gway/watchers.py,sha256=Ekkg9rPG5qbBufWrHkrwQkB1iouYqM99QmoqD9vm3cY,2418
+gway-0.1.5.dist-info/licenses/LICENSE.md,sha256=CwmRkNb0M6d01ow5pO5uJHAxW3cAhORIEBxKhtZSWIA,1113
+gway-0.1.5.dist-info/METADATA,sha256=wxTZNDsg_TIa_q8zQzRYoNHaOu2cXVbcJOeLxBYIOUg,6081
+gway-0.1.5.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+gway-0.1.5.dist-info/entry_points.txt,sha256=RZV3pafgQYBa4d4JKWqSE981egt7JAa4YqIIRRBV3lk,39
+gway-0.1.5.dist-info/top_level.txt,sha256=8Z7oZISZThW3_qpsYAYaRnA6mp8X_xxD2ONegYFLb5I,5
+gway-0.1.5.dist-info/RECORD,,
