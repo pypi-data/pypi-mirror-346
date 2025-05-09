@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: davia
+Version: 0.1.11
+Summary: The easiest way to build AI apps from your Python code
+Project-URL: Homepage, https://davia.ai
+Project-URL: Documentation, https://docs.davia.ai
+Project-URL: Repository, https://github.com/davialabs/davia.git
+Project-URL: Issues, https://github.com/davialabs/davia/issues
+Author-email: Davia <contact@davia.ai>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: User Interfaces
+Requires-Python: >=3.11
+Requires-Dist: fastapi[standard]>=0.115.12
+Requires-Dist: typer>=0.15.3
+Provides-Extra: langgraph
+Requires-Dist: langchain-core>=0.3.40; extra == 'langgraph'
+Requires-Dist: langgraph-api==0.0.38; extra == 'langgraph'
+Requires-Dist: langgraph-cli[inmem]>=0.1.74; extra == 'langgraph'
+Requires-Dist: langgraph>=0.3.2; extra == 'langgraph'
+Description-Content-Type: text/markdown
+
+# Davia
+
+✨ A CLI tool for working with LangGraph AI agents.
+
+## Features
+
+- View your LangGraph AI agents with a simple command
+- Customize the agent-native application with generative UI components
+- Experience the perfect fusion of human creativity and artificial intelligence!
+
+## Installation
+
+```bash
+pip install davia
+```
+
+## Usage
