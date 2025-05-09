@@ -1,0 +1,121 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "idefix_cli"
+version = "6.0.3"
+description = "A command line utility belt for Idefix"
+authors = [
+    { name = "C.M.T. Robert" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Typing :: Typed",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "exceptiongroup>=1.0.0 ; python_full_version < '3.11'", # keep in sync with typecheck group
+    "inifix>=5.1.0",
+    "packaging>=21.0",
+    "termcolor>=2.3.0",
+    "typing-extensions>=4.1.0;python_version < '3.11'",
+]
+
+[project.license]
+text = "GPL-3.0"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.scripts]
+idfx = "idefix_cli.__main__:idfx_entry_point"
+baballe = "idefix_cli.__main__:baballe_entry_point"
+
+[project.urls]
+Homepage = "https://github.com/neutrinoceros/idefix_cli"
+
+[tool.flit.sdist]
+include = ["tests"]
+
+[dependency-groups]
+test = [
+    "pytest-check>=2.1.2",
+    "pytest>=7.2.1",
+]
+covcheck = [
+    {include-group = "test"},
+    "coverage[toml]>=6.5.0 ; python_version < '3.11'",
+    "coverage>=6.5.0 ; python_version >= '3.11'",
+]
+typecheck = [
+    "exceptiongroup>=1.0.0", # TODO: remove when python 3.11 is minimum
+    "mypy>=1.11.2",
+    "pyright>=1.1.390",
+]
+docs = [
+    "mkdocs>=1.5.3",
+    "mkdocs-include-markdown-plugin>=6.0.1",
+    "mkdocs-material>=9.4.2",
+    "mkdocstrings[python]>=0.23.0",
+]
+
+[tool.ruff.lint]
+exclude = ["*__init__.py"]
+ignore = ["E501", "ISC001"]
+select = [
+    "E",
+    "F",
+    "W",
+    "C4",  # flake8-comprehensions
+    "B",   # flake8-bugbear
+    "YTT", # flake8-2020
+    "ISC", # flake8-implicit-string-concatenation
+    "I",   # isort
+    "UP",  # pyupgrade
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+known-first-party = ["idefix_cli"]
+
+[tool.coverage.run]
+branch = true
+source = [
+    "src/idefix_cli",
+    "tests",
+]
+omit = [
+    # this test generates fake source files that are removed in teardown
+    "*test_broken_command_plugin*"
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+exclude_lines = [
+    # a more strict default pragma
+    "\\# pragma: no cover\\b",
+
+    # allow defensive code
+    "^\\s*raise NotImplementedError\\b",
+
+    ": \\.\\.\\.(\\s*#.*)?$",
+    "^ +\\.\\.\\.$",
+    "-> ['\"]?NoReturn['\"]?:",
+]
+
+[tool.mypy]
+python_version = '3.10'
+strict = true
+show_error_codes = true
+show_error_context = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra --doctest-modules"
+filterwarnings = [
+    "error",
+]
