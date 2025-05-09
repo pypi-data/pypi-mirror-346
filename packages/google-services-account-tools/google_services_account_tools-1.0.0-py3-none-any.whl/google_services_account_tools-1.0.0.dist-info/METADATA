@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: google_services_account_tools
+Version: 1.0.0
+Summary: Biblioteka dla google_services_account_tools
+Author: author
+Author-email: author@email.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google
+Requires-Dist: google-api-python-client
+Requires-Dist: datetime
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# tools
+
+Prosta biblioteka Pythona zawierajÄ…ca funkcje do pracy z plikami (np. pobieranie i wysyĹ‚anie plikĂłw).
+
