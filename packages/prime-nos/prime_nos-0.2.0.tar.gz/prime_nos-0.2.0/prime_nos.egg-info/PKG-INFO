@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: prime_nos
+Version: 0.2.0
+Summary: A simple library to check for prime and coprime numbers
+Author: Venkatesh
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# prime_nos
+
+A tiny Python library to check if numbers are prime or coprime.
+
+## Installation
+
+```bash
+pip install prime_nos
+
+```
+has 3 functions:
+ - is_prime(n) - checks if n is prime or not
+ - are_coprime(a,b) - checks if a and b are coprime or not
+ - prime_range(a,b) - returns a list of all prime numbers between a and b
