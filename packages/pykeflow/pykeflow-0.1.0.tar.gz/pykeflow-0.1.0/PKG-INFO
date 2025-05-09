@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: pykeflow
+Version: 0.1.0
+Summary: Programmatic GitHub Actions workflow generator with clean YAML support
+Home-page: https://github.com/ArchooD2/pykeflow
+Author: PJ Hayes
+Author-email: archood2next@gmail.com
+License: MPL-2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ruamel.yaml
+Requires-Dist: snaparg
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# pykeflow
+Programmatic GitHub Actions workflow generator with clean YAML support
