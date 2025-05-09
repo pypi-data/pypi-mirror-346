@@ -1,0 +1,10 @@
+toolkitx/__init__.py,sha256=DcpgYxSG25gSJkBUI-NzAt_cMKmxOXWbORWrsec0gZw,1154
+toolkitx/hello.py,sha256=_2zorlP0W9gLGuDUPO7MSx5Hd6szTJnWPE014vR6Wfw,47
+toolkitx/text_utils.py,sha256=MVK_Q8DGEUlOo7vz4cUOU4FKFsAoV-1pvgi-DNs-VCw,7393
+toolkitx/lab/__init__.py,sha256=8Aa67uU5_mqjHAQ9PwTXKKyTyRs0QB1icpvlMyQhdAY,66
+toolkitx/lab/translator.py,sha256=L9yyAz6SbwbfggznaSF_7P2NetL0RqLBmlVqn5inxIU,9547
+toolkitx-0.0.2.dist-info/METADATA,sha256=tXU3BwpM67kf8xjOEngkD_MIGgD5ai6Z1mg2qUDiAjA,2430
+toolkitx-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+toolkitx-0.0.2.dist-info/entry_points.txt,sha256=qzg8ZI4SSi3YrHbBu7OOa6j8hRiTwKfRv2tXrDEIdSg,47
+toolkitx-0.0.2.dist-info/licenses/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+toolkitx-0.0.2.dist-info/RECORD,,
