@@ -1,0 +1,17 @@
+phyloki/__init__.py,sha256=0_WXJQmz4qO17eb27cKKLh50Zvpm_o3eXeGjIsmj-hk,323
+phyloki/dataset4itol.py,sha256=k4Pw3oPSiKJJO1vl7B4JpH4OydIJ7ayFoxoy_6r51T8,3857
+phyloki/fetch_metadata.py,sha256=LFildOImT9X8EXsBzUYSHXMPe2mCoffRQS5JDPGHRYE,5645
+phyloki/get_hosts.py,sha256=R9YQYwCJRS6Htw6qot-ReaPR0_vKZZYtn1s-5d3IPVo,3636
+phyloki/get_hosts_order.py,sha256=Opfur_5gE-yDwVJKsPVaVhrqZStJw__OEqgTuMELziw,4406
+phyloki/get_organisms.py,sha256=hFEgRavsDyNq10gOcVA3zpAvkaygJLIs48H02tULT7c,3171
+phyloki/get_seqs.py,sha256=3yfnBteEos0KXMhEsGwtu84cuSRyUIk2Jk33uFO5KeE,2284
+phyloki/phyloki.py,sha256=axh4O1jREvbkWZKGCfZOyatVp5pqL8YwnUeYeOGOjA8,2596
+phyloki/read_accession_file.py,sha256=AHz_QnWBXEAJRyyKtu-1r7QB_q5RDcgC1C8CYa3FXp4,718
+phyloki/update_tree.py,sha256=yAtiwLn4j7_HtyIXshkwwECp26qaMoNFoi8h97yKWec,3252
+phyloki/version.py,sha256=hJAoeDAWzT7M_OurSncD86LFAO_AOZ2OCo7Ns4pW5FU,23
+phyloki-0.5.52.dist-info/LICENSE,sha256=07rIfDwuy6ilP3H4fhTmWuABCSJ76fWIh_4h9GKffiE,1067
+phyloki-0.5.52.dist-info/METADATA,sha256=KPkHPD_Itk4r05vTspWVXkVjU5bE6tT64iNfbonTRYM,2609
+phyloki-0.5.52.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+phyloki-0.5.52.dist-info/entry_points.txt,sha256=1jC_zLlxu17I7AR5u0lkTz_dVypEAIZKGfXvzNB_VG8,49
+phyloki-0.5.52.dist-info/top_level.txt,sha256=s0IeJLlyCvXzmo5kSV7vNVzO0JQpYQOU-_QehCHWZiY,8
+phyloki-0.5.52.dist-info/RECORD,,
