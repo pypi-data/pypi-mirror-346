@@ -1,0 +1,16 @@
+packaging
+asyncio
+FortniteAPIAsync==0.1.6
+requests
+rich
+sanic==20.12.0
+aiohttp
+crayons
+py-cord
+arabic-reshaper
+python-bidi
+jinja2
+cryptography
+aioxmpp>=0.13.3
+aioconsole>=0.1.15
+pytz>=2024.2
