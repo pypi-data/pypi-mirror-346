@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+simpyq/__init__.py
+simpyq/cli.py
+simpyq/config.py
+simpyq/versions.py
+simpyq.egg-info/PKG-INFO
+simpyq.egg-info/SOURCES.txt
+simpyq.egg-info/dependency_links.txt
+simpyq.egg-info/entry_points.txt
+simpyq.egg-info/requires.txt
+simpyq.egg-info/top_level.txt
