@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: facets-mcp-server
+Version: 0.1.2
+Summary: MCP server for Facets
+Author-email: Anshul Sao <anshul@example.com>
+Requires-Python: >=3.10
+Requires-Dist: mcp[cli]
+Requires-Dist: checkov
+Requires-Dist: questionary
