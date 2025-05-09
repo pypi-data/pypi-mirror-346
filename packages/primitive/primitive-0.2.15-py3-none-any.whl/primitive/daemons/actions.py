@@ -1,0 +1,90 @@
+import platform
+import subprocess
+import typing
+from pathlib import Path
+from typing import Dict, List, Optional
+
+if typing.TYPE_CHECKING:
+    from ..client import Primitive
+
+from ..utils.daemons import Daemon
+from .launch_agents import LaunchAgent
+from .launch_service import LaunchService
+
+HOME_DIRECTORY = Path.home()
+PRIMITIVE_BINARY_PATH = Path(HOME_DIRECTORY / ".pyenv" / "shims" / "primitive")
+
+
+class Daemons:
+    def __init__(self, primitive) -> None:
+        self.primitive: Primitive = primitive
+        self.os_family = platform.system()
+
+        found_primitive_binary_path = PRIMITIVE_BINARY_PATH
+        if not PRIMITIVE_BINARY_PATH.exists():
+            result = subprocess.run(["which", "primitive"], capture_output=True)
+            if result.returncode == 0:
+                found_primitive_binary_path = result.stdout.decode().rstrip("\n")
+            else:
+                raise Exception(
+                    f"primitive binary not found at {PRIMITIVE_BINARY_PATH}"
+                )
+
+        match self.os_family:
+            case "Darwin":
+                self.daemons: Dict[str, Daemon] = {
+                    "agent": LaunchAgent(
+                        "tech.primitive.agent",
+                        executable=str(found_primitive_binary_path),
+                        command="--debug agent",
+                    ),
+                    "monitor": LaunchAgent(
+                        "tech.primitive.monitor",
+                        executable=str(found_primitive_binary_path),
+                        command="--debug monitor",
+                    ),
+                }
+            case "Linux":
+                self.daemons: Dict[str, Daemon] = {
+                    "agent": LaunchService(
+                        "tech.primitive.agent",
+                        command=f'/bin/sh -lc "{found_primitive_binary_path} --debug agent"',
+                    ),
+                    "monitor": LaunchService(
+                        "tech.primitive.monitor",
+                        command=f'/bin/sh -lc "{found_primitive_binary_path} --debug monitor"',
+                    ),
+                }
+            case _:
+                raise NotImplementedError(f"{self.os_family} is not supported.")
+
+    def install(self, name: Optional[str]) -> bool:
+        if name:
+            return self.daemons[name].install()
+        else:
+            return all([daemon.install() for daemon in self.daemons.values()])
+
+    def uninstall(self, name: Optional[str]) -> bool:
+        if name:
+            return self.daemons[name].uninstall()
+        else:
+            return all([daemon.uninstall() for daemon in self.daemons.values()])
+
+    def stop(self, name: Optional[str]) -> bool:
+        if name:
+            return self.daemons[name].stop()
+        else:
+            return all([daemon.stop() for daemon in self.daemons.values()])
+
+    def start(self, name: Optional[str]) -> bool:
+        if name:
+            return self.daemons[name].start()
+        else:
+            return all([daemon.start() for daemon in self.daemons.values()])
+
+    def list(self) -> List[Daemon]:
+        """List all daemons"""
+        return list(self.daemons.values())
+
+    def logs(self, name: str) -> None:
+        self.daemons[name].view_logs()
