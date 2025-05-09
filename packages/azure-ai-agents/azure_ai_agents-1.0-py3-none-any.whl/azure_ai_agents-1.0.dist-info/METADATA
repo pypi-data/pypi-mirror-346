@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: azure-ai-agents
+Version: 1.0
+Summary: Dummy placeholder for ai agents package
+Author: vizhur
+Requires-Python: >=3.9,<4
+
