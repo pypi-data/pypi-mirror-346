@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+coaxial_terminal_ai.egg-info/PKG-INFO
+coaxial_terminal_ai.egg-info/SOURCES.txt
+coaxial_terminal_ai.egg-info/dependency_links.txt
+coaxial_terminal_ai.egg-info/entry_points.txt
+coaxial_terminal_ai.egg-info/requires.txt
+coaxial_terminal_ai.egg-info/top_level.txt
+terminalai/__init__.py
+terminalai/ai_providers.py
+terminalai/color_utils.py
+terminalai/command_utils.py
+terminalai/config.py
+terminalai/terminalai_cli.py
