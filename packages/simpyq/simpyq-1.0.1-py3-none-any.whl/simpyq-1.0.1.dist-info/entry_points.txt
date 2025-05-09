@@ -1,0 +1,2 @@
+[console_scripts]
+simpyq = simpyq.cli:main
