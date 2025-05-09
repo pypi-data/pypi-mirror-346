@@ -1,0 +1,13 @@
+strucgap/__init__.py,sha256=1rghYYQ2tkCkybGn0jM67PgGSiij9RsZOcboxaKnV94,3885
+strucgap/datavisualization.py,sha256=bDlenIE2wbJObAPlmtk7c6NRQkgHQIUZWV2jpaKCuMM,339670
+strucgap/functionannotation.py,sha256=ciJD0fNnmegm6ovaNhZKAxFASqzu6JGZPifCUZffZfk,112032
+strucgap/glycanstructure.py,sha256=v6PpLUq5hjkHJmLUqHfqhLWe3MXfU-XppRUdq8hu-TQ,108705
+strucgap/glyconetwork.py,sha256=a3oCPU_DHQOAht4Rou6oRsh0xRVlbHNBtqZtlaQQp_g,71781
+strucgap/glycopeptidequant.py,sha256=kt-Ud-5UqQ_gydR0AO6m2psDn0VStXuy0DXv1CitfJk,111617
+strucgap/glycosite.py,sha256=DzVWZyC89GoqBDQTjXrXvhv90yR-xJCPy6_Xy2qYND0,27746
+strucgap/insighttracker.py,sha256=JhJs97YEm9MmVPNRBJOx6tbRrROHvo5rASIhYbPpxDs,22935
+strucgap/preprocess.py,sha256=g2TXRGgzqqeRJRJ-_6X9aumJuksd-jPCT0yoHfrNtF8,32715
+strucgap-1.0.1.dist-info/METADATA,sha256=GqdxoOKmTI4VWUgYWkZFF_xrBZ4ZFVGlS7rc852znkw,1535
+strucgap-1.0.1.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+strucgap-1.0.1.dist-info/top_level.txt,sha256=1JNwoZdmgSc3ViqSYxXx4IGDqIvfbjwIsUAlQbpH7DU,9
+strucgap-1.0.1.dist-info/RECORD,,
