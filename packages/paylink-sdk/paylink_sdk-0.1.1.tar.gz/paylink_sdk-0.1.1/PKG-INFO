@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: paylink-sdk
+Version: 0.1.1
+Summary: Python SDK for interacting with the PayLink MCP Server
+Project-URL: Homepage, https://github.com/jameskanyiri/paylink-sdk
+Project-URL: Repository, https://github.com/jameskanyiri/paylink-sdk
+Project-URL: Issues, https://github.com/jameskanyiri/paylink-sdk/issues
+Author-email: James Kanyiri <jameskanyiridev@gmail.com>
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.13
+Requires-Dist: mcp>=1.7.1
+Provides-Extra: dev
+Requires-Dist: build>=1.2.2.post1; extra == 'dev'
+Requires-Dist: hatch>=1.14.1; extra == 'dev'
+Requires-Dist: pytest>=8.3.5; extra == 'dev'
+Requires-Dist: twine>=6.1.0; extra == 'dev'
