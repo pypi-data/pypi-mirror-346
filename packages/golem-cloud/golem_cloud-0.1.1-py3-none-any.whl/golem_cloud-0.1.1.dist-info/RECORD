@@ -1,0 +1,8 @@
+golem_cloud/__init__.py,sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,0
+golem_cloud/durability.py,sha256=1d343204ed1fcafce2880e3f9c6d75d47a2b5d2294b1196caa885313e3b79e37,3015
+golem_cloud/host.py,sha256=8390f599cee36b793af9c1718a5841ed94029ab73bab4dc83a04a955717a1f25,1951
+golem_cloud/transaction.py,sha256=f7b228d97e1cd11508797918cc8871f33771b9b073677f546821f8970a20fc5c,4794
+golem_cloud-0.1.1.dist-info/licenses/LICENSE,sha256=c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4,11357
+golem_cloud-0.1.1.dist-info/WHEEL,sha256=65f6765ba93534713730ff2172cd912ef280aa42867625a73f77c2fef0639dae,78
+golem_cloud-0.1.1.dist-info/METADATA,sha256=502361306f026407dca7db47c91d97f2f8fe445d03ffb25aa179d2d24d843701,2459
+golem_cloud-0.1.1.dist-info/RECORD,,
