@@ -1,0 +1,14 @@
+deltachat2/__init__.py,sha256=sIELLR3TkQyMeqwg0ID3Z272OfSA1Kq-LT9ia94pSko,287
+deltachat2/_utils.py,sha256=uchcvWh5Lf_jr1BPWKaVvaVZ5-IQthUUEF37_ii-MbA,1506
+deltachat2/bot.py,sha256=aR9mOw5LzKmIJFEiaK3GVcq60KLKc0sYK0ZsOA50qrA,4770
+deltachat2/client.py,sha256=sndeMePM2GDFly2LA_6pfLk-ooMmrHsEJs6jWtsle5E,4789
+deltachat2/events.py,sha256=lq6wJBCoe85EbwpeNj1QfPHX8q3HZJXDoTVNmZPXgoA,8396
+deltachat2/rpc.py,sha256=s5SzSYKeGk11iz00DYzatOvuLmBZdTgyj-OlmqPVr94,747
+deltachat2/transport.py,sha256=z5UMy_4z2SrpJT9fF66HMCWGMi_Gjxdfovl7ESS70PM,5092
+deltachat2/types.py,sha256=AuNqgpFKOA-KMkAia-YNt0ln6VoynOXa4_U6jmuy5rM,6018
+deltachat2/util.py,sha256=TgCbKZqHtEEvZU1pdPgOUUb97gXEYJHY0Lt9soW2GNQ,2394
+deltachat2-0.7.0.dist-info/licenses/LICENSE,sha256=-rPda9qyJvHAhjCx3ZF-Efy07F4eAg4sFvg6ChOGPoU,16726
+deltachat2-0.7.0.dist-info/METADATA,sha256=ALGlJ1jiOCuE70lL97kEZq5j_lR81gx9W-VY7c3NlAY,2597
+deltachat2-0.7.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+deltachat2-0.7.0.dist-info/top_level.txt,sha256=OJ57dBve-boLu4YFoIoH8RDA7ozphmfGCnw0stGFeYI,11
+deltachat2-0.7.0.dist-info/RECORD,,
