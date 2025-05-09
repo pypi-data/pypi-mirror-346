@@ -1,0 +1,13 @@
+fenicsx_growth-0.1.0.dist-info/licenses/LICENSE,sha256=zZiJ4bb23Sw8ZUcEv1qkqzxE-JAvzwwUOS9FicM1vj0,1094
+growth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+growth/datacollector.py,sha256=hCZEretL662KlpdprL39XPD1ilIi6eewC6p0lZpW7kg,5122
+growth/geometry.py,sha256=Jo9Gtay4OpTSDu15wvuNGSYMfLlONomeMlSm1Fkwy10,10794
+growth/growth.py,sha256=H7LAp77Ppg6XxNrOZgSXmVnZV8dJTBX_1BptRWpwYfQ,3270
+growth/material.py,sha256=znSysSfWERgu9nuRLGZq5k5ZfO3JpKrdO7OKruJnN3o,7703
+growth/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+growth/models/kerchoff.py,sha256=uAOAkXncFAG8cwfUpiBH-yxJ2X1zRBKjKZf-LbYQoAY,9127
+growth/models/simple_stress.py,sha256=ePiijZcg9RDdIKIHZi41HQobBVZqTsQjHXn72RUXZ_c,6479
+fenicsx_growth-0.1.0.dist-info/METADATA,sha256=RdsRmB18nwf9x6LsmBy49ZZhkvuv_DhRdTBrM_757eo,2729
+fenicsx_growth-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+fenicsx_growth-0.1.0.dist-info/top_level.txt,sha256=vYZ-8FAX9UMzy1GlvYsDEtRxJcDX67rY_oP09GyRaw4,7
+fenicsx_growth-0.1.0.dist-info/RECORD,,
