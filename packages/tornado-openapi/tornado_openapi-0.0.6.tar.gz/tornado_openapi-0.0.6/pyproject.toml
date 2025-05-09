@@ -1,0 +1,45 @@
+[project]
+name = "tornado-openapi"
+version = "0.0.6"
+description = "..an OAS-generation library for Tornado."
+authors = [
+    { name="Shaun Wilson", email="mrshaunwilson@msn.com" }
+]
+keywords = ["tornado", "openapi", "swagger", "oas", "oas3"]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Intended Audience :: Developers"
+]
+dependencies = [
+    "tornado>=6"
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "punit>=1.1.4",
+    "twine",
+    "urllib3-future>=2.12.920"
+]
+
+[project.urls]
+Documentation = "https://tornado-openapi.readthedocs.io/"
+Homepage = "https://github.com/wilson0x4d/tornado-openapi"
+Repository = "https://github.com/wilson0x4d/tornado-openapi.git"
+
+[build-system]
+requires = ["build", "setuptools", "twine"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = [
+    "docs",
+    "tests",
+    "tests.*"
+]
