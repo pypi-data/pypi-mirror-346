@@ -1,0 +1,382 @@
+Metadata-Version: 2.4
+Name: veri-agents-playground
+Version: 0.1.0
+Author-email: Markus Toman <mtoman@veritone.com>
+Requires-Python: <3.13,>=3.12
+Requires-Dist: aiohttp<4.0.0,>=3.10.6
+Requires-Dist: bs4<1.0.0,>=0.0.2
+Requires-Dist: fastembed<1.0.0,>=0.4.1
+Requires-Dist: gql>=3.5.2
+Requires-Dist: langchain-aws>=0.2.7
+Requires-Dist: langchain-community>=0.2.12
+Requires-Dist: langchain-mcp-adapters>=0.0.5
+Requires-Dist: pydantic-settings<3.0.0,>=2.4.0
+Requires-Dist: python-dotenv<2.0.0,>=1.0.1
+Requires-Dist: veri-agents-aiware[all]
+Requires-Dist: veri-agents-api[fastapi]
+Requires-Dist: veri-agents-knowledgebase[all]
+Provides-Extra: dev
+Requires-Dist: ipykernel<7.0.0,>=6.29.5; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# veri-agent
+
+Template architecture for an agent based system.
+The main componenent is an agent service providing various (LangGraph defined) workflows in a chat context, persisting states per workflow and user.
+The second significant component is a knowledgebase service, providing secure access to various data sources and indexing capabilities (vector db, graph db).
+
+![Agent architecture overview](docs/veritone-agents-arch.png?raw=true "Agent system overview")
+Note: The knowledgebase service is not yet implemented as a separate service but part of the agents service.
+
+## Run service
+
+Dev
+```
+cd agents/deployment/dev
+docker compose up
+```
+
+Prod:
+```
+cd agents/deployment/prod
+docker compose up
+```
+
+# Python API example
+
+Python API examples can be found in the `examples` folder.
+
+Example to run the extract workflow:
+```bash
+
+source /opt/veri-agent-dev/env
+uv run python -m examples.run_extract.py --kb bluedragon --llm nova_lite
+```
+
+## Run ingestion
+
+Example to run Veritone Support ingestion:
+```
+export QDRANT_URL=http://localhost:6335  # or 6333 for prod
+source /opt/veri-agent-dev/env            # source /opt/ver-agent/env   # for prod
+cd agents
+puv run python ingest.py --kb veritone_support --dsn veritone_support --dsl /opt/veri-agent-dev/data/raw/veritone_support/
+```
+
+Example to run BlueDragon ingestion:
+```
+export QDRANT_URL=http://localhost:6335  # or 6333 for prod
+source /opt/veri-agent-dev/env            # source /opt/ver-agent/env   # for prod
+cd agents
+uv run python ingest.py --kb bluedragon --dsn lanl --dsl /opt/veri-agent-dev/data/raw/lanl/defenses/ --tags defenses
+uv run python ingest.py --kb bluedragon --dsn lanl --dsl /opt/veri-agent-dev/data/raw/lanl/performance/ --tags performance
+```
+
+Example to run Real-Time Crime ingestion:
+```
+export QDRANT_URL=http://localhost:6335  # or 6333 for prod
+source /opt/veri-agent-dev/env            # source /opt/ver-agent/env   # for prod
+uv run python ingest.py --kb realtimecrime
+```
+
+
+## Roadmap
+
+### Agent service
+
+- [x] Hydra configuration
+- [x] API via FastAPI
+- [x] Streamlit UI for quick testing
+- [x] LangGraph workflow management
+- [x] Provide LLM access to workflows
+- [x] Provide tool access to workflows
+- [x] Persist user state per workflow
+- [ ] Persist user state in a remote database/knowledge service?
+- [x] Provide knowledge base access to workflows
+
+
+### Knowledgebases
+
+- [x] Hydra configuration
+- [x] Access to local or remote vector DB (configurable if running with knowledge service)
+- [x] Docling integration
+- [ ] Access to local or remote graph DB (configurabel if running with knowledge service)
+- [ ] Service regularly indexing configured data sources
+- [ ] API to query data sources (with restrictions)
+- [ ] API to push data to knowledge base
+
+
+### Additional capabilities
+
+- [x] LangFuse connection
+- [x] Connect to AWS Bedrock knowledge base
+
+
+##  API Notes
+
+### Artifacts
+
+Tools can return artifacts that are not passed onwards to the agent but can be used by the frontend.
+Whenever we return an artifact, it shall contain a 'source' field to specify the origin that defines the schema for the rest of the data.
+Typically it then also holds a list of 'items' where each item shall contain a `type` field  that can be used to determine how to render the item.
+
+<details>
+<summary>Example output for the dmh_video_search tool</summary>
+
+```
+{
+  "type": "tool",
+  "data": {
+    "content": "Title: Jordan - Tourism - ancient city of Petra 2 | Description: Aerial views of the ancient city of Petra, one of the most important archeological sites in the world.\nTitle: Jordan - Tourism - ancient city of Petra 1 | Description: Aerial views of the ancient city of Petra, one of the most important archeological sites in the world.\nTitle: Jordan - Tourism - ancient city of Petra 2 | Description: Aerial views of the ancient city of Petra, one of the most important archeological sites in the world.",
+    "additional_kwargs": {},
+    "response_metadata": {},
+    "type": "tool",
+    "name": "dmh_video_search",
+    "id": "6fa5261b-7c07-49d6-bd8b-e688eae5f0d9",
+    "tool_call_id": "toolu_bdrk_018FX42xZqPkcxDhWudhA1Ud",
+    "artifact": {
+      "items": [
+        {
+          "assetId": 51947623,
+          "name": "1SMBC5_CJF3SLGXRR",
+          "metaData": [
+            {
+              "name": "Title",
+              "value": "Jordan - Tourism - ancient city of Petra 2"
+            },
+            {
+              "name": "Description",
+              "value": "Aerial views of the ancient city of Petra, one of the most important archeological sites in the world."
+            },
+            {
+              "name": "TE.DigitalFormat",
+              "value": "High Definition"
+            },
+            {
+              "name": "Format.Duration",
+              "value": "00:00:13"
+            },
+            {
+              "name": "Resource.Class",
+              "value": "Footage"
+            },
+            {
+              "name": "Keywords",
+              "value": "Architecture Art Monument Museum Ruins UNESCO Town"
+            },
+            {
+              "name": "Format.FrameRate",
+              "value": "25 fps"
+            },
+            {
+              "name": "Format.BroadcastStandard",
+              "value": ""
+            }
+          ],
+          "metaDataDefault": [
+            {
+              "name": "TE.DigitalFormat",
+              "value": "High Definition"
+            },
+            {
+              "name": "Resource.Class",
+              "value": "Footage"
+            },
+            {
+              "name": "Format.Duration",
+              "value": "00:00:13"
+            },
+            {
+              "name": "Rights.Reproduction",
+              "value": "Rights Managed"
+            },
+            {
+              "name": "clipIngested",
+              "value": "2023-02-09T17:42:52Z"
+            },
+            {
+              "name": "Format.Duration.Display",
+              "value": ""
+            }
+          ],
+          "thumbnail": {
+            "name": "thumbnail",
+            "urls": {
+              "https": "//cdnt3m-a.akamaihd.net/tem/warehouse/1SM/BC5/1SMBC5_CJF3SLGXRR_lt.jpg"
+            }
+          },
+          "hasDownloadableComp": false,
+          "url": "https://cdnt3mt-a.akamaihd.net/1SM/BC5/1SMBC5_CJF3SLGXRR_xp.f4v?__gda__=1725017594_4821e1524d4d4ae95bd5cb43d9c7d4a0"
+        },
+        {
+          "assetId": 51947731,
+          "name": "1SMBC5_CLGJL2JLBZ",
+          "metaData": [
+            {
+              "name": "Title",
+              "value": "Jordan - Tourism - ancient city of Petra 1"
+            },
+            {
+              "name": "Description",
+              "value": "Aerial views of the ancient city of Petra, one of the most important archeological sites in the world."
+            },
+            {
+              "name": "TE.DigitalFormat",
+              "value": "High Definition"
+            },
+            {
+              "name": "Format.Duration",
+              "value": "00:00:58"
+            },
+            {
+              "name": "Resource.Class",
+              "value": "Footage"
+            },
+            {
+              "name": "Keywords",
+              "value": "Architecture Art Monument Museum Ruins UNESCO Town"
+            },
+            {
+              "name": "Format.FrameRate",
+              "value": "25 fps"
+            },
+            {
+              "name": "Format.BroadcastStandard",
+              "value": ""
+            }
+          ],
+          "metaDataDefault": [
+            {
+              "name": "TE.DigitalFormat",
+              "value": "High Definition"
+            },
+            {
+              "name": "Resource.Class",
+              "value": "Footage"
+            },
+            {
+              "name": "Format.Duration",
+              "value": "00:00:58"
+            },
+            {
+              "name": "Rights.Reproduction",
+              "value": "Rights Managed"
+            },
+            {
+              "name": "clipIngested",
+              "value": "2023-02-09T17:45:32Z"
+            },
+            {
+              "name": "Format.Duration.Display",
+              "value": ""
+            }
+          ],
+          "thumbnail": {
+            "name": "thumbnail",
+            "urls": {
+              "https": "//cdnt3m-a.akamaihd.net/tem/warehouse/1SM/BC5/1SMBC5_CLGJL2JLBZ_lt.jpg"
+            }
+          },
+          "hasDownloadableComp": false,
+          "url": "https://cdnt3mt-a.akamaihd.net/1SM/BC5/1SMBC5_CLGJL2JLBZ_xp-wmorm.f4v?__gda__=1725017595_466391df9505e71bda54107f49dad198"
+        },
+        {
+          "assetId": 51876092,
+          "name": "1SMBC5_26UQCQ13KF",
+          "metaData": [
+            {
+              "name": "Title",
+              "value": "Jordan - Tourism - ancient city of Petra 2"
+            },
+            {
+              "name": "Description",
+              "value": "Aerial views of the ancient city of Petra, one of the most important archeological sites in the world."
+            },
+            {
+              "name": "TE.DigitalFormat",
+              "value": "High Definition"
+            },
+            {
+              "name": "Format.Duration",
+              "value": "00:00:13"
+            },
+            {
+              "name": "Resource.Class",
+              "value": "Footage"
+            },
+            {
+              "name": "Keywords",
+              "value": "Architecture Art Monument Museum Ruins UNESCO Town"
+            },
+            {
+              "name": "Format.FrameRate",
+              "value": "25 fps"
+            },
+            {
+              "name": "Format.BroadcastStandard",
+              "value": ""
+            }
+          ],
+          "metaDataDefault": [
+            {
+              "name": "TE.DigitalFormat",
+              "value": "High Definition"
+            },
+            {
+              "name": "Resource.Class",
+              "value": "Footage"
+            },
+            {
+              "name": "Format.Duration",
+              "value": "00:00:13"
+            },
+            {
+              "name": "Rights.Reproduction",
+              "value": "Rights Managed"
+            },
+            {
+              "name": "clipIngested",
+              "value": "2023-02-09T10:02:13Z"
+            },
+            {
+              "name": "Format.Duration.Display",
+              "value": ""
+            }
+          ],
+          "thumbnail": {
+            "name": "thumbnail",
+            "urls": {
+              "https": "//cdnt3m-a.akamaihd.net/tem/warehouse/1SM/BC5/1SMBC5_26UQCQ13KF_lt.jpg"
+            }
+          },
+          "hasDownloadableComp": false,
+          "url": "https://cdnt3mt-a.akamaihd.net/1SM/BC5/1SMBC5_26UQCQ13KF_xp-wmorm.f4v?__gda__=1725017596_95bd019151028cd187838c0666cd8560"
+        }
+      ],
+      "totalCount": 40,
+      "currentPage": 0,
+      "pageSize": 30,
+      "hasNextPage": true,
+      "numberOfPages": 2,
+      "hasPreviousPage": false,
+      "type": "dmh_search_results"
+    },
+    "status": "success"
+  }
+}
+```
+</details>
+
+
+### User interaction
+
+This is still WIP.
+The most likely method to handle user interaction is the use of a 'UserInteraction' tool that can be called by the agent to request user input.
+
+Potential options are to request textual user input or provide a list of options to choose from.
+This could also refer to a list of artifacts from a previous tool call.
+For example the DMH Video Search tool could return a list of videos and the user could be asked to select one of them.
+
+WIP: we could use a conditional edge to decide if the ask human tool shall be called (https://langchain-ai.github.io/langgraph/how-tos/human_in_the_loop/wait-user-input/#interacting-with-the-agent) and then interrupt before the tool, modify the state and then continue. The agent node would have to specify which information is needed from the user.
+Alternatively we could have the agent quit the current workflow and start with a conditional start node dependent on if user input to an ask human tool ws sent.
+Both feel a bit hacky.

@@ -1,0 +1,2 @@
+[console_scripts]
+veri-agents-playground-service = veri_agents_playground:run_api

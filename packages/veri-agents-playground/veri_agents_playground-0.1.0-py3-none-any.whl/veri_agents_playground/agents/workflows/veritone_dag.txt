@@ -1,0 +1,5575 @@
+# Documentation on the createJob GraphQL mutation:
+
+createJob
+Create a job.
+Arguments
+input: Fields required to create a job.
+createJob(input: CreateJob): Job
+
+# Documentation on the createJob input
+
+input CreateJob {
+3	
+2	status: String
+5	
+4	targetId: ID
+8	
+6	# User-provided job name
+7	name: String
+11	
+9	# Optional job description
+10	description: String
+13	
+12	tasks: [CreateTask!]
+15	
+14	retries: Int
+20	
+16	# Supply a job template ID to indicate that this
+17	# job was created from the given job template.
+18	# To create a job _from_ a template, use `launchJobTemplates`.
+19	jobTemplateId: ID
+22	
+21	skipDecider: Boolean
+26	
+23	# Optionally, specify a cluster ID where the job should run.
+24	# Both the organization and the engine must have access to the cluster.
+25	clusterId: ID
+30	
+27	# Optional job config information. Typically used only by Veritone
+28	# platform components.
+29	jobConfig: JSONData
+36	
+31	# Optionally, specify the scheduled job ID that this job is associated
+32	# with. Typically it is not necessary for a client to set this; it is
+33	# handled internally by the API.
+34	# To create a job _from_ a scheduled job, use `launchScheduledJobs`
+35	scheduledJobId: ID
+38	
+37	isReprocessJob: Boolean
+42	
+39	# Optionally, provide input needed to create a `TemporalDataObject`.
+40	# The new `TemporalDataObject` will be the target of this job.
+41	target: CreateTDOInJob
+44	
+43	routes: [CreateRoute]
+48	
+45	# ID of the organization that the job should be created on behalf of.
+46	# Only internal platform components can set this value.
+47	organizationId: ID
+51	
+49	# This contains a list of URIs engine toolkit will send completed chunks.
+50	notificationUris: [String]
+56	
+52	# Supply a DAG template ID to indicate that this
+53	# job was created from the given dag template.
+54	# To create a job _from_ a template, use `launchSingleEngineJob`.
+55	dagTemplateId: ID
+58	
+57	uploadUrl: String
+59	}
+
+
+# GraphQL examples:
+
+Run Transcription
+Run Speaker Separation
+Run Transcription and Speaker Separation (Speechmatics)
+Run Transcription and Speaker Separation (Veritone)
+Run Transcription and Speaker Separation for Proprietary Audio Files (e.g. ICMV codec for GTL Jail Calls)
+Run Transcription, Speaker Separation, and Media Summarization
+Run Text Translation (Text-to-Text), Chunk Mode (Split Text)
+Run Text Translation (Text-to-Text), Chunk Mode (No Splitting of Text)
+Run Text Translation (Text-to-Text), Batch Mode (Pangeanic Only)
+Run AWS Text Translation (Text-to-Text), AWS Environments
+Run OCR and Translation of Image PDF (Translate Scanned Documents) - Pangeanic Translation
+Run OCR and Translation of Image PDF (Translate Scanned Documents) - AWS Translate (Auto Detect)
+Run Document Translation (Native-to-Text)
+Run Native File Translation (Native-to-Native) - Pangeanic
+Run Native File Translation (Native-to-Native) - RWS
+Run Document Text Extraction (PDF, DOCX, EML)
+Run Transcription and Translation (Translate Foreign Audio) - AWS Translate (Auto Detect)
+Run Transcription and Translation (Translate Foreign Audio) - Pangeanic Translation
+Run Language Identification (Text)
+Run Language Identification (Audio/Video)
+Run Media Summarization (Batch Mode)
+Run Media Summarization (Chunk Mode)
+Run Media Summarization on Transcript Asset
+Run Text Summarization
+Run Sentiment Analysis (Text)
+Run Sentiment Analysis (Document)
+Run PII Detection (AWS Comprehend)
+Run Entity Extraction
+Run Facial Recognition (Video)
+Run Facial Recognition (Image)
+Run Object Detection (Video)
+Run Object Detection (Image)
+Run Custom Object Detection (Amazon Rekognition Custom Labels) (Video)
+Run Custom Object Detection (Amazon Rekognition Custom Labels) (Image)
+Run Text Recognition (OCR) (Video)
+Run Text Recognition (OCR) (Image)
+Run AWS Text Recognition (OCR) (Image), AWS Environments
+Run Ingestion Only (Video)
+Run Ingestion Only (Image)
+Run Automate Flow (Batch Mode)
+Run Automate Flow (Chunk Mode)
+Run Automate Flow as a Recurring Scheduled Job (Hours)
+Run Automate Flow as a Recurring Scheduled Job (Days)
+Run Automate Flow as a Recurring Scheduled Job (Weeks)
+Run Illuminate Text Analytics on TDOs in Org
+Run Single Engine Job (Standalone Job Template)
+Run Transcription
+
+
+
+# Note: Use `target` to create a new TDO with the job, or use `targetId` to reference an existing TDO. A route connects a parent output folder to a child input folder.
+mutation runTranscription {
+  createJob(input: {
+    target: { 
+      name: "Transcription Test.mp4"
+      startDateTime: "2020-07-23T19:40:04.000Z"
+      stopDateTime: "2020-07-23T19:40:04.000Z"
+    }
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"  # Adjust based on current environment
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"  # Webstream Adapter (WSA)
+        payload: {
+          url: "https://s3.amazonaws.com/dev-chunk-cache-tmp/AC.mp4"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+      {
+        engineId: "352556c7-de07-4d55-b33f-74b1cf237f25"  # Stream Ingestor 2 (SI2) Playback, only include when media playback is needed in platform
+        ioFolders: [
+          {
+            referenceId: "playbackInput"
+            mode: stream
+            type: input
+          }
+        ]
+        executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  # SI2 Chunk Creator, use to split media into chunks for processing
+        payload: {
+          ffmpegTemplate: "audio"
+          chunkOverlap: 3
+          customFFMPEGProperties: {
+	   		chunkSizeInSeconds: "180"
+            chunkOverlapDuration: "3s"
+            outputChunkDuration: "3m"
+          }
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkAudioInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkAudioOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "c0e55cde-340b-44d7-bb42-2e0d65e98255"  # Speechmatics English Transcription engine
+        ioFolders: [
+          {
+            referenceId: "transcriptionInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "transcriptionOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"  # Output Writer (OW), collates VTN-Standard output from cognitive engine
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "playbackInput"
+      },
+      {
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkAudioInput"
+      },
+      {
+        parentIoFolderReferenceId: "chunkAudioOutput"
+        childIoFolderReferenceId: "transcriptionInput"
+      },
+      {
+        parentIoFolderReferenceId: "transcriptionOutput"
+        childIoFolderReferenceId: "owInput"
+      } 
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Speaker Separation
+
+
+
+mutation runSpeakerSeparation {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://veritone-ds-datasets.s3-us-west-2.amazonaws.com/redact/bloomberg.mp4"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+      },
+      {
+        engineId: "02f4d710-cbcd-4534-98d6-a31522f8f4a6"  # Veritone Speaker Separation, stream engine
+        payload: {
+          stoppingThreshold: 0.65
+          maxSpeakerLabels: 50
+          minSpeakerFraction: 0
+          useTranscript: "1"
+        }        
+        executionPreferences: {
+          priority: -5,
+          maxEngines: 10,
+          parentCompleteBeforeStarting: true
+        }
+        ioFolders: [
+          {
+            referenceId: "ssInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "ssOutput"
+            mode: chunk
+            type: output
+          },
+        ]
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          } 
+        ]
+      }
+    ]
+    routes: [
+      {  
+         parentIoFolderReferenceId: "wsaOutput"
+         childIoFolderReferenceId: "ssInput"
+      },
+      {
+        parentIoFolderReferenceId: "ssOutput"
+        childIoFolderReferenceId: "owInput"
+      }
+    ]
+  }) {
+    id
+  }
+}
+Run Transcription and Speaker Separation (Speechmatics)
+
+
+
+mutation runTranscriptionAndSpeakerSeparation {
+  createJob(input: {
+    targetId: "2870936636"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "da093aca-2a6b-4577-8bfe-2b19a2f2faea"  # GLC Fast Ingestor engine, handles transcoding and playback asset creation
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Interview%20Sample.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20231207/us-east-1/s3/aws4_request&X-Amz-Date=20231207T002049Z&X-Amz-Expires=604798&X-Amz-SignedHeaders=host&X-Amz-Signature=2e6564db9283942138a60db769eabb9d5484387ff66e84c683d8f074f8d00a87"
+          playback: true
+          chunkType: "audio"
+        }
+        ioFolders: [
+          {
+            referenceId: "ingestOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -10
+        }
+      },
+      {
+        engineId: "e97d1564-39ff-4016-a034-e1f32aa9eb7d"  # Speechmatics English Transcription engine
+        ioFolders: [
+          {
+            referenceId: "transcriptionInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "transcriptionOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owTranscriptionInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      },
+      {
+        engineId: "cb0129d1-b23b-479f-86ff-1c653736f0d1"    # Speechmatics English Speaker Separation engine
+        payload: {
+          diarization: "speaker"
+          speakerChangeSensitivity: "0.4"
+        }
+        ioFolders: [
+          {
+            referenceId: "ssInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "ssOutput"
+            mode: chunk
+            type: output
+          },
+        ]        
+        executionPreferences: {
+          priority: -5
+          parentCompleteBeforeStarting: true
+        }
+      },      
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owSsInput"
+            mode: chunk
+            type: input
+          } 
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }        
+      }      
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "ingestOutput"
+        childIoFolderReferenceId: "transcriptionInput"
+      },
+      {
+        parentIoFolderReferenceId: "transcriptionOutput"
+        childIoFolderReferenceId: "owTranscriptionInput"
+      },
+      {
+        parentIoFolderReferenceId: "ingestOutput"
+        childIoFolderReferenceId: "ssInput"
+      },
+      {
+        parentIoFolderReferenceId: "ssOutput"
+        childIoFolderReferenceId: "owSsInput"
+      }
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Transcription and Speaker Separation (Veritone)
+
+
+
+mutation runTranscriptionAndSpeakerSeparation {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://s3.amazonaws.com/dev-chunk-cache-tmp/AC.mp4"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+      {
+        engineId: "352556c7-de07-4d55-b33f-74b1cf237f25"
+        ioFolders: [
+          {
+            referenceId: "playbackInput"
+            mode: stream
+            type: input
+          }
+        ]
+        executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"
+        payload: {
+          ffmpegTemplate: "audio"
+          chunkOverlap: 3
+          customFFMPEGProperties: {
+	   		chunkSizeInSeconds: "180"
+            chunkOverlapDuration: "3s"
+            outputChunkDuration: "3m"
+          }
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkAudioInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkAudioOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "c0e55cde-340b-44d7-bb42-2e0d65e98255"  # Speechmatics English Transcription engine
+        ioFolders: [
+          {
+            referenceId: "transcriptionInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "transcriptionOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owTranscriptionInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      },
+      {
+        engineId: "02f4d710-cbcd-4534-98d6-a31522f8f4a6"  # Veritone Speaker Separation, stream engine
+        executionPreferences: {
+          priority: -5,
+          maxEngines: 10,
+          parentCompleteBeforeStarting: true
+        }
+        ioFolders: [
+          {
+            referenceId: "ssInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "ssOutput"
+            mode: chunk
+            type: output
+          },
+        ]
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owSsInput"
+            mode: chunk
+            type: input
+          } 
+        ]
+      }      
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "playbackInput"
+      },
+      {
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkAudioInput"
+      },
+      {
+        parentIoFolderReferenceId: "chunkAudioOutput"
+        childIoFolderReferenceId: "transcriptionInput"
+      },
+      {
+        parentIoFolderReferenceId: "transcriptionOutput"
+        childIoFolderReferenceId: "owTranscriptionInput"
+      },
+      {
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "ssInput"
+      },
+      {
+        parentIoFolderReferenceId: "ssOutput"
+        childIoFolderReferenceId: "owSsInput"
+      }
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Transcription and Speaker Separation for Proprietary Audio Files (e.g. ICMV codec for GTL Jail Calls)
+
+
+
+# Note: This job DAG uses the GLC Fast Ingestor and GLC Fast Chunker engines instead of the Webstream Adapter and SI2 Chunk Creator engines (respectively), which auto detects and apply the right audio codec during the transcoding process.
+mutation runTranscriptionAndSpeakerSeparation {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "da093aca-2a6b-4577-8bfe-2b19a2f2faea"  # GLC Fast Ingestor engine, handles transcoding and playback asset creation
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/temp/1573690645_101_12_72_76.wav?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXR3SQ3E7E/20210702/us-east-1/s3/aws4_request&X-Amz-Date=20210702T233452Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=ac2e1608a6a302d4ff323065dcdc7a3f9c1ed0d19830d902ac2e6b60556371b9"
+          playback: true
+          chunkType: "audio"
+        }
+        ioFolders: [
+          {
+            referenceId: "ingestOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+      {
+        engineId: "1ff37085-5ec5-4fa6-925f-4fb18bed2f16"  # GLC Fast Chunker engine, handles chunking of audio
+        payload: {
+          chunkType: "audio"
+          chunkDurationSecs: 180
+          chunkOverlapSecs: 3
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkAudioInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkAudioOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "c0e55cde-340b-44d7-bb42-2e0d65e98255"  # Speechmatics English Transcription engine
+        ioFolders: [
+          {
+            referenceId: "transcriptionInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "transcriptionOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owTranscriptionInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      },
+      {
+        engineId: "02f4d710-cbcd-4534-98d6-a31522f8f4a6"  # Veritone Speaker Separation, stream engine
+        payload: {
+          labelActiveChannel: 1
+          useTranscript: 0
+        }        
+        executionPreferences: {
+          priority: -5,
+          maxEngines: 10,
+          parentCompleteBeforeStarting: true
+        }
+        ioFolders: [
+          {
+            referenceId: "ssInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "ssOutput"
+            mode: chunk
+            type: output
+          },
+        ]
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owSsInput"
+            mode: chunk
+            type: input
+          } 
+        ]
+      }      
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "ingestOutput"
+        childIoFolderReferenceId: "chunkAudioInput"
+      },
+      {
+        parentIoFolderReferenceId: "chunkAudioOutput"
+        childIoFolderReferenceId: "transcriptionInput"
+      },
+      {
+        parentIoFolderReferenceId: "transcriptionOutput"
+        childIoFolderReferenceId: "owTranscriptionInput"
+      },
+      {
+        parentIoFolderReferenceId: "ingestOutput"
+        childIoFolderReferenceId: "ssInput"
+      },
+      {
+        parentIoFolderReferenceId: "ssOutput"
+        childIoFolderReferenceId: "owSsInput"
+      }
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Transcription, Speaker Separation, and Media Summarization
+
+
+
+mutation runTranscriptionAndSummarization {
+  createJob(input: {
+    targetId: "2870936636"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "da093aca-2a6b-4577-8bfe-2b19a2f2faea"  # GLC Fast Ingestor engine, handles transcoding and playback asset creation
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Interview%20Sample.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20231207/us-east-1/s3/aws4_request&X-Amz-Date=20231207T002049Z&X-Amz-Expires=604798&X-Amz-SignedHeaders=host&X-Amz-Signature=2e6564db9283942138a60db769eabb9d5484387ff66e84c683d8f074f8d00a87"
+          playback: true
+          chunkType: "audio"
+        }
+        ioFolders: [
+          {
+            referenceId: "ingestOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -10
+        }
+      },
+      {
+        engineId: "e97d1564-39ff-4016-a034-e1f32aa9eb7d"  # Speechmatics English Transcription engine
+        ioFolders: [
+          {
+            referenceId: "transcriptionInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "transcriptionOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owTranscriptionInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      },
+      {
+        engineId: "045e675b-ed7c-43bf-8300-a2f2102f57a4"  # Text Creator engine
+        payload: {
+          engineOutputOption: "text"
+        }        
+        ioFolders: [
+          {
+            referenceId: "textCreatorInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "textCreatorOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "5a3ee492-376f-4b97-b28e-a41adce30ef1"  # Media Summarization engine
+        ioFolders: [
+          {
+            referenceId: "summarizationInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "summarizationOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }         
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owSummarizationInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      },      
+      {
+        engineId: "cb0129d1-b23b-479f-86ff-1c653736f0d1"    # Speechmatics English Speaker Separation engine
+        payload: {
+          diarization: "speaker"
+          speakerChangeSensitivity: "0.4"
+        }
+        ioFolders: [
+          {
+            referenceId: "ssInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "ssOutput"
+            mode: chunk
+            type: output
+          },
+        ]        
+        executionPreferences: {
+          priority: -5
+          parentCompleteBeforeStarting: true
+        }
+      },      
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owSsInput"
+            mode: chunk
+            type: input
+          } 
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }        
+      }      
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "ingestOutput"
+        childIoFolderReferenceId: "transcriptionInput"
+      },
+      {
+        parentIoFolderReferenceId: "transcriptionOutput"
+        childIoFolderReferenceId: "owTranscriptionInput"
+      },
+      {
+        parentIoFolderReferenceId: "transcriptionOutput"
+        childIoFolderReferenceId: "textCreatorInput"
+      },      
+      {
+        parentIoFolderReferenceId: "textCreatorOutput"
+        childIoFolderReferenceId: "summarizationInput"
+      },
+      {
+        parentIoFolderReferenceId: "summarizationOutput"
+        childIoFolderReferenceId: "owSummarizationInput"
+      },
+      {
+        parentIoFolderReferenceId: "ingestOutput"
+        childIoFolderReferenceId: "ssInput"
+      },        
+      {
+        parentIoFolderReferenceId: "ssOutput"
+        childIoFolderReferenceId: "owSsInput"
+      }
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Text Translation (Text-to-Text), Chunk Mode (Split Text)
+
+
+
+mutation runTranslationChunkSplit {
+  createJob(input: {
+    targetId: "2690772822"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"	# SI2 Chunk Creator (Webstream Adapter not needed if child task accepts chunk input)
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/translation/spanish/Spanish_00001.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20240327/us-east-1/s3/aws4_request&X-Amz-Date=20240327T155224Z&X-Amz-Expires=604798&X-Amz-SignedHeaders=host&X-Amz-Signature=43d8c58bba0f66c041d9b3891dc040568f69f121b69e932385f8c4da53e5ba14"
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkOutput"
+            mode: chunk
+            type: output
+          }
+        ],
+        executionPreferences: {
+          priority: -20
+        }
+      },
+      {
+        engineId: "b09b9184-0d98-4ecc-8368-51e96c77cdf5"	# TextIO engine for splitting text into chunks
+        payload: {
+          method: "rawChunks"
+        }
+        ioFolders: [
+          {
+            referenceId: "textInput"
+            mode: chunk
+            type: input
+          },
+          {
+          	referenceId: "textOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -20
+          parentCompleteBeforeStarting: true
+        }
+      },
+      {
+        engineId: "3f4184df-cea3-41df-a678-a7432f23821e"	# Pangeanic Translation (2022) - Spanish to English
+        payload: {
+          useCacheURI: true # Only required for Pangeanic engine
+          addToIndex: true  # Only required for Pangeanic engine
+        }
+        ioFolders: [
+          {
+            referenceId: "translationInput"
+            mode: chunk
+            type: input
+          },      
+          {
+            referenceId: "translationOutput"
+            mode: chunk
+            type: output
+          }
+        ]        
+        executionPreferences: {
+          priority: -5,
+          parentCompleteBeforeStarting: true
+        }
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"	# Output Writer engine
+        payload: {
+          mergeTextObjects: true	# Required to assemble translation of text chunks back together
+        }
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          } 
+        ]        
+        executionPreferences: {
+          priority: -10
+          parentCompleteBeforeStarting: true
+        }
+      }
+  ],
+  routes: [
+    {
+      parentIoFolderReferenceId: "chunkOutput"
+      childIoFolderReferenceId: "textInput"
+    },
+    {
+      parentIoFolderReferenceId: "textOutput"
+      childIoFolderReferenceId: "translationInput"
+    },
+    {
+      parentIoFolderReferenceId: "translationOutput"
+      childIoFolderReferenceId: "owInput"
+    }    
+  ]      
+  }) {
+    id
+    targetId
+  }
+}
+Run Text Translation (Text-to-Text), Chunk Mode (No Splitting of Text)
+
+
+
+mutation runTranslationChunk {
+	createJob(input: {
+		targetId: "2690772822"
+		clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+		tasks: [
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  # SI2 Chunk Creator (Webstream Adapter not needed if child task accepts chunk input)
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/translation/chinese-simplified/Chinese_Simplified_general.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20230802/us-east-1/s3/aws4_request&X-Amz-Date=20230802T200553Z&X-Amz-Expires=604798&X-Amz-SignedHeaders=host&X-Amz-Signature=12f84bf19ad3b616e638fd253ea9f031c8fbbb6a1d797d859ed69b81675d5f2a"
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -20
+        }
+      },      
+      {
+        engineId: "d5e2acce-b572-4701-b51e-29cb59532c14"  # Pangeanic 2020 Chinese Simplified Translation
+        payload: {
+          useCacheURI: true   # Required to process chunk as input on Pangeanic engines
+          addToIndex: true
+        }
+        ioFolders: [
+          {
+            referenceId: "translationInput"
+            mode: chunk
+            type: input
+          },          
+          {
+            referenceId: "translationOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"  
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          } 
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }        
+      }      
+		]
+		routes: [
+      { 
+        parentIoFolderReferenceId: "chunkOutput"
+        childIoFolderReferenceId: "translationInput"
+      },
+      { 
+        parentIoFolderReferenceId: "translationOutput"
+        childIoFolderReferenceId: "owInput"
+      }    
+		]
+	}) {
+    id
+    targetId
+  }
+}
+Run Text Translation (Text-to-Text), Batch Mode (Pangeanic Only)
+
+
+
+mutation runTranslation {
+	createJob(input: {
+		targetId: "1200851778"
+		clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+		tasks: [
+          {
+			engineId: "3a8eec01-b84a-406c-90aa-1bb76a4c15ff"	# Pangeanic Spanish to English Translation, does not require WSA in front of it
+            payload: {
+              url: "https://vt-maxagg-test.s3.amazonaws.com/media/spanish.txt"
+            }
+			ioFolders: [
+        	  {
+				referenceId: "translationOutput"
+				mode: chunk
+				type: output
+			  }
+		    ]
+			executionPreferences: {
+              priority: -20
+			}
+		  },
+          {
+            engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"  
+            ioFolders: [
+              {
+                referenceId: "owInput"
+                mode: chunk
+                type: input
+              } 
+            ]
+			executionPreferences: {
+				parentCompleteBeforeStarting: true
+                priority: -21
+			}        
+          }      
+		]
+		routes: [
+		  {
+            parentIoFolderReferenceId: "translationOutput",
+            childIoFolderReferenceId: "owInput"
+  	      }    
+		]
+	}) {
+	id
+    targetId
+  }
+}
+Run AWS Text Translation (Text-to-Text), AWS Environments
+
+
+
+mutation runAwsTranslation {
+	createJob(input: {
+	  target: {
+    	name: "SP1_English.txt"
+    }
+	  clusterId: "eusa-prod-226cf26d-f473-4739-b251-bdfc96cedbb8"
+	  tasks: [
+      {
+          engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+          payload: {
+            url: "https://ben-veritone-testing.s3.amazonaws.com/translation/spanish/SP1_English.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20230512/us-east-1/s3/aws4_request&X-Amz-Date=20230512T154009Z&X-Amz-Expires=604797&X-Amz-SignedHeaders=host&X-Amz-Signature=2a91ac8774c776811f073877c7d886dae3052cb2aadce0371984e9084e562856"
+          }
+          ioFolders: [
+            {
+              referenceId: "wsaOutput"
+              mode: stream
+              type: output
+            }
+          ]
+          executionPreferences: {
+            priority: -5
+          }
+    	},  
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"
+        payload: {
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "1fc4d3d4-54ab-42d1-882c-cfc9df42f386"  # AWS Translate
+        payload: {
+          sourceLanguageCode: "en"
+          target: "es"
+          useAWSAccount: true   # Uses appropriate Veritone service account based on the aiWARE environment the engine is deployed in
+        }
+        ioFolders: [
+          {
+            referenceId: "translationInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "translationOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -20
+        }         
+      }
+	  ]
+	  routes: [     
+        { 
+          parentIoFolderReferenceId: "wsaOutput"
+          childIoFolderReferenceId: "chunkInput"
+        },
+        { 
+          parentIoFolderReferenceId: "chunkOutput"
+          childIoFolderReferenceId: "translationInput"
+        },
+        { 
+          parentIoFolderReferenceId: "translationOutput"
+          childIoFolderReferenceId: "owInput"
+        }
+	  ]
+	}) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run OCR and Translation of Image PDF (Translate Scanned Documents) - Pangeanic Translation
+
+
+
+mutation ocrAndTranslateImagePdf {
+  createJob(input: {
+    targetId: "3040522770"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/ocr/Spanish_Document.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20240402/us-east-1/s3/aws4_request&X-Amz-Date=20240402T161224Z&X-Amz-Expires=604798&X-Amz-SignedHeaders=host&X-Amz-Signature=e3ebb72c4df43cd117f0c3bd11958fc93fc585e6aa78df0665c69bec7e554168"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -20
+        }
+      },
+	  {
+		engineId: "75fc943b-b5b0-4fe1-bcb6-9a7e1884257a"
+        payload: {
+          setAsPrimary: true
+        }
+        ioFolders: [
+          {
+            referenceId: "assetCreatorInput"
+            mode: stream
+            type: input
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }
+	  	},
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  
+        payload: {
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -20
+        }
+      },
+      {
+        engineId: "faf0224b-1479-4f47-9114-68cbd04d632e"  # Tesseract Searchable PDF Conversion engine
+        payload: {
+          languages: "spa"  # Source language not required, but works more accurately than auto detect
+        }
+        ioFolders: [
+          {
+            referenceId: "ocrInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "ocrOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "b09b9184-0d98-4ecc-8368-51e96c77cdf5"  # TextIO engine, used to convert Tesseract OCR output to TXT input
+        payload: {
+          method: "convert"
+          format: "plaintext"
+        }
+        executionPreferences: {
+        parentCompleteBeforeStarting: true
+          priority: -10
+        }
+        ioFolders: [
+          {
+            referenceId: "textCreatorInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "textCreatorOutput"
+            mode: chunk
+            type: output
+          } 
+        ]
+      },      
+      {
+        engineId: "3f4184df-cea3-41df-a678-a7432f23821e"  # Pageanic Spanish to English Translation engine
+        payload: {
+          useCacheURI: true  # Required to process chunk as input
+          addToIndex: true
+        }
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }
+        ioFolders: [
+          {
+            referenceId: "translationInput"
+            mode: chunk
+            type: input
+          }, 
+          {
+            referenceId: "translationOutput"
+            mode: chunk
+            type: output
+          } 
+        ]
+      },     
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+          referenceId: "owTranslationInput"
+          mode: chunk
+          type: input
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }
+      }      
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "assetCreatorInput"
+      },   
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkOutput"
+        childIoFolderReferenceId: "ocrInput"
+      },
+      { 
+        parentIoFolderReferenceId: "ocrOutput"
+        childIoFolderReferenceId: "textCreatorInput"
+      },
+      { 
+        parentIoFolderReferenceId: "textCreatorOutput"
+        childIoFolderReferenceId: "translationInput"
+      },      
+      { 
+        parentIoFolderReferenceId: "translationOutput"
+        childIoFolderReferenceId: "owTranslationInput"
+      }      
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run OCR and Translation of Image PDF (Translate Scanned Documents) - AWS Translate (Auto Detect)
+
+
+
+mutation ocrAndTranslateImagePdf {
+  createJob(input: {
+    targetId: "3040522770"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/ocr/Spanish_Document.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20240402/us-east-1/s3/aws4_request&X-Amz-Date=20240402T161224Z&X-Amz-Expires=604798&X-Amz-SignedHeaders=host&X-Amz-Signature=e3ebb72c4df43cd117f0c3bd11958fc93fc585e6aa78df0665c69bec7e554168"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -20
+        }
+      },
+	  {
+		engineId: "75fc943b-b5b0-4fe1-bcb6-9a7e1884257a"
+        payload: {
+          setAsPrimary: true
+        }
+        ioFolders: [
+          {
+            referenceId: "assetCreatorInput"
+            mode: stream
+            type: input
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }
+	  	},
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  
+        payload: {
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -20
+        }
+      },
+      {
+        engineId: "faf0224b-1479-4f47-9114-68cbd04d632e"  # Tesseract Searchable PDF Conversion engine
+        ioFolders: [
+          {
+            referenceId: "ocrInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "ocrOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "b09b9184-0d98-4ecc-8368-51e96c77cdf5"  # TextIO engine, used to convert Tesseract OCR output to TXT input
+        payload: {
+          method: "convert"
+          format: "plaintext"
+        }
+        executionPreferences: {
+        parentCompleteBeforeStarting: true
+          priority: -10
+        }
+        ioFolders: [
+          {
+            referenceId: "textCreatorInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "textCreatorOutput"
+            mode: chunk
+            type: output
+          } 
+        ]
+      },      
+      {
+        engineId: "1fc4d3d4-54ab-42d1-882c-cfc9df42f386"  # AWS Translate engine, supports auto detection of source language
+        payload: {
+          sourceLanguageCode: "auto"
+          target: "en"
+        }
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }
+        ioFolders: [
+          {
+            referenceId: "translationInput"
+            mode: chunk
+            type: input
+          }, 
+          {
+            referenceId: "translationOutput"
+            mode: chunk
+            type: output
+          } 
+        ]
+      },     
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+          referenceId: "owTranslationInput"
+          mode: chunk
+          type: input
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }
+      }      
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "assetCreatorInput"
+      },   
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkOutput"
+        childIoFolderReferenceId: "ocrInput"
+      },
+      { 
+        parentIoFolderReferenceId: "ocrOutput"
+        childIoFolderReferenceId: "textCreatorInput"
+      },
+      { 
+        parentIoFolderReferenceId: "textCreatorOutput"
+        childIoFolderReferenceId: "translationInput"
+      },      
+      { 
+        parentIoFolderReferenceId: "translationOutput"
+        childIoFolderReferenceId: "owTranslationInput"
+      }      
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Document Translation (Native-to-Text)
+
+
+
+# Note: Use this for extracting text from supported document formats (PDF, DOCX, EML) and translating to text
+mutation runDocumentTextTranslation {
+	createJob(input: {
+      targetId: "1200851778"
+	  clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+	  tasks: [
+        {
+          engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+          payload: {
+            url: "https://ben-veritone-testing.s3.amazonaws.com/translation/spanish/sa56r27.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXR3SQ3E7E/20220106/us-east-1/s3/aws4_request&X-Amz-Date=20220106T191843Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=63fcf3b3933c671bbddfd5fcc8566859553f3a9fd8cfee19a17df158c547e480"
+          }
+          ioFolders: [
+            {
+              referenceId: "wsaOutput"
+              mode: stream
+              type: output
+            }
+          ]
+          executionPreferences: {
+            priority: -5
+          }
+        },
+        {
+          engineId: "75fc943b-b5b0-4fe1-bcb6-9a7e1884257a"
+          payload: {
+            setAsPrimary: true
+          }
+          ioFolders: [
+            {
+              referenceId: "assetCreatorInput"
+              mode: stream
+              type: input
+            }
+          ]
+          executionPreferences: {
+            parentCompleteBeforeStarting: true
+            priority: -5
+          }
+        },
+        {
+          engineId: "62f2b2a7-bfd6-44c8-ab78-c02b47f95974"
+          ioFolders: [
+            {
+              referenceId: "pdfWriterInput"
+              mode: stream
+              type: input
+            },
+            {
+              referenceId: "pdfWriterOutput"
+              mode: chunk
+              type: output
+            }
+          ]
+          executionPreferences: {
+            parentCompleteBeforeStarting: true
+            priority: -5
+          }        
+        },
+        {
+          engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+          ioFolders: [
+            {
+              referenceId: "owPdfWriterInput"
+              mode: chunk
+              type: input
+            }
+          ]
+          executionPreferences: {
+            parentCompleteBeforeStarting: true
+            priority: -10
+          }         
+        },
+        {
+          engineId: "045e675b-ed7c-43bf-8300-a2f2102f57a4"  # Chunk Aggregator, used to aggregate words from VTN-Standard extracted text into one paragraph of text
+          payload: {
+            engineOutputOption: "text"
+          }
+          executionPreferences: {
+        	parentCompleteBeforeStarting: true
+            priority: -10
+          }
+          ioFolders: [
+            {
+              referenceId: "textCreatorInput"
+              mode: chunk
+              type: input
+            },
+            {
+              referenceId: "textCreatorOutput"
+              mode: chunk
+              type: output
+            } 
+          ]
+        },      
+        {
+		  engineId: "3a8eec01-b84a-406c-90aa-1bb76a4c15ff"
+          payload: {
+            useCacheURI: true  # Required to have Pangeanic Translation engine run in "chunk" mode
+          }
+		  ioFolders: [
+            {
+              referenceId: "translationInput"
+              mode: chunk
+              type: input
+            },        	
+            {
+              referenceId: "translationOutput"
+              mode: chunk
+              type: output
+            }
+          ]
+		  executionPreferences: {
+            parentCompleteBeforeStarting: true
+            priority: -20
+		  }
+  	    },
+        {
+          engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"  
+          ioFolders: [
+            {
+              referenceId: "owTranslationInput"
+              mode: chunk
+              type: input
+            } 
+          ]
+          executionPreferences: {
+            parentCompleteBeforeStarting: true
+            priority: -21
+		  }        
+        }            
+      ],
+	  routes: [
+        {
+          parentIoFolderReferenceId: "wsaOutput"
+          childIoFolderReferenceId: "assetCreatorInput"
+        },
+        {
+          parentIoFolderReferenceId: "wsaOutput"
+          childIoFolderReferenceId: "pdfWriterInput"
+        },
+        {
+          parentIoFolderReferenceId: "pdfWriterOutput"
+          childIoFolderReferenceId: "owPdfWriterInput"
+        }, 
+        {
+          parentIoFolderReferenceId: "pdfWriterOutput"
+          childIoFolderReferenceId: "textCreatorInput"
+        },
+        {
+          parentIoFolderReferenceId: "textCreatorOutput"
+          childIoFolderReferenceId: "translationInput"
+        },      
+        {
+          parentIoFolderReferenceId: "translationOutput"
+          childIoFolderReferenceId: "owTranslationInput"
+        }
+	  ]
+	}) {
+	id
+    targetId
+  }
+}
+Run Native File Translation (Native-to-Native) - Pangeanic
+
+
+
+# Note: For the actual production run, you will need to uncomment out the `pangeaMTApiKey` line (19) and pass in a new API key generated specifically for that customer/project.  (Engineering will provide this upon request.)
+mutation runNativeFileTranslation {
+  createJob(input: {
+    target: {
+      startDateTime: "2021-07-07T19:59:51.000Z"
+      stopDateTime: "2021-07-07T19:59:51.000Z"
+      name: "sa56r27.pdf"
+      parentFolderId: "d0227f22-4de9-4d37-8962-17a6293cf7d5"
+    }
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "a38676f6-7557-4ba1-a544-c4020f800778"  # Pangeanic File Translator, adds an asset of type `translatedResult` to the TDO which contains the translated document.
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/translation/spanish/sa56r27.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXR3SQ3E7E/20210707/us-east-1/s3/aws4_request&X-Amz-Date=20210707T200551Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=4892ead57ac16f9a51bc6ce9d00f789adba4e61cf65b8bc0807d10cf48cd2572"
+          pangeaMTTranslationServerUri: "http://prod.pangeamt.com:8080"
+          pangeaMTSrcLang: "es"
+          pangeaMTTgtLang: "en"
+          #pangeaMTApiKey: ""
+        }
+        ioFolders: [
+          {
+            referenceId: "translationOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          maxEngines: 10
+          priority: -5
+        }        
+      }
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Native File Translation (Native-to-Native) - RWS
+
+
+
+mutation runRwsDocumentTranslation {
+  createJob(input: {
+    target: {
+      name: "DOCX Sample.docx"
+      parentFolderId: "b5daff58-b3d5-407c-bb28-ca7e0314f149"
+    }
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "ce36ca70-5946-4ae8-850a-a1336a881e70"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/translation/english/Apple.docx?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20231010/us-east-1/s3/aws4_request&X-Amz-Date=20231010T210008Z&X-Amz-Expires=604798&X-Amz-SignedHeaders=host&X-Amz-Signature=8a7551cdf7ae87a34ce8a7a27f08892b03407f32c445772c6ba6069864e2393b"
+        }
+        executionPreferences: {
+          priority: -10
+        }
+        ioFolders: [
+          {
+            referenceId: "translationOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+      }
+    ]
+    routes: []
+  }
+  ) {
+    targetId
+    id
+    targetId
+    clusterId
+    tasks {
+      records {
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Document Text Extraction (PDF, DOCX, EML)
+
+
+
+mutation runDocumentTextExtraction {
+	createJob(input: {
+	  target: {
+        startDateTime: "2020-11-08T03:54:30.000Z"
+        stopDateTime: "2020-11-08T03:54:30.000Z"
+        name: "sa56r27.pdf"
+        parentFolderId: "d0227f22-4de9-4d37-8962-17a6293cf7d5"
+      }
+	  clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+	  tasks: [
+        {
+          engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+          payload: {
+            url: "https://ben-veritone-testing.s3.amazonaws.com/translation/spanish/sa56r27.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXR3SQ3E7E/20210709/us-east-1/s3/aws4_request&X-Amz-Date=20210709T235844Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=d7f3a70cc71a7601d5bcc546b34d84377546dc7e382ab06c4b8a1878bdfd2cd0"
+          }
+          ioFolders: [
+            {
+              referenceId: "wsaOutput"
+              mode: stream
+              type: output
+            }
+          ]
+          executionPreferences: {
+            priority: -5
+          }
+        },
+        {
+          engineId: "75fc943b-b5b0-4fe1-bcb6-9a7e1884257a"
+          payload: {
+            setAsPrimary: true
+          }
+          ioFolders: [
+            {
+              referenceId: "assetCreatorInput"
+              mode: stream
+              type: input
+            }
+          ]
+          executionPreferences: {
+      	    parentCompleteBeforeStarting: true
+            priority: -5
+          }
+        },
+        {
+          engineId: "62f2b2a7-bfd6-44c8-ab78-c02b47f95974"
+          ioFolders: [
+            {
+              referenceId: "pdfWriterInput"
+              mode: stream
+              type: input
+            },
+            {
+              referenceId: "pdfWriterOutput"
+              mode: chunk
+              type: output
+            }
+          ]
+		  executionPreferences: {
+		  	parentCompleteBeforeStarting: true
+            priority: -5
+		  }        
+        },
+        {
+          engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+          ioFolders: [
+            {
+              referenceId: "owInput"
+              mode: chunk
+              type: input
+            }
+          ]
+        	executionPreferences: {
+            parentCompleteBeforeStarting: true
+            priority: -10
+          }         
+        }
+	  ]
+	  routes: [
+        {
+          parentIoFolderReferenceId: "wsaOutput"
+          childIoFolderReferenceId: "assetCreatorInput"
+        },
+        {
+		  parentIoFolderReferenceId: "wsaOutput"
+          childIoFolderReferenceId: "pdfWriterInput"
+        },
+        {
+          parentIoFolderReferenceId: "pdfWriterOutput"
+          childIoFolderReferenceId: "owInput"
+        }
+	  ]
+	}) {
+	id
+    targetId
+  }
+}
+Run Transcription and Translation (Translate Foreign Audio) - AWS Translate (Auto Detect)
+
+
+
+mutation runTranscriptionAndTranslation {
+  createJob(input: {
+	targetId: "1200851778"
+	clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+	tasks: [
+	  {
+		engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+		payload: {
+			url: "https://s3.amazonaws.com/prod-api.veritone.com/17130/other/2021/2/2/_/Russian_Aleppo_Syria-1-28-296_ab6a329b-99e7-44b3-836c-c3b600d5e124.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQMR5VATUHU3MEGOA%2F20210302%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210302T030837Z&X-Amz-Expires=86400&X-Amz-Signature=124e818a1945af25459b1e4ef6206d20e918a8b52454c016e9cf15977c22697c&X-Amz-SignedHeaders=host"
+		}
+		ioFolders: [
+		  {
+			referenceId: "wsaOutput"
+			mode: stream
+			type: output
+		  }
+		]
+		executionPreferences: {
+		  priority: -5
+		}
+	  },
+	  {
+		engineId: "352556c7-de07-4d55-b33f-74b1cf237f25"
+		ioFolders: [
+		  {
+			referenceId: "playbackInput"
+			mode: stream
+			type: input
+		  }
+		]
+		executionPreferences: {
+		  parentCompleteBeforeStarting: true
+		  priority: -5
+		}
+	  },
+	  {
+		engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"
+		payload: {
+			ffmpegTemplate: "audio"
+			chunkOverlap: 3
+			customFFMPEGProperties: {
+			  chunkSizeInSeconds: "180"
+			  chunkOverlapDuration: "3s"
+			  outputChunkDuration: "3m"
+			}
+		}
+		ioFolders: [
+		  {
+			referenceId: "chunkAudioInput"
+			mode: stream
+			type: input
+		  },
+		  {
+			referenceId: "chunkAudioOutput"
+			mode: chunk
+			type: output
+		  }
+		]
+		executionPreferences: {
+		  parentCompleteBeforeStarting: true
+		  priority: -5
+		}
+	  },
+	  {
+		engineId: "e02e7daa-5920-4119-bcc4-e0470ae12680"	# Speechmatics Russian Transcription
+		ioFolders: [
+		  {
+			referenceId: "transcriptionInput"
+			mode: chunk
+			type: input
+		  },
+		  {
+			referenceId: "transcriptionOutput"
+			mode: chunk
+			type: output
+		  }
+		]
+		executionPreferences: {
+		  maxEngines: 10
+		  parentCompleteBeforeStarting: true
+	  	  priority: -5
+		}
+	  },
+	  {
+		engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+		ioFolders: [
+		  {
+			referenceId: "owTranscriptionInput"
+			mode: chunk
+			type: input
+		  }
+		]
+		executionPreferences: {
+		  parentCompleteBeforeStarting: true
+		  priority: -10
+		}
+	  },      
+      {
+        engineId: "045e675b-ed7c-43bf-8300-a2f2102f57a4"  # Chunk Aggregator, used to aggregate words from VTN-Standard transcript into text
+        payload: {
+          engineOutputOption: "text"
+        }
+        executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -10
+        }
+        ioFolders: [
+          {
+            referenceId: "textCreatorInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "textCreatorOutput"
+            mode: chunk
+            type: output
+          } 
+        ]
+      },
+      {
+        engineId: "1fc4d3d4-54ab-42d1-882c-cfc9df42f386" # Amazon Translate, supports auto detection of source language
+        payload: {
+          sourceLanguageCode: "auto"
+          target: "en"
+        }
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }
+        ioFolders: [
+          {
+            referenceId: "translationInput"
+            mode: chunk
+            type: input
+          }, 
+          {
+            referenceId: "translationOutput"
+            mode: chunk
+            type: output
+          } 
+        ]
+      },      
+	  {
+		engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+		ioFolders: [
+		  {
+			referenceId: "owTranslationInput"
+			mode: chunk
+			type: input
+		  }
+		]
+		executionPreferences: {
+		  parentCompleteBeforeStarting: true
+		  priority: -10
+		}
+	  }
+    ]
+	routes: [
+	  {
+		parentIoFolderReferenceId: "wsaOutput"
+		childIoFolderReferenceId: "playbackInput"
+	  },
+	  {
+		parentIoFolderReferenceId: "wsaOutput"
+		childIoFolderReferenceId: "chunkAudioInput"
+	  },
+	  {
+		parentIoFolderReferenceId: "chunkAudioOutput"
+		childIoFolderReferenceId: "transcriptionInput"
+	  },
+	  {
+		parentIoFolderReferenceId: "transcriptionOutput"
+		childIoFolderReferenceId: "owTranscriptionInput"
+      },
+      {
+		parentIoFolderReferenceId: "transcriptionOutput"
+		childIoFolderReferenceId: "textCreatorInput"
+      },
+      {
+		parentIoFolderReferenceId: "textCreatorOutput"
+		childIoFolderReferenceId: "translationInput"
+	  },
+	  {
+		parentIoFolderReferenceId: "translationOutput"
+		childIoFolderReferenceId: "owTranslationInput"
+	  }
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferen ceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Transcription and Translation (Translate Foreign Audio) - Pangeanic Translation
+
+
+
+mutation runTranscriptionAndTranslation {
+  createJob(input: {
+    target: {
+      name: "Spanish Interview Sample.m4a"
+    }
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "da093aca-2a6b-4577-8bfe-2b19a2f2faea"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Spanish%20Interview%20Sample.m4a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20230418/us-east-1/s3/aws4_request&X-Amz-Date=20230418T220859Z&X-Amz-Expires=604799&X-Amz-SignedHeaders=host&X-Amz-Signature=51cad6745469759f3aed23a515c76e0cbf9e73f508d3ae5e8a437e43d0a24ff4"
+          chunkType: "audio"
+        }
+        ioFolders: [
+          {
+          referenceId: "ingestOutput"
+          mode: chunk
+          type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+      {
+        engineId: "739ea03e-1955-413f-8c16-efad1538d466"  # Spanish Transcription engine
+        ioFolders: [
+          {
+            referenceId: "transcriptionInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "transcriptionOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+          referenceId: "owTranscriptionInput"
+          mode: chunk
+          type: input
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }
+      },
+      {
+        engineId: "3f4184df-cea3-41df-a678-a7432f23821e"  # Spanish to English Translation engine
+        payload: {
+          useCacheURI: true  # Required to process chunk as input
+          addToIndex: true
+        }
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }
+        ioFolders: [
+          {
+            referenceId: "translationInput"
+            mode: chunk
+            type: input
+          }, 
+          {
+            referenceId: "translationOutput"
+            mode: chunk
+            type: output
+          } 
+        ]
+      },      
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+          referenceId: "owTranslationInput"
+          mode: chunk
+          type: input
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }
+      },
+      {
+        engineId: "483c7b72-2a02-40e0-a2b6-089b8ab5cff2"  # Spanish Speaker Separation engine
+        executionPreferences: {
+          priority: -5
+          parentCompleteBeforeStarting: true
+        }
+        ioFolders: [
+          {
+            referenceId: "ssInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "ssOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3",
+        ioFolders: [
+          {
+            referenceId: "owSsInput",
+            mode: chunk
+            type: input
+          } 
+        ]
+      }
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "ingestOutput"
+        childIoFolderReferenceId: "transcriptionInput"
+      },
+      {
+        parentIoFolderReferenceId: "transcriptionOutput"
+        childIoFolderReferenceId: "owTranscriptionInput"
+      },
+      {
+        parentIoFolderReferenceId: "transcriptionOutput"
+        childIoFolderReferenceId: "translationInput"
+      },
+      {
+        parentIoFolderReferenceId: "translationOutput"
+        childIoFolderReferenceId: "owTranslationInput"
+      },
+      {
+        parentIoFolderReferenceId: "ingestOutput"
+        childIoFolderReferenceId: "ssInput"
+      },
+      {
+        parentIoFolderReferenceId: "ssOutput"
+        childIoFolderReferenceId: "owSsInput"
+      }
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Language Identification (Text)
+
+
+
+mutation runLanguageIdentificationText {
+  createJob(input: {
+	target: {
+      name: "SP1.txt"
+    }
+	clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+	tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"	# Webstream Adapter
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/translation/spanish/SP1.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20220216/us-east-1/s3/aws4_request&X-Amz-Date=20220216T065357Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=ea7321d5bc8d8cba8b007ee07b1811686c5c2549800518b694c6c0725eebe946"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  # SI2 Chunk Creator, passthrough text as chunk
+        payload: {
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "4c951417-6120-4595-b731-78b57d603540"  # Zetta Cloud Language ID
+        ioFolders: [
+          {
+            referenceId: "languageIdInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "languageIdOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -20
+        }         
+      }   
+	]
+	routes: [ 
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkOutput"
+        childIoFolderReferenceId: "languageIdInput"
+      },
+      { 
+        parentIoFolderReferenceId: "languageIdOutput"
+        childIoFolderReferenceId: "owInput"
+      }
+	]
+	}) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Language Identification (Audio/Video)
+
+
+
+mutation runLanguageIdentificationMedia {
+  createJob(input: {
+	target: {
+      name: "Language ID Test.mp3"
+    }
+	clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+	tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"	# Webstream Adapter
+        payload: {
+          url: "https://s3-ktalkington-general.s3.us-east-2.amazonaws.com/SM_LI_TEST/Looking%20for%20a%20job%20in%20Spanish%20-%20Listening%20Practice.mp3?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjENn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIGrt2liwPDvxSRFnL8gfR0VpVk7Y%2BO2gkpOZnO4cRevZAiEAh7e0lGtUk%2BABQ%2BfI6VecmwGWUdKWT5KYPLjkwUBR4AIq8gII8v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARACGgw0NzY0NDI1NzEyNDciDNmfK5CYNmCAXLzz0SrGAuZ%2Fmamh1Rsq3%2BYGl7LRYNqBgsMFP9eWUaGATwP6YE7YBVROFz1%2B96QuC1kur3HPVNBzJl2CAuU2RxmbbqtLLYC5CnhCmuGxVT%2Bi%2B%2F9DItM%2BW5GCLALzlLl3tifjg8TpTbcyUWVx%2B%2FQse6p1Q5tML4neKbt7b99D4JFn74u8R4as6JPQF4o2Ape%2FipyzzRHz%2B7tKhOjH3m3ptuVaqBdq2SG0CkuOro28ItqeG7IZXGOkkxJZE3weIJ0tRtwCWouquMIY9B8Xz53K1yFhpWEiMb8HE%2FhllnP0JZFIB7KUeGAedaTlQazjZxPcPwfTdFG8MYL%2BMJaVGAYBwYAH5oBKa8h2MOmpsBItzzjU%2BiAgu0usAUhiA%2BPrSk4yOlxs4i73sfG1t%2FFVK4hyBhVCvz2aEa3V6pQ3haSiXsczFxiCptFwhHhvhQqWMIfHuJwGOocCiEg2PKxfbO4j8Fu7hf5SM4ucAYAt9jRBayzGdSS%2BIL0j%2FNonTgDjaLVeJqB78Th6u9WBaVwOF56H4nqBe8MastgpGgS91ZP%2BwEXwXEmYErATq4pEwihQaHtI5%2BIsT4VqwpLLAL7%2BX6iJCRAohgiB1aB93Kehpom%2FY4gdOW%2FNbYbVrvKh4nVXFkaE2H2%2F%2FuLi8Trfu%2FaQRtQZ8WKhxJuhCW3kXsiue%2BAxz4p5%2BWf3Xm8FZT9CrueLmNF3trfqx5CinGFlR1xO1oQKMnepSvHKUTQZAXnPVLwTd%2FAoMlzijP71iEY2ZhQBSpKifqXFQ%2BjmADUIU%2FZMBNZfpIvKPFtIUWAtzLFw3Ss%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20221205T171952Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Credential=ASIAW53RQWHXZK5ODTLU%2F20221205%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=7e5841363f89dd1dfcafd6d9f80e112edc0faf3b7d195a2d0b0f20423dc44e74"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  # SI2 Chunk Creator
+        payload: {
+          ffmpegTemplate: "audio"
+          chunkOverlap: 3
+          customFFMPEGProperties: {
+            chunkSizeInSeconds: "180"
+            chunkOverlapDuration: "3s"
+            outputChunkDuration: "3m"
+          }          
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "a1095ed0-5c2f-467c-a60f-74b53a3f9ced"  # Speechmatics Language ID
+        ioFolders: [
+          {
+            referenceId: "languageIdInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "languageIdOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -20
+        }         
+      }   
+	]
+	routes: [ 
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkOutput"
+        childIoFolderReferenceId: "languageIdInput"
+      },
+      { 
+        parentIoFolderReferenceId: "languageIdOutput"
+        childIoFolderReferenceId: "owInput"
+      }
+	]
+	}) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Media Summarization (Batch Mode)
+
+
+
+mutation runMediaSummarizationBatch {
+  createJob(input: {
+    targetId: "3280496721"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "5a3ee492-376f-4b97-b28e-a41adce30ef1"
+        payload: {
+          url: "https://s3-t3m-previewpriv-or-1.s3.us-west-2.amazonaws.com/8XC/E0A/8XCE0A_0B0WC02P4N_xp.f4v?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240917T160734Z&X-Amz-SignedHeaders=host&X-Amz-Expires=14399&X-Amz-Credential=AKIAJEMCZ6EAEHB5KSYA%2F20240917%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=96beec01cefec62d31829a6d03965c2fe52e6443286fbca10052614aca0bda60"
+        }
+        ioFolders: [
+          {
+            referenceId: "summarizationOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }  
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "summarizationOutput"
+        childIoFolderReferenceId: "owInput"
+      }
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Media Summarization (Chunk Mode)
+
+
+
+mutation runMediaSummarizationChunk {
+  createJob(input: {
+    targetId: "3280496721"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "da093aca-2a6b-4577-8bfe-2b19a2f2faea"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Body%20Cam%201.mp4"
+          playback: true
+          chunkType: "audio"
+        }
+        ioFolders: [
+          {
+            referenceId: "ingestOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -20
+        }
+      },
+      {
+        engineId: "5a3ee492-376f-4b97-b28e-a41adce30ef1"
+        ioFolders: [
+          {
+            referenceId: "summarizationInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "summarizationOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }  
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "ingestOutput"
+        childIoFolderReferenceId: "summarizationInput"
+      },
+      {
+        parentIoFolderReferenceId: "summarizationOutput"
+        childIoFolderReferenceId: "owInput"
+      }
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Media Summarization on Transcript Asset
+
+
+
+# Note: This DAG assumes the TDO already has existing Transcription results in vtn-standard format, and runs using that asset's signed URL
+mutation runMediaSummarizationOnTranscript {
+  createJob(input: {
+    targetId: "3540494472"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"
+        payload: {
+          url: "https://s3.amazonaws.com/prod-api-2023.veritone.com/48361/other/2025/2/3/_/7-21-837_8427022d-eb20-4f5c-8bea-a256efb7f081?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQMR5VATUD5SVUV5R%2F20250324%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250324T195746Z&X-Amz-Expires=86400&X-Amz-Signature=4a8bc457bed443dc291d4a5f1f59e15fe610f35c08128b1fced5d6736bddf39b&X-Amz-SignedHeaders=host"
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          priority: -10
+        }
+      },
+      {
+        engineId: "045e675b-ed7c-43bf-8300-a2f2102f57a4"
+        payload: {
+          engineOutputOption: "text"
+        }
+        ioFolders: [
+          {
+            referenceId: "textCreatorInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "textCreatorOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "5a3ee492-376f-4b97-b28e-a41adce30ef1"
+        ioFolders: [
+          {
+            referenceId: "summarizationInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "summarizationOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },      
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "chunkOutput"
+        childIoFolderReferenceId: "textCreatorInput"
+      },
+      {
+        parentIoFolderReferenceId: "textCreatorOutput"
+        childIoFolderReferenceId: "summarizationInput"
+      },
+      {
+        parentIoFolderReferenceId: "summarizationOutput"
+        childIoFolderReferenceId: "owInput"
+      } 
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Text Summarization
+
+
+
+mutation runTextSummarization {
+  createJob(input: {
+    targetId: "3110552144"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Text%20Analytics%20Sample.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20240919/us-east-1/s3/aws4_request&X-Amz-Date=20240919T184231Z&X-Amz-Expires=604796&X-Amz-SignedHeaders=host&X-Amz-Signature=30032a9daa057dcecbf6bea943d2cc28ebd03d8103ef87ead8c776e542f1af24"
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -20
+        }
+      },    
+      {
+        engineId: "5a3ee492-376f-4b97-b28e-a41adce30ef1"
+        ioFolders: [
+          {
+            referenceId: "summarizationInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "summarizationOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }  
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "chunkOutput"
+        childIoFolderReferenceId: "summarizationInput"
+      },
+      {
+        parentIoFolderReferenceId: "summarizationOutput"
+        childIoFolderReferenceId: "owInput"
+      }
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Sentiment Analysis (Text)
+
+
+
+mutation runSentimentAnalysisText {
+	createJob(input: {
+	  target: {
+        name: "pizza.txt"
+      }
+	  clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+	  tasks: [
+        {
+          engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"	# Webstream Adapter
+          payload: {
+            url: "https://ben-veritone-testing.s3.amazonaws.com/deloitte/pizza.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20220310/us-east-1/s3/aws4_request&X-Amz-Date=20220310T233453Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=d9769025ed6fd874bf44a942be776ed0cc781c3691428ae37af7469eef0e94e2"
+          }
+          ioFolders: [
+            {
+              referenceId: "wsaOutput"
+              mode: stream
+              type: output
+            }
+          ]
+          executionPreferences: {
+            priority: -5
+          }
+    	},  
+        {
+          engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  # SI2 Chunk Creator, passthrough text as chunk
+          payload: {
+            ffmpegTemplate: "rawchunk"
+          }
+          ioFolders: [
+            {
+              referenceId: "chunkInput"
+              mode: stream
+              type: input
+            },
+            {
+              referenceId: "chunkOutput"
+              mode: chunk
+              type: output
+            }
+          ]
+        	executionPreferences: {
+        	  parentCompleteBeforeStarting: true
+            priority: -5
+          }
+        },
+        {
+          engineId: "8e87a2d8-6918-4368-8d2a-08d01205c47d"	# Sentiment Analysis
+          ioFolders: [
+            {
+              referenceId: "sentimentInput"
+              mode: chunk
+              type: input
+            },
+            {
+              referenceId: "sentimentOutput"
+              mode: chunk
+              type: output
+            }
+          ]
+        	executionPreferences: {
+            parentCompleteBeforeStarting: true
+            priority: -10
+          }        
+        },
+        {
+          engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+          ioFolders: [
+            {
+              referenceId: "owInput"
+              mode: chunk
+              type: input
+            }
+          ]
+        	executionPreferences: {
+            parentCompleteBeforeStarting: true
+            priority: -20
+          }         
+        }
+	  ]
+	  routes: [     
+        { 
+          parentIoFolderReferenceId: "wsaOutput"
+          childIoFolderReferenceId: "chunkInput"
+        },
+        { 
+          parentIoFolderReferenceId: "chunkOutput"
+          childIoFolderReferenceId: "sentimentInput"
+        },
+        { 
+          parentIoFolderReferenceId: "sentimentOutput"
+          childIoFolderReferenceId: "owInput"
+        }
+	  ]
+	}) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+  poc  }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Sentiment Analysis (Document)
+
+
+
+mutation runSentimentAnalysisDocument {
+	createJob(input: {
+	  target: {
+        name: "OCC-2022-0005-0306_attachment_1.pdf"
+      }
+	  clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+	  tasks: [
+        {
+          engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"	# Webstream Adapter
+          payload: {
+            url: "https://ben-veritone-testing.s3.amazonaws.com/deloitte/OCC-2022-0005-0306_attachment_1.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20220609/us-east-1/s3/aws4_request&X-Amz-Date=20220609T182341Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f522e20a30717157e754e696eb9b09ebe9958b099cf6ade71655acda2bc6f02e"
+          }
+          ioFolders: [
+            {
+              referenceId: "wsaOutput"
+              mode: stream
+              type: output
+            }
+          ]
+          executionPreferences: {
+            priority: -5
+          }
+        }, 
+        {
+          engineId: "62f2b2a7-bfd6-44c8-ab78-c02b47f95974"	# Text Extraction
+          ioFolders: [
+            {
+              referenceId: "pdfWriterInput"
+              mode: stream
+              type: input
+            },
+            {
+              referenceId: "pdfWriterOutput"
+              mode: chunk
+              type: output
+            }
+          ]
+      		executionPreferences: {
+        		parentCompleteBeforeStarting: true
+            priority: -5
+      		}        
+        },
+        {
+          engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"	# Output Writer for Text Extraction
+          ioFolders: [
+            {
+              referenceId: "owPdfWriterInput"
+              mode: chunk
+              type: input
+            }
+          ]
+          executionPreferences: {
+            parentCompleteBeforeStarting: true
+            priority: -10
+          }         
+        },
+        {
+          engineId: "045e675b-ed7c-43bf-8300-a2f2102f57a4"	# Chunk Aggregator for extracted text
+          payload: {
+            engineOutputOption: "text"
+          }
+          ioFolders: [
+            {
+              referenceId: "textCreatorInput"
+              mode: chunk
+              type: input
+            },
+            {
+              referenceId: "textCreatorOutput"
+              mode: chunk
+              type: output
+            } 
+          ]
+          executionPreferences: {
+          	parentCompleteBeforeStarting: true
+            priority: -10
+          }        
+        },
+        {
+          engineId: "76e005b3-1e5c-45c4-be45-c01b7371bb93"	# Sentiment Analysis
+          ioFolders: [
+            {
+              referenceId: "sentimentInput"
+              mode: chunk
+              type: input
+            },
+            {
+              referenceId: "sentimentOutput"
+              mode: chunk
+              type: output
+            }
+          ]
+        	executionPreferences: {
+            parentCompleteBeforeStarting: true
+            priority: -10
+          }        
+        },
+        {
+          engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"	# Output Writer for Sentiment Analysis
+          ioFolders: [
+            {
+              referenceId: "owSentimentInput"
+              mode: chunk
+              type: input
+            }
+          ]
+        	executionPreferences: {
+            parentCompleteBeforeStarting: true
+            priority: -20
+          }
+        }
+	  ]
+	  routes: [
+        {
+      	  parentIoFolderReferenceId: "wsaOutput"
+          childIoFolderReferenceId: "pdfWriterInput"
+        },
+        {
+          parentIoFolderReferenceId: "pdfWriterOutput"
+          childIoFolderReferenceId: "owPdfWriterInput"
+        },
+        {
+          parentIoFolderReferenceId: "pdfWriterOutput"
+          childIoFolderReferenceId: "textCreatorInput"
+        },
+        {
+          parentIoFolderReferenceId: "textCreatorOutput"
+          childIoFolderReferenceId: "sentimentInput"
+        },
+        {
+          parentIoFolderReferenceId: "sentimentOutput"
+          childIoFolderReferenceId: "owSentimentInput"
+        }
+	  ]
+    }) {
+	id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run PII Detection (AWS Comprehend)
+
+
+
+mutation runPiiDetection {
+  createJob(input: {
+    target: {
+      name: "PII Detection Test.txt"
+      parentFolderId: "38ebd78e-3fe6-45bf-bb9d-6073d04651c8"
+    }
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/PII%20Detection%20Test.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20220426/us-east-1/s3/aws4_request&X-Amz-Date=20220426T193617Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=4438f324bd562d9f3f6ca4dbccc29b46d86ed0eec0cfde5ec6dc97fbd19baa14"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+      },
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"
+        payload: {
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+        }
+      },
+      {
+        engineId: "9a0a7aa3-5623-41bb-a77e-ecba583b16f7"	# AWS Comprehend PII Detection
+        ioFolders: [
+          {
+            referenceId: "piiInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "piiOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+      }
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkInput"
+      },
+      {
+        parentIoFolderReferenceId: "chunkOutput"
+        childIoFolderReferenceId: "piiInput"
+      },
+      {
+        parentIoFolderReferenceId: "piiOutput"
+        childIoFolderReferenceId: "owInput"
+      }
+    ]
+  }
+  ) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Entity Extraction
+
+
+
+mutation runEntityExtraction {
+  createJob(input: {
+    targetId: "3040742515"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [  
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/temp/terry1.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXV5MEMH4U/20240403/us-east-1/s3/aws4_request&X-Amz-Date=20240403T154819Z&X-Amz-Expires=604798&X-Amz-SignedHeaders=host&X-Amz-Signature=b9e6aeb9354b9f6bdb8d0936edeaaccf7cc829acdc81631b3bafabf03e0b8a95"
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [       
+          {
+            referenceId: "chunkOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+      },
+      {
+        engineId: "cb2b77b9-3478-4e51-844f-e4064384bb33"
+        ioFolders: [
+          {
+            referenceId: "entityInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "entityOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+      }
+    ]
+    routes: [     
+      {
+        parentIoFolderReferenceId: "chunkOutput"
+        childIoFolderReferenceId: "entityInput"
+      },
+      {
+        parentIoFolderReferenceId: "entityOutput"
+        childIoFolderReferenceId: "owInput"
+      }
+    ]
+  }
+  ) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Facial Recognition (Video)
+
+
+
+mutation runFacialRecognitionVideo {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Home+Burglary.mp4"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+      {
+        engineId: "352556c7-de07-4d55-b33f-74b1cf237f25" 
+        ioFolders: [
+          {
+            referenceId: "playbackInput"
+            mode: stream
+            type: input
+          }
+        ]
+        executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  
+        payload: {
+          ffmpegTemplate: "frame"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkVideoInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkVideoOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "e62665c7-f855-4168-8aa3-668a7b0a50ea"  # Facebox Recognize (library training), requires image input
+        payload: {
+          libraryId: "4af769e9-260b-40ec-b7f7-ab5be06660c6" # Library containing trained faces
+          libraryEngineModelId: "2f6b8c6f-4b3a-478b-874d-8889cd5e6124"  # Library Engine Model representing the training data
+        }
+        ioFolders: [
+          {
+            referenceId: "faceInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "faceOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "playbackInput"
+      },      
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkVideoInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkVideoOutput"
+        childIoFolderReferenceId: "faceInput"
+      },
+      { 
+        parentIoFolderReferenceId: "faceOutput"
+        childIoFolderReferenceId: "owInput"
+      }    
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Facial Recognition (Image)
+
+
+
+mutation runFacialRecognitionImage {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Juan%20Carlos%20Ochoa.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXR3SQ3E7E/20210830/us-east-1/s3/aws4_request&X-Amz-Date=20210830T171350Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=4e21b5496fc8195eefb699e59f6cfa7e0adff59d80555c5bda3096f2202abdb4"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+	  {
+		engineId: "75fc943b-b5b0-4fe1-bcb6-9a7e1884257a"	# SI2 Asset Creator, needed for adding image as primary asset
+        payload: {
+          setAsPrimary: true
+        }
+		ioFolders: [
+		  {
+			referenceId: "assetCreatorInput"
+			mode: stream
+			type: input
+		  }
+		]
+		executionPreferences: {
+			parentCompleteBeforeStarting: true
+			priority: -5
+		}
+	  },  
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  
+        payload: {
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkImageInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkImageOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "e62665c7-f855-4168-8aa3-668a7b0a50ea"  # Facebox Recognize (library training), requires image input
+        payload: {
+          libraryId: "4af769e9-260b-40ec-b7f7-ab5be06660c6" # Library containing trained faces
+          libraryEngineModelId: "2f6b8c6f-4b3a-478b-874d-8889cd5e6124"  # Library Engine Model representing the training data
+        }
+        ioFolders: [
+          {
+            referenceId: "faceInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "faceOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "assetCreatorInput"
+      },   
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkImageInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkImageOutput"
+        childIoFolderReferenceId: "faceInput"
+      },
+      { 
+        parentIoFolderReferenceId: "faceOutput"
+        childIoFolderReferenceId: "owInput"
+      }    
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Object Detection (Video)
+
+
+
+mutation runObjectDetectionVideo {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Body+Cam+(Retail)%2C+Short.mp4"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+      {
+        engineId: "352556c7-de07-4d55-b33f-74b1cf237f25" 
+        ioFolders: [
+          {
+            referenceId: "playbackInput"
+            mode: stream
+            type: input
+          }
+        ]
+        executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  
+        payload: {
+          ffmpegTemplate: "frame"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkVideoInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkVideoOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "d66f553d-3cef-4c5a-9b66-3e551cc48b4b"  # Tagbox (pre-trained), requires image input
+        ioFolders: [
+          {
+            referenceId: "objectInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "objectOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "playbackInput"
+      },
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkVideoInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkVideoOutput"
+        childIoFolderReferenceId: "objectInput"
+      },
+      { 
+        parentIoFolderReferenceId: "objectOutput"
+        childIoFolderReferenceId: "owInput"
+      }    
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Object Detection (Image)
+
+
+
+mutation runObjectDetectionImage {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Guns.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXR3SQ3E7E/20210830/us-east-1/s3/aws4_request&X-Amz-Date=20210830T171425Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=256dfd4057537daca9cbcbd411b49e828cb1d14057700018879ff421523fc56a"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+	  {
+		engineId: "75fc943b-b5b0-4fe1-bcb6-9a7e1884257a"	# SI2 Asset Creator, needed for adding image as primary asset
+        payload: {
+          setAsPrimary: true
+        }
+		ioFolders: [
+		  {
+			referenceId: "assetCreatorInput"
+			mode: stream
+			type: input
+		  }
+		]
+		executionPreferences: {
+			parentCompleteBeforeStarting: true
+			priority: -5
+		}
+	  },  
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  
+        payload: {
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkImageInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkImageOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "d66f553d-3cef-4c5a-9b66-3e551cc48b4b"  # Tagbox (pre-trained), requires image input
+        ioFolders: [
+          {
+            referenceId: "objectInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "objectOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "assetCreatorInput"
+      },   
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkImageInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkImageOutput"
+        childIoFolderReferenceId: "objectInput"
+      },
+      { 
+        parentIoFolderReferenceId: "objectOutput"
+        childIoFolderReferenceId: "owInput"
+      }     
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Custom Object Detection (Amazon Rekognition Custom Labels) (Video)
+
+
+
+# Note: Before running the engine, you'll need to create a project and train your model in the AWS console.  See "https://docs.aws.amazon.com/rekognition/latest/customlabels-dg/gs-introduction.html" for more details.
+mutation runCustomObjectDetectionVideo {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Crowded+Street.mp4"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+      {
+        engineId: "352556c7-de07-4d55-b33f-74b1cf237f25" 
+        ioFolders: [
+          {
+            referenceId: "playbackInput"
+            mode: stream
+            type: input
+          }
+        ]
+        executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  
+        payload: {
+          ffmpegTemplate: "frame"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkVideoInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkVideoOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "48143c0d-854a-4640-be6e-56e59a6fa2c5"  # Amazon Rekognition Custom Label, requires image input
+        payload: {
+          project_arn: "arn:aws:rekognition:us-east-1:476442571247:project/ben-test/1630086513026"
+          model_arn: "arn:aws:rekognition:us-east-1:476442571247:project/ben-test/version/ben-test.2021-08-27T12.24.29/1630092270002"
+          aws_access_key_id: "<Your AWS Access Key ID>"
+          aws_secret_access_key: "<Your AWS Secret Access Key>"
+          region_name: "us-east-1"  # Must match to `endpoint_url`
+          endpoint_url: "https://rekognition.us-east-1.amazonaws.com"  # Must match to `region_name`
+        }        
+        ioFolders: [
+          {
+            referenceId: "objectInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "objectOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "playbackInput"
+      },
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkVideoInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkVideoOutput"
+        childIoFolderReferenceId: "objectInput"
+      },
+      { 
+        parentIoFolderReferenceId: "objectOutput"
+        childIoFolderReferenceId: "owInput"
+      }    
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Custom Object Detection (Amazon Rekognition Custom Labels) (Image)
+
+
+
+# Note: Before running the engine, you'll need to create a project and train your model in the AWS console.  See "https://docs.aws.amazon.com/rekognition/latest/customlabels-dg/gs-introduction.html" for more details.
+mutation runCustomObjectDetectionImage {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://test-chunk-engine.s3.amazonaws.com/bird3.jpg"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+	  {
+		engineId: "75fc943b-b5b0-4fe1-bcb6-9a7e1884257a"	# SI2 Asset Creator, needed for adding image as primary asset
+        payload: {
+          setAsPrimary: true
+        }
+		ioFolders: [
+		  {
+			referenceId: "assetCreatorInput"
+			mode: stream
+			type: input
+		  }
+		]
+		executionPreferences: {
+			parentCompleteBeforeStarting: true
+			priority: -5
+		}
+	  },  
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  
+        payload: {
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkImageInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkImageOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "48143c0d-854a-4640-be6e-56e59a6fa2c5"  # Amazon Rekognition Custom Label, requires image input
+        payload: {
+          project_arn: "arn:aws:rekognition:us-east-1:476442571247:project/ben-test/1630086513026"
+          model_arn: "arn:aws:rekognition:us-east-1:476442571247:project/ben-test/version/ben-test.2021-08-27T12.24.29/1630092270002"
+          aws_access_key_id: "<Your AWS Access Key ID>"
+          aws_secret_access_key: "<Your AWS Secret Access Key>"
+          region_name: "us-east-1"  # Must match to `endpoint_url`
+          endpoint_url: "https://rekognition.us-east-1.amazonaws.com"  # Must match to `region_name`
+        }        
+        ioFolders: [
+          {
+            referenceId: "objectInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "objectOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "assetCreatorInput"
+      },   
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkImageInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkImageOutput"
+        childIoFolderReferenceId: "objectInput"
+      },
+      { 
+        parentIoFolderReferenceId: "objectOutput"
+        childIoFolderReferenceId: "owInput"
+      }   
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Text Recognition (OCR) (Video)
+
+
+
+mutation runOcrVideo {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://s3.amazonaws.com/dev-chunk-cache-tmp/AC.mp4"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+      {
+        engineId: "352556c7-de07-4d55-b33f-74b1cf237f25" 
+        ioFolders: [
+          {
+            referenceId: "playbackInput"
+            mode: stream
+            type: input
+          }
+        ]
+        executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  
+        payload: {
+          ffmpegTemplate: "frame"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkVideoInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkVideoOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "1e5b4e36-acbe-49f1-bebf-1d3a0edd6219"  # Google OCR, requires image input
+        ioFolders: [
+          {
+            referenceId: "ocrInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "ocrOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }      
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "playbackInput"
+      },
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkVideoInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkVideoOutput"
+        childIoFolderReferenceId: "ocrInput"
+      },
+      { 
+        parentIoFolderReferenceId: "ocrOutput"
+        childIoFolderReferenceId: "owInput"
+      }      
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Text Recognition (OCR) (Image)
+
+
+
+mutation runOcrImage {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Test.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXR3SQ3E7E/20210830/us-east-1/s3/aws4_request&X-Amz-Date=20210830T171425Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=256dfd4057537daca9cbcbd411b49e828cb1d14057700018879ff421523fc56a"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+	  {
+		engineId: "75fc943b-b5b0-4fe1-bcb6-9a7e1884257a"	# SI2 Asset Creator, needed for adding image as primary asset
+        payload: {
+          setAsPrimary: true
+        }
+		ioFolders: [
+		  {
+			referenceId: "assetCreatorInput"
+			mode: stream
+			type: input
+		  }
+		]
+		executionPreferences: {
+			parentCompleteBeforeStarting: true
+			priority: -5
+		}
+	  },  
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  
+        payload: {
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkImageInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkImageOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "1e5b4e36-acbe-49f1-bebf-1d3a0edd6219"  # Google OCR, requires image input
+        ioFolders: [
+          {
+            referenceId: "ocrInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "ocrOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }      
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "assetCreatorInput"
+      },   
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkImageInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkImageOutput"
+        childIoFolderReferenceId: "ocrInput"
+      },
+      { 
+        parentIoFolderReferenceId: "ocrOutput"
+        childIoFolderReferenceId: "owInput"
+      }      
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run AWS Text Recognition (OCR) (Image), AWS Environments
+
+
+
+mutation runOcrImage {
+  createJob(input: {
+    targetId: "1200851778"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://ben-veritone-testing.s3.amazonaws.com/Test.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAW53RQWHXR3SQ3E7E/20210830/us-east-1/s3/aws4_request&X-Amz-Date=20210830T171425Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=256dfd4057537daca9cbcbd411b49e828cb1d14057700018879ff421523fc56a"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -5
+        }
+      },
+	  {
+		engineId: "75fc943b-b5b0-4fe1-bcb6-9a7e1884257a"	# SI2 Asset Creator, needed for adding image as primary asset
+        payload: {
+          setAsPrimary: true
+        }
+		ioFolders: [
+		  {
+			referenceId: "assetCreatorInput"
+			mode: stream
+			type: input
+		  }
+		]
+		executionPreferences: {
+			parentCompleteBeforeStarting: true
+			priority: -5
+		}
+	  },  
+      {
+        engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"  
+        payload: {
+          ffmpegTemplate: "rawchunk"
+        }
+        ioFolders: [
+          {
+            referenceId: "chunkImageInput"
+            mode: stream
+            type: input
+          },
+          {
+            referenceId: "chunkImageOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      },
+      {
+        engineId: "742b5b8b-7cbb-41f7-8fb3-3747791b69f0"  # AWS OCR
+        payload: {
+          useAWSAccount: "true"  # Uses appropriate Veritone service account based on the aiWARE environment the engine is deployed in
+          responseSegmentType: "block"  # Choose between "word" (default), "line", and "block"
+        }        
+        ioFolders: [
+          {
+            referenceId: "ocrInput"
+            mode: chunk
+            type: input
+          },
+          {
+            referenceId: "ocrOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+       	executionPreferences: {
+      	  maxEngines: 10
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }        
+      },
+      {
+        engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+        ioFolders: [
+          {
+            referenceId: "owInput"
+            mode: chunk
+            type: input
+          }
+        ]
+       	executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -10
+        }         
+      }      
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "assetCreatorInput"
+      },   
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "chunkImageInput"
+      },
+      { 
+        parentIoFolderReferenceId: "chunkImageOutput"
+        childIoFolderReferenceId: "ocrInput"
+      },
+      { 
+        parentIoFolderReferenceId: "ocrOutput"
+        childIoFolderReferenceId: "owInput"
+      }      
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Ingestion Only (Video)
+
+
+
+mutation ingestMedia {
+  createJob(input: {
+    targetId: "3040485020"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "da093aca-2a6b-4577-8bfe-2b19a2f2faea"
+        payload: {
+          url: "https://s3-santabarbara-glc-packages-or-1.s3.us-west-2.amazonaws.com/santabarbara/packages/hGb7TkWpDQ.asp-package/contents/meredith-radio.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240403T232205Z&X-Amz-SignedHeaders=host&X-Amz-Expires=172800&X-Amz-Credential=AKIAW53RQWHXRM6CLNEP%2F20240403%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=369d2f023c1b6b50768e7909b0f554e52061af43dedf352e7c8ebc977be51f4f"
+          playback: true
+        }
+        executionPreferences: {
+          priority: -20
+        }
+        ioFolders: [
+          {
+            referenceId: "ingestOutputFolder"
+            mode: chunk
+            type: output
+          }
+        ]
+      }
+    ]
+  }) {
+    id
+    targetId
+    status
+  }
+}
+Run Ingestion Only (Image)
+
+
+
+mutation ingestImage {
+  createJob(input: {
+    targetId: "3161320853"
+    clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+        payload: {
+          url: "https://s3-santabarbara-glc-packages-or-1.s3.us-west-2.amazonaws.com/santabarbara/packages/jRIDHfS90g.asp-package/contents/187%20Suspect%20Vehicle%20CCTV%20Screenshot.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240701T203336Z&X-Amz-SignedHeaders=host&X-Amz-Expires=172799&X-Amz-Credential=AKIAW53RQWHXRM6CLNEP%2F20240701%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=e436b2f3818565715b56f187e43b5ed727483da8773b22e6491a3f61cdd329b2"
+        }
+        ioFolders: [
+          {
+            referenceId: "wsaOutput"
+            mode: stream
+            type: output
+          }
+        ]
+        executionPreferences: {
+          priority: -20
+        }
+      },
+      {
+        engineId: "75fc943b-b5b0-4fe1-bcb6-9a7e1884257a"	# SI2 Asset Creator, needed for adding image as primary asset
+        payload: {
+          setAsPrimary: true
+        }
+        ioFolders: [
+          {
+            referenceId: "assetCreatorInput"
+            mode: stream
+            type: input
+          }
+        ]
+        executionPreferences: {
+          parentCompleteBeforeStarting: true
+          priority: -5
+        }
+      }
+    ]
+    routes: [
+      { 
+        parentIoFolderReferenceId: "wsaOutput"
+        childIoFolderReferenceId: "assetCreatorInput"
+      }    
+    ]
+  }) {
+    id
+    targetId
+    clusterId    
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Automate Flow (Batch Mode)
+
+
+
+# Note: Use when the Automate Flow is designed to run in "batch" mode (e.g. custom workflow that doesn't require any input).  The `target` and `targetId` are not required for running batch engines.
+mutation runFlowBatch {
+  createJob(input: {
+    clusterId : "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+    tasks: [
+      {
+        engineId: "5305265c-d566-4716-8904-debf7e0ac857"  # Igniter engine, outputs a "dummy" chunk to allow a batch engine to run in chunk mode
+        ioFolders: [
+          {
+            referenceId: "igniterOutput"
+            mode: chunk
+            type: output
+          }
+        ]
+        executionPreferences: {
+            priority: -20
+        }
+      },
+      {
+        engineId: "1b65f0cb-4ff0-443b-90cb-bfcef0547d6c"  # Engine ID of deployed Automate Flow
+        ioFolders: [
+          {
+            referenceId: "flowInput"
+            mode: chunk
+            type: input
+          }
+        ]
+        executionPreferences: {
+            priority: -5
+        }
+  	  }
+    ]
+    routes: [
+      {
+        parentIoFolderReferenceId: "igniterOutput"
+        childIoFolderReferenceId: "flowInput"
+      }
+    ]
+  }) {
+    id
+    targetId
+    clusterId
+    tasks {
+      records{
+        id
+        engineId
+        payload
+        taskPayload
+        status
+        output
+        ioFolders {
+          referenceId
+          type
+          mode
+        }
+      }
+    }
+    routes {
+      parentIoFolderReferenceId
+      childIoFolderReferenceId
+    }
+  }
+}
+Run Automate Flow (Chunk Mode)
+
+
+
+# Note: Use when the Automate Flow is designed to run in "chunk" mode (e.g. if you create your own cognitive engine in Automate)
+mutation runFlowChunk {
+  createJob(input: {
+	target: {
+      name: "Flow Test.mp4"
+    }
+	clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+	tasks: [
+	  {
+		engineId: "9e611ad7-2d3b-48f6-a51b-0a1ba40fe255"
+		payload: {
+		  url: "https://s3.amazonaws.com/dev-chunk-cache-tmp/AC.mp4"
+		}
+		ioFolders: [
+		  {
+			referenceId: "wsaOutput"
+			mode: stream
+			type: output
+		  }
+		]
+		executionPreferences: {
+		  priority: -5
+		}
+	  },
+	  {
+		engineId: "352556c7-de07-4d55-b33f-74b1cf237f25"
+		ioFolders: [
+		  {
+			referenceId: "playbackInput"
+			mode: stream
+			type: input
+		  }
+		]
+		executionPreferences: {
+		  parentCompleteBeforeStarting: true
+		  priority: -5
+		}
+	  },
+	  {
+		engineId: "8bdb0e3b-ff28-4f6e-a3ba-887bd06e6440"
+		payload: {
+		  ffmpegTemplate: "audio"
+		  chunkOverlap: 3
+		  customFFMPEGProperties: {
+			chunkSizeInSeconds: "60"
+			chunkOverlapDuration: "3s"
+			outputChunkDuration: "1m"
+		  }
+		}
+		ioFolders: [
+		  {
+			referenceId: "chunkAudioInput"
+			mode: stream
+			type: input
+		  },
+		  {
+			referenceId: "chunkAudioOutput"
+			mode: chunk
+			type: output
+		  }
+		]
+		executionPreferences: {
+		  parentCompleteBeforeStarting: true
+		  priority: -5
+		}
+	  },
+	  {
+		engineId: "2f6669e0-4b48-465a-813f-53fbd1fd489f"	# Engine ID of deployed Automate Flow
+		ioFolders: [
+		  {
+			referenceId: "flowInput"
+			mode: chunk
+			type: input
+		  },
+		  {
+			referenceId: "flowOutput"
+			mode: chunk
+			type: output
+		  }
+		]
+		executionPreferences: {
+		  maxEngines: 10
+		  parentCompleteBeforeStarting: true
+		  priority: -5
+		}
+	  },
+	  {
+		engineId: "8eccf9cc-6b6d-4d7d-8cb3-7ebf4950c5f3"
+		ioFolders: [
+		  {
+			referenceId: "owInput"
+			mode: chunk
+			type: input
+		  }
+		]
+		executionPreferences: {
+		  parentCompleteBeforeStarting: true
+		  priority: -10
+		}
+	  }
+	]
+	routes: [
+	  {
+		parentIoFolderReferenceId: "wsaOutput"
+		childIoFolderReferenceId: "playbackInput"
+	  },
+	  {
+		parentIoFolderReferenceId: "wsaOutput"
+		childIoFolderReferenceId: "chunkAudioInput"
+	  },
+	  {
+		parentIoFolderReferenceId: "chunkAudioOutput"
+		childIoFolderReferenceId: "flowInput"
+	  },
+	  {
+		parentIoFolderReferenceId: "flowOutput"
+		childIoFolderReferenceId: "owInput"
+	  }
+	]
+  }) {
+    id
+    targetId
+  }
+}
+Run Automate Flow as a Recurring Scheduled Job (Hours)
+
+
+
+mutation createFlowScheduledJobRecurringHours {
+  createScheduledJob(input:
+    {
+      name: "Known Offender Library Import"
+      isActive: true
+      runMode: Recurring
+      startDateTime: "2023-08-07T23:45:00"  # Optional, schedule at least 15 minutes out from the current date/time, specify in UTC time.
+      recurringScheduleParts: [ 
+        {
+          startTime: "17:00"  # Optional, specify in local timezone, this example is for Pacific time (UTC-7). If you want to run at the beginning of every hour, starting at 12:00 AM UTC (so it runs continuously throughout the day)
+          repeatIntervalUnit: Hours
+          repeatInterval: 1
+        }
+      ]
+      jobTemplates: [
+        {
+          clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+          taskTemplates : [
+            {
+              engineId: "5305265c-d566-4716-8904-debf7e0ac857"
+              ioFolders: [
+                {
+                  referenceId: "igniterOutput"
+                  mode: chunk
+                  type: output
+                }
+              ]
+              executionPreferences: {
+                priority: -20
+              }
+            },
+            {
+              engineId: "8c25f058-d321-41b2-a750-c3d0dc0892e0"
+              ioFolders: [
+                {
+                  referenceId: "flowInput"
+                  mode: chunk
+                  type: input
+                }
+              ]
+              executionPreferences: {
+                priority: -5
+              }
+            }
+          ]
+          routes: [
+            {
+              parentIoFolderReferenceId: "igniterOutput"
+              childIoFolderReferenceId: "flowInput"
+            }
+          ]          
+        }
+      ]
+    }
+  )
+  {
+    id
+  } 
+}
+Run Automate Flow as a Recurring Scheduled Job (Days)
+
+
+
+mutation createFlowScheduledJobRecurringDays {
+  createScheduledJob(input:
+    {
+      name: "Known Offender Library Import"
+      isActive: true
+      runMode: Recurring
+      recurringScheduleParts: [ 
+        {
+          startTime: "06:00"  # Specify in local timezone, not UTC time
+          repeatIntervalUnit: Days
+          repeatInterval: 1
+        }
+      ]
+      jobTemplates: [
+        {
+          clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+          taskTemplates : [
+            {
+              engineId: "5305265c-d566-4716-8904-debf7e0ac857"
+              ioFolders: [
+                {
+                  referenceId: "igniterOutput"
+                  mode: chunk
+                  type: output
+                }
+              ]
+              executionPreferences: {
+                priority: -20
+              }
+            },
+            {
+              engineId: "8c25f058-d321-41b2-a750-c3d0dc0892e0"
+              ioFolders: [
+                {
+                  referenceId: "flowInput"
+                  mode: chunk
+                  type: input
+                }
+              ]
+              executionPreferences: {
+                priority: -5
+              }
+            }
+          ]
+          routes: [
+            {
+              parentIoFolderReferenceId: "igniterOutput"
+              childIoFolderReferenceId: "flowInput"
+            }
+          ]          
+        }
+      ]
+    }
+  )
+  {
+    id
+  } 
+}
+Run Automate Flow as a Recurring Scheduled Job (Weeks)
+
+
+
+mutation createFlowScheduledJobRecurringWeeks {
+  createScheduledJob(input:
+    {
+      name: "Known Offender Library Import"
+      isActive: true
+      runMode: Recurring
+      recurringScheduleParts: [ 
+        {
+          repeatIntervalUnit: Weeks
+          repeatInterval: 1
+        }
+      ]
+      weeklyScheduleParts: [
+        {
+          scheduledDay: Sunday
+          startTime: "05:00"  # Use local timezone, not UTC
+          stopTime: "05:30"  # Set to less than 60 min. from `startTime`, or it will run more than once each day (scheduled job runs once every 60 min.)
+        },
+        {
+          scheduledDay: Monday
+          startTime: "05:00"
+          stopTime: "05:30"
+        },
+        {
+          scheduledDay: Tuesday
+          startTime: "05:00"
+          stopTime: "05:30"
+        },
+        {
+          scheduledDay: Wednesday
+          startTime: "05:00"
+          stopTime: "05:30"
+        },
+        {
+          scheduledDay: Thursday
+          startTime: "05:00"
+          stopTime: "05:30"
+        },
+        {
+          scheduledDay: Friday
+          startTime: "05:00"
+          stopTime: "05:30"
+        },           
+        {
+          scheduledDay: Saturday
+          startTime: "05:00"
+          stopTime: "05:30"
+        }        
+      ]      
+      jobTemplates: [
+        {
+          clusterId: "prd5-21xbyq0x-4h0s-o685-snas-oovhdai552v9"
+          taskTemplates : [
+            {
+              engineId: "5305265c-d566-4716-8904-debf7e0ac857"
+              ioFolders: [
+                {
+                  referenceId: "igniterOutput"
+                  mode: chunk
+                  type: output
+                }
+              ]
+              executionPreferences: {
+                priority: -20
+              }
+            },
+            {
+              engineId: "8c25f058-d321-41b2-a750-c3d0dc0892e0"
+              ioFolders: [
+                {
+                  referenceId: "flowInput"
+                  mode: chunk
+                  type: input
+                }
+              ]
+              executionPreferences: {
+                priority: -5
+              }
+            }
+          ]
+          routes: [
+            {
+              parentIoFolderReferenceId: "igniterOutput"
+              childIoFolderReferenceId: "flowInput"
+            }
+          ]          
+        }
+      ]
+    }
+  )
+  {
+    id
+  } 
+}
+Run Illuminate Text Analytics on TDOs in Org
+
+
+
+mutation runIlluminateTextAnalytics {
+  createJob(input: {
+    clusterId: "onprem-5d90f115-2a33-454c-a1cd-933a856d7862"
+    tasks: [
+      {
+        engineId: "114f8e78-2bba-4ed8-90d2-d83d74e3b6b6"
+        payload: {
+          clusterId: "onprem-5d90f115-2a33-454c-a1cd-933a856d7862",
+          tdoData: {
+            searchQuery: {
+              query: {
+                operator: "and",
+                conditions: []
+              },
+              select: [
+                "veritone-job",
+                "veritone-file"
+              ],
+              index: [
+                "mine"
+              ]
+					}
+				}
+			}
+		}
+    ]
+  }) {
+    id
+    status
+  }
+}
+Run Single Engine Job (Standalone Job Template)
+
+
+
+mutation launchSingleEngineJob{
+  launchSingleEngineJob(
+    input: {
+      uploadUrl:"https://vtn-dev-test-files.s3.amazonaws.com/media/video/sv/SlowSwedish.mp4"
+      engineId:"ec8ddd5c-705c-46db-acfa-5b8f9ac53e01"
+      fields: [
+        {
+          fieldName: "mode"
+          fieldValue: "translate"
+        }
+      ]
+    }
+  ) {
+    id
+    targetId
+    status
+  }
+}
