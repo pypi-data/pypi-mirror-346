@@ -1,0 +1,8 @@
+app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/main.py,sha256=WsdwaZkioEaMvXzYRV12L-P1SQHjbLBS8_X0XEclksg,739
+app/models.py,sha256=xcm97_g7Ak79pR43IP3ZoQ5WvD1rLWE-mSP6XAv8H18,95
+app/operations.py,sha256=a-8Tl8b44DnwYBrf6v-QkjFp5ul3ONnDBzNByy4vbSg,772
+calculadoraapi_fastapi_breno-0.1.5.dist-info/METADATA,sha256=Uo7C4q-ZRsRJlyx8xkIgxXFgMxHNWviyBY19MfvLaSY,401
+calculadoraapi_fastapi_breno-0.1.5.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+calculadoraapi_fastapi_breno-0.1.5.dist-info/top_level.txt,sha256=io9g7LCbfmTG1SFKgEOGXmCFB9uMP2H5lerm0HiHWQE,4
+calculadoraapi_fastapi_breno-0.1.5.dist-info/RECORD,,
