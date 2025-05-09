@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simba_chem"
+version = "1.0.0"
+description = "Astrophysical Chemical Network Solver"
+authors = [{name = "Luke Keyte"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "numba",
+    "tqdm",
+    "pandas"
+    ]
+
+[tool.setuptools]
+packages = ["simba_chem"]
+
+[tool.setuptools.package-data]
+simba_chem = ["data/*"]
