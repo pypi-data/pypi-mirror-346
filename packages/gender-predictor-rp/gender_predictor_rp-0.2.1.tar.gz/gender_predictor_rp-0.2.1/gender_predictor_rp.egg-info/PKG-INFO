@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: gender-predictor_rp
+Version: 0.2.1
+Summary: Predict gender from Indian names using a trained ML model
+Author: Rahul Patel
+Author-email: your@email.com
+Requires-Dist: scikit-learn
+Requires-Dist: joblib
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary
