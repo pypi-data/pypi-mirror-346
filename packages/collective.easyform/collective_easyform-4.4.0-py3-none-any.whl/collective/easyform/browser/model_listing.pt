@@ -1,0 +1,18 @@
+<html metal:use-macro="context/main_template/macros/master"
+      i18n:domain="collective.easyform"
+>
+  <body>
+    <metal:block fill-slot="content">
+      <metal:content metal:define-macro="content">
+        <article id="content">
+          <h1 class="documentFirstHeading"
+              tal:content="view/label | nothing"
+          ></h1>
+          <div id="content-core">
+            <span tal:replace="structure view/contents"></span>
+          </div>
+        </article>
+      </metal:content>
+    </metal:block>
+  </body>
+</html>
