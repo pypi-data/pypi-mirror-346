@@ -1,0 +1,29 @@
+alignment_choice: diamond
+choose_parallel: parallel
+consensus_cutoff: 0.75
+create_tax_table: 1
+cutoff: tax-cutoffs.yaml
+database: phylodb
+download_reference: 1
+individual_or_summary: individual
+jobname: test
+mets_or_mags: METs
+names_to_reads: 0
+nucleotide_extension: .fna
+organisms:
+- Phaeocystis;antarctica
+original_tax_table: taxonomy-table.txt
+output: test_out
+protein_extension: .faa
+protein_map: protein-map.json
+ref_fasta: ref-phylodb-trunc.pep.fa
+reference: curr_ref
+salmon_dir: 0
+samples: ../aux_data/METs
+scratch: scratch
+subroutine: setup
+tax_table: tax-table.txt
+taxonomy_organisms:
+- species
+transdecoder_orfsize: 100
+use_salmon_counts: 0
