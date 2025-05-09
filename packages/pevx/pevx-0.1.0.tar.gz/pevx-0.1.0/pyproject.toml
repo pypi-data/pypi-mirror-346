@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "pevx"
+version = "0.1.0"
+description = "Prudentia CLI - Development tools for Prudentia internal developers"
+authors = ["Prudentia Sciences"]
+readme = "README.md"
+packages = [{include = "pevx"}]
+
+[tool.poetry.scripts]
+pevx = "pevx.cli:cli"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^8.1.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_variable = [
+    "pevx/__init__.py:__version__"
+]
+branch = "main"
+upload_to_repository = false
+upload_to_release = true
+build_command = "pip install poetry && poetry build" 
