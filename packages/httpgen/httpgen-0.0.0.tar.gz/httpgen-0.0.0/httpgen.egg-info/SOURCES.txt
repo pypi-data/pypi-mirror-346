@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+httpgen/__init__.py
+httpgen.egg-info/PKG-INFO
+httpgen.egg-info/SOURCES.txt
+httpgen.egg-info/dependency_links.txt
+httpgen.egg-info/top_level.txt
