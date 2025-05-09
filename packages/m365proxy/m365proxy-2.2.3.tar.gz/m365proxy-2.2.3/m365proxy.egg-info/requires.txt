@@ -1,0 +1,9 @@
+httpx
+aiosmtpd
+python-dotenv
+colorlog
+bcrypt
+cryptography
+msal
+pysocks
+python-jose
