@@ -1,0 +1,10 @@
+pyside6>=6.8.0
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+scipy>=1.10.0
+opencv-python>=4.7.0
+appdirs>=1.4.4
+seisio>=1.2.0
+seisplot>=1.2.0
+setuptools>=65.0.0

@@ -1,0 +1,2 @@
+[console_scripts]
+velrecover = velrecover.__main__:main
