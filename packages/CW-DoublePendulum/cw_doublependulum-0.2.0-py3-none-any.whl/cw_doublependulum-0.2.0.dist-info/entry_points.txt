@@ -1,0 +1,2 @@
+[console_scripts]
+CW-DoublePendulum = CWDoublePendulum.sim:runSim
