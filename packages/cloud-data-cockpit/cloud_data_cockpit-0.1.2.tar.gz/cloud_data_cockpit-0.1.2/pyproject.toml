@@ -1,0 +1,31 @@
+[project]
+name = "cloud-data-cockpit"
+version = "0.1.2"
+description = "An IPython widget for browsing, benchmarking, and processing S3 datasets."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Usama Benabdelkrim Zakan", email = "ubenabdev@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+  "boto3",
+  "ipywidgets",
+  "gql",
+  "cloud-dataplug",
+  "ipython",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cloud_data_cockpit", "cloud_data_cockpit.*"]
+
+[tool.setuptools.package-data]
+"cloud_data_cockpit" = [
+  "data/*.json",
+  "widgets/styles/*.css"
+]
