@@ -1,0 +1,42 @@
+[project]
+name = "anchorna"
+dynamic = ["readme", "version"]
+authors = [
+    {name = "Tom Eulenfeld"},
+]
+description = "Find anchors in RNA/DNA sequences"
+license = "MIT"
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics"
+]
+keywords = [
+    "bioinformatics", "RNA", "DNA", "sequence", "anchors"
+]
+dependencies = [
+  "rnajena-sugar >= 0.5",
+  "tqdm",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/rnajena/anchorna"
+"Bug Tracker" = "https://github.com/rnajena/anchorna/issues"
+
+[project.scripts]
+anchorna = "anchorna.cli:run_cmdline"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "anchorna.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["anchorna*"]
+
+[tool.setuptools.package-data]
+"anchorna.tests" = ["pytest.ini"]
+"anchorna.tests.data" = ["*.*"]

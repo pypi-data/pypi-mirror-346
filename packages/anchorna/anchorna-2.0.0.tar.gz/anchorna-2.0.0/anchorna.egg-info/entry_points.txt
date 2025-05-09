@@ -1,0 +1,2 @@
+[console_scripts]
+anchorna = anchorna.cli:run_cmdline
