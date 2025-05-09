@@ -1,0 +1,65 @@
+Metadata-Version: 2.4
+Name: gologin_api
+Version: 0.1.0
+Summary: Tiny wrapper for GoLogin and fingerprint API via Google Apps Script
+Home-page: https://github.com/yourusername/gologin_api
+Author: Tu Hoang
+Project-URL: Homepage, https://github.com/yourusername/gologin_api
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.0
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# gologin_api
+
+Tiny wrapper for GoLogin profile + fingerprint management via pre-deployed Google Apps Script Web-Apps.
+
+## Install
+
+```bash
+pip install gologin_api
+```
+
+## Usage
+
+```python
+from gologin_api import get_profiles, change_fingerprint, create_profile
+
+token = "YOUR_API_TOKEN"
+
+# 1) Lấy profiles
+profiles = get_profiles(token)
+print(profiles)
+
+# 2) Đổi fingerprint
+res = change_fingerprint(token, profiles[0]["id"])
+print(res)
+
+# 3) Tạo profile mới
+new = create_profile(token, name="TestProfile", proxy="host:port:user:pass")
+print(new)
+```
+
+## Development
+
+1. Install build tools:
+   ```bash
+   pip install build twine
+   ```
+
+2. Build package:
+   ```bash
+   python -m build
+   ```
+
+3. Upload to PyPI:
+   ```bash
+   twine upload dist/*
+   ```
+
+4. Local installation:
+   ```bash
+   pip install .
+   ```
