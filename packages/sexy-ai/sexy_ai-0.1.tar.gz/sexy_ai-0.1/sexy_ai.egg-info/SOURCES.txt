@@ -1,0 +1,7 @@
+pyproject.toml
+setup.py
+sexy_ai/__init__.py
+sexy_ai.egg-info/PKG-INFO
+sexy_ai.egg-info/SOURCES.txt
+sexy_ai.egg-info/dependency_links.txt
+sexy_ai.egg-info/top_level.txt
