@@ -1,0 +1,8 @@
+pyroaring.cp39-win32.pyd,sha256=CAP0Sizxyts5GzQ3IfPvDtm8SPiiRrd3dKms_Ci24y0,536576
+pyroaring/__init__.pyi,sha256=PWDZgoPIqxqb4pI_-SPDB02xbn8eYTDQDug7XbqwaUQ,10923
+pyroaring/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyroaring-1.0.1.dist-info/licenses/LICENSE,sha256=gxy3p7irLwkT9r1ITwmnyRA71XAp8WbElX4Eo6ccIjM,1101
+pyroaring-1.0.1.dist-info/METADATA,sha256=I9EVUKSXPQQh-T9PivgX3FdaZsqhSfirJmx9FNq-INg,10817
+pyroaring-1.0.1.dist-info/WHEEL,sha256=qKnoMhQXlxFNJRFYs-biAmpAZwkAFUKtP4maISTqZj4,95
+pyroaring-1.0.1.dist-info/top_level.txt,sha256=SuxUJyNQofvyCjAIZszf3NSsQuFvm2uU-V80ItWxg9I,10
+pyroaring-1.0.1.dist-info/RECORD,,
