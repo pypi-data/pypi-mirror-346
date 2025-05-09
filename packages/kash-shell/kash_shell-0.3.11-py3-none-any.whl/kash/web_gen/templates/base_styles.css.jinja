@@ -1,0 +1,318 @@
+:root {
+  {% block root_variables %}
+  font-size: 16px;
+  /* Adding Hack Nerd Font to all fonts for icon support, if it is installed. */
+  --font-sans: "Source Sans 3 Variable", sans-serif, "Hack Nerd Font";
+  --font-serif: "PT Serif", serif, "Hack Nerd Font";
+  --font-weight-sans-bold: 625;  /* Source Sans 3 Variable better at this weight. */
+  --font-mono: "Hack Nerd Font", "Menlo", "DejaVu Sans Mono", Consolas, "Lucida Console", monospace;
+
+  --font-size-large: 1.2rem;
+  --font-size-normal: 1rem;
+  --font-size-small: 0.95rem;
+  --font-size-smaller: 0.85rem;
+  --font-size-mono: 0.8rem;
+  --font-size-mono-small: 0.75rem;
+  --font-size-mono-tiny: 0.7rem;
+
+  --console-char-width: 88;
+  --console-width: calc(var(--console-char-width) + 2rem);
+  {% endblock root_variables %}
+}
+
+{{ color_defs|safe }}
+
+{% block selection_styles %}
+::selection {
+  background-color: var(--color-selection);
+  color: inherit;
+}
+{% endblock selection_styles %}
+
+{# TODO: Fix PDF issues and re-enable for prettier emoji. #}
+{# @font-face {
+  font-family: "Noto Emoji";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap");
+  /* Emoji Unicode ranges */
+  unicode-range: 
+    U+1F300-1F9FF,  /* Miscellaneous Symbols and Pictographs + Supplemental */
+    U+1F600-1F64F,  /* Emoticons */
+    U+2600-26FF,    /* Miscellaneous Symbols */
+    U+2700-27BF,    /* Dingbats */
+    U+FE00-FE0F,    /* Variation Selectors */
+    U+1F900-1F9FF;  /* Supplemental Symbols and Pictographs */ 
+} #}
+
+{% block scrollbar_styles %}
+/* Scrollbar coloring. */
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0; /* Hide horizontal scrollbars */
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: 4px;
+  transition: color 0.2s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-hover);
+}
+* { /* For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scrollbar) var(--color-bg);
+}
+{% endblock scrollbar_styles %}
+
+{% block body_styles %}
+body {
+  font-family: var(--font-serif);
+  color: var(--color-text);
+  line-height: 1.4;
+  padding: 0;  /* No padding so we can have full width elements. */
+  margin: auto;
+  background-color: var(--color-bg);
+  overflow-wrap: break-word;  /* Don't let long words/URLs break layout. */
+}
+{% endblock body_styles %}
+
+{% block typography %}
+p {
+  margin-bottom: 1rem;
+}
+
+b, strong {
+  font-weight: var(--font-weight-sans-bold);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-light);
+  text-decoration: underline;
+  transition: all 0.15s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.09rem;
+  margin-top: 1.7rem;
+  margin-bottom: 0.7rem;
+}
+
+h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
+li {
+  margin-top: 0.7rem;
+  margin-bottom: 0;
+  position: relative;
+}
+
+li > p {
+  margin-bottom: 0;
+}
+
+ul > li::before {
+  content: "▪︎";
+  position: absolute;
+  left: -.85rem;
+  top: .25rem;
+  font-size: 0.62rem;
+}
+
+ol {
+  margin-bottom: 0.7rem;
+  list-style-type: decimal;
+  margin-left: 2rem;
+}
+
+ol > li {
+  padding-left: 0.25rem;
+}
+
+blockquote {
+  border-left: 4px solid var(--color-primary);
+  padding-left: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  color: var(--color-secondary);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-mono);
+  letter-spacing: -0.025em;
+  padding: 0.2rem 0.4rem;
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-mono);
+  letter-spacing: -0.025em;
+  {# overflow-x: auto; #}
+}
+{% endblock typography %}
+
+{% block long_text_styles %}
+/* Long text stylings, for nicely formatting blog post length or longer texts. */
+
+.long-text h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+.long-text h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.long-text h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-sans-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.long-text h4 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+}
+
+.subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+}
+{% endblock long_text_styles %}
+
+{% block table_styles %}
+table {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-small);
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  word-break: break-word; /* long words/URLs wrap instead of inflating the column    */
+  border: 1px solid var(--color-border-hint);
+}
+
+th {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--color-border-hint);
+}
+
+th, td {
+  padding: 0.3rem 0.6rem;
+  max-width: 40rem;
+  min-width: 6rem;
+}
+
+th {
+  background-color: var(--color-bg-alt-solid);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-bg-alt-solid); 
+}
+
+/* Container for wide tables to allow tables to break out of parent width. */
+.table-container {
+  {# max-width: calc(100vw - 6rem); #}
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  background-color: var(--color-bg-solid);
+}
+{% endblock table_styles %}
+
+{% block nav_styles %}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping */
+  justify-content: center;
+  /* Center the content */
+  gap: 1rem;
+  /* Add some space between the buttons */
+}
+{% endblock nav_styles %}
+
+
+
+{% block footnote_styles %}
+/* Footnotes. */
+sup {
+  font-size: 80%;
+}
+
+.footnote-ref a, .footnote {
+  text-decoration: none;
+  padding: 0 0.15rem;
+  border-radius: 4px;
+  transition: all 0.15s ease-in-out;
+}
+
+.footnote-ref a:hover, .footnote:hover {
+  background-color: var(--color-hover-bg);
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+{% endblock footnote_styles %}
+
+{% block responsive_styles %}
+/* Bleed wide on larger screens. */
+/* TODO: Don't make so wide if table itself isn't large? */
+@media (min-width: 768px) {
+  table {
+    width: calc(100vw - 6rem);
+  }
+  .table-container {
+    width: calc(100vw - 6rem);
+  }
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: var(--font-size-smaller);
+  }
+}
+{% endblock responsive_styles %}
