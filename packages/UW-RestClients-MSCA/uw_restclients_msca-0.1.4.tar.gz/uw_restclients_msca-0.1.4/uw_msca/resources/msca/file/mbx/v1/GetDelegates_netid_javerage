@@ -1,0 +1,9 @@
+[{
+    "netid": "javerage",
+    "delegates": [
+        {
+            "User": "jstaff@uw.edu",
+            "AccessRights": "FullAccessandSendAs"
+        }
+    ]
+}]
