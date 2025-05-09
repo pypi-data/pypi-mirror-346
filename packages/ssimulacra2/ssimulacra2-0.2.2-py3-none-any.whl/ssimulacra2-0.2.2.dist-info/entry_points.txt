@@ -1,0 +1,2 @@
+[console_scripts]
+ssymulacra2 = ssimulacra2.cli:main
