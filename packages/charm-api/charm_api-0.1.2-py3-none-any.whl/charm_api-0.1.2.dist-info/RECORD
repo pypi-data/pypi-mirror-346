@@ -1,0 +1,7 @@
+charm_/__init__.py,sha256=BhkNBYs6xzKJ5BOPzFMAvGInRP8kYv1AugeBcF6Ns2I,3160
+charm_/_logging.py,sha256=FV4xz_WaTBVEQydBM-IfvUckBVQwPX1zhufr13SWyuk,1103
+charm_/_main.py,sha256=piBiAQZXSh7uz-4SwFk0cwSW8cgFgjslReegPJtxRUM,21534
+charm_/_status.py,sha256=6zUvcCxq_lBRrWbh6V9XXtxAipAj33ker00SeAmQYf0,5819
+charm_api-0.1.2.dist-info/METADATA,sha256=xPRXbUDxuk236WIbBQwrC6JMWl4dEw1DTx9F6eNSZZE,500
+charm_api-0.1.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+charm_api-0.1.2.dist-info/RECORD,,
