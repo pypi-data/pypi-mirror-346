@@ -1,0 +1,8 @@
+mortal_build/__init__.py,sha256=9OMage272zl_daZUetjzAhlEPVxHUFPllCW8ul3gSXU,1680
+mortal_build/build_ext_script.cp312-win_amd64.pyd,sha256=TnJi5ld7NMUz1bpoCzQLqjVfdGUFIpVDxncFqhuT7co,112640
+mortal_build/build_main.cp312-win_amd64.pyd,sha256=XHizEKFdAkiMJGXCyryE5pDsOw3MfaT2afPRQUtio94,77312
+mortal_build/build_wheel_script.cp312-win_amd64.pyd,sha256=jT5CYIet_6LqS989a5ASZ-lViblLX0KNAxObZwv2uTw,101376
+mortal_build-4.0.32.dist-info/METADATA,sha256=JXO1yjLsqxj0v0fjygazH2onOhhs82vZpr9mFF4qtEs,922
+mortal_build-4.0.32.dist-info/WHEEL,sha256=VST6KxPBj3kJhZ1CnQHaiFJFOGnoHHYHJ6Q45nUuB2k,99
+mortal_build-4.0.32.dist-info/top_level.txt,sha256=VEKI_0-U5SRym6724CunGuA3-4AubY8kHaFYsBpxd6Q,13
+mortal_build-4.0.32.dist-info/RECORD,,
