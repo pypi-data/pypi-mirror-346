@@ -1,0 +1,2 @@
+[console_scripts]
+pandacite = pandacite.cli:main
