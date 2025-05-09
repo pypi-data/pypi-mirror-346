@@ -1,0 +1,14 @@
+matchescu/data_sources/__init__.py,sha256=ZENMYbn8ejctVt4ss11w-1eD3pIKqm1LW3eNWky-t7c,84
+matchescu/data_sources/_csv.py,sha256=EtOovsyFv2AYMYP0OcGmm7qJJz3Bi_eE2cl__BP6v1A,1044
+matchescu/extraction/__init__.py,sha256=2LLcRB7d6i3e-UqBL_g18YGVghMk6sEgg34HGnSldkg,335
+matchescu/extraction/_base.py,sha256=fWomHnwxH5Mg2F5wpzNEiWFdvJH-4zIS-C2IRuxwZJo,1563
+matchescu/extraction/_record.py,sha256=ENXkS68VtN-4h5pSWAKtBwH_SYn8tOy6Pq0w979kcMc,293
+matchescu/extraction/_samplers.py,sha256=c_B2tYfh__fYBI_i2OJFmsxw-ZKyegP1wpogRQJHXpA,255
+matchescu/extraction/_traits.py,sha256=T76NU5vIbPQRSxyRWndKDFg_fYCdgsUScTHaoibetAM,1714
+matchescu/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matchescu/references/__init__.py,sha256=D72MCvG_H4PPqyux0aW9cnrjq7h-I3sS_K0CVquwL0g,89
+matchescu/references/_record.py,sha256=f5ddcXBVKzf8c4oqdo-h5P9-3_45pbVAW48TZR2nuyY,992
+matchescu_reference_extraction-0.7.3.dist-info/LICENSE,sha256=PVVSjAkwe0C4ReSaWjA2Qc16INddKPZuXxqQzSqe8ds,1066
+matchescu_reference_extraction-0.7.3.dist-info/METADATA,sha256=YyeCHV6-o9G9V-NctYzY5beaFUc9yER3jvMis6KQIYg,1564
+matchescu_reference_extraction-0.7.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+matchescu_reference_extraction-0.7.3.dist-info/RECORD,,
