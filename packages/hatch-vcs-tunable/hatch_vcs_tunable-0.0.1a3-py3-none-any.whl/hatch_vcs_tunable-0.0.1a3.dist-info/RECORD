@@ -1,0 +1,13 @@
+hatch_vcs_tunable/__init__.py,sha256=0qt0-EaOr0d1z66WDVDmLtc-PZjcXXTK1A_V0-JQRTc,231
+hatch_vcs_tunable/_version.py,sha256=3lEQZH282dlygp2yv7KHJ8gItTg6lSNOvlGAwLL2RyE,519
+hatch_vcs_tunable/build_hook.py,sha256=vA9gpUvv614zBdEPB9HnvoTMpP4XkmTrEOfVOxGySXs,431
+hatch_vcs_tunable/const.py,sha256=Dm96pxv4hpWKzfokS2nSnrktEZkuOeCf95WOSz-pweM,442
+hatch_vcs_tunable/hooks.py,sha256=F0LkkFnHZsVMZsZMpgtbtBkRqm0pUURAQIyiZjYoYio,685
+hatch_vcs_tunable/metadata_hook.py,sha256=ZnBrtOYvwubXc1SjvoyAFU87m72AsbEYdoZTfBgIaU8,443
+hatch_vcs_tunable/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hatch_vcs_tunable/version_source.py,sha256=hC_YVZH__IcpnY8U92NcuaaNowL-TlyqUmamDw9HhOs,2689
+hatch_vcs_tunable-0.0.1a3.dist-info/METADATA,sha256=r7E482Pu5q7tTCZZZaZNEx4n0HrnpRhvCGwPAuTJy80,4498
+hatch_vcs_tunable-0.0.1a3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hatch_vcs_tunable-0.0.1a3.dist-info/entry_points.txt,sha256=qEcRD9oHcHpujUMmaJuLRFgzZP7cqu3Rq3GWFcRUivo,46
+hatch_vcs_tunable-0.0.1a3.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+hatch_vcs_tunable-0.0.1a3.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[hatch]
+vcs-tunable = hatch_vcs_tunable.hooks
