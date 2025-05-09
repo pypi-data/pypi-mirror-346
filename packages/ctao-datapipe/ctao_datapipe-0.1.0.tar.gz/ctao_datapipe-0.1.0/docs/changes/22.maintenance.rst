@@ -1,0 +1,2 @@
+- Update docker URL in the installation page of the documentation to point to the CTAO Harbor, where the image is deployed
+- Simplify the README so that it is appropriate for PyPI.
