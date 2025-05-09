@@ -1,0 +1,13 @@
+subtitle_splitter_fr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+subtitle_splitter_fr/preprocessing_utils.py,sha256=772txTRtQLb1esN6YtTqotChHV5C0tTtotNRHana6fA,5645
+subtitle_splitter_fr/splitter.py,sha256=QQuDYVM4D5my2dj4gyYubcT85c8BFEDxWv1iUkYvug8,12171
+subtitle_splitter_fr/splitting_strategies.py,sha256=riIB9x7mT61Ro29KJqMJOlgoJ1fRr0Zvp1xSZ6jZ050,13689
+subtitle_splitter_fr/models/tokenizer/added_tokens.json,sha256=YkwBAIwNIbR_j-KM6iR3ZtilGoFaG0nyT0A3xj0DSAY,86
+subtitle_splitter_fr/models/tokenizer/sentencepiece.bpe.model,sha256=mIvFoAKBxtIQpdNL0UPQNjdBpDL-_nQb9x5hsYadQxQ,810912
+subtitle_splitter_fr/models/tokenizer/special_tokens_map.json,sha256=BOLmp29gvyQZp4FkmzB2wHIJaRyj0znUtPM-udsBzbg,470
+subtitle_splitter_fr/models/tokenizer/tokenizer.json,sha256=iDAPIis4SGnw62VwNXfXIWQSZXbmdj_VIEkkoydARmE,2419446
+subtitle_splitter_fr/models/tokenizer/tokenizer_config.json,sha256=EysYew3OcjefNhDaI0wDaYEMpQMS953r_HkJh6xc4no,2127
+subtitle_splitter_fr-0.1.1.dist-info/METADATA,sha256=Zu76Hdr4o_bb9zu8u8rW3RVLllkpY4-eIRLsLXB3nb4,1975
+subtitle_splitter_fr-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+subtitle_splitter_fr-0.1.1.dist-info/top_level.txt,sha256=4aFSADV7JigPK3qYisuvw48hKB5WkXQjsTQPT5Qk8i8,21
+subtitle_splitter_fr-0.1.1.dist-info/RECORD,,
