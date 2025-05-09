@@ -1,0 +1,36 @@
+[build-system]
+# See https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CLICopti"
+version = "2.2.1"
+
+dependencies = [
+   "numpy"
+   #"matplotlib"
+]
+requires-python = ">= 3"
+
+authors = [
+  {name = "Kyrre Sjobak", email = "k.n.sjobak@fys.uio.no"},
+  {name = "Daniel Schulte"},
+  {name = "Alexej Grudiev"},
+  {name = "Andrea Latina"},
+  {name = "Jim Ögren"}
+]
+readme = "README.md"
+license = "LGPL-3.0-or-later"
+
+[tool.setuptools]
+package-dir = {"" = "Python"}
+
+[tool.setuptools.packages.find]
+where = ["Python"]
+
+#[tool.setuptools.package-data]
+#CLICopti.celldatabase = ["*.dat",]
+
+[tool.setuptools.package-data]
+CLICopti = ["*.txt", "*.rst", "*.dat"]
