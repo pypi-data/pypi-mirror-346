@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: shipyard-googleslides
+Version: 0.0.5.0a0
+Summary: A local client for connecting and working with Google Slides
+Requires-Python: >=3.11
+Requires-Dist: google-api-python-client>=2.95.0
+Requires-Dist: google-auth-httplib2>=0.1.0
+Requires-Dist: google-auth-oauthlib>=1.0.0
+Requires-Dist: openai==0.28.1
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: shipyard-templates
