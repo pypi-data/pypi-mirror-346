@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: web-crawler-for-map-services-shared
+Version: 0.1.5
+Summary: Shared library for web crawler for map services
+Project-URL: Homepage, https://github.com/your_username/your_repository
+Project-URL: Bug Tracker, https://github.com/your_username/your_repository/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg2-binary>=2.9.0
+Requires-Dist: SQLAlchemy>=1.4.0
+Requires-Dist: tenacity
+Requires-Dist: asyncpg
