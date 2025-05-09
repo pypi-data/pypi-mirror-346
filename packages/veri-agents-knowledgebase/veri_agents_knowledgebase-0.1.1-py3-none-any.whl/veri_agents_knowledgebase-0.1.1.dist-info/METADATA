@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: veri-agents-knowledgebase
+Version: 0.1.1
+Summary: Add your description here
+Author-email: Markus Toman <mtoman@veritone.com>, Teo Boley <tboley@veritone.com>
+Requires-Python: >=3.12
+Requires-Dist: veri-agents-common==0.1.1
+Provides-Extra: all
+Requires-Dist: veri-agents-common[docling,fastembed,qdrant]==0.1.1; extra == 'all'
+Requires-Dist: veri-agents-common[langgraph]==0.1.1; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: veri-agents-common[docling,fastembed,qdrant]==0.1.1; extra == 'dev'
+Requires-Dist: veri-agents-common[langgraph]==0.1.1; extra == 'dev'
+Provides-Extra: graphs
+Requires-Dist: veri-agents-common[langgraph]==0.1.1; extra == 'graphs'
+Provides-Extra: qdrant
+Requires-Dist: veri-agents-common[docling,fastembed,qdrant]==0.1.1; extra == 'qdrant'
