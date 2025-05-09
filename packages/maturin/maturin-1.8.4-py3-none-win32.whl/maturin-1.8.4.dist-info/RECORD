@@ -1,0 +1,7 @@
+maturin-1.8.4.data/scripts/maturin.exe,sha256=1wjHkNJD_gCyut6TpwqwkBZkgD_i6PSla0JLckm91Xg,16461312
+maturin-1.8.4.dist-info/METADATA,sha256=YUnr7CmWfVqUrJEopCTlAdjTB2oa088GwBxAbG0PXmo,16828
+maturin-1.8.4.dist-info/WHEEL,sha256=CATKazm5fKVnThnYmUnloCpX_63S1v_LVFdXsLzs1p0,89
+maturin/__init__.py,sha256=FP-0MkZhFvau881z1-mhguZYzeE3dwzV4ByVT0Cq67U,8314
+maturin/__main__.py,sha256=UxDvFV1Hhu0gW_Jvb6Kzdc78gg7zjUUiZBhWrpLi5YU,1195
+maturin/bootstrap.py,sha256=8oqsWrJ8Rxb4bgPDmu5T_EMC5UkVgZh1jjn0ZcSGKK8,1205
+maturin-1.8.4.dist-info/RECORD,,
