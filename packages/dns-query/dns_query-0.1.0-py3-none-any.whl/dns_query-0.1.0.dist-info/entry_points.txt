@@ -1,0 +1,2 @@
+[console_scripts]
+dns-query = dns_query.server:main

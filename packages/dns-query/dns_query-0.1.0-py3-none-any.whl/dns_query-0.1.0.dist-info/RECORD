@@ -1,0 +1,8 @@
+dns_query/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dns_query/__main__.py,sha256=WAhr-TR-SUgzU8lRacTT70n91sBZgxPy6yff-Zyeu3E,55
+dns_query/server.py,sha256=iAVhVvzaMtact_rjKiJglc7lSYKySea8xOVspsKXCHc,3807
+dns_query-0.1.0.dist-info/METADATA,sha256=Z2uVfDJGLgCSlKUIuF30nY_cT8YpDfDsJA1r0RGpcYg,1518
+dns_query-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dns_query-0.1.0.dist-info/entry_points.txt,sha256=XBMMDxM_6SKBIyhixOgP7jpBPfrxlS63XJigL6zWMHU,52
+dns_query-0.1.0.dist-info/licenses/LICENSE,sha256=xDeBWX7aQosEJoVL3gWI9rxLuik1iy2LNP_MthZRT7o,1086
+dns_query-0.1.0.dist-info/RECORD,,
