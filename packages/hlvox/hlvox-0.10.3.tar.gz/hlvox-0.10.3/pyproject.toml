@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hlvox"
+description = "Pieces together voice files to form sentences"
+authors = [{ name = "Blair Hagen", email = "bhagen55@gmail.com" }]
+dependencies = ["psycopg2-binary", "pydub", "sqlalchemy"]
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+dynamic = ["version"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3.11",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/bhagen/hlvox"
+
+[tool.setuptools]
+packages = ["hlvox"]
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+
+[tool.autopep8]
+max_line_length = 200
+
+[tool.pylint]
+max-line-length = 200
+min-similarity-lines = 10
+disable = ["fixme"]
+ignore-paths = "^doc/.*$"
+
+[tool.isort]
+profile = "black"
