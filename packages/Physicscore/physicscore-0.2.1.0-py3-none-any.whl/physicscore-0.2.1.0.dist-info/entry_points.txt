@@ -1,0 +1,3 @@
+[console_scripts]
+physicscore = src:run_physicscore
+reportgen = src:generate_report
