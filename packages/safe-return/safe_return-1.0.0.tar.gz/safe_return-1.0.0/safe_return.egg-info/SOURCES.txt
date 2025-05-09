@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+safe_return/__init__.py
+safe_return.egg-info/PKG-INFO
+safe_return.egg-info/SOURCES.txt
+safe_return.egg-info/dependency_links.txt
+safe_return.egg-info/top_level.txt

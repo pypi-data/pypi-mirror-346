@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: safe-return
+Version: 1.0.0
+Summary: Safe return math str
+Author: Luka
+Author-email: <luka.m21@hotmail.com>
+License: MIT License
+Keywords: math,expression
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+
+### safe-return
+<img src="https://img.shields.io/pypi/v/safe-return"> <img src="https://img.shields.io/pypi/status/safe-return">
+
+---
+
+_Safe return math str!_
+
