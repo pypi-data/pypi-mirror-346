@@ -1,0 +1,95 @@
+#!/usr/bin/env python
+#The Encoded By Sajad
+
+
+""" Tool to compare XML outputs of two TeamYousef versions.
+
+"""
+
+import os
+import sys
+
+# Unchanged, running from checkout, use the parent directory, the SajodeSx
+# package ought to be there.
+sys.path.insert(0, os.path.normpath(os.path.join(os.path.dirname(__file__), "..")))
+
+# isort:start
+
+import difflib
+
+from SajodeSx.tools.testing.Common import my_print
+from SajodeSx.utils.Execution import executeProcess
+
+SajodeSx1 = sys.argv[1]
+SajodeSx2 = sys.argv[2]
+filename = sys.argv[3]
+
+my_print(
+    """\
+Comparing output of '{filename}' using '{SajodeSx1}' <-> '{SajodeSx2}' ...""".format(
+        filename=filename, SajodeSx1=SajodeSx1, SajodeSx2=SajodeSx2
+    )
+)
+
+extra_options = os.getenv("SAJODE_EXTRA_OPTIONS", "")
+
+SajodeSx1_cmd = "{SajodeSx1} --xml {filename}".format(SajodeSx1=SajodeSx1, filename=filename)
+SajodeSx2_cmd = "{SajodeSx2} --xml {filename}".format(SajodeSx2=SajodeSx2, filename=filename)
+
+stdout_SajodeSx1, stderr_SajodeSx1, exit_SajodeSx1 = executeProcess(SajodeSx1_cmd, shell=True)
+stdout_SajodeSx2, stderr_SajodeSx2, exit_SajodeSx2 = executeProcess(SajodeSx2_cmd, shell=True)
+
+
+def makeDiffable(output):
+    result = []
+
+    for line in output.split(b"\n"):
+        line = str(line)
+        result.append(line)
+
+    return result
+
+
+def compareOutput(kind, out1, out2):
+    diff = difflib.unified_diff(
+        makeDiffable(out1),
+        makeDiffable(out2),
+        "{program} ({detail})".format(program="SajodeSx1 " + filename, detail=kind),
+        "{program} ({detail})".format(program="SajodeSx2 " + filename, detail=kind),
+        None,
+        None,
+        n=3,
+    )
+
+    result = list(diff)
+
+    if result:
+        for line in result:
+            my_print(line, end="\n" if not line.startswith("---") else "")
+        return 1
+    else:
+        return 0
+
+
+exit_code_stdout = compareOutput("stdout", stdout_SajodeSx1, stdout_SajodeSx2)
+exit_code_return = exit_SajodeSx1 != exit_SajodeSx2
+
+if exit_code_return:
+    my_print(
+        """\
+Exit codes {exit_SajodeSx1:d} ({SajodeSx1}) != {exit_SajodeSx2:d} ({SajodeSx2})""".format(
+            exit_SajodeSx1=exit_SajodeSx1,
+            SajodeSx1=SajodeSx1,
+            exit_SajodeSx2=exit_SajodeSx2,
+            SajodeSx2=SajodeSx2,
+        )
+    )
+
+exit_code = exit_code_stdout or exit_code_return
+
+if exit_code:
+    sys.exit("Error, outputs differed.")
+
+my_print("OK, same outputs.")
+
+

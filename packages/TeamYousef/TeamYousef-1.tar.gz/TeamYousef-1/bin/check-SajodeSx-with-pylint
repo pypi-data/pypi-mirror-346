@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+#The Encoded By Sajad
+
+
+""" Launcher for pylint checker tool.
+
+"""
+
+import os
+import sys
+
+# Unchanged, running from checkout, use the parent directory, the SajodeSx
+# package ought to be there.
+sys.path.insert(0, os.path.normpath(os.path.join(os.path.dirname(__file__), "..")))
+
+# isort:start
+
+from SajodeSx.tools.quality.pylint.__main__ import main
+
+main()
+
+
