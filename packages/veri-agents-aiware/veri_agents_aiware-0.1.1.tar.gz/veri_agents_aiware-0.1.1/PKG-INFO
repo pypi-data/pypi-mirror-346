@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: veri-agents-aiware
+Version: 0.1.1
+Summary: Add your description here
+Author-email: Markus Toman <mtoman@veritone.com>, Teo Boley <tboley@veritone.com>
+Requires-Python: >=3.12
+Requires-Dist: veri-agents-common[graphql]==0.1.1
+Provides-Extra: all
+Provides-Extra: dev
