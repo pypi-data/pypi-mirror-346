@@ -1,0 +1,8 @@
+endura_sdk-0.1.3.dist-info/licenses/LICENSE,sha256=w7igDQu2wWzYAd7YzQvir7qtEHF3wFRD-SsOltLmjU8,2125
+sdk/__init__.py,sha256=Nj_WDW9iSxdHREhVEemfAYoHmhN7bYHYpmm15wPSKgk,13
+sdk/agent.py,sha256=uNj1sF-UrvnCeCMrxAaOO99pQH3uNUz8k1uoOJYfsHQ,171
+sdk/core.py,sha256=j4WngHE1HHidcQ-u3DwL4iZYRkJfc86jcOxLQsZZzG0,1062
+endura_sdk-0.1.3.dist-info/METADATA,sha256=dcp5HTlf_WQP3I06syOx-os-dySPtVvB35kg7mC-NxU,825
+endura_sdk-0.1.3.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+endura_sdk-0.1.3.dist-info/top_level.txt,sha256=JuXS55gRP3EzGKmJgbLfVfUolO3cM_u69k3qvutnBuw,4
+endura_sdk-0.1.3.dist-info/RECORD,,
