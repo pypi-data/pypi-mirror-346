@@ -1,0 +1,9 @@
+otel_telemetry_tester_cli/__init__.py,sha256=l83vNynXwuMVqgdkdmdbkdcqF0wU98KTOZJmxZTIGJk,172
+otel_telemetry_tester_cli/cli.py,sha256=zbjDePxm1iWW8uUfjxeYP0xYJ8Mrz2jIShXhg1ZJMBA,3040
+otel_telemetry_tester_cli/sender.py,sha256=N1b5Ir7Vo2TP0IbBfBqMuT8pilbNIza8CX2q-Nrn8kQ,8210
+otel_telemetry_tester_cli-0.1.1.dist-info/licenses/LICENSE,sha256=s6-JyCnYIZzLYmfdSD3dGq88lPIUwCHM0XdMY9_JcPw,1071
+otel_telemetry_tester_cli-0.1.1.dist-info/METADATA,sha256=kdOHhpsuW_MTUQdR567PnTZOyXEKewzzCbAEXemc2CI,4535
+otel_telemetry_tester_cli-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+otel_telemetry_tester_cli-0.1.1.dist-info/entry_points.txt,sha256=MpRPUab7y13vof0NPWRfHnnJ6dE6E57ATczgDPo8O58,67
+otel_telemetry_tester_cli-0.1.1.dist-info/top_level.txt,sha256=N5IK-iddYxuPgLxmf-pby5ZD0GeEtcXgdOniph-Jtoc,26
+otel_telemetry_tester_cli-0.1.1.dist-info/RECORD,,
