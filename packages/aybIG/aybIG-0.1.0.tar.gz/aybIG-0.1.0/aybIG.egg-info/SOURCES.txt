@@ -1,0 +1,8 @@
+README.md
+setup.py
+aybIG/__init__.py
+aybIG/api.py
+aybIG.egg-info/PKG-INFO
+aybIG.egg-info/SOURCES.txt
+aybIG.egg-info/dependency_links.txt
+aybIG.egg-info/top_level.txt
