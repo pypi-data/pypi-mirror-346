@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neonutilities"
+version = "1.1.0"
+authors = [
+    {name="Claire Lunch", email="clunch@battelleecology.org"},
+    {name="Bridget Hass", email="bhass@battelleecology.org"},
+    {name="Zachary Nickerson", email="nickerson@battelleecology.org"}
+]
+description="A package for accessing and wrangling data generated and published by the National Ecological Observatory Network."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "importlib-resources",
+    "pandas",
+    "parameterized",
+    "pyarrow",
+    "pyproj",
+    "requests",
+    "tqdm"
+]
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://github.com/NEONScience/NEON-utilities-python"
+Documentation = "https://neon-utilities-python.readthedocs.io/en/latest/"
+Repository = "https://github.com/NEONScience/NEON-utilities-python"
+Issues = "https://github.com/NEONScience/NEON-utilities-python/issues"
+Changelog = "https://github.com/NEONScience/NEON-utilities-python/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
