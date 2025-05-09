@@ -1,0 +1,5 @@
+watchdog
+throttle
+PyYAML
+gitignore_parser
+twine
