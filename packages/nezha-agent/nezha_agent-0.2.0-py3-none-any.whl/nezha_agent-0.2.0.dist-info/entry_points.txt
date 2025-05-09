@@ -1,0 +1,2 @@
+[console_scripts]
+nezha = nezha_agent.ui.cli.cli:app
