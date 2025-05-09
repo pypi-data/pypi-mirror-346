@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: bbot-server
+Version: 0.1.0
+Summary: 
+License: GPL-v3.0
+Author: TheTechromancer
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: bbot (>=3.0.0,<4.0.0)
+Requires-Dist: cachetools (>=5.5.0,<6.0.0)
+Requires-Dist: fastapi (>=0.111.0,<0.112.0)
+Requires-Dist: jsondiff (>=2.2.1,<3.0.0)
+Requires-Dist: motor (>=3.4.0,<4.0.0)
+Requires-Dist: omegaconf (>=2.3.0,<3.0.0)
+Requires-Dist: orjson (>=3.10.12,<4.0.0)
+Requires-Dist: redis (>=5.2.1,<6.0.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Requires-Dist: ruff (>=0.9.7,<0.10.0)
+Requires-Dist: taskiq (==0.11.14)
+Requires-Dist: taskiq-nats (>=0.5.1,<0.6.0)
+Requires-Dist: taskiq-redis (>=1.0.3,<2.0.0)
+Requires-Dist: textual[syntax] (>=1.0.0,<2.0.0)
+Requires-Dist: typer (>=0.15.2,<0.16.0)
+Requires-Dist: uvicorn (>=0.30.1,<0.31.0)
+Requires-Dist: websockets (>=14.1,<15.0)
