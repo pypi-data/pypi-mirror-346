@@ -1,0 +1,6 @@
+recursive-include src *
+recursive-include tests *
+recursive-exclude src/c/zstd *
+include src/c/zstd/COPYING
+include src/c/zstd/LICENSE
+recursive-include src/c/zstd/lib *
