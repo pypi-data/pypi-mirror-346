@@ -1,0 +1,5 @@
+zoo_kcl-0.3.68.dist-info/METADATA,sha256=vH211qKTXJ3bfbtyjwc9BqfItEp8fBuHmZUA6s2DNKg,2247
+zoo_kcl-0.3.68.dist-info/WHEEL,sha256=tAGdc4C2KTz7B2CZ8Jf3DcKSAviAbCg44UH9ma2gYww,96
+kcl/__init__.py,sha256=T7M_b9AF2d97a_BRNIooWXmH2jrRRz2ZNvof8LPV-D8,95
+kcl/kcl.cp311-win_amd64.pyd,sha256=qqr5OOQQqwSoFcE5dNPG2YVMU7GHebtGQnaq5is0uF0,11496960
+zoo_kcl-0.3.68.dist-info/RECORD,,
