@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: trackio
+Version: 0.0.2
+Summary: A small Python library created to help developers protect their applications from Server Side Request Forgery (SSRF) attacks.
+Project-URL: homepage, https://github.com/gradio-app/trackio
+Project-URL: repository, https://github.com/gradio-app/trackio
+Author-email: Abubakar Abid <abubakar@hf.co>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >3.9
+Provides-Extra: dev
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: ruff==0.9.3; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# trackio
+
+A Python library for tracking and analytics.
+
+## Installation
+
+```bash
+pip install trackio
+```
+
+## Usage
+
+```python
+import trackio
+
+print(trackio.__version__)
+```
+
+## License
+
+MIT License 
