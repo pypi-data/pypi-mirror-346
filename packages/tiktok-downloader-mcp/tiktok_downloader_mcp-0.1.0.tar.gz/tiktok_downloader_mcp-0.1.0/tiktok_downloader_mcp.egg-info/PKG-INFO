@@ -1,0 +1,200 @@
+Metadata-Version: 2.4
+Name: tiktok-downloader-mcp
+Version: 0.1.0
+Summary: MCP server for TikTok Downloader with integrated download capabilities
+Author-email: TikTok Downloader MCP <example@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/tiktok-downloader-mcp
+Project-URL: Bug Tracker, https://github.com/yourusername/tiktok-downloader-mcp/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: fastmcp>=0.1.0
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: asyncio>=3.4.3
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: aiofiles>=23.0
+Requires-Dist: aiosqlite>=0.19.0
+Requires-Dist: emoji>=2.6.0
+Requires-Dist: fastapi>=0.100.0
+Requires-Dist: lxml>=4.9.0
+Requires-Dist: qrcode>=7.4.0
+Requires-Dist: uvicorn>=0.22.0
+Requires-Dist: openpyxl>=3.1.0
+Requires-Dist: httpx[socks]>=0.24.0
+Dynamic: requires-python
+
+# TikTokDownloader MCP
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+TikTokDownloader MCP是一个基于[TikTokDownloader](https://github.com/JoeanAmier/TikTokDownloader)项目的MCP服务，为AI平台（如Claude、GPT等）提供批量下载TikTok视频的能力。
+
+## 功能特点
+
+- ✅ 下载TikTok无水印视频
+- ✅ 批量下载多个TikTok视频
+- ✅ 提取视频信息（作者、描述、音乐等）
+- ✅ 通过MCP协议与AI平台集成
+- ✅ 可配置的下载设置
+
+## 安装指南
+
+### 前提条件
+
+- Python 3.8+
+- Git
+
+### 安装步骤
+
+1. 克隆TikTokDownloader仓库：
+
+```bash
+git clone https://github.com/JoeanAmier/TikTokDownloader.git
+```
+
+2. 安装TikTokDownloaderMCP：
+
+```bash
+pip install -e TikTokDownloaderMCP/
+```
+
+3. 安装依赖：
+
+```bash
+pip install -r TikTokDownloaderMCP/requirements.txt
+```
+
+## 使用方法
+
+### 作为命令行工具使用
+
+```bash
+# 显示帮助信息
+tiktok-downloader-mcp --help
+
+# 启动MCP服务（使用stdio传输方式）
+tiktok-downloader-mcp
+
+# 启动MCP服务（使用TCP传输方式）
+tiktok-downloader-mcp --transport tcp --host 127.0.0.1 --port 8080
+
+# 启动MCP服务（调试模式）
+tiktok-downloader-mcp --debug
+```
+
+### 在支持MCP的平台中使用
+
+请参考[MCP配置指南](./MCP_CONFIG_GUIDE.md)进行配置，以便在Claude、GPT等平台中使用。
+
+## MCP配置简介
+
+在MCP支持的平台中配置TikTokDownloaderMCP服务：
+
+```json
+{
+  "mcpServers": {
+    "tiktok-downloader": {
+      "command": "uvx",
+      "args": [
+        "tiktok-downloader-mcp"
+      ],
+      "env": {
+        "TIKTOK_DOWNLOADER_DIR": "~/Downloads/TikTokVideos"
+      }
+    }
+  }
+}
+```
+
+更多详细配置选项，请参阅[MCP配置指南](./MCP_CONFIG_GUIDE.md)。
+
+## 可用工具一览
+
+| 工具名称 | 功能描述 |
+|---------|---------|
+| download_video | 下载单个TikTok视频 |
+| download_batch | 批量下载多个TikTok视频 |
+| extract_video_info | 提取TikTok视频信息 |
+| update_settings | 更新设置 |
+| get_settings | 获取当前设置 |
+| get_server_info | 获取服务器信息 |
+| get_last_result | 获取最后一次下载结果 |
+
+## 示例用法
+
+### 下载视频
+
+```python
+# 在AI平台中使用
+await download_video(video_url="https://www.tiktok.com/@user/video/123456789")
+```
+
+### 批量下载
+
+```python
+# 在AI平台中使用
+await download_batch(video_urls=[
+    "https://www.tiktok.com/@user/video/123456789",
+    "https://www.tiktok.com/@user/video/987654321"
+])
+```
+
+### 提取视频信息
+
+```python
+# 在AI平台中使用
+video_info = await extract_video_info(video_url="https://www.tiktok.com/@user/video/123456789")
+```
+
+## 配置选项
+
+| 设置名称 | 描述 | 默认值 |
+|---------|------|-------|
+| download_dir | 下载目录路径 | ~/Downloads/TikTokVideos |
+| max_retries | 最大重试次数 | 5 |
+| timeout | 请求超时时间(秒) | 10 |
+| include_watermark | 是否包含水印 | False |
+| proxy | HTTP代理配置 | 无 |
+| concurrent_limit | 并发下载数量限制 | 5 |
+| cookie | TikTok Cookie | 无 |
+
+## 常见问题
+
+### 下载失败？
+
+- 检查网络连接和代理设置
+- 确认TikTok视频链接有效
+- 尝试使用`update_settings`增加重试次数和超时时间
+- 如果需要访问某些地区限制内容，请提供有效的Cookie
+
+### MCP连接问题？
+
+- 确认服务已正确启动
+- 检查MCP配置文件格式
+- 查看服务日志获取更多信息
+
+## 贡献指南
+
+欢迎提交问题报告、功能请求和代码贡献！
+
+1. Fork这个仓库
+2. 创建你的功能分支 (`git checkout -b feature/amazing-feature`)
+3. 提交你的更改 (`git commit -m 'Add some amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 打开一个Pull Request
+
+## 许可证
+
+本项目遵循与原始TikTokDownloader项目相同的许可证。详情请参阅LICENSE文件。
+
+## 感谢
+
+- [TikTokDownloader](https://github.com/JoeanAmier/TikTokDownloader) - 提供核心下载功能
+- [MCP协议](https://www.cursor.sh/) - 提供AI与服务通信的协议 

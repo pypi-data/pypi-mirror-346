@@ -1,0 +1,5 @@
+include tiktok_downloader_mcp/js/*.js
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include tiktok_downloader_mcp/static * 

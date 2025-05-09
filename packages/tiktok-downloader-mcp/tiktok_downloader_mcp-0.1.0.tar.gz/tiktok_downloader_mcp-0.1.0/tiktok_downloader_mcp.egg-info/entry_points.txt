@@ -1,0 +1,2 @@
+[console_scripts]
+tiktok-downloader-mcp = tiktok_downloader_mcp.main:run_mcp
