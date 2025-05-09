@@ -1,0 +1,16 @@
+kgt_rwalang-1.0.2.dist-info/licenses/LICENCE,sha256=wV9j1X3ohp4G50tWkeJ_m8YPpVHvhVOAw9EXyl7owRo,964
+rwalang/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rwalang/config.py,sha256=z1z9nFQYBlVopYPfxHf2MxJYmDqUwpEC-5E4yd1ljf8,5392
+rwalang/detector.py,sha256=M_5ls1C6_d47p6y-yyGHahSf3COsv1-8l_ywoC25mvQ,34066
+rwalang/linguistic_features.py,sha256=16-8kk0HkRM4axZr-DnjUo0DGMqSDhmbYihAPnca88A,24385
+rwalang/utils.py,sha256=NbHYlzE4vgh19ha3Nv6gdSPocYGe-zctytBwBctJ9V0,7308
+rwalang/models/kinya_detector.joblib,sha256=nd50epv-ZGwnyohClotqwBEM8nKIFsp0UzynHVQj4MY,12885552
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_detector.py,sha256=AhZomt06gnin31FDS4_QmTyfb0E9zh-Grr-pYpLyswE,1071
+tests/test_linguistic_features.py,sha256=QTbPUK8AVsR8u93PyeGg3B7W8mluWQTddJ1tFay2L4o,32
+tests/test_package.py,sha256=JvE4zALsBATahGgFteNVSgaEnMC8c2-_QvbPPjsZ2wg,262
+tests/test_utils.py,sha256=QKdZUHZRfdPfCxkD5Tl_FDhIQpVtHX_EOVKdJgE2bdM,38
+kgt_rwalang-1.0.2.dist-info/METADATA,sha256=f-PkJclPHS_w6esiaF1yAYiw1vSjblNtm9xNUMXF90I,6525
+kgt_rwalang-1.0.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+kgt_rwalang-1.0.2.dist-info/top_level.txt,sha256=5ajxNF6aoTVvbAYvxwYsVXF4_TrL3JDgN2WnM5tOb4k,14
+kgt_rwalang-1.0.2.dist-info/RECORD,,
