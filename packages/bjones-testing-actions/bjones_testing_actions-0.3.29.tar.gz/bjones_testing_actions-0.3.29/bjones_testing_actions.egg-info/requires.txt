@@ -1,0 +1,7 @@
+aiohttp>=3.11.12
+orjson>=3.10.15
+
+[test]
+pytest>=7.4.0
+pytest-cov>=4.1.0
+tox>=4.11.0

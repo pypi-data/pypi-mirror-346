@@ -1,0 +1,80 @@
+Metadata-Version: 2.4
+Name: bjones_testing_actions
+Version: 0.3.29
+Summary: Simple test
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp>=3.11.12
+Requires-Dist: orjson>=3.10.15
+Provides-Extra: test
+Requires-Dist: pytest>=7.4.0; extra == "test"
+Requires-Dist: pytest-cov>=4.1.0; extra == "test"
+Requires-Dist: tox>=4.11.0; extra == "test"
+
+## Version 0.3.26
+
+## Version 0.3.29
+
+### Latest Changes
+
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+
+## Version 0.3.28
+
+### Latest Changes
+
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+
+## Version 0.3.27
+
+### Latest Changes
+
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+
+### Latest Changes
+
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
