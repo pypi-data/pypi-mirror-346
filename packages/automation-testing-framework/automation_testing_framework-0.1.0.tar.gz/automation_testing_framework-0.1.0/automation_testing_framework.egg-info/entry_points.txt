@@ -1,0 +1,2 @@
+[console_scripts]
+automationfw = automation_framework.cli:main
