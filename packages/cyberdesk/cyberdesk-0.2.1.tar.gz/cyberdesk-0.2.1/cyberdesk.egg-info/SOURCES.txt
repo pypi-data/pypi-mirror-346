@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+cyberdesk/__init__.py
+cyberdesk/client.py
+cyberdesk.egg-info/PKG-INFO
+cyberdesk.egg-info/SOURCES.txt
+cyberdesk.egg-info/dependency_links.txt
+cyberdesk.egg-info/requires.txt
+cyberdesk.egg-info/top_level.txt

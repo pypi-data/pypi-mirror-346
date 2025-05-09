@@ -1,0 +1,137 @@
+Metadata-Version: 2.4
+Name: cyberdesk
+Version: 0.2.1
+Summary: The official Python SDK for Cyberdesk
+Author-email: Cyberdesk Team <dev@cyberdesk.io>
+License-Expression: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx
+Provides-Extra: dev
+Requires-Dist: openapi-python-client; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Dynamic: license-file
+
+# cyberdesk
+
+[![PyPI version](https://badge.fury.io/py/cyberdesk.svg)](https://badge.fury.io/py/cyberdesk)
+
+The official Python SDK for Cyberdesk.
+
+## Installation
+
+```bash
+pip install cyberdesk
+```
+
+## Usage
+
+First, create a Cyberdesk client instance with your API key:
+
+```python
+from cyberdesk import CyberdeskClient
+
+client = CyberdeskClient(api_key="YOUR_API_KEY")
+```
+
+---
+
+### Launch a Desktop
+
+```python
+result = client.launch_desktop(timeout_ms=10000)  # Optional: set a timeout for the desktop session
+
+# Error handling example
+if hasattr(result, 'error') and result.error:
+    raise Exception('Failed to launch desktop: ' + str(result.error))
+
+# Success
+if hasattr(result, 'id'):
+    desktop_id = result.id
+    print('Launched desktop with ID:', desktop_id)
+```
+
+---
+
+### Get Desktop Info
+
+```python
+info = client.get_desktop("your-desktop-id")
+
+if hasattr(info, 'error') and info.error:
+    raise Exception('Failed to get desktop info: ' + str(info.error))
+
+print('Desktop info:', info)
+```
+
+---
+
+### Perform a Computer Action (e.g., Mouse Click)
+
+```python
+action_result = client.execute_computer_action(
+    "your-desktop-id",
+    {
+        "type": "click_mouse",
+        "x": 100,
+        "y": 150
+    }
+)
+
+if hasattr(action_result, 'error') and action_result.error:
+    raise Exception('Action failed: ' + str(action_result.error))
+
+print('Action result:', action_result)
+```
+
+---
+
+### Run a Bash Command
+
+```python
+bash_result = client.execute_bash_action(
+    "your-desktop-id",
+    "echo Hello, world!"
+)
+
+if hasattr(bash_result, 'error') and bash_result.error:
+    raise Exception('Bash command failed: ' + str(bash_result.error))
+
+print('Bash output:', getattr(bash_result, 'output', bash_result))
+```
+
+---
+
+## Async Usage
+
+All methods are also available as async variants (prefixed with `async_`). Example:
+
+```python
+import asyncio
+from cyberdesk import CyberdeskClient
+
+async def main():
+    client = CyberdeskClient(api_key="YOUR_API_KEY")
+    result = await client.async_launch_desktop(timeout_ms=10000)
+    print(result)
+    # ... use other async_ methods as needed
+
+asyncio.run(main())
+```
+
+---
+
+## Type Hints and Models
+
+All request/response types are available from the generated models:
+
+```python
+from openapi_client.api_reference_client.models import PostV1DesktopBody, PostV1DesktopIdBashActionBody
+```
+
+---
+
+## License
+
+[MIT](LICENSE) 
