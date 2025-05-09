@@ -1,0 +1,9 @@
+example_app/__init__.py,sha256=hExM6PwxK0A6GdDHWZNx9l8PcnQm3rO-rC7iIoVQNhc,28
+example_app/example_app.py,sha256=AJgmav-62whfC1ARWz9D6l1atcB-or2p36Z8YOxBvug,269
+tests/__init__.py,sha256=ab2iUy-tTux81huhPYyCFSE-uf2QrkEim2jeZBFEG8U,29
+tests/test_client.py,sha256=WZSDOEk2nxH0E7XmYwluiOJ_5UjZjUTScmgr5c8EK7E,2045
+tests/test_client_multiple.py,sha256=BGFYaQ8cLv4aaILNbtuVgYigFrtLooRTnvU9qg0FtE4,2596
+optiattack_client-0.1.1.dist-info/METADATA,sha256=yodxtMoHZc9cIgfdGuNe21zJ7rwG84TBi1x67An3H3Y,3637
+optiattack_client-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+optiattack_client-0.1.1.dist-info/top_level.txt,sha256=kKkdpSWgtilDdH19sVIOVOkOI10vYAjd37t49FFMsTs,18
+optiattack_client-0.1.1.dist-info/RECORD,,
