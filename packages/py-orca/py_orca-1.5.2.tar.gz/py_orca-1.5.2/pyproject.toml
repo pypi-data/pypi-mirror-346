@@ -1,0 +1,36 @@
+[build-system]
+# AVOID CHANGING REQUIRES: IT WILL BE UPDATED BY PYSCAFFOLD!
+requires = ["setuptools>=46.1.0", "setuptools_scm[toml]>=5"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+# For smarter version schemes and other configuration options,
+# check out https://github.com/pypa/setuptools_scm
+version_scheme = "no-guess-dev"
+
+[tool.mypy]
+plugins = [
+  "pydantic.mypy"
+]
+disable_error_code = [
+	"type-abstract",
+	"import"
+]
+
+[[tool.mypy.overrides]]
+module = "orca"
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+implicit_reexport = true
+
+[tool.interrogate]
+verbose = true
+fail-under = 100
+ignore-module = true
+ignore-nested-functions = true
+
+[tool.vulture]
+paths = ["src/orca/"]
+min_confidence = 80
