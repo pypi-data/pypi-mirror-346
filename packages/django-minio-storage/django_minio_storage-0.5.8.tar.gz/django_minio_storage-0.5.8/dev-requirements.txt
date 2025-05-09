@@ -1,0 +1,7 @@
+requests
+freezegun
+
+# PyTest for running the tests.
+pytest==8.3.5
+pytest-django==4.11.1
+pytest-cov==6.1.1
