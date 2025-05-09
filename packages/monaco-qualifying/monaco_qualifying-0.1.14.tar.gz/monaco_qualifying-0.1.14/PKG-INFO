@@ -1,0 +1,116 @@
+Metadata-Version: 2.4
+Name: monaco_qualifying
+Version: 0.1.14
+Summary: Analysis of Formula 1 qualification results.
+Home-page: https://git.foxminded.ua/liliia-shpytsia-mentoring/task_6_report_of_monaco_2018_racing
+Author: Liliia Shpytsia
+Author-email: fioletowujsemizwetik@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-python
+Dynamic: summary
+
+# monaco-qualifying
+
+[License: MIT](https://git.foxminded.ua/liliia-shpytsia-mentoring/task_6_report_of_monaco_2018_racing/-/blob/dev/LICENSE)  
+[GitLab Repo](https://git.foxminded.ua/liliia-shpytsia-mentoring/task_6_report_of_monaco_2018_racing)
+
+Python-РїР°РєРµС‚ РґР»СЏ Р°РЅР°Р»С–Р·Сѓ РґР°РЅРёС… РєРІР°Р»С–С„С–РєР°С†С–С— Р¤РѕСЂРјСѓР»Рё 1 - Monaco 2018, СЏРєРёР№ С‡РёС‚Р°С” РґР°РЅС– Р· С‚СЂСЊРѕС… С„Р°Р№Р»С–РІ:
+- [`start.log`](src/monaco_qualifying/data/start.log)
+- [`end.log`](src/monaco_qualifying/data/end.log)
+- [`abbreviations.txt`](src/monaco_qualifying/data/abbreviations.txt)
+
+РѕР±С‡РёСЃР»СЋС” РЅР°Р№РєСЂР°С‰С– С‡Р°СЃРё РєС–Р», СЃРѕСЂС‚СѓС” РіРѕРЅС‰РёРєС–РІ Р·Р° С‡Р°СЃРѕРј РєРѕР»Р° С‚Р° РІРёРІРѕРґРёС‚СЊ Р·РІС–С‚, С‰Рѕ РїРѕРєР°Р·СѓС” РІ С‚Р°Р±Р»РёС†С– С‚РѕРї-15 РіРѕРЅС‰РёРєС–РІ С‚Р° 
+СЂРµС€С‚Сѓ, СЏРєР° РЅРµ РІРІС–Р№С€Р»Р° РґРѕ С‚РѕРї-15.
+
+---
+
+## Р—РјС–СЃС‚
+
+- [РџРѕСЃРёР»Р°РЅРЅСЏ РїСЂРѕРµРєС‚Сѓ](#РїРѕСЃРёР»Р°РЅРЅСЏ-РїСЂРѕРµРєС‚Сѓ)
+- [Р’СЃС‚Р°РЅРѕРІР»РµРЅРЅСЏ](#РІСЃС‚Р°РЅРѕРІР»РµРЅРЅСЏ)
+- [Р’РёРєРѕСЂРёСЃС‚Р°РЅРЅСЏ](#РІРёРєРѕСЂРёСЃС‚Р°РЅРЅСЏ)
+  - [CLI](#cli)
+- [РџСЂРёРєР»Р°РґРё](#РїСЂРёРєР»Р°РґРё)
+- [РћРЅРѕРІР»РµРЅРЅСЏ РїР°РєРµС‚Сѓ](#РѕРЅРѕРІР»РµРЅРЅСЏ-РїР°РєРµС‚Сѓ)
+- [РџРѕС€СѓРє РїСЂРѕР±Р»РµРј](#РїРѕС€СѓРє-РїСЂРѕР±Р»РµРј)
+
+---
+
+## РџРѕСЃРёР»Р°РЅРЅСЏ РїСЂРѕРµРєС‚Сѓ
+
+- **Р”РѕРјР°С€РЅСЏ СЃС‚РѕСЂС–РЅРєР°**: [monaco-qualifying РЅР° GitLab]
+(https://git.foxminded.ua/liliia-shpytsia-mentoring/task_6_report_of_monaco_2018_racing)  
+- **Р’РёРїСѓСЃРєРё**: [Releases]
+(https://git.foxminded.ua/liliia-shpytsia-mentoring/task_6_report_of_monaco_2018_racing/-/releases)  
+- **Р›С–С†РµРЅР·С–СЏ**: [MIT License]
+(https://git.foxminded.ua/liliia-shpytsia-mentoring/task_6_report_of_monaco_2018_racing/-/blob/dev/LICENSE)  
+- **Р’С–РґРєСЂРёС‚Рё Issue**: [РЎС‚РІРѕСЂРёС‚Рё Issue]
+(https://git.foxminded.ua/liliia-shpytsia-mentoring/task_6_report_of_monaco_2018_racing/-/issues)
+
+---
+
+## Р’СЃС‚Р°РЅРѕРІР»РµРЅРЅСЏ
+
+```bash
+pip install monaco_qualifying
+```
+
+---
+
+## Р’РёРєРѕСЂРёСЃС‚Р°РЅРЅСЏ
+
+### CLI
+
+- Р”Р»СЏ РІРёРІРѕРґСѓ РїРѕРІРЅРѕРіРѕ Р·РІС–С‚Сѓ РіРѕРЅС‰РёРєС–РІ:
+
+```bash
+python -m src.monaco_qualifying
+```
+
+---
+
+## РџСЂРёРєР»Р°РґРё
+
+### РџСЂРёРєР»Р°Рґ Р·РІС–С‚Сѓ
+
+```
+1. Sebastian Vettel | FERRARI | 1:4.415
+2. Valtteri Bottas | MERCEDES | 1:12.434
+3. Stoffel Vandoorne | MCLAREN RENAULT | 1:12.463
+...
+----------------------------------------------------------------------
+16. Daniel Ricciardo | RED BULL RACING TAG HEUER | 2:47.987
+17. Sergey Sirotkin | WILLIAMS MERCEDES | 4:47.294
+```
+
+---
+
+## РћРЅРѕРІР»РµРЅРЅСЏ РїР°РєРµС‚Сѓ
+
+```bash
+pip install --upgrade monaco_qualifying
+```
+
+## РџРѕС€СѓРє РїСЂРѕР±Р»РµРј
+- РЇРєС‰Рѕ РІРёРЅРёРєР»Рё РїСЂРѕР±Р»РµРјРё, СЃС‚РІРѕСЂРёС‚Рё 
+[Issue](https://git.foxminded.ua/liliia-shpytsia-mentoring/task_6_report_of_monaco_2018_racing/-/issues) РЅР° GitLab.
+
+---
