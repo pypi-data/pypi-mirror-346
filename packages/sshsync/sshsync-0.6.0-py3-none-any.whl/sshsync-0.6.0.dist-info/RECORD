@@ -1,0 +1,11 @@
+sshsync/__init__.py,sha256=KHKOzqtemSpCbStnD67M2PIPRktAREc76rmFuT2eMM8,100
+sshsync/cli.py,sha256=ACvAwJmUUehpV4IqW3LpwfCB4tOreIQaMAuGXKLkje8,9083
+sshsync/client.py,sha256=ol11ogm79_p8L7BIpbmpip8UL-3MHuT84g6rJ9HtlAg,10618
+sshsync/config.py,sha256=tWSw45lLB08IwHgvy5Pw7bkRT5GIOSiE210FckaO6GU,7990
+sshsync/schemas.py,sha256=mFZUZDfKxm0b5eMIVR6SzAenOdP-xA-IoiLqeA946QA,2205
+sshsync/utils.py,sha256=4M4BKIvVYKc3SfN9gRPKjJ3iBsWOadSksm3a0jsrS3I,8720
+sshsync-0.6.0.dist-info/METADATA,sha256=c2KEjBnRTf4_ujnHOA7zw_n2zV-z8GiVNpR-WjyIRwY,6304
+sshsync-0.6.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sshsync-0.6.0.dist-info/entry_points.txt,sha256=2Y7JZCo7HBXsUsjuVx48JLgjBKyQHOq_1_VLLC6eVVs,41
+sshsync-0.6.0.dist-info/licenses/LICENSE,sha256=fHOd2fKOuQgx1CGuyrPYHyHgA29sTBH_chokwCy24m4,1070
+sshsync-0.6.0.dist-info/RECORD,,
