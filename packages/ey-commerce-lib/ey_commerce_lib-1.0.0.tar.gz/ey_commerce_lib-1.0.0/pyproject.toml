@@ -1,0 +1,20 @@
+[project]
+name = "ey-commerce-lib"
+version = "1.0.0"
+description = "eeyoung电商客户端调用封装"
+readme = "README.md"
+authors = [
+    { name = "饶奇奇", email = "1124393197@qq.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pytest-asyncio>=0.26.0",
+    "pytest>=8.3.5",
+    "httpx>=0.28.1",
+    "pydantic>=2.11.3",
+    "lxml>=5.3.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
