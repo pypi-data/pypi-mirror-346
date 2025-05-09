@@ -1,0 +1,117 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "splent_app"
+version = "0.0.2"
+description = "splent_app is an app built with SPLENT (https://www.splent.io)"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "alembic==1.14.1",
+    "aniso8601==10.0.0",
+    "attrs==24.3.0",
+    "Authlib==1.4.0",
+    "beautifulsoup4==4.12.3",
+    "blinker==1.9.0",
+    "Brotli==1.1.0",
+    "cachelib==0.13.0",
+    "captcha==0.6.0",
+    "certifi==2024.12.14",
+    "cffi==1.17.1",
+    "charset-normalizer==3.4.1",
+    "click==8.1.8",
+    "ConfigArgParse==1.7",
+    "cryptography==44.0.0",
+    "dnspython==2.7.0",
+    "email_validator==2.2.0",
+    "Flask==3.1.0",
+    "Flask-Cors==5.0.0",
+    "Flask-Login==0.6.3",
+    "Flask-Mail==0.10.0",
+    "Flask-Migrate==4.1.0",
+    "Flask-RESTful==0.3.10",
+    "Flask-Session==0.8.0",
+    "Flask-SQLAlchemy==3.1.1",
+    "Flask-WTF==1.2.2",
+    "greenlet==3.1.1",
+    "gunicorn==23.0.0",
+    "h11==0.14.0",
+    "h2==4.1.0",
+    "hpack==4.0.0",
+    "hyperframe==6.0.1",
+    "idna==3.10",
+    "itsdangerous==2.2.0",
+    "Jinja2==3.1.5",
+    "kaitaistruct==0.10",
+    "Mako==1.3.8",
+    "MarkupSafe==3.0.2",
+    "msgpack==1.1.0",
+    "msgspec==0.19.0",
+    "networkx==3.4.2",
+    "outcome==1.3.0.post0",
+    "packaging==24.2",
+    "pillow==11.1.0",
+    "pluggy==1.5.0",
+    "ply==3.10",
+    "psutil==6.1.1",
+    "pyasn1==0.6.1",
+    "pycparser==2.22",
+    "pydot==3.0.4",
+    "PyMySQL==1.1.1",
+    "pyOpenSSL==25.0.0",
+    "pyparsing==3.2.1",
+    "PySocks==1.7.1",
+    "python-dateutil==2.9.0.post0",
+    "python-dotenv==1.0.1",
+    "pytz==2024.2",
+    "pyzmq==26.2.0",
+    "redis==5.2.1",
+    "requests==2.32.3",
+    "rq==2.1.0",
+    "SQLAlchemy==2.0.37",
+    "SQLAlchemy-Utils==0.41.2",
+    "typing_extensions==4.12.2",
+    "Unidecode==1.3.8",
+    "urllib3==2.3.0",
+    "uvlparser==2.0.1",
+    "webdriver-manager==4.0.2",
+    "websocket-client==1.8.0",
+    "Werkzeug==3.1.3",
+    "wsproto==1.2.0",
+    "WTForms==3.2.1",
+    "zope.event==5.0",
+    "zope.interface==7.2",
+    "zstandard==0.23.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black==24.10.0",
+    "coverage==7.6.10",
+    "docker==7.1.0",
+    "Faker==33.3.1",
+    "flake8==7.1.1",
+    "graphviz==0.20.3",
+    "iniconfig==2.0.0",
+    "locust==2.32.6",
+    "mccabe==0.7.0",
+    "mypy-extensions==1.0.0",
+    "pathspec==0.12.1",
+    "platformdirs==4.3.6",
+    "pycodestyle==2.12.1",
+    "pyflakes==3.2.0",
+    "pytest==8.3.4",
+    "pytest-cov==6.0.0",
+    "ruff==0.11.8",
+    "selenium==4.28.0",
+    "selenium-wire==5.1.0"
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

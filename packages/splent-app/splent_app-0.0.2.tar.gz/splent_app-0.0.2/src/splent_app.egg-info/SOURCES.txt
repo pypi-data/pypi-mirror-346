@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/splent_app/__init__.py
+src/splent_app.egg-info/PKG-INFO
+src/splent_app.egg-info/SOURCES.txt
+src/splent_app.egg-info/dependency_links.txt
+src/splent_app.egg-info/requires.txt
+src/splent_app.egg-info/top_level.txt
+src/splent_app/migrations/env.py
+src/splent_app/migrations/versions/c93593f90e86_.py
