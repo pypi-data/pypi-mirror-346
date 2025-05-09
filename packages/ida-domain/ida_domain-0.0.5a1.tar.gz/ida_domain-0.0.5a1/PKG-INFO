@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: ida-domain
+Version: 0.0.5a1
+Summary: IDA Domain API
+Author: Hex-Rays SA
+Author-email: support@hex-rays.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Disassemblers
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: summary
+
+
+# IDA Domain API
+
+**⚠️ This is a alpha pre-release version. APIs may change without notice.**
+
+
+## The IDA Domain API provides a Domain Model on top of IDA SDK
+
+## Usage example:
+
+```python
+import ida_domain
+
+db = ida_domain.Database()
+if db.open("program.exe")
+  for s in db.segments.get_all()
+    print(f"Segment {s.start_ea} - {s.end_ea}")
+
+  for f in db.functions.get_all()
+    print(f"Function {f.name}")
+```
