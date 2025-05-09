@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: embedding-atlas
+Version: 0.7.0
+Summary: A tool for visualizing embeddings
+Project-URL: homepage, https://apple.github.io/embedding-atlas
+Project-URL: source, https://github.com/apple/embedding-atlas
+Author-email: Donghao Ren <donghao.ren@gmail.com>, Halden Lin <halden.lin@gmail.com>, Fred Hohman <fredhohman@apple.com>, Dominik Moritz <domoritz@gmail.com>
+License-Expression: MIT
+Keywords: embedding,visualization
+Requires-Python: >=3.10
+Requires-Dist: accelerate>=1.5.0
+Requires-Dist: click>=7.0.0
+Requires-Dist: duckdb>=1.1.0
+Requires-Dist: fastapi>=0.115.0
+Requires-Dist: fastparquet>=2024.0.0
+Requires-Dist: inquirer>=3.0.0
+Requires-Dist: llvmlite>=0.43.0
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: platformdirs>=4.3.0
+Requires-Dist: pyarrow>=18.0.0
+Requires-Dist: sentence-transformers>=3.3.0
+Requires-Dist: tqdm>=4.60.0
+Requires-Dist: umap-learn>=0.5.0
+Requires-Dist: uvicorn>=0.32.0
+Requires-Dist: uvloop>=0.21.0
+Description-Content-Type: text/markdown
+
+# embedding-atlas
+
+A Python package that provides a command line tool to visualize a dataset with embeddings.
+
+## Development Setup
+
+Install the [uv](https://github.com/astral-sh/uv) package manager.
+
+To launch the command line tool, run it with `uv run`.
+
+```bash
+uv run embedding-atlas --help
+```
+
+Run `./start.sh` to launch a test server with a online dataset.
+
+To build the wheel, run `./build.sh` to build the wheel.
