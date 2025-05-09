@@ -1,0 +1,16 @@
+shippinglabel/__init__.py,sha256=3UGIEQL5d9QMoJI4hsjvHLXxI_1Gu7jeW9nOu4TdcPE,3421
+shippinglabel/checksum.py,sha256=pKe1aIkqLJGeygQzwcA81WTZWj-SVgh7SqwgtFrtz14,4929
+shippinglabel/classifiers.py,sha256=dFQNaN3Dyz91S3Yt6jEMA15V-64ZDCJC53OMbIhHCvo,4851
+shippinglabel/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shippinglabel/requirements.py,sha256=iwY-nV9GNY9li1aCcXJy92IR_lCxPClYiuxeMn9p6kw,21427
+shippinglabel/sdist.py,sha256=QtJSZKlJKu7KwrifhQ7cSY6vxGsqDz2k9iqbjRu3YWQ,3674
+shippinglabel/_vendor/__init__.py,sha256=aFjkM1cI3amQwiTImerEe2oDx560ewO5Vh8XTCAPiWY,418
+shippinglabel/_vendor/requirements.txt,sha256=K1rd5OfPWs74jE36VtKOtjBcg2I6t5hpezQBPYkeO9E,31
+shippinglabel/_vendor/trove_classifiers/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+shippinglabel/_vendor/trove_classifiers/__init__.py,sha256=ztC-5wJmgDVZOf-7xlZ90fb2SMrwa8j_vVwG6j69c4M,42433
+shippinglabel/_vendor/trove_classifiers/__main__.py,sha256=So6dhkR5LoCXrt-hr7vvnvZ40z8aJVE3kIz5r3KErNc,199
+shippinglabel/_vendor/trove_classifiers/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shippinglabel-2.3.0.dist-info/METADATA,sha256=e8wKzEnS27e7r4SL2JpFWtEBaS9vXd9F8aIsdnsD_2E,8240
+shippinglabel-2.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+shippinglabel-2.3.0.dist-info/licenses/LICENSE,sha256=02agPL-7g6AY5rNwD4d7A2RyP7gHrWUDaljAgERQm_c,1069
+shippinglabel-2.3.0.dist-info/RECORD,,
