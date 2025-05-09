@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pyctp-zp
+Version: 0.1.0
+Summary: CTP Python接口（基于SWIG和C++官方API）
+Author: luochenyeling
+Author-email: zhaokehan86@163.com
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.12
+
