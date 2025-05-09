@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agent Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+            color: #ffffff;
+        }
+        .left-pane {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            background-color: rgb(18, 18, 18);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 100px;
+            height: auto;
+        }
+        .form-container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: fit-content;
+        }
+        .prerequisites {
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        .prerequisites-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .prerequisites-content {
+            display: none;
+            padding-left: 20px;
+        }
+        .prerequisites-content.show {
+            display: block;
+        }
+        .prerequisites-content ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .prerequisites-content a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .prerequisites-content a:hover {
+            text-decoration: underline;
+        }
+        .agent-table {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            height: calc(100vh - 40px);
+            overflow-y: auto;
+            background-color: rgb(18, 18, 18);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .url-cell {
+            cursor: pointer;
+            color: #0066cc;
+            text-decoration: underline;
+        }
+        .url-cell:hover {
+            color: #004499;
+        }
+        .copy-tooltip {
+            position: absolute;
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            display: none;
+        }
+        .help-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        .prereq-help-link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .prereq-help-link:hover {
+            text-decoration: underline;
+        }
+        .help-dialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(31, 31, 31);
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            max-width: 400px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .help-dialog img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            margin-top: 10px;
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+        .help-dialog p {
+            margin: 0 0 15px 0;
+            line-height: 1.4;
+            color: #ffffff;
+        }
+        .help-dialog code {
+            background: rgb(50, 50, 50);
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #ffffff;
+        }
+        .help-dialog button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .help-dialog button:hover {
+            background-color: #45a049;
+        }
+        .help-dialog-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 2px;
+            cursor: pointer;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            background-color: rgb(50, 50, 50);
+            color: #ffffff;
+            border: 1px solid #333;
+        }
+        textarea {
+            background-color: rgb(60, 60, 60);
+        }
+        #startButton {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        #dynamicFields {
+            margin-top: 20px;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: -1px;
+        }
+        .status-online {
+            background-color: #4CAF50;  /* Green color for Online status */
+        }
+        .status-running {
+            background-color: #FFD700;  /* Yellow color for Running status */
+        }
+        .status-error {
+            background-color: #f44336;
+        }
+        .status-paused {
+            background-color: #2f48ba;
+        }
+        .status-cell {
+            white-space: nowrap;
+        }
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            vertical-align: middle;
+            height: 40px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-pane">
+        <div class="logo-container">
+            <img src="/images/niopub_studio.png" alt="Niopub Studio Logo">
+        </div>
+        <div class="form-container">
+            <div class="prerequisites">
+                <div class="prerequisites-header" onclick="togglePrerequisites()">
+                    <span>&blacktriangleright;</span>
+                    <h3 style="margin: 0; font-size: 1.1em;">Pre-Requisites</h3>
+                </div>
+                <div class="prerequisites-content" id="prerequisitesContent">
+                    <ul>
+                        <li>Download the <a href="https://niopub.com/home" target="_blank">Niopub app</a>. To create agents you need to <a href="#" class="prereq-help-link" onclick="showSignupHelp(event)">sign-up</a> (if invite code is needed then use <code>studio</code>)</li>
+                        <li>Create a new <a href="#" class="prereq-help-link" onclick="showAgentProfileHelp(event)">AI Agent Profile</a> from your Home tab.</li>
+                        <li>Get an <a href="https://platform.openai.com/api-keys" target="_blank">API Key</a> if your agent runtime requires one.</li>
+                    </ul>
+                </div>
+            </div>
+            <h2>Start New Agent</h2>
+            <form id="agentForm">
+                <div class="form-group">
+                    <label for="agent_name">Agent Name <span style="color: red">*</span><a href="#" class="help-link" onclick="showAgentNameHelp(event)">(help)</a></label>
+                    <input type="text" id="agent_name" name="agent_name" required oninput="formatAgentName(this)">
+                </div>
+                <div class="form-group">
+                    <label for="connection_code">Connection Code <span style="color: red">*</span><a href="#" class="help-link" onclick="showConnectionCodeHelp(event)">(help)</a></label>
+                    <input type="text" id="connection_code" name="connection_code" required>
+                </div>
+                <div class="form-group">
+                    <label for="agentName">Agent Runtime:</label>
+                    <select id="agentName" name="agentName" required onchange="loadAgentFields()">
+                        <option value="">Select an agent...</option>
+                    </select>
+                </div>
+                <div id="dynamicFields"></div>
+                <button type="submit" id="startButton">Start Agent</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="agent-table">
+        <h2>Active Agents</h2>
+        <table id="agentTable">
+            <thead>
+                <tr>
+                    <th>PID</th>
+                    <th>Agent</th>
+                    <th>Status</th>
+                    <th>URL</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="agentList">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function togglePrerequisites() {
+            const content = document.getElementById('prerequisitesContent');
+            const header = document.querySelector('.prerequisites-header span');
+            content.classList.toggle('show');
+            header.innerHTML = content.classList.contains('show') ? '&blacktriangledown;' : '&blacktriangleright;';
+        }
+
+        function loadAgentRuntimes() {
+            fetch('/agent-runtimes')
+                .then(response => response.json())
+                .then(runtimes => {
+                    const select = document.getElementById('agentName');
+                    select.innerHTML = '<option value="">Select an agent...</option>';
+                    Object.entries(runtimes).forEach(([name, displayName]) => {
+                        const option = document.createElement('option');
+                        option.value = name;
+                        option.textContent = displayName;
+                        select.appendChild(option);
+                    });
+                });
+        }
+
+        function loadAgentFields() {
+            const agentName = document.getElementById('agentName').value;
+            if (!agentName) {
+                document.getElementById('dynamicFields').innerHTML = '';
+                return;
+            }
+
+            fetch(`/agent-fields/${agentName}`)
+                .then(response => response.json())
+                .then(fields => {
+                    const container = document.getElementById('dynamicFields');
+                    container.innerHTML = '';
+                    
+                    fields.fields.forEach(field => {
+                        const div = document.createElement('div');
+                        div.className = 'form-group';
+                        
+                        const label = document.createElement('label');
+                        label.htmlFor = field.name.replace(/\s+/g, '_').toLowerCase();
+                        
+                        // Create a display name with proper capitalization
+                        const displayName = field.name.split(/\s+/).map(word => 
+                            word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+                        ).join(' ');
+                        
+                        label.textContent = displayName;
+                        if (field.required) {
+                            const asterisk = document.createElement('span');
+                            asterisk.textContent = ' *';
+                            asterisk.style.color = 'red';
+                            label.appendChild(asterisk);
+                        }
+                        
+                        let input;
+                        if (field.type === 'text') {
+                            input = document.createElement('input');
+                            input.type = 'text';
+                        } else if (field.type === 'longtext') {
+                            input = document.createElement('textarea');
+                            input.rows = 5;
+                            input.style.width = '100%';
+                            input.style.resize = 'vertical';
+                        } else if (field.type === 'select') {
+                            input = document.createElement('select');
+                            field.options.forEach(option => {
+                                const opt = document.createElement('option');
+                                opt.value = option;
+                                opt.textContent = option;
+                                input.appendChild(opt);
+                            });
+                        }
+                        
+                        input.id = field.name.replace(/\s+/g, '_').toLowerCase();
+                        input.name = field.name.replace(/\s+/g, '_').toLowerCase();
+                        input.required = field.required;
+                        
+                        div.appendChild(label);
+                        div.appendChild(input);
+                        container.appendChild(div);
+                    });
+                });
+        }
+
+        function updateAgentList() {
+            fetch('/processes')
+                .then(response => response.json())
+                .then(agents => {
+                    const tbody = document.getElementById('agentList');
+                    tbody.innerHTML = '';
+                    
+                    agents.forEach(agent => {
+                        const row = document.createElement('tr');
+                        const statusClass = agent.status === 'Online' ? 'status-online' :
+                                         agent.status === 'Running' ? 'status-running' :
+                                         agent.status === 'Paused' ? 'status-paused' :
+                                         'status-error';
+                        row.innerHTML = `
+                            <td>${agent.pid}</td>
+                            <td>${agent.form_data.agent_name}</td>
+                            <td class="status-cell">
+                                <span class="status-indicator ${statusClass}"></span>
+                                ${agent.status}
+                            </td>
+                            <td class="url-cell" onclick="copyToClipboard('https://niopub.com/x/${agent.form_data.agent_name}')">https://niopub.com/x/${agent.form_data.agent_name}</td>
+                            <td>
+                                ${agent.status === 'Paused' ? 
+                                    `<button onclick="resumeAgent(${agent.pid})">Resume</button>` :
+                                    `<button onclick="pauseAgent(${agent.pid})">Pause</button>`
+                                }
+                                <button onclick="stopAgent(${agent.pid}, ${agent.status === 'paused'})">X</button>
+                            </td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                });
+        }
+
+        function startAgent(agent_runtime_name, formData) {
+            const formDataObj = new URLSearchParams();
+            formDataObj.append('agent_runtime_name', agent_runtime_name);
+            formDataObj.append('agent_name', document.getElementById('agent_name').value);
+            formDataObj.append('connection_code', document.getElementById('connection_code').value);
+            formDataObj.append('form_data', JSON.stringify(formData));
+
+            fetch('/start', {
+                method: 'POST',
+                body: formDataObj
+            })
+            .then(response => response.json())
+            .then(data => {
+                updateAgentList();
+            });
+        }
+
+        function pauseAgent(pid) {
+            const formData = new URLSearchParams();
+            formData.append('pid', pid);
+
+            fetch('/pause', {
+                method: 'POST',
+                body: formData
+            })
+            .then(() => {
+                updateAgentList();
+            });
+        }
+
+        function resumeAgent(pid) {
+            const formData = new URLSearchParams();
+            formData.append('pid', pid);
+
+            fetch('/resume', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                updateAgentList();
+            });
+        }
+
+        function stopAgent(pid, isPaused) {
+            const formData = new URLSearchParams();
+            formData.append('pid', pid);
+            formData.append('delete_data', 'true');  // Always delete data when using X button
+
+            fetch('/stop', {
+                method: 'POST',
+                body: formData
+            })
+            .then(() => {
+                updateAgentList();
+            });
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const tooltip = document.createElement('div');
+                tooltip.className = 'copy-tooltip';
+                tooltip.textContent = 'Copied to Clipboard';
+                tooltip.style.display = 'block';
+                tooltip.style.position = 'fixed';
+                tooltip.style.top = '50%';
+                tooltip.style.left = '50%';
+                tooltip.style.transform = 'translate(-50%, -50%)';
+                tooltip.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                tooltip.style.color = 'white';
+                tooltip.style.padding = '10px 20px';
+                tooltip.style.borderRadius = '5px';
+                tooltip.style.zIndex = '1000';
+                
+                document.body.appendChild(tooltip);
+                
+                setTimeout(() => {
+                    tooltip.remove();
+                }, 2000);
+            });
+        }
+
+        function formatAgentName(input) {
+            // Convert to lowercase and replace spaces with dots
+            input.value = input.value.toLowerCase().replace(/\s+/g, '.');
+        }
+
+        function showAgentNameHelp(event) {
+            event.preventDefault();
+            const dialog = document.createElement('div');
+            dialog.className = 'help-dialog';
+            dialog.innerHTML = `
+                <p>About the Agent Name:</p>
+                <ol>
+                    <li>Every agent on the network has a unique name</li>
+                    <li>This name is used to create a unique URL for your agent</li>
+                    <li>For example: "Agent 123" on the app will be addressed as "agent.123" on internet. </li>
+                    <li>Here in Niopub Studio you can provide the name in any format.</li>
+                </ol>
+                <img src="images/agent_name.png" alt="Agent Name Help" style="width: 100%; height: auto; max-height: 300px;">
+                <div style="text-align: right; margin-top: 15px;">
+                    <button onclick="closeHelpDialog()">Close</button>
+                </div>
+            `;
+            
+            const overlay = document.createElement('div');
+            overlay.className = 'help-dialog-overlay';
+            
+            document.body.appendChild(overlay);
+            document.body.appendChild(dialog);
+            
+            overlay.style.display = 'block';
+            dialog.style.display = 'block';
+        }
+
+        function showConnectionCodeHelp(event) {
+            event.preventDefault();
+            const dialog = document.createElement('div');
+            dialog.className = 'help-dialog';
+            dialog.innerHTML = `
+                <p>To get your connection code:</p>
+                <ol>
+                    <li>Open your AI Agent Profile in the Niopub app</li>
+                    <li>Tap "Edit" at the top right</li>
+                    <li>Copy your connection code. It will ask you to Generate a new code if your agent doesn't have one.</li>
+                </ol>
+                <p>This code allows your agent to communicate securely with the Niopub network.</p>
+                <img src="images/conn_code_help.png" alt="Connection Code Help" style="width: 100%; height: auto; max-height: 300px;">
+                <div style="text-align: right; margin-top: 15px;">
+                    <button onclick="closeHelpDialog()">Close</button>
+                </div>
+            `;
+            
+            const overlay = document.createElement('div');
+            overlay.className = 'help-dialog-overlay';
+            
+            document.body.appendChild(overlay);
+            document.body.appendChild(dialog);
+            
+            overlay.style.display = 'block';
+            dialog.style.display = 'block';
+        }
+
+        function showHelpDialog(event) {
+            event.preventDefault();
+            const dialog = document.createElement('div');
+            dialog.className = 'help-dialog';
+            dialog.innerHTML = `
+                <p>Your agent name is used to create a unique URL for your agent. For example: agent-name-123</p>
+                <img src="images/agent_name_help.png" alt="Agent Name Help" style="width: 100%; height: auto; max-height: 300px;">
+                <div style="text-align: right; margin-top: 15px;">
+                    <button onclick="closeHelpDialog()">Close</button>
+                </div>
+            `;
+            
+            const overlay = document.createElement('div');
+            overlay.className = 'help-dialog-overlay';
+            
+            document.body.appendChild(overlay);
+            document.body.appendChild(dialog);
+            
+            overlay.style.display = 'block';
+            dialog.style.display = 'block';
+        }
+
+        function closeHelpDialog() {
+            const dialog = document.querySelector('.help-dialog');
+            const overlay = document.querySelector('.help-dialog-overlay');
+            if (dialog) dialog.remove();
+            if (overlay) overlay.remove();
+        }
+
+        function showAgentProfileHelp(event) {
+            event.preventDefault();
+            const dialog = document.createElement('div');
+            dialog.className = 'help-dialog';
+            dialog.innerHTML = `
+                <p>To create an AI Agent Profile:</p>
+                <ol>
+                    <li>Open the Niopub app</li>
+                    <li>Go to the Home tab and tap on the "Create" button</li>
+                    <li>Fill in the agent details and communication preferences</li>
+                    <li>Tap "Save" at the top right</li>
+                </ol>
+                <img src="images/create_ai_help.png" alt="Agent Profile Help">
+                <div style="text-align: right; margin-top: 15px;">
+                    <button onclick="closeHelpDialog()">Close</button>
+                </div>
+            `;
+            
+            const overlay = document.createElement('div');
+            overlay.className = 'help-dialog-overlay';
+            
+            document.body.appendChild(overlay);
+            document.body.appendChild(dialog);
+            
+            overlay.style.display = 'block';
+            dialog.style.display = 'block';
+        }
+
+        function showSignupHelp(event) {
+            event.preventDefault();
+            const dialog = document.createElement('div');
+            dialog.className = 'help-dialog';
+            dialog.innerHTML = `
+                <p>To sign up for Niopub:</p>
+                <ol>
+                    <li>Open the Niopub app</li>
+                    <li>Go to the Account tab</li>
+                    <li>Tap on "Sign-Up Here"</li>
+                    <li>Fill in your details</li>
+                    <li>If prompted for an invite code, use: <code>studio</code></li>
+                    <li>Complete the registration by clicking on the verification link sent to your email</li>
+                </ol>
+                <img src="images/sign_up_help.png" alt="Signup Help">
+                <div style="text-align: right; margin-top: 15px;">
+                    <button onclick="closeHelpDialog()">Close</button>
+                </div>
+            `;
+            
+            const overlay = document.createElement('div');
+            overlay.className = 'help-dialog-overlay';
+            
+            document.body.appendChild(overlay);
+            document.body.appendChild(dialog);
+            
+            overlay.style.display = 'block';
+            dialog.style.display = 'block';
+        }
+
+        document.getElementById('agentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const agent_runtime_name = document.getElementById('agentName').value;
+            const formData = {};
+            
+            // Add default fields to formData
+            formData['agent_name'] = document.getElementById('agent_name').value;
+            formData['connection_code'] = document.getElementById('connection_code').value;
+            
+            // Add dynamic fields to formData
+            const fields = document.getElementById('dynamicFields').querySelectorAll('input, select');
+            fields.forEach(field => {
+                formData[field.name] = field.value;
+            });
+            
+            startAgent(agent_runtime_name, formData);
+            this.reset();
+            document.getElementById('dynamicFields').innerHTML = '';
+        });
+
+        // Load agent runtimes on page load
+        loadAgentRuntimes();
+        
+        // Update agent list every second
+        setInterval(updateAgentList, 1000);
+        updateAgentList();
+    </script>
+</body>
+</html> 
