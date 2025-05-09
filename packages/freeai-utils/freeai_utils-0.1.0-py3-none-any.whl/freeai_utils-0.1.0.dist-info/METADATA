@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: freeai-utils
+Version: 0.1.0
+Summary: A free, zero-config AI utility toolkit with voice, text, image, and web integrations
+Author-email: truongbaan <truongbaan@gmail.com>
+License: MIT
+Requires-Python: >=3.12.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyaudio
+Requires-Dist: numpy
+Requires-Dist: keyboard
+Requires-Dist: lameenc
+Requires-Dist: openai-whisper
+Requires-Dist: soundfile
+Requires-Dist: librosa
+Requires-Dist: torch
+Requires-Dist: google-generativeai
+Requires-Dist: pyperclip
+Requires-Dist: python-dotenv
+Requires-Dist: googlesearch-python
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: readability-lxml
+Requires-Dist: transformers
+Requires-Dist: Pillow
+Requires-Dist: langdetect
+Requires-Dist: pyautogui
+Requires-Dist: easyocr
+Requires-Dist: gTTS
+Requires-Dist: playsound==1.2.2
+Requires-Dist: pyttsx3
+
+# Utlity-python-library
+These library just need to use pip install to download, no need to download extra exe or on git. (Sacrifice the accuracy for easy implement) Place to store some function that might be used. If you too lazy to write function and set up, just call the function in file.
+Each file is designed to be independent, so you could copy the file and put to use without needing to get another file with it.
+
+
+> **Inspiration:** This project was inspired by the github repository:
+> [awesome-python](https://github.com/vinta/awesome-python)
