@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: zhengshang
+Version: 0.1.0
+Summary: 从商客商机接龙中提取关键信息并保存到excel表格中
+Author-email: huangyp3gd <huangyp3.gd@chinatelecom.cn>
+License-File: LICENSE.txt
+Requires-Python: >=3.13
+Requires-Dist: mcp
+Requires-Dist: openpyxl
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+从商客商机接龙中提取关键信息并保存到excel表格中
