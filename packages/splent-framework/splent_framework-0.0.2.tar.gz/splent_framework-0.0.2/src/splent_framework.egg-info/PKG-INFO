@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: splent_framework
+Version: 0.0.2
+Summary: SPLENT-FRAMEWORK is a set of libraries for agile product development within SPLENT.
+Author-email: DiversoLab <diversolab@us.es>
+Project-URL: Homepage, https://github.com/diverso-lab/splent_framework
+Project-URL: Issues, https://github.com/diverso-lab/splent_framework/issues
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: python-dotenv
+Requires-Dist: sqlalchemy
+Requires-Dist: flask_sqlalchemy
+Requires-Dist: flask_migrate
+Requires-Dist: flask_session
+Requires-Dist: flask_mail
+Requires-Dist: flask_login
+Requires-Dist: flask_wtf
+Requires-Dist: redis
+Requires-Dist: pymysql
+Requires-Dist: docker
+Requires-Dist: psutil
+Requires-Dist: pytz
+Requires-Dist: pytest
+Requires-Dist: pytest-cov
+Requires-Dist: selenium
+Requires-Dist: webdriver_manager
+Dynamic: license-file
+
+# splent_framework
