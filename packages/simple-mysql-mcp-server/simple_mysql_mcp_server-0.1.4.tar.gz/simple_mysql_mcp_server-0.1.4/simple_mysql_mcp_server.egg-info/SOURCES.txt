@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+simple_mysql_mcp_server/__init__.py
+simple_mysql_mcp_server/database.py
+simple_mysql_mcp_server/main.py
+simple_mysql_mcp_server.egg-info/PKG-INFO
+simple_mysql_mcp_server.egg-info/SOURCES.txt
+simple_mysql_mcp_server.egg-info/dependency_links.txt
+simple_mysql_mcp_server.egg-info/entry_points.txt
+simple_mysql_mcp_server.egg-info/requires.txt
+simple_mysql_mcp_server.egg-info/top_level.txt
