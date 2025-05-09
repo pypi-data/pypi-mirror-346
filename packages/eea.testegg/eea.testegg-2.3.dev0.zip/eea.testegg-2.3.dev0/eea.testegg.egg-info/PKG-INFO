@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: eea.testegg
+Version: 2.3.dev0
+Summary: UNKNOWN
+Home-page: http://svn.plone.org/svn/collective/
+Author: 
+Author-email: 
+License: GPL
+Description: ==================
+        EEA TEST EGG
+        ==================
+        
+        
+        This product may contain traces of nuts.
+        
+        ## Tests
+        
+        # check if new eggrepo is ok
+        
+        Changelog
+        =========
+        
+        2.3-dev0 - (unreleased)
+        ---------------------------
+        
+        2.2 - (2021-10-18)
+        ---------------------------
+        * Change: Test
+          [valentinab25]
+        
+        2.1 - (2019-12-23)
+        ---------------------------
+        * Change: test gitflow [valentinab25]
+        
+        2.0 - (2019-07-11)
+        ------------------
+        
+        1.9 - (2019-07-11)
+        ------------------
+        
+        1.8 - (2018-09-10)
+        --------------------------
+        
+        1.7 - (2018-04-02)
+        --------------------------
+        * Change: Refs #89957 - Auto-complete history file [valentinab25]
+        
+        1.4
+        --------------------------
+        
+        - No code changes
+        
+        1.0 (2018-04-04)
+        --------------------------
+        
+        - Initial release
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst
