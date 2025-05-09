@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: nmfViewer
+Version: 0.1.3
+Summary: Python Application which enables users to quickly visualize NMF decomposition.
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: automatic-spike-detection==1.3.0
+Requires-Dist: pyqtgraph==0.13.7
+Requires-Dist: PyQt6==6.7.1
+Requires-Dist: pandas==2.2.2
+Requires-Dist: numpy==1.26.4
+Requires-Dist: typing-extensions==4.12.2
+Dynamic: license-file
+
+# NMF Viewer
+
+The NMF Viewer is a graphical user interface meant to enable users to visualize results of an NMF computation.
+It bases itself off the [automatic-spike-detection](https://automatic-spike-detection.readthedocs.io) package.
