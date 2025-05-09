@@ -1,0 +1,10 @@
+technical_analysis/__init__.py,sha256=aznLKbHx7T-15KjSzu8RnOYi6SRblTmcT2bCRPBPYOY,114
+technical_analysis/__main__.py,sha256=etmRH1Rg8miyaccpa2wYFLUBlrJrrbH068Vy4Zh-wus,82
+technical_analysis/fc.py,sha256=2dbaJq6STFeUn9gcJKQ3HNxdR-SV__Zmgeobff1MryY,120
+technical_analysis/main.py,sha256=bEYzFOuLGqIzP88R7CvpBhtAUYpwYR8y_Do4mzcnzEM,1699
+technical_analysis/stock_data.py,sha256=6FiXLJZm_66NlTdgJWwn5NfHmeJqIrCm4XZxrZav6rc,6933
+technical_analysis_mcp-0.1.2.dist-info/METADATA,sha256=1tFwQO9RJL7iOIJGR1DsZ_2OaA0oUkQsjZDDWE-8GiA,2502
+technical_analysis_mcp-0.1.2.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+technical_analysis_mcp-0.1.2.dist-info/entry_points.txt,sha256=8eNlUMlbqEGGpPVLycTF2ibwHgDkAdv130NqGWvRl0E,113
+technical_analysis_mcp-0.1.2.dist-info/top_level.txt,sha256=KAbtVDVFCCYlvDvjhvqddEfZUqu2EG7Bc99rR7clEnM,19
+technical_analysis_mcp-0.1.2.dist-info/RECORD,,
