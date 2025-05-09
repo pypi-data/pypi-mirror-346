@@ -1,0 +1,5 @@
+pyproject.toml
+minionkit_client.egg-info/PKG-INFO
+minionkit_client.egg-info/SOURCES.txt
+minionkit_client.egg-info/dependency_links.txt
+minionkit_client.egg-info/top_level.txt

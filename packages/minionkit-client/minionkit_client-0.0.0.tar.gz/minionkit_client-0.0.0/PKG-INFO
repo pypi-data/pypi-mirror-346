@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: minionkit-client
+Version: 0.0.0
+Summary: coming soon
+Author-email: Rik Nauta <rik.nauta@sourcegraph.com>
+Requires-Python: <3.13,>=3.12
