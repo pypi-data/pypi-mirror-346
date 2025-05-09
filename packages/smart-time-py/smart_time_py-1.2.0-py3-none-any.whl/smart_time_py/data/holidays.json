@@ -1,0 +1,50 @@
+{
+  "2024-01-01": {
+    "name": "Ano Novo",
+    "type": "national"
+  },
+  "2024-02-12": {
+    "name": "Carnaval",
+    "type": "national"
+  },
+  "2024-02-13": {
+    "name": "Carnaval",
+    "type": "national"
+  },
+  "2024-03-29": {
+    "name": "Sexta-feira Santa",
+    "type": "national"
+  },
+  "2024-04-21": {
+    "name": "Tiradentes",
+    "type": "national"
+  },
+  "2024-05-01": {
+    "name": "Dia do Trabalho",
+    "type": "national"
+  },
+  "2024-05-30": {
+    "name": "Corpus Christi",
+    "type": "national"
+  },
+  "2024-09-07": {
+    "name": "Independência do Brasil",
+    "type": "national"
+  },
+  "2024-10-12": {
+    "name": "Nossa Senhora Aparecida",
+    "type": "national"
+  },
+  "2024-11-02": {
+    "name": "Finados",
+    "type": "national"
+  },
+  "2024-11-15": {
+    "name": "Proclamação da República",
+    "type": "national"
+  },
+  "2024-12-25": {
+    "name": "Natal",
+    "type": "national"
+  }
+}
