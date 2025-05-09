@@ -1,0 +1,10 @@
+include LICENSE
+include README.md
+include requirements.txt
+recursive-include fml *.py
+recursive-include examples *.fml
+
+# Exclude test files and temporary files
+global-exclude *.py[cod] __pycache__ *.so *.dylib .DS_Store
+global-exclude test_*.py simple_test.py
+global-exclude *.py.new *_new.py *_fixed.py

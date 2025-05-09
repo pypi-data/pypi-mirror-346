@@ -1,0 +1,41 @@
+Welcome to Fibonacci Markup Language with Code Blocks!
+ This line has 1 space of indentation
+ This line also has 1 space of indentation
+  This line has 2 spaces of indentation
+   This is a level with 3 spaces
+
+     Let's add a Python code block with 5 spaces of indentation:
+     ```python
+def fibonacci(n):
+    """Generate Fibonacci sequence up to n"""
+    a, b = 0, 1
+    while a < n:
+        yield a
+        a, b = b, a + b
+
+# Print the sequence
+for num in fibonacci(100):
+    print(num)
+     ```
+
+        Now a JavaScript example with 8 spaces:
+        ```javascript
+// Generate Fibonacci sequence
+function fibonacci(n) {
+    let a = 0, b = 1;
+    let result = [];
+    
+    while (a < n) {
+        result.push(a);
+        [a, b] = [b, a + b];
+    }
+    
+    return result;
+}
+
+// Print the sequence
+console.log(fibonacci(100));
+        ```
+
+ Back to 1 space of indentation
+This is back to 0 spaces
