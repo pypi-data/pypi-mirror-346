@@ -1,0 +1,15 @@
+mobvoi_mcp/__init__.py,sha256=Gzdh6M5wQ9qEi-RvC3FpopeoVkjFA7qKB8z8plVkBE0,86
+mobvoi_mcp/server.py,sha256=x_OhRXKz8-eWiPc9SvQWjf5E2YYfpX-J_ZLj_3YxeBg,8420
+mobvoi_mcp/utils.py,sha256=b3NNBihaMzMM9XA0R6pAsnL_BW_U6nCskvaox1OylVs,4357
+mobvoi_mcp/mobvoi/__init__.py,sha256=wPEu14rrvsnUA9TsJaRCPpAeTzZ1CL4dCjMZ9WWwInk,90
+mobvoi_mcp/mobvoi/client.py,sha256=YGRm5-5UoO7th5IDON9FrWUg6wV9SwV5Id1JDGGzYAU,2402
+mobvoi_mcp/mobvoi/play.py,sha256=vrv46ip5Q6tWXkO1hZx5D0xylMk-ySRNOIJX6U6tSoU,2916
+mobvoi_mcp/mobvoi/text_to_speech/__init__.py,sha256=-HbuTYN5IOUGJnSKvcvofEMAy24GN9pA0GbsTAKgM-c,38
+mobvoi_mcp/mobvoi/text_to_speech/client.py,sha256=4_I09P4NTwEt1yYcurRBQniQtYI-iSPJDF-xpKB23KU,3835
+mobvoi_mcp/mobvoi/voice_clone/__init__.py,sha256=9EAjeFIdLAqPjUNN4FdP5YEbFXvaPvJNaOsOmnzRmDY,36
+mobvoi_mcp/mobvoi/voice_clone/client.py,sha256=K6RKcWD7zsIevmqCBgpnTcNh7LuDO2L9cQc3X85Y5Xc,3615
+mobvoi_mcp-0.0.2.dist-info/METADATA,sha256=0w9ZCl5O09KBIw6TWZ0bQclyBfc4IycOAjinklX9TNE,9451
+mobvoi_mcp-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mobvoi_mcp-0.0.2.dist-info/entry_points.txt,sha256=VMDjeCp2DQf41FXWnT1G2a9khSs1NlNuTwZqhoZQUbc,54
+mobvoi_mcp-0.0.2.dist-info/licenses/LICENSE,sha256=sLNAxP9MqY9oVDPdIK8tf2tCd6dNIeeZ0As4zn_7xAw,1068
+mobvoi_mcp-0.0.2.dist-info/RECORD,,
