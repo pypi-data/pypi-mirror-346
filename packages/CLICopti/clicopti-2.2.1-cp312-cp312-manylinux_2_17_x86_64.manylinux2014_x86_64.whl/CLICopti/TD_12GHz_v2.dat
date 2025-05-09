@@ -1,0 +1,44 @@
+## Cell database for 12 GHz cells, from Kyrre's optimization
+## a_n is a/lambda
+## d_n is d/h, where h is the structure period
+## Syntax of this file:
+##  - All lines starting with "#" or blank lines are ignored
+##  - The FORMATCODE specifies which driver to load with
+##  - The lines below that are the data in ther order listed in the format specification
+## EXTGEOM:   a_n d_n psi[deg]
+## INTGEOM: 
+## MAINMODE:  f[GHz] Q vg[%c] rQ[kilo-LinacOhm/m] Es Sc[mA/V] Hs[mA/V]
+## DIPOLE:    f1mn[GHz] Q1mn A1mn[V/pC/mm/m]
+
+# Which type of cell (which fields and their sorting)
+FORMATCODE TD_12GHz_v1
+
+# Sorting of the cells
+# GRID: sorted by N parametes:
+#  here psi first, then a_n, then d_n
+# FREE:  No sorting applied
+CELLSORTING GRID
+# For GRID: How many of each type, implicitly how many types (here 2)
+CHILDKEY GRIDSORT 5 3 
+
+## 120 degree cells
+0.07 0.1  120    11.9942022 5798.2  0.35410  19.95081      1.739   0.2037   3.378         17.79   6.22  264
+0.07 0.25 120    11.994208  5424.9  0.21623  17.5921       1.54    0.20903  3.798         17.38   6.76  245
+0.07 0.4  120    11.99419   4895.0  0.117536 15.043        1.4555  0.2836   4.452         16.90   7.74  214.3
+
+0.11 0.1  120    11.994206  5837.8  1.60632  16.70638      2.33    0.497   3.613          17.17   8.03  189
+0.11 0.25 120    11.994203  5390.2  0.84906  15.2292       1.734   0.2855  4.3            17.041  8.6   184.5    
+0.11 0.4  120    11.994206  5018.2  0.80406  13.0868       1.4836  0.3124  4.5750         16.37  10.38  146.07
+
+0.15 0.1  120    11.994203  5924.5  4.1830   13.3501       2.720   0.973   3.94           16.09  12.1   119
+0.15 0.25 120    11.994199  5465.1  2.72570  12.27566      1.953   0.5114  4.39           16.013 12.484 115.70
+0.15 0.4  120    11.994209  4968.1  1.90788  10.93095      1.742   0.4310  4.972          15.416 13.547 108.14
+
+0.19 0.1  120    11.994208  6043.5  7.9650   10.447454     3.17    1.62    4.29           15.073 17.1    73.5
+0.19 0.25 120    11.994210  5573.2  5.6344    9.82523      2.2371  0.882   4.679          15.071 18.53   73.6
+0.19 0.4  120    11.994198  5047.6  4.3854    8.72553      1.96684 0.67891 5.36           14.887 20.66   67.0 
+
+0.23 0.1  120	 11.994218  6210.7 12.6247    8.11578      3.73    2.52    4.571          14.34  22.6    49  
+0.23 0.25 120	 11.994192  5728.5  9.5836    7.76350      2.495   1.356   4.984          14.340 25      49   
+0.23 0.4  120	 11.994184  5174.7  7.6642    7.04572      2.209   1.035   5.66           14.234 29.6    44.1
+
