@@ -1,0 +1,10 @@
+ctao_simpipe-0.1.0.dist-info/licenses/LICENSE,sha256=xVj4eB89fMtJJ2j-iC6n_aG2jNrzIIsu5eUxGIkJr-o,1532
+simpipe/__init__.py,sha256=VOR_zETX8umOGw-Cg--6ubQEMmR0afT1K_7hTpMem30,240
+simpipe/_version.py,sha256=-LyU5F1uZDjn6Q8_Z6-_FJt_8RE4Kq9zcKdg1abSSps,511
+simpipe/version.py,sha256=h4OuquAsSE6FhBqipo4UROduFc2FQpNzh9scprEef9A,738
+simpipe/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simpipe/tests/test_mongo_connection.py,sha256=ZjF8g_QU8CY8iNLp7bgpvxkB-vq6Ntts4ACMFAGJkeo,509
+ctao_simpipe-0.1.0.dist-info/METADATA,sha256=L_UDX3Wd69QD6p9HzRhvXQ7SY2rLtn_GUk3ttD_jl0k,6710
+ctao_simpipe-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+ctao_simpipe-0.1.0.dist-info/top_level.txt,sha256=bzhcUCh8a7_DgWeD6NaMvOYiJ0FWyZGZ9VU3tCxjvA4,8
+ctao_simpipe-0.1.0.dist-info/RECORD,,
