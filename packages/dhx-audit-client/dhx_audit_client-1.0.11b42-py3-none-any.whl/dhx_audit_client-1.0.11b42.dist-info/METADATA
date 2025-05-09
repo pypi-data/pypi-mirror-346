@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: dhx-audit-client
+Version: 1.0.11b42
+Summary: General audit client for services using DataHex based solutions.
+Home-page: https://github.com/rozettatechnology/datahex-audit
+Author: RoZetta Technology
+Author-email: developers@rozettatechnology.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Requires-Dist: pip (>=19.1.1)
+Requires-Dist: boto3 (~=1.16)
+Requires-Dist: botocore (~=1.19)
+Description-Content-Type: text/markdown
+
+# Audit Client Library
+
+Audit client library is a python package that allows DataHex services the ability to put events into a shared bus
+providing the ability to meter, log, and trace the lineage of data as it flows through the DataHex services.
+
+The library is published into Nexus.
+
+
+## Usage
+
+Setup pip to point to RoZetta's Nexus
+mkdir ~/.pip
+cat > ~/.pip/pip.conf << EOF
+[global]
+index-url= https://nexus.rozettatech.com/repository/pypi-all/simple
+progress_bar = off
+EOF
+
+
+Make sure the caller of the client library has attached the correct IAM policy to perform put_events action.
+
+Install the client library with the following command
+pip install dhx-audit-client==<version>
+
+
+Or Update the Requiremnts.txt
+boto3==1.16.8
+--extra-index-url https://nexus.rozettatech.com/repository/pypi-all/simple/
+dhx-audit-client==<version>
+
+
+Sample usage code
+
+Initialise a new AuditClient instance with the required parameters: product, environment, service, component
+and release_version, parent_execution_id (optional), event_bus_name (optional, see rules below).
+The rules to get event_bus_name:
+* If event_bus_name is specified in the parameter, it will be used.
+* Otherwise, if a corresponding environment variable AUDIT_EVENT_BUS_NAME is set, the value of the variable
+  will be used.
+* If both are not specified, it will be derived from parameters product and environment defaulting to ${product}-${environment}-AuditEventBus.
+
+from audit_client.audit_client import AuditClient
+ac = AuditClient(product='dhx', environment='devhl', service='datahex_downloader',
+                 component='ftp_downloader', release_version='datahex_downloader-v0.0.1',
+                 parent_execution_id='some-id', event_bus_name='some_event_bus_name)
+
+
+Start a new AuditSession instance , every time start_audit is called, and new execution ID will be generated.
+If we want to keep the same execution ID, we can re-use the same AuditSession
+
+sess = ac.start_audit()
+
+
+Use AuditSession to put audit event to event bus.
+
+action = 'SourceConnectionStartDetail'
+result =  'CONNECTION_REFUSED'
+
+event_details = {
+   "Host": "ftp://ftp.morningstar.com/",
+   "Protcol": "FTPS"
+}
+sess.put_audit_event(action, result, event_details
+
+
+
