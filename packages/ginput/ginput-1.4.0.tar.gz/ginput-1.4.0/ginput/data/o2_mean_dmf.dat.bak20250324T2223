@@ -1,0 +1,52 @@
+# Timeseries of dry mole fraction of O2 and the required inputs to calculate it
+#
+#
+# HISTORY:
+#  Added 1991 to 2023 using fo2_prep v.1.0.0 at 2024-08-02 15:39 PDT. Source files:
+#    - co2gl_file: /home/jlaugh/Notebooks/TCCON-research-notebooks/ginput-development/src/ginput/ginput/data/fo2_data/fo2_inputs_20240801T165356/co2_annmean_gl.txt (SHA1 = 7f4bac872356c1d5ebeced011a036ca25f5819e0)
+#    - alt_o2n2_file: /home/jlaugh/Notebooks/TCCON-research-notebooks/ginput-development/src/ginput/ginput/data/fo2_data/fo2_inputs_20240801T165356/monthly_o2_alt.csv (SHA1 = 29981188b239dc960f3c058caa87efc4b24e70b0)
+#    - cgo_o2n2_file: /home/jlaugh/Notebooks/TCCON-research-notebooks/ginput-development/src/ginput/ginput/data/fo2_data/fo2_inputs_20240801T165356/monthly_o2_cgo.csv (SHA1 = c3a2d50192b1631ace0836811eeee6e07ea5428b)
+#    - ljo_o2n2_file: /home/jlaugh/Notebooks/TCCON-research-notebooks/ginput-development/src/ginput/ginput/data/fo2_data/fo2_inputs_20240801T165356/monthly_o2_ljo.csv (SHA1 = 94199793bae856c7f4ea04dd507aa91253a7d015)
+# END HISTORY
+# Column definitions:
+#  - "year": the year which the other values are averaged over
+#  - "fo2": the dry mole fraction of O2
+#  - "o2_n2": the delta O2/N2 values in per meg averaged from multiple Scripps sites
+#  - "do2_n2": the "o2_n2" values with the base year subtracted off
+#  - "co2": the NOAA marine surface annual global mean CO2 dry mole fraction in ppm
+#  - "dco2": the "co2" values with the base year substracted off
+#
+ year      fo2       o2_n2     d_o2_n2    co2  d_co2
+ 1991 0.209428 -108.437500  470.373333 355.39 -44.26
+ 1992 0.209426 -118.975417  459.835417 356.09 -43.56
+ 1993 0.209424 -128.579167  450.231667 356.83 -42.82
+ 1994 0.209421 -148.629167  430.181667 358.33 -41.32
+ 1995 0.209418 -166.515625  412.295208 360.17 -39.48
+ 1996 0.209415 -181.773750  397.037083 361.93 -37.72
+ 1997 0.209412 -195.623958  383.186875 363.05 -36.60
+ 1998 0.209408 -215.310208  363.500625 365.70 -33.95
+ 1999 0.209405 -232.393542  346.417292 367.80 -31.85
+ 2000 0.209401 -255.805625  323.005208 368.96 -30.69
+ 2001 0.209398 -273.437083  305.373750 370.57 -29.08
+ 2002 0.209395 -289.300000  289.510833 372.59 -27.06
+ 2003 0.209390 -313.980000  264.830833 375.15 -24.50
+ 2004 0.209386 -333.842500  244.968333 376.95 -22.70
+ 2005 0.209383 -352.389167  226.421667 378.98 -20.67
+ 2006 0.209379 -374.202917  204.607917 381.15 -18.50
+ 2007 0.209375 -395.793542  183.017292 382.90 -16.75
+ 2008 0.209370 -420.295208  158.515625 385.02 -14.63
+ 2009 0.209368 -434.387500  144.423333 386.50 -13.15
+ 2010 0.209363 -459.232708  119.578125 388.76 -10.89
+ 2011 0.209359 -480.201042   98.609792 390.63  -9.02
+ 2012 0.209355 -503.045208   75.765625 392.65  -7.00
+ 2013 0.209350 -530.368958   48.441875 395.40  -4.25
+ 2014 0.209346 -553.022083   25.788750 397.34  -2.31
+ 2015 0.209341 -578.810833    0.000000 399.65   0.00
+ 2016 0.209336 -606.543958  -27.733125 403.08   3.43
+ 2017 0.209331 -630.658125  -51.847292 405.22   5.57
+ 2018 0.209326 -658.049792  -79.238958 407.61   7.96
+ 2019 0.209321 -684.073125 -105.262292 410.07  10.42
+ 2020 0.209316 -711.287917 -132.477083 412.44  12.79
+ 2021 0.209312 -733.158542 -154.347708 414.70  15.05
+ 2022 0.209307 -760.287500 -181.476667 417.07  17.42
+ 2023 0.209303 -784.219167 -205.408333 419.31  19.66
