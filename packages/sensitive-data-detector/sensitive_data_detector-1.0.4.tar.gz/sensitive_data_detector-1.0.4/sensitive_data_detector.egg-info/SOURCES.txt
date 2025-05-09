@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+sensitive_data_detector/__init__.py
+sensitive_data_detector/config.json
+sensitive_data_detector/content_analyze.py
+sensitive_data_detector/file_reader.py
+sensitive_data_detector/load_patterns.py
+sensitive_data_detector/sensitive_check.py
+sensitive_data_detector/version.py
+sensitive_data_detector.egg-info/PKG-INFO
+sensitive_data_detector.egg-info/SOURCES.txt
+sensitive_data_detector.egg-info/dependency_links.txt
+sensitive_data_detector.egg-info/requires.txt
+sensitive_data_detector.egg-info/top_level.txt
+tests/test_sensitive_check.py
