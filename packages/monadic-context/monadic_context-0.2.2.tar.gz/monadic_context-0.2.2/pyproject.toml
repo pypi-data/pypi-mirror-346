@@ -1,0 +1,48 @@
+[project]
+name = "monadic-context"
+version = "0.2.2"
+description = "A lightweight, type-safe dependency injection library"
+authors = [
+    {name = "Sean Haugh",email = "sean@lfo.team"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+repository = "https://github.com/sphaugh/python-monadic-context"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed"
+]
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+typing_extensions = { version = "^4.13.2", python = "<3.11" }
+
+[tool.poetry.group.dev.dependencies]
+isort = "^6.0.1"
+ruff = "^0.9.10"
+pytest = "^8.0.0"
+pytest-cov = "^4.1.0"
+hypothesis = "^6.93.1"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "--cov=monadic_context --cov-report=term-missing"
+
+[tool.coverage.run]
+source = ["monadic_context"]
+omit = ["*/__init__.py"]
+
