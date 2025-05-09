@@ -1,0 +1,8 @@
+LICENSE.md
+README.md
+pyproject.toml
+numericpy/__init__.py
+numericpy.egg-info/PKG-INFO
+numericpy.egg-info/SOURCES.txt
+numericpy.egg-info/dependency_links.txt
+numericpy.egg-info/top_level.txt

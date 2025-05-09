@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: numericpy
+Version: 0.0.1
+Summary: Library under development.
+Author-email: Daniel Braz <daniel.braz@vyox.io>
+Project-URL: Homepage, https://github.com/numericpy/numericpy
+Keywords: numerical methods,linear systems,integration,interpolation,finite elements,fem
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Dynamic: license-file
+
+# numericpy
+
+This package is currently under development.  
+A numerical methods library for solving linear systems, interpolation, finite elements, and integration.
