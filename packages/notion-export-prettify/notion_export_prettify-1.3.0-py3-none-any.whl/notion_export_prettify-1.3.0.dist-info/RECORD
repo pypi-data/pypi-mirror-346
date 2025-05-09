@@ -1,0 +1,12 @@
+notion_export_prettify/args.py,sha256=VITKjCOcyyhWCVnWIYOeGCW-gfbVoumNpipr2tkBrgg,4904
+notion_export_prettify/html_templator.py,sha256=mnA5QIOoze0bc0jRAZe3yb1Zd-ghFOTZHmQ0Q4BVJQA,627
+notion_export_prettify/main.py,sha256=liLDEabaZCjpLebtclLia9JK6AMVWSbsOV21lif34v4,8295
+notion_export_prettify/notion_html_manipulator.py,sha256=ceIUERliQJF_JQJeVhKgZIsHXKfWw3HjJkIeJ5JHpyM,5047
+notion_export_prettify/pdf_maker.py,sha256=anlB3feMN1RT09Ev8oSUQwHEFjb4cZ1KgYAdwH6NlCM,6117
+notion_export_prettify/print_color.py,sha256=yD9QEBgBRvM80VGeJofq6qvNPwPNxjMgX-CUzzQiZOY,487
+notion_export_prettify/resource_loader.py,sha256=NhFCvGReG_w5dXjM-8QoY8RhQdj1k9XuuK1l96f1Vjs,544
+notion_export_prettify-1.3.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+notion_export_prettify-1.3.0.dist-info/METADATA,sha256=zm5cvP-5Q35ionCBKr2fYDIFfVoJBgxULr5ceDPeD6I,1663
+notion_export_prettify-1.3.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+notion_export_prettify-1.3.0.dist-info/entry_points.txt,sha256=r6ggj47xAucZ08vePH8LgSyzHXxBOA1YGAhQ2IVPsDo,75
+notion_export_prettify-1.3.0.dist-info/RECORD,,
