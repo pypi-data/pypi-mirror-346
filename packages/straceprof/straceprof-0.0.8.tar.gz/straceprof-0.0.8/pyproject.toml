@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "straceprof"
+version = "0.0.8"
+dependencies = ["matplotlib"]
+requires-python = ">=3.10"
+readme = "README.md"
+description = "Generate a profile graph from strace log"
+license = {text = "MIT License"}
+authors = [
+  {name = "Akira Kawata"},
+]
+maintainers = [
+  {name = "Akira Kawata"}
+]
+keywords = ["strace", "profiling"]
+
+[project.urls]
+Repository = "https://github.com/akawashiro/straceprof"
+Issues = "https://github.com/akawashiro/straceprof/issues"
+
+[project.scripts]
+straceprof = "straceprof.cli:main"
+
+[tool.black]
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+lines_after_imports = 2
+
+[tool.mypy]
+python_version = "3.10"
+mypy_path = ["src"]
