@@ -1,0 +1,2 @@
+[console_scripts]
+lngdetector = lngdetector.detect:main

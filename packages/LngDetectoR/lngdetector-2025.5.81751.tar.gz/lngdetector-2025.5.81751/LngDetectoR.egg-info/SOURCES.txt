@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.py
+LngDetectoR.egg-info/PKG-INFO
+LngDetectoR.egg-info/SOURCES.txt
+LngDetectoR.egg-info/dependency_links.txt
+LngDetectoR.egg-info/entry_points.txt
+LngDetectoR.egg-info/requires.txt
+LngDetectoR.egg-info/top_level.txt
+lngdetector/__init__.py
+lngdetector/detect.py
+lngdetector/extension_lang.py
+lngdetector/mime_lang.py
+lngdetector/report.py
+tests/__init__.py
+tests/test_detect.py
+tests/test_report.py
