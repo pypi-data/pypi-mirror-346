@@ -1,0 +1,23 @@
+{
+    "title": "OT-SO",
+    "description": "Test situation.",
+    "ownShip": {
+        "initial": {
+            "position": {
+                "lat": 58.763449,
+                "lon": 10.490654
+            },
+            "sog": 8.0,
+            "cog": 110.0,
+            "heading": 110.0,
+            "navStatus": "Under way using engine"
+        }
+    },
+    "encounters": [
+        {
+            "desiredEncounterType": "overtaking-stand-on",
+            "relativeSpeed": 1.5,
+            "vectorTime": 20.0
+        }
+    ]
+}

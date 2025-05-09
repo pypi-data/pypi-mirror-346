@@ -1,0 +1,23 @@
+{
+    "title": "OT-GW",
+    "description": "Test situation.",
+    "ownShip": {
+        "initial": {
+            "position": {
+                "lat": 58.763449,
+                "lon": 10.490654
+            },
+            "sog": 12.0,
+            "cog": 0.0,
+            "heading": 0.0,
+            "navStatus": "Under way using engine"
+        }
+    },
+    "encounters": [
+        {
+            "desiredEncounterType": "overtaking-give-way",
+            "relativeSpeed": 0.6,
+            "vectorTime": 25.0
+        }
+    ]
+}

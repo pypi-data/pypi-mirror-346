@@ -1,0 +1,23 @@
+{
+    "title": "CR-SO",
+    "description": "Test situation.",
+    "ownShip": {
+        "initial": {
+            "position": {
+                "lat": 58.763449,
+                "lon": 10.490654
+            },
+            "sog": 11.0,
+            "cog": 45.0,
+            "heading": 45.0,
+            "navStatus": "Under way using engine"
+        }
+    },
+    "encounters": [
+        {
+            "desiredEncounterType": "crossing-stand-on",
+            "relativeSpeed": 1.4,
+            "vectorTime": 20.0
+        }
+    ]
+}
