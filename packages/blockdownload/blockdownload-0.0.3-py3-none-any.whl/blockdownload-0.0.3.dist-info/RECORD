@@ -1,0 +1,11 @@
+bdown/__init__.py,sha256=4GZKi13lDTD25YBkGakhZyEQZWTER_OWQMNPoH_UM2c,22
+bdown/block.py,sha256=kti51Kq5uxF8xi4tib9ZtQhoTVeiVMhDeI-ieAOLjEE,6968
+bdown/block_fiddler.py,sha256=7Jp-k5W32f20iOtK7woxoj2KVHFQTxy21Jcausf_EbA,7074
+bdown/check.py,sha256=tgBXnLAqRoR2uGFil8-HjOfOkVlEs15hBiSgvuOYl9I,7539
+bdown/download.py,sha256=-CuG53FN3IWuIcH8D0LKrskw8bM_tpggsJNR4HLSQ9k,8139
+bdown/download_cmd.py,sha256=D3x0DsnmqYOKQ7yBydOm7dd8VekEwXpkWRkWz-JlATY,4484
+blockdownload-0.0.3.dist-info/METADATA,sha256=zteSz5TgzT4XZ59tnSsOptqesyise629UpJnqiwgyI4,10008
+blockdownload-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+blockdownload-0.0.3.dist-info/entry_points.txt,sha256=7s10KRYvPsSr7yIJDzFTWBCmlZhALS10-P9le8cU1Wo,84
+blockdownload-0.0.3.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+blockdownload-0.0.3.dist-info/RECORD,,
