@@ -1,0 +1,13 @@
+gdoc_dumper/__init__.py,sha256=i881QaXMRhwjVVb8PLfOSBAasQbbrzyFxPmGjV-rQRQ,176
+gdoc_dumper/downloader.py,sha256=y92owO6NnApajfLcxRXLliR9Eb2HFR6e7hXS2eW1uEs,6447
+gdoc_dumper/file_manager.py,sha256=A8JBo9EWUtHG7aM8aiJUoeedS69SUTLGzYgNz1LBqY0,1465
+gdoc_dumper/main.py,sha256=81BZHSM_XfqgXnWUoI6_ZEPDksDdi0SawGuWzUrFjK4,267
+gdoc_dumper/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdoc_dumper/enums/__init__.py,sha256=hXp_gadM0wM-2Qvzi1eRq27ENCU56jBg2azAhjWapSw,54
+gdoc_dumper/enums/enums.py,sha256=1zASNLbxr6Mlq5XX2K0Vpmt3uo6v1PLNmP-Q_Vc4UFQ,212
+gdoc_dumper/utils/__init__.py,sha256=tmPsqBIqTvqIlcA01HjwAGfxkwGnFZZ432tvZ2YBn3A,53
+gdoc_dumper/utils/logger.py,sha256=Qn1dBh96GEVN2wuM7OLhA11uxGw7buoEovNdLXlf0R4,280
+gdoc_dumper-0.1.1.dist-info/METADATA,sha256=oPKvv7FzOEY7YcrVKX7-ELnLoCxiWSebJ2ybUOQ2G8k,2228
+gdoc_dumper-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gdoc_dumper-0.1.1.dist-info/licenses/LICENSE,sha256=UW2YFgtVsbNI9MMW26UtGkaiwmAuwjnJwaQ07hQfmnY,1086
+gdoc_dumper-0.1.1.dist-info/RECORD,,
