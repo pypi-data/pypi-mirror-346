@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+MCSRRankedAPY/__init__.py
+MCSRRankedAPY/client.py
+MCSRRankedAPY/tester.py
+MCSRRankedAPY/objects/__init__.py
+MCSRRankedAPY/objects/exceptions.py
+MCSRRankedAPY/objects/leaderboards.py
+MCSRRankedAPY/objects/match_info.py
+MCSRRankedAPY/objects/user_profile.py
+MCSRRankedAPY/objects/versus_stats.py
+mcsrrankedapy.egg-info/PKG-INFO
+mcsrrankedapy.egg-info/SOURCES.txt
+mcsrrankedapy.egg-info/dependency_links.txt
+mcsrrankedapy.egg-info/requires.txt
+mcsrrankedapy.egg-info/top_level.txt
