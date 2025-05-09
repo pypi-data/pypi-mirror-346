@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+cmdbapi/__init__.py
+cmdbapi/cmdbapi.py
+cmdbapi.egg-info/PKG-INFO
+cmdbapi.egg-info/SOURCES.txt
+cmdbapi.egg-info/dependency_links.txt
+cmdbapi.egg-info/requires.txt
+cmdbapi.egg-info/top_level.txt
