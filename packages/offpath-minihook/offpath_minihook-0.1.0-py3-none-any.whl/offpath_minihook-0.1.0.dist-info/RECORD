@@ -1,0 +1,11 @@
+.DS_Store,sha256=fyb9F73KS9-HQSCKvNkMZF6osDnnXF0yGOTQKFLTB1k,6148
+offpath/.DS_Store,sha256=oAdQZ31TwK5qsGiL2MGu76CDsW3fcOgr0pAwmM0Qx4g,6148
+offpath/__init__.py,sha256=c8aeWEGbfAAF8-yDWyDMqf3JklymXt6dS5ceVtHtRp0,212
+offpath/core.py,sha256=t9XBLhqSOTvFlb9hgMLIQ7Wji6rRzhQOGnPCaGhZDV0,9802
+offpath/hooks/__init__.py,sha256=FCOlue5y-5VrnsXL5NA5M-CVFgC1eeq9ZJZF-wnAPSQ,53
+offpath/hooks/langchain.py,sha256=CPDxBMz07O7MvFh0P4WazmSxWZajrygMvS-M0GLI_Sg,2615
+offpath/hooks/openai.py,sha256=4mPBeGAd_JoyI_FEAX5Pa9lcH48he-qteuEsINlxJvc,7121
+offpath_minihook-0.1.0.dist-info/METADATA,sha256=RtzQbSVOy1nVqxzjBR8yo_Scu169sodSppKzL4cneoA,973
+offpath_minihook-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+offpath_minihook-0.1.0.dist-info/top_level.txt,sha256=jfaRKcD2Yy3aD2FEa7LA6eO9eQimp86DsFpHyCxEU2I,8
+offpath_minihook-0.1.0.dist-info/RECORD,,

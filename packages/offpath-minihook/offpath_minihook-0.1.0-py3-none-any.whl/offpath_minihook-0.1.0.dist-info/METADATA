@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: offpath-minihook
+Version: 0.1.0
+Summary: Lightweight security hook for LLM agents
+Home-page: https://offpath.ai
+Author: Offpath Security
+Author-email: info@offpath.ai
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Requires-Dist: requests>=2.25.0
+Provides-Extra: langchain
+Requires-Dist: langchain>=0.0.200; extra == "langchain"
+Provides-Extra: openai
+Requires-Dist: openai>=0.27.0; extra == "openai"
+Provides-Extra: all
+Requires-Dist: langchain>=0.0.200; extra == "all"
+Requires-Dist: openai>=0.27.0; extra == "all"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
