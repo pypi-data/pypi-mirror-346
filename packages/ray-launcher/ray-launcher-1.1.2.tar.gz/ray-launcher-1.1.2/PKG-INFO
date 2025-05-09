@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ray-launcher
+Version: 1.1.2
+Summary: An out-of-the-box ray cluster launcher
+Home-page: https://github.com/0-1CxH/ray-launcher
+Author: 0-1CxH
+Author-email: h0.1c@foxmail.com
+License: MIT Licence
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
