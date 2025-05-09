@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "mpipartition"
+version = "1.5.0"
+description = "MPI volume decomposition and particle distribution tools"
+authors = ["Michael Buehlmann <buehlmann.michi@gmail.com>"]
+license = "MIT"
+readme = "README.rst"
+homepage = "https://github.com/ArgonneCPAC/MPIPartition"
+repository = "https://github.com/ArgonneCPAC/MPIPartition"
+documentation = "https://argonnecpac.github.io/MPIPartition"
+keywords = ["MPI", "mpi4py", "scientific computing", "parallel computing"]
+include = ["LICENSE"]
+classifiers = [
+    "Topic :: System :: Distributed Computing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+mpi4py = ">=3.1.6"
+numpy = ">1.20"
+numba = ">=0.57.0"
+click = { version = "^8.1.3" }
+matplotlib = { version = "^3.7.1", optional = true }
+
+
+[tool.poetry.group.dev.dependencies]
+Sphinx = "^7.3.7"
+sphinx-rtd-theme = "^3.0.2"
+sphinxcontrib-napoleon = "^0.7"
+sphinx-click = "^6.0.0"
+bump2version = "^1.0.1"
+numpydoc = "^1.7.0"
+pytest = "^8.2.2"
+pytest-mpi = "^0.6"
+ipykernel = "^6.23.1"
+ruff = "^0.11.8"
+mypy = "^1.15.0"
+
+[tool.poetry.extras]
+viz = ["matplotlib"]
+
+[tool.poetry.scripts]
+mpipartition-s2 = "mpipartition.scripts.s2_prediction:cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
