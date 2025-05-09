@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: mcp-ops-toolkit
+Version: 0.1.3
+Summary: A toolkit for MCP operations
+Requires-Python: >=3.11.7
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: pandas>=2.2.3
