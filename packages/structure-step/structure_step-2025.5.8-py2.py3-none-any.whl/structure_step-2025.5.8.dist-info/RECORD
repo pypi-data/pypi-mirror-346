@@ -1,0 +1,17 @@
+structure_step/__init__.py,sha256=YVZlCWBCHCz7gmNVBrndntsu5DYd7DjImj-xv7NKtVo,729
+structure_step/_version.py,sha256=UX0N0KFwUsgvE4uJyu1IzcAJD480lZKumDopSWq88qE,500
+structure_step/metadata.py,sha256=swNxy8gH-fgg-lfKuJ3Qn7Cn8ix_tH-ktcvsbz-bIzs,13858
+structure_step/structure.py,sha256=bTWXKM4X1Rfo5Co1hbvH5ZFndau75hIQS_g3nOf6uM4,15170
+structure_step/structure_parameters.py,sha256=P0TXwqxdRUK7jVUhJeOYmUIFsg5lXGMBs_xZyjMM0OE,10063
+structure_step/structure_step.py,sha256=gLu5pTmuXtuwr5WITgCebHZFunlwCAq7WBVcYl_QIS8,3055
+structure_step/tk_structure.py,sha256=1PAn03bzSECquxXzbYH4Qqhl4hv4CbJir5gg937GMHU,11347
+structure_step/data/properties.csv,sha256=Ic772bFoNq242bBMTyyz_twI4whYLPGWZ-Jw5g3jfnY,36
+structure_step/data/references.bib,sha256=Q_4LuM2rR1aO1ZvJ-FttUILTG502dfV8Lusz6op7lqg,1620
+structure_step-2025.5.8.dist-info/licenses/AUTHORS.rst,sha256=HKy1QAUcENUPZZIAeLClJTLLQ0m438MWROo7bvLs41Q,126
+structure_step-2025.5.8.dist-info/licenses/LICENSE,sha256=IfHVwXBS_H3hWZBIBOxeS72_JUlZh8G4vwa9waxCL_U,1568
+structure_step-2025.5.8.dist-info/METADATA,sha256=B-2nDuo5Iv9gmlWEZtrw2MbCKeEVAEFSct2s-aEaaWQ,4230
+structure_step-2025.5.8.dist-info/WHEEL,sha256=oSJJyWjO7Z2XSScFQUpXG1HL-N0sFMqqeKVVbZTPkWc,109
+structure_step-2025.5.8.dist-info/entry_points.txt,sha256=N1Cm61FYJdjnxpOTB4rXz43MBQjC5Zqb_G5IxJ8m3Zo,124
+structure_step-2025.5.8.dist-info/top_level.txt,sha256=Sm_zZqqLEw-awhodSXIQsoLQ1sNKTEz3zjRVMjxUVRk,15
+structure_step-2025.5.8.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+structure_step-2025.5.8.dist-info/RECORD,,
