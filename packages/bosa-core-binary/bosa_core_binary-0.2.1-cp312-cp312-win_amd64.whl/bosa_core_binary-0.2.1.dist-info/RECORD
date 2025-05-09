@@ -1,0 +1,6 @@
+bosa_core.build/.gitignore,sha256=aEiIwOuxfzdCmLZe4oB1JsBmCUxwG8x-u-HBCV9JT8E,1
+bosa_core.cp312-win_amd64.pyd,sha256=shDXUPR-X5pTACE6Aj5LO7uBQq_7iVuzBgfNvap0338,1521152
+bosa_core.pyi,sha256=ruaHzQL8C4ls5d3JInaYUALx2Vk7c7xdtuHBnPCAVfs,1525
+bosa_core_binary-0.2.1.dist-info/METADATA,sha256=j_jpZ4Cs6D5bMvtu3JXcXgwKjieCV5r8xQ7wEXIcFbc,12643
+bosa_core_binary-0.2.1.dist-info/WHEEL,sha256=4N0hGcnWMI_Ty6ATf4qJqqSl-UNI-Ln828iTWGIywmU,98
+bosa_core_binary-0.2.1.dist-info/RECORD,,
