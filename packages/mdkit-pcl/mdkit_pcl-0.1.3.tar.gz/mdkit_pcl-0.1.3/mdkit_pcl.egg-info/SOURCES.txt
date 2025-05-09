@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+mdkit/__init__.py
+mdkit/main.py
+mdkit/utils.py
+mdkit_pcl.egg-info/PKG-INFO
+mdkit_pcl.egg-info/SOURCES.txt
+mdkit_pcl.egg-info/dependency_links.txt
+mdkit_pcl.egg-info/entry_points.txt
+mdkit_pcl.egg-info/requires.txt
+mdkit_pcl.egg-info/top_level.txt
