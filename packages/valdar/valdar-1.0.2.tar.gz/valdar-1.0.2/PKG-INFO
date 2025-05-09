@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: valdar
+Version: 1.0.2
+Summary: Radar data validation and analysis tool
+Author-email: Emmanuel Zerah <emmanuel.zerah@mobileye.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20
+Requires-Dist: pandas>=1.3
+Requires-Dist: devkit
+
+# Valdar
+
+Python package for radar data validation.
+
+## Example
+
+```python
+from valdar import RadarAnalyzer
+
+analyzer = RadarAnalyzer("/path/to/pext")
+report = analyzer.evaluate()
+
+print(report.lrr_status)
+print(report.valid_lrr)
+```
