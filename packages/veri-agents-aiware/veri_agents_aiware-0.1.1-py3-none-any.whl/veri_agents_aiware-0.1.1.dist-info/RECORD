@@ -1,0 +1,7 @@
+veri_agents_aiware/__init__.py,sha256=sJmtlrZOmiu1U9E3lLWETXhYVqBt1vC-bA49dZbPXik,21
+veri_agents_aiware/tests/aiware_tool_test.py,sha256=we-hxjE878QfT6UREuDczVdkmHoDNiaJK9ChoArpU2w,1392
+veri_agents_aiware/tools/__init__.py,sha256=ceL1Keo5VfyEu0xhQ_8E0jIU-vBNUF89icbGfdZD5uQ,23
+veri_agents_aiware/tools/graphql.py,sha256=qoDQviiYhQolWj1TY1KllpN4m_oPH1vFoHTYN2i9n6o,6147
+veri_agents_aiware-0.1.1.dist-info/METADATA,sha256=za4ocktqxGm--44Vfcs100YXL9_D3RP_wmeFm2SYvI4,293
+veri_agents_aiware-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+veri_agents_aiware-0.1.1.dist-info/RECORD,,
