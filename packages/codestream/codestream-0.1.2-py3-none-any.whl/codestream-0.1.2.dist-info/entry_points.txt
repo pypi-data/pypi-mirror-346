@@ -1,0 +1,2 @@
+[console_scripts]
+codestream = codestream:main
