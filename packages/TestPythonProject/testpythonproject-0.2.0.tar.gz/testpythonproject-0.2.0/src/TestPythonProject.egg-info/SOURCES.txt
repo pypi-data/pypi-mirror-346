@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/TestPythonProject.egg-info/PKG-INFO
+src/TestPythonProject.egg-info/SOURCES.txt
+src/TestPythonProject.egg-info/dependency_links.txt
+src/TestPythonProject.egg-info/entry_points.txt
+src/TestPythonProject.egg-info/requires.txt
+src/TestPythonProject.egg-info/top_level.txt
+src/test_python_project/functions.py
+tests/test_functions.py

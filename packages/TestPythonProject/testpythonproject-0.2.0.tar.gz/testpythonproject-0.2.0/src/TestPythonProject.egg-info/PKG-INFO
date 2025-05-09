@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: TestPythonProject
+Version: 0.2.0
+Summary: Test python project
+Author-email: Geode-solutions <contact@geode-solutions.com>
+Project-URL: Homepage, https://github.com/Geode-solutions/2025MilanoBicocca
+Project-URL: Bug Tracker, https://github.com/Geode-solutions/2025MilanoBicocca/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: opengeode-core==15.18.0
+Dynamic: license-file
+
+# Milano Bicocca Workshop
+
+## Objectives:
+* Discuss best practices for:
+  * software engineering
+  * software development
+
+* Introduce useful toolbox:
+  * automatization
+  * CI/CD
+
+* About pzero:
+  * learn history / Current state / vision
+  * understand actual organization/architecture
+  * provide guidance
+
+* About DFN
+  * introduction to OpenGeode
+  * Discussion … plan development
+
+## Slides:
+* https://docs.google.com/presentation/d/1gQb_5r11TYT2LIMPHha9G0YlNnCjQ1DBXNapaaC3FqY/edit#slide=id.g350a8832c05_0_0
+* https://docs.google.com/presentation/d/1g5d_7pqewa7VtMqGFoZZ8wiucsYffJ2B9NI6So6clz4/edit#slide=id.g27bad61881e_0_444
+
+## Tutorials: 
+* Typical project in python
+  * Organisations
+  * Tools
+* Tutorial on OpenGeode
