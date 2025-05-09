@@ -1,0 +1,38 @@
+image: python:3.12
+
+stages:
+  - build
+  - deploy
+
+variables:
+  PYTHON_VERSION: "3.12"
+  GIT_DEPTH: "0" # Ensures full clone with all tags
+
+before_script:
+  - git fetch --tags  # Ensures all tags are available for setuptools_scm
+  - python -m venv venv
+  - source venv/bin/activate
+  - pip install --upgrade pip
+  - pip install build twine
+
+build-package:
+  stage: build
+  script:
+    - python -m build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 hour  # Keeps artifacts for debugging
+  only:
+    - tags
+
+deploy-to-pypi:
+  stage: deploy
+  needs:
+    - build-package
+  script:
+    - source venv/bin/activate
+    - twine check dist/*
+    - twine upload --non-interactive --username __token__ --password $PYPI_API_TOKEN dist/*
+  only:
+    - tags
