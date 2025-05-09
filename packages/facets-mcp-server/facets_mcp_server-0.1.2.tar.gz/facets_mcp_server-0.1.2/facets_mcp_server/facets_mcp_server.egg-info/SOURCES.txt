@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+facets_mcp_server/facets_mcp_server.egg-info/PKG-INFO
+facets_mcp_server/facets_mcp_server.egg-info/SOURCES.txt
+facets_mcp_server/facets_mcp_server.egg-info/dependency_links.txt
+facets_mcp_server/facets_mcp_server.egg-info/entry_points.txt
+facets_mcp_server/facets_mcp_server.egg-info/requires.txt
+facets_mcp_server/facets_mcp_server.egg-info/top_level.txt
