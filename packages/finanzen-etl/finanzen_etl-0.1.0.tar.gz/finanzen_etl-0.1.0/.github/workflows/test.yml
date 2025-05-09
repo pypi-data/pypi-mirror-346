@@ -1,0 +1,60 @@
+name: Build and Test Python Package with UV
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                python-version: ['3.12']
+
+        steps:
+        - uses: actions/checkout@v3
+
+        - name: Set up Python ${{ matrix.python-version }}
+          uses: actions/setup-python@v4
+          with:
+            python-version: ${{ matrix.python-version }}
+                
+        - name: Install UV
+          run: |
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+            echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+                
+        - name: Install dependencies
+          run: |
+            uv venv
+            . .venv/bin/activate
+            uv pip install -e ".[dev,test]"
+                
+        - name: Lint with ruff
+          run: |
+            . .venv/bin/activate 
+            uv pip install ruff
+            ruff check .
+            ruff check . --select N
+                
+        - name: Test with pytest
+          run: |   
+            . .venv/bin/activate
+            uv pip install pytest pytest-cov
+            pytest --cov=finanzen_etl
+                
+        - name: Build package
+          run: |
+            . .venv/bin/activate
+            uv pip install build
+            python -m build
+                
+        - name: Upload package artifact
+          if: ${{ github.actor != 'nektos/act' }}
+          uses: actions/upload-artifact@v4
+          with:
+            name: dist-python-${{ matrix.python-version }}
+            path: dist/
