@@ -1,0 +1,52 @@
+Metadata-Version: 2.3
+Name: edwh-web2py-effdted-prio-grid
+Version: 0.6.1
+Summary: Web2py plugin for a effective dated grid with priority support.
+Project-URL: Documentation, https://github.com/educationwarehouse/edwh-web2py-effdted-prio-grid#readme
+Project-URL: Issues, https://github.com/educationwarehouse/edwh-web2py-effdted-prio-grid/issues
+Project-URL: Source, https://github.com/educationwarehouse/edwh-web2py-effdted-prio-grid
+Author-email: Remco Boerma <remco.b@educationwarehouse.nl>, Romy Schöller <romy.s@educationwarehouse.nl>, Robin van der Noord <robin.vdn@educationwarehouse.nl>
+Keywords: effdt,effective-dated,grid,web2py
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Provides-Extra: dev
+Requires-Dist: hatch; extra == 'dev'
+Requires-Dist: python-semantic-release<8; extra == 'dev'
+Requires-Dist: web2py-gluon; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# edwh_web2py_effdted_prio_grid
+
+[![PyPI - Version](https://img.shields.io/pypi/v/edwh-web2py-effdted-prio-grid.svg)](https://pypi.org/project/edwh-web2py-effdted-prio-grid)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/edwh-web2py-effdted-prio-grid.svg)](https://pypi.org/project/edwh-web2py-effdted-prio-grid)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install edwh-web2py-effdted-prio-grid
+```
+
+## Usage
+```python
+from edwh_web2py_effdted_prio_grid import effective_dated_grid
+
+effective_dated_grid(db.organisations)
+
+```
+
+## License
+
+`edwh-web2py-effdted-prio-grid` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
