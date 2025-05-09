@@ -1,0 +1,10 @@
+ctypespec/__init__.py,sha256=VlMKPZ_hVeTud6k2qmLcJ7KWpjh3IqAcypcv1vCAnTQ,287
+ctypespec/_version.py,sha256=6Ut4p8TB6aGoVxpBXKzSbexs5Quzz9PJc_13OPSJwHY,90
+ctypespec/ast_parser.py,sha256=BpHYJ-KHumBzHxcPAZkhDOhXCv-YO9maY-t0uza0kG4,11704
+ctypespec/cdecl_parser.py,sha256=jl8uE6OGEX9EvAJb1xbPLsDEWWGaPHHd0eyXWfYsJpU,5336
+ctypespec/clang_helper.py,sha256=ehf-nelq0hf-rAG1QbEcyZpP1E_bX0KFkla-TCmOHAA,3335
+ctypespec/ctype_helper.py,sha256=3sOV1-t_Ubg4-9vpV8eScVMnEqfQVL6NGXnliVvEZTQ,10752
+ctypespec-0.1.0.dist-info/LICENSE,sha256=580sUoOyp9Eb8pTW7BtrJ1nzcMBY4pxczb1kN50Q0WE,1087
+ctypespec-0.1.0.dist-info/METADATA,sha256=DUkGY11sI8f6IwStebBdwGs6JzXgIe2Oq2_z_dmr2Qk,600
+ctypespec-0.1.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+ctypespec-0.1.0.dist-info/RECORD,,
