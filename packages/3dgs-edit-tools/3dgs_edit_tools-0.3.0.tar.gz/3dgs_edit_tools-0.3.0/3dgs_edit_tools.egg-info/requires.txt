@@ -1,0 +1,12 @@
+numpy
+
+[mesh]
+open3d
+
+[tools]
+pandas
+matplotlib
+
+[visualization]
+pandas
+matplotlib
