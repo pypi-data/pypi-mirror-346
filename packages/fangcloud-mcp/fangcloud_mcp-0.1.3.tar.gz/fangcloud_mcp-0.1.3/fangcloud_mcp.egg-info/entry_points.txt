@@ -1,0 +1,3 @@
+[console_scripts]
+fangcloud_mcp = fangcloud_mcp.fangcloud:main
+
