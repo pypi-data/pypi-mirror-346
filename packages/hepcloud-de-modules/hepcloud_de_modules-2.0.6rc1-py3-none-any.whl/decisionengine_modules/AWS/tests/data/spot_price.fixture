@@ -1,0 +1,37 @@
+[
+    {
+        "Timestamp": datetime.datetime(2018, 10, 4, 11, 36, 38),
+        "AvailabilityZone": "us-east-1d",
+        "InstanceType": "m3.xlarge",
+        "ProductDescription": "Linux/UNIX",
+        "SpotPrice": "0.0617",
+    },
+    {
+        "Timestamp": datetime.datetime(2018, 10, 3, 21, 27, 14),
+        "AvailabilityZone": "us-east-1c",
+        "InstanceType": "m3.xlarge",
+        "ProductDescription": "Linux/UNIX",
+        "SpotPrice": "0.0617",
+    },
+    {
+        "Timestamp": datetime.datetime(2018, 10, 3, 21, 27, 14),
+        "AvailabilityZone": "us-east-1e",
+        "InstanceType": "m3.xlarge",
+        "ProductDescription": "Linux/UNIX",
+        "SpotPrice": "0.0617",
+    },
+    {
+        "Timestamp": datetime.datetime(2018, 10, 3, 21, 27, 14),
+        "AvailabilityZone": "us-east-1b",
+        "InstanceType": "m3.xlarge",
+        "ProductDescription": "Linux/UNIX",
+        "SpotPrice": "0.0617",
+    },
+    {
+        "Timestamp": datetime.datetime(2018, 9, 19, 23, 8, 24),
+        "AvailabilityZone": "us-east-1a",
+        "InstanceType": "m3.xlarge",
+        "ProductDescription": "Linux/UNIX",
+        "SpotPrice": "0.2660",
+    },
+]
