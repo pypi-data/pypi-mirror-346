@@ -1,0 +1,4 @@
+tokeniser>=0.0.3
+requests==2.32.3
+pydantic==2.11.3
+langchain-core==0.3.51
