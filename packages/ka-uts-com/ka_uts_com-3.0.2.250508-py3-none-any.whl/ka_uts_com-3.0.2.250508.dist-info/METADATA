@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ka-uts-com
+Version: 3.0.2.250508
+Summary: Communication and CLIs Utilities
+Author-email: Bernd Stroehle <bernd.stroehle@gmail.com>
+Maintainer-email: Bernd Stroehle <bernd.stroehle@gmail.com>
+Project-URL: Source Code, https://github.com/bs29/ka_uts_com/tree/master
+Project-URL: Homepage, https://kosakya.de/
+Project-URL: Documentation, https://ka-com.readthedocs.io/en/latest
+Project-URL: Apache-2.0 License, https://apache.org/licenses/LICENSE-2.0
+Project-URL: GPLv3 License, https://www.gnu.org/licenses/gpl-3.0.en.html
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: ka-uts-arr>=3.0.1.250507
+Requires-Dist: ka-uts-log>=3.0.0.250505
+Requires-Dist: ka-uts-uts>=3.0.2.250507
+
