@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+mujoco_viewer/__init__.py
+mujoco_viewer/callbacks.py
+mujoco_viewer/mujoco_viewer.py
+multi_panel_mujoco_pyviewer.egg-info/PKG-INFO
+multi_panel_mujoco_pyviewer.egg-info/SOURCES.txt
+multi_panel_mujoco_pyviewer.egg-info/dependency_links.txt
+multi_panel_mujoco_pyviewer.egg-info/not-zip-safe
+multi_panel_mujoco_pyviewer.egg-info/requires.txt
+multi_panel_mujoco_pyviewer.egg-info/top_level.txt
