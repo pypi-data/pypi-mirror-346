@@ -1,0 +1,13 @@
+mlx_bigvgan/__init__.py,sha256=q5hZ6elOOjbkbriakWVnmfesBKKlMUKC-gtRld30DGk,457
+mlx_bigvgan/act.py,sha256=2e84Iq0MlSgeIkgBCo70cp6dUVC-TFMx9wxqfHY9uC0,2603
+mlx_bigvgan/alias_free_activation.py,sha256=gI0wbPo4ZCIaVn0kkQoUig0TrQbPAPiTloxhF69peIE,5923
+mlx_bigvgan/audio.py,sha256=L2sihT6YH6zEdER-dsBYL7x7rGfJ_W4xVrTbgEeM92E,13165
+mlx_bigvgan/bigvgan.py,sha256=g9m3HioyEjyKj4Yo_TIRBiKI4YQBAC2WPKONTmbUqFY,11138
+mlx_bigvgan/convert.py,sha256=r6i0lbxkHhACZ0IGUjLScqdzyHCQ_wcMeVDu_tYNolY,9596
+mlx_bigvgan/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlx_bigvgan-0.1.0.dist-info/licenses/LICENSE,sha256=YpwcDkjBnvratYKrV7EPHwWF3QRMd4WA9W6zAYvs_E8,1066
+mlx_bigvgan-0.1.0.dist-info/METADATA,sha256=0_5zh2xQ4gHK3zZmR8Ww-GmenwnR-731vUubBWWGkjE,3280
+mlx_bigvgan-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+mlx_bigvgan-0.1.0.dist-info/entry_points.txt,sha256=JvaqISM6TuhcevENU9qthzMH-dgIyvcW6slA5W0fNYo,65
+mlx_bigvgan-0.1.0.dist-info/top_level.txt,sha256=IFN31xRNrLRrVHwyxqg-XDz-71RRzjqk9B4BYRdBjWM,12
+mlx_bigvgan-0.1.0.dist-info/RECORD,,
