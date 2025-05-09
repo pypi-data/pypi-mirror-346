@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+
+jobs:
+  tests:
+    strategy:
+      matrix:
+        python_version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+
+    name: "py${{ matrix.python_version }}"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Set up UV
+        id: setup-uv
+        uses: astral-sh/setup-uv@6b9c6063abd6010835644d4c2e1bef4cf5cd0fca
+        with:
+          python-version: ${{ matrix.python_version }}
+
+      - name: Run tests
+        run: uv run pytest
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+  static-typing:
+    name: Run Pyright
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@6b9c6063abd6010835644d4c2e1bef4cf5cd0fca # v6
+        with:
+          python-version: "3.13"
+          activate-environment: true
+
+      - name: Install dependencies
+        run: uv sync --group=types
+
+      - name: Extract pyright version from pre-commit
+        id: pre-commit-pyright-version
+        run: >
+          uv export --format pylock.toml
+          | python -c "import tomllib,sys; print('pyright-version='+next(e['version'] for e in tomllib.loads(sys.stdin.read())['packages'] if e['name'] == 'pyright' ))"
+          >> $GITHUB_OUTPUT
+
+      - uses: jakebailey/pyright-action@v2
+        with:
+          version: ${{ steps.pre-commit-pyright-version.outputs.pyright-version }}
+
+  publish:
+    name: Publish package to PyPI
+    if: github.event_name == 'push' && github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    needs:
+      - tests
+      - static-typing
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Build wheel & sdist
+        run: pipx run uv build
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
