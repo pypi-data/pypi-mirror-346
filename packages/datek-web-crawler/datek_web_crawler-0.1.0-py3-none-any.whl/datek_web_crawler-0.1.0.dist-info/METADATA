@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: datek-web-crawler
+Version: 0.1.0
+Summary: Simple, powerful web crawler
+License-File: LICENSE
+Requires-Python: >=3.13
+Requires-Dist: lxml>=5.3.2
+Requires-Dist: structlog>=25.2.0
+Provides-Extra: httpx
+Requires-Dist: httpx>=0.28.1; extra == 'httpx'
+Provides-Extra: s3
+Requires-Dist: boto3>=1.37.1; extra == 's3'
+Requires-Dist: datek-app-utils>=0.4.0; extra == 's3'
+Requires-Dist: types-boto3[s3]>=1.37.33; extra == 's3'
+Description-Content-Type: text/markdown
+
+[![codecov](https://codecov.io/gh/DAtek/web-crawler/branch/master/graph/badge.svg?token=rrht7DUefF)](https://codecov.io/gh/DAtek/web-crawler)
+
+# Web Crawler
+
+Performant, extensible and lean web crawler, utilizes all available CPUs by default. 
+
+Uses event loop for I/O and processes for analyzing the pages.
+
+## Batteries included
+- Basic `httpx` page downloader
+- `S3` page storage
+- Local filesystem page storage
+
+## Usage
+- Have a look at `tests/integration/test_crawl.py`
+- Implement your own `PageAnalyzer` and `PageDownloader` classes
+- Optionally customize `structlog` logging, see [configuration](https://www.structlog.org/en/stable/configuration.html)
+- Have fun!
+
+## Customization
+All classes in the modules folder can be replaced with your custom implementation.
