@@ -1,0 +1,1 @@
+from movie_frame_extractor_xethhung12.extractor import Extractor

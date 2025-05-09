@@ -1,0 +1,2 @@
+[console_scripts]
+movie-frame-extractor = movie_frame_extractor_xethhung12.main:cmd
