@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+dcnotifier/DCNotifier.py
+dcnotifier/__init__.py
+dcnotifier.egg-info/PKG-INFO
+dcnotifier.egg-info/SOURCES.txt
+dcnotifier.egg-info/dependency_links.txt
+dcnotifier.egg-info/requires.txt
+dcnotifier.egg-info/top_level.txt
