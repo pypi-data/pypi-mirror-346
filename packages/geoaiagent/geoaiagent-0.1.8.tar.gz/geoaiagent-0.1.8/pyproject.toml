@@ -1,0 +1,15 @@
+[project]
+name = "geoaiagent"
+version = "0.1.8"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+geoaiagent = "src.geoaiagent.__main__:main"
+
