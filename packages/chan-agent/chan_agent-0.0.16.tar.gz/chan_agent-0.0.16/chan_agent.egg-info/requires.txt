@@ -1,0 +1,5 @@
+openai
+instructor
+google-generativeai
+filelock
+peewee
