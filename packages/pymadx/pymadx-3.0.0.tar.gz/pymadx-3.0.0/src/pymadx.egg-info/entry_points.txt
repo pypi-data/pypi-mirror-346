@@ -1,0 +1,4 @@
+[console_scripts]
+pymadx_rmatrix_pdf = pymadx.Cli:main_PrintRMatrixPdf
+pymadx_rmatrix_plot = pymadx.Cli:main_PlotRMatrix
+pymadx_rmatrix_print = pymadx.Cli:main_PrintRMatrix
