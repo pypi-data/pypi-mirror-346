@@ -1,0 +1,16 @@
+{
+    "prepend": {
+        "entry_points": {
+            "hab.cli": {
+                "gui": "hab_gui.cli:gui"
+            }
+        },
+        "splash_screen": [
+            "{relative_root}/images"
+        ]
+    },
+    "set": {
+        "hab_gui_refresh_inverval": "00:00:30",
+        "prefs_default": "--prefs"
+    }
+}
