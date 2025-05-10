@@ -1,0 +1,9 @@
+sh3d/AssetManager.py,sha256=LVc-3QAu_n-dPFcBjdB1Emqj47drAIV3jAfCUcTc604,4067
+sh3d/FileLoader.py,sha256=x2c7f_ZJfkCfswDxNSH7csU-0vM0L8k25McM19D8NTw,1924
+sh3d/__init__.py,sha256=aBEbDvx4LMg8A1TJJR6dEHu8rQODVin528hLS_EDvuA,22
+sh3d/geometry.py,sha256=1AhyLJcR9S9Gnl97yKDei-qvcYannonkDZPbMmjxm0s,2621
+sh3d_py-0.1.4.dist-info/licenses/LICENSE,sha256=6or154nLLU6bELzjh0mCreFjt0m2v72zLi3yHE0QbeE,7650
+sh3d_py-0.1.4.dist-info/METADATA,sha256=o1jOAAlExz6F_6cFWZTLNh1Wb_z_kV3JthM1TSJPIIs,2911
+sh3d_py-0.1.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+sh3d_py-0.1.4.dist-info/top_level.txt,sha256=9Am_ppJ43AWjJVNK2Hc3GUAucDjgSI7MKGRnOCm0olA,5
+sh3d_py-0.1.4.dist-info/RECORD,,
