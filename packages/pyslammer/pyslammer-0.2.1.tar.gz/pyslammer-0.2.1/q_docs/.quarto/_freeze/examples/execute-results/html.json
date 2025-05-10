@@ -1,0 +1,12 @@
+{
+  "hash": "450f3f026629b4480c017a699ec79906",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: Examples\n---\n\n\n\n\n\nI want to try to include a toctree here, but I'm not sure if it will work.\n\n\n\n\n\n```{toctree}\n:maxdepth: 0\nSingle simulation (interactive) <demos/interactive_demo.ipynb>\nRigid and Flexible Analysis <demos/multi_method.ipynb>\nBatch simulations <demos/batch_demo.ipynb>\nVariable yield criteria <demos/variable_yield.ipynb>\n```\n\n\n\n\n\n::: {.toctree}\nThis content can be styled with a border\n:::\n\n",
+    "supporting": [
+      "examples_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
