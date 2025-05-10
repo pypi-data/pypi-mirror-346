@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+OpenPyLivoxv2.egg-info/PKG-INFO
+OpenPyLivoxv2.egg-info/SOURCES.txt
+OpenPyLivoxv2.egg-info/dependency_links.txt
+OpenPyLivoxv2.egg-info/requires.txt
+OpenPyLivoxv2.egg-info/top_level.txt
+openpylivox/__init__.py
+openpylivox/openpylivoxv2.py
