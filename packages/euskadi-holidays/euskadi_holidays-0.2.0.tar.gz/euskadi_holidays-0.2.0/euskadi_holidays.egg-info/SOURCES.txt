@@ -1,0 +1,11 @@
+LICENSE
+README.md
+euskadi.py
+pyproject.toml
+setup.cfg
+euskadi_holidays.egg-info/PKG-INFO
+euskadi_holidays.egg-info/SOURCES.txt
+euskadi_holidays.egg-info/dependency_links.txt
+euskadi_holidays.egg-info/requires.txt
+euskadi_holidays.egg-info/top_level.txt
+test/test_core.py
