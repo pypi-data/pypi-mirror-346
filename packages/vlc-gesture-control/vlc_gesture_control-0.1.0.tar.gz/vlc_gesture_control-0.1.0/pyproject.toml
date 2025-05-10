@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vlc-gesture-control"
+version = "0.1.0"
+description = "Control VLC media player using hand gestures detected through a webcam"
+readme = "README.md"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Video :: Display",
+    "Topic :: Utilities",
+    "Operating System :: Microsoft :: Windows",
+]
+keywords = ["vlc", "gesture", "control", "computer vision", "mediapipe"]
+dependencies = [
+    "opencv-python>=4.8.0",
+    "mediapipe>=0.10.8",
+    "pywin32>=306",
+    "numpy>=1.24.3",
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+gpu = [
+    "tensorflow>=2.12.0",
+    "torch>=2.0.1",
+    "torchvision>=0.15.2",
+]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/vlc-gesture-control"
+"Bug Tracker" = "https://github.com/yourusername/vlc-gesture-control/issues"
+"Documentation" = "https://github.com/yourusername/vlc-gesture-control#readme"
+
+[project.scripts]
+vlc-gesture-control = "vlc_gesture_control.cli:main"
+vlc-gesture-control-cpu = "vlc_gesture_control.vlc_m_cpu:main"
+vlc-gesture-control-gpu = "vlc_gesture_control.vlc_m_gpu:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true 

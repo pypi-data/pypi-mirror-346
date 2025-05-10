@@ -1,0 +1,89 @@
+# VLC Gesture Control
+
+[![PyPI version](https://badge.fury.io/py/vlc-gesture-control.svg)](https://badge.fury.io/py/vlc-gesture-control)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Versions](https://img.shields.io/pypi/pyversions/vlc-gesture-control.svg)](https://pypi.org/project/vlc-gesture-control/)
+
+Control VLC media player using hand gestures detected through your webcam.
+
+## Features
+
+- Control VLC media player without touching your keyboard/mouse
+- Support for both CPU and GPU processing
+- Palm-facing detection to prevent accidental triggers
+- Fast-forward and rewind functionality with repeated gestures
+- Real-time performance monitoring with FPS display
+
+### Supported Gestures
+
+| Gesture | Action |
+|---------|--------|
+| All five fingers up | Play/Pause |
+| Index finger only | Volume Up |
+| Thumb + Index finger | Volume Down |
+| Index + Middle fingers | Forward 10 seconds (Fast-forward when repeated) |
+| Thumb + Index + Middle fingers | Backward 10 seconds (Fast-rewind when repeated) |
+| Index + Middle + Ring fingers | Toggle Subtitles |
+| All fingers except thumb | Change Audio Track |
+| Left hand thumb only (pointing right) | Next Video |
+| Right hand thumb only (pointing left) | Previous Video |
+
+## Installation
+
+### Basic Installation
+
+```bash
+pip install vlc-gesture-control
+```
+
+### With GPU Support
+
+```bash
+pip install vlc-gesture-control[gpu]
+```
+
+### For Development
+
+```bash
+pip install vlc-gesture-control[dev]
+```
+
+## Usage
+
+1. Open VLC media player and start playing a video
+2. Run the application with either CPU or GPU mode:
+
+```bash
+# For CPU mode (default)
+vlc-gesture-control-cpu
+
+# For GPU mode (if supported by your hardware)
+vlc-gesture-control-gpu
+```
+
+3. Position your hand in front of the webcam and use the gestures to control VLC
+4. Press 'q' to quit the application
+
+## How It Works
+
+The application uses MediaPipe's hand tracking to detect hand landmarks in real-time. It analyzes the configuration of fingers to recognize specific gestures, then sends the corresponding keyboard commands to VLC. The system includes a consistency check that requires a gesture to be detected multiple times before triggering an action, which prevents accidental commands.
+
+The application also checks if your palm is facing the camera, ignoring gestures when the back of your hand is visible. This allows you to adjust your hair or move around without accidentally triggering commands.
+
+For directional gestures like next/previous video navigation, the application uses thumb-only gestures that are specific to which hand is being used (left hand thumb for next, right hand thumb for previous), making the controls more intuitive.
+
+## Requirements
+
+- Python 3.9+
+- VLC Media Player
+- Webcam
+- Windows OS
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [MediaPipe](https://developers.google.com/mediapipe) for hand tracking technology
+- [VideoLAN](https://www.videolan.org) for VLC media player 
