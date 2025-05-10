@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: windows-desktop-builds
+Version: 0.0.12
+Summary: Retrieves Windows Desktop Builds
+Author: whoDoneItAgain
+Author-email: 12127434+whoDoneItAgain@users.noreply.github.com
+Project-URL: Homepage, https://github.com/whodoneitagain/windows-desktop-builds
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: beautifulsoup4==4.13.4
+Requires-Dist: packaging==25.0
+Requires-Dist: pyyaml==6.0.2
+Requires-Dist: requests==2.32.3
+Dynamic: license-file
+
+# windows-desktop-builds

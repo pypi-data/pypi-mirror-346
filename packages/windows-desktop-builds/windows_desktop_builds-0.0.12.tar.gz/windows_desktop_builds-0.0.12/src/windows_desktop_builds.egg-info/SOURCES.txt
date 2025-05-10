@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+pyproject.toml
+src/wdb/__init__.py
+src/wdb/__main__.py
+src/wdb/version.py
+src/wdb/data/__init__.py
+src/wdb/data/desktop-build-statistics.xlsx
+src/wdb/data/config/config.yaml
+src/windows_desktop_builds.egg-info/PKG-INFO
+src/windows_desktop_builds.egg-info/SOURCES.txt
+src/windows_desktop_builds.egg-info/dependency_links.txt
+src/windows_desktop_builds.egg-info/entry_points.txt
+src/windows_desktop_builds.egg-info/requires.txt
+src/windows_desktop_builds.egg-info/top_level.txt
