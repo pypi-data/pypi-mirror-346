@@ -1,0 +1,15 @@
+id: workplace
+
+info:
+  name: Workplace
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Automation
+  references:
+    - https://community.spiceworks.com/topic/2151848-need-to-verify-a-domain-by-dns-text-record-hosted-by-europe-registry?
+
+rule:
+  type: regex
+  regex:
+    - "workplace-domain-verification=(?P<token>[A-Za-z0-9]+)"
+  params:
+    - token

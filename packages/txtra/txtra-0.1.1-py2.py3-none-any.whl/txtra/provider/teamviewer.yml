@@ -1,0 +1,15 @@
+id: teamviewer
+
+info:
+  name: teamviewer
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Certificate
+  references:
+    - https://community.teamviewer.com/t5/Knowledge-Base/Single-Sign-On-SSO/ta-p/30784
+
+rule:
+  type: regex
+  regex:
+    - "teamviewer-sso-verification=(?P<token>[A-Fa-f0-9\\-_]+)"
+  params:
+    - token

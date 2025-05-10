@@ -1,0 +1,12 @@
+id: symantect-mdm
+
+info:
+  name: Symantec MDM
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Security
+rule:
+  type: regex
+  regex:
+    - "OSIAGENTREGURL=(?P<token>[A-Za-z0-9\\-_]+)"
+  params:
+    - token

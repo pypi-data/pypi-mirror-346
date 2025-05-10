@@ -1,0 +1,15 @@
+id: adobe-sign
+
+info:
+  name: Adobe Acrobat Sign
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Security
+  references:
+    - https://helpx.adobe.com/sign/using/claim-domain-names.html
+
+rule:
+  type: regex
+  regex:
+    - "adobe-sign-verification=(?P<token>[A-Za-z0-9]+)"
+  params:
+    - token
