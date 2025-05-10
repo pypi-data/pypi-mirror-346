@@ -1,0 +1,2 @@
+[console_scripts]
+visound = visound.cli:main
