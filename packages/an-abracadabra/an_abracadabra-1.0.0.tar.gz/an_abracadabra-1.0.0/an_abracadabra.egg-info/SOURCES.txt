@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+an_abracadabra/__init__.py
+an_abracadabra/abracadabra.py
+an_abracadabra.egg-info/PKG-INFO
+an_abracadabra.egg-info/SOURCES.txt
+an_abracadabra.egg-info/dependency_links.txt
+an_abracadabra.egg-info/top_level.txt
