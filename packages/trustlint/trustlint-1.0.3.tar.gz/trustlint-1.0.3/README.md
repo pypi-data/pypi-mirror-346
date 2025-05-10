@@ -1,0 +1,122 @@
+# TrustLint
+
+![ComplyEdge Logo](https://complyedge.io/logo-transparent.png)
+
+**Local Compliance Validation for Developers**
+
+TrustLint is a powerful compliance linting tool by ComplyEdge. Instantly check your code for compliance issues, integrate with your CI/CD pipeline, and stay ahead of regulatory risks—all from your local development environment.
+
+---
+
+## Installation
+
+### npm (JavaScript/TypeScript)
+```bash
+npm install trustlint
+```
+
+### pip (Python)
+```bash
+pip install trustlint
+```
+
+---
+
+## What is TrustLint?
+
+TrustLint integrates seamlessly into your development workflow, providing real-time compliance validation as you code. It helps you:
+
+- **Catch compliance issues early** before they reach production
+- **Integrate compliance checks** into your CI/CD pipeline
+- **Define custom rules** tailored to your organization
+- **Stay up-to-date** with the latest regulatory requirements
+- **Keep your code secure**—all validation happens locally
+
+---
+
+## Why TrustLint?
+
+- **Real-time compliance validation in your IDE:** Get instant feedback and fix issues before they reach production.
+- **Seamless CI/CD integration:** Automate compliance checks in your build and deployment pipelines.
+- **Custom rule configuration:** Tailor TrustLint to your organization's unique compliance needs.
+- **Automatic updates:** Always use the latest compliance rules and standards.
+- **Secure by default:** All validation happens locally—your code never leaves your environment.
+- **Plain-language analysis:** Complex legal text is translated into clear, actionable guidance.
+- **Proactive protection:** Identify and address compliance issues before they become problems.
+
+---
+
+## Key Features
+
+![Developer using TrustLint](https://complyedge.io/giammarco-boscaro-OPzWvgL-upY-unsplash.jpg)
+
+- **Real-Time Validation:** Get instant feedback on compliance issues as you code.
+- **CI/CD Integration:** Seamlessly integrate with your existing CI/CD pipeline.
+- **Custom Rule Configuration:** Define and enforce your own compliance rules.
+- **Automatic Updates:** Stay current with the latest compliance rules.
+- **Secure by Default:** Your code never leaves your development environment.
+- **Plain-Language Analysis:** Understand complex regulations with clear, actionable guidance.
+- **Proactive Protection:** Address compliance issues before they become costly problems.
+- **Local-First:** All validation and analysis is performed locally for maximum privacy and security.
+
+---
+
+## More Features
+
+- **Instant monitoring of regulatory changes and enforcement actions**
+- **Daily summaries and notifications** (when integrated with ComplyEdge platform)
+- **Integration with popular developer tools and workflows**
+- **Support for multiple programming languages**
+- **Open API for custom integrations**
+
+---
+
+## Usage
+
+After installing, you can run TrustLint as part of your build or test process. Example (JavaScript/TypeScript):
+
+```bash
+npx trustlint <path-to-your-code>
+```
+
+Or, for Python:
+
+```bash
+trustlint <path-to-your-code>
+```
+
+You can also integrate TrustLint into your CI/CD pipeline for automated compliance checks.
+
+---
+
+## Testimonials
+
+> "TrustLint has become an essential part of our development workflow. It catches compliance issues before they reach our CI pipeline."
+>
+> — Senior Developer, Tech Company
+
+> "The ability to define custom rules has been a game-changer for our compliance process."
+>
+> — DevOps Engineer, FinTech Startup
+
+> "Finally, a tool that makes compliance validation as easy as running a linter."
+>
+> — Lead Developer, E-commerce Platform
+
+---
+
+## Learn More
+- [ComplyEdge Website](https://complyedge.io)
+- [Download TrustLint](https://download.complyedge.io)
+- [API Documentation](https://docs.complyedge.io)
+- [Contact Support](mailto:support@complyedge.io)
+
+---
+
+## Deployment (Maintainers Only)
+
+See the repository or contact the maintainers for deployment instructions.
+
+---
+
+_ComplyEdge — Stay ahead of regulations. Protect your code. Avoid costly pitfalls._ 

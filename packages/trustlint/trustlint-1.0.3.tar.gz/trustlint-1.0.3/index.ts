@@ -1,0 +1,1 @@
+console.log('TrustLint - A powerful compliance linting tool for your development workflow'); 
