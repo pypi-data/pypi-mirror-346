@@ -1,0 +1,13 @@
+README.md
+setup.py
+core/constants.py
+core/optiattack_client.py
+core/example_app/__init__.py
+core/example_app/example_app.py
+core/optiattack_client.egg-info/PKG-INFO
+core/optiattack_client.egg-info/SOURCES.txt
+core/optiattack_client.egg-info/dependency_links.txt
+core/optiattack_client.egg-info/requires.txt
+core/optiattack_client.egg-info/top_level.txt
+tests/test_client.py
+tests/test_client_multiple.py
