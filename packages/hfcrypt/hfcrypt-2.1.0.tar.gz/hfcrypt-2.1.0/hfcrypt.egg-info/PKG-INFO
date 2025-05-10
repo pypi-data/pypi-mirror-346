@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: hfcrypt
+Version: 2.1.0
+Summary: Host encrypted apps on Hugging Face Spaces
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: huggingface-hub
+Requires-Dist: cryptography
+Requires-Dist: requests
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+GitHub: https://github.com/hfcrypt/hfcrypt
+
+For usage instructions, see: https://hfcrypt.github.io/
+
+Legacy (v1) available on `old-v1` branch.

@@ -1,0 +1,10 @@
+README.md
+setup.py
+hfcrypt/__init__.py
+hfcrypt/cli.py
+hfcrypt.egg-info/PKG-INFO
+hfcrypt.egg-info/SOURCES.txt
+hfcrypt.egg-info/dependency_links.txt
+hfcrypt.egg-info/entry_points.txt
+hfcrypt.egg-info/requires.txt
+hfcrypt.egg-info/top_level.txt
