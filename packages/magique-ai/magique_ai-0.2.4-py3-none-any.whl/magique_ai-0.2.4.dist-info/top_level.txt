@@ -1,0 +1,4 @@
+dist
+magique
+rag_db
+tests
