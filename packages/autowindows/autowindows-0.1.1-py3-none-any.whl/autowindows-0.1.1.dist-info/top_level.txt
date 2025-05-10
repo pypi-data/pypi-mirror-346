@@ -1,0 +1,12 @@
+autowindows
+comtypes
+mouseinfo
+psutil
+pyautogui
+pycaw
+pygetwindow
+pymsgbox
+pyperclip
+pyrect
+pyscreeze
+pytweening
