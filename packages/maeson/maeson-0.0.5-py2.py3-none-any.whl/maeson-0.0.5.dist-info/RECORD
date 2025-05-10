@@ -1,0 +1,11 @@
+maeson/__init__.py,sha256=hDuSMMEQyoQyFHu24sIJBIf_WI786OIP7taIahFPx7Q,187
+maeson/common.py,sha256=Rw6d9qmZDu3dUGTyJto1Y97S7-QA-m2p-pbCNvMDrm4,184
+maeson/folmap.py,sha256=xRHYwUSxFvOhzUIvSsSZ2IQBibiMxp66Ygqp3BIxWk4,5118
+maeson/gistory.py,sha256=NzRA-IooW2fqmB94kvaUqoWLLDa63907c_y5ZChSBgE,38832
+maeson/maeson.py,sha256=h9VCSyYaJ3zB1meJuIfVVFGpTZ016pgnGSx_306uUPw,14305
+maeson-0.0.5.dist-info/licenses/LICENSE,sha256=SiYH1iI1TJCLkhTBQSbDWsXmlj2XqAwC9nRzH_LC5fY,1071
+maeson-0.0.5.dist-info/METADATA,sha256=OAmyKSFa7HdFVSrIzywhPWZK6oCVvREmRLTmq-CubDg,2992
+maeson-0.0.5.dist-info/WHEEL,sha256=joeZ_q2kZqPjVkNy_YbjGrynLS6bxmBj74YkvIORXVI,109
+maeson-0.0.5.dist-info/entry_points.txt,sha256=NwEvM_5I93LqsZFLxHjyd47P7J5FgYuYaDEiqTSI83U,43
+maeson-0.0.5.dist-info/top_level.txt,sha256=e7Ut8fzPd8lkaCJcyd0sGggeDh6UUiM2aDAEm3NYYfI,7
+maeson-0.0.5.dist-info/RECORD,,
