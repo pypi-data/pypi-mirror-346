@@ -1,0 +1,30 @@
+
+package:
+  name: pss.zsp
+  uses: pss
+
+  tasks: 
+  - name: Lib
+    desc: Pre-compiles PSS into a library
+    passthrough: all
+
+  - name: GenModelSV
+    uses: pss.GenModelSV
+    consumes: none
+    passthrough: all
+#    shell: pytask
+#    run: dv_flow.libpss.zsp_gen_model_sv.GenModelSV
+
+  - name: GenActorSV
+    uses: pss.GenActorSV
+    shell: pytask
+    run: dv_flow.libpss.zsp_gen_actor_sv.GenActorSV
+
+  - name: RuntimeSV
+    uses: pss.RuntimeSV
+    desc: Files for SystemVerilog runtime
+    shell: pytask
+    run: dv_flow.libpss.zsp_runtime_sv.RuntimeSV
+
+
+

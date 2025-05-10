@@ -1,0 +1,29 @@
+
+package:
+  name: pss
+
+  tasks:
+  - name: Lib
+    desc: Pre-compiles PSS into a library
+    consumes:
+    - filetype: pssSource
+
+  - name: RuntimeSV
+    desc: Files for SystemVerilog runtime
+
+  - name: GenModelSV
+    desc: Generates common files for a specific PSS model
+    consumes:
+    - filetype: pssSource
+    - filetype: pssLib
+    passthrough: unused
+
+  - name: GenActorSV
+    desc: Generates a PSS Actor (component+action)
+    consumes:
+    - filetype: pssSource
+    - filetype: pssLib
+    with:
+      root_action:
+        type: str
+

@@ -1,0 +1,4 @@
+
+VERSION="0.0.1"
+SUFFIX="14939575656rc0"
+__version__ = "%s%s" % (VERSION, SUFFIX)
