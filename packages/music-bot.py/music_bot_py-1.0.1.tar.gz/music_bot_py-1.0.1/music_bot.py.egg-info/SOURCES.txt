@@ -1,0 +1,8 @@
+README.md
+setup.py
+music_bot.py.egg-info/PKG-INFO
+music_bot.py.egg-info/SOURCES.txt
+music_bot.py.egg-info/dependency_links.txt
+music_bot.py.egg-info/entry_points.txt
+music_bot.py.egg-info/requires.txt
+music_bot.py.egg-info/top_level.txt
