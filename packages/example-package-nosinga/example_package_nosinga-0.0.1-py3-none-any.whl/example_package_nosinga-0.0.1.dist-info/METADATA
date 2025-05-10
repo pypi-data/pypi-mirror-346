@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: example_package_nosinga
+Version: 0.0.1
+Summary: A small example package
+Author-email: Nanne Oisnga <nosinga@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
