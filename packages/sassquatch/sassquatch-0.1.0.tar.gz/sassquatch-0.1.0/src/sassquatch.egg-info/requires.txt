@@ -1,0 +1,4 @@
+sleazy
+
+[dev]
+pytest
