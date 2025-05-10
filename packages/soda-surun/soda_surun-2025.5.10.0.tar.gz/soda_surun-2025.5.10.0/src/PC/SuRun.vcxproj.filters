@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{942f4b52-a8cf-457e-87da-76889ce1443c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{377de3cf-ab1c-4e58-9b76-1839815e97da}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{43cda912-c28d-4dcb-b51f-380004bcccbc}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\surun\LSALogon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\DBGTrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\DynWTSAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\Helpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\IsAdmin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\LogonDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\launcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\WinStaDesk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\TrayMsgWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\TrayShowAdmin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\UserGroups.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\WatchDog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\sspi_auth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\ReqAdmin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\Service.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\lsa_laar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\surun\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\surun\WinStaDesk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\WatchDog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\UserGroups.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\TrayShowAdmin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\TrayMsgWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\SuRunVer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\sspi_auth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\Service.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\BlurredScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\ResStr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\ReqAdmin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\pugxml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\Helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\IsAdmin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\LogonDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\lsa_laar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\LSALogon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\CmdLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\anchor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\DynWTSAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\surun\DBGTrace.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\resources\Admin.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\AutoCancel.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\CancelWindows.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\ico10605.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\ico10606.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\ico10607.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\neverquestion.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\NoAdmin.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\NoQuestion.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\NoRestrict.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\NoWindow.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\NoWindows.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\Question.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\Restrict.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\SHADMIN.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\Shield.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\SrAdmin.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\SuRun.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\SuRunBW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\Windows.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\surun\app.manifest">
+      <Filter>Resource Files</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\docs\ChangeLog.md" />
+    <Text Include="..\docs\gpedit.md" />
+    <Text Include="..\ReadMe.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\surun\SuRunVer.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\surun\SuRun.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

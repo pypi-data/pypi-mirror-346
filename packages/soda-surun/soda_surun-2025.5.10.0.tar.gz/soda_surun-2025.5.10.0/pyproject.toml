@@ -1,0 +1,57 @@
+[project]
+name = "soda-surun"
+version = "2025.5.10.0"
+description = "surun and related tools"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["sodatools>=2025.2.16.0"]
+
+[project.urls]
+Repository = "https://github.com/soda92/surun"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+ignore-vcs = true
+packages = ["surun_tools", "src", "scripts", "tests"]
+exclude = [
+    "__pycache__",
+    "*.pyc",
+    "*.exe",
+    "!vswhere.exe",
+    ".vs",
+    "Debug",
+    "DebugUsr32",
+    "DebugUx64",
+    "InstallSuRun",
+    "packages",
+    "Release",
+    "x64",
+    "*.aps",
+    "*.vcxproj.user",
+]
+
+[tool.hatch.build.targets.wheel]
+ignore-vcs = true
+packages = ["surun_tools"]
+exclude = ["src", "tests", "__pycache__", "*.pyc"]
+
+[dependency-groups]
+dev = [
+    "hatchling>=1.27.0",
+    "jupyter>=1.1.1",
+    "lxml>=5.4.0",
+    "pytest>=8.3.5",
+    "clang-format>=20.1.3",
+    "soda-hugo-nbconvert>=2025.5.8.3",
+]
+
+[tool.hatch.build.hooks.custom]
+
+[project.scripts]
+surun_install = "surun_tools.install:main2"
+surun_format = "surun_tools.run_format:surun_format"
+surun_clean = "surun_tools.clean:clean"
+surun_build = "surun_tools.build:build"
