@@ -1,0 +1,5 @@
+include LICENSE
+include NOTICE
+include *.rst *.txt
+recursive-include docs *.rst *.txt *.py *.conf
+prune docs/.crate-docs
