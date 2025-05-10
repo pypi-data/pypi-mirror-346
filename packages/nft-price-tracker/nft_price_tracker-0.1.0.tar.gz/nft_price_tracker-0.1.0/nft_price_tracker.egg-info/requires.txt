@@ -1,0 +1,5 @@
+requests
+colorama
+python-dotenv
+tqdm
+asyncio

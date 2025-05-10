@@ -1,0 +1,2 @@
+[console_scripts]
+nft-tracker = nft_price_tracker.main:main
