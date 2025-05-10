@@ -1,0 +1,11 @@
+[Unit]
+Description=Clipboard processor
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/clipboard-processor -i xclip-primary
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=default.target

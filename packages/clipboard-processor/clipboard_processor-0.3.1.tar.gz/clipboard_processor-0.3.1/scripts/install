@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -euo pipefail
+
+RED='\033[0;31m'
+RESET='\033[0m'
+SERVICE_FILE_URL=https://raw.githubusercontent.com/tom-mi/clipboard-processor/refs/heads/main/systemd/clipboard-processor.service
+SERVICE_FILE_DESTINATION=~/.config/systemd/user/clipboard-processor.service
+VENV_DIR=~/.local/clipboard-processor/venv # TODO not sure if this path is best practice, but I did not find any proper documentation
+BIN_DIR=~/.local/bin
+
+trap 'set +x; echo -e "${RED}Error on line $LINENO, failed to install clipboard-processor${RESET}"; exit 1' ERR
+
+set -x
+
+# Create virtualenv
+mkdir -p ${VENV_DIR}
+python3 -m venv ${VENV_DIR}
+
+# Install
+${VENV_DIR}/bin/pip install --upgrade 'clipboard-processor[all]'
+mkdir -p ${BIN_DIR}
+ln --force -s ${VENV_DIR}/bin/clipboard-processor ${BIN_DIR}/
+
+# Setup userspace systemd service
+curl --silent --fail ${SERVICE_FILE_URL} > ${SERVICE_FILE_DESTINATION}
+
+systemctl --user daemon-reload
+systemctl --user enable clipboard-processor.service
+systemctl --user start clipboard-processor.service
