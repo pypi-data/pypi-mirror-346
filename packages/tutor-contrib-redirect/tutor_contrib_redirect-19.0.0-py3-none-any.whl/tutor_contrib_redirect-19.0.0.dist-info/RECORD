@@ -1,0 +1,10 @@
+tutorredirect/__about__.py,sha256=DBzXzwthXX42Albr0Kgy7J8JDMeKElxIZsuSRa7m338,23
+tutorredirect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tutorredirect/plugin.py,sha256=Kz9ZkX3zUVUg9t1QhnDoyNJtyxTd97A9NhXs6AaSHus,1027
+tutorredirect/patches/.gitignore,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tutorredirect/patches/k8s-services,sha256=cZheYkvOV-N79upZ_v6spdBBKKaxpW4b19xjZfBDjOI,791
+tutor_contrib_redirect-19.0.0.dist-info/METADATA,sha256=xLhGjwVO7xeyJOkuHLUUENMI3YV7BjYMLde9OrDjnKc,1956
+tutor_contrib_redirect-19.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tutor_contrib_redirect-19.0.0.dist-info/entry_points.txt,sha256=zl27PFFjvx1RKGRe0DICuQcSlfdWGcbmc5mJdrRsMYQ,50
+tutor_contrib_redirect-19.0.0.dist-info/licenses/LICENSE.txt,sha256=3r8IgT7s_qqg0e9WHbZtv8UJ_owUrb74_lBu7fe0HBs,34523
+tutor_contrib_redirect-19.0.0.dist-info/RECORD,,
