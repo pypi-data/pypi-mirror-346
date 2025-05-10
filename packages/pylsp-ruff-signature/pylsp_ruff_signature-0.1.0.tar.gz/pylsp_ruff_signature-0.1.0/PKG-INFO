@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: pylsp-ruff-signature
+Version: 0.1.0
+Summary: A pylsp plugin adding ruff formatting to signatures
+Author: Michał Krassowski
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: ruff
