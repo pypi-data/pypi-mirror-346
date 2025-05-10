@@ -1,0 +1,6 @@
+setuptools
+numpy
+matplotlib
+pytest
+scipy
+pandas
