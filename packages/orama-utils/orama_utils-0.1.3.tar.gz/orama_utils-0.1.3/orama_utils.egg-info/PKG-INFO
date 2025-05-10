@@ -1,0 +1,240 @@
+Metadata-Version: 2.4
+Name: orama-utils
+Version: 0.1.3
+Summary: Utility functions and tools for data processing and analysis
+Home-page: https://github.com/Orama-Solutions/utils
+Author: Orama Solutions
+Author-email: info@orama-solutions.com
+License: MIT License
+        
+        Copyright (c) 2024 Orama Solutions
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/Orama-Solutions/utils
+Project-URL: Bug Tracker, https://github.com/Orama-Solutions/utils/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: numpy>=1.20.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# Orama Utils
+
+A collection of utility functions for data processing and feature engineering.
+
+## Features
+
+- **Date feature generation**: Add time-based features to your DataFrame
+- **Holiday feature generation**: Add holiday information based on country and region
+- **Weather feature generation**: (Coming soon)
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install orama-utils
+```
+
+For development installation:
+
+```bash
+git clone https://github.com/Orama-Solutions/utils.git
+cd utils
+pip install -e .[dev]
+```
+
+## Usage
+
+### Date Features
+
+Add date-related features to your DataFrame:
+
+```python
+import pandas as pd
+from orama_utils import add_date_features
+
+# Create your DataFrame
+df = pd.DataFrame({
+    'date': ['2023-01-01', '2023-12-25'],
+    'value': [100, 200]
+})
+
+# Add all available date features
+result = add_date_features(df, date_column='date')
+
+# Add only specific features
+selected_features = ['year', 'month', 'week_of_month', 'is_monday', 'is_weekend', 'season']
+result = add_date_features(df, date_column='date', features=selected_features)
+```
+
+#### Available Date Features
+
+- Basic Components: `year`, `month`, `day`, `week_of_month`, `week_of_year`, `quarter`
+- Day of Week Flags: `is_monday`, `is_tuesday`, `is_wednesday`, `is_thursday`, `is_friday`, `is_saturday`, `is_sunday`, `is_weekend`
+- Calendar Flags: `is_month_start`, `is_month_end`, `is_quarter_start`, `is_quarter_end`, `is_year_start`, `is_year_end`
+- Season: `season` (1=Winter, 2=Spring, 3=Summer, 4=Fall for Northern Hemisphere)
+
+### Holiday Features
+
+Add holiday-related features to your DataFrame:
+
+```python
+import pandas as pd
+from orama_utils import add_holiday_features
+
+# Create your DataFrame
+df = pd.DataFrame({
+    'date': ['2023-01-01', '2023-12-25'],
+    'country': ['ES', 'ES'],
+    'county': ['ES-MD', 'ES-CT']
+})
+
+# Add holiday features with default threshold (3 counties)
+result = add_holiday_features(df)
+
+# With custom county threshold
+result = add_holiday_features(df, county_threshold=5)
+
+# With custom column names
+result = add_holiday_features(
+    df,
+    date_column='date',
+    country_column='country_code',
+    county_column='region_code'
+)
+```
+
+#### Available Holiday Features
+
+The function adds the following columns:
+- `is_public_holiday`: True for national holidays
+- `is_local_holiday`: True for county-specific holidays
+- `many_counties_holiday`: True when multiple counties celebrate the holiday (more than the specified threshold)
+- `is_day_before_holiday`: True if the next day is a public or local holiday
+- `is_day_after_holiday`: True if the previous day is a public or local holiday
+
+#### Supported Countries
+
+Currently supported countries:
+- `ES`: Spain (with county-level holiday information)
+- `IT`: Italy (basic support, county-level information coming soon)
+
+## Development
+
+### Running Tests
+
+```bash
+python -m pytest tests/
+```
+
+### Updating the Package Version
+
+When releasing a new version of the package, you need to update the version number in three places:
+
+1. In `pyproject.toml`:
+   ```toml
+   [project]
+   name = "orama-utils"
+   version = "0.1.1"  # Update this
+   ```
+
+2. In `setup.py`:
+   ```python
+   setup(
+       name="orama-utils",
+       version="0.1.1",  # Update this
+       # ...
+   )
+   ```
+
+3. In `orama_utils/__init__.py`:
+   ```python
+   __version__ = '0.1.1'  # Update this
+   ```
+
+Make sure to update all three files with the same version number to avoid build inconsistencies.
+
+#### Building the Package
+
+To build the package:
+
+**Windows:**
+```powershell
+# Clean previous builds
+Remove-Item -Path dist\* -Force -ErrorAction SilentlyContinue
+Remove-Item -Path *.egg-info -Recurse -Force -ErrorAction SilentlyContinue
+
+# Build new package
+python -m build
+```
+
+**macOS/Linux:**
+```bash
+# Clean previous builds
+rm -rf dist/* *.egg-info/
+
+# Build new package
+python -m build
+```
+
+The build output will be in the `dist/` directory:
+- `orama_utils-x.y.z-py3-none-any.whl` (wheel)
+- `orama_utils-x.y.z.tar.gz` (source distribution)
+
+#### Publishing to PyPI
+
+First, ensure you have configured your PyPI credentials in `~/.pypirc` or as environment variables.
+
+**Windows/macOS/Linux:**
+```bash
+# Upload to PyPI
+python -m twine upload dist/*
+```
+
+For test uploads, use TestPyPI:
+```bash
+python -m twine upload --repository testpypi dist/*
+```
+
+### Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
