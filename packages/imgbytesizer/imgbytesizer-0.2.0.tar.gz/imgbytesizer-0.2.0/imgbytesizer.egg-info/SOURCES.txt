@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+imgbytesizer/__init__.py
+imgbytesizer/formatter.py
+imgbytesizer/logger.py
+imgbytesizer/main.py
+imgbytesizer/resizer.py
+imgbytesizer/utils.py
+imgbytesizer.egg-info/PKG-INFO
+imgbytesizer.egg-info/SOURCES.txt
+imgbytesizer.egg-info/dependency_links.txt
+imgbytesizer.egg-info/entry_points.txt
+imgbytesizer.egg-info/requires.txt
+imgbytesizer.egg-info/top_level.txt
