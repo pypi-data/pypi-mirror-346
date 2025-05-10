@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: orcastrator
+Version: 1.0.5
+Summary: ORCA high-throughput pipeline orchestrator
+Requires-Python: >=3.11
+Requires-Dist: cerberus>=1.3.7
+Requires-Dist: click>=8.1.8
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: morca>=0.3.6
+Description-Content-Type: text/markdown
+
+Calculation
+-----------
+
+- directory
+- scratch_directory
+- charge, mult, xyz =  a "molecule"?
+- keywords, blocks
+- overwrite
+- cpus, mem_per_cpu_gb
+
+molecule
+--------
+
+- charge, mult, xyz
+- from_xyz_file(Optional[charge], Optional[mult])
+- consume_xyz_files(directory) -> list[Molecule]
+
+Runner
+------
+
+Protocol
+
+- run(input_file)
+
+### OrcaRunner
+
+- orca_executable = shutil.which("orca")
+
+Workflow/Pipeline
+-----------------
+
+chain several calculations with different keywords/blocks - propagate the molecule
