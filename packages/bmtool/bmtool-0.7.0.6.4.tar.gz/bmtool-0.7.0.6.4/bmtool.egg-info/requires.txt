@@ -1,0 +1,17 @@
+neuron==8.2.4
+bmtk
+click
+clint
+h5py
+matplotlib
+networkx
+numpy
+pandas
+questionary
+pynmodlt
+xarray
+fooof
+requests
+pyyaml
+PyWavelets
+numba
