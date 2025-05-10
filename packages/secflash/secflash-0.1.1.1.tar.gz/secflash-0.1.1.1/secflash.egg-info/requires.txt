@@ -1,0 +1,5 @@
+nvdlib>=0.7.6
+reportlab>=3.6.13
+requests>=2.31.0
+packaging>=25.0
+colorlog>=6.9.0
