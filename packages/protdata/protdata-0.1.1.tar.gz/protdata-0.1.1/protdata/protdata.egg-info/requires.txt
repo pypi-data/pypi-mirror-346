@@ -1,0 +1,7 @@
+anndata
+pandas
+numpy
+pyteomics
+
+[dev]
+pytest>=7.0.0
