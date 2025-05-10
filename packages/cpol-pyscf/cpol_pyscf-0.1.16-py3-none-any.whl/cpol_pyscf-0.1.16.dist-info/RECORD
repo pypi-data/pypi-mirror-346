@@ -1,0 +1,10 @@
+cpol_pyscf/PySCFmerger.py,sha256=EiyVX40FfPiZdaKMkUHuzMoqrt8XUvHqaCGRte4Q7Wg,1041
+cpol_pyscf/__init__.py,sha256=hIMyg0e7rGpy8PdD-dxI5OtPCAtorFniSLeksnkDLy0,216
+cpol_pyscf/momtensor.py,sha256=BoDJG_5GBG-EhUxE766gOjBDz7oAu_2raJsop-BOJKE,6266
+cpol_pyscf/poltensor.py,sha256=avQYwKWD-kIxbcnshRg0Yzt2p_tMAboev2SgXYhlLbk,15682
+cpol_pyscf/qdist.py,sha256=YWd6krY7YqUeiOYnzPNMllfh7p1KDZbIWhHUVvvoLts,5985
+cpol_pyscf-0.1.16.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cpol_pyscf-0.1.16.dist-info/METADATA,sha256=yyTJaq1DOPCbBlFVkl4hZWOZ4iyNfGY-4RVAGVreSbQ,2760
+cpol_pyscf-0.1.16.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+cpol_pyscf-0.1.16.dist-info/top_level.txt,sha256=wxG-vdTiLrCE3ycVHIKhTSSokivd8l6ZwglnoVWDfjQ,11
+cpol_pyscf-0.1.16.dist-info/RECORD,,
