@@ -1,0 +1,6 @@
+attrs<26,>=24
+lark<2,>=1.2
+pygnuregex<2,>=1.1.3
+
+[tests]
+pytest
