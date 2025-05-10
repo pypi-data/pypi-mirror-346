@@ -1,0 +1,2 @@
+[console_scripts]
+ducopy = ducopy.cli:entry_point
