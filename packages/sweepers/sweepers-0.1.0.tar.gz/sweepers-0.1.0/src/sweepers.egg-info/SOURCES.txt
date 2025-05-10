@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/sweepers/__init__.py
+src/sweepers/cli.py
+src/sweepers/cli_test.py
+src/sweepers/generate.py
+src/sweepers/generate_test.py
+src/sweepers/run.py
+src/sweepers/run_test.py
+src/sweepers.egg-info/PKG-INFO
+src/sweepers.egg-info/SOURCES.txt
+src/sweepers.egg-info/dependency_links.txt
+src/sweepers.egg-info/entry_points.txt
+src/sweepers.egg-info/requires.txt
+src/sweepers.egg-info/top_level.txt

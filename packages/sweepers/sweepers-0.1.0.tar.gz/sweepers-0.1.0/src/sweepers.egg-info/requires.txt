@@ -1,0 +1,2 @@
+absl-py>=2.2.2
+beartype>=0.11.0

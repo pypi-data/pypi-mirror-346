@@ -1,0 +1,23 @@
+[project]
+name = "sweepers"
+version = "0.1.0"
+description = "CLI tool to generate parameter sweeps and run commands with the generated parameters"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "absl-py>=2.2.2",
+    "beartype>=0.11.0",
+]
+
+[project.scripts]
+sweepers = "sweepers.cli:entrypoint"
+
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv.sources]
+sweepers = { workspace = true }
