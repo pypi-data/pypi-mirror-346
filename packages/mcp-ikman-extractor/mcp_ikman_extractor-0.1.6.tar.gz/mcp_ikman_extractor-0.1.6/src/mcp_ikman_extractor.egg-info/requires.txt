@@ -1,0 +1,4 @@
+mcp[cli]>=1.6.0
+pydantic>=2.6.1
+beautifulsoup4>=4.12.2
+requests>=2.31.0
