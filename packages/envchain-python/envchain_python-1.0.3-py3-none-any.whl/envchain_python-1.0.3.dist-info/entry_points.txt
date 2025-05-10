@@ -1,0 +1,3 @@
+[console_scripts]
+envchain-delete-namespace=envchain_python.cli_delete_namespace:main
+
