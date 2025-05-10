@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: qa-pytest-commons
+Version: 0.1.0
+Summary: PyTest commons library
+Author-email: Adrian Herscu <adrian.herscu@gmail.com>
+Requires-Python: >=3.13
+Requires-Dist: more-itertools
+Requires-Dist: pyfunctional
+Requires-Dist: pyhamcrest
+Requires-Dist: pytest
+Requires-Dist: qa-testing-utils
+Requires-Dist: tenacity
+Description-Content-Type: text/markdown
+
+# qa-pytest-commons
