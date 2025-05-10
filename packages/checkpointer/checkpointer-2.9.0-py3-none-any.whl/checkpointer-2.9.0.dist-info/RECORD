@@ -1,0 +1,16 @@
+checkpointer/__init__.py,sha256=HRLsQ24ZhxgmDcHchZ-hX6wA0NMCSedGA0NmCnUdS_c,832
+checkpointer/checkpoint.py,sha256=_1A-IH3wNkUc1vNMg0fA4gS6mI8wiwtTX1iPFZdEbRI,6245
+checkpointer/fn_ident.py,sha256=SWaksNCTlskMom0ztqjECSRjZYPWXUA1p1ZCb-9tWo0,4297
+checkpointer/object_hash.py,sha256=cxuWRDrg4F9wC18aC12zOZYOPv3bk2Qf6tZ0_WgAb6Y,7484
+checkpointer/print_checkpoint.py,sha256=aJCeWMRJiIR3KpyPk_UOKTaD906kArGrmLGQ3LqcVgo,1369
+checkpointer/test_checkpointer.py,sha256=Jsrgpxf6ux-P1OPy4t1wIi028EPSqSltTC9BRhgCMZ4,3999
+checkpointer/utils.py,sha256=2yk1ksKszXofwnSqBrNCFRSR4C3YLPEAdHUFf-cviRU,2755
+checkpointer/storages/__init__.py,sha256=Kl4Og5jhYxn6m3tB_kTMsabf4_eWVLmFVAoC-pikNQE,301
+checkpointer/storages/bcolz_storage.py,sha256=3QkSUSeG5s2kFuVV_LZpzMn1A5E7kqC7jk7w35c0NyQ,2314
+checkpointer/storages/memory_storage.py,sha256=73KVPAlunjd2Ln4mXsmRk2Njd92ILIaYDszsAH3Pi30,1087
+checkpointer/storages/pickle_storage.py,sha256=nes0vVgVt4zfGRPk73vfPp3_6ZZy3cYwhx0K_2yAaWM,1535
+checkpointer/storages/storage.py,sha256=jjiUCxRZYwgBNIpQ4IMNGSb_5IvyY8kFtAYnXLmFoGs,853
+checkpointer-2.9.0.dist-info/METADATA,sha256=2urG6x-DqQ8g7Mwchl0ohwGny4W_cLnFE349j5_tvbM,10615
+checkpointer-2.9.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+checkpointer-2.9.0.dist-info/licenses/LICENSE,sha256=9xVsdtv_-uSyY9Xl9yujwAPm4-mjcCLeVy-ljwXEWbo,1059
+checkpointer-2.9.0.dist-info/RECORD,,
