@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: eof_optimization
+Version: 0.1.0
+Summary: Entanglement of Formation minimization using torch and evolutionary strategies
+Author-email: Alex Pacheco <alex.pacheco@usach.cl>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: qutip
+Dynamic: license-file

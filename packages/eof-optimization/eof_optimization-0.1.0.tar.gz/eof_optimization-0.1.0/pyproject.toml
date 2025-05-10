@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eof_optimization"
+version = "0.1.0"
+description = "Entanglement of Formation minimization using torch and evolutionary strategies"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+  {name = "Alex Pacheco", email = "alex.pacheco@usach.cl"}
+]
+dependencies = [
+  "numpy",
+  "torch",
+  "qutip"
+]
+
+#[project.urls]
+#Homepage = "https://github.com/tuusuario/eof-minimization"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

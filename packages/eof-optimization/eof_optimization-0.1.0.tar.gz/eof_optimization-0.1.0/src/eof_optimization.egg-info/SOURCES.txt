@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/eof_optimization/__init__.py
+src/eof_optimization/eof.py
+src/eof_optimization/slres.py
+src/eof_optimization.egg-info/PKG-INFO
+src/eof_optimization.egg-info/SOURCES.txt
+src/eof_optimization.egg-info/dependency_links.txt
+src/eof_optimization.egg-info/requires.txt
+src/eof_optimization.egg-info/top_level.txt
