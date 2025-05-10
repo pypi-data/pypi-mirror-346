@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: tutor-contrib-redirect
+Version: 18.0.0
+Summary: Easily redirect www to non-www LMS host
+Project-URL: Documentation, https://github.com/aulasneo/tutor-contrib-redirect.git#readme
+Project-URL: Issues, https://github.com/aulasneo/tutor-contrib-redirect.git/issues
+Project-URL: Source, https://github.com/aulasneo/tutor-contrib-redirect.git
+Author: Andrés González
+Author-email: andres@aulasneo.com
+License: AGPL-3.0-only
+License-File: LICENSE.txt
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: tutor<19.0.0,>=18.0.0
+Provides-Extra: dev
+Requires-Dist: tutor[dev]<19.0.0,>=18.0.0; extra == 'dev'
+Description-Content-Type: text/x-rst
+
+redirect plugin for `Tutor <https://docs.tutor.edly.io>`__
+##########################################################
+
+Easily redirect www to non-www LMS host in Kubernetes deployments of Open edX.
+
+Requires nginx-ingress and cert-manager, as used by `Harmony <https://github.com/openedx/openedx-k8s-harmony>`_
+
+
+Installation
+************
+
+.. code-block:: bash
+
+    pip install git+https://github.com/aulasneo/tutor-contrib-redirect.git
+
+Usage
+*****
+
+.. code-block:: bash
+
+    tutor plugins enable redirect
+    tutor k8s start
+
+By default, the subdomain redirected is ``www``. If you want something else, set ``REDIRECT_SUBDOMAIN``.
+
+License
+*******
+
+This software is licensed under the terms of the AGPLv3.
