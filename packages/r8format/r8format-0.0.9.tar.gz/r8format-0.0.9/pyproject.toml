@@ -1,0 +1,37 @@
+[project]
+version = '0.0.9'
+name = 'r8format'
+description = 'Retrocomputing 8-bit file format manipulation tools'
+authors = [
+    { name = 'Curt J. Sampson', email = 'cjs@cynic.net' },
+    { name = 'Stuart Croy', email = 'stuartcroy@mac.com' },
+]
+readme = 'README.md'
+urls.homepage = 'https://github.com/mc68-net/t8dev/tree/main/r8format'
+urls.source = 'https://github.com/mc68-net/t8dev'
+urls.tracker = 'https://github.com/mc68-net/t8dev/issues'
+
+requires-python = '>=3.6'
+dependencies = []
+
+[project.scripts]
+#   bastok
+basdump         = 'bastok.cli.basdump:main'
+blines          = 'bastok.cli.blines:main'
+detok           = 'bastok.cli.detok:main'
+#   binary
+msx-dasm        = 'binary.cli.msx_dasm:main'
+p2b             = 'binary.cli.p2b:main'
+#   cmtconv
+analyze-cmt     = 'cmtconv.cli.analyze_cmt:main'
+cmtconv         = 'cmtconv.cli.cmtconv:main'
+
+[build-system]
+requires = ['setuptools']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools.packages]
+find = { where = ['src'] }
+
+[tool.pytest.ini_options]
+testpaths = ['src']

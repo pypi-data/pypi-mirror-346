@@ -1,0 +1,8 @@
+[console_scripts]
+analyze-cmt = cmtconv.cli.analyze_cmt:main
+basdump = bastok.cli.basdump:main
+blines = bastok.cli.blines:main
+cmtconv = cmtconv.cli.cmtconv:main
+detok = bastok.cli.detok:main
+msx-dasm = binary.cli.msx_dasm:main
+p2b = binary.cli.p2b:main
