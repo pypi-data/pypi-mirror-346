@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: wordfrequencer
+Version: 0.1.0
+Summary: A package to count word frequency and display it in a table format.
+Author: Md. Ismiel Hossen Abir
+Author-email: ismielabir1971@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: License
+
+# WordFrequencer
+
+WordFrequencer is a Python package that allows you to count the frequency of words in a text or text file and display it in a nice table format.
+
+## Installation
+
+You can install the package using `pip`:
+
+```bash
+pip install wordfrequencer
+```
+
+## Usage
+
+### Example 1: Using text input
+```bash
+from wordfrequencer import wordfrequencer
+
+text = "Hello world! Hello Python. Welcome to the world of Python programming."
+
+wordfrequencer(text, columns=3)
+```
+### Example 2: Using a text file
+```bash
+from wordfrequencer import wordfrequencer
+
+file_path = "sample.txt"
+wordfrequencer(file_path, columns=3)
+```

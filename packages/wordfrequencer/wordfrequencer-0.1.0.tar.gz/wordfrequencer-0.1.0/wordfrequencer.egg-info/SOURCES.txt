@@ -1,0 +1,8 @@
+License
+setup.py
+wordfrequencer/__init__.py
+wordfrequencer/wordfrequencer.py
+wordfrequencer.egg-info/PKG-INFO
+wordfrequencer.egg-info/SOURCES.txt
+wordfrequencer.egg-info/dependency_links.txt
+wordfrequencer.egg-info/top_level.txt
