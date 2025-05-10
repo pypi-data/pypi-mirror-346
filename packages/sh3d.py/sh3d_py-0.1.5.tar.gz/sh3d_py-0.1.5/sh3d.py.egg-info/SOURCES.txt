@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+sh3d/AssetManager.py
+sh3d/FileLoader.py
+sh3d/__init__.py
+sh3d/geometry.py
+sh3d.py.egg-info/PKG-INFO
+sh3d.py.egg-info/SOURCES.txt
+sh3d.py.egg-info/dependency_links.txt
+sh3d.py.egg-info/requires.txt
+sh3d.py.egg-info/top_level.txt
+tests/test_file_loader.py
