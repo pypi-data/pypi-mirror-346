@@ -1,0 +1,1 @@
+!Call MCP tools: test ExcelMCP tools in chat mode

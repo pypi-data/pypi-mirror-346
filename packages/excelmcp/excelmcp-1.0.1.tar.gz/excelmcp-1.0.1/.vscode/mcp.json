@@ -1,0 +1,15 @@
+{
+    "servers": {
+        "ExcelMCP": {
+            "type": "stdio",
+            "command": "uvx",
+            "args": [
+                "excelmcp"
+            ]
+        },
+        "ExcelSSE": {
+            "type": "sse",
+            "url": "http://localhost:8000/sse"
+        }
+    }
+}
