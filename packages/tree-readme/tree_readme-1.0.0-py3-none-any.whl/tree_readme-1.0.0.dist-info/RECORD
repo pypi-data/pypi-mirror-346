@@ -1,0 +1,9 @@
+readme_generator/__init__.py,sha256=OEJpmyLaNSF301bTPyWMuWLmxprmJUvdGUUBRLR-CgA,159
+readme_generator/cli.py,sha256=jdOmV419gZP6ay6v_WsNot7FavtF8-gRZlQd_SOmEII,654
+readme_generator/emoji_map.py,sha256=G7254Lv557bDgLK712VOUlQ28urrD-qAgHU8YMziE-w,704
+readme_generator/readme_builder.py,sha256=_xidNq6t6MAJfdpmCBn8oC8Z_Y33mYdguRe5Kzhx8eU,1673
+readme_generator/repo_structure.py,sha256=Qm29qtyyg9P494Fm8GakbuSKyMeJeRCKTAoVjdw1wfQ,2901
+tree_readme-1.0.0.dist-info/METADATA,sha256=mqI0X6CGzvTpg8wUkuASadevg84tlSX3Mao6xZhKAVg,666
+tree_readme-1.0.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+tree_readme-1.0.0.dist-info/top_level.txt,sha256=_0XJdlzPylPaBwaUO00tJv7544IP-bPDHiCIoLq1mSU,17
+tree_readme-1.0.0.dist-info/RECORD,,
