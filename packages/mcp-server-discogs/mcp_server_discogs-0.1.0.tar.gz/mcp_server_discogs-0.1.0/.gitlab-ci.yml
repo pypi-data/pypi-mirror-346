@@ -1,0 +1,64 @@
+stages: 
+  - check
+  - test
+  - publish
+
+.base:check:
+  stage: check
+  image: ghcr.io/astral-sh/uv:python3.13-bookworm
+  only:
+    - main
+  before_script:
+    - uv venv
+    - uv sync
+
+.base:test:
+  stage: test
+  image: ghcr.io/astral-sh/uv:python3.13-bookworm
+  only:
+    - main
+  before_script:
+    - uv venv
+    - uv sync
+
+ruff:check:
+  extends:
+    - .base:check
+  script:
+    - uv run ruff check
+
+ruff:format:
+  extends:
+    - .base:check
+  script:
+    - uv run ruff format
+
+mypy:check:
+  extends:
+    - .base:check
+  script:
+    - uv run mypy .  --follow-untyped-imports # we need this as the discogs client doesn't offer stubs
+
+bandit:check:
+  extends:
+    - .base:check
+  script:
+    - uv run bandit -c pyproject.toml -r .
+
+pytest:run:
+  extends:
+    - .base:test
+  script:
+    - uv run pytest
+
+pypi:publish:
+  stage: publish
+  image: ghcr.io/astral-sh/uv:python3.13-bookworm
+  only:
+    - main
+  before_script:
+    - uv venv
+    - uv sync
+  script:
+    - uv build
+    - uv publish --username __token__ --password $PYPI_PASSWORD
