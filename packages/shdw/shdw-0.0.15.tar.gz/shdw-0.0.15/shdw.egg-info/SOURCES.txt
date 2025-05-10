@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+shdw/__init__.py
+shdw.egg-info/PKG-INFO
+shdw.egg-info/SOURCES.txt
+shdw.egg-info/dependency_links.txt
+shdw.egg-info/top_level.txt

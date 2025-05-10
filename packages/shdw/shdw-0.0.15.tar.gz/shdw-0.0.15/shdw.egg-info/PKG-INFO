@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: shdw
+Version: 0.0.15
+Summary: a package for random functions
+Home-page: https://github.com/shibby360/shdwdb
+Author: shibby360
+Author-email: shibby360 <shivank.chhaya@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/shibby360/shdw-pckg
+Requires-Python: >=3.8.18
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# The Shdw Package
+The Shdw Package was originally made for any useful/not useful functions. There may be a random function you need, just look to the Shdw package!
+## Packages used:
++ replit
++ pygame
++ pyfiglet
+## Other info
+If you are going to import the package, I would suggest importing it at the very start of your program before you do anything. This is becuase  
+A. I am importing pygame, and initializing it  
+B. I am `pip install`ing pyfiglet(I already have it clearing up the console for you)
+## Pygame Usage
+Use `init_pygame(width, height, title)` to create and return your window. Variables are below.
++ GUI -> pygame
++ GUI_events -> pygame.event
++ GUI_out -> pygame.draw
++ GUI_clock -> pygame.time
+## Replit Usage
