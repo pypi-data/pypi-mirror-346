@@ -1,0 +1,2 @@
+[console_scripts]
+screen-pilot-mcp = screen_pilot_mcp.server:main
