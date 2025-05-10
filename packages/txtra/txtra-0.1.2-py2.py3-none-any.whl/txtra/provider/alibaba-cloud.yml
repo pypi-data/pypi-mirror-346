@@ -1,0 +1,15 @@
+id: alibaba-cloud
+
+info:
+  name: Alibaba Cloud
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Analytics
+  references:
+    - https://www.alibabacloud.com/help/ssl-certificate/user-guide/verify-the-ownership-of-a-domain-name
+
+rule:
+  type: regex
+  regex:
+    - "aliyun-site-verification=(?P<token>[A-Za-z0-9\\-]+)"
+  params:
+    - token

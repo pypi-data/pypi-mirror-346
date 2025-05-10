@@ -1,0 +1,15 @@
+id: mailigen
+
+info:
+  name: mailigen
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Analytics
+  references:
+    - https://support.mailigen.com/user-account-management/email-authentication
+
+rule:
+  type: regex
+  regex:
+    - "mailigen-site-verification=(?P<token>[A-Za-z0-9]+)"
+  params:
+    - token

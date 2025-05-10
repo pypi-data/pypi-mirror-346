@@ -1,0 +1,16 @@
+id: globalsign
+
+info:
+  name: Global Sign
+  author: wild0ni0n
+  category: Certificate
+  references:
+    - https://support.globalsign.com/ssl/ssl-certificates-life-cycle/performing-domain-verification-dns-txt-record
+
+rule:
+  type: regex
+  regex:
+    - "_globalsign-domain-verification=(?P<token>[A-Za-z0-9.\\-_]+)"
+    - "globalsign-domain-verification=(?P<token>[A-Za-z0-9.\\-_]+)"
+  params:
+    - token

@@ -1,0 +1,15 @@
+id: yandex
+
+info:
+  name: Yandex
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Cloud
+  references:
+    - https://www.webnots.com/yandex-webmaster-tools/
+
+rule:
+  type: regex
+  regex:
+    - "yandex-verification=(?P<token>[A-Za-z0-9]+)"
+  params:
+    - token

@@ -1,0 +1,13 @@
+id: tinfosecurity
+
+info:
+  name: tinfoilsecurity
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Security
+
+rule:
+  type: regex
+  regex:
+    - "tinfoil-site-verification:\\s?(?P<token>[0-9a-f=]+)"
+  params:
+    - token

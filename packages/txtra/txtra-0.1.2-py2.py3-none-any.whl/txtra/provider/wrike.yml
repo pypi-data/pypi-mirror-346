@@ -1,0 +1,13 @@
+id: wrike
+
+info:
+  name: wrike
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Automation
+
+rule:
+  type: regex
+  regex:
+    - "wrike-verification=(?P<token>[A-Za-z0-9-]+)"
+  params:
+    - token

@@ -1,0 +1,15 @@
+id: zoho
+
+info:
+  name: Zoho Mail
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Mail
+  references:
+    - https://www.zoho.com/mail/help/adminconsole/domain-verification.html
+
+rule:
+  type: regex
+  regex:
+    - "zoho-verification=(?P<token>[A-Za-z0-9]+).zmverify.zoho.com"
+  params:
+    - token
