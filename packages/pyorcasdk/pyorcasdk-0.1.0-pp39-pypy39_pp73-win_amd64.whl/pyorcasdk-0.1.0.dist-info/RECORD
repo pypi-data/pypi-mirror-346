@@ -1,0 +1,9 @@
+pyorcasdk/__init__.py,sha256=D3A8OY3QuH_AA06xXZNgWK8VTMSzxHZiXZBR52O8efs,140
+pyorcasdk/_pyorcasdk.lib,sha256=FbdX__oIq2TIzvPffcU366gV5m54hcisHNcqr7Rd1JY,2146
+pyorcasdk/_pyorcasdk.pyi,sha256=M-ByvSA8wTurZGJ_MzurqRvJ_EZNHYlkeeY9c-C0brM,15145
+pyorcasdk/_pyorcasdk.pypy39-pp73-win_amd64.pyd,sha256=WK_CQ6tASu77jn4KT_50meBDvKKN8_EKhnXjybTfsIM,397312
+pyorcasdk/py.typed,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+pyorcasdk-0.1.0.dist-info/METADATA,sha256=yqKMqkUHrvyV-ETA6sKyDtKZSBuqEadtVTEDp_WqeeM,15008
+pyorcasdk-0.1.0.dist-info/WHEEL,sha256=TOP5uw5P6UM_8nLII-TWQdL0IIsvxiRvSSpsHxq1kKo,111
+pyorcasdk-0.1.0.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pyorcasdk-0.1.0.dist-info/RECORD,,
