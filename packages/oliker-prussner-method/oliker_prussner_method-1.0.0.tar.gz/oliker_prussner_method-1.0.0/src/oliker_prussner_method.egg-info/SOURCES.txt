@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/oliker_prussner_method/__init__.py
+src/oliker_prussner_method/core.py
+src/oliker_prussner_method/initialisation.py
+src/oliker_prussner_method/plotting.py
+src/oliker_prussner_method/triangulation.py
+src/oliker_prussner_method.egg-info/PKG-INFO
+src/oliker_prussner_method.egg-info/SOURCES.txt
+src/oliker_prussner_method.egg-info/dependency_links.txt
+src/oliker_prussner_method.egg-info/requires.txt
+src/oliker_prussner_method.egg-info/top_level.txt
