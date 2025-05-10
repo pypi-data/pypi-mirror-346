@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: jprint2
+Version: 0.1.1
+Summary: Simple json printer for python
+Author-email: Mark Lidenberg <marklidenberg@gmail.com>
+License: MIT
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Requires-Dist: jsons>=1.6.3
+Requires-Dist: pygments>=2.19.1
+Provides-Extra: dev
+Requires-Dist: better-exceptions>=0.3.3; extra == 'dev'
+Requires-Dist: build>=1.2.2.post1; extra == 'dev'
+Requires-Dist: load-dotenv>=0.1.0; extra == 'dev'
+Requires-Dist: questionary>=2.1.0; extra == 'dev'
+Requires-Dist: twine>=6.1.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# jprint2
+
+Print any object in JSON. Built on top of [jsons](https://github.com/ramonhagenaars/jsons) for formatting and [pygments](https://pygments.org/) for colorizing.
+
+## Basic usage 
+
+```python
+
+from jprint2 import jprint, jformat, set_defaults
+
+# - Print json
+
+jprint({"name": "Mark", "age": 30}) # {"name": "Mark", "age": 30}
+
+# - Keeps strings by default as is to preserve json objects
+
+jprint("Mark") # Mark
+jprint('{"name": "Mark"}') # {"name": "Mark"}
+jprint('{"name": "Mark"}', keep_strings=False)  # "{\"name\": \"Mark\"}"
+
+# - Set defaults of your liking
+
+set_defaults(
+	indent=2, 
+	sort_keys=True
+)
+
+# - Format json
+
+my_json_string = jformat({"name": "Mark", "age": 30})
+
+# - Override defaults
+
+jprint({"name": "🧙‍♂️", "age": 30}, ensure_ascii=True) # {"name": "\ud83e\uddd9\u200d\u2642\ufe0f", "age": 30}
+
+```
+
+![Example output](docs/jprint.png "Example output")
+
+## License
+
+MIT License
+
+## Author
+
+Mark Lidenberg [marklidenberg@gmail.com](mailto:marklidenberg@gmail.com)
