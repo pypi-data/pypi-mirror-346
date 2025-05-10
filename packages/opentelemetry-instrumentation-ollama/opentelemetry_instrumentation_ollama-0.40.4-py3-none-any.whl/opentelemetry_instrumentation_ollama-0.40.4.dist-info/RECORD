@@ -1,0 +1,8 @@
+opentelemetry/instrumentation/ollama/__init__.py,sha256=zjSOPkSh3a7-RitzWZ5L3dikuD27HQLNJ60C7mbv9mY,18297
+opentelemetry/instrumentation/ollama/config.py,sha256=CtypZov_ytI9nSrfN9lWnjcufbAR9sfkXRA0OstDEUw,42
+opentelemetry/instrumentation/ollama/utils.py,sha256=wjpvyaNnNvVKrFCKM2pdlFL-jX40oyAPP17JzGC4-v4,806
+opentelemetry/instrumentation/ollama/version.py,sha256=MY1Wn_juPkJXG_63ICNCEUkawVnX3JmgKvuQLuWvCn4,23
+opentelemetry_instrumentation_ollama-0.40.4.dist-info/METADATA,sha256=pRzKrd-v_0b5PioO2xscTo-FNphz8SGUji28bipWaSk,2160
+opentelemetry_instrumentation_ollama-0.40.4.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+opentelemetry_instrumentation_ollama-0.40.4.dist-info/entry_points.txt,sha256=kY_Qd6iidhJQo2ot9Idwp7d1ZkXM1Zy16sm9USRpmjw,93
+opentelemetry_instrumentation_ollama-0.40.4.dist-info/RECORD,,
