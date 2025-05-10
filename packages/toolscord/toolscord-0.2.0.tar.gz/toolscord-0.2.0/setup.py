@@ -1,0 +1,35 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="toolscord",
+    version="0.2.0",
+    packages=find_packages(),
+    install_requires=[],
+    author="ToolsCord",
+    author_email="toolscord.supp@gmail.com",
+    description="A customizable terminal UI toolkit with beautiful banners and colored logging",
+    long_description=open("README.md", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/bhaskarsaikia-17/toolscord",
+    project_urls={
+        "Bug Tracker": "https://github.com/bhaskarsaikia-17/toolscord/issues",
+        "Documentation": "https://github.com/bhaskarsaikia-17/toolscord",
+        "Source Code": "https://github.com/bhaskarsaikia-17/toolscord",
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Software Development :: User Interfaces",
+        "Intended Audience :: Developers",
+        "Development Status :: 4 - Beta",
+    ],
+    keywords="terminal, ui, banner, logger, colors, ansi, cli",
+    python_requires=">=3.6",
+) 
