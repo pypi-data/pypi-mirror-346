@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: music-bot.py
+Version: 1.0.1
+Summary: A Discord music bot using discord.py and yt-dlp
+Author: 앙 기모찌
+Author-email: igm12345677a@gmail.com
+Requires-Python: >=3.8
+Requires-Dist: discord.py==2.5.2
+Requires-Dist: yt-dlp==2025.4.30
+Requires-Dist: aiohttp==3.11.18
+Requires-Dist: PyNacl==1.5.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
