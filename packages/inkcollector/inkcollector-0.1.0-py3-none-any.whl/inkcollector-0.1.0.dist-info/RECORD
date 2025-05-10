@@ -1,0 +1,10 @@
+inkcollector/__init__.py,sha256=rnFaBi7NaAYD1J0CKXIqyDOSn7bGzbPeM6I-tJjL0MU,3639
+inkcollector/cli.py,sha256=KN3Jk7iHZTwpIwI1P-t6h_faIdV4U-V5okuXNCbfFGI,3462
+inkcollector/lorcast.py,sha256=8VYfVxHg3NIFqYLqbi0Kfm_owTSaVSurtJv-50RKHHE,3190
+inkcollector/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inkcollector/utils/log.py,sha256=Oi0L0lz1aEXkxmWvBT7Af0tYaZAvKn-kcfjk5vDl1lQ,1242
+inkcollector/utils/output.py,sha256=pxqHXBURxqYYAFWrx1Sqt6G74lbotwX66Bzf4ZkS0Z0,1870
+inkcollector-0.1.0.dist-info/METADATA,sha256=QRxdrNScw_Vv_xCLVvoA-5ggM7nl5Rs0MT0glQdVvAc,2486
+inkcollector-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+inkcollector-0.1.0.dist-info/entry_points.txt,sha256=Obj9NEjDhqUSBdOssKosYZymB4j5UXsVowaZY1R5SJY,55
+inkcollector-0.1.0.dist-info/RECORD,,
