@@ -1,0 +1,23 @@
+[project]
+name = "ceeteem"
+version = "0.0.3"
+description = "Token-aware Python lient for the Control-M Automation API"
+readme = "README.md"
+authors = [
+    { name = "coparaoji", email = "coparaoji@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.32.3",
+]
+license="GPL-3.0-or-later"
+license-files = ["LICENSE", "LICENSE-requests.txt"]
+
+[project.urls]
+Homepage="https://github.com/coparaoji/ceeteem"
+Docs="https://coparaoji.github.io/ceeteem"
+Issues="https://github.com/coparaoji/ceeteem/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
