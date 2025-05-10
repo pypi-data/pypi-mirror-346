@@ -1,0 +1,10 @@
+hiredis/version.py,sha256=14eImCCNxRh4pWMIfkKe4h5OCS1ICfRjHSj2AfgEXa0,22
+hiredis/__init__.py,sha256=PUFboxiWkggd_2f79ZD5JGkGmosdSpetKrjapxu8pus,243
+hiredis/hiredis.pyi,sha256=Kubxy45Emalzuvs-XwGN6MS_82tkeg6aYPqFu_xY0Uk,996
+hiredis/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hiredis/hiredis.cpython-39-darwin.so,sha256=uOGIg52gF5-DEx59GpI5xbQx3BnqKH_ZbA_1pWT2Vqk,242096
+hiredis-3.1.1.dist-info/RECORD,,
+hiredis-3.1.1.dist-info/WHEEL,sha256=p068Y9Hj6cND8I-X2sbgUeorLgn_e_9oCo4ZOIiseCw,113
+hiredis-3.1.1.dist-info/top_level.txt,sha256=P_zCKMUoKFNyPXKK3aYI6FeuETe2dcDLC1zsr3scogI,8
+hiredis-3.1.1.dist-info/METADATA,sha256=Lbi5XjEGsNKSI0aBwIZF3qZikuxfnmdVVcU34KOGR_Y,7484
+hiredis-3.1.1.dist-info/licenses/LICENSE,sha256=Mla1t36YqjT_MaTSwsEPfxd7DzBYdTpgREMKFomHNTs,1095
