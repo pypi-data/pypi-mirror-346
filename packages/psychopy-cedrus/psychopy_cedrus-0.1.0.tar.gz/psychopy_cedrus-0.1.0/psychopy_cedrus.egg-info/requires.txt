@@ -1,0 +1,10 @@
+pyxid2
+
+[docs]
+psychopy
+sphinx
+furo
+
+[tests]
+psychopy
+pytest

@@ -1,0 +1,93 @@
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "psychopy-cedrus"
+version = "0.1.0"
+description = "Extension package for PsychoPy which adds support for various hardware devices by the Cedrus Corporation."
+readme = "README.md"
+requires-python = ">= 3.7"
+license = { text = "GNU General Public License v3 (GPLv3)" }
+authors = [
+  { name = "Jon Peirce", email = "jon@opensceincetools.org" },
+  { name = "Matthew Cutone", email = "mcutone@opensceincetools.org" },
+  { name = "Todd Parsons", email = "todd@opensceincetools.org" },
+]
+classifiers = [
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+urls.homepage = "https://psychopy.github.io/psychopy-cedrus"
+urls.changelog = "https://github.com/psychopy/psychopy-cedrus/blob/main/CHANGELOG.txt"
+
+dependencies = [
+  "pyxid2"
+]
+
+[project.optional-dependencies]
+# dependencies for building the docs
+docs = [
+  "psychopy",
+  "sphinx",
+  "furo",
+]
+# dependencies for running the test suite
+tests = [
+  "psychopy",
+  "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["",]
+
+[tool.setuptools.package-data]
+"*" = ["*.png",]
+
+[project.entry-points."psychopy.experiment.components"]
+# old Component
+CedrusButtonBoxComponent = "psychopy_cedrus.components.cedrusBox:CedrusButtonBoxComponent"
+# button backends
+RBButtonBoxBackend = "psychopy_cedrus.components.rb:RBButtonBoxBackend"
+RipondaButtonBoxBackend = "psychopy_cedrus.components.riponda:RipondaButtonBoxBackend"
+StimTrackerButtonBoxBackend = "psychopy_cedrus.components.stimtracker:StimTrackerButtonBoxBackend"
+LuminaButtonBoxBackend = "psychopy_cedrus.components.lumina:LuminaButtonBoxBackend"
+# sound sensor backends
+RBSoundSensorBackend = "psychopy_cedrus.components.rb:RBSoundSensorBackend"
+RipondaSoundSensorBackend = "psychopy_cedrus.components.riponda:RipondaSoundSensorBackend"
+StimTrackerSoundSensorBackend = "psychopy_cedrus.components.stimtracker:StimTrackerSoundSensorBackend"
+# visual validator backends
+RBVisualValidatorBackend = "psychopy_cedrus.components.rb:RBVisualValidatorBackend"
+RipondaVisualValidatorBackend = "psychopy_cedrus.components.riponda:RipondaVisualValidatorBackend"
+StimTrackerVisualValidatorBackend = "psychopy_cedrus.components.stimtracker:StimTrackerVisualValidatorBackend"
+# audio validator backends
+RBAudioValidatorBackend = "psychopy_cedrus.components.rb:RBAudioValidatorBackend"
+RipondaAudioValidatorBackend = "psychopy_cedrus.components.riponda:RipondaAudioValidatorBackend"
+StimTrackerAudioValidatorBackend = "psychopy_cedrus.components.stimtracker:StimTrackerAudioValidatorBackend"
+
+[project.entry-points."psychopy.hardware.cedrus"]
+# RB series
+RBDevice = "psychopy_cedrus.rb:RBDevice"
+RBLightSensorGroup = "psychopy_cedrus.rb:RBLightSensorGroup"
+RBButtonGroup = "psychopy_cedrus.rb:RBButtonGroup"
+RBSoundSensor = "psychopy_cedrus.rb:RBSoundSensorGroup"
+# Riponda series
+RipondaDevice = "psychopy_cedrus.riponda:RipondaDevice"
+RipondaLightSensorGroup = "psychopy_cedrus.riponda:RipondaLightSensorGroup"
+RipondaButtonGroup = "psychopy_cedrus.riponda:RipondaButtonGroup"
+RipondaSoundSensor = "psychopy_cedrus.riponda:RipondaSoundSensorGroup"
+# Riponda series
+StimTrackerDevice = "psychopy_cedrus.stimtracker:StimTrackerDevice"
+StimTrackerLightSensorGroup = "psychopy_cedrus.stimtracker:StimTrackerLightSensorGroup"
+StimTrackerButtonGroup = "psychopy_cedrus.stimtracker:StimTrackerButtonGroup"
+StimTrackerSoundSensor = "psychopy_cedrus.stimtracker:StimTrackerSoundSensorGroup"
+# Lumina series
+LuminaDevice = "psychopy_cedrus.lumina:LuminaDevice"
+LuminaButtonGroup = "psychopy_cedrus.lumina:LuminaButtonGroup"

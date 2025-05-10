@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: psychopy-cedrus
+Version: 0.1.0
+Summary: Extension package for PsychoPy which adds support for various hardware devices by the Cedrus Corporation.
+Author-email: Jon Peirce <jon@opensceincetools.org>, Matthew Cutone <mcutone@opensceincetools.org>, Todd Parsons <todd@opensceincetools.org>
+License: GNU General Public License v3 (GPLv3)
+Project-URL: homepage, https://psychopy.github.io/psychopy-cedrus
+Project-URL: changelog, https://github.com/psychopy/psychopy-cedrus/blob/main/CHANGELOG.txt
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyxid2
+Provides-Extra: docs
+Requires-Dist: psychopy; extra == "docs"
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+Provides-Extra: tests
+Requires-Dist: psychopy; extra == "tests"
+Requires-Dist: pytest; extra == "tests"
+Dynamic: license-file
+
+# psychopy-cedrus
+Extension package for PsychoPy which adds support for various hardware devices by the 
+[Cedrus Corporation](https://cedrus.com/index.htm).
+
+## Supported Devices
+
+Installing this package alongside PsychoPy will enable support for the following devices:
+
+* RB730 Response Pads
+    
+## Installing
+
+Install this package with the following shell command:: 
+
+    pip install psychopy-cedrus
+
+You may also use PsychoPy's builtin package manager to install this package.
+
+## Usage
+
+Once the package is installed, PsychoPy will automatically load it when started and make objects available within the
+`psychopy.hardware.cedrus` namespace.
+
