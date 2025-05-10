@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "envchain-python"
+version = "0.1.6"
+description = ""
+authors = ["Teddy Xinyuan Chen <45612704+tddschn@users.noreply.github.com>"]
+readme = "README.md"
+# license = "MIT"
+homepage = "https://github.com/tddschn/envchain-python"
+repository = "https://github.com/tddschn/envchain-python"
+classifiers = ["Topic :: Utilities"]
+keywords = [""]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/tddschn/envchain-python/issues"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
