@@ -1,0 +1,6 @@
+include README
+include LICENSE
+include requirements.txt
+recursive-include pyemittance/configs *json
+include versioneer.py
+include pyemittance/_version.py

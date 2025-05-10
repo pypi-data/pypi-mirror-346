@@ -1,0 +1,4 @@
+matplotlib
+numpy
+pyepics
+scipy
