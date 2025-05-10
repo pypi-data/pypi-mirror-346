@@ -1,0 +1,22 @@
+{
+    "config": {
+        "error": {
+            "invalid_auth": "Hiteles\u00edt\u00e9s sikertelen: Ez t\u00f6rt\u00e9nhet visszavont hozz\u00e1f\u00e9r\u00e9s vagy helytelen hiteles\u00edt\u0151 adatok miatt"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "possible_error": {
+                "name": "Lehets\u00e9ges hiba"
+            }
+        },
+        "sensor": {
+            "age": {
+                "name": "Adatok kora"
+            },
+            "balance": {
+                "name": "Egyenleg"
+            }
+        }
+    }
+}

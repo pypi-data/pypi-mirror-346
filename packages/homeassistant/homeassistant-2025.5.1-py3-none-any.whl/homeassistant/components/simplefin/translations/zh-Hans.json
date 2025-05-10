@@ -1,0 +1,22 @@
+{
+    "config": {
+        "error": {
+            "invalid_auth": "\u8eab\u4efd\u9a8c\u8bc1\u5931\u8d25\uff1a\u8fd9\u53ef\u80fd\u662f\u7531\u4e8e\u64a4\u9500\u4e86\u8bbf\u95ee\u6743\u9650\u6216\u51ed\u636e\u4e0d\u6b63\u786e"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "possible_error": {
+                "name": "\u53ef\u80fd\u7684\u9519\u8bef"
+            }
+        },
+        "sensor": {
+            "age": {
+                "name": "\u53d6\u6570\u636e\u65f6\u95f4"
+            },
+            "balance": {
+                "name": "\u4f59\u91cf"
+            }
+        }
+    }
+}
