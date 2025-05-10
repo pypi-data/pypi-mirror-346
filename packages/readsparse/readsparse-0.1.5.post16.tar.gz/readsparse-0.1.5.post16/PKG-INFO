@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: readsparse
+Version: 0.1.5.post16
+Summary: Read and Write Sparse Matrices in Text Format
+Home-page: https://github.com/david-cortes/readsparse
+Author: David Cortes
+Keywords: sparse,svmlight,libsvm
+License-File: LICENSE
