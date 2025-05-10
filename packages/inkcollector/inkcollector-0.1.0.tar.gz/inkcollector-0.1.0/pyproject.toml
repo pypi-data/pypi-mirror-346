@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "inkcollector"
+version = "0.1.0"
+dependencies = [
+  "click>=8.1.8",
+  "requests>=2.32.3"
+]
+requires-python = ">=3.9"
+authors = [
+    { name = "Bert Cafecito", email = "your-email@example.com" }
+]
+description = "Inkcollector is a CLI tool for collecting data about the disney lorcana trading card game."
+readme = "README.rst"
+license = "MIT"
+license-files = ["LICEN[CS]E.*"]
+keywords = ["disney", "lorcana"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://bertcafecito.github.io/inkcollector/"
+Documentation = "https://bertcafecito.github.io/inkcollector/"
+Repository = "https://github.com/bertcafecito/inkcollector"
+"Bug Tracker" = "https://github.com/bertcafecito/inkcollector/issues"
+Changelog = "https://github.com/bertcafecito/inkcollector/blob/main/CHANGELOG.md"
+
+[project.scripts]
+inkcollector = "inkcollector.cli:main"
