@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: gazooresearchutils
+Version: 1.8.2
+Summary: Analysis of GazooResearch Data
+Home-page: https://gazooresearch.com/
+Author: Andrew Lim MD, Megan Lim MD, Christopher Lim MD, Robert Lim MD
+Requires-Python: >=3.10

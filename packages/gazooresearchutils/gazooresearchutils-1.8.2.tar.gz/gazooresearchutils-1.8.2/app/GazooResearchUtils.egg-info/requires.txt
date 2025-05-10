@@ -1,0 +1,2 @@
+lifelines>=0.28.0
+pandas>=2.1.0
