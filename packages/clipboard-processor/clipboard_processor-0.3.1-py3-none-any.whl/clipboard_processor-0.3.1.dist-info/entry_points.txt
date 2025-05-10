@@ -1,0 +1,2 @@
+[console_scripts]
+clipboard-processor = clipboard_processor.cli:main
