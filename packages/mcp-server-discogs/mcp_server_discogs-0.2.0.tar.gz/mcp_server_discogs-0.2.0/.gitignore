@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# mypy, ruff and pytest generated files
+.mypy_cache
+.ruff_cache
+.pytest_cache
+.coverage
+
+# Personal Playground
+playground.py
+
+# OS generated files
+.DS_Store
+
+# Editor generated files
+.vscode
