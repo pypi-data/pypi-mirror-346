@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: PyIntelligence
+Version: 1.0.0
+Summary: A light-weight and efficient modular feedforward neural network library
+Author: Vietthedev
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy>=2.0.2
+Requires-Dist: matplotlib>=3.10.0
+Dynamic: license-file
+
+# PyIntelligence
+
+A light-weight, efficient, NumPy-based feedforward neural network library for learning and experimentation.
+
+## Install
+
+```bash
+pip install -e .
