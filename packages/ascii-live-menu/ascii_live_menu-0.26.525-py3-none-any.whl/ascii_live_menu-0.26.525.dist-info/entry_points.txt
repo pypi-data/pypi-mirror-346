@@ -1,0 +1,2 @@
+[console_scripts]
+ascii_menu = ascii_live_menu.main:menu
