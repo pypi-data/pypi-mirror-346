@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -eu
+
+hatch test --all
+hatch run test-minimal:run
+hatch run test-snapshot:run

@@ -1,0 +1,101 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "clipboard-processor"
+dynamic = ["version"]
+description = 'Process clipboard content and show helpful overlays or notifications based on the content, e.g. parse UNIX timestamps, AWS account IDs, VINs, base64 strings and more.'
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = []
+authors = [
+    { name = "Thomas Reifenberger", email = "tom-mi@users.noreply.github.com" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "pyperclip>=1.9.0",
+]
+[project.optional-dependencies]
+cron = [
+    "cron-descriptor"
+]
+jwt = [
+    "pyjwt[crypto]",
+]
+vin = [
+    "vininfo",
+]
+oui = [
+    "netaddr",
+]
+ulid = [
+    "python-ulid",
+]
+notify = [
+    "desktop-notifier",
+]
+all = [
+    "clipboard-processor[cron,jwt,vin,oui,ulid,notify]",
+]
+[project.urls]
+Homepage = "https://github.com/tom-mi/clipboard-processor"
+Repository = "https://github.com/tom-mi/clipboard-processor.git"
+Issues = "https://github.com/tom-mi/clipboard-processor/issues"
+
+[project.scripts]
+clipboard-processor = "clipboard_processor.cli:main"
+
+[tool.hatch.envs.default]
+python = "3.13"
+dependencies = [
+    "pytest",
+    "pytest-image-snapshot[pixelmatch]",
+]
+features = [
+    "all",
+]
+
+[tool.hatch.envs.dev]
+extra-dependencies = [
+    "python-dbusmock",
+]
+path = ".venv"
+
+[tool.hatch.envs.hatch-test]
+extra-args = ["--strict-markers", "--suite", "full"]
+dependencies = [
+    "pytest",
+    "pytest-image-snapshot[pixelmatch]",
+    "python-dbusmock; python_version == '3.13'",
+]
+features = [
+    "all"
+]
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.9", "3.10", "3.11", "3.12", "3.13"]
+
+[tool.hatch.envs.test-minimal]
+features = []
+
+[tool.hatch.envs.test-minimal.scripts]
+run = "pytest --strict-markers --suite minimal"
+
+[tool.hatch.envs.test-snapshot.scripts]
+run = "xvfb-run -a -s '-screen 0 320x240x24' pytest --strict-markers --suite snapshot --image-snapshot-save-diff"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/clipboard_processor/_version.py"

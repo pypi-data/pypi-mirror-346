@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  release:
+    types: [ published ]
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    environment: release
+    permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
+
+    steps:
+      - name: Install packages
+        run: sudo apt-get install xclip libdbus-1-dev libdbus-glib-1-dev
+      - name: Install Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/checkout@v4
+      - name: Install Hatch
+        uses: pypa/hatch@a3c83ab3d481fbc2dc91dd0088628817488dd1d5
+      - name: Run tests
+        run: xvfb-run -a -w 1 hatch test --all
+      - name: Run tests for minimal installation
+        run: xvfb-run -a -w 1 hatch run test-minimal:run
+      - name: Run snapshot tests
+        run: hatch run test-snapshot:run # already runs in xvfb
+      - name: Upload screenshots from snapshot tests
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: snapshots
+          path: tests/snapshots
+      - name: Build
+        run: hatch build
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1

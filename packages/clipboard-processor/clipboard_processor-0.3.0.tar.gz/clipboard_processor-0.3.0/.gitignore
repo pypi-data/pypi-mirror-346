@@ -1,0 +1,7 @@
+.idea
+*.pyc
+__pycache__
+/dist/
+/src/clipboard_processor/_version.py
+/tests/snapshots/*.diff.png
+/tests/snapshots/*.new.png
