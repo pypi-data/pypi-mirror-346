@@ -1,0 +1,23 @@
+name: taxcalc-dev
+channels:
+  - conda-forge
+dependencies:
+- "python>=3.10, <3.13"
+- "numpy>=1.26"
+- "pandas>=2.2"
+- "bokeh>=3.7"
+- numba
+- curl
+- setuptools
+- pytest
+- pytest-xdist
+- pycodestyle
+- pylint
+- coverage
+- behresp
+- openpyxl
+- pip
+- pip:
+    - jupyter-book
+    - "marshmallow>=3.22, <4.0"  # TODO: drop this after ParamTools is fixed
+    - "paramtools>=0.19.0"       # TODO: bump version after ParamTools is fixed
