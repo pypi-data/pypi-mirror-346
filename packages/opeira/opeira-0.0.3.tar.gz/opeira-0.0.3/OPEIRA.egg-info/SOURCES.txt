@@ -1,0 +1,6 @@
+README.md
+setup.py
+OPEIRA.egg-info/PKG-INFO
+OPEIRA.egg-info/SOURCES.txt
+OPEIRA.egg-info/dependency_links.txt
+OPEIRA.egg-info/top_level.txt
