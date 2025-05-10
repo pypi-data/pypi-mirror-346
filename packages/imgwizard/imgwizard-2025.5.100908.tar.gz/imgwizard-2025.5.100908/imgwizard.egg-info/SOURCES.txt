@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+imgwizard/__init__.py
+imgwizard/core.py
+imgwizard.egg-info/PKG-INFO
+imgwizard.egg-info/SOURCES.txt
+imgwizard.egg-info/dependency_links.txt
+imgwizard.egg-info/requires.txt
+imgwizard.egg-info/top_level.txt
+tests/__init__.py
+tests/test_core.py
