@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+strict_no_cover/__init__.py
+strict_no_cover/__main__.py
+strict_no_cover.egg-info/PKG-INFO
+strict_no_cover.egg-info/SOURCES.txt
+strict_no_cover.egg-info/dependency_links.txt
+strict_no_cover.egg-info/entry_points.txt
+strict_no_cover.egg-info/requires.txt
+strict_no_cover.egg-info/top_level.txt
