@@ -1,0 +1,105 @@
+Metadata-Version: 2.4
+Name: qchat
+Version: 0.1.0
+Summary: QT6-based Chat UI DevKit with command decorators
+Author: Junfeng Geng
+License: MIT
+Project-URL: Homepage, https://github.com/junfenggeng/qchat
+Project-URL: Documentation, https://github.com/junfenggeng/qchat#readme
+Project-URL: Issues, https://github.com/junfenggeng/qchat/issues
+Project-URL: Source, https://github.com/junfenggeng/qchat
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PySide6>=6.0.0
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Dynamic: license-file
+
+# QChat
+
+QChat is a Python framework for building chat interfaces with QT6, featuring command decorators and automatic type conversion.
+
+![QChat Screenshot](img/qchat_screenshot.png)
+
+## Features
+
+- 🎨 **QT6-based UI**: Modern, customizable chat interface
+- ✨ **Command Decorators**: Easily turn functions into chat commands
+- 🔄 **Auto Type Conversion**: Automatic argument type conversion
+- 📚 **Built-in Help**: Auto-generated help system
+- 🚀 **Lightweight**: Minimal dependencies
+
+## A Simple Example
+
+```python
+import qchat
+
+@qchat.command("greet")
+def greet(name: str):
+    """Greet a user"""
+    return f"Hello, {name}!"
+
+if __name__ == "__main__":
+    qchat.run()
+
+```
+
+## Installation
+
+### Prerequisites
+
+- Python 3.8+
+- pip
+
+### Setup
+
+```bash
+pip install qchat
+```
+
+## Advanced Features
+Type Conversion:
+
+```python
+@qchat.command("add")
+def add_numbers(a: int, b: int):
+    """Add two numbers"""
+    return f"Result: {a + b}"
+```
+
+Variable Arguments:
+
+```python
+@qchat.command("echo")
+def echo_message(*args):
+    """Echo back the input"""
+    return " ".join(args)
+```
+
+## Hacking on QChat
+
+install pyside6 with the following command:
+
+```bash
+pip install pyside6
+```
+
+update the ui file and convert it to python code with the following command:
+
+```bash
+pyside6-uic.exe .\main_window.ui -o .\main_window.py
+```
+
+### License
+MIT License. See LICENSE for details.

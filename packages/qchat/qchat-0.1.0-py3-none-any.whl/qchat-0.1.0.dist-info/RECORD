@@ -1,0 +1,9 @@
+qchat/__init__.py,sha256=-D_bMwZe_hv-gtsUvE7zwJj723LLyCjQdBLq0LEAw3w,81
+qchat/command.py,sha256=zLv3kqlspFFdXi4rgvEvihlbdRBmlQn7zuafyYkFsxY,3040
+qchat/main.py,sha256=p_k7Z1ErcGBfDrxo9BkCo4Sbfzgt-yemuwqVJXoKfg4,1243
+qchat/main_window.py,sha256=FB09RI7tiRtycQClKbiqNJ9tMq7hslZmHpsh9cNPECA,6379
+qchat-0.1.0.dist-info/licenses/LICENSE,sha256=veh86cUNqoSvBOwbfNElJ6_XTvIaE6grzwsroh8y-UA,1090
+qchat-0.1.0.dist-info/METADATA,sha256=DaMU51S3eiDKgreJPPYzO4aPZFBIAg0E_SjGFchkv00,2546
+qchat-0.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+qchat-0.1.0.dist-info/top_level.txt,sha256=sKVyEQnJP4EpOuJaTwAlmwBtTvt30fNoMu-gFv22Nfs,6
+qchat-0.1.0.dist-info/RECORD,,
