@@ -1,0 +1,2 @@
+[pylsp]
+signature = pylsp_ruff_signature
