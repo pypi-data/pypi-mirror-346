@@ -1,0 +1,12 @@
+trame
+trame-common
+
+[dev]
+pre-commit
+ruff
+pytest
+pytest-asyncio
+trame-client[test]
+
+[vtk]
+vtk<9.5,>=9.4
