@@ -1,0 +1,10 @@
+empressia_sqlalchemy_h2/CompatibilityMode.py,sha256=wcJpqMPq_hN26tZ7scz4r7UDyqGPMUzHjkFhGHDeCoc,380
+empressia_sqlalchemy_h2/H2Dialect.py,sha256=xe6h8AxYgHpqdKjGkGl8DGyxAGPUiUYP6V9VFxBL2ow,17631
+empressia_sqlalchemy_h2/H2DialectException.py,sha256=Nlc2xhlkcYr6qz9DQOYpsAfHMUZhsPrY4d8WZlnNTS8,97
+empressia_sqlalchemy_h2/__init__.py,sha256=sf716hPC094CNm-Xp-W9WuhQ0R1nj9wz7Eb1eeFaFrU,246
+empressia_sqlalchemy_h2/test/Utilities.py,sha256=u06YbmvyRRmna2p02ewtk6n2vRwBQinSck-H7e_u2jk,1754
+empressia_sqlalchemy_h2/test/__init__.py,sha256=foofFtUKo_gH6PXMgpTp_x5WmXY1nX6ALt8_kzQr-d8,27
+empressia_sqlalchemy_h2-1.0.1.dist-info/METADATA,sha256=Zc5DSvnFOVKnhHH_lZgS58eKikV71ujgn6mAar1p-Bw,3543
+empressia_sqlalchemy_h2-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+empressia_sqlalchemy_h2-1.0.1.dist-info/licenses/LICENSE.txt,sha256=ovL5nrLFmHJlSXf-ZCKJANFTvqTq6b5_hw5nxgpdmaY,1078
+empressia_sqlalchemy_h2-1.0.1.dist-info/RECORD,,
