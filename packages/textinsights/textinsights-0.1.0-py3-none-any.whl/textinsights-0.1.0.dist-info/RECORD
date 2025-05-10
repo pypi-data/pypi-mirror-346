@@ -1,0 +1,12 @@
+tests/__init__.py,sha256=iXDEfzt1bU6r1BUq2SP0aPxigWP0Ia7Y9z3huqFxxFs,91
+tests/test_analyzer.py,sha256=8LVTFVdabYvmROuZeTJAikBUi_1x61AodoBPl_GvC6Q,6215
+tests/test_stats.py,sha256=lZKVOYCEOoUGByrct-jhvOXLuEqfS_pMudUh5P1N-10,10535
+textinsights/__init__.py,sha256=ixjmFE11SQ9H6a9f1RZwdVhdBn9RsaTs7NwLhwqpSkk,409
+textinsights/analyzer.py,sha256=ApnTYsTfGwlpjIL_OJGrwxutA-uoS2T83HK8S3CRsvs,1452
+textinsights/stats.py,sha256=uCYlSM2krJi2pq8wnamtU4aHbC7YO_DDnoUNI1SnlWg,1993
+textinsights/visualizer.py,sha256=iXDEfzt1bU6r1BUq2SP0aPxigWP0Ia7Y9z3huqFxxFs,91
+textinsights-0.1.0.dist-info/licenses/LICENSE,sha256=d3Rka0zeq6YKvIXjcYXn7pThTI_-NjFzqMBXrOAaJsk,1083
+textinsights-0.1.0.dist-info/METADATA,sha256=eXDQKvaAkx954y9Qg73fZ5JewdYWEyhCTSc3jOMMLI4,6097
+textinsights-0.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+textinsights-0.1.0.dist-info/top_level.txt,sha256=Py0w7zeD2nZAyqS-yXXqt98b-6dWc1eE2fVtHIK-uaY,19
+textinsights-0.1.0.dist-info/RECORD,,
