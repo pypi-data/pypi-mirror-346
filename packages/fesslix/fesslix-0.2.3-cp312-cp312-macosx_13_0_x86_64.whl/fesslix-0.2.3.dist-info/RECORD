@@ -1,0 +1,11 @@
+fesslix-0.2.3.dist-info/RECORD,,
+fesslix-0.2.3.dist-info/WHEEL,sha256=xt6Z2l33Yx4TjxvfIbCsHQ_wbvxaPjGqF1Ahd7IeZDE,142
+fesslix-0.2.3.dist-info/METADATA,sha256=_53b40hWzzib2zCY9Vtg5ptPDm4OzkXBeLf8sRTimCQ,42458
+fesslix-0.2.3.dist-info/licenses/LICENSE,sha256=CuBIWlvTemPmNgNZZBfk6w5lMzT6bH-TLKOg6F1K8ic,35148
+fesslix/model_templates.py,sha256=M7CtZzfZMOdLqtCMGo7d83sP33Bis4wD6Ebye2Q350E,1761
+fesslix/gausspoints.dat,sha256=gtWP-cwc0VOyoFPcABi9xrYel4FG7Sw2RkWEmbIy6fw,42364
+fesslix/plot.py,sha256=dz3OY0dyllDocTsghrOI0i2WsYiudtm-0letiip-0MU,7530
+fesslix/tools.py,sha256=ypl1uxn0gEwCFXLyetp7wjSNmZK5B88E0GAUF6FNpp4,29052
+fesslix/core.cpython-312-darwin.so,sha256=zIh_XM_01aG5B--XMC3PxGZjYbpxj98rJ5GY9fftkM0,436256
+fesslix/__init__.py,sha256=-YX2E0OHRhj_kXv1KV3x-VfT8z4rO3vdAyG6SbpvUQs,2461
+fesslix/libflxlib.dylib,sha256=qP81KGgp9VA-Z031Kp7XSw7WFjmQbJme-W6X6Lb4MEo,3655040
