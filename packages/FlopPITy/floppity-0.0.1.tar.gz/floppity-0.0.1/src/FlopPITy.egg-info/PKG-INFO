@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: FlopPITy
+Version: 0.0.1
+Summary: normalising Flow exoPlanet Parameter Inference Toolkyt
+Author-email: Francisco Ardevol Martinez <68873290+franciscoardevolmartinez@users.noreply.github.com>
+License-Expression: BSD-3-Clause
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sbi
+Requires-Dist: subprocess
+Requires-Dist: corner
+Requires-Dist: multiprocessing
+Requires-Dist: cloudpickle
+Dynamic: license-file
+
+This is a code to perform retrievals on spectra of substellar objects using 
+SNPE-C (citation) and neural spline flows (citation).
+
+- Known issues:
+    - installing sbi needs blas first
+        - conda install blas works, but goes down to python 3.9.22
