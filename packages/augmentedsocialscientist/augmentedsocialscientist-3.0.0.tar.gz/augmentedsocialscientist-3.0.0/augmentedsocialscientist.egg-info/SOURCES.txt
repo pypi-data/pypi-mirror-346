@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+augmentedsocialscientist/__init__.py
+augmentedsocialscientist/bert_abc.py
+augmentedsocialscientist/bert_base.py
+augmentedsocialscientist/models.py
+augmentedsocialscientist.egg-info/PKG-INFO
+augmentedsocialscientist.egg-info/SOURCES.txt
+augmentedsocialscientist.egg-info/dependency_links.txt
+augmentedsocialscientist.egg-info/not-zip-safe
+augmentedsocialscientist.egg-info/requires.txt
+augmentedsocialscientist.egg-info/top_level.txt
