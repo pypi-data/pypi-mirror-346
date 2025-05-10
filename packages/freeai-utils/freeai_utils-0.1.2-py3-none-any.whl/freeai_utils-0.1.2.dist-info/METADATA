@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: freeai-utils
+Version: 0.1.2
+Summary: A free, zero-config AI utility toolkit with voice, text, image, and web integrations
+Author-email: truongbaan <truongbaansoftware@gmail.com>
+License: MIT
+Requires-Python: >=3.9.13
+Description-Content-Type: text/markdown
+Requires-Dist: pyaudio
+Requires-Dist: numpy
+Requires-Dist: keyboard
+Requires-Dist: lameenc
+Requires-Dist: openai-whisper
+Requires-Dist: soundfile
+Requires-Dist: librosa
+Requires-Dist: torch
+Requires-Dist: google-generativeai
+Requires-Dist: pyperclip
+Requires-Dist: python-dotenv
+Requires-Dist: googlesearch-python
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: readability-lxml
+Requires-Dist: transformers
+Requires-Dist: Pillow
+Requires-Dist: langdetect
+Requires-Dist: pyautogui
+Requires-Dist: easyocr
+Requires-Dist: gTTS
+Requires-Dist: playsound==1.2.2
+Requires-Dist: pyttsx3
+
+# freeai-utils
+
+A lightweight collection of Python utility functions that can be installed directly using `pip` — no external `.exe` downloads or complicated setups required. This library trades some accuracy for ease of implementation. It's designed for developers who prefer quick functionality over manual setup. Just call the functions — they’ll handle the rest.
+
+## Features
+
+* **Audio recording**: Save recordings as `.wav` or `.mp3`
+* **Speech-to-text**: Convert audio to text using Whisper
+* **Text-to-speech**: Convert text into spoken audio
+* **Image captioning**: Generate descriptions for images
+* **OCR (Optical Character Recognition)**: Extract text from images using EasyOCR
+* **Gemini API**: Interact with Google Cloud Gemini models via your API key
+
+  * *Note: This works best with Google accounts that have no billing method added yet (completely free to use with limits).*
+
+## Installation
+
+```bash
+pip install freeai-utils
+```
+
+> No need to install extra executables or clone large repositories — everything works out of the box with `pip`.
+
+## Guide
+
+> This will be updated later :)
+
+## Inspiration
+
+This project was inspired by the GitHub repository:
+[awesome-python](https://github.com/vinta/awesome-python)
