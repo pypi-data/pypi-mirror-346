@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling",]
+build-backend = "hatchling.build"
+
+[project]
+name = "ContactExtractor"
+version = "1.0.0"
+dependencies = [
+  "scipy",
+]
+authors = [
+  { name="Eugene F. Baulin", email="efbaulin@gmail.com" },
+]
+maintainers = [
+  { name="Eugene F. Baulin", email="efbaulin@gmail.com" },
+]
+description = "Contact Extractor from PDB/mmCIF coordinate files"
+readme = "src/ContactExtractor/README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[project.urls]
+Homepage = "https://github.com/febos/ContExt"
+Issues = "https://github.com/febos/ContExt/issues"
+
+[project.scripts]
+context = "ContactExtractor:Main"
+Context = "ContactExtractor:Main"
+ContExt = "ContactExtractor:Main"
+contExt = "ContactExtractor:Main"
+CONTEXT = "ContactExtractor:Main"
