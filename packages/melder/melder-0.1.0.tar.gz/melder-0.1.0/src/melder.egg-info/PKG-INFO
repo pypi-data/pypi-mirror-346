@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: melder
+Version: 0.1.0
+Summary: Lightweight, high-performance dependency injection container for Python 3.13+ applications.
+Author-email: Mark Geleta <SynapticAISystems@gmail.com>
+Maintainer-email: Mark Geleta <SynapticAISystems@gmail.com>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/Synaptic724/melder
+Project-URL: Repository, https://github.com/Synaptic724/melder
+Project-URL: Issues, https://github.com/Synaptic724/melder/issues
+Project-URL: Documentation, https://github.com/Synaptic724/melder
+Project-URL: LinkedIn, https://www.linkedin.com/in/mark-geleta-4b59b752/
+Keywords: dependency injection,DI container,service container,dependency management,python di,dependency injection container,lightweight di,scoped services,singleton services,service resolution,melder
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Environment :: Console
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Dynamic: license-file
+
+This is a placeholder
+---
+
+## 📖 Documentation
+
+- Coming soon: [Melder Documentation](https://github.com/Synaptic724/melder)
+
+---
+
+## 📝 License
+
+Melder is licensed under the [Apache 2.0 License](LICENSE).
+
+---
+
+## 🤝 Contributing
+
+Melder is currently developed as a **solo project** and is **not open to external contributions** at this time.
+
+Bug reports and feature suggestions are welcome via [issues](https://github.com/Synaptic724/melder/issues),  
+but pull requests will not be accepted.
+
+Thank you for respecting the creative direction of the project.
+
+---
+
+## 🧠 About
+
+Melder is developed and maintained by [Mark Geleta](https://github.com/Synaptic724).  
+Built for developers who value **clarity**, **performance**, and **control**.
+
+---

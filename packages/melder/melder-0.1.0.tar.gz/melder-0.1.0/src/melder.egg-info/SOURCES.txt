@@ -1,0 +1,9 @@
+LICENSE
+NOTICE
+README.md
+pyproject.toml
+src/melder/melder.py
+src/melder.egg-info/PKG-INFO
+src/melder.egg-info/SOURCES.txt
+src/melder.egg-info/dependency_links.txt
+src/melder.egg-info/top_level.txt
