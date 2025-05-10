@@ -1,0 +1,13 @@
+README.md
+setup.py
+eeg_toolbox/__init__.py
+eeg_toolbox/detection.py
+eeg_toolbox/fourier_of_data.py
+eeg_toolbox/load.py
+eeg_toolbox/processing.py
+eeg_toolbox/visual.py
+eeg_toolbox.egg-info/PKG-INFO
+eeg_toolbox.egg-info/SOURCES.txt
+eeg_toolbox.egg-info/dependency_links.txt
+eeg_toolbox.egg-info/requires.txt
+eeg_toolbox.egg-info/top_level.txt
