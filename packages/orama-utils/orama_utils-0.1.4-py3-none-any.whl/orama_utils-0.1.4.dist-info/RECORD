@@ -1,0 +1,10 @@
+orama_utils/__init__.py,sha256=uxD4f4LbAdNGBODCc7a2k3GJ1PtgxPeLVntlb2SWMzw,310
+orama_utils/date_features.py,sha256=yiN077vY4MClFZpe7SfUpiRAqRJdhE6-LuSeB_ROSvw,6266
+orama_utils/holiday_features.py,sha256=B_NanictyeEm3m_CXySwWGjawTYYXv2C2GWtmZQ3Be0,10473
+orama_utils/db/__init__.py,sha256=cAT6YPB7Tn_kQ2-eC6oOFhUykJq7c5Nsnd6WAyOV6u0,93
+orama_utils/db/spain_holidays.csv,sha256=k4aJtd7DcIzfYXK_V7uL_3pL3Pq2yjCsV8G4MQh96kY,22025
+orama_utils-0.1.4.dist-info/licenses/LICENSE,sha256=6ClG7_OO8WoDIXMNjxAaKMbsl-vvUvnEVIbGpPQIliE,1093
+orama_utils-0.1.4.dist-info/METADATA,sha256=ti0TtpCIGE4Yz5lw_iTyKZtzEep4AQFrTudUupRgrzo,7180
+orama_utils-0.1.4.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+orama_utils-0.1.4.dist-info/top_level.txt,sha256=8QsVHlIlG-tE-VsM_7hQUovUJ4qCsOo4bY1qIRrf6Js,12
+orama_utils-0.1.4.dist-info/RECORD,,
