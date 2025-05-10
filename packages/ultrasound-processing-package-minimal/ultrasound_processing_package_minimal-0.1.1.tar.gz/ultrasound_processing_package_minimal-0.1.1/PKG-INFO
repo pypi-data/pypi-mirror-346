@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: ultrasound_processing_package_minimal
+Version: 0.1.1
+Summary: Ultrahangos képfeldolgozó Python csomag (minimal változat)
+Author-email: Mart <mart@example.com>
+Project-URL: Homepage, https://github.com/Mart-SciecPyt/ultrasound-processing-minimal
+Project-URL: Documentation, https://ultrasound-processing-minimal.readthedocs.io
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python
+Requires-Dist: Pillow
+Requires-Dist: scipy
+
+# Ultrasound Processing Package (Minimal)
+
+Python csomag ultrahangos képek feldolgozásához – minimal változat.  
+Ez a csomag az alapvető feldolgozási funkciókat tartalmazza, mint a maszkolás, leképezés és képtranszformáció.
+
+## 🔧 Telepítés
+
+```
+pip install ultrasound-processing-package-minimal
+```
+
+## 📦 Modulok
+
+- `mask` – maszkolás és zajszűrés
+- `interp` – térbeli leképezés és interpoláció
+- `transform` – íves → sík képtranszformáció
+
+## 📘 Dokumentáció
+
+Részletes példa- és API-leírás:  
+👉 [https://ultrasound-processing-minimal.readthedocs.io](https://ultrasound-processing-minimal.readthedocs.io)
+
+## 💡 Példa használatra
+
+```python
+from ultrasound_processing_package_minimal import mask
+
+# Példa futtatás
+cleaned_img = mask.apply_noise_filter(image)
+```
+
+## ⚖️ Licenc
+
+MIT License – Szabadon használható, módosítható, publikálható.
