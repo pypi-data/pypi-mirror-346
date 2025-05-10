@@ -1,0 +1,11 @@
+c2pa/__init__.py,sha256=PAZMX_y67P38kEaasADT7lZk9oHamCdgxlRjOcYQDzM,1298
+c2pa/c2pa/__init__.py,sha256=onzk3sdIojlhpxm1PsmECgl0CBOgc6jxNuVQGDV1_MI,28
+c2pa/c2pa/c2pa.py,sha256=wM47RUJcKcSZQ60TH91HvlWrI3PKUoFOPAiksg_T9_M,86499
+c2pa/c2pa/uniffi_c2pa.dll,sha256=1zaiSi4jTFq4cgI01CRv1IyujHIyf7ZT54H4KA_cNfM,14291968
+c2pa/c2pa_api/__init__.py,sha256=g1mtFxdM0lAmV_CE2TFYlHFS0VHYC___8OvPSJTOxBw,23
+c2pa/c2pa_api/c2pa_api.py,sha256=WWy4Y1pRQHHEDpOPCI-9U7X8X9m4QNTABkdWe-IeENc,9726
+c2pa_python-0.9.0.dist-info/METADATA,sha256=l2gs842QwGRUNwXaIXA4xnaP3ZZKDCD28noqzTT9Gp0,3530
+c2pa_python-0.9.0.dist-info/WHEEL,sha256=ZpiG5XMu20zg2HkUWtX53EHEyu867m8S8biRxrLwVrg,93
+c2pa_python-0.9.0.dist-info/licenses/LICENSE-APACHE,sha256=V68Rm9DzW5gnETrkzOSlPFnXRlBwms0AlKuaB1AJxPw,11536
+c2pa_python-0.9.0.dist-info/licenses/LICENSE-MIT,sha256=VYv2Y2pYbAcNuV2IRaAZuBJiXfGBF409PfzUUqNoVPw,1104
+c2pa_python-0.9.0.dist-info/RECORD,,
