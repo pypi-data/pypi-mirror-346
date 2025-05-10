@@ -1,0 +1,2 @@
+[console_scripts]
+splent_cli = splent_cli.__main__:main

@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: splent_cli
+Version: 0.0.3
+Summary: SPLENT-CLI is a CLI to be able to work on your development more easily.
+Author-email: DiversoLab <diversolab@us.es>
+Project-URL: Homepage, https://github.com/diverso-lab/splent_cli
+Project-URL: Issues, https://github.com/diverso-lab/splent_cli/issues
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click==8.1.8
+Provides-Extra: dev
+Requires-Dist: setuptools==80.3.1; extra == "dev"
+Requires-Dist: pytest==8.3.4; extra == "dev"
+Requires-Dist: pytest-cov==6.0.0; extra == "dev"
+Requires-Dist: ruff==0.11.8; extra == "dev"
+Requires-Dist: build==1.2.2.post1; extra == "dev"
+Requires-Dist: twine==6.1.0; extra == "dev"
+Requires-Dist: black==24.10.0; extra == "dev"
+Requires-Dist: coverage==7.6.10; extra == "dev"
+Requires-Dist: docker==7.1.0; extra == "dev"
+Requires-Dist: Faker==33.3.1; extra == "dev"
+Requires-Dist: flake8==7.1.1; extra == "dev"
+Requires-Dist: graphviz==0.20.3; extra == "dev"
+Requires-Dist: iniconfig==2.0.0; extra == "dev"
+Requires-Dist: locust==2.32.6; extra == "dev"
+Requires-Dist: mccabe==0.7.0; extra == "dev"
+Requires-Dist: mypy-extensions==1.0.0; extra == "dev"
+Requires-Dist: pathspec==0.12.1; extra == "dev"
+Requires-Dist: platformdirs==4.3.6; extra == "dev"
+Requires-Dist: pycodestyle==2.12.1; extra == "dev"
+Requires-Dist: pyflakes==3.2.0; extra == "dev"
+Requires-Dist: selenium==4.28.0; extra == "dev"
+Requires-Dist: selenium-wire==5.1.0; extra == "dev"
+Requires-Dist: pip-tools==7.4.1; extra == "dev"
+Dynamic: license-file
+
+# splent_cli
