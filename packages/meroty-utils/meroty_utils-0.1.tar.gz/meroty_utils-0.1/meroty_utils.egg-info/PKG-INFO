@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: meroty_utils
+Version: 0.1
+Summary: Краткое описание пакета
+Home-page: https://github.com/VasilyaNab/my_package
+Author: Vasilya
+Author-email: lara_nabieva@bk.ru
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: summary

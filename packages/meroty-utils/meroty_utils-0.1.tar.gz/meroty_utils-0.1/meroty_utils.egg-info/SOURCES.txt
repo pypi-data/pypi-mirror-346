@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+meroty_utils/__init__.py
+meroty_utils/module.py
+meroty_utils.egg-info/PKG-INFO
+meroty_utils.egg-info/SOURCES.txt
+meroty_utils.egg-info/dependency_links.txt
+meroty_utils.egg-info/top_level.txt
