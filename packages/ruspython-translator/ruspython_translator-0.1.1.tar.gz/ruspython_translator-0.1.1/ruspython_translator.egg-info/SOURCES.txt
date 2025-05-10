@@ -1,0 +1,8 @@
+LICENSE.md
+README.md
+ruspython.py
+setup.py
+ruspython_translator.egg-info/PKG-INFO
+ruspython_translator.egg-info/SOURCES.txt
+ruspython_translator.egg-info/dependency_links.txt
+ruspython_translator.egg-info/top_level.txt
