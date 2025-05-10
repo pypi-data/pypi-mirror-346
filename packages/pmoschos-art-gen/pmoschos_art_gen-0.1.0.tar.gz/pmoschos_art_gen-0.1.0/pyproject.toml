@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pmoschos_art_gen"
+version = "0.1.0"
+description = "Rainbow ASCII Art Generator"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Panagiotis Moschos", email = "pan.moschos86@gmail.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "art>=5.6",
+    "colorama>=0.4.4",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pmoschos/pmoschos_art_gen"
+"Bug Tracker" = "https://github.com/pmoschos/pmoschos_art_gen/issues"
+
+[project.scripts]
+pmoschos-art = "pmoschos_art_gen.cli:main"

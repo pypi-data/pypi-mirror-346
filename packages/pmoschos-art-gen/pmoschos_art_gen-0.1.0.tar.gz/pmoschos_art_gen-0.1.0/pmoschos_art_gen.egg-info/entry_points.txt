@@ -1,0 +1,2 @@
+[console_scripts]
+pmoschos-art = pmoschos_art_gen.cli:main
