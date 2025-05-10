@@ -1,0 +1,14 @@
+shell_prompt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shell_prompt/__version__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+shell_prompt/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shell_prompt/cli/main.py,sha256=mIwn_SvtalS2fTf_Ze0HGcPlQq4Ncauq_BaePo87VBg,1832
+shell_prompt/cli/parser.py,sha256=fqg55TmWDn9qVQiFOfY7k-4-hiOIi1XUt6lbBXTqKck,1721
+shell_prompt/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shell_prompt/config/config_manager.py,sha256=2hK0OJol_BHp_3KmiEw245BS8KJzbRLyqIh-Vdz_rhQ,6275
+shell_prompt/config/llm.py,sha256=x7f-9ejy60L6a4XiTQOniMqwrxHZVIUctNT2gtYa6mM,2056
+shell_prompt/config/provider_data.py,sha256=RgyfArFUOBVlyBKbux1wnDim7mdrffYpo8THF0pZZ4E,440
+shell_prompt-0.1.0.dist-info/METADATA,sha256=599sTLRJ_2XRrIFYMu1IiWxijSZlfcp9d5aHBcmISzo,4422
+shell_prompt-0.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+shell_prompt-0.1.0.dist-info/entry_points.txt,sha256=PzmiImWe4iQc_iNkxCV3-lsAMN4Ov6MKuiqhhOc5c0E,60
+shell_prompt-0.1.0.dist-info/top_level.txt,sha256=wQiOvHbRUWgUV-QFr0FRtt2q0GF8K7--ALHvjFLiQQ0,13
+shell_prompt-0.1.0.dist-info/RECORD,,
