@@ -1,0 +1,10 @@
+storekiss/__init__.py,sha256=h7PVBTAQj7K_BFMV7RX5fTwUCXZw_DE4rsm_PuDZyrc,1521
+storekiss/crud.py,sha256=o5ydSjs14jMca-C4sca_pHdX4L4s0uTSqX39U17uMYs,36930
+storekiss/exceptions.py,sha256=slZ2h1nE3qylN7fcVsN3F3YyF2ORNrqDGzb9q517TYk,469
+storekiss/export_import.py,sha256=SOVW3BzBZFHROp_ghziM708HRhHZ8VaVGjjIxge4Xno,22874
+storekiss/litestore.py,sha256=O0CRbsgNPod3YB5PolR_whPr9bYI7akaZyWpqWS0C1k,14642
+storekiss/validation.py,sha256=namaeB7ViK4Z26GUHO_oj0qY1qJaN64HiJvXyYm2HJ4,9185
+storekiss-0.2.0b1.dist-info/LICENSE,sha256=5E-g6JLdgHbAO01K_3TB3ywLgBPs0HCc9nKuuXVl9fw,1064
+storekiss-0.2.0b1.dist-info/METADATA,sha256=GQDTpdhN7_TLpBbqlgdFb_e5Hg_ZWHXcu6yvAhs9MYE,14704
+storekiss-0.2.0b1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+storekiss-0.2.0b1.dist-info/RECORD,,
