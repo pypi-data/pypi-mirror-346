@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+sh3dkit/__init__.py
+sh3dkit.egg-info/PKG-INFO
+sh3dkit.egg-info/SOURCES.txt
+sh3dkit.egg-info/dependency_links.txt
+sh3dkit.egg-info/entry_points.txt
+sh3dkit.egg-info/requires.txt
+sh3dkit.egg-info/top_level.txt
+tests/test_svg_home_renderer.py
