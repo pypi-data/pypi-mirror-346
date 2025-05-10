@@ -1,0 +1,8 @@
+tc_newrelic/__init__.py,sha256=U9-Cq0SsWS4p6-k9Q9L-RyreHFgx0PGTOMt7n0QVb4A,580
+tc_newrelic/metrics/__init__.py,sha256=JXbPo9sn_sNzmkT_MTcckxAvDlGH-UIfa0z6LhSnHLk,205
+tc_newrelic/metrics/newrelic_metrics.py,sha256=Z_ofADZbWkQilfR6KjQeupwZIAIA6Ca4rhV_NaP27ak,12482
+tc_newrelic-1.0.1.dist-info/licenses/LICENSE,sha256=HIdUTM-8o8vPlTJox0SrrXof_JzRlrxPjIvWRgeKb_I,1095
+tc_newrelic-1.0.1.dist-info/METADATA,sha256=ikVAaTi2SLjy2hfg3vQgXWI7rjTaqNX1Ayh4xgUIHhc,3537
+tc_newrelic-1.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+tc_newrelic-1.0.1.dist-info/top_level.txt,sha256=cduwofQOEZFXyRiRq2U538--ImlL-VgNGH6OsVq19hY,12
+tc_newrelic-1.0.1.dist-info/RECORD,,
