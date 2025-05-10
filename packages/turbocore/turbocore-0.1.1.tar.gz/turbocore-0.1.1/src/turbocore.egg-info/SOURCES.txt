@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/turbocore/__init__.py
+src/turbocore/__main__.py
+src/turbocore.egg-info/PKG-INFO
+src/turbocore.egg-info/SOURCES.txt
+src/turbocore.egg-info/dependency_links.txt
+src/turbocore.egg-info/requires.txt
+src/turbocore.egg-info/top_level.txt
