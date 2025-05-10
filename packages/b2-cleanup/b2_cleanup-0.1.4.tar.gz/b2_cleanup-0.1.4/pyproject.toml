@@ -1,0 +1,58 @@
+[project]
+name = "b2-cleanup"
+version = "0.1.4"
+description = "CLI tool to clean up unfinished Backblaze B2 large uploads"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Jeroen Verhoeven", email = "jeroen@joentje.org" }
+]
+keywords = ["backblaze", "b2", "cli", "cloud-storage", "cleanup"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Intended Audience :: Developers",
+    "Topic :: Utilities",
+]
+
+dependencies = [
+    "click>=8.0",
+    "b2sdk>=1.20.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-mock>=3.10.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/your-username/b2-cleanup"
+"Issues" = "https://github.com/your-username/b2-cleanup/issues"
+"Changelog" = "https://github.com/your-username/b2-cleanup/blob/main/CHANGELOG.md"
+
+[project.scripts]
+b2-cleanup = "b2_cleanup.cli:cli"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+python_classes = "Test*"
+addopts = "--cov=b2_cleanup --cov-report=term --cov-report=html"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# Tell Hatchling which directories to include in the package
+[tool.hatch.build.targets.wheel]
+packages = ["b2_cleanup"]
+
