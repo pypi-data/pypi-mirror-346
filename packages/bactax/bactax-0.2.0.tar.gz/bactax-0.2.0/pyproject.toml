@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "bactax"
+version = "0.2.0"
+description = "A simple python tool for getting bacterial taxonomy and gram stain information from NCBI taxonomy data."
+authors = ["Adam Bates <adambates923@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+include = ["bactax/taxonomy_*.csv.gz"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+polars = "^1.19.0"
+requests = "^2.32.3"
+rich = "^13.9.4"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+ruff = "^0.9.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
