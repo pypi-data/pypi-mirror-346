@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+coaxial_pip_packager/__init__.py
+coaxial_pip_packager/__main__.py
+coaxial_pip_packager/packager.py
+coaxial_pip_packager.egg-info/PKG-INFO
+coaxial_pip_packager.egg-info/SOURCES.txt
+coaxial_pip_packager.egg-info/dependency_links.txt
+coaxial_pip_packager.egg-info/entry_points.txt
+coaxial_pip_packager.egg-info/requires.txt
+coaxial_pip_packager.egg-info/top_level.txt
+scripts/coaxial-pip-packager
