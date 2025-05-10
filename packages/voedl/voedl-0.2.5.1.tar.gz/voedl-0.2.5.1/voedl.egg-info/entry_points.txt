@@ -1,0 +1,2 @@
+[console_scripts]
+voedl = voedl:main
