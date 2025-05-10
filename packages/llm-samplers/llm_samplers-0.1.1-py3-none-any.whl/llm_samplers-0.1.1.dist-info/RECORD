@@ -1,0 +1,14 @@
+llm_samplers/__init__.py,sha256=y_e61ShVVHCAW9C5TS3dOAMNs0EFkScYcHbwtl3Xy2w,392
+llm_samplers/anti_slop.py,sha256=yBTrJxvdc1c5fKaalqZLF0gSKOa4fCRZBwB_saUnaOk,4284
+llm_samplers/base.py,sha256=Sed2FbNYopiEmYGbCG_jwmbpMvZHJElIQM11VnTbHd8,2156
+llm_samplers/min_p.py,sha256=fMz_p6K0kcm14Na_ce9uN6soTYu474bgJPT51YitXVQ,2665
+llm_samplers/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_samplers/temperature.py,sha256=w9xhVAyQQepWmWN6G7ryUMgFiICJI6rEup6Meu6lIbs,2185
+llm_samplers/top_k.py,sha256=CZ_-pBkRmmm4HPBwl3ZmlMXCZ5HG_EoLx7ngnnMsm1I,2450
+llm_samplers/top_p.py,sha256=BRJ6d8kZHULr1_Cb0G9eL6_qIvyAui8ubOuEo1Les4M,2928
+llm_samplers/xtc.py,sha256=PE-nn9OL_VLhIctGHM8dxIma5Hky48adAXFm1WDllw0,3462
+llm_samplers-0.1.1.dist-info/licenses/LICENSE,sha256=zHKcVoS04xuk4yMaLFNMq1qQihFj3SO4VEgRZTUxuHo,1067
+llm_samplers-0.1.1.dist-info/METADATA,sha256=vgNoiOqxZ08UcabDzDTj0A7IbqsbXJVWLweZxAaURrQ,3863
+llm_samplers-0.1.1.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+llm_samplers-0.1.1.dist-info/top_level.txt,sha256=3wmk61BMm5Zdy8XKtag15gzF8FSpt1051QY1q0UcLtA,13
+llm_samplers-0.1.1.dist-info/RECORD,,
