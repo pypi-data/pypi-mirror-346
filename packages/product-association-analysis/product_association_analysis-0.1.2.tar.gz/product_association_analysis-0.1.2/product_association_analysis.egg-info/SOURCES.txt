@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+product_association/__init__.py
+product_association/association_analysis.py
+product_association/cli.py
+product_association/data_loader.py
+product_association/report_generator.py
+product_association_analysis.egg-info/PKG-INFO
+product_association_analysis.egg-info/SOURCES.txt
+product_association_analysis.egg-info/dependency_links.txt
+product_association_analysis.egg-info/entry_points.txt
+product_association_analysis.egg-info/requires.txt
+product_association_analysis.egg-info/top_level.txt
