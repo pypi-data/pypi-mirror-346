@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: flxtrtwn-orderedset
+Version: 0.1.1
+Summary: Python implementation of an ordered set.
+Author: Felix Trautwein
+Author-email: mail@felixtrautwein.de
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
