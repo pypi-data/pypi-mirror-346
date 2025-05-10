@@ -1,0 +1,52 @@
+[project]
+name = "estats-client"
+version = "0.1.2"
+description = "A Python client for the e-Stat API."
+authors = [
+    { name = "EFEXP", email = "maeda_kentaro@cyberagent.co.jp" }
+]
+dependencies = [
+    "tenacity>=9.1.2",
+    "requests>=2.32.3",
+    "pydantic>=2.7.4",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+license = {text = "MIT License"}
+keywords = ["estat", "api", "client", "statistics", "政府統計"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet",
+]
+
+[project.urls]
+Homepage = "https://github.com/example/estats-client"
+Repository = "https://github.com/example/estats-client"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.2.2",
+    "build>=1.2.1",
+    "twine>=5.1.1",
+    "python-dotenv>=1.0.1", # 開発時依存に移動
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/estats_client"]
