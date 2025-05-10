@@ -1,0 +1,10 @@
+somfy_rts_hub-1.1.dist-info/licenses/LICENSE,sha256=EP_gydJxRgF2bCfHsLwxBZnRDXoMKqJ3XX3c9_9WCvY,1070
+somfyrtshub/__init__.py,sha256=nbxtBU2WbqwQxgNRY0144JCAR7wEGvAvr6zr7Cz7E9A,99
+somfyrtshub/const.py,sha256=XdIzadrB3wK4F5esVED9nR9RPpM3NkOHRyyDNyKVONk,447
+somfyrtshub/cover.py,sha256=4Lta0VNvXxNQQBTRZt2wAKKZpY3xW7sUhbb8n8wiJwU,1055
+somfyrtshub/errors.py,sha256=WpF-wIJgtkw2Sq7ZrEkAstGwygfYOsUTK1MZqutL_NE,487
+somfyrtshub/hub.py,sha256=ki_UMEjPGih0MYrJ7Z0a2PMu6ZkYcD-J4YISNDo61C0,7731
+somfy_rts_hub-1.1.dist-info/METADATA,sha256=7EWI4UJUxVdLPCSVoi9IlWIjf4GzF58HYsCghhiyiPk,1365
+somfy_rts_hub-1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+somfy_rts_hub-1.1.dist-info/top_level.txt,sha256=h384v6WsPNXKaklv9kDYTzSC9mzCPfeQyUo1vX0dSMg,12
+somfy_rts_hub-1.1.dist-info/RECORD,,
