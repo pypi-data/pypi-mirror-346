@@ -1,0 +1,10 @@
+numpy
+scipy
+tifffile
+matplotlib
+tk-steroids>=0.8.1
+roimarker>=0.2.1
+movemeter>=0.7.2
+python-biosystfiles
+devjoni-hosguibase>=0.0.7
+Panda3D>=1.10.0
