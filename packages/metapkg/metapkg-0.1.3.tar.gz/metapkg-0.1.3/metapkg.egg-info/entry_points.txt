@@ -1,0 +1,2 @@
+[console_scripts]
+metapkg = metapkg.cli:app
