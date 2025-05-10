@@ -1,0 +1,38 @@
+# fortunaisk/views/__init__.py
+from .views import (
+    admin_dashboard,
+    anomalies_list,
+    create_auto_lottery,
+    create_lottery,
+    delete_auto_lottery,
+    distribute_prize,
+    edit_auto_lottery,
+    export_winners_csv,
+    lottery,
+    lottery_detail,
+    lottery_history,
+    lottery_participants,
+    resolve_anomaly,
+    terminate_lottery,
+    user_dashboard,
+    winner_list,
+)
+
+__all__ = [
+    "admin_dashboard",
+    "resolve_anomaly",
+    "distribute_prize",
+    "create_auto_lottery",
+    "edit_auto_lottery",
+    "delete_auto_lottery",
+    "lottery",
+    "winner_list",
+    "lottery_history",
+    "create_lottery",
+    "lottery_detail",
+    "lottery_participants",
+    "terminate_lottery",
+    "user_dashboard",
+    "anomalies_list",
+    "export_winners_csv",
+]
