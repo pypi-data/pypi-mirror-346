@@ -1,0 +1,8 @@
+jax
+jaxdecomp
+matplotlib
+plotly
+toml
+tqdm
+epyc
+pyevtk
