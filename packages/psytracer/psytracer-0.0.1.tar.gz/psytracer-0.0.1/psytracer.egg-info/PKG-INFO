@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: psytracer
+Version: 0.0.1
+Summary: A tool for obtaining psychological traces
+Author-email: "Michael J. Lee" <mil@mit.edu>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# psytracer
