@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: OpenPyLivoxv2
+Version: 1.0.2
+Summary: Python3 driver for UDP Communications with Livox Lidar sensors 
+Author: Zahid Pichen
+Author-email: zahidpichen1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: crcmod
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: laspy
+Requires-Dist: deprecated
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# OpenPyLivoxv2
+
+Python driver version 2 for Livox mid360 LiDAR 
+
+
+## Usage
+
+`pip install openpylivoxv2`
