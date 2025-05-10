@@ -1,0 +1,5 @@
+aiosqlite>=0.21.0
+duckdb>=1.2.2
+filelock>=3.18.0
+rich>=14.0.0
+textual>=3.2.0
