@@ -1,0 +1,11 @@
+[tools]
+"pipx:nox" = "latest"
+pre-commit = "latest"
+python = ["3.13", "3.12", "3.11", "3.10"]
+uv = "latest"
+
+[env]
+_.python.venv = ".venv"
+
+[tasks.bootstrap]
+run = ["mise install", "uv sync", "pre-commit install"]
