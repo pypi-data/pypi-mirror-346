@@ -1,0 +1,5 @@
+[console_scripts]
+surun_build = surun_tools.build:build
+surun_clean = surun_tools.clean:clean
+surun_format = surun_tools.run_format:surun_format
+surun_install = surun_tools.install:main2
