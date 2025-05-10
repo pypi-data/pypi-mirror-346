@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: uplift-sklearn
+Version: 0.1
+Summary: Uplift modeling integrated with scikit-learn
+Author-email: Szymon Jaroszewicz <jszymon@gmail.com>, Krzysztof Rudaś <krzysztof.rudas@ipipan.waw.pl>
+License: GPL-3.0
+Keywords: uplift modeling,CATE
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scikit-learn>=1.6
+
+# uplift_sklearn
+
+## Uplift modeling package integrated with `scikit-learn`.
+
