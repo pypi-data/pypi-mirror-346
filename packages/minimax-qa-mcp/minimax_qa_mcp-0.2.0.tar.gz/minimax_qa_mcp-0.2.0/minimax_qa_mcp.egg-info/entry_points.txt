@@ -1,0 +1,2 @@
+[console_scripts]
+minimax-qa-mcp = minimax_qa_mcp.server:run_server
