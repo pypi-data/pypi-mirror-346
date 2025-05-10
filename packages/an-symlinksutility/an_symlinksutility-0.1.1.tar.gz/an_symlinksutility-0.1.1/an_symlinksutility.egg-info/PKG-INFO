@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: an_symlinksutility
+Version: 0.1.1
+Summary: A package for an_symlinksutility.
+Home-page: https://github.com/Atsushi888/Atsushi888
+Author: Atsushi888
+Author-email: Atsushi888 <vtgrotxu@gmail.com>
+Project-URL: Homepage, https://github.com/Atsushi888/an_symlinksutility
+Project-URL: Repository, https://github.com/Atsushi888/an_symlinksutility
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: an_EnvManager

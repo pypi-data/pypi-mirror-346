@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+an_symlinksutility/__init__.py
+an_symlinksutility/symlinksutility.py
+an_symlinksutility.egg-info/PKG-INFO
+an_symlinksutility.egg-info/SOURCES.txt
+an_symlinksutility.egg-info/dependency_links.txt
+an_symlinksutility.egg-info/requires.txt
+an_symlinksutility.egg-info/top_level.txt
