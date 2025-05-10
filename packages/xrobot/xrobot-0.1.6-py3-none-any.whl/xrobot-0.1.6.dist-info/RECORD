@@ -1,0 +1,13 @@
+xrobot/AddModule.py,sha256=oMkfekuUxF0VZqyu14GC6nJwwqF-B8Ohwg-oonViYhA,4205
+xrobot/GenerateMain.py,sha256=iU15orJnciLWxiw6Op0Jfi3EiHZ__oKwquVYmjVAuoc,8074
+xrobot/InitModule.py,sha256=svwchL7KEnK3YquLMZQTRVe6688iAZDl29Sa6sCQ1AQ,3879
+xrobot/ModuleCreator.py,sha256=ci9fX3v-W9wyQmHyFtMHakycFrmOJx5GWtkoiFMQdhY,3554
+xrobot/ModuleParser.py,sha256=OXOy2Yq3R_Fx1WHVa9uIvPM9Vhm70EHTf6xP1oiIlhg,4839
+xrobot/XRobotSetup.py,sha256=3QPMzCgPr7XgegWZb-eZVgpAvPzlM58EKazbX0QUKzw,4552
+xrobot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xrobot-0.1.6.dist-info/licenses/LICENSE,sha256=Pd-b5cKP4n2tFDpdx27qJSIq0d1ok0oEcGTlbtL6QMU,11560
+xrobot-0.1.6.dist-info/METADATA,sha256=rpd4XuPv-HAEwh9XjBhHZBZp_8YFk6M_e3pwz28ZCz0,27821
+xrobot-0.1.6.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+xrobot-0.1.6.dist-info/entry_points.txt,sha256=RaAH_220Cw5Dsf9xynG55kGJacDJek3cWAqcpfbAkCw,271
+xrobot-0.1.6.dist-info/top_level.txt,sha256=IThd9xEq4sEvp1T9dWylx7PdTOlCCVJUdrUwl7ijk30,7
+xrobot-0.1.6.dist-info/RECORD,,
