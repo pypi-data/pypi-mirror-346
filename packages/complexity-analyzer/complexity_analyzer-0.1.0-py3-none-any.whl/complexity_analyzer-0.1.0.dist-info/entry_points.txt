@@ -1,0 +1,2 @@
+[console_scripts]
+complexity-analyzer = complexity_analyzer.cli:main
