@@ -1,0 +1,2 @@
+[console_scripts]
+vanila = htvanila.cli:main
