@@ -1,0 +1,35 @@
+name: Build Python Package Artifacts
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # 手動実行を許可
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # リポジトリの読み取り権限
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Rye
+        uses: eifinger/setup-rye@v2 # Ryeのセットアップ用Action
+        with:
+          enable-cache: true # Ryeのキャッシュを有効化
+
+      - name: Install dependencies
+        run: rye sync --all-features # --no-lock オプションは状況に応じて検討
+
+      - name: Build package
+        run: rye build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package-artifacts # アーティファクト名
+          path: dist/ # アップロードするパス
+          if-no-files-found: error # ファイルが見つからない場合はエラー
