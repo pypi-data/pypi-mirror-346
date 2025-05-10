@@ -1,0 +1,369 @@
+[project]
+name = "pinaxai"
+version = "1.0.0"
+description = "Pinaxai: a lightweight library for building Reasoning Agents"
+requires-python = ">=3.7,<4"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  {name = "Greg Fitzgerald", email = "Greg.Fitzgerald@pinax.tech"}
+]
+keywords = [
+  "agent",
+  "reasoning",
+  "llm",
+  "large-language-model",
+  "framework",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+  "docstring-parser",
+  "gitpython",
+  "httpx",
+  "pydantic-settings",
+  "pydantic",
+  "python-dotenv",
+  "python-multipart",
+  "pyyaml",
+  "rich",
+  "tomli",
+  "typer",
+  "typing-extensions",
+]
+
+[project.optional-dependencies]
+dev = ["mypy", "pytest", "pytest-asyncio", "pytest-cov", "pytest-mock", "ruff", "timeout-decorator", "types-pyyaml", "types-aiofiles", "fastapi", "uvicorn", "arxiv"]
+
+# Dependencies for Models
+azure = ["azure-ai-inference", "aiohttp"]
+anthropic = ["anthropic"]
+cohere = ["cohere"]
+google = ["google-genai"]
+groq = ["groq"]
+mistral = ["mistralai"]
+openai = ["openai"]
+ollama = ["ollama"]
+ibm = ["ibm-watsonx-ai"]
+lmstudio = ["lmstudio"]
+litellm = ["litellm"]
+meta = ["llama-api-client"]
+cerebras = ["cerebras-cloud-sdk"]
+
+# Dependencies for Tools
+apify = ["apify-client"]
+cartesia = ["cartesia"]
+exa = ["exa_py"]
+yfinance = ["yfinance"]
+ddg = ["duckduckgo-search"]
+duckdb = ["duckdb"]
+newspaper = ["newspaper4k", "lxml_html_clean"]
+youtube = ["youtube_transcript_api"]
+firecrawl = ["firecrawl-py"]
+github = ["PyGithub"]
+gmail = ["google-api-python-client", "google-auth-httplib2", "google-auth-oauthlib"]
+googlemaps = ["googlemaps", "google-maps-places"]
+todoist = ["todoist-api-python"]
+elevenlabs = ["elevenlabs"]
+fal = ["fal_client"]
+webex = ["webexpythonsdk"]
+mcp = ["mcp"]
+browserbase = ["browserbase", "playwright"]
+agentql = ["agentql"]
+confluence = ["atlassian-python-api"]
+zep = ["zep-cloud"]
+
+# Dependencies for Storage
+sql = ["sqlalchemy"]
+postgres = ["psycopg-binary", "psycopg"]
+sqlite = ["sqlalchemy"]
+gcs = ["google-cloud-storage"]
+redis = ["redis"]
+
+# Dependencies for Vector databases
+pgvector = ["pgvector"]
+chromadb = ["chromadb"]
+lancedb = ["lancedb==0.20.0", "tantivy"]
+qdrant = ["qdrant-client"]
+cassandra = ["cassio"]
+mongodb = ["pymongo[srv]"]
+singlestore = ["sqlalchemy"]
+weaviate = ["weaviate-client"]
+milvusdb = ["pymilvus"]
+clickhouse = ["clickhouse-connect"]
+pinecone = ["pinecone==5.4.2"]
+
+# Dependencies for Knowledge
+pdf = ["pypdf", "rapidocr_onnxruntime"]
+docx = ["python-docx"]
+text = ["aiofiles"]
+csv = ["aiofiles"]
+
+# Dependencies for Performance
+performance = ["memory_profiler"]
+
+# Dependencies for Running cookbook
+cookbooks = ["inquirer", "email_validator"]
+
+# Dependencies for Docker
+docker = ["pinaxai-docker"]
+
+# Dependencies for AWS
+aws = ["pinaxai-aws"]
+
+# All models
+models = [
+  "pinaxai[anthropic]",
+  "pinaxai[azure]",
+  "pinaxai[cohere]",
+  "pinaxai[google]",
+  "pinaxai[groq]",
+  "pinaxai[mistral]",
+  "pinaxai[ollama]",
+  "pinaxai[openai]",
+  "pinaxai[ibm]",
+  "pinaxai[litellm]",
+  "pinaxai[meta]",
+  "pinaxai[cerebras]"
+]
+
+# All tools
+tools = [
+  "pinaxai[apify]",
+  "pinaxai[exa]",
+  "pinaxai[cartesia]",
+  "pinaxai[ddg]",
+  "pinaxai[duckdb]",
+  "pinaxai[newspaper]",
+  "pinaxai[youtube]",
+  "pinaxai[firecrawl]",
+  "pinaxai[github]",
+  "pinaxai[gmail]",
+  "pinaxai[googlemaps]",
+  "pinaxai[todoist]",
+  "pinaxai[elevenlabs]",
+  "pinaxai[fal]",
+  "pinaxai[webex]",
+  "pinaxai[mcp]",
+  "pinaxai[browserbase]",
+  "pinaxai[agentql]",
+#  "pinaxai[yfinance]",  # Broken right now
+  "pinaxai[confluence]",
+  "pinaxai[zep]"
+]
+
+# All storage
+storage = [
+  "pinaxai[sql]",
+  "pinaxai[postgres]",
+  "pinaxai[sqlite]",
+  "pinaxai[gcs]",
+  "pinaxai[redis]",
+]
+
+# All vector databases
+vectordbs = [
+  "pinaxai[pgvector]",
+  "pinaxai[chromadb]",
+  "pinaxai[lancedb]",
+  "pinaxai[qdrant]",
+  "pinaxai[cassandra]",
+  "pinaxai[mongodb]",
+  "pinaxai[singlestore]",
+  "pinaxai[weaviate]",
+  "pinaxai[milvusdb]",
+  "pinaxai[clickhouse]",
+  "pinaxai[pinecone]"
+]
+
+# All knowledge
+knowledge = [
+  "pinaxai[pdf]",
+  "pinaxai[docx]",
+  "pinaxai[text]",
+  "pinaxai[csv]"
+]
+
+# All libraries for testing
+tests = [
+    "pinaxai[dev]",
+    "pinaxai[models]",
+    "pinaxai[tools]",
+    "pinaxai[storage]",
+    "pinaxai[vectordbs]",
+    "pinaxai[knowledge]",
+    "pinaxai[performance]",
+    "pinaxai[cookbooks]",
+    "boto3",
+    "yfinance",
+    "twine",
+    "build",
+]
+
+[project.scripts]
+pa = "pinaxai.cli.entrypoint:pinaxai_cli"
+pinaxai = "pinaxai.cli.entrypoint:pinaxai_cli"
+
+[project.urls]
+homepage = "https://pinax.tech"
+documentation = "https://docs.pinax.tech"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["pinaxai*"]
+
+[tool.setuptools.package-data]
+pinaxai = ["py.typed"]
+include = ["LICENSE"]
+
+[tool.pytest.ini_options]
+log_cli = true
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 120
+# Ignore `F401` (import violations) in all `__init__.py` files
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.mypy]
+check_untyped_defs = true
+no_implicit_optional = true
+warn_unused_configs = true
+disable_error_code = ["override"]
+plugins = ["pydantic.mypy"]
+exclude = ["tests*"]
+
+[[tool.mypy.overrides]]
+module = [
+  "agentql.*",
+  "aiofiles.*",
+  "altair.*",
+  "anthropic.*",
+  "apify_client.*",
+  "arxiv.*",
+  "atlassian.*",
+  "azure.ai.inference.*",
+  "azure.core.*",
+  "boto3.*",
+  "botocore.*",
+  "bs4.*",
+  "bson.*",
+  "browserbase.*",
+  "cassio.*",
+  "cerebras.*",
+  "cerebras_cloud_sdk.*",
+  "chonkie.*",
+  "chromadb.*",
+  "clickhouse_connect.*",
+  "clip.*",
+  "cohere.*",
+  "crawl4ai.*",
+  "docker.*",
+  "docx.*",
+  "duckdb.*",
+  "duckduckgo_search.*",
+  "email_validator.*",
+  "e2b_code_interpreter.*",
+  "exa_py.*",
+  "fastapi.*",
+  "filetype.*",
+  "firecrawl.*",
+  "github.*",
+  "google.*",
+  "googlemaps.*",
+  "google_maps_places.*",
+  "google_auth_oauthlib.*",
+  "googleapiclient.*",
+  "googlesearch.*",
+  "groq.*",
+  "huggingface_hub.*",
+  "ibm_watsonx_ai.*",
+  "imghdr.*",
+  "jira.*",
+  "kubernetes.*",
+  "lancedb.*",
+  "langchain_core.*",
+  "langchain.*",
+  "llama_index.*",
+  "llama_api_client.*",
+  "litellm.*",
+  "mem0.*",
+  "mcp.*",
+  "memory_profiler.*",
+  "mistralai.*",
+  "mlx_whisper.*",
+  "nest_asyncio.*",
+  "newspaper.*",
+  "numpy.*",
+  "ollama.*",
+  "openai.*",
+  "openbb.*",
+  "pandas.*",
+  "pgvector.*",
+  "PIL.*",
+  "pinecone_text.*",
+  "pinecone.*",
+  "playwright.sync_api.*",
+  "psycopg.*",
+  "psycopg2.*",
+  "pyarrow.*",
+  "pycountry.*",
+  "pymongo.*",
+  "pypdf.*",
+  "pytz.*",
+  "qdrant_client.*",
+  "rapidocr_onnxruntime.*",
+  "redis.*",
+  "replicate.*",
+  "requests.*",
+  "scrapegraph_py.*",
+  "sentence_transformers.*",
+  "serpapi.*",
+  "setuptools.*",
+  "simplejson.*",
+  "slack_sdk.*",
+  "spider.*",
+  "sqlalchemy.*",
+  "starlette.*",
+  "streamlit.*",
+  "tantivy.*",
+  "tavily.*",
+  "textract.*",
+  "timeout_decorator.*",
+  "tiktoken.*",
+  "torch.*",
+  "todoist_api_python.*",
+  "tweepy.*",
+  "twilio.*",
+  "tzlocal.*",
+  "upstash_vector.*",
+  "urllib3.*",
+  "uvicorn.*",
+  "vertexai.*",
+  "voyageai.*",
+  "weaviate.*",
+  "webexpythonsdk.*",
+  "wikipedia.*",
+  "yfinance.*",
+  "youtube_transcript_api.*",
+  "zep_cloud.*"
+]
+ignore_missing_imports = true
