@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brogcursor"
+version = "0.1.1"
+description = "Precise mouse and keyboard action recorder and replayer"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+keywords = ["mouse", "keyboard", "record", "replay", "automation"]
+authors = [
+    {name = "Gnanesh", email = "gnaneshbalusa016g@gmail.com"}
+]
+maintainers = [
+    {name = "Gnanesh", email = "gnaneshbalusa016g@gmail.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+]
+
+dependencies = [
+    "pyautogui>=0.9.53",
+    "pynput>=1.7.6",
+    "rich>=12.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/gnanesh-16/brogcursor"
+Issues = "https://github.com/gnanesh-16/brogcursor/issues"
+Documentation = "https://github.com/gnanesh-16/brogcursor#readme"
+
+[project.scripts]
+brogcursor = "brogcursor.cli:main"
