@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: snowpark-checkpoints-configuration
+Version: 0.3.1
+Summary: Migration tools for Snowpark
+Project-URL: Bug Tracker, https://github.com/snowflakedb/snowpark-checkpoints/issues
+Project-URL: Source code, https://github.com/snowflakedb/snowpark-checkpoints/
+Author-email: "Snowflake, Inc." <snowflake-python-libraries-dl@snowflake.com>
+License: Apache License, Version 2.0
+License-File: LICENSE
+Keywords: Snowflake,Snowpark,analytics,cloud,database,db
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: SQL
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: <3.12,>=3.9
+Requires-Dist: pydantic>=1.8.2
+Requires-Dist: snowflake-snowpark-python>=1.23.0
+Provides-Extra: development
+Requires-Dist: certifi==2025.1.31; extra == 'development'
+Requires-Dist: coverage>=7.6.7; extra == 'development'
+Requires-Dist: hatchling==1.25.0; extra == 'development'
+Requires-Dist: pre-commit>=4.0.1; extra == 'development'
+Requires-Dist: pyarrow>=18.0.0; extra == 'development'
+Requires-Dist: pytest-cov>=6.0.0; extra == 'development'
+Requires-Dist: pytest>=8.3.3; extra == 'development'
+Requires-Dist: setuptools>=70.0.0; extra == 'development'
+Requires-Dist: twine==5.1.1; extra == 'development'
+Description-Content-Type: text/markdown
+
+# snowpark-checkpoints-configuration
+
+---
+##### This package is on Public Preview.
+---
+**snowpark-checkpoints-configuration** is a module for loading `checkpoint.json` and provides a model. 
+This module will work automatically with *snowpark-checkpoints-collector*  and *snowpark-checkpoints-validators*. This will try to read the configuration file from the current working directory.
+
+## Usage
+
+To explicit load a file, you can import  `CheckpointMetadata` and create an instance as shown below:
+
+```python
+from snowflake.snowpark_checkpoints_configuration import CheckpointMetadata
+
+my_checkpoint_metadata = CheckpointMetadata("path/to/checkpoint.json")
+
+checkpoint_model = my_checkpoint_metadata.get_checkpoint("my_checkpoint_name")
+...
+```
+------
