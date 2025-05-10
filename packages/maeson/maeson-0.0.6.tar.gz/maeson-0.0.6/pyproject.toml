@@ -1,0 +1,110 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maeson"
+version = "0.0.6"
+description = "Geospatial software for raster and point cloud processing."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT License"}
+authors = [
+  {name = "Dryver Finch", email = "dryver2206@gmail.com"},
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+keywords = ["geospatial", "raster", "point-cloud", "gis"]
+
+# Define dependencies directly instead of dynamically
+dependencies = [
+  "geopandas>=0.12.0",
+  "numpy>=1.23.0",
+  "shapely>=2.0.0",
+  "pandas>=1.5.0",
+  "matplotlib>=3.6.0",
+  "rasterio>=1.4.0",
+  "localtileserver>=0.10.0",
+  "earthengine-api>=0.1.326",
+  "geemap>=0.19.1",
+  "leafmap>=0.18.0",
+  "requests>=2.28.0",
+  "ipyleaflet>=0.17.0",
+  "ipywidgets>=8.0.0",
+  "folium>=0.14.0",
+]
+
+[project.entry-points."console_scripts"]
+maeson = "maeson.cli:main"
+
+[project.optional-dependencies]
+# Group optional dependencies logically
+extra = [
+    "scipy>=1.9.0",
+    "rtree>=0.9.0",
+]
+
+docs = [
+    "sphinx>=5.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+]
+
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+]
+
+# Combine all optional dependencies
+all = [
+    "maeson[extra]",
+    "maeson[docs]",
+    "maeson[test]",
+]
+
+[tool.setuptools.packages.find]
+include = ["maeson*"]
+exclude = ["docs*"]
+
+[tool.setuptools.package-data]
+maeson = ["notebooks/*.ipynb", "notebooks/data/*"]
+
+[tool.distutils.bdist_wheel]
+universal = true
+
+[tool.bumpversion]
+current_version = "0.0.6"
+commit = true
+tag = true
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "maeson/__init__.py"
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
+
+[tool.flake8]
+exclude = [
+    "docs",
+]
+max-line-length = 88
+
+[project.urls]
+Homepage = "https://github.com/dzfinch/maeson"
+Repository = "https://github.com/dzfinch/maeson"
+Issues = "https://github.com/dzfinch/maeson/issues"
