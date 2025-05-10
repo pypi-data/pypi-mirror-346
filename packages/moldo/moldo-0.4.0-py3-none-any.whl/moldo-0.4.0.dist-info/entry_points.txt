@@ -1,0 +1,2 @@
+[console_scripts]
+moldo = moldo.cli:main
