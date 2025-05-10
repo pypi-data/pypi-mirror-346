@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+shmqueue3/__init__.py
+shmqueue3/_version.py
+shmqueue3/shmqueue3.py
+shmqueue3/shmqueue3_test.py
+shmqueue3.egg-info/PKG-INFO
+shmqueue3.egg-info/SOURCES.txt
+shmqueue3.egg-info/dependency_links.txt
+shmqueue3.egg-info/requires.txt
+shmqueue3.egg-info/top_level.txt
