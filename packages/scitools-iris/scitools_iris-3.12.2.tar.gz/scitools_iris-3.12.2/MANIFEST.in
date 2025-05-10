@@ -1,0 +1,34 @@
+prune .github
+prune benchmarks
+prune docs
+prune etc
+recursive-include lib *.cdl *.cml *.json *.md *.py *.template *.txt *.xml
+prune requirements
+recursive-include requirements *.txt
+prune tools
+exclude .flake8
+exclude .git-blame-ignore-revs
+exclude .git_archival.txt
+exclude .gitattributes
+exclude .gitignore
+exclude .lycheeignore
+exclude .mailmap
+exclude .pre-commit-config.yaml
+exclude .readthedocs.yml
+exclude .ruff.toml
+exclude CHANGES
+exclude CODE_OF_CONDUCT.md
+exclude codecov.yml
+include COPYING
+include COPYING.LESSER
+include CITATION.cff
+include LICENSE
+exclude Makefile
+exclude noxfile.py
+
+# files required to build iris.std_names module
+include etc/cf-standard-name-table.xml
+include tools/generate_std_names.py
+
+global-exclude *.py[cod]
+global-exclude __pycache__
