@@ -1,0 +1,19 @@
+[project]
+name = "mcppp"
+version = "0.4.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "wolido", email = "270262953@qq.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.3.0",
+]
+
+[project.scripts]
+mcppp = "mcppp.main:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

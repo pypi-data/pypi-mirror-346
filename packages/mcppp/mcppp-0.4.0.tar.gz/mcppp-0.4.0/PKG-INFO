@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: mcppp
+Version: 0.4.0
+Summary: Add your description here
+Author-email: wolido <270262953@qq.com>
+Requires-Python: >=3.10
+Requires-Dist: fastmcp>=2.3.0
