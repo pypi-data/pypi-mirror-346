@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "pygame_nevui" 
+version = "0.1.2"
+description = "UI Library for Pygame"
+authors = ["NIKITA <bebrovgolem@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "pygame_nevui"}] 
+
+
+keywords = ["pygame", "gui", "ui", "interface", "widgets", "nevui"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Games/Entertainment",
+    "Topic :: Software Development :: User Interfaces"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"  # Рекомендуется обновить, например, до Python 3.8+
+pygame = ">=2.1.0" # Можно указать более новую стабильную версию Pygame
+Pillow = "^9.0.0" # Указывает на Pillow версии 9.x.x, но не 10.x.x
+numpy = "^1.20"   # Указывает на NumPy версии 1.2x.x
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
