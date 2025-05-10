@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+my_package/__init__.py
+my_package/module.py
+my_package_kirill_panichkin.egg-info/PKG-INFO
+my_package_kirill_panichkin.egg-info/SOURCES.txt
+my_package_kirill_panichkin.egg-info/dependency_links.txt
+my_package_kirill_panichkin.egg-info/top_level.txt
