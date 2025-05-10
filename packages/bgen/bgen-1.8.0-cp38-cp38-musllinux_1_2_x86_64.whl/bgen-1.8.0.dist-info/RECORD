@@ -1,0 +1,11 @@
+bgen-1.8.0.dist-info/LICENSE.txt,sha256=8xqsNFTZC7SFBJM4k6bQw8tPn0zUKQJpZwdY6zSFBW0,1053
+bgen-1.8.0.dist-info/WHEEL,sha256=AtKzrIIwO6LyEQPNa-CKogjoLSeXFnST8-hqmpwwZQA,110
+bgen-1.8.0.dist-info/METADATA,sha256=-B5MFJxfCoR5VsTrexEVoLUTJynPzCX5_mQ24aXPRHo,7100
+bgen-1.8.0.dist-info/top_level.txt,sha256=EoVKryxjZc0vkwDWjnOK0IP3dN4fg8YiKIkBcWB9pqw,5
+bgen-1.8.0.dist-info/RECORD,,
+bgen.libs/libstdc++-496613c0.so.6.0.32,sha256=AwZhL5WFT99I2Q6vIxXOhW7qddfuOZ1xecxiP9QTVY4,3494361
+bgen.libs/libgcc_s-a3a07607.so.1,sha256=5ptIUeAzZweNZrFehN0_Bb5B0FcJgux7NbAFoU8vwwo,148041
+bgen/index.py,sha256=djXqwSVpo8fDFgiABSO2xfbPecC9xu5WudGTVkuvZco,3789
+bgen/reader.cpython-38-x86_64-linux-gnu.so,sha256=86JCumpt4wBx_A6ry1wuMWviXPwyL0itHEDqKcNvnfQ,4064401
+bgen/__init__.py,sha256=YOTi27jSf2JtXYxFaZaX-O3_DN6bbgikoEZNMrQ-5zY,170
+bgen/writer.cpython-38-x86_64-linux-gnu.so,sha256=YVa1BI27W_xxV3rAF0utx4gvy2gnCehSoawrqSF2GbY,2660001
