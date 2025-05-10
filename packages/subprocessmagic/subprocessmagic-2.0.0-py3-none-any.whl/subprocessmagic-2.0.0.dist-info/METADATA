@@ -1,0 +1,35 @@
+Metadata-Version: 2.3
+Name: subprocessmagic
+Version: 2.0.0
+Summary: Subprocessing to simplify interaction with os-tools
+License: Apache-2.0
+Author: dominicparga
+Author-email: dominic.parga@icloud.com
+Maintainer: dominicparga
+Maintainer-email: dominic.parga@icloud.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: errorhandling (>=2,<3)
+Project-URL: Documentation, https://github.com/dominicparga/subprocessmagic-py
+Project-URL: Homepage, https://github.com/dominicparga/subprocessmagic-py
+Project-URL: Issues, https://github.com/dominicparga/subprocessmagic-py/issues
+Project-URL: Repository, https://github.com/dominicparga/subprocessmagic-py
+Description-Content-Type: text/markdown
+
+# Subprocess Magic
+
+[![Version](https://img.shields.io/github/v/tag/dominicparga/subprocessmagic-py?label=Version&style=for-the-badge)](https://pypi.org/project/subprocessmagic/)
+[![Latest commit](https://img.shields.io/github/last-commit/dominicparga/subprocessmagic-py?label=Latest%20Commit&logo=github&style=for-the-badge)](https://github.com/dominicparga/subprocessmagic-py/commits)
+[![License](https://img.shields.io/github/license/dominicparga/subprocessmagic-py?style=for-the-badge)](https://github.com/dominicparga/subprocessmagic-py/blob/stable/LICENSE)
+
+## Usage
+
+```bash
+pip install subprocessmagic
+```
+
