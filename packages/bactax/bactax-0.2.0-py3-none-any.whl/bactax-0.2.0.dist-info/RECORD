@@ -1,0 +1,11 @@
+bactax/__init__.py,sha256=dZkpAZNfnIJGKyaoQYcFe6a1X6TbQ8W0nv49PfFbf9o,895
+bactax/errors.py,sha256=FiLWPECgtQA4Td_dyvenOXvdc1SBNwH7x5NglQnDzMU,1125
+bactax/gram.py,sha256=5ryLn43vlMy7QXe_L7Fhx0S4pJn8zRE0uo0OATlNhbI,4131
+bactax/ncbi.py,sha256=9fbd_p8tL1s-ucmVXbLwVV-gkZq-o2QgpH071dC2ac4,3780
+bactax/tax.py,sha256=YQvu2JDm_i2juXxAaRFcFWb4qm6q_gLF2pTXmAkAppw,6413
+bactax/taxonomy_2025-05-09.csv.gz,sha256=r0IAL8yc1E1jzJXZIwFDbhkvSxXJzCcPmyCEQkCqHBw,5003066
+bactax/utils.py,sha256=zKxxrr4CnfOymFENbHgWXbmlFL8Dje1-vEtAd-nnHqs,1631
+bactax-0.2.0.dist-info/LICENSE,sha256=bPRyvYfZxHG1mTFOqgwRmHm8nXA7NwbQgVuOhCNDTOU,1067
+bactax-0.2.0.dist-info/METADATA,sha256=-LM94uUdkNbgY6KtWKrUB4Z7vogmTYJlIsmCovgY55Q,1750
+bactax-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+bactax-0.2.0.dist-info/RECORD,,
