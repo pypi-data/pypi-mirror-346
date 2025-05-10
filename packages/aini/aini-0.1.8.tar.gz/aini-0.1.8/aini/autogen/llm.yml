@@ -1,0 +1,119 @@
+defaults:
+  openai_client: autogen_ext.models.openai.OpenAIChatCompletionClient
+  azure_opanai_client: autogen_ext.models.openai.AzureOpenAIChatCompletionClient
+  azure_client: autogen_ext.models.azure.AzureAIChatCompletionClien
+  ollama_client: autogen_ext.models.ollama.OllamaChatCompletionClient
+  anthropic_client: autogen_ext.models.anthropic.AnthropicChatCompletionClient
+  skchat_client: autogen_ext.models.semantic_kernel.SKChatCompletionAdapter
+
+# DeepSeek Models
+
+ds:
+  provider: ${openai_client}
+  config:
+    model: deepseek-chat
+    base_url: https://api.deepseek.com/v1
+    api_key: ${DEEPSEEK_API_KEY}
+    model_info:
+      function_calling: true
+      json_output: true
+      vision: false
+      family: unknown
+      structured_output: true
+
+ds-r1:
+  provider: ${openai_client}
+  config:
+    model: deepseek-reasoner
+    base_url: https://api.deepseek.com/v1
+    api_key: ${DEEPSEEK_API_KEY}
+    model_info:
+      function_calling: true
+      json_output: true
+      vision: false
+      family: unknown
+      structured_output: true
+
+# Silicon Flow Models
+
+## DeepSeek Models
+
+sf-ds:
+  provider: ${openai_client}
+  config:
+    model: Pro/deepseek-ai/DeepSeek-V3
+    base_url: https://api.siliconflow.cn/v1
+    api_key: ${SF_API_KEY}
+    model_info:
+      function_calling: true
+      json_output: true
+      vision: false
+      family: unknown
+      structured_output: true
+
+sf-ds-r1:
+  provider: ${openai_client}
+  config:
+    model: Pro/deepseek-ai/DeepSeek-R1
+    base_url: https://api.siliconflow.cn/v1
+    api_key: ${SF_API_KEY}
+    model_info:
+      function_calling: true
+      json_output: true
+      vision: false
+      family: unknown
+      structured_output: true
+
+## Qwen Models
+
+sf-qwen:
+  provider: ${openai_client}
+  config:
+    model: Qwen/Qwen3-8B
+    base_url: https://api.siliconflow.cn/v1
+    api_key: ${SF_API_KEY}
+    model_info:
+      function_calling: true
+      json_output: true
+      vision: false
+      family: unknown
+      structured_output: true
+
+sf-qwen-14b:
+  provider: ${openai_client}
+  config:
+    model: Qwen/Qwen3-14B
+    base_url: https://api.siliconflow.cn/v1
+    api_key: ${SF_API_KEY}
+    model_info:
+      function_calling: true
+      json_output: true
+      vision: false
+      family: unknown
+      structured_output: true
+
+sf-qwen-30b:
+  provider: ${openai_client}
+  config:
+    model: Qwen/Qwen3-30B-A3B
+    base_url: https://api.siliconflow.cn/v1
+    api_key: ${SF_API_KEY}
+    model_info:
+      function_calling: true
+      json_output: true
+      vision: false
+      family: unknown
+      structured_output: true
+
+sf-qwen-32b:
+  provider: ${openai_client}
+  config:
+    model: Qwen/Qwen3-32B
+    base_url: https://api.siliconflow.cn/v1
+    api_key: ${SF_API_KEY}
+    model_info:
+      function_calling: true
+      json_output: true
+      vision: false
+      family: unknown
+      structured_output: true
