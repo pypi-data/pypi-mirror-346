@@ -1,0 +1,62 @@
+import functools
+import requests
+
+# 数据读取相关
+def read_file(file_path: str) -> str:
+    """
+    读取文件内容
+    :param file_path: 文件路径
+    :return: 文件内容字符串
+    """
+    try:
+        with open(file_path, 'r', encoding="utf-8") as f:
+            return f.read()
+    except FileNotFoundError:
+        print(f"文件 {file_path} 未找到")
+        return ""
+
+## 其他
+
+def status(task:str,date:str,run_only = False):
+    """执行任务并记录执行状态, 如果已经执行了则不再执行(每日)
+
+    Args:
+        task (str): 任务名称
+        date (str): 2019-12-12
+
+    Returns:
+        str: '是否成功'
+    """
+    def outer_packing(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            response = requests.get(
+                f"http://101.201.244.227:8000/action/{task}/{date}/status",timeout=20)
+            if response.json().get('status') == '未执行':
+                result = func(*args, **kwargs)
+            else:
+                result = None
+            if run_only:
+                response = requests.post(
+                f"http://101.201.244.227:8000/action/{task}/{date}/execute",timeout=20)
+            return result
+        return wrapper
+    return outer_packing
+
+
+
+import re
+
+
+def extract_type_code(text: str)->str:
+    """从文本中提取python代码
+
+    Args:
+        text (str): 输入的文本。
+
+    Returns:
+        str: 提取出的python文本
+    """
+    pattern = r'```type([\s\S]*?)```'
+    matches = re.findall(pattern, text)
+    return matches[0].replace('\n','')
