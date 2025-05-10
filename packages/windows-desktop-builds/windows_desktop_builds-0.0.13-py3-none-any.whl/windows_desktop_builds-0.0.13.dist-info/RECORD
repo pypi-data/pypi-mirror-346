@@ -1,0 +1,12 @@
+wdb/__init__.py,sha256=t78k-bMV5HrTAzNeWgL9sv-Qk5CvzS8ngXFlbTAYEIA,53
+wdb/__main__.py,sha256=Mfx0POdkx4K1KuKD4tzF7mkBgfPUumKE5PONTky44bs,11959
+wdb/version.py,sha256=SxvRes_80c-42zwvn5BXPvpGVs_EZ69FUEtUBF1k9Ts,23
+wdb/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wdb/data/desktop-build-statistics.xlsx,sha256=afX0K3cWvHRi5hvEv-9VP14EpASnqO0MFz6DJzfVkpg,23136
+wdb/data/config/config.yaml,sha256=AIz8HXwc_6BS_G4WC8ySH0M8j7eW23vaU1MD_6IbN3o,256
+windows_desktop_builds-0.0.13.dist-info/licenses/LICENSE.md,sha256=Zw59WD9oIypocpof54XJshi-BoSgLgkHItd5yZ4vXRg,34
+windows_desktop_builds-0.0.13.dist-info/METADATA,sha256=IYUQfE5YdsnbI0kRj0CkFhbfZwC1i66f5zf6ieUSDsg,815
+windows_desktop_builds-0.0.13.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+windows_desktop_builds-0.0.13.dist-info/entry_points.txt,sha256=_Pz4nfDoFhsEAa_I7JnxuOaMm7TqYaQqdHdkfTFQhxk,42
+windows_desktop_builds-0.0.13.dist-info/top_level.txt,sha256=xazgeftWEL-5i5MI3HWOobOsE1EAK_37-wP15JziKio,4
+windows_desktop_builds-0.0.13.dist-info/RECORD,,
