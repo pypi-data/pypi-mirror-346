@@ -1,0 +1,2 @@
+[console_scripts]
+log-hammer = secops_log_hammer.cli:main
