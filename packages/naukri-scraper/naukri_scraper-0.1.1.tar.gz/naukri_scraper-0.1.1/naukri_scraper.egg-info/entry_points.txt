@@ -1,0 +1,2 @@
+[console_scripts]
+naukri-scraper = naukri_scraper.scraper:cli
