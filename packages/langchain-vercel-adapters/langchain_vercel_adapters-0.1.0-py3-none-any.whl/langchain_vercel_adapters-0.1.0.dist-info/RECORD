@@ -1,0 +1,7 @@
+langchain_vercel_adapters/__init__.py,sha256=_FAgxmfFLPA9WrAh3yjWrR-rTgCfXNNRIXfot1tosvY,229
+langchain_vercel_adapters/types.py,sha256=hBqk_4Lpk7obYbDy4yFinJzxdt90e6gzSn-ZGGOTq-o,11130
+langchain_vercel_adapters/stream_protocol/data_stream.py,sha256=HlPtCf9mxPD-zh4Rj0I3J5WG1VstL-W5IBbbXaICxBU,6274
+langchain_vercel_adapters-0.1.0.dist-info/METADATA,sha256=3BoFYCM-d1QhN0hoZPiyJZw8UBd3lq24nqNTV3EJX6w,2321
+langchain_vercel_adapters-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+langchain_vercel_adapters-0.1.0.dist-info/licenses/LICENCE,sha256=oWB-1ckgOCqZEaRyqXTDapmYKrXcYV-KewFwwMleH1s,1065
+langchain_vercel_adapters-0.1.0.dist-info/RECORD,,
