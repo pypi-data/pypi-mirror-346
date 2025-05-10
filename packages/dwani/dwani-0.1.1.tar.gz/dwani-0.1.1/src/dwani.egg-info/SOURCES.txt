@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/asr.py
+src/audio.py
+src/chat.py
+src/client.py
+src/docs.py
+src/exceptions.py
+src/vision.py
+src/dwani.egg-info/PKG-INFO
+src/dwani.egg-info/SOURCES.txt
+src/dwani.egg-info/dependency_links.txt
+src/dwani.egg-info/requires.txt
+src/dwani.egg-info/top_level.txt

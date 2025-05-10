@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dwani"
+version = "0.1.1"
+description = "Multimodal AI server for Indian languages (speech, vision, LLMs, TTS, ASR, etc.)"
+authors = [
+    { name="sachin", email="python@dwani.ai" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+
+dependencies = [
+    "fastapi>=0.95.0",
+    "uvicorn[standard]>=0.22.0",
+    "pydantic>=2.0.0",
+    "requests>=2.25.0",
+    "python-multipart>=0.0.5",
+    "pydantic-settings>=2.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/dwani-ai/dwani-server"
+Source = "https://github.com/dwani-ai/dwani-server"
+Issues = "https://github.com/dwani-ai/dwani-server/issues"
