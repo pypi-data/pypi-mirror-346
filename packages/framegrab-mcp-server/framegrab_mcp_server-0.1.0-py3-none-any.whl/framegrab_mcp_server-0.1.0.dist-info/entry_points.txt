@@ -1,0 +1,2 @@
+[console_scripts]
+framegrab-mcp-server = framegrab_mcp_server:main
