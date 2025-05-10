@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: shadowcast
+Version: 1
+Summary: python wrapper to shadowcast
+Home-page: https://github.com/mnhrdt/imscript
+Author: Enric Meinhardt-Llopis
+Author-email: enric.meinhardt@ens-paris-saclay.fr
+Classifier: Operating System :: OS Independent

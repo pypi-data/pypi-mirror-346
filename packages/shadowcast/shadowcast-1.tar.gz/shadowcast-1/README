@@ -1,0 +1,3 @@
+! pip install "git+https://github.com/mnhrdt/imscript.git/#subdirectory=src/misc/shadowcast"
+import shadowcast
+y = shadowcast(x, 45, 45)

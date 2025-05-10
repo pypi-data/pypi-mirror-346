@@ -1,0 +1,8 @@
+README
+setup.py
+shadowcast.c
+shadowcast.py
+shadowcast.egg-info/PKG-INFO
+shadowcast.egg-info/SOURCES.txt
+shadowcast.egg-info/dependency_links.txt
+shadowcast.egg-info/top_level.txt
