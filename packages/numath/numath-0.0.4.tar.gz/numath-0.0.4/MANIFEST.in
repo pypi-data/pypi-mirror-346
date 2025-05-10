@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include numath *.py
+recursive-include documentation/code *.md
+prune test
