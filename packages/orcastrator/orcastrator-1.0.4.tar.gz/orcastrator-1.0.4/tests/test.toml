@@ -1,0 +1,56 @@
+[main]
+output_dir = "_scratch"
+scratch_dir = "/tmp"
+cpus = 1
+mem_per_cpu_gb = 4
+workers = 1
+overwrite = false
+
+[molecules]
+xyz_dir = "molecules"
+default_charge = 0
+default_mult = 1
+
+[[step]]
+name = "01_opt_freq_singlet"
+keywords = ["D4", "TPSS", "def2-SVP", "OPT"]
+
+[[step]]
+name = "1"
+keywords = ["D4", "TPSS", "def2-SVP"]
+blocks = ["%TDDFT NROOTS 1 END"]
+
+[[step]]
+name = "2"
+keywords = ["D4", "TPSS", "def2-SVP"]
+blocks = ["%TDDFT NROOTS 2 END"]
+
+[[step]]
+name = "4"
+keywords = ["D4", "TPSS", "def2-SVP"]
+blocks = ["%TDDFT NROOTS 4 END"]
+
+[[step]]
+name = "8"
+keywords = ["D4", "TPSS", "def2-SVP"]
+blocks = ["%TDDFT NROOTS 8 END"]
+
+[[step]]
+name = "16"
+keywords = ["D4", "TPSS", "def2-SVP"]
+blocks = ["%TDDFT NROOTS 16 END"]
+
+[[step]]
+name = "32"
+keywords = ["D4", "TPSS", "def2-SVP"]
+blocks = ["%TDDFT NROOTS 32 END"]
+
+[[step]]
+name = "64"
+keywords = ["D4", "TPSS", "def2-SVP"]
+blocks = ["%TDDFT NROOTS 64 END"]
+
+[[step]]
+name = "128"
+keywords = ["D4", "TPSS", "def2-SVP"]
+blocks = ["%TDDFT NROOTS 128 END"]
