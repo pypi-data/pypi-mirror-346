@@ -1,0 +1,24 @@
+# pyproject.toml
+[tool.poetry]
+name = "keeshond"
+version = "0.0.3"
+description = ""
+authors = ["Mel <melchior.im.dreital@model-enact-analyze-manage.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9.2"
+pyyaml = "^6.0.2"
+toga-core = "^0.4.8"
+toga-android = "^0.4.8"
+python-for-android = "^2024.1.21"
+bcrypt = "3.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-mock = { version = "^3.14.0", python = ">=3.8" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
