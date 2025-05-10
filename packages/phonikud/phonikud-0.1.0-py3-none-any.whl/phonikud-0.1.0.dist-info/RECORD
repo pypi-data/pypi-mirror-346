@@ -1,0 +1,12 @@
+src/model/dicta_model.py,sha256=NGPlJZC1PSVS2xsD9Z9ZBxhTpLE8uvUyFhE0FKE_C60,8771
+src/model/phonikud_model.py,sha256=NBXihsmJZ9XL_HmdptfoqbD-ymXT2NAHJDz9iUminok,7732
+src/run/main.py,sha256=VBCbwaroFdp-TcWj47FIi8iXeKfuIM3wq3jps1TdhTw,1263
+src/train/config.py,sha256=CngfPxJ6s0xWhcaLddGg3FAbbfbgrrB3jxsRvBYZR8s,1435
+src/train/data.py,sha256=BVxcCnD0VLWTzlVKRAk-VJL1byRokHAGCF5oH7J10y8,3374
+src/train/evaluate.py,sha256=QLYbhA-BykarUm623Dnwl92kOiM8pWl649IxBuHZmp4,1317
+src/train/main.py,sha256=-I2Vl499A6pbf3YVZc6J0iE0G_EGIsAYIku8XizRzkc,2359
+src/train/train_loop.py,sha256=ok1W971o5krD3SRBJIOAKZlN9PvWgXoWFxZAuq6Cfk8,4563
+src/train/utils.py,sha256=RylEHSvPmrHY5VsnjeXgnDJsTvek3yXzEbcr_2p4W4I,2722
+phonikud-0.1.0.dist-info/METADATA,sha256=IWlxQAwr0RZwq_7hcsOKfzHEzrXL0j_WMx80d5NNmgk,2582
+phonikud-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+phonikud-0.1.0.dist-info/RECORD,,
