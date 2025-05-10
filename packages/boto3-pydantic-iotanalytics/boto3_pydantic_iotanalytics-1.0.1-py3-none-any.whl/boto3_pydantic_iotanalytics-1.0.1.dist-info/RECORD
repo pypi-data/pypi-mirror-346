@@ -1,0 +1,7 @@
+boto3_pydantic_iotanalytics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_iotanalytics/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_iotanalytics/iotanalytics_classes.py,sha256=p9lLE_joOfBkPHksfymg8iqhyfGqqhABb2vEtBJAnF0,25661
+boto3_pydantic_iotanalytics/iotanalytics_constants.py,sha256=23z2w8aABPD7ovA5RXu2aqZBpYRM10WOvTYrBVWKlXM,7646
+boto3_pydantic_iotanalytics-1.0.1.dist-info/METADATA,sha256=YJmoXFlHXPaO6J4W864G6G9U9Vy7M7a93n9v4J9nAhw,1427
+boto3_pydantic_iotanalytics-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_iotanalytics-1.0.1.dist-info/RECORD,,
