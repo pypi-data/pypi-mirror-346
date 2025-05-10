@@ -1,0 +1,6 @@
+r8format>=0.0.8
+pytest
+pytest_pt
+requests
+patool
+py65
