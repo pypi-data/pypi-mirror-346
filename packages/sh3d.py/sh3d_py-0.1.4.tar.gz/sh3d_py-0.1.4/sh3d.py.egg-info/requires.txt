@@ -1,0 +1,10 @@
+packaging
+xmltodict
+javaobj-py3
+svg.py
+pillow
+shapely
+skia-python
+
+[dev]
+tox
