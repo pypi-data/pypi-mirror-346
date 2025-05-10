@@ -1,0 +1,22 @@
+{
+    "config": {
+        "error": {
+            "invalid_auth": "Tuvastamine nurjus: selle p\u00f5hjuseks v\u00f5ib olla t\u00fchistatud juurdep\u00e4\u00e4s v\u00f5i vale mandaat"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "possible_error": {
+                "name": "V\u00f5imalik t\u00f5rge"
+            }
+        },
+        "sensor": {
+            "age": {
+                "name": "Andmete vanus"
+            },
+            "balance": {
+                "name": "Tasakaal"
+            }
+        }
+    }
+}

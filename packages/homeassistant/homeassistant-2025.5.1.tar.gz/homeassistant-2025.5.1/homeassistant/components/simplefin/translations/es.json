@@ -1,0 +1,22 @@
+{
+    "config": {
+        "error": {
+            "invalid_auth": "Error de autenticaci\u00f3n: esto podr\u00eda deberse a un acceso revocado o a credenciales incorrectas"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "possible_error": {
+                "name": "Posible error"
+            }
+        },
+        "sensor": {
+            "age": {
+                "name": "Edad de los datos"
+            },
+            "balance": {
+                "name": "Saldo"
+            }
+        }
+    }
+}

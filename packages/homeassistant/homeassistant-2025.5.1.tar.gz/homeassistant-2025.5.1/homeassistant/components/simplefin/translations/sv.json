@@ -1,0 +1,22 @@
+{
+    "config": {
+        "error": {
+            "invalid_auth": "Autentiseringen misslyckades: Detta kan bero p\u00e5 \u00e5terkallad \u00e5tkomst eller felaktiga autentiseringsuppgifter"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "possible_error": {
+                "name": "M\u00f6jligt fel"
+            }
+        },
+        "sensor": {
+            "age": {
+                "name": "\u00c5lder p\u00e5 data"
+            },
+            "balance": {
+                "name": "Balans"
+            }
+        }
+    }
+}

@@ -1,0 +1,190 @@
+{
+    "application_credentials": {
+        "description": "\u05e0\u05d5\u05d5\u05d8 \u05d0\u05dc [\"\u05dc\u05d4\u05d9\u05d5\u05ea \u05de\u05e2\u05d5\u05e8\u05d1\" \u05d1\u05d0\u05ea\u05e8 \u05d4\u05de\u05e4\u05ea\u05d7 \u05e9\u05dc Miele]({register_url}) \u05db\u05d3\u05d9 \u05dc\u05d1\u05e7\u05e9 \u05d0\u05d9\u05e9\u05d5\u05e8\u05d9\u05dd \u05d5\u05dc\u05d0\u05d7\u05e8 \u05de\u05db\u05df \u05d4\u05d6\u05df \u05d0\u05d5\u05ea\u05dd \u05dc\u05de\u05d8\u05d4."
+    },
+    "config": {
+        "abort": {
+            "account_mismatch": "\u05d4\u05d7\u05e9\u05d1\u05d5\u05df \u05e9\u05e0\u05e2\u05e9\u05d4 \u05d1\u05d5 \u05e9\u05d9\u05de\u05d5\u05e9 \u05d0\u05d9\u05e0\u05d5 \u05ea\u05d5\u05d0\u05dd \u05dc\u05d7\u05e9\u05d1\u05d5\u05df \u05d4\u05de\u05e7\u05d5\u05e8\u05d9",
+            "already_configured": "\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05d7\u05e9\u05d1\u05d5\u05df \u05db\u05d1\u05e8 \u05e0\u05e7\u05d1\u05e2\u05d4",
+            "already_in_progress": "\u05d6\u05e8\u05d9\u05de\u05ea \u05d4\u05ea\u05e6\u05d5\u05e8\u05d4 \u05db\u05d1\u05e8 \u05de\u05ea\u05d1\u05e6\u05e2\u05ea",
+            "authorize_url_timeout": "\u05e4\u05e1\u05e7 \u05d6\u05de\u05df \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05db\u05ea\u05d5\u05d1\u05ea URL \u05dc\u05d0\u05d9\u05e9\u05d5\u05e8.",
+            "missing_configuration": "\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05e8\u05db\u05d9\u05d1 \u05dc\u05d0 \u05e0\u05e7\u05d1\u05e2\u05d4. \u05e0\u05d0 \u05e2\u05e7\u05d5\u05d1 \u05d0\u05d7\u05e8 \u05d4\u05ea\u05d9\u05e2\u05d5\u05d3.",
+            "no_devices_found": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d5 \u05d4\u05ea\u05e7\u05e0\u05d9\u05dd \u05d1\u05e8\u05e9\u05ea",
+            "no_url_available": "\u05d0\u05d9\u05df \u05db\u05ea\u05d5\u05d1\u05ea \u05d0\u05ea\u05e8 \u05d6\u05de\u05d9\u05e0\u05d4. \u05dc\u05e7\u05d1\u05dc\u05ea \u05de\u05d9\u05d3\u05e2 \u05e2\u05dc \u05e9\u05d2\u05d9\u05d0\u05d4 \u05d6\u05d5, [\u05d9\u05e9 \u05dc\u05e2\u05d9\u05d9\u05df \u05d1\u05e1\u05e2\u05d9\u05e3 \u05d4\u05e2\u05d6\u05e8\u05d4] ({docs_url})",
+            "oauth_error": "\u05d4\u05ea\u05e7\u05d1\u05dc\u05d5 \u05e0\u05ea\u05d5\u05e0\u05d9 \u05d0\u05e1\u05d9\u05de\u05d5\u05df \u05dc\u05d0 \u05d7\u05d5\u05e7\u05d9\u05d9\u05dd.",
+            "oauth_failed": "\u05e9\u05d2\u05d9\u05d0\u05d4 \u05d1\u05e2\u05ea \u05e7\u05d1\u05dc\u05ea \u05d0\u05e1\u05d9\u05de\u05d5\u05df \u05d2\u05d9\u05e9\u05d4.",
+            "oauth_timeout": "\u05d7\u05dc\u05e3 \u05d4\u05d6\u05de\u05df \u05dc\u05e4\u05ea\u05e8\u05d5\u05df \u05d0\u05e1\u05d9\u05de\u05d5\u05df OAuth.",
+            "oauth_unauthorized": "\u05e9\u05d2\u05d9\u05d0\u05ea \u05d4\u05e8\u05e9\u05d0\u05ea OAuth \u05d1\u05e2\u05ea \u05d4\u05e9\u05d2\u05ea \u05d0\u05e1\u05d9\u05de\u05d5\u05df \u05d2\u05d9\u05e9\u05d4.",
+            "reauth_successful": "\u05d4\u05d0\u05d9\u05de\u05d5\u05ea \u05de\u05d7\u05d3\u05e9 \u05d4\u05e6\u05dc\u05d9\u05d7",
+            "reconfigure_successful": "\u05e7\u05d1\u05d9\u05e2\u05ea \u05d4\u05ea\u05e6\u05d5\u05e8\u05d4 \u05de\u05d7\u05d3\u05e9 \u05d4\u05e6\u05dc\u05d9\u05d7\u05d4",
+            "single_instance_allowed": "\u05ea\u05e6\u05d5\u05e8\u05ea\u05d5 \u05db\u05d1\u05e8 \u05e0\u05e7\u05d1\u05e2\u05d4. \u05e8\u05e7 \u05ea\u05e6\u05d5\u05e8\u05d4 \u05d0\u05d7\u05ea \u05d0\u05e4\u05e9\u05e8\u05d9\u05ea.",
+            "user_rejected_authorize": "\u05e7\u05d9\u05e9\u05d5\u05e8 \u05d7\u05e9\u05d1\u05d5\u05df \u05e0\u05d3\u05d7\u05d4: {error}"
+        },
+        "create_entry": {
+            "default": "\u05d0\u05d5\u05de\u05ea \u05d1\u05d4\u05e6\u05dc\u05d7\u05d4"
+        },
+        "step": {
+            "confirm": {
+                "description": "\u05d4\u05d0\u05dd \u05d1\u05e8\u05e6\u05d5\u05e0\u05da \u05dc\u05d4\u05ea\u05d7\u05d9\u05dc \u05d1\u05d4\u05d2\u05d3\u05e8\u05d4?"
+            },
+            "pick_implementation": {
+                "title": "\u05d1\u05d7\u05d9\u05e8\u05ea \u05e9\u05d9\u05d8\u05ea \u05d0\u05d9\u05de\u05d5\u05ea"
+            },
+            "reauth_confirm": {
+                "description": "\u05d4\u05e9\u05d9\u05dc\u05d5\u05d1 \u05e9\u05dc Miele \u05e6\u05e8\u05d9\u05da \u05dc\u05d0\u05de\u05ea \u05de\u05d7\u05d3\u05e9 \u05d0\u05ea \u05d7\u05e9\u05d1\u05d5\u05e0\u05da",
+                "title": "\u05e4\u05d2 \u05ea\u05d5\u05e7\u05e3 \u05d4\u05d0\u05d9\u05de\u05d5\u05ea \u05e2\u05d1\u05d5\u05e8 {name}"
+            }
+        }
+    },
+    "device": {
+        "dishwasher": {
+            "name": "\u05de\u05d3\u05d9\u05d7 \u05db\u05dc\u05d9\u05dd"
+        },
+        "freezer": {
+            "name": "\u05de\u05e7\u05e4\u05d9\u05d0"
+        },
+        "fridge_freezer": {
+            "name": "\u05de\u05e7\u05e8\u05e8 \u05de\u05e7\u05e4\u05d9\u05d0"
+        },
+        "hob_extraction": {
+            "name": "\u05db\u05d9\u05e8\u05d9\u05d9\u05dd \u05e2\u05dd \u05e7\u05d5\u05dc\u05d8 \u05d0\u05d3\u05d9\u05dd"
+        },
+        "hob_highlight": {
+            "name": "\u05db\u05d9\u05e8\u05d9\u05d9\u05dd \u05d7\u05e9\u05de\u05dc\u05d9\u05d9\u05dd"
+        },
+        "hood": {
+            "name": "\u05e7\u05d5\u05dc\u05d8 \u05d0\u05d3\u05d9\u05dd"
+        },
+        "induction_hob": {
+            "name": "\u05db\u05d9\u05e8\u05d9\u05d9\u05dd \u05d0\u05d9\u05e0\u05d3\u05d5\u05e7\u05e6\u05d9\u05d4"
+        },
+        "microwave": {
+            "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05d2\u05dc"
+        },
+        "oven": {
+            "name": "\u05ea\u05e0\u05d5\u05e8"
+        },
+        "oven_microwave": {
+            "name": "\u05ea\u05e0\u05d5\u05e8 \u05de\u05d9\u05e7\u05e8\u05d5\u05d2\u05dc"
+        },
+        "refrigerator": {
+            "name": "\u05de\u05e7\u05e8\u05e8"
+        },
+        "robot_vacuum_cleander": {
+            "name": "\u05e9\u05d5\u05d0\u05d1 \u05d0\u05d1\u05e7 \u05e8\u05d5\u05d1\u05d5\u05d8\u05d9"
+        },
+        "steam_oven": {
+            "name": "\u05ea\u05e0\u05d5\u05e8 \u05d0\u05d3\u05d9\u05dd"
+        },
+        "steam_oven_combi": {
+            "name": "\u05ea\u05e0\u05d5\u05e8 \u05d0\u05d3\u05d9\u05dd \u05de\u05e9\u05d5\u05dc\u05d1"
+        },
+        "steam_oven_microwave": {
+            "name": "\u05ea\u05e0\u05d5\u05e8 \u05d0\u05d3\u05d9\u05dd \u05de\u05d9\u05e7\u05e8\u05d5\u05d2\u05dc"
+        },
+        "tumble_dryer": {
+            "name": "\u05de\u05d9\u05d9\u05d1\u05e9 \u05db\u05d1\u05d9\u05e1\u05d4"
+        },
+        "warming_drawer": {
+            "name": "\u05de\u05d2\u05d9\u05e8\u05ea \u05d7\u05d9\u05de\u05d5\u05dd"
+        },
+        "washer_dryer": {
+            "name": "\u05de\u05db\u05d5\u05e0\u05ea \u05db\u05d1\u05d9\u05e1\u05d4 \u05d5\u05de\u05d9\u05d9\u05d1\u05e9"
+        },
+        "washing_machine": {
+            "name": "\u05de\u05db\u05d5\u05e0\u05ea \u05db\u05d1\u05d9\u05e1\u05d4"
+        },
+        "wine_cabinet": {
+            "name": "\u05de\u05e7\u05e8\u05e8 \u05d9\u05d9\u05df"
+        },
+        "wine_cabinet_freezer": {
+            "name": "\u05de\u05e7\u05e8\u05e8 \u05d9\u05d9\u05df \u05de\u05e7\u05e4\u05d9\u05d0"
+        },
+        "wine_conditioning_unit": {
+            "name": "\u05d9\u05d7\u05d9\u05d3\u05ea \u05e7\u05d9\u05e8\u05d5\u05e8 \u05d9\u05d9\u05df"
+        },
+        "wine_unit": {
+            "name": "\u05d9\u05d7\u05d9\u05d3\u05ea \u05d9\u05d9\u05df"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "failure": {
+                "name": "\u05db\u05d9\u05e9\u05dc\u05d5\u05df"
+            },
+            "info": {
+                "name": "\u05de\u05d9\u05d3\u05e2"
+            },
+            "mobile_start": {
+                "name": "\u05d4\u05e4\u05e2\u05dc\u05d4 \u05de\u05e0\u05d9\u05d9\u05d3"
+            },
+            "notification_active": {
+                "name": "\u05d4\u05ea\u05e8\u05d0\u05d4 \u05e4\u05e2\u05d9\u05dc\u05d4"
+            },
+            "remote_control": {
+                "name": "\u05e9\u05dc\u05d9\u05d8\u05d4 \u05de\u05e8\u05d7\u05d5\u05e7"
+            },
+            "smart_grid": {
+                "name": "\u05e8\u05e9\u05ea \u05d7\u05db\u05de\u05d4"
+            }
+        },
+        "button": {
+            "pause": {
+                "name": "\u05d4\u05e9\u05d4\u05d9\u05d4"
+            },
+            "start": {
+                "name": "\u05d4\u05ea\u05d7\u05dc\u05d4"
+            },
+            "stop": {
+                "name": "\u05e2\u05e6\u05d9\u05e8\u05d4"
+            }
+        },
+        "climate": {
+            "freezer": {
+                "name": "\u05de\u05e7\u05e4\u05d9\u05d0"
+            },
+            "refrigerator": {
+                "name": "\u05de\u05e7\u05e8\u05e8"
+            },
+            "wine_cabinet": {
+                "name": "\u05de\u05e7\u05e8\u05e8 \u05d9\u05d9\u05df"
+            },
+            "zone_1": {
+                "name": "\u05d0\u05d6\u05d5\u05e8 1"
+            },
+            "zone_2": {
+                "name": "\u05d0\u05d6\u05d5\u05e8 2"
+            },
+            "zone_3": {
+                "name": "\u05d0\u05d6\u05d5\u05e8 3"
+            }
+        },
+        "fan": {
+            "fan": {
+                "name": "\u05de\u05d0\u05d5\u05d5\u05e8\u05e8"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "\u05ea\u05d0\u05d5\u05e8\u05d4"
+            }
+        },
+        "sensor": {
+            "program_id": {
+                "state": {
+                    "auto": "\u05d0\u05d5\u05d8\u05d5\u05de\u05d8\u05d9",
+                    "normal": "\u05e8\u05d2\u05d9\u05dc",
+                    "popcorn": "\u05e4\u05d5\u05e4\u05e7\u05d5\u05e8\u05df"
+                }
+            },
+            "status": {
+                "state": {
+                    "idle": "\u05de\u05de\u05ea\u05d9\u05df",
+                    "in_use": "\u05d1\u05e9\u05d9\u05de\u05d5\u05e9",
+                    "off": "\u05db\u05d1\u05d5\u05d9",
+                    "on": "\u05de\u05d5\u05e4\u05e2\u05dc"
+                }
+            }
+        }
+    }
+}

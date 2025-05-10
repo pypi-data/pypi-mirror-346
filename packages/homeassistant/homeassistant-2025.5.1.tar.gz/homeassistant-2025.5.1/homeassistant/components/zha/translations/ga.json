@@ -1,0 +1,121 @@
+{
+    "entity": {
+        "binary_sensor": {
+            "water_leak": {
+                "name": "Sceitheadh uisce"
+            },
+            "water_supply": {
+                "name": "Sol\u00e1thar uisce"
+            }
+        },
+        "number": {
+            "antifrost_temperature": {
+                "name": "Teocht frith-shioc"
+            },
+            "boost_time": {
+                "name": "Am borrtha"
+            },
+            "calibration_rotation_run_time_down": {
+                "name": "Am rith rothlaithe calabr\u00fach\u00e1in s\u00edos"
+            },
+            "calibration_rotation_run_time_up": {
+                "name": "Am rith rothlaithe calabr\u00fach\u00e1in suas"
+            },
+            "calibration_vertical_run_time_down": {
+                "name": "Am rith ingearach calabr\u00fach\u00e1in s\u00edos"
+            },
+            "calibration_vertical_run_time_up": {
+                "name": "Am rith ingearach calabr\u00fach\u00e1in suas"
+            },
+            "comfort_temperature": {
+                "name": "Teocht chompord"
+            },
+            "external_temperature_sensor_value": {
+                "name": "Luach braiteora teochta seachtrach"
+            },
+            "hush_duration": {
+                "name": "Fad an tost"
+            },
+            "impulse_mode_duration": {
+                "name": "Fad an mhodha impulse"
+            },
+            "temperature_control_accuracy": {
+                "name": "Cruinneas rialaithe teochta"
+            },
+            "water_duration": {
+                "name": "Fad an uisce"
+            },
+            "water_interval": {
+                "name": "Eatramh uisce"
+            }
+        },
+        "select": {
+            "alarm_sound_level": {
+                "name": "Leibh\u00e9al fuaime al\u00e1raim"
+            },
+            "alarm_sound_mode": {
+                "name": "M\u00f3d fuaime al\u00e1raim"
+            },
+            "led_brightness": {
+                "name": "Gile LED"
+            },
+            "speed": {
+                "name": "Luas"
+            }
+        },
+        "sensor": {
+            "device_status": {
+                "name": "St\u00e1das na gl\u00e9is"
+            },
+            "lifetime": {
+                "name": "Saolr\u00e9"
+            },
+            "remaining_watering_time": {
+                "name": "An t-am uisce at\u00e1 f\u00e1gtha"
+            },
+            "software_error": {
+                "state": {
+                    "something": "Earr\u00e1id"
+                }
+            },
+            "todays_max_light_intensity": {
+                "name": "Uasmh\u00e9id d\u00e9ine solais an lae inniu"
+            },
+            "water_flow": {
+                "name": "Sreabhadh uisce"
+            }
+        },
+        "switch": {
+            "auto_clean": {
+                "name": "Glanadh uathoibr\u00edoch"
+            },
+            "boost_heating": {
+                "name": "T\u00e9amh a threisi\u00fa"
+            },
+            "external_temperature_sensor": {
+                "name": "Braiteoir teochta seachtrach"
+            },
+            "heating_stop": {
+                "name": "Stad t\u00e9imh"
+            },
+            "holiday_mode": {
+                "name": "M\u00f3d saoire"
+            },
+            "invert_relay": {
+                "name": "Athsheachad\u00e1n inbh\u00e9artaithe"
+            },
+            "schedule_mode": {
+                "name": "M\u00f3d sceidealaithe"
+            },
+            "sound_enabled": {
+                "name": "Fuaim cumasaithe"
+            },
+            "test_mode": {
+                "name": "M\u00f3d t\u00e1st\u00e1la"
+            },
+            "touch_control": {
+                "name": "Rial\u00fa tadhaill"
+            }
+        }
+    }
+}
