@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: SLBPPG
+Version: 0.1
+Summary: Predict stress index by ppg
+Author: Ilxss
+Author-email: i.grishanow@gmail.com
+Requires-Python: >=3.7
+Requires-Dist: neurokit2==0.2.10
+Requires-Dist: catboost
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: opencv-python
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

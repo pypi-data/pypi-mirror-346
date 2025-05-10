@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+SLBPPG/__init__.py
+SLBPPG/model.py
+SLBPPG/ppgfilter.py
+SLBPPG.egg-info/PKG-INFO
+SLBPPG.egg-info/SOURCES.txt
+SLBPPG.egg-info/dependency_links.txt
+SLBPPG.egg-info/requires.txt
+SLBPPG.egg-info/top_level.txt

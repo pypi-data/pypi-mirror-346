@@ -1,0 +1,6 @@
+neurokit2==0.2.10
+catboost
+numpy
+pandas
+scipy
+opencv-python
