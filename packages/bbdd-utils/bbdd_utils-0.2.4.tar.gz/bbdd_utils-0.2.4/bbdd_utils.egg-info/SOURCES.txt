@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+bbdd_utils/__init__.py
+bbdd_utils/utils.py
+bbdd_utils.egg-info/PKG-INFO
+bbdd_utils.egg-info/SOURCES.txt
+bbdd_utils.egg-info/dependency_links.txt
+bbdd_utils.egg-info/top_level.txt
