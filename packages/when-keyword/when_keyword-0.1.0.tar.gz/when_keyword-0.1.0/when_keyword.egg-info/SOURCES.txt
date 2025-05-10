@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+when_keyword/__init__.py
+when_keyword.egg-info/PKG-INFO
+when_keyword.egg-info/SOURCES.txt
+when_keyword.egg-info/dependency_links.txt
+when_keyword.egg-info/top_level.txt
