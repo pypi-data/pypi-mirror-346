@@ -1,0 +1,97 @@
+import logging
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+import click
+
+from orcastrator.config import load_config
+from orcastrator.logger import debug, error, info, setup_file_logging, warning
+from orcastrator.runner_logic import PipelineRunner
+from orcastrator.slurm import SlurmConfig
+
+
+@click.group()
+@click.option("--debug", is_flag=True, help="Enable debug mode with detailed logging")
+@click.option(
+    "--log-file",
+    type=click.Path(dir_okay=True, file_okay=False, path_type=Path),
+    help="Directory to store log files",
+)
+def cli(debug, log_file):
+    """Orcastrator CLI - orchestrate ORCA calculations."""
+    if debug:
+        info("Debug mode enabled")
+        setup_file_logging(log_dir=log_file, log_level=logging.DEBUG)
+        debug("Detailed logging initialized")
+
+
+@cli.command()
+@click.argument(
+    "config_file", type=click.Path(exists=True, dir_okay=False, path_type=Path)
+)
+def run(config_file: Path) -> None:
+    """Run a calculation pipeline defined in a TOML config file."""
+    info(f"Starting orcastrator run with config: {config_file}")
+    try:
+        # Create and run the pipeline using the PipelineRunner
+        pipeline = PipelineRunner.from_config_file(config_file)
+        pipeline.run()
+        info("Calculation pipeline completed successfully")
+    except Exception as e:
+        error(f"Error running pipeline: {e}", exc_info=True)
+        info("Calculation pipeline failed")
+        sys.exit(1)
+
+
+@cli.command()
+@click.argument(
+    "config_file", type=click.Path(exists=True, dir_okay=False, path_type=Path)
+)
+@click.option(
+    "--no-submit",
+    is_flag=True,
+    help="Generate the SLURM script but don't submit it with sbatch",
+)
+def slurm(config_file: Path, no_submit: bool) -> None:
+    """Generate a SLURM batch script and optionally submit it with sbatch."""
+    info(f"Generating SLURM script for config file: {config_file}")
+    try:
+        config = load_config(config_file)
+        debug(f"Loaded configuration: {config['main']}")
+
+        slurm_config = SlurmConfig(
+            job_name=config_file.stem,
+            ntasks=config["main"]["cpus"],
+            mem_per_cpu_gb=config["main"]["mem_per_cpu_gb"],
+            orcastrator_command=f"uvx orcastrator run {config_file.resolve()}",
+        )
+        debug(f"Created SLURM config: {slurm_config}")
+
+        slurm_script_file = config_file.with_suffix(".slurm")
+        slurm_config.write_to(slurm_script_file)
+        info(f"SLURM script written to {slurm_script_file}")
+
+        if not no_submit and shutil.which("sbatch"):
+            debug("Submitting SLURM job with sbatch")
+            result = subprocess.run(
+                ["sbatch", str(slurm_script_file)], capture_output=True, text=True
+            )
+            if result.returncode == 0:
+                slurm_job_id = result.stdout.strip().split()[-1]
+                info(f"Submitted {config_file.name} with ID: {slurm_job_id}")
+            else:
+                error(f"Failed to submit job: {result.stderr}")
+                sys.exit(1)
+        elif no_submit:
+            info("Script generated but not submitted (--no-submit flag used)")
+        else:
+            warning("sbatch not found in PATH, cannot submit job")
+    except Exception as e:
+        error(f"Error generating SLURM script: {e}", exc_info=True)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    cli()
