@@ -1,0 +1,16 @@
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+smolanalyst/Dockerfile
+smolanalyst/cli.py
+smolanalyst/constants.py
+smolanalyst/filesystem.py
+smolanalyst/prompt.py
+smolanalyst/runner.py
+smolanalyst.egg-info/PKG-INFO
+smolanalyst.egg-info/SOURCES.txt
+smolanalyst.egg-info/dependency_links.txt
+smolanalyst.egg-info/entry_points.txt
+smolanalyst.egg-info/requires.txt
+smolanalyst.egg-info/top_level.txt
