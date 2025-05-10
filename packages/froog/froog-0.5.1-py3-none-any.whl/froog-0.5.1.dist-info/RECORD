@@ -1,0 +1,10 @@
+froog/__init__.py,sha256=kPFrHYPINIUmboWdWHWziYU7FRZhWCzrMjHKvusfvh0,1004
+froog/gradient.py,sha256=QeSPpgMSOOSZnVghwYIvTtt1HVVsrc4eDr73uXFkE-M,2626
+froog/ops.py,sha256=6CJWxZi9ksSVC_AWrXRBz_ndXC_b7lC206AbeaNYsdc,26241
+froog/optim.py,sha256=rkibUce0rG5O1O4fLsNuS54fd3fzdjQarAyTqK61-1I,5443
+froog/tensor.py,sha256=jD8rspVMFI__sFMAeKEu_hVhhnfvtgc92oAkNJVKEJg,9688
+froog/utils.py,sha256=SUXMWOka-yJmib1jeC6KgHI_hOtSzgrakiRA0tCk4vc,3657
+froog-0.5.1.dist-info/METADATA,sha256=z4iR-31at5r1ZJc0kLlQu7rCLlTWbKGIbwBSxY9xTiY,7377
+froog-0.5.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+froog-0.5.1.dist-info/top_level.txt,sha256=XPz35C_JWu20LlsVxIMdMZn8DD58Ak78LwgWFBGYZwY,6
+froog-0.5.1.dist-info/RECORD,,
