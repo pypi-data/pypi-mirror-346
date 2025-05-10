@@ -1,0 +1,17 @@
+README.md
+setup.py
+shell_prompt/__init__.py
+shell_prompt/__version__.py
+shell_prompt.egg-info/PKG-INFO
+shell_prompt.egg-info/SOURCES.txt
+shell_prompt.egg-info/dependency_links.txt
+shell_prompt.egg-info/entry_points.txt
+shell_prompt.egg-info/requires.txt
+shell_prompt.egg-info/top_level.txt
+shell_prompt/cli/__init__.py
+shell_prompt/cli/main.py
+shell_prompt/cli/parser.py
+shell_prompt/config/__init__.py
+shell_prompt/config/config_manager.py
+shell_prompt/config/llm.py
+shell_prompt/config/provider_data.py

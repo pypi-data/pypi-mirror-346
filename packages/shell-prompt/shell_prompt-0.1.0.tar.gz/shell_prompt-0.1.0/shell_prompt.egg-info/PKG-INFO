@@ -1,0 +1,132 @@
+Metadata-Version: 2.4
+Name: shell-prompt
+Version: 0.1.0
+Summary: A command-line tool that converts natural language instructions into shell commands and executes them.
+Home-page: https://github.com/082T/shell-prompt
+Author: Roko Torbarina
+Author-email: rokotorbarina9@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+Provides-Extra: openai
+Requires-Dist: langchain[openai]; extra == "openai"
+Provides-Extra: anthropic
+Requires-Dist: langchain[anthropic]; extra == "anthropic"
+Provides-Extra: google-genai
+Requires-Dist: langchain[google-genai]; extra == "google-genai"
+Provides-Extra: groq
+Requires-Dist: langchain[groq]; extra == "groq"
+Provides-Extra: cohere
+Requires-Dist: langchain[cohere]; extra == "cohere"
+Provides-Extra: langchain-nvidia-ai-endpoints
+Requires-Dist: langchain-nvidia-ai-endpoints; extra == "langchain-nvidia-ai-endpoints"
+Provides-Extra: fireworks
+Requires-Dist: langchain[fireworks]; extra == "fireworks"
+Provides-Extra: mistralai
+Requires-Dist: langchain[mistralai]; extra == "mistralai"
+Provides-Extra: together
+Requires-Dist: langchain[together]; extra == "together"
+Provides-Extra: langchain-xai
+Requires-Dist: langchain-xai; extra == "langchain-xai"
+Provides-Extra: langchain-perplexity
+Requires-Dist: langchain-perplexity; extra == "langchain-perplexity"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
+
+# 🐚 shell-prompt
+
+**shell-prompt** is a command-line tool that translates natural language instructions into executable shell commands using an LLM. It supports multiple LLM providers (like OpenAI, Anthropic, Google Gemini, etc.) and adapts to the user's operating system.
+
+#### Usage example:
+
+- USER INPUT: 
+```bash
+shell-prompt "list all files in my Desktop directory"
+```
+- OUTPUT:
+```bash
+Command to run:  
+dir "%UserProfile%\Desktop"  
+Execute this command? [y/N]: y  
+Running command: dir "%UserProfile%\Desktop"  
+*Command output here*
+```
+
+---
+
+## 🚀 Features
+
+- Converts natural language into shell commands
+- Supports execution and preview mode
+- Compatible with Windows, Linux, and macOS
+- Extensible to multiple LLM providers via `langchain`
+- Lightweight and configurable
+
+---
+
+## 📦 Installation
+
+You can install it from your local build or via PyPI.
+
+### Installation should be done with a specific LLM provider, such as:
+```bash
+pip install shell-prompt[google-genai]
+```
+
+### List of supported providers:
+
+- openai
+- anthropic
+- google-genai
+- groq
+- cohere
+- langchain-nvidia-ai-endpoints
+- fireworks
+- mistralai
+- together
+- langchain-xai
+- langchain-perplexity
+
+## 🛠 Usage
+
+Once installed, you should first configure the tool. Available options are:
+
+| Option                                  | Description                                                                   |
+| --------------------------------------- | ------------------------------------------------------------------------------|
+| `-h`, `--help`                          | Show the help message and exit                                                |
+| `--version`                             | Show the program's version number and exit                                    |
+| `--config`                              | Show the current configuration                                                |
+| `--set-provider PROVIDER_NAME`          | Set the LLM provider                                                          |
+| `--set-model MODEL_NAME`                | Set the specific model to use                                                 |
+| `--set-api-key API_KEY`                 | Set the API key for the currently selected provider                           |
+| `--preview`, `--no-preview`             | Enable or disable preview mode (avoid instant execution - enabled by deafult) |
+
+---
+
+Example:
+```bash
+shell-prompt --set-provider google-genai --set-model "gemini-2.0-flash" --set-api-key APIKEY --no-preview
+```
+Print out the configuration:
+```bash
+shell-prompt --config
+```
+Run the tool:
+```bash
+shell-prompt "show current time, but only the seconds"
+```
+```bash
+Running command: powershell Get-Date -Format ss
+39
+```
