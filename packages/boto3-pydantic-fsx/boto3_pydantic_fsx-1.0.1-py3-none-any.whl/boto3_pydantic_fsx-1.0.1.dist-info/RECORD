@@ -1,0 +1,7 @@
+boto3_pydantic_fsx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_fsx/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_fsx/fsx_classes.py,sha256=Q4PyquKvBItSmgMiFu4fI5-drHy927loUYg0dMLnjng,57426
+boto3_pydantic_fsx/fsx_constants.py,sha256=vtoVOG7ZDp4nE9xEMd3dAlyJmTMui0TBPm1VO3x4NJs,12836
+boto3_pydantic_fsx-1.0.1.dist-info/METADATA,sha256=wc5jhN76_wria-9fwjcxpnUQpyhrib-_Gi5SJdvq0xY,1382
+boto3_pydantic_fsx-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_fsx-1.0.1.dist-info/RECORD,,
