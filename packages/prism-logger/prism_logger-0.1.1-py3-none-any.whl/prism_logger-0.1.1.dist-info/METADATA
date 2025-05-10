@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: prism-logger
+Version: 0.1.1
+Summary: A lightweight logger that doesnt look like complete dogshit.
+Author: sus2790
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich>=10.0
+Dynamic: license-file
+
+# prism-logger
+
+A lightweight logger that doesn't look like complete dogshit.
+
+## Install
+
+```py
+pip install prism-logger
+```
