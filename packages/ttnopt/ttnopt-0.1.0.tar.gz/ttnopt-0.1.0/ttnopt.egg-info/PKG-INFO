@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: ttnopt
+Version: 0.1.0
+Summary: A Python package for tree tensor network algorithms
+Home-page: https://github.com/Watayo/TTNOpt
+Author: Ryo Watanabe, Hidetaka Manabe
+Author-email: Ryo Watanabe <u293494e@ecs.osaka-u.ac.jp>, Hidetaka Manabe <manabe@acs.i.kyoto-u.ac.jp>
+License: Apache-2.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24
+Requires-Dist: tensornetwork
+Requires-Dist: networkx
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: pydot
+Requires-Dist: pyyaml
+Requires-Dist: dotmap
+Requires-Dist: pandas
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: types-PyYAML; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# TTNOpt: Tree Tensor Netwokr Package for high-rank tensor compression
+[![Documentation Status](https://readthedocs.org/projects/ttnopt/badge/?version=latest)](https://ttnopt.readthedocs.io/en/latest/)
+
+We have developed TTNOpt, a software package that utilizes tree tensor networks (TTNs) for quantum spin systems and highdimensional data analysis.
+TTNOpt provides efficient and powerful TTN computations by **locally optimizing the network structure**, guided by the entanglement pattern of the target tensors.
+
+## Documentation
+The documentation is avaibale [here](https://ttnopt.readthedocs.io/)
+
+## Installation
+One can install TTNOpt from GitHub
+```
+pip install git+https://github.com/Ryo-wtnb11/TTNOpt
+```
+or from PyPI
+```
+pip install ttnopt
+```
+
+## Papers
+When using TTNOpt for research, please cite:

@@ -1,0 +1,16 @@
+numpy>=1.24
+tensornetwork
+networkx
+matplotlib
+scipy
+pydot
+pyyaml
+dotmap
+pandas
+
+[dev]
+pytest
+pytest-cov
+mypy
+coverage
+types-PyYAML

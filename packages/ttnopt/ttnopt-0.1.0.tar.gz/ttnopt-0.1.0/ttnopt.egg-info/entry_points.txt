@@ -1,0 +1,3 @@
+[console_scripts]
+ft = ttnopt:factorize_tensor
+gss = ttnopt:ground_state_search

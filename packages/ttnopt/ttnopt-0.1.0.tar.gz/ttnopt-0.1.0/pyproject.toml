@@ -1,0 +1,44 @@
+[project]
+name = "ttnopt"
+version = "0.1.0"
+description = "A Python package for tree tensor network algorithms"
+authors = [
+  { name = "Ryo Watanabe", email = "u293494e@ecs.osaka-u.ac.jp" },
+  { name = "Hidetaka Manabe", email = "manabe@acs.i.kyoto-u.ac.jp" }
+]
+license = { text = "Apache-2.0" }
+requires-python = ">=3.9"
+readme = "README.md"
+dependencies = [
+  "numpy >= 1.24",
+  "tensornetwork",
+  "networkx",
+  "matplotlib",
+  "scipy",
+  "pydot",
+  "pyyaml",
+  "dotmap",
+  "pandas"
+]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov",
+  "mypy",
+  "coverage",
+  "types-PyYAML"
+]
+
+[project.scripts]
+gss = "ttnopt:ground_state_search"
+ft = "ttnopt:factorize_tensor"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
