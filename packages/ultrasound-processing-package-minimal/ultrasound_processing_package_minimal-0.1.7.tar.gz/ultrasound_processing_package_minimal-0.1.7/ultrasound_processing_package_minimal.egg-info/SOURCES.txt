@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+pyproject.toml
+ultrasound_processing_package_minimal.egg-info/PKG-INFO
+ultrasound_processing_package_minimal.egg-info/SOURCES.txt
+ultrasound_processing_package_minimal.egg-info/dependency_links.txt
+ultrasound_processing_package_minimal.egg-info/requires.txt
+ultrasound_processing_package_minimal.egg-info/top_level.txt
