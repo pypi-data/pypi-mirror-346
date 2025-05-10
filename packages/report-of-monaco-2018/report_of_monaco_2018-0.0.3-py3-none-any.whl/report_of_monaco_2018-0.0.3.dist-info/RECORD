@@ -1,0 +1,10 @@
+src/report_of_monaco_2018/__about__.py,sha256=rKaPfoUgV6qRgbR8nqlapkpcFOBbwD6zJgnkEHfaATk,135
+src/report_of_monaco_2018/__init__.py,sha256=4b6vLSCBDAxN6qZstmFVnh4CFhY72gn3_rIfHDs3rA4,29
+src/report_of_monaco_2018/main.py,sha256=0QkOHGQZjZozsVCtqBo2KNcdhVMEUyg1cJ1QfA8pO34,1110
+src/report_of_monaco_2018/racing.py,sha256=jieWVVk77fZDcPtj888pbIM5utBgztgj4JOc4W6GRjw,7264
+src/report_of_monaco_2018/data/abbreviations.txt,sha256=S7dVcHzBti9iVZ_g72fybOVPCOJA25WcN7HkqJSsmsE,662
+report_of_monaco_2018-0.0.3.dist-info/METADATA,sha256=KQ7JRTVWbCBz1b65lrsmaTem5UKTTnPA8uYHXS5-wQc,3029
+report_of_monaco_2018-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+report_of_monaco_2018-0.0.3.dist-info/entry_points.txt,sha256=WSWt1poFJ6q7xc9PvH4G3SWhSyqC6VxBo_cust_Iqhs,59
+report_of_monaco_2018-0.0.3.dist-info/licenses/LICENSE.txt,sha256=SP8LKfmPkV3SCpJvxvlpRDB7t_9Rem8rTzThehZ23Kk,1114
+report_of_monaco_2018-0.0.3.dist-info/RECORD,,
