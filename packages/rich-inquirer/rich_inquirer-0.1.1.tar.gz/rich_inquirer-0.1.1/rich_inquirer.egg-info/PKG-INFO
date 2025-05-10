@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: rich-inquirer
+Version: 0.1.1
+Summary: Interactive CLI prompts using Rich and readchar, inspired by python-inquirer
+Author-email: Choi Seokgyu <csq1404@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/chosey0/rich-inquirer
+Project-URL: Repository, https://github.com/chosey0/rich-inquirer
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich>=13.0.0
+Requires-Dist: readchar>=4.0.0
+Requires-Dist: rapidfuzz>=3.0.0
+Dynamic: license-file
+
+# rich-inquirer
+
+🎯 Interactive CLI prompts using [Rich](https://github.com/Textualize/rich), with Inquirer-style UX.
+
+## Features
+
+- [x] Text input with password support
+- [x] Select / Fuzzy Select
+- [x] Confirmation prompts
+- [x] Prompt chaining via `PromptContext`
+
+## Install
+
+```bash
+pip install rich-inquirer
