@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+mask2bbox/__init__.py
+mask2bbox/_bboxes.py
+mask2bbox/logger.py
+mask2bbox.egg-info/PKG-INFO
+mask2bbox.egg-info/SOURCES.txt
+mask2bbox.egg-info/dependency_links.txt
+mask2bbox.egg-info/entry_points.txt
+mask2bbox.egg-info/requires.txt
+mask2bbox.egg-info/top_level.txt
