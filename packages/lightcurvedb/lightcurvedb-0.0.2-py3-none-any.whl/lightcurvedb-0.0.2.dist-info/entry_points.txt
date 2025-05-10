@@ -1,0 +1,3 @@
+[console_scripts]
+lightcurvedb-ephemeral = lightcurvedb.cli.ephemeral:main
+lightcurvedb-setup = lightcurvedb.cli.setup:main
