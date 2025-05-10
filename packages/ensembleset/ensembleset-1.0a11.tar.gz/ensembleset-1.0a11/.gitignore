@@ -1,0 +1,7 @@
+__pycache__
+.vscode
+.venv
+.coverage
+data
+dist
+*.h5
