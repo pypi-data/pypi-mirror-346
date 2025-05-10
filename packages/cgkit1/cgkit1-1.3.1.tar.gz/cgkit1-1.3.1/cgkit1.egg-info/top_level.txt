@@ -1,0 +1,2 @@
+cgkitinfo
+cgtypes
