@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+gconf/__init__.py
+gconf/gconf.py
+gconf/util.py
+gconf.egg-info/PKG-INFO
+gconf.egg-info/SOURCES.txt
+gconf.egg-info/dependency_links.txt
+gconf.egg-info/requires.txt
+gconf.egg-info/top_level.txt
+test/__init__.py
+test/test_main.py
