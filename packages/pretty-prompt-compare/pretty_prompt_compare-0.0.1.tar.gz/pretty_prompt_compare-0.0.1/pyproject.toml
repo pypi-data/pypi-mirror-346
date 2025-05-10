@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pretty_prompt_compare"
+version = "0.0.1"
+authors = [
+  { name="Zehao Lu", email="com3dian@outlook.com" },
+]
+description = "Compare prompts in Python with clear, pretty-printed output."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "rich",
+  "infix",
+]
+
+[tool.poetry.dependencies]
+rich = "^16.1.1"
+infix = "^1.2"
+
+[project.urls]
+Homepage = "https://github.com/com3dian/pretty_prompt_compare"
+Issues = "https://github.com/com3dian/pretty_prompt_compare/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pretty_prompt_compare/src"]
