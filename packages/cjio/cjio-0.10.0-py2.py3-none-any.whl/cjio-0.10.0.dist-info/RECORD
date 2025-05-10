@@ -1,0 +1,15 @@
+cjio/__init__.py,sha256=bxOvhHH8tkTSplV0m2wFKkRXct9khLQIcHVW9jajVvs,502
+cjio/cityjson.py,sha256=Gc49vqeC4C-u3p4d4yiIeoTdomiPxP9RDnsKlJZs8TM,96465
+cjio/cjio.py,sha256=rHDXSHKEMfoY28Hhx3TVRMJNVc-BGjzhIOiWwe7Ca5c,29387
+cjio/convert.py,sha256=IlOZeDK_8ciTcj-KBLv7ushb_og9O6B4imG1fRTeYk8,28142
+cjio/errors.py,sha256=eqBDwsjK41AsbeEunKuAVqF8sXhlYxSD3t1QLmnnP14,544
+cjio/floatEncoder.py,sha256=dQP_QQxMQqPAjl9QZbdsJVsYlXEqPwiyJzfZQyUBW3c,83
+cjio/geom_help.py,sha256=dtZypyKXl3H-lceEBBnDjj4cGK6CO5lVfd1xUGhXboQ,7334
+cjio/subset.py,sha256=oObvhH6bB7D4Yp2IQYVOEXId2E-qhTi3bS7KrzeFcJU,6158
+cjio/utils.py,sha256=EmiGxoceIcrF6qn4fID-Fi42fY_mEfABK61MsLv5II8,990
+cjio-0.10.0.dist-info/licenses/LICENSE,sha256=hQKHNlsCWfHlLW6xd-zaTdKZkNDkjFed3lg7NmCY6QY,1119
+cjio-0.10.0.dist-info/METADATA,sha256=XbBOqIEClagV_rTj-sLix7HORtl5YrvjFUgCINPHIIo,11835
+cjio-0.10.0.dist-info/WHEEL,sha256=oSJJyWjO7Z2XSScFQUpXG1HL-N0sFMqqeKVVbZTPkWc,109
+cjio-0.10.0.dist-info/entry_points.txt,sha256=7eqil3cRlrUY-QDKtqX1CddgrDFS3hAlAnlu2-d8w4E,39
+cjio-0.10.0.dist-info/top_level.txt,sha256=6YtU3hnRKRy_lh3mcK_l69xIrCZ_oMQXvbReNMWkbqU,5
+cjio-0.10.0.dist-info/RECORD,,
