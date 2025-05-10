@@ -1,0 +1,7 @@
+# Requirements for readthedocs builds
+sphinx>=8
+myst-parser>=4.0.0
+myst-nb>=1.2.0
+sphinx-autoapi==3.6.0
+furo==2024.8.6
+ntqr==0.6
