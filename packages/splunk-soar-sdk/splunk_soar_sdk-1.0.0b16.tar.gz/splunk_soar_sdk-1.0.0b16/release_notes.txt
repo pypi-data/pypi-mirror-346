@@ -1,0 +1,39 @@
+# [1.0.0-beta.16](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.15...1.0.0-beta.16) (2025-05-09)
+
+
+### Bug Fixes
+
+* changes based on code review ([8cfde42](https://github.com/phantomcyber/splunk-soar-sdk/commit/8cfde4278b62fe1f537aab27b4e1b1ce53e61d81))
+* getting rid of the app instance manager ([c5160d3](https://github.com/phantomcyber/splunk-soar-sdk/commit/c5160d3002d232c852923264c3e462eb60649c2f))
+* make PhantomLogger a singleton ([0772cda](https://github.com/phantomcyber/splunk-soar-sdk/commit/0772cdae4eaa5b79dd36ba9efe29a0f5b6881ec7))
+
+
+### Features
+
+* ability to call standalone logging ([3c76b07](https://github.com/phantomcyber/splunk-soar-sdk/commit/3c76b07c75c1a2c09b59f13f531ef56c05ee69c8))
+* structured logging ([16bb43f](https://github.com/phantomcyber/splunk-soar-sdk/commit/16bb43fdab82741aff4e7253ec87dd1cd4b1e2b4))
+* unit tests for logging ([b6b806f](https://github.com/phantomcyber/splunk-soar-sdk/commit/b6b806f8fbd52a7fadc4cae13684b873c0052e99))
+
+
+
+
+
+# [1.0.0-beta.16](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.15...1.0.0-beta.16) (2025-05-09)
+
+
+### Bug Fixes
+
+* changes based on code review ([8cfde42](https://github.com/phantomcyber/splunk-soar-sdk/commit/8cfde4278b62fe1f537aab27b4e1b1ce53e61d81))
+* getting rid of the app instance manager ([c5160d3](https://github.com/phantomcyber/splunk-soar-sdk/commit/c5160d3002d232c852923264c3e462eb60649c2f))
+* make PhantomLogger a singleton ([0772cda](https://github.com/phantomcyber/splunk-soar-sdk/commit/0772cdae4eaa5b79dd36ba9efe29a0f5b6881ec7))
+
+
+### Features
+
+* ability to call standalone logging ([3c76b07](https://github.com/phantomcyber/splunk-soar-sdk/commit/3c76b07c75c1a2c09b59f13f531ef56c05ee69c8))
+* structured logging ([16bb43f](https://github.com/phantomcyber/splunk-soar-sdk/commit/16bb43fdab82741aff4e7253ec87dd1cd4b1e2b4))
+* unit tests for logging ([b6b806f](https://github.com/phantomcyber/splunk-soar-sdk/commit/b6b806f8fbd52a7fadc4cae13684b873c0052e99))
+
+
+
+
