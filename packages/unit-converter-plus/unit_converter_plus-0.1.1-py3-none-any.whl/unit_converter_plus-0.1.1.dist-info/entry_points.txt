@@ -1,0 +1,3 @@
+[console_scripts]
+uc=unit_converter_plus.cli:main
+
