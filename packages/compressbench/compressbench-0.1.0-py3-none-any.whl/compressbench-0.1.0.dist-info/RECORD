@@ -1,0 +1,12 @@
+compressbench/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+compressbench/benchmark.py,sha256=w_Q9OQG6-ZYyIoK-A0DODkthLqVhAP_sLtC8ZbBi9OQ,273
+compressbench/cli.py,sha256=QvihajTifTDX0KYKHTVtTVa12e3zw3w6YEdXKmzQm3c,1703
+compressbench/results.py,sha256=XctGMhRyvrLUBlD0lRC4eCG8LTaDNjE_pasW9oDGtTc,1274
+compressbench/types.py,sha256=N10Aq5IUv0yMR-6wnPgB8ndoO2Y0ZEU9TgQtIhhBXI8,196
+compressbench/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+compressbench-0.1.0.dist-info/licenses/LICENSE,sha256=EO3tvS8s1H8nVlU_aeRqbSo7FRk1rpul-fYpn6U8f2Q,1077
+compressbench-0.1.0.dist-info/METADATA,sha256=zrQp8TIde6JQrsBCmqGPNCrf783kKC1GDh66SWwa0vY,2297
+compressbench-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+compressbench-0.1.0.dist-info/entry_points.txt,sha256=0zTvHqjtOvAk2q6bsN5gAM2yHydx7k-_W8QATc_Qm_o,56
+compressbench-0.1.0.dist-info/top_level.txt,sha256=pt0D__ZWLA_bArT7zgPPwIT4KXCoI7gfgAoJ86WhlV8,14
+compressbench-0.1.0.dist-info/RECORD,,
