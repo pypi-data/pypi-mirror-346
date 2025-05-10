@@ -1,0 +1,35 @@
+[project]
+name = "pyfritzsms"
+dynamic = ["version"]
+description = "Python library to send SMS via AVM FRITZ!Box"
+license = "Apache-2.0"
+authors = [
+    { name = "Marc Hoersken", email = "info@marc-hoersken.de" }
+]
+readme = "README.md"
+repository = "https://github.com/mback2k/pyfritzsms"
+keywords = ["fritzbox", "sms"]
+requires-python = ">=3.9"
+dependencies = [
+    "aiohttp>=3.11.18",
+    "pyotp>=2.9.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["fritzsms"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.version.raw-options]
+git_describe_command = ["git", "describe", "--tags"]
+local_scheme = "no-local-version"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.8",
+]
