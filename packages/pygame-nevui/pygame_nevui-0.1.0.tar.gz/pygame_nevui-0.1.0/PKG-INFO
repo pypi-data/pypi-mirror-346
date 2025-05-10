@@ -1,0 +1,403 @@
+Metadata-Version: 2.3
+Name: pygame-nevui
+Version: 0.1.0
+Summary: UI Library for Pygame
+License: MIT
+Keywords: pygame,gui,ui,interface,widgets,nevui
+Author: NIKITA
+Author-email: bebrovgolem@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: User Interfaces
+Requires-Dist: Pillow (>=9.0.0,<10.0.0)
+Requires-Dist: numpy (>=1.20,<2.0)
+Requires-Dist: pygame (>=2.1.0)
+Description-Content-Type: text/markdown
+
+
+# pygame-nevui
+
+**pygame-nevui** - это библиотека для создания пользовательских интерфейсов (GUI) в Pygame. Она предоставляет набор виджетов, макетов, систему стилизации и анимаций для упрощения разработки интерактивных меню и элементов управления в ваших играх и приложениях на Pygame.
+
+**Версия:** 0.1.0 (Alpha)
+**Автор:** Golem bebrov (bebrovgolem@gmail.com)
+
+## Оглавление
+
+*   [Ключевые возможности](#ключевые-возможности)
+*   [Установка](#установка)
+*   [Быстрый старт](#быстрый-старт)
+*   [Основные концепции](#основные-концепции)
+    *   [Window (Окно)](#window-окно)
+    *   [Menu (Меню)](#menu-меню)
+    *   [Layouts (Макеты)](#layouts-макеты)
+    *   [Widgets (Виджеты)](#widgets-виджеты)
+    *   [Styling (Стилизация)](#styling-стилизация)
+    *   [Animations (Анимации)](#animations-анимации)
+*   [Примеры использования](#примеры-использования)
+    *   [Создание простого меню с кнопкой](#создание-простого-меню-с-кнопкой)
+    *   [Использование макета Grid](#использование-макета-grid)
+    *   [Стилизация виджетов](#стилизация-виджетов)
+    *   [Работа с темами](#работа-с-темами)
+    *   [Использование градиентов](#использование-градиентов)
+    *   [Добавление анимации к виджету](#добавление-анимации-к-виджету)
+*   [Зависимости](#зависимости)
+*   [Участие в разработке](#участие-в-разработке)
+*   [Лицензия](#лицензия)
+
+## Ключевые возможности
+
+*   **Обширный набор виджетов:** Кнопки, метки, поля ввода, чекбоксы, слайдеры, изображения, GIF-анимации, прогресс-бары, выпадающие списки, диалоги файлов, музыкальный плеер и др.
+*   **Гибкие макеты:** Сеточные (`Grid`), постраничные (`Pages`), бесконечная прокрутка (`Infinite_Scroll`), горизонтальное/вертикальное добавление (`Appending_Layout_H/V`).
+*   **Мощная система стилизации:**
+    *   Настройка цветов, шрифтов, границ, отступов, фоновых изображений.
+    *   Поддержка состояний (обычное, при наведении, при нажатии).
+    *   Большое количество предустановленных тем (`Theme`, `xTheme`).
+    *   Создание линейных и радиальных градиентов.
+*   **Система анимаций:** Анимация цвета, размера, позиции, вращения, прозрачности с различными функциями плавности (ease-in, ease-out, bounce, elastic и т.д.).
+*   **Управление меню:** Основные меню, выпадающие меню (`DropDownMenu`), контекстные меню (`ContextMenu`).
+*   **Утилиты:** Работа с цветом, временем, вводом с мыши и клавиатуры, локализация, закругление углов элементов.
+*   **Адаптивное окно:** Поддержка изменения размера окна с сохранением пропорций.
+
+## Установка
+
+1.  Убедитесь, что у вас установлен Python и Pygame.
+2.  Вы можете установить `pygame-nevui` через pip:
+    ```bash
+    pip install pygame-nevui
+    ```
+
+## Быстрый старт
+
+Вот простой пример, демонстрирующий создание окна и базового меню:
+
+```python
+import pygame
+import pygame_nevui as nevui # Используйте правильный импорт вашего модуля
+
+# Инициализация Pygame
+pygame.init()
+
+# Создание окна с помощью pygame_nevui.Window
+window_size = (800, 600)
+game_window = nevui.Window(window_size, title="Мое NevUI Приложение", resizable=True)
+
+# Создание основного меню
+# default_style уже определен в nevui.style
+main_menu = nevui.Menu(game_window, size=(400, 300), style=nevui.default_style)
+main_menu.set_coordinates_relative(50, 50) # Центрирование меню
+
+# Создание макета для размещения виджетов (вертикальный)
+layout = nevui.Appending_Layout_V(style=nevui.default_style(bgcolor=(200,200,200))) # Немного изменим фон макета
+layout.margin = 20 # Отступ между элементами
+
+# Создание виджетов
+title_label = nevui.Label(size=(200, 50), text="Привет, NevUI!", style=nevui.default_style(fontsize=24))
+info_label = nevui.Label(size=(300, 80), text="Это демонстрация базовых возможностей библиотеки.", style=nevui.default_style(fontsize=16), words_indent=True)
+
+def on_button_click():
+    print("Кнопка нажата!")
+    info_label.text = "Вы нажали на кнопку!"
+
+example_button = nevui.Button(
+    function=on_button_click,
+    text="Нажми меня",
+    size=(150, 40),
+    style=nevui.default_style(
+        bgcolor=nevui.Color.GREEN,
+        fontcolor=nevui.Color.WHITE,
+        radius=10
+    ).changed_with(nevui.StyleType.HOVER, bgcolor=nevui.Color.DARKGREEN) # Стиль при наведении
+)
+
+# Добавление виджетов в макет
+layout.add_widget(title_label, alignment=nevui.Align.CENTER)
+layout.add_widget(info_label, alignment=nevui.Align.CENTER)
+layout.add_widget(example_button, alignment=nevui.Align.CENTER)
+
+# Установка макета в меню
+main_menu.layout = layout
+
+# Основной игровой цикл
+running = True
+while running:
+    events = pygame.event.get()
+    for event in events:
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Обновление состояния окна и UI
+    game_window.update(events) # Передаем события в окно nevui
+    main_menu.update()
+
+    # Отрисовка
+    game_window.surface.fill(nevui.Color.LIGHTGRAY) # Фон окна
+    main_menu.draw() # Отрисовка меню (и всех его дочерних элементов)
+
+    pygame.display.flip()
+
+pygame.quit()
+```
+# Основные концепции
+### Window (Окно)
+
+Класс nevui.Window оборачивает стандартное окно Pygame, добавляя функциональность, такую как обработка изменения размера, поддержка соотношения сторон и управление событиями для UI.
+
+### Menu (Меню)
+
+nevui.Menu является основным контейнером для элементов GUI. Каждое меню может содержать один главный макет (LayoutType), который, в свою очередь, организует виджеты. Меню отвечают за свою отрисовку и обновление.
+
+## Layouts (Макеты)
+
+Макеты (nevui.LayoutType и его наследники) отвечают за расположение виджетов внутри меню или другого макета. pygame-nevui предоставляет различные типы макетов:
+
+#### Grid: Располагает виджеты в ячейках сетки.
+
+#### Appending_Layout_V / Appending_Layout_H: Добавляет виджеты последовательно вертикально или горизонтально.
+
+#### Infinite_Scroll: Позволяет прокручивать содержимое, если оно не помещается в видимую область.
+
+#### Pages: Позволяет создавать несколько "страниц" с разным содержимым и переключаться между ними.
+
+#### Widgets (Виджеты)
+
+### Виджеты (nevui.Widget и его наследники) 
+это интерактивные элементы интерфейса.
+
+
+#### Label: Отображает текст.
+
+#### Button: Кнопка, выполняющая действие при нажатии.
+
+#### Input: Поле для ввода текста.
+
+#### CheckBox: Флажок.
+
+#### ImageWidget, GifWidget: Для отображения изображений и GIF-анимаций.
+
+#### SliderBar, ProgressBar: Слайдер и индикатор выполнения.
+
+### Styling (Стилизация)
+
+Стилизация в pygame-nevui управляется классами nevui.Style и nevui.StyleManager.
+
+#### Style: Определяет внешний вид одного элемента (цвет фона, цвет текста, шрифт, границы, радиус скругления и т.д.).
+
+#### StyleManager: Управляет несколькими объектами Style для разных состояний виджета (например, обычное, при наведении мыши, при клике).
+
+#### Theme, xTheme: Содержат наборы предопределенных стилей (Style).
+
+#### Gradient: Позволяет создавать сложные градиентные заливки.
+
+### Animations (Анимации)
+
+Библиотека включает систему для создания и управления анимациями различных свойств виджетов (позиция, размер, цвет, прозрачность, вращение).
+
+#### AnimationType: Определяет тип анимируемого свойства.
+
+Классы анимаций (например, AnimationLinear, AnimationEaseIn, AnimationBounce): Реализуют различные кривые анимации.
+
+#### AnimationManager: Применяется к виджетам для управления их анимациями.
+
+## Примеры использования
+Создание простого меню с кнопкой
+
+(см. Быстрый старт)
+
+Использование макета Grid
+```python
+import pygame
+import pygame_nevui as nevui
+
+pygame.init()
+window = nevui.Window((600, 400), "Grid Layout Example")
+menu = nevui.Menu(window, (500, 300), nevui.default_style)
+menu.set_coordinates_relative(50, 50)
+
+# Создаем Grid макет 2x2
+grid_layout = nevui.Grid(size=(480, 280), x=2, y=2)
+grid_layout.style = nevui.default_style(bgcolor=nevui.Color.PALEGREEN)
+grid_layout.borders = True # Показать границы ячеек
+grid_layout.border_name = "My Grid"
+
+# Создаем кнопки
+btn_style = nevui.default_style(radius=5)
+button1 = nevui.Button(lambda: print("1"), "Button 1", (100, 50), btn_style)
+button2 = nevui.Button(lambda: print("2"), "Button 2", (100, 50), btn_style)
+button3 = nevui.Button(lambda: print("3"), "Button 3", (100, 50), btn_style)
+button4 = nevui.Button(lambda: print("4"), "Button 4", (100, 50), btn_style)
+
+# Добавляем кнопки в ячейки Grid
+grid_layout.add_widget(button1, x=1, y=1) # Верхний левый угол
+grid_layout.add_widget(button2, x=2, y=1) # Верхний правый угол
+grid_layout.add_widget(button3, x=1, y=2) # Нижний левый угол
+grid_layout.add_widget(button4, x=2, y=2) # Нижний правый угол
+
+menu.layout = grid_layout
+
+# ... (основной цикл как в Быстром старте) ...
+running = True
+while running:
+    events = pygame.event.get()
+    for event in events:
+        if event.type == pygame.QUIT: running = False
+    window.update(events)
+    menu.update()
+    window.surface.fill((200, 200, 220))
+    menu.draw()
+    pygame.display.flip()
+pygame.quit()
+```
+
+# Стилизация виджетов
+
+Вы можете настраивать внешний вид каждого виджета, передавая объект Style или StyleManager в его конструктор.
+
+
+### Создание кастомного стиля
+
+```python
+my_button_style_manager = nevui.StyleManager(
+    still_style=nevui.Style(
+        bgcolor=(50, 150, 50),
+        fontcolor=(255, 255, 255),
+        fontsize=18,
+        radius=8,
+        bordercolor=(30, 100, 30),
+        width=2
+    ),
+    hover_style=nevui.Style(
+        bgcolor=(70, 180, 70),
+        fontcolor=(250, 250, 200),
+        radius=10
+    ),
+    click_style=nevui.Style(
+        bgcolor=(30, 100, 30),
+        fontcolor=(200, 200, 150),
+        radius=6
+    )
+)
+# ИЛИ можно модифицировать default_style:
+custom_button_style = nevui.default_style.changed_all(
+    radius=15,
+    fontcolor=nevui.Color.WHITE
+).changed_with(
+    nevui.StyleType.STILL, bgcolor=nevui.Color.BLUE, bordercolor=nevui.Color.DARKBLUE, width=3
+).changed_with(
+    nevui.StyleType.HOVER, bgcolor=nevui.Color.LIGHTBLUE
+).changed_with(
+    nevui.StyleType.CLICK, bgcolor=nevui.Color.NAVY
+)
+
+
+styled_button = nevui.Button(lambda: print("Styled!"), "Стилизованная", (200, 60), custom_button_style)
+```
+# Работа с темами
+
+Библиотека включает множество предопределенных тем в nevui.Theme и nevui.xTheme.
+
+### Использование темы xTheme.CYBERPUNK
+
+```python
+cyber_button_style = nevui.StyleManager(
+    still_style=nevui.xTheme.CYBERPUNK,
+    hover_style=nevui.xTheme.CYBERPUNK(bgcolor=nevui.Gradient(colors=[(70, 0, 80),(30,0,40)], type='linear')), # Изменяем фон при наведении
+    click_style=nevui.xTheme.CYBERPUNK(fontcolor=(0,255,0))
+)
+theme_button = nevui.Button(lambda: print("Cyber!"), "КиберКнопка", (200, 50), cyber_button_style)
+```
+## Применение темы ко всем дочерним элементам меню (если они не имеют своего стиля)
+```python 
+main_menu.apply_style_to_childs(nevui.StyleManager(still_style=nevui.Theme.DARK))
+```
+# Использование градиентов
+
+Класс nevui.Gradient позволяет создавать градиентные заливки.
+```python
+gradient_style = nevui.default_style(
+    bgcolor=nevui.Gradient(
+        colors=[nevui.Color.ORANGE, nevui.Color.RED, nevui.Color.PURPLE], # От 2 и более цветов
+        type='linear',        # 'linear' или 'radial'
+        direction=nevui.Gradient.TO_BOTTOM_RIGHT # Различные направления
+    ),
+    fontcolor=nevui.Color.WHITE,
+    radius=20
+)
+gradient_label = nevui.Label((300, 100), "Градиент!", gradient_style)
+```
+
+Добавление анимации к виджету
+```python
+# ... (внутри инициализации, где есть 'example_button' из Быстрого старта) ...
+
+# Анимация размера кнопки при наведении (простой пример)
+# Для более сложных сценариев используйте AnimationManager напрямую
+# Этот пример показывает как можно изменять параметры, которые AnimationManager подхватит
+
+# Предположим, вы хотите, чтобы кнопка "пульсировала" размером
+# Создадим анимацию для example_button
+
+# Получаем AnimationManager кнопки
+anim_manager = example_button.animation_manager
+
+# Создаем анимацию размера
+# Начальный размер - текущий, конечный - немного больше
+start_size = example_button.size_original
+end_size = (start_size[0] * 1.1, start_size[1] * 1.1)
+
+# Анимация "туда"
+pulse_anim_fwd = nevui.AnimationEaseInOut(time=0.5, start=start_size, end=end_size, type=nevui.AnimationType.SIZE)
+# Анимация "обратно"
+pulse_anim_bwd = nevui.AnimationEaseInOut(time=0.5, start=end_size, end=start_size, type=nevui.AnimationType.SIZE)
+
+# Добавляем как непрерывную анимацию (будет перезапускаться)
+# Для циклической анимации "туда-обратно" нужно будет управлять перезапуском
+# или использовать одну анимацию с `animation.start, animation.end = animation.end, animation.start` при перезапуске
+# в AnimationManager._restart_anim
+
+# Простой пример: анимация при запуске
+anim_manager.add_start_animation(
+    nevui.AnimationEaseOutBounce(time=1.5, start=(0,0), end=example_button.coordinates, type=nevui.AnimationType.POSITION)
+)
+example_button.coordinates = (0,0) # Начальная позиция для анимации появления
+
+# Для постоянной пульсации (shake для примера, т.к. pulse для size сложнее сделать непрерывным без кастомной логики)
+shake_anim = nevui.AnimationShake(
+    time=0.3, # Длительность одного "встряхивания"
+    start=example_button._anim_coordinates_additional, # Начальное смещение (0,0)
+    end=example_button._anim_coordinates_additional,   # Конечное смещение (0,0) - сама анимация генерирует смещения
+    type=nevui.AnimationType.POSITION,
+    shake_amplitude=5, # Амплитуда встряхивания
+    continuous=True # Зацикленная
+)
+# anim_manager.add_continuous_animation(shake_anim) # Раскомментируйте для эффекта
+```
+
+#### Примечание по анимациям: 
+AnimationManager в виджетах (widget.animation_manager) может управлять стартовыми, непрерывными и переходными анимациями. Для сложных последовательностей может потребоваться более тонкая настройка.
+
+# Зависимости
+
+Pygame: Основная зависимость. (например, pygame>=2.0.0)
+
+Pillow (PIL): Требуется для виджета GifWidget.
+
+Убедитесь, что эти библиотеки установлены в вашем окружении.
+
+
+# Лицензия
+
+Этот проект распространяется под лицензией MIT. Смотрите файл LICENSE для подробной информации. 
+
+
