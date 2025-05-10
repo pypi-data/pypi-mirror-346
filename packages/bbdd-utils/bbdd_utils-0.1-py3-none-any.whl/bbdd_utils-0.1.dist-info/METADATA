@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: bbdd_utils
+Version: 0.1
+Summary: libreria para la gestion de bases de datos
+Author: Luis_J_Domingo
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: summary
