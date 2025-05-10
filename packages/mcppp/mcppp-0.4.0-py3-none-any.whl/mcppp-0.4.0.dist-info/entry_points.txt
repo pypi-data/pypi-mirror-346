@@ -1,0 +1,2 @@
+[console_scripts]
+mcppp = mcppp.main:run
