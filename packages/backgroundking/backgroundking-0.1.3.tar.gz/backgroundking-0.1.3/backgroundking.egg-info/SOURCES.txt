@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+backgroundking.egg-info/PKG-INFO
+backgroundking.egg-info/SOURCES.txt
+backgroundking.egg-info/dependency_links.txt
+backgroundking.egg-info/top_level.txt
