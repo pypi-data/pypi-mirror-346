@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+qchat/__init__.py
+qchat/command.py
+qchat/main.py
+qchat/main_window.py
+qchat.egg-info/PKG-INFO
+qchat.egg-info/SOURCES.txt
+qchat.egg-info/dependency_links.txt
+qchat.egg-info/requires.txt
+qchat.egg-info/top_level.txt
