@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+terraweave/__init__.py
+terraweave/terraweave.py
+terraweave.egg-info/PKG-INFO
+terraweave.egg-info/SOURCES.txt
+terraweave.egg-info/dependency_links.txt
+terraweave.egg-info/top_level.txt
