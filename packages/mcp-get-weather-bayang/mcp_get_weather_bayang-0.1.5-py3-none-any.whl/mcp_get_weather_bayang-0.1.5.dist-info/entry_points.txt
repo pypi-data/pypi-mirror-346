@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-get-weather-bayang = mcp_get_weather_bayang:main
