@@ -1,0 +1,7 @@
+pyproject.toml
+ornekmodul/__init__.py
+ornekmodul/main.py
+ornekmodul.egg-info/PKG-INFO
+ornekmodul.egg-info/SOURCES.txt
+ornekmodul.egg-info/dependency_links.txt
+ornekmodul.egg-info/top_level.txt
