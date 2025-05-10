@@ -1,0 +1,67 @@
+Metadata-Version: 2.4
+Name: qiskit_noise_analysis
+Version: 0.1.5
+Summary: A qiskit based library to estimate resources and analyse noise in the quantum circuits.
+Home-page: https://pypi.org/project/qiskit-noise-analysis/
+Author: Mohit Joshi
+Author-email: joshimohit@bhu.ac.in
+Project-URL: Bug Tracker, https://github.com/joshicoding/qiskit_noise_analysis/issues
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: qiskit>=1
+Requires-Dist: pandas>=2
+Requires-Dist: matplotlib>=3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Quantum Noise Analysis
+**Note**
+The project is still under development. Please raise any query or feature request directly to mail joshimohit@bhu.ac.in.
+
+## Resource estimation with the package
+```python
+from qiskit_noise_analysis import resource_estimation
+
+report = resource_estimation.get_estimation(
+    circuits = [ circ1, circ2, ....], 
+    basis_gates= ["id", "rz", "sx", "x", "cx"],
+    circuit_names= ['circ1', 'circ2'])
+
+```
+
+
+### Implementation Example
+```python
+from qiskit_noise_analysis import resource_estimation
+
+from qiskit import QuantumCircuit
+
+qc1 = QuantumCircuit(4)
+qc1.h([0,1,2,3])
+qc1.cx(0,1)
+qc1.t([1,2,3])
+
+qc2 = QuantumCircuit(4)
+qc2.t([0,1,2,3])
+qc2.cx(0,1)
+
+report = resource_estimation.get_estimation(circuits=[qc1, qc2], circuit_names =['qc1','qc2'])
+
+```
+
+You can also use resource_estimation.demo() to see the comparison of two random circuits.
