@@ -1,0 +1,16 @@
+dogpile_breaker/__init__.py,sha256=7snGe9XpVfo4j2K15VHhmWHt0-MriPfKPzDx4UJKYR4,703
+dogpile_breaker/api.py,sha256=19b--qXpJmX-4fTljCPx4kVPAM0_kNlS4Aevvj1hYG4,21561
+dogpile_breaker/exceptions.py,sha256=AocThYjfIS31ARCNURTeKFDScKSr17Izs5TEjIqkLnk,261
+dogpile_breaker/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dogpile_breaker/backends/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dogpile_breaker/backends/memory_backend.py,sha256=fjg4KrItRfLst49oz1SoN-Q0HMKl3IV90kKUxDJftWA,3151
+dogpile_breaker/backends/redis_backend.py,sha256=USH-jWEQqwyZmeGLHW5Ez8XTUR6r0PZdXxuI4LMHkhs,6683
+dogpile_breaker/backends/redis_client.py,sha256=6JJXm89bw4iPBDe9NeZvJzL0OErVvgui_ptegpeq4yA,3748
+dogpile_breaker/middlewares/__init__.py,sha256=N_VWokRTSgOmp0ubdEMm9Pq9FRH8-deJs8t6u4y4fDU,94
+dogpile_breaker/middlewares/base_middleware.py,sha256=pWDqQnrvmMRZbDRvj20PYWnLKllR59tBunXUZIZ6mW0,1211
+dogpile_breaker/middlewares/circut_breaker_fallback_middleware.py,sha256=8f_QLIsUhVzVbFMWZay_XlUWk97c-J8uvh69mRo5bkk,6207
+dogpile_breaker/middlewares/prometheus_middleware.py,sha256=2kXuSCT-Ik2R0QJuUfD9n6HsgNMCsT3sYnB5bOop3Yk,2014
+dogpile_breaker-0.11.0.dist-info/METADATA,sha256=LKgrG6DEg-aeihtRG2s-AeonfO99zpvEKbmt1FYb2fA,18605
+dogpile_breaker-0.11.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dogpile_breaker-0.11.0.dist-info/licenses/LICENSE,sha256=f7lWstIi78jyHZSpbfMbXWyuu8yyzKq8ihyh-Vgn6Tc,1066
+dogpile_breaker-0.11.0.dist-info/RECORD,,
