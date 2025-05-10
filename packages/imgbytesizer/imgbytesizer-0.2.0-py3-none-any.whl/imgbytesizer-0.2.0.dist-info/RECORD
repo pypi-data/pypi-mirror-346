@@ -1,0 +1,12 @@
+imgbytesizer/__init__.py,sha256=6ZtJjIjdHSsbmaEo24gaaQy3Lixvo48NkBGdIMIVTho,181
+imgbytesizer/formatter.py,sha256=r7sUMdcThsbrGY6pJktv2nkuvDm_bLD9vU2xvnx3_TQ,5242
+imgbytesizer/logger.py,sha256=Oy-31XaVQOqmz5UwZ7I38U6Voz2uLxmiDKwuU-auAvY,1570
+imgbytesizer/main.py,sha256=-g25dXMfQl5RSlzib81ifKnLXg-1hFVSk-AppHpeZ2U,3398
+imgbytesizer/resizer.py,sha256=IZkaoWAeaus8BGlUPYnh_kxqECDKzIBX9X4n3qNKuM4,18920
+imgbytesizer/utils.py,sha256=_7hNKf-wC5f7Sd2hp34IrFzCKohkGPh2MT5uy5vBdqw,2943
+imgbytesizer-0.2.0.dist-info/licenses/LICENSE,sha256=ObhhTrfc5nEXJMIAP0ctCZhYOrn9nHLpKtp332QJyMA,1086
+imgbytesizer-0.2.0.dist-info/METADATA,sha256=yMGJhHA3Bsf3M-rW0ohrIrIIl4I-x2b45A2GOd7gi_0,5819
+imgbytesizer-0.2.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+imgbytesizer-0.2.0.dist-info/entry_points.txt,sha256=JKa1mCogBREjyx-WD8I5CkmkwY56s8RflJod3BxZrlA,56
+imgbytesizer-0.2.0.dist-info/top_level.txt,sha256=OE8IV3IMrJCqmWR-xlCOQdG3ZdgN3pRT0qe_9pTWMVQ,13
+imgbytesizer-0.2.0.dist-info/RECORD,,
