@@ -1,0 +1,137 @@
+:root {
+  /* Brand/Accent Colors */
+  --jupyt-accent-cyan: #06b6d4;
+  --jupyt-accent-blue: #2563eb;
+  --jupyt-accent-blue-light: #3b82f6;
+  --jupyt-accent-purple: #E6D6FF;
+  --jupyt-accent-purple-rgba: rgba(147, 51, 234, 0.2);
+  --jupyt-accent-purple-hover: #d3b7ff;
+
+  /* Backgrounds & Surfaces */
+  --jupyt-bg-dark: #1A1A1A;
+  --jupyt-bg-black: #000;
+  --jupyt-bg-overlay-70: rgba(17, 24, 39, 0.7);
+  --jupyt-bg-overlay-90: rgba(17, 24, 39, 0.9);
+  --jupyt-bg-white: #fff;
+  --jupyt-bg-white-05: rgba(255, 255, 255, 0.05);
+  --jupyt-bg-white-20: rgba(255, 255, 255, 0.2);
+
+  /* Borders & Shadows */
+  --jupyt-border-gray: #333333;
+  --jupyt-border-gray-light: #4D4D4D;
+  --jupyt-border-gray-rgba: rgba(75, 85, 99, 0.4);
+  --jupyt-shadow-cyan-30: 0 4px 24px rgba(6, 182, 212, 0.3);
+  --jupyt-shadow-cyan-20: 0 2px 8px rgba(6, 182, 212, 0.2);
+  --jupyt-shadow-black-20: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  /* Text */
+  --jupyt-text-white: #fff;
+  --jupyt-text-gray: #888888;
+  --jupyt-text-gray-dark: #666666;
+
+  /* Gradients */
+  --jupyt-gradient-main: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
+  --jupyt-gradient-purple: linear-gradient(to right, #E6D6FF, #ffffff);
+  --jupyt-gradient-cyan-blue: linear-gradient(90deg, #06b6d4, #3b82f6, #06b6d4);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .jp-AIChat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .jp-AIChat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 16px;
+  }
+
+  .jp-AIChat-input {
+    padding: 16px;
+    border-top: 1px solid var(--jp-border-color1);
+  }
+
+  .jp-AIChat-message {
+    margin-bottom: 16px;
+    max-width: 90%;
+  }
+
+  .jp-AIChat-message-user {
+    margin-left: auto;
+    background-color: var(--jp-layout-color2);
+    border-radius: 12px 12px 0 12px;
+    padding: 12px;
+  }
+
+  .jp-AIChat-message-assistant {
+    margin-right: auto;
+    background-color: var(--jp-brand-color-light);
+    border-radius: 12px 12px 12px 0;
+    padding: 12px;
+  }
+
+  .jp-AIChat-code-block {
+    background-color: var(--jp-layout-color1);
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 8px;
+    font-family: var(--jp-code-font-family);
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+
+  .jp-AIChat-code-language {
+    color: var(--jp-content-quiet-color);
+    font-size: 0.8em;
+    margin-bottom: 4px;
+  }
+
+  .jp-AIChat-code-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+  }
+
+  .jupyt-ai-button.jp-ToolbarButton {
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    margin: 0 2px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--jp-ui-font-color1);
+  }
+
+  .jupyt-ai-button.jp-ToolbarButton:hover {
+    background-color: var(--jp-layout-color2);
+  }
+
+  .jupyt-ai-button .jp-ToolbarButton-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 2px;
+  }
+
+  .jupyt-ai-button .jp-ToolbarButton-label {
+    font-size: var(--jp-ui-font-size1);
+  }
+
+  /* Style for inline code in markdown */
+  .jp-MarkdownOutput code {
+    background-color: var(--jp-layout-color2);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: var(--jp-code-font-family);
+    font-size: var(--jp-code-font-size);
+    color: var(--jp-content-font-color1);
+  }
+} 
