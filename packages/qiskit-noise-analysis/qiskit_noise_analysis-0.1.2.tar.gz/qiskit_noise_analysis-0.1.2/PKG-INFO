@@ -1,0 +1,71 @@
+Metadata-Version: 2.4
+Name: qiskit_noise_analysis
+Version: 0.1.2
+Summary: Project is under development and soon be uploaded.
+Home-page: https://github.com/joshicoding/qiskit_noise_analysis
+Author: Mohit Joshi
+Author-email: joshimohit@bhu.ac.in
+Project-URL: Bug Tracker, https://github.com/joshicoding/qiskit_noise_analysis/issues
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: qiskit>=2.0.0
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: matplotlib>=3.10.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Quantum Noise Analysis
+**Note**
+The project is still under development. Please be patient for now and raise any query or feature directly to mail joshimohit@bhu.ac.in
+
+## Resource estimation with the package
+```python
+from qiskit_noise_analysis import ResourceEstimation
+
+resource_estimation = ResourceEstimation()
+report = resource_estimation.get_estimation(
+    circuits = [ circ1, circ2, ....], 
+    basis_gates= [''].
+    circuit_names= ['circ1', 'circ2'])
+
+```
+
+
+### Implementation Example
+```python
+# create quantum circuit
+def generate_random_circuit(n_qubits, depth, random_seed=42):
+    from qiskit.circuit.random import random_circuit
+    max_operands = 2
+
+    qc = random_circuit(
+        num_qubits=n_qubits,
+        depth=depth,
+        max_operands=2,
+        measure=True,
+        seed=random_seed  
+    )
+
+    return qc
+
+resource_estimation = ResourceEstimation()
+report = resource_estimation.get_estimation(circuits = [ generate_random_circuit(4,5, 42) , generate_random_circuit(4,5,43) ], circuit_names= ['circ1', 'circ2'])
+resource_estimation.plot()
+
+
+```
