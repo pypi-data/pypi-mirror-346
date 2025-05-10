@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: ProtY
+Version: 1.3
+Summary: The project is about using a pretrained protein transformer architecture to create embeddings of various proteins, and then performing nonlinear dimensionality reduction on those embeddings to see which kinds of similarities in protein function/structure we can restore
+Home-page: https://github.com/uhlarbrigi/PEPTIDE-SEQUENCE-EMBEDDING-AND-CLUSTERING-VISUALIZATION.git
+Author: Csapó Bence, Galló Dominik, Uhlár Brigitta
+Author-email: uhlarbrigi@gmail.com
+Maintainer-email: "Csapó Bence, Galló Dominik, Uhlár Brigitta" <uhlarbrigi@gmail.com>
+License: GPL-3.0-only
+Project-URL: Homepage, http://your-git.com
+Project-URL: Documentation, https://peptide-sequence-embedding-and-clustering-visualization.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/uhlarbrigi/PEPTIDE-SEQUENCE-EMBEDDING-AND-CLUSTERING-VISUALIZATION.git
+Project-URL: Issues, http://your-git.com/issues
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.25.2
+Requires-Dist: matplotlib>=3.6.2
+Requires-Dist: scikit-learn>=1.1.3
+Requires-Dist: scipy>=1.9.3
+Requires-Dist: PyWavelets>=1.5.0
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: emd>=0.6.2
+Requires-Dist: nolds>=0.5.2
+Requires-Dist: tqdm>=4.64.1
+Requires-Dist: pyQt5>=5.15.7
+Requires-Dist: fair-esm>=0.1.0
+Requires-Dist: sphinx_rtd_theme>=3.0.2
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+
+# Peptide sequence embedding and clustering/visualization
+The project is about using a pretrained protein transformer architecture to create embeddings of various proteins, and then performing nonlinear dimensionality reduction on those embeddings to see which kinds of similarities in protein function/structure we can restore.
+
+## Installation
+Install `ProtY` using pip
+
+```
+pip install ProtY
+```
+
+Clone the git repository
+```
+git clone https://github.com/uhlarbrigi/PEPTIDE-SEQUENCE-EMBEDDING-AND-CLUSTERING-VISUALIZATION.git
+```
+
+Change directory to the cloned repository
+```
+cd pyPCG-tooblox
+```
+Install with pip
+```
+pip install .
+```
+
+## Building the documentation
+Install required packages
+```
+pip install -r docs/requirements.txt
+```
+Call Sphinx build command
+```
+sphinx-build -M html docs/source docs/build
+```
+On Windows you can also run the `make.bat` file
+```
+.\docs\make.bat html
+```
+
+## Correspondence
+Brigitta Uhlár 
+Dominik Galló 
+Bence Csapó

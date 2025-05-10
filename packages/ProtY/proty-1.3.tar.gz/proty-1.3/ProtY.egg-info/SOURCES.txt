@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+ProtY/__init__.py
+ProtY/worky_worky.py
+ProtY.egg-info/PKG-INFO
+ProtY.egg-info/SOURCES.txt
+ProtY.egg-info/dependency_links.txt
+ProtY.egg-info/requires.txt
+ProtY.egg-info/top_level.txt

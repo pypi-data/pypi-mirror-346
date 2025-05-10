@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools==75.6.0", "wheel==0.41.3"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+# !TODO: Change these settings
+name = "ProtY"
+version = "1.3"
+authors = [
+  { name="Csapó Bence"},
+  { name="Galló Dominik"},
+  { name="Uhlár Brigitta"}
+]
+maintainers = [
+  { name="Csapó Bence, Galló Dominik, Uhlár Brigitta", email = "uhlarbrigi@gmail.com"},
+]
+description = "The project is about using a pretrained protein transformer architecture to create embeddings of various proteins, and then performing nonlinear dimensionality reduction on those embeddings to see which kinds of similarities in protein function/structure we can restore"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = { text = "GPL-3.0-only" }
+
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+# Get dependencies dynamically from requirements.txt
+dependencies = {file = ["requirements.txt"]}
+
+[project.urls]
+# !TODO: Change these settings
+Homepage = "http://your-git.com"
+Documentation = "https://peptide-sequence-embedding-and-clustering-visualization.readthedocs.io/en/latest/"
+Repository = "https://github.com/uhlarbrigi/PEPTIDE-SEQUENCE-EMBEDDING-AND-CLUSTERING-VISUALIZATION.git"
+Issues = "http://your-git.com/issues"
+
+[tool.setuptools]
+# Name of the package directory
+packages = ["ProtY"]
+
+[project.optional-dependencies]
+docs = ["sphinx" , "sphinx_rtd_theme"]
