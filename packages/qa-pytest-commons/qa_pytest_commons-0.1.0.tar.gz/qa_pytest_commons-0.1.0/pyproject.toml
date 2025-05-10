@@ -1,0 +1,40 @@
+[project]
+name = "qa-pytest-commons"
+version = "0.1.0"
+description = "PyTest commons library"
+authors = [{ name = "Adrian Herscu", email = "adrian.herscu@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "qa-testing-utils",
+  "tenacity",
+  "PyHamcrest",
+  "pytest",
+  "pyfunctional",
+  "more-itertools"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qa/pytest/commons"]
+
+[tool.hatch.envs.default]
+path = ".hatch/envs/default"
+dependencies = [
+  "pytest",
+  "pytest-cov",
+  "mypy",
+  "isort",
+  "autopep8"
+]
+
+[tool.hatch.envs.default.scripts]
+test = "pytest"
+lint = "mypy src"
+format = "autopep8 --in-place --recursive src"
