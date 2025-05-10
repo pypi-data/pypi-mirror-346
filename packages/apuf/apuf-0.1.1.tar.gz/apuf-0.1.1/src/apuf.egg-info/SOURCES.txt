@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/apuf.py
+src/challenges.py
+src/apuf.egg-info/PKG-INFO
+src/apuf.egg-info/SOURCES.txt
+src/apuf.egg-info/dependency_links.txt
+src/apuf.egg-info/top_level.txt
+tests/test_apuf.py
+tests/test_challenges.py
+tests/test_responses.py
