@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: CW-DoublePendulum
+Version: 0.3.2
+Summary: A Python package that uses NumPy and Matplotlib to simulate an interactive double pendulum.
+Author-email: Chase Worsley <worsleychase@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Worsleychase/InteractiveDoublePendulum
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Dynamic: license-file
+
+# Interactive Double Pendulum
+
+An interactive double pendulum simulator built with Python and Matplotlib.  
+This tool visualizes the chaotic motion of a double pendulum and allows real-time parameter tuning, trail visualization, and data collection.
+
+## Features
+
+- Adjustable parameters: masses, lengths, gravity, and time step via sliders.
+- Real-time animation with pause, reset, and trail toggles.
+- Data collection and export to CSV for further analysis.
+- Built-in verification test to check simulation correctness.
+- Minimal dependencies: just `numpy` and `matplotlib`.
+
+## Installation
+
+Install directly from PyPI:
+
+```bash
+pip install CW-DoublePendulum
+```
+
+
