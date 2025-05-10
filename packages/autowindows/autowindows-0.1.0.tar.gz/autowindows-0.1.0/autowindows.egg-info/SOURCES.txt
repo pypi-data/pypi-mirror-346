@@ -1,0 +1,9 @@
+README.md
+setup.py
+autowindows/__init__.py
+autowindows/autowindows.py
+autowindows.egg-info/PKG-INFO
+autowindows.egg-info/SOURCES.txt
+autowindows.egg-info/dependency_links.txt
+autowindows.egg-info/requires.txt
+autowindows.egg-info/top_level.txt
