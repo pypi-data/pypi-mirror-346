@@ -1,0 +1,26 @@
+[project]
+name = "cert-alert"
+version = "0.0.1"
+description = "CLI to test TLS certificate expiry"
+readme = "README.md"
+authors = [{ name = "xoryouyou", email = "xoryouyou@gmail.com" }]
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+    "argparse>=1.4.0",
+    "coloredlogs>=15.0.1",
+    "cryptography>=44.0.0",
+    "pydantic>=2.10.6",
+    "pytest>=8.3.4",
+    "pyyaml>=6.0.2",
+]
+
+[project.scripts]
+cert-alert = "cert_alert.__main__:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "cert_alert"]
+
+[project.urls]
+Homepage = "https://github.com/xoryouyou/cert-alert"
+Issues = "https://github.com/xoryouyou/cert-alert/issues"

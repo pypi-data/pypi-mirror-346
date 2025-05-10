@@ -1,0 +1,2 @@
+[console_scripts]
+cert-alert = cert_alert.__main__:main
