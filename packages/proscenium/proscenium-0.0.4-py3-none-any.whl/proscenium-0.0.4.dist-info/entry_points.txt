@@ -1,0 +1,3 @@
+[console_scripts]
+proscenium-bot=proscenium.bin.bot:app
+
