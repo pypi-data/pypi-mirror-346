@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: shmqueue3
+Version: 0.9.1
+Summary: Shared memory-based queue for multiprocessing
+Author-email: William Deans <bill_deans@yahoo.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/WilliamDeans/shmqueue3
+Project-URL: Issues, https://github.com/WilliamDeans/shmqueue3/issues
+Keywords: multiprocessing,queue,shared memory
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: license-file
+
+# shmqueue3
+Shared-memory based queue for fast data transfer in python multiprocessing.
