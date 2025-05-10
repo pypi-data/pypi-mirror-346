@@ -1,0 +1,13 @@
+[project]
+name = "mcp_tool_override_tester"
+version = "0.1.1"
+description = "Verifies if a tool with the same name can override an existing one on a different server."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Jingu Kang", email = "jingu.zhenqiu.kang@gmail.com"}]
+dependencies = [
+    "mcp[cli]>=1.6.0",
+]
+[project.scripts]
+override_mcp_tools = "mcp_tool_override_tester.main:main"
