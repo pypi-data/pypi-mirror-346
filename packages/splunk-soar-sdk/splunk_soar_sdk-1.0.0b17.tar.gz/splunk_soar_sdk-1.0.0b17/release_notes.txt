@@ -1,0 +1,33 @@
+# [1.0.0-beta.17](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.16...1.0.0-beta.17) (2025-05-09)
+
+
+### Bug Fixes
+
+* change variable name ([aba151e](https://github.com/phantomcyber/splunk-soar-sdk/commit/aba151e9af0497278ec523722e1982493b2f1e7c))
+* merge conflicts ([791ef35](https://github.com/phantomcyber/splunk-soar-sdk/commit/791ef357eb64071105001d3e59b9c30bc658c480))
+
+
+### Features
+
+* structured exceptions ([902600d](https://github.com/phantomcyber/splunk-soar-sdk/commit/902600d1088131a5ab3339001fe61cd5a0044a1e))
+
+
+
+
+
+# [1.0.0-beta.17](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.16...1.0.0-beta.17) (2025-05-09)
+
+
+### Bug Fixes
+
+* change variable name ([aba151e](https://github.com/phantomcyber/splunk-soar-sdk/commit/aba151e9af0497278ec523722e1982493b2f1e7c))
+* merge conflicts ([791ef35](https://github.com/phantomcyber/splunk-soar-sdk/commit/791ef357eb64071105001d3e59b9c30bc658c480))
+
+
+### Features
+
+* structured exceptions ([902600d](https://github.com/phantomcyber/splunk-soar-sdk/commit/902600d1088131a5ab3339001fe61cd5a0044a1e))
+
+
+
+
