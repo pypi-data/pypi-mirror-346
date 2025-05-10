@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+aionrails.egg-info/PKG-INFO
+aionrails.egg-info/SOURCES.txt
+aionrails.egg-info/dependency_links.txt
+aionrails.egg-info/requires.txt
+aionrails.egg-info/top_level.txt
