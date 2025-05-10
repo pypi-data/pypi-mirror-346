@@ -1,0 +1,10 @@
+**/__pycache__
+tests/data/cs/inc/
+tests/data/me/inc/
+tests/data/Reference_FMU/v1/cs/BouncingBall/
+tests/data/Reference_FMU/v1/me/BouncingBall/
+tests/data/Reference_FMU/v2/BouncingBall
+tests/data/Reference_FMU/v2/Dahlquist
+tests/data/Reference_FMU/v2/Stair
+mosaik_fmi.egg-info/
+build

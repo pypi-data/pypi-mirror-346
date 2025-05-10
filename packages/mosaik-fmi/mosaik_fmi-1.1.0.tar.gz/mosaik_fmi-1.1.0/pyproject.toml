@@ -1,0 +1,67 @@
+[project]
+name = "mosaik-fmi"
+version = "1.1.0"
+description = "An adapter for FMUs (ME or CS) in mosaik"
+authors = [{ name = "Cornelius Steinbrink", email = "mosaik@offis.de" }]
+license = "MIT"
+readme = "README.rst"
+requires-python = ">=3.9"
+dependencies = [
+    "mosaik-api-v3 >=3.0.4, <4",
+    "fmipp >=2.0.0",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mosaik_components"]
+
+[tool.hatch.build.targets.sdist]
+packages = ["src/mosaik_components"]
+
+
+[project.urls]
+Repository = "https://gitlab.com/mosaik/components/mosaik-fmi"
+Documentation = "https://gitlab.com/mosaik/components/mosaik-fmi"
+Discussions = "https://github.com/orgs/OFFIS-mosaik/discussions"
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py39"
+
+[[tool.uv.index]]
+name = "PyPi"
+url = "https://pypi.org/simple"
+publish-url = "https://upload.pypi.org/legacy/"
+
+[[tool.uv.index]]
+name = "TestPyPi"
+url = "https://test.pypi.org/simple"
+publish-url = "https://test.pypi.org/legacy/"
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.hatch.version]
+source = "vcs"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mosaik>=3.5.0",
+    "pytest>=8.3.5",
+]
