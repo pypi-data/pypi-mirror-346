@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+test_docx2markdown.py
+docx2markdown_custom.egg-info/PKG-INFO
+docx2markdown_custom.egg-info/SOURCES.txt
+docx2markdown_custom.egg-info/dependency_links.txt
+docx2markdown_custom.egg-info/requires.txt
+docx2markdown_custom.egg-info/top_level.txt
