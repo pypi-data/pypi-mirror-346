@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: opeira
+Version: 0.0.8
+Summary: OPEIRA - Energy and Process Systems Toolbox
+Project-URL: Homepage, http://pypi.python.org/pypi/opeira/
+Author: opeira
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# OPEIRA - Energy and Process Systems Toolbox
+
+
