@@ -1,0 +1,100 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "litdb"
+version = "2.1.8"
+authors = [
+  {name = "John Kitchin", email = "jkitchin@andrew.cmu.edu"},
+]
+maintainers = [
+  {name = "John Kitchin", email = "jkitchin@andrew.cmu.edu"}
+]
+description = "A literature database tool with GPT integration."
+license = "MIT"
+readme = {file = "README.org", content-type = "text/plain"}
+dependencies = [
+  "toml",
+  "tomlkit",
+  "requests",
+  "pymupdf4llm",
+  "docling",
+  "langchain",
+  "tqdm",
+  "libsql-experimental",
+  "sentence-transformers",
+  "transformers",
+  "click",
+  "rich",
+  "beautifulsoup4",
+  "ratelimit",
+  "python-docx",
+  "python-pptx",
+  "nbconvert",
+  "nbformat",
+  "ollama",
+  "litellm",
+  "dateparser",
+  "jinja2",
+  "pytesseract",
+  "pillow",
+  "bibtexparser",
+
+# these are sort of hard to install, and rely on other libraries
+# I document them here, but consider it optional
+#  "pyaudio",
+#  "playsound",
+
+  # for coa
+  "pandas",
+  "more-itertools",
+  "nameparser",
+  "tabulate",
+  "IPython",
+
+  # youtube
+  "yt_dlp",
+  "webvtt-py",
+
+  # the streamlit app
+  "streamlit",
+
+  # image clip search
+  "pyperclip",
+  "pillow",
+  "pillow_heif",
+
+  # web crawling
+  "scrapy",
+  "backoff",
+
+  # deep research
+  "gpt_researcher",
+  "duckduckgo-search",
+  "langchain_ollama",
+  "langchain_google_genai",
+  "langchain_anthropic",
+  "mistune",
+  "htmldocx",
+  "docx",
+  "md2pdf",
+  "pypandoc",
+
+  # mcp server
+  "mcp[cli]"
+]
+
+[project.scripts]
+litdb = "litdb.cli:cli"
+litdb_mcp = "litdb.mcp:main"
+
+[project.urls]
+Homepage = "https://github.com/jkitchin/litdb"
+
+
+# (shell-command "uv build")
+# (shell-command "uv publish")
