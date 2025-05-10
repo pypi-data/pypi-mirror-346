@@ -1,0 +1,3 @@
+[console_scripts]
+pa = pinaxai.cli.entrypoint:pinaxai_cli
+pinaxai = pinaxai.cli.entrypoint:pinaxai_cli
