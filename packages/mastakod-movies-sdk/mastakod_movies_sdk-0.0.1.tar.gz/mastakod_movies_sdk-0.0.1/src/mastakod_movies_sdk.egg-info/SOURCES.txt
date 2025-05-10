@@ -1,0 +1,11 @@
+pyproject.toml
+src/mastakod_movies_sdk/__init__.py
+src/mastakod_movies_sdk/film_client.py
+src/mastakod_movies_sdk/film_config.py
+src/mastakod_movies_sdk.egg-info/PKG-INFO
+src/mastakod_movies_sdk.egg-info/SOURCES.txt
+src/mastakod_movies_sdk.egg-info/dependency_links.txt
+src/mastakod_movies_sdk.egg-info/requires.txt
+src/mastakod_movies_sdk.egg-info/top_level.txt
+src/mastakod_movies_sdk/schemas/__init__.py
+src/mastakod_movies_sdk/schemas/schemas.py
