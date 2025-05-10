@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: r3fit
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Project-URL: homepage, https://github.com/einstein8612/r3fit
+Project-URL: documentation, https://github.com/einstein8612/r3fit
+Project-URL: repository, https://github.com/einstein8612/r3fit
