@@ -1,0 +1,40 @@
+[project]
+name = "qa-testing-utils"
+version = "0.1.0"
+description = "Testing utilities library for QA automation"
+authors = [{ name = "Adrian Herscu", email = "adrian.herscu@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "PyHamcrest",
+  "pyfunctional",
+  "ppretty",
+  "allure-pytest",
+  "more-itertools",
+  "returns"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qa/testing/utils"]
+
+[tool.hatch.envs.default]
+path = ".hatch/envs/default"
+dependencies = [
+  "pytest",
+  "pytest-cov",
+  "mypy",
+  "isort",
+  "autopep8"
+]
+
+[tool.hatch.envs.default.scripts]
+test = "pytest"
+lint = "mypy src"
+format = "autopep8 --in-place --recursive src"

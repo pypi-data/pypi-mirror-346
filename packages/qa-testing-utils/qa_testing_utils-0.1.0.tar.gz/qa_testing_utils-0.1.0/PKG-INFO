@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: qa-testing-utils
+Version: 0.1.0
+Summary: Testing utilities library for QA automation
+Author-email: Adrian Herscu <adrian.herscu@gmail.com>
+Requires-Python: >=3.13
+Requires-Dist: allure-pytest
+Requires-Dist: more-itertools
+Requires-Dist: ppretty
+Requires-Dist: pyfunctional
+Requires-Dist: pyhamcrest
+Requires-Dist: returns
+Description-Content-Type: text/markdown
+
+# qa-testing-utils
