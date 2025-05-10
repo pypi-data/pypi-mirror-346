@@ -1,0 +1,10 @@
+htvanila/__init__.py,sha256=9dOIVVniEG6tYP-o0tFsIsiYLZrcWcSzX68kdNaBe0A,2068
+htvanila/cli.py,sha256=o01GW8B7nIGcglvaV87VqiS4SpQfkRbDVw_7PB1gBlY,3753
+htvanila/core.py,sha256=VDAjHISsRvPef2vM2czZEG7KLhKbfrWPECgJFi-Dwz8,6169
+htvanila/optimizer.py,sha256=k8NVWnsKPbxQwf_MVX9GK5Cz9E50H4tvwJvM0ERCgb8,2168
+htvanila/utils.py,sha256=cCGtloqAsdKEXBiVlOnlQsFbTGITNgp4bx24zSrMqpI,2998
+htvanila-0.1.1.dist-info/METADATA,sha256=8aW8AUzpDDaR23BpCgkWKNQRDIzk_qbnP-bZb4QfN3E,618
+htvanila-0.1.1.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+htvanila-0.1.1.dist-info/entry_points.txt,sha256=MnVVEhyaow4SwM_osU5P0iOjSN5NSqTd3ekLw42_8zs,45
+htvanila-0.1.1.dist-info/top_level.txt,sha256=VnOl-94CDZi-bJhKbVr-v-EvqEGmgXSCAsgGAnBUWbs,9
+htvanila-0.1.1.dist-info/RECORD,,
