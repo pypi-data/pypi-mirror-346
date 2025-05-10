@@ -1,0 +1,10 @@
+bflore/__init__.py,sha256=LRuQzy4CPQ6HpGQ8Q3L8-Td8yWE_kkEaZ0SDYyiQyXA,274
+bflore/cli.py,sha256=Gify6zj89r9ajaoNfslPp9DPSkKAVsHXQB02aNEWUM4,8970
+bflore/core.py,sha256=ae5Bx5iQ9l6NMnGuQBl6AaJBRuipg8Fw8C0CiAr7RBg,7207
+bflore/middleware.py,sha256=XSXMnO-JK_EnP0KUyEVTUkKVcE87SE7zdeMXYUApxhM,4282
+bflore/utils.py,sha256=zchRGBBfgcIJ-dvtHk1q2g_3wKwXkuGuAa9zd8vEqCM,7431
+bflore-0.1.0.dist-info/METADATA,sha256=yT17mzAk4LvP5EllCySkNhKuXqlvFoRYo0gTlllm700,4122
+bflore-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+bflore-0.1.0.dist-info/entry_points.txt,sha256=UU13VZFtbBzdLbL-ud5LZvtpmBWtcLLLleMnmmKXRbs,43
+bflore-0.1.0.dist-info/top_level.txt,sha256=CduxCys5Q66Lmtjf6df1QTeLovFVW0ZlBwlpAQ3v8IQ,7
+bflore-0.1.0.dist-info/RECORD,,
