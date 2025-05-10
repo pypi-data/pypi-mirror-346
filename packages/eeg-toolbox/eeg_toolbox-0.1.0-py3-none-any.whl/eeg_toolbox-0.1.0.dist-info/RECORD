@@ -1,0 +1,10 @@
+eeg_toolbox/__init__.py,sha256=arMWoeJO8xFOZ1U6vryI8sC6ElAiH1JgRMo3efkXJDs,127
+eeg_toolbox/detection.py,sha256=i8j8ozvQQcDQP4sPDl-of5UrfpmS6DFM4Ih0ukKc_Gc,2242
+eeg_toolbox/fourier_of_data.py,sha256=tKJxSV29Mv0RsotsSr1SFfR1udyzWlzREwHVGxZkv00,610
+eeg_toolbox/load.py,sha256=5FSYmdL5vM69TnQFvY2K4X6-8yFPsY5KYu8xK1-S0ec,568
+eeg_toolbox/processing.py,sha256=3zEpJmLcZDKPgbSTBatOgWu-Uap-eRcw-Y59PI1NQFY,3674
+eeg_toolbox/visual.py,sha256=uwmHu9fes4tfeMSWoFP7YvLSk8IWPg7_d8Wv43FXhZA,4025
+eeg_toolbox-0.1.0.dist-info/METADATA,sha256=2aKaoSe10nLjCwPQ4vIcKN0WdvIoMQRyTo18qwXNnzw,4018
+eeg_toolbox-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+eeg_toolbox-0.1.0.dist-info/top_level.txt,sha256=dlaJJ7ZXWl6EML515WW1o8ZAEc22fd_r8a7davFDdVM,12
+eeg_toolbox-0.1.0.dist-info/RECORD,,
