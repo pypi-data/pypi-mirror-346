@@ -1,0 +1,6 @@
+[console_scripts]
+authors = authors.cli:cli_authors
+authors-delete-author = authors.cli:cli_delete_author
+authors-update-author-email = authors.cli:cli_update_author_email
+authors-update-author-name = authors.cli:cli_update_author_name
+authors-update-author-orcid = authors.cli:cli_update_author_orcid
