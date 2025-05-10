@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: my_package_kirill_panichkin
+Version: 0.1
+Summary: Описание пакета
+Home-page: https://github.com/terriblepanic/my_package.git
+Author: Паничкин Кирилл
+Author-email: unbearable.panic@gmail.com
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: summary
+
+# my_package
+
+Простой Python-пакет, созданный Паничкиным Кириллом.
+
+## Установка
+
+```bash
+pip install git+https://github.com/terriblepanic/my_package.git
