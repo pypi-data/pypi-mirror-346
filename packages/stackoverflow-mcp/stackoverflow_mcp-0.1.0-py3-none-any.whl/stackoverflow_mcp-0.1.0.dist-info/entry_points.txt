@@ -1,0 +1,2 @@
+[console_scripts]
+stackoverflow-mcp = stackoverflow_mcp.main:main
