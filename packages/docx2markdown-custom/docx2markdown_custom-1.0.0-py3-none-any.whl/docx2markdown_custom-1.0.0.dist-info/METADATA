@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: docx2markdown_custom
+Version: 1.0.0
+Summary: Convert .docx files to Markdown, preserving headings, paragraphs, and tables.
+Author: Sid Mathur
+Author-email: sid.mathur@gmail.com
+License: MIT
+Requires-Dist: python-docx>=0.8.11
