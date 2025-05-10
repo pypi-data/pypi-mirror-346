@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: autowindows
+Version: 0.1.1
+Summary: Библиотека для управления Windows с помощью Python.
+Author: Georgii Nikishov
+Author-email: timofeynikishov@yandex.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: pyautogui
+Requires-Dist: pycaw
+Requires-Dist: comtypes
+Requires-Dist: wmi
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
