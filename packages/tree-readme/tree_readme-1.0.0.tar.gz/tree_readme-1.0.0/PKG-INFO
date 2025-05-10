@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: tree-readme
+Version: 1.0.0
+Summary: A simple README generator for Python projects.
+Author-email: Jakub Kościan <kuba.koscian001@gmail.com>
+Maintainer-email: Jakub Kościan <kuba.koscian001@gmail.com>
+Project-URL: repository, https://github.com/kvbiii/tree-readme
+Keywords: readme,generator,python,project
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# readme-generator
