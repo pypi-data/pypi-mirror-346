@@ -1,0 +1,9 @@
+elifearticle/__init__.py,sha256=6bYcjtcATvc99ZNMjTUfPlrJP3-1WenVEc656roVn_I,23
+elifearticle/article.py,sha256=XlazW_jxKpCKfrZspZxVtG2RmKYL-dMVERChYCAMTqc,12975
+elifearticle/parse.py,sha256=91OJkxqgSDXLQHGPzl_I3rxqoBfRU4iuI_1D7JDeZB8,28608
+elifearticle/utils.py,sha256=1hguRLfsgAcovJ6tz44xb_95VrB3MLHLw3qYQPplhrs,6890
+elifearticle-0.23.0.dist-info/LICENSE,sha256=tVf-s04sTJPXmlI9jPJVOZjNf_B18eIIh71p11oNfNs,1071
+elifearticle-0.23.0.dist-info/METADATA,sha256=PNCUeBLSuWQ2cwGos2fI8PqlSvdVZTSqQ89GsXxyTZM,766
+elifearticle-0.23.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+elifearticle-0.23.0.dist-info/top_level.txt,sha256=bnVCxYnQDoj2h-E4PGhq4uwzwM6epJ5sJrHYORf5QOw,13
+elifearticle-0.23.0.dist-info/RECORD,,
