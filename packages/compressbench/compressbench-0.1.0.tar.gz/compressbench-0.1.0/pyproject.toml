@@ -1,0 +1,60 @@
+[project]
+name = "compressbench"
+version = "0.1.0"
+description = "CLI tool to benchmark compression algorithms on Parquet datasets"
+authors = [
+    { name="Konstantinas Mamonas" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text="MIT" }
+
+dependencies = [
+    "typer",
+    "pyarrow",
+    "duckdb",
+    "python-snappy",
+    "lz4",
+    "zstandard",
+    "seaborn"
+]
+
+
+
+[project.optional-dependencies]
+gzip = []
+snappy = ["python-snappy"]
+lz4 = ["lz4"]
+zstd = ["zstandard"]
+all = ["python-snappy", "lz4", "zstandard"]
+viz = ["matplotlib"]
+dev = [
+  "build",
+  "twine",
+  "pytest",
+  "black",
+  "ruff",
+]
+
+[project.scripts]
+compressbench = "compressbench.cli:app"
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["compressbench"]
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+combine_as_imports = true
+
+[tool.ruff]
+line-length = 120
+select = ["E", "F", "I"]
+target-version = "py313"

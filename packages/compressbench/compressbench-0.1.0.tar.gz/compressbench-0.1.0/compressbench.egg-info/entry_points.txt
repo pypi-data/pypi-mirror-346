@@ -1,0 +1,2 @@
+[console_scripts]
+compressbench = compressbench.cli:app

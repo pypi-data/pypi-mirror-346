@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+compressbench/__init__.py
+compressbench/benchmark.py
+compressbench/cli.py
+compressbench/results.py
+compressbench/types.py
+compressbench/utils.py
+compressbench.egg-info/PKG-INFO
+compressbench.egg-info/SOURCES.txt
+compressbench.egg-info/dependency_links.txt
+compressbench.egg-info/entry_points.txt
+compressbench.egg-info/requires.txt
+compressbench.egg-info/top_level.txt
+tests/test_compressors.py
+tests/test_results.py
