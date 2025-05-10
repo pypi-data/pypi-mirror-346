@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+src/biosignal_quality/__init__.py
+src/biosignal_quality/biosignal_quality.py
+src/biosignal_quality.egg-info/PKG-INFO
+src/biosignal_quality.egg-info/SOURCES.txt
+src/biosignal_quality.egg-info/dependency_links.txt
+src/biosignal_quality.egg-info/requires.txt
+src/biosignal_quality.egg-info/top_level.txt
