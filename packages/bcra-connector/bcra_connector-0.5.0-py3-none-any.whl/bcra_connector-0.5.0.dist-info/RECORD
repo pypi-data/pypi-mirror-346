@@ -1,0 +1,16 @@
+bcra_connector/__about__.py,sha256=ScwrsoTG4Jp3gCphFH5AJNnhCl94poCw0wfA4QqStu0,50
+bcra_connector/__init__.py,sha256=hHj2JwI0ZhK8Dji2UR77Kp4JbidWvsPoBwQhY6tv-Vo,1542
+bcra_connector/_version.py,sha256=5mZtFlP8jOukh3f-P2E13kgXbd530p5BV0VWJJCdLIs,171
+bcra_connector/bcra_connector.py,sha256=7hESAJGuKDRQLX1GWEW0iX_8BhCkMlrHFJ27lbYdemE,41026
+bcra_connector/rate_limiter.py,sha256=6VKcN857jdf8ZwsqgVXJacpX4gtif_hXRjev-_rwBLY,4390
+bcra_connector/timeout_config.py,sha256=KzzMCWjm8MSpEIaoMFPPffZSLSuINjtK8CejaUTL1II,1884
+bcra_connector/cheques/__init__.py,sha256=TPItV2C4ojSOHHuSUVrAesBr2czKbjUm4ageyQw9Mv0,260
+bcra_connector/cheques/cheques.py,sha256=6T5zEJOrXCazdCBY5vGPZ42R1NdvvL_2hh2Jopo0kok,5107
+bcra_connector/estadisticas_cambiarias/__init__.py,sha256=AYV1qV2oVPCp4VHb8VVmxcVtUBVbequ9SHIjxwz-SS0,422
+bcra_connector/estadisticas_cambiarias/estadisticas_cambiarias.py,sha256=25FJVXJL8vjnU3-QNw3EL5mfF2Cd5ezFUkirQQ010wg,5912
+bcra_connector/principales_variables/__init__.py,sha256=_VPzt7MvWJEFv1JIuYjKJ5l0NBdjADIIcyrNtheMBKg,266
+bcra_connector/principales_variables/principales_variables.py,sha256=X35LctaWDyoabx7qIlvJWFqpC2irFNqmutGKuUJq0_Y,7445
+bcra_connector-0.5.0.dist-info/METADATA,sha256=SeiibRmzB8DHhlsctpVT7RH-DyVVIjQgUAYIXBBDWYs,6618
+bcra_connector-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bcra_connector-0.5.0.dist-info/licenses/LICENSE,sha256=vL9SLsRk5ayfNA281uZMPrOKVwRgxyhlQE6MkVMacmA,1065
+bcra_connector-0.5.0.dist-info/RECORD,,
