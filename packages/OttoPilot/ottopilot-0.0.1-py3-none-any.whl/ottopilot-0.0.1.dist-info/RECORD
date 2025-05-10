@@ -1,0 +1,8 @@
+ottopilot/__init__.py,sha256=y-A-u0MoTDKA-SA3QhC4K-5i8cVyWv43rFSmIpdr2PA,374
+ottopilot/cli.py,sha256=FUpFaeQ6Z2dvWZKkPccF6-RDl10J52dB3wINIM1w570,4455
+ottopilot/commands.py,sha256=9pLYdg4iJ3yjTdT5WTQLavcvjDR5w3r9zsZlNKm6bos,3232
+ottopilot/log_utils.py,sha256=5HNoq26YmYvZ0gcrpMwIt-xnW5IvI5ruKMZnL2m4Ja4,1364
+ottopilot-0.0.1.dist-info/METADATA,sha256=y-aIA_Tm_LrlelavNkkoDnfKk62idd6g7Ym7-3x1zDo,197
+ottopilot-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ottopilot-0.0.1.dist-info/entry_points.txt,sha256=JUnBlVBakdYqDLTOPop-R3G3faAHi2U8r0GLHpoe_Bk,65
+ottopilot-0.0.1.dist-info/RECORD,,

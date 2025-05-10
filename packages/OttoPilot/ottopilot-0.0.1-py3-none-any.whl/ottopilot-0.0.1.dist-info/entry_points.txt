@@ -1,0 +1,3 @@
+[console_scripts]
+op = ottopilot:main
+ottopilot = ottopilot:main
