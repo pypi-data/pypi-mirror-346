@@ -1,0 +1,17 @@
+[package]
+name = "hal-common"
+version = "0.1.0"
+edition.workspace = true
+authors.workspace = true
+description.workspace = true
+
+[dependencies]
+binrw.workspace = true
+num-traits.workspace = true
+
+pyo3 = { workspace = true, optional = true}
+
+[features]
+default = []
+std = []
+pyo3 = ["dep:pyo3", "std"]
