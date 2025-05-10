@@ -1,0 +1,12 @@
+comicwalker_downloader/__init__.py,sha256=_44Bf7L0FN2yO3qK1wlBdW2vaut78Y-ojVXCPO9ULcI,285
+comicwalker_downloader/__main__.py,sha256=nGK7vHS5YFdm5Vnva5_OEoyS9wX96sfg0FtKbT1TzuQ,217
+comicwalker_downloader/_version.py,sha256=8oAxKUG747GUokmxjkrWejyJa5yPNEsoJDlXxoedxTw,21
+comicwalker_downloader/comic_downloader.py,sha256=vdrySZ1qb5KjXmhQa_gMO8jp0JdEUUeDbHKM5J2Xtmc,2406
+comicwalker_downloader/comic_parser.py,sha256=srA7dNMsz-wWqh_ka1A-7LTiHytOVUVx_r7-XQ6y80o,2833
+comicwalker_downloader/run.py,sha256=opNo15ST8UKTI_RZAMGGQWm8qB1EhXvzAD7ZtC0SRac,2005
+comicwalker_downloader/utils.py,sha256=Qz5CrZgwBpSzzlexVjv5eYjKFEyHKxa_OuTsLGH8zRQ,189
+cowado-0.1.1.dist-info/METADATA,sha256=RfJTuyagcVJ6TMrHPwFXhhIl1NDQKSRJb35ZDWG-sWI,1666
+cowado-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+cowado-0.1.1.dist-info/entry_points.txt,sha256=6l_V5AiWlc5lQRAxT4XG70-KpZdLSgQkFZhWnvb72rI,64
+cowado-0.1.1.dist-info/top_level.txt,sha256=yLYFtQ0sxp7IHAUxGkssMjACYuUTDSKUMzKSqC0Rscw,23
+cowado-0.1.1.dist-info/RECORD,,
