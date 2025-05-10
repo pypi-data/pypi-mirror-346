@@ -1,0 +1,11 @@
+compas_shapeop/__init__.py,sha256=YvuYzWnKtqBb-IqG8HAu-nhIYAsgj9Vmc_b9o7vO-js,22
+compas_shapeop/__main__.py,sha256=-GqoftNECZBtC8F82KWJrdSD05BcKBrrL0ElHEEUHyk,36
+compas_shapeop/_shapeop.cpython-39-x86_64-linux-gnu.so,sha256=AEVZE2P4myqRbHV6rrZHtNf7hk744rYDSiCUnwlk5us,608080
+compas_shapeop/meshsolver.py,sha256=PaLiSHpYrCmKFT9u45oTClY6TgF0lQemvNT56DVKInI,12675
+compas_shapeop/shapeop.py,sha256=d2-MhWR4Naw3wDM-ChR4UohHYdy4ohYWWH_Wa1uMnjo,19010
+compas_shapeop-0.1.2.dist-info/METADATA,sha256=kSeZwLuPwSPBI3LdStqUyvi0nXp0GXFp6dAuxrnEYws,2067
+compas_shapeop-0.1.2.dist-info/WHEEL,sha256=-4jWppplisyp4ZGpY8MAay4xQthrs_toKInWtb1_txM,152
+compas_shapeop-0.1.2.dist-info/RECORD,,
+compas_shapeop-0.1.2.dist-info/licenses/AUTHORS.md,sha256=kTp7GhdERmDvEq7ePv22RiXS5z6u2Z17hBIHbD6BmXo,427
+compas_shapeop-0.1.2.dist-info/licenses/LICENSE,sha256=7IDWCvYePJRDzeYrngbOaxy_f6HWQ680zk88avWskN0,1113
+compas_shapeop-0.1.2.dist-info/licenses/LICENSE.shapeop,sha256=i62-ST1A1QLO3XkixAzR-4uoZ2FAHFn7vPIaCcmJlcI,17069
