@@ -1,0 +1,15 @@
+vlc_gesture_control/__init__.py,sha256=gKTGPxuR22K65iAJ0hmDV4PUQ278LxYye4Dai7UQe-4,172
+vlc_gesture_control/cli.py,sha256=HmJZVLKy7Sx64AnYr0kidzhi68CagjwUvsc6IIqwLgo,1896
+vlc_gesture_control/config.py,sha256=z4J0gnyqo4C93rsYzB6HDVLeLSSey05Q6a8qqiZ1Zv8,3125
+vlc_gesture_control/gesture_detector.py,sha256=ieq3sh3XJa1O1BcqVt51Dr7JtAXBZRpXSih5MYoWsWs,15855
+vlc_gesture_control/media_controller.py,sha256=jZyTWv611lx-V9PbKlgK05G12vEUJnZO5r9FzU1Sr6s,10981
+vlc_gesture_control/vlc_m_cpu.py,sha256=64Hsy-I4FYjoJjNMeMWuESGB9TA29hXKVk75yyamoMk,18696
+vlc_gesture_control/vlc_m_gpu.py,sha256=U2XCELPm8N6zjVpZdJkWv-qzAeVwl18bDYPS6ibtjVw,25042
+vlc_gesture_control/tests/__init__.py,sha256=60YTnU7Be5yqNDV2mh5ETgo9IDV_RPj5vxibx_LF4cU,40
+vlc_gesture_control/tests/test_gesture_detector.py,sha256=LTgKjnM0W6PquxEipa0j2wjHCsjtRf3Et1smU0V3HvA,3472
+vlc_gesture_control-0.1.0.dist-info/licenses/LICENSE,sha256=Sz9XtlNmCa-m66fyJauXDmEvjyvgOLC2HqGZqEU_NdE,1109
+vlc_gesture_control-0.1.0.dist-info/METADATA,sha256=_S8G4FrNYGqWlsqSbwE2eIZyySNicSl70PyleiUr9Hc,4902
+vlc_gesture_control-0.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+vlc_gesture_control-0.1.0.dist-info/entry_points.txt,sha256=07HNslEFPE3YsdTFP5pGIWIs2AMhtlmYlLCaji96qXA,191
+vlc_gesture_control-0.1.0.dist-info/top_level.txt,sha256=9Cqm56S1-zOtZ1fEruV-WcUcZ79uL7YVUOUntW17ZxE,20
+vlc_gesture_control-0.1.0.dist-info/RECORD,,
