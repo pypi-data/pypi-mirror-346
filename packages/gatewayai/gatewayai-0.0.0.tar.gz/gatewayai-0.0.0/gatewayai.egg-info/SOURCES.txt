@@ -1,0 +1,5 @@
+setup.py
+gatewayai.egg-info/PKG-INFO
+gatewayai.egg-info/SOURCES.txt
+gatewayai.egg-info/dependency_links.txt
+gatewayai.egg-info/top_level.txt
