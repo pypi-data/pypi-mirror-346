@@ -1,0 +1,4 @@
+# `folmap`
+
+::: maeson.folmap
+
