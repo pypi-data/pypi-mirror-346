@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pyagentmesh"
+version = "0.0.7"
+description = "MCP Orchestration Framework for Multi-Agent and Micro-Agent"
+authors = ["eric-epsilla <eric@epsilla.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyepsilla = "^0.3.14"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
