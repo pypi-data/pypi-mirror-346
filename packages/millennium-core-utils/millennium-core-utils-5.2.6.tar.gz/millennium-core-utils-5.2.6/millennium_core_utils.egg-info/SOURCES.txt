@@ -1,0 +1,6 @@
+setup.py
+MillenniumUtils/__init__.py
+millennium_core_utils.egg-info/PKG-INFO
+millennium_core_utils.egg-info/SOURCES.txt
+millennium_core_utils.egg-info/dependency_links.txt
+millennium_core_utils.egg-info/top_level.txt
