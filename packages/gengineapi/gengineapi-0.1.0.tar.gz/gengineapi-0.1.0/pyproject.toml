@@ -1,0 +1,18 @@
+[project]
+name = "gengineapi"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.8.0",     # Для асинхронных HTTP-запросов и WebSocket
+    "typing-extensions>=4.0.0",  # Для расширенных типов аннотаций
+    "aiohttp-socks>=0.7.1",
+    "uv-publish",
+]
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
