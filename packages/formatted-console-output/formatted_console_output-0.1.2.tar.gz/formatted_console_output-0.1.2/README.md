@@ -1,0 +1,48 @@
+
+This script allows you to set the foreground, and background colors of your Console output as well as setting a few styles.  The script uses ANSI Escape Codes for colors black, red, green, yellow, blue, magenta, cyan, & white.  It also uses the ANSI Escape Codes for styles bold and underline.
+
+
+### OS COMPATIBILITY
+
+This library seamlessly takes into account Windows machines that are not configured to support ANSI escape codes.  When your script runs, the library attempts to enable this feature for this session.  If it fails to do so, then it switches to printing with default behavior.
+
+
+### HOW TO REFERENCE
+
+1. install the library
+```batch
+    pip install formatted-console-output
+```
+1. At the top of your main script add the following import statement:
+```python
+    from formatted_console_output import ForegroundColor, BackgroundColor, TextFormat, output_formatted_message as print
+```
+
+### CODE COMPATIBILITY/OVERLOADING
+
+You do not have to alias the method import as "print" but that makes it more natural for you to code against and allows you to leverage everything else about the print() method.  The script passes on all extra keyword arguments that are normally used in a print() call.  Anyone referencing this library that tries to use the print() method as normal would still get default white on black with no format and normal behavior otherwise.
+
+
+## HOW TO USE IN CODE
+
+The enumerators that define these colors/formats are:
+* ForegroundColor [BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE]
+* BackgroundColor [BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE]
+* TextFormat [BOLD, UNDERLINE, NONE]
+
+The added keyword arguments are:
+* fg_color (default is ForegroundColor.WHITE)
+* bg_color (default is BackgroundColor.BLACK)
+* format (default is TextFormat.NONE)
+
+In the following example we're printing a message to console with blue text on a yellow background in bold style.  I also threw in some standard keyword arguments to show that:
+```python
+print(
+    f"Archiving files and reporting against them in '{dir_path}'",
+    fg_color=ForegroundColor.BLUE,
+    bg_color=BackgroundColor.YELLOW,
+    format=TextFormat.BOLD,
+    sep="  -  ",
+    end="\n\n"
+)
+```

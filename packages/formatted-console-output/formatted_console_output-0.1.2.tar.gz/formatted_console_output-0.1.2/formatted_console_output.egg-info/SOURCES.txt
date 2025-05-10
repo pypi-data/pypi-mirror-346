@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+formatted_console_output/__init__.py
+formatted_console_output/formatted_console_output.py
+formatted_console_output.egg-info/PKG-INFO
+formatted_console_output.egg-info/SOURCES.txt
+formatted_console_output.egg-info/dependency_links.txt
+formatted_console_output.egg-info/top_level.txt
