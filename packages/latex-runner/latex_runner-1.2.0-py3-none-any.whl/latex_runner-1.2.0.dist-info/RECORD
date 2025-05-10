@@ -1,0 +1,12 @@
+latex_runner/__init__.py,sha256=bNN7wE5ERg_xR-G5YzidpPEPa5s2J2EizvgVkFuVkl4,58
+latex_runner/__main__.py,sha256=g6MKEdihtk0146NpPH1CClXoZdEV-FG5a7Q38NHB6W4,77
+latex_runner/about.py,sha256=YHqNC8naHs0WSEsJ5GLZFrnAyvAN3s4iFH37Tni0HwQ,643
+latex_runner/config_types.py,sha256=V3mYrT9nqZ16qimUVUat0CZzipFtpnIth_fP8OMpWyw,970
+latex_runner/main.py,sha256=RsWR86CmMtMcoEmKfOHKh-mzc358bwmJCr6TvqUy6ho,25587
+latex_runner/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+latex_runner/runmodule.sh,sha256=6Qm_G4WcoC-Ux5KRqPj4KMkFZHbZOisnERMYuiCSxFM,146
+latex_runner-1.2.0.dist-info/entry_points.txt,sha256=xL-x2BkLAJh1qx487WUXGO8NuDfTRlkf5bfD1yw8NbI,55
+latex_runner-1.2.0.dist-info/licenses/LICENSE,sha256=JdKwy_HLAx7Bqy9zrTHGrjJ0hDVM52RApIk93VzPgII,657
+latex_runner-1.2.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+latex_runner-1.2.0.dist-info/METADATA,sha256=pWAjy5XPfw4xa4t6TTCLPGAijrkfeDAiebZhQM_NAkg,8962
+latex_runner-1.2.0.dist-info/RECORD,,
