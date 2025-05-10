@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+capibara/__init__.py
+capibara/main.py
+capibara/py.typed
+capibara.egg-info/PKG-INFO
+capibara.egg-info/SOURCES.txt
+capibara.egg-info/dependency_links.txt
+capibara.egg-info/requires.txt
+capibara.egg-info/top_level.txt
