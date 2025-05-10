@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: Bomba_nikita_yuminov
+Version: 0.1
+Summary: Описание пакета
+Home-page: https://github.com/nij777/Bomba.git
+Author: Юминов Никита
+Author-email: nikitayuminov0852@gmail.com
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary

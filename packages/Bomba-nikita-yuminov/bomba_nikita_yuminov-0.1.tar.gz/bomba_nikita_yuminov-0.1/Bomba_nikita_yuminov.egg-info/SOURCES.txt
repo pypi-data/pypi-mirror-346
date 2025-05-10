@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+Bomba_nikita_yuminov.egg-info/PKG-INFO
+Bomba_nikita_yuminov.egg-info/SOURCES.txt
+Bomba_nikita_yuminov.egg-info/dependency_links.txt
+Bomba_nikita_yuminov.egg-info/top_level.txt
