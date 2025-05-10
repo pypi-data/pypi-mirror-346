@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mnist-model-package
+Version: 0.1
+Summary: MNIST SVM and Neural Network example with PyTorch and sklearn
+Home-page: https://github.com/yourusername/mnist_model_package
+Author: Your Name
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python
+Requires-Dist: tensorflow
+Requires-Dist: scikit-learn
+Requires-Dist: torch
+
+UNKNOWN
+
