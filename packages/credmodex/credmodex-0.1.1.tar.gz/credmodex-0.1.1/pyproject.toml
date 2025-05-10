@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "credmodex"
+version = "0.1.1"
+description = "A Python library for credit risk modeling"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Gustavo Meira Filho", email = "gustavojvmf@gmail.com" }]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy >=2.2",
+    "pandas>=2.2",
+    "scikit-learn>=1.6",
+    "matplotlib>=3.10",
+    "plotly>=6.0",
+    "scipy>=1.15",
+    "optbinning>=0.20",
+    "statsmodels>=0.14"
+]
+
+[tool.setuptools.packages.find]
+include = ["credmodex*"]
+
+[project.urls]
+"Source" = "https://github.com/Gumodex/cred-modex"
