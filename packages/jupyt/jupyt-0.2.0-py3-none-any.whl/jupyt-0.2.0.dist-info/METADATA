@@ -1,0 +1,154 @@
+Metadata-Version: 2.4
+Name: jupyt
+Version: 0.2.0
+Summary: A JupyterLab extension for integrating AI features.
+Project-URL: Homepage, https://ipynb.ai
+Project-URL: Bug Tracker, https://ipynb.ai
+Author-email: risos8200 <risos8200@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2025, risos8200
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Keywords: jupyter,jupyterlab,jupyterlab-extension
+Classifier: Framework :: Jupyter
+Classifier: Framework :: Jupyter :: JupyterLab
+Classifier: Framework :: Jupyter :: JupyterLab :: 4
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions
+Classifier: Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Jupyt
+
+A JupyterLab extension that adds AI capabilities to Jupyter notebooks.
+
+## Features
+
+- AI chat interface for asking questions and getting help
+- Cell editing with AI assistance
+- Theme customization
+- Support for multiple AI models
+
+## Prerequisites
+
+* JupyterLab >= 4.0.0
+* Node.js >= 18.0
+* Python >= 3.8
+
+## Installation
+
+### Development Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/jupyt.git
+cd jupyt
+
+# Create a virtual environment (optional but recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+
+# Install the package in development mode
+pip install -e .
+
+# Install the dependencies and build the JupyterLab extension
+jlpm install
+jlpm run build
+```
+
+### User Installation
+
+```bash
+# Install the Python package
+pip install jupyt
+```
+
+## Usage
+
+1. Start JupyterLab:
+
+```bash
+jupyter lab
+```
+
+2. You should see the Jupyt panel on the right sidebar.
+
+3. Click on the Jupyt icon to open the chat interface.
+
+4. Use the cell toolbar buttons to interact with AI directly on notebook cells.
+
+## Configuration
+
+You can configure your AI model settings through the settings panel accessible from the Jupyt chat interface.
+
+## Development
+
+### Building the Extension
+
+```bash
+# Install dependencies
+jlpm install
+
+# Build the extension in development mode
+jlpm run build
+
+# Build the extension in production mode
+jlpm run build:prod
+```
+
+### Rebuilding the Extension
+
+If you make changes to the source code, you need to rebuild the extension:
+
+```bash
+# Clean the lib/ directory
+jlpm run clean
+
+# Build the extension
+jlpm run build
+```
+
+### Watch Mode
+
+```bash
+# Watch for source code changes and rebuild automatically
+jlpm run watch
+```
+
+## License
+
+This project is licensed under the BSD-3-Clause License.
