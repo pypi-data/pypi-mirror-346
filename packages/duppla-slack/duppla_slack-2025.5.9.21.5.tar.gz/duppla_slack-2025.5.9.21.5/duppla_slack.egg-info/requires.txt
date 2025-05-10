@@ -1,0 +1,5 @@
+pydantic<3.0.0,>=2.7.0
+requests
+shortuuid
+slack_sdk<4.0.0,>3.30.0
+Unidecode
