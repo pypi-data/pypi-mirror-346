@@ -1,0 +1,10 @@
+sloths/__init__.py,sha256=cEv-v913zNZiGTxjGIeeeBeGN7nkr2R_SqsE277gCeI,150
+sloths/_stream.py,sha256=APeypZhbT2JRdN7-mzQ8nSuERhDVJiY5ocEhsrCNMyk,23364
+sloths/_utils.py,sha256=ileIrC9lKu8aBykyRoTRED_tCJiPsyBhtxDk5p-udYg,1478
+sloths/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sloths/ext/__init__.py,sha256=BHXnngUfRphu2EcRnf8N8ZLIKtJL5-Z5HJa1iA9cuUg,79
+sloths/ext/concurrent.py,sha256=C5luPg6KYZvQm-yVi1N890lD2WyD1GSMaORbo_-RtI0,9001
+sloths-0.0.3.dist-info/METADATA,sha256=W0mUEy2yfUqN7kSika3nwBC-ejSlNAPTscUS7rTT0Q4,1951
+sloths-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sloths-0.0.3.dist-info/licenses/LICENSE,sha256=kz1oYaTS4KqF9y3O1wdM_TfA-vGmFlem1W30lI5L-nQ,1071
+sloths-0.0.3.dist-info/RECORD,,
