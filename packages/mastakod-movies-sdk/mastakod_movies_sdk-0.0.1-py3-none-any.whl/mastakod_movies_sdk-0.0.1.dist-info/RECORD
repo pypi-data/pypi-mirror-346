@@ -1,0 +1,9 @@
+mastakod_movies_sdk/__init__.py,sha256=Cn2uAeJZsUQcsZT_0u_CfeGBB3LzhesipQD0XDCVZsU,76
+mastakod_movies_sdk/film_client.py,sha256=kj3DtxnimHQlOr9El604iQir9AThwHYwVZ9u7FH_RKI,5036
+mastakod_movies_sdk/film_config.py,sha256=cut4PifZwRf3c9kN-MnumXwzjTPguzjp0sJFGlI0aRY,1098
+mastakod_movies_sdk/schemas/__init__.py,sha256=_zaWR_nECK5Q6BZOOenPISZi4PN_mwF71I7NU6By4_A,24
+mastakod_movies_sdk/schemas/schemas.py,sha256=SR1Gq0a_upIQGxvCrLV5fp60K3OvmETdftNIlk8y8CE,1770
+mastakod_movies_sdk-0.0.1.dist-info/METADATA,sha256=2lgqBPOHBmIlFTcW9ioPV6MfaGp593hPECyO5RVJLwI,557
+mastakod_movies_sdk-0.0.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+mastakod_movies_sdk-0.0.1.dist-info/top_level.txt,sha256=Qf3CNbmpqTGzBEvbiwshqb5lG-jXQILqNxXfypQwNqQ,20
+mastakod_movies_sdk-0.0.1.dist-info/RECORD,,
