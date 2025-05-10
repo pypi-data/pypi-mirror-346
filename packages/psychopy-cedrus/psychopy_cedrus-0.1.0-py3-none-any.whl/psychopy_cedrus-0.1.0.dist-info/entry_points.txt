@@ -1,0 +1,31 @@
+[psychopy.experiment.components]
+CedrusButtonBoxComponent = psychopy_cedrus.components.cedrusBox:CedrusButtonBoxComponent
+LuminaButtonBoxBackend = psychopy_cedrus.components.lumina:LuminaButtonBoxBackend
+RBAudioValidatorBackend = psychopy_cedrus.components.rb:RBAudioValidatorBackend
+RBButtonBoxBackend = psychopy_cedrus.components.rb:RBButtonBoxBackend
+RBSoundSensorBackend = psychopy_cedrus.components.rb:RBSoundSensorBackend
+RBVisualValidatorBackend = psychopy_cedrus.components.rb:RBVisualValidatorBackend
+RipondaAudioValidatorBackend = psychopy_cedrus.components.riponda:RipondaAudioValidatorBackend
+RipondaButtonBoxBackend = psychopy_cedrus.components.riponda:RipondaButtonBoxBackend
+RipondaSoundSensorBackend = psychopy_cedrus.components.riponda:RipondaSoundSensorBackend
+RipondaVisualValidatorBackend = psychopy_cedrus.components.riponda:RipondaVisualValidatorBackend
+StimTrackerAudioValidatorBackend = psychopy_cedrus.components.stimtracker:StimTrackerAudioValidatorBackend
+StimTrackerButtonBoxBackend = psychopy_cedrus.components.stimtracker:StimTrackerButtonBoxBackend
+StimTrackerSoundSensorBackend = psychopy_cedrus.components.stimtracker:StimTrackerSoundSensorBackend
+StimTrackerVisualValidatorBackend = psychopy_cedrus.components.stimtracker:StimTrackerVisualValidatorBackend
+
+[psychopy.hardware.cedrus]
+LuminaButtonGroup = psychopy_cedrus.lumina:LuminaButtonGroup
+LuminaDevice = psychopy_cedrus.lumina:LuminaDevice
+RBButtonGroup = psychopy_cedrus.rb:RBButtonGroup
+RBDevice = psychopy_cedrus.rb:RBDevice
+RBLightSensorGroup = psychopy_cedrus.rb:RBLightSensorGroup
+RBSoundSensor = psychopy_cedrus.rb:RBSoundSensorGroup
+RipondaButtonGroup = psychopy_cedrus.riponda:RipondaButtonGroup
+RipondaDevice = psychopy_cedrus.riponda:RipondaDevice
+RipondaLightSensorGroup = psychopy_cedrus.riponda:RipondaLightSensorGroup
+RipondaSoundSensor = psychopy_cedrus.riponda:RipondaSoundSensorGroup
+StimTrackerButtonGroup = psychopy_cedrus.stimtracker:StimTrackerButtonGroup
+StimTrackerDevice = psychopy_cedrus.stimtracker:StimTrackerDevice
+StimTrackerLightSensorGroup = psychopy_cedrus.stimtracker:StimTrackerLightSensorGroup
+StimTrackerSoundSensor = psychopy_cedrus.stimtracker:StimTrackerSoundSensorGroup
