@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: mcp-ikman-extractor
+Version: 0.1.6
+Summary: MCP server that extracts content from ikman.lk for LLMs
+Author-email: supun wijemanna <supun.wijemanna58@gmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: pydantic>=2.6.1
+Requires-Dist: beautifulsoup4>=4.12.2
+Requires-Dist: requests>=2.31.0
+Dynamic: license-file

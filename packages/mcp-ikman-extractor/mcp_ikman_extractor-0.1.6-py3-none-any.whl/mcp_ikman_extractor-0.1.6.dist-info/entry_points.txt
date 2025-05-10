@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-ikman-extractor = mcp_ikman_extractor.server:main
