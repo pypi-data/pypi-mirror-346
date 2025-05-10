@@ -1,0 +1,15 @@
+acmsg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acmsg/__main__.py,sha256=hG9wt5bjfHZkPgLtlCihW0L5LiMgC9_F9zWTpYyJIbs,6702
+acmsg/config.py,sha256=zrYtzHkk8ZutFSx9EhXLalAVviANQbjg9kb08zqPzC8,1395
+acmsg/git_utils.py,sha256=PRjZZ0_96vYga8MZUV-sjmpgfNsbZybCHrXsPGvHmJw,1512
+acmsg/open_router.py,sha256=TbXgjM04PBKj9z3xrOhvkKoSr6FjT9T5t3PtP7SIKjs,1178
+acmsg/templates.py,sha256=L3WjQTm4t9uWALahCPTWw9734nFFu4jUYtdyosOUFIE,375
+acmsg/assets/system_prompt.md,sha256=jq_rdQa6FcExCRrRoXnze1iH3zgbIiqVqsyorHTC-ek,4702
+acmsg/assets/template_config.yaml,sha256=Kaqf7-lQ1U-hG7AxMUpNuQUCiOj68J1ShACK-snStMk,296
+acmsg/assets/user_prompt.md,sha256=LtJDC50V76IfG9M05MplMkwZ76Kp2u8Nx3Sog1j0N-I,699
+acmsg-0.2.3.dist-info/licenses/LICENSE,sha256=LL1mdE2HKbgXjgek3o9jLpKNpizsWjhkS2yRFVg4PQY,1072
+acmsg-0.2.3.dist-info/METADATA,sha256=3OMTQy05vaHL8ccKch8aj_Yvzqy_H2AFC7wtRzkhqAc,595
+acmsg-0.2.3.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+acmsg-0.2.3.dist-info/entry_points.txt,sha256=SJ1MbDZPo5CyARlnmpQBs9Q8MWfMzQbkHbL06pZMy9s,46
+acmsg-0.2.3.dist-info/top_level.txt,sha256=64MfOhHHRCcPlchopmWFRP5Bfxe3a5P9KuBM4Tu4SJc,6
+acmsg-0.2.3.dist-info/RECORD,,
