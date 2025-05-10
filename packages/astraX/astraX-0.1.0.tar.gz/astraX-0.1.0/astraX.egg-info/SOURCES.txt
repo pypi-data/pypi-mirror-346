@@ -1,0 +1,7 @@
+pyproject.toml
+setup.py
+astraX.egg-info/PKG-INFO
+astraX.egg-info/SOURCES.txt
+astraX.egg-info/dependency_links.txt
+astraX.egg-info/requires.txt
+astraX.egg-info/top_level.txt

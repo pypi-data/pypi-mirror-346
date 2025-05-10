@@ -1,0 +1,6 @@
+transformers
+torch
+sentence-transformers
+huggingface_hub
+requests
+tqdm
