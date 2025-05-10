@@ -1,0 +1,96 @@
+Metadata-Version: 2.3
+Name: aiai-cli
+Version: 0.1.10
+Summary: Your friendly neighborhood AI agent optimization AI agent
+Author-email: Amir Mehr <amir@zenbase.ai>, Cyrus Nouroozi <cyrus@zenbase.ai>
+Requires-Python: >=3.8
+Requires-Dist: aiai-cli[crewai]>=0.1.6
+Requires-Dist: aiolimiter>=1.2.1
+Requires-Dist: django-stubs>=5.1.3
+Requires-Dist: django>=5.2
+Requires-Dist: docetl>=0.2.2
+Requires-Dist: instructor>=1.7.9
+Requires-Dist: libcst>=1.7.0
+Requires-Dist: litellm==1.60.2
+Requires-Dist: networkx>=3.4.2
+Requires-Dist: openlit
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pydantic>=2.11.3
+Requires-Dist: pydash>=8.0.5
+Requires-Dist: pydot>=3.0.4
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: scarf-sdk>=0.1.2
+Requires-Dist: sorcery>=0.2.2
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: tree-sitter-python>=0.23.6
+Requires-Dist: tree-sitter>=0.24.0
+Requires-Dist: typer>=0.12.5
+Provides-Extra: crewai
+Requires-Dist: crewai-tools; extra == 'crewai'
+Requires-Dist: crewai==0.114.0; extra == 'crewai'
+Provides-Extra: langgraph
+Requires-Dist: langgraph>=0.3.31; extra == 'langgraph'
+Description-Content-Type: text/markdown
+
+# AIAI CLI
+
+AIAI CLI is a powerful tool for optimizing AI agents through automated rule extraction and performance enhancement.
+
+[![GitHub stars](https://img.shields.io/github/stars/zenbase-ai/aiai-cli?style=social)](https://github.com/zenbase-ai/aiai-cli/stargazers)
+
+## Features
+
+- **Agent Optimization**: Automatically identify and implement optimization rules for your AI agents
+- **Custom Agent Support**: Optimize your own agent implementations
+- **Demonstration Capabilities**: Includes a demo email agent for learning purposes
+
+## Installation
+
+```bash
+pip install aiai-cli
+```
+
+AIAI CLI requires Python 3.8 or higher and an OpenAI API key for some features.
+
+## Quick Start
+
+```bash
+# Run AIAI CLI
+aiai
+
+# Select options through the interactive interface
+```
+
+## Usage Examples
+
+### Optimizing the Demo Agent
+
+```bash
+# Run AIAI CLI
+aiai
+
+# Select option 1 to optimize the demo agent
+```
+
+### Optimizing Your Custom Agent
+
+Ensure your agent has:
+1. A main entry point file
+2. A `main(inputs=None)` function that runs your agent
+
+```bash
+# Run AIAI CLI
+aiai
+
+# Select option 2 to optimize your custom agent
+# Provide the path to your agent's entry point file when prompted
+```
+
+## Documentation
+
+For complete documentation, visit:
+[AIAI CLI Documentation](https://docs.aiai.engineer/)
+
+---
+
+Developed by [Zenbase AI](https://zenbase.ai)
