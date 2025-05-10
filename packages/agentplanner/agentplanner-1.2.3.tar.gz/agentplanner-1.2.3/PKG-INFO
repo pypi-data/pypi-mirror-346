@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: agentplanner
+Version: 1.2.3
+Summary: A lightweight multi-agent orchestration framework for GenAI pipelines
+Home-page: https://github.com/narayanaraghavendra/agentplanner
+Author: Raghavendra
+Author-email: dosinarayanaraghavendra@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: langchain>=0.1.0
+Requires-Dist: chromadb>=0.4.0
+Requires-Dist: pinecone-client>=2.0
+Requires-Dist: weaviate-client>=3.0
+Requires-Dist: faiss-cpu>=1.7.2
+Requires-Dist: milvus>=2.0
+Requires-Dist: pymongo>=3.11
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: transformers>=4.5.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# AgentPlanner
+
+`AgentPlanner` is a lightweight multi-agent orchestration framework for building scalable GenAI pipelines. It integrates various LLMs, Hugging Face models, RAG, vector stores, and cloud-based deployment for scalable GenAI solutions.
+
+## Features
+
+- Multi-agent orchestration
+- Integration with multiple vector stores (Chroma, Pinecone, Weaviate, FAISS, Milvus, MongoDB)
+- Hugging Face model support
+- Cloud-based deployment
+
+## Installation
+
+```bash
+pip install agentplanner
