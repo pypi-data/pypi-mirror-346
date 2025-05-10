@@ -1,0 +1,8 @@
+django_extra_validators/__init__.py,sha256=E228CHZ6KEcXFhfSI1O5uYStbRPnxjyNwulr_OVpK9g,264
+django_extra_validators/validators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_extra_validators/validators/dutch_postal_code.py,sha256=AzOS16vSvoIqZOfdNvtQk-4_kxSyxfzCN7QpqDke5lQ,616
+django_extra_validators/validators/iban.py,sha256=LYT9IWkxMG6WqrfTfgARivTjwOnLZCa3c6ed9VgaTII,346
+django_extra_validators/validators/url.py,sha256=glhWfrlUCa54KBzsjpa2b74dMFhD_kKt1O8NacpEL1c,936
+django_extra_validators-0.1.1.dist-info/METADATA,sha256=CzNeJ_2l0v8U_r3tMO5jyKS5MbRA0rnRuEcEQE37Dc0,2042
+django_extra_validators-0.1.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+django_extra_validators-0.1.1.dist-info/RECORD,,
