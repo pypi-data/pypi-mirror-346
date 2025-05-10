@@ -1,0 +1,10 @@
+naukri_scraper/__init__.py,sha256=ut4dZ8N-VqJrWpXYyg5M9PCuG0Q3fYjtoH83o7TKOME,388
+naukri_scraper/cookies.py,sha256=J_enXI3dffrK2uC7NT2vRIRI78GrBzuGGVKWq4HrjQw,2283
+naukri_scraper/headers.py,sha256=6rZDKcPlrt2so2rQVGKzsJq-2x-ic1K5VN5degmRv1s,1424
+naukri_scraper/scraper.py,sha256=7EY2-J2D4xLa3A7rOaOqjXsckmoz_H7glvtl57gVqds,8159
+naukri_scraper-0.1.0.dist-info/licenses/LICENSE,sha256=BzJUVjYhVYXojPfMdhD9Ou1Uwka_I0wfd9ocr33sSI0,1089
+naukri_scraper-0.1.0.dist-info/METADATA,sha256=a40mwcC3c63fTm05hNQju6ssKWKXxX3zKEBO6wbrnxA,5173
+naukri_scraper-0.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+naukri_scraper-0.1.0.dist-info/entry_points.txt,sha256=uox1BvUUlBvZjCVu2Xmb33xiMdbW1AuZHgZSvb7FOeM,62
+naukri_scraper-0.1.0.dist-info/top_level.txt,sha256=C5yrKO1yMfL_DgHZ3CKu98w23TPhkhm0R53df8eC1q0,15
+naukri_scraper-0.1.0.dist-info/RECORD,,
