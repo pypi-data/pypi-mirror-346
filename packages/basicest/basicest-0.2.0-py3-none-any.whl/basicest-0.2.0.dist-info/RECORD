@@ -1,0 +1,13 @@
+basicest/__init__.py,sha256=ZVYsGaKk_stbps9l674m23jCzWLBdqLLzIgSqzH-d7o,3718
+basicest/__main__.py,sha256=v-6qgZ4-eqHpDRR81uNaPFvH4j5lyRzjdQbxBbmhJNs,34
+basicest/serve/__init__.py,sha256=lunu1D0Yo72qAxXbC-HV2nx31XGlhdxcWI08VFMkiBU,3736
+basicest/serve/__main__.py,sha256=hiLsbwKHBTsoEsPE0aosfq0lMw3ekMtLQhMRiTnzGbg,63
+basicest/serve/build.py,sha256=kgARJWQitakX5O-gO8WhYhLgZ-Cp0_muxhlVMbbXWLA,1782
+basicest/serve/filter.py,sha256=BER4M3XFQDrbS5gtWVQUoEfg0iJ2jd1uFzFhvXLdOWQ,1365
+basicest/serve/middleware.py,sha256=Pb0tZ08Z6th0Z8NCTC_QXYm84OssFcm3hDeBbf1lmoY,1671
+basicest/serve/server.py,sha256=WKUJr2gVlKw0uqMZ-h4beOb_wJnuSfr0kVpVs4JElXg,2804
+basicest/serve/utils.py,sha256=YpBboq1Fth0gaxaehztX0GZMkn93VQyJ9anLQgtBAgQ,1215
+basicest-0.2.0.dist-info/METADATA,sha256=da9K2CVP95rXk4qvG902yFXXVZXdH-Z9nMpWINafmSY,1043
+basicest-0.2.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+basicest-0.2.0.dist-info/entry_points.txt,sha256=gt0D5IFBLEbBSWza4V3y-3zZjrVbU_Mtu8FR0M2PtIc,77
+basicest-0.2.0.dist-info/RECORD,,
