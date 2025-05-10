@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/micropackage/__init__.py
+src/micropackage/big_brain_code.py
+src/micropackage/py.typed
+src/microtraining.egg-info/PKG-INFO
+src/microtraining.egg-info/SOURCES.txt
+src/microtraining.egg-info/dependency_links.txt
+src/microtraining.egg-info/not-zip-safe
+src/microtraining.egg-info/requires.txt
+src/microtraining.egg-info/top_level.txt
+tests/test_iq.py

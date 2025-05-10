@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "microtraining"
+version = "1.0.0"
+description = "Hans provides solutions. Always."
+readme = "README.md"
+authors = [{ name = "Alexander Nasuta", email = "alexander.nasuta@ima.rwth-aachen.de" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["micro", "training", "big", "brain", "1337"]
+dependencies = [
+    # add your package dependencies here
+    # use only major version specifiers and use pip-compile to pin them
+    "requests >= 2,<3", # this is just an example, you can add your own dependencies here
+]
+requires-python = ">=3.11"
+
+
+
+[project.optional-dependencies]
+dev = [
+    "pip-tools", # for pip-compile
+    "pytest", # for testing with pytest
+    "pytest-cov", # for coverage-reporting
+    "mypy", # for type-checking
+    "flake8", # for linting
+    "tox", # for testing in clean newly setup environments
+    "twine", # for uploading to pypi
+    # add more if needed
+]
+
+[tool.pytest.ini_options]
+addopts = "--cov=micropackage -p no:warnings" # you probably want to change this to your package name
+testpaths = [
+    "tests",
+]
+
+[tool.mypy]
+mypy_path = "src"
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
+
+[project.urls]
+Homepage = "https://github.com/Alexander-Nasuta/microtraining"

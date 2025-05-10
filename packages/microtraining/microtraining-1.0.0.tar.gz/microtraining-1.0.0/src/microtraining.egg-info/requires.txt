@@ -1,0 +1,10 @@
+requests<3,>=2
+
+[dev]
+pip-tools
+pytest
+pytest-cov
+mypy
+flake8
+tox
+twine
