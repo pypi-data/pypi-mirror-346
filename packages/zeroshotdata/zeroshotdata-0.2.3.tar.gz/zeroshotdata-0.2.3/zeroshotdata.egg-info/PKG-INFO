@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: zeroshotdata
+Version: 0.2.3
+Summary: Stream zeroshot dataset
+Author: Zeroshot
+Author-email: code@zeroshotdata.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: mosaicml-streaming>=0.11.0
+Requires-Dist: opencv-python
+Requires-Dist: fastparquet>=2024.11.0
+Requires-Dist: gcloud>=0.18.3
+Requires-Dist: google-auth>=2.40.1
+Requires-Dist: google-cloud-storage<2.11.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
