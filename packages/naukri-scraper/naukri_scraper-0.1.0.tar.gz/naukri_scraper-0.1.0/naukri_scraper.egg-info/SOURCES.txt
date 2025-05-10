@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+naukri_scraper/__init__.py
+naukri_scraper/cookies.py
+naukri_scraper/headers.py
+naukri_scraper/scraper.py
+naukri_scraper.egg-info/PKG-INFO
+naukri_scraper.egg-info/SOURCES.txt
+naukri_scraper.egg-info/dependency_links.txt
+naukri_scraper.egg-info/entry_points.txt
+naukri_scraper.egg-info/requires.txt
+naukri_scraper.egg-info/top_level.txt
