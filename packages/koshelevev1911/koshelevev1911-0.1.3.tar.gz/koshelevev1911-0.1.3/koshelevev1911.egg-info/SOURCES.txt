@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+koshelevev1911/__init__.py
+koshelevev1911/module.py
+koshelevev1911.egg-info/PKG-INFO
+koshelevev1911.egg-info/SOURCES.txt
+koshelevev1911.egg-info/dependency_links.txt
+koshelevev1911.egg-info/top_level.txt
