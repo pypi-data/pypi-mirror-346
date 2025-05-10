@@ -1,0 +1,11 @@
+modlyn/__init__.py,sha256=wFwKjtCXeAgtJe6TmRToVlBF7hTpctowL2Gvchn8p9M,152
+modlyn/io/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modlyn/io/datamodules.py,sha256=TXDp6c9IhZktiC2g1_xzaoQOuvI8f-5Om-djlFs1O5w,1282
+modlyn/io/loading.py,sha256=7M4n1OsHIyhpLHLXwD-E61fQStO74Dmul68ZA8pxV4E,1882
+modlyn/io/store_creation.py,sha256=WmhE1a85mKvKWEJR343YZNI2ND3xxhOs0yt4P858czA,3824
+modlyn/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modlyn/models/linear.py,sha256=C4qtig74M1fXMLHybwoaV3xPVqxqFWvMdn5ICjFPtoA,1646
+modlyn-0.0.2.dist-info/LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+modlyn-0.0.2.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+modlyn-0.0.2.dist-info/METADATA,sha256=ZNU1YLzxt7fPpYpJ60iONCTyD0zFJf1riLyYLeykKC0,707
+modlyn-0.0.2.dist-info/RECORD,,
