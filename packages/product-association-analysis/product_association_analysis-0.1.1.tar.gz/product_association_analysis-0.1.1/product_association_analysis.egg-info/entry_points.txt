@@ -1,0 +1,2 @@
+[console_scripts]
+product-association-analysis = product_association.cli:main
