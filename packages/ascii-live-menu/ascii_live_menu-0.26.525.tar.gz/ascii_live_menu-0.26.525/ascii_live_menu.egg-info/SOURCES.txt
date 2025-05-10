@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ascii_live_menu/__init__.py
+ascii_live_menu/main.py
+ascii_live_menu.egg-info/PKG-INFO
+ascii_live_menu.egg-info/SOURCES.txt
+ascii_live_menu.egg-info/dependency_links.txt
+ascii_live_menu.egg-info/entry_points.txt
+ascii_live_menu.egg-info/top_level.txt
