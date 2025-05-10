@@ -1,0 +1,16 @@
+[project]
+name = "euskadi-holidays"
+version = "0.1.0"
+description = "Librería para obtener festivos de Euskadi desde Open Data Euskadi"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [{name = "Diego Piedra", email = "diego@dieveloper.com"}]
+dependencies = ["requests"]
+
+[project.urls]
+"Homepage" = "https://github.com/GOe-Tech-Center/EuskadiHolidays.git"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
