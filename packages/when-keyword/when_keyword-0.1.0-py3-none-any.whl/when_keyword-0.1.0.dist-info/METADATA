@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: when-keyword
+Version: 0.1.0
+Summary: A custom Python "when" class simulating a keyword with do and during
+Home-page: https://github.com/yourusername/when-keyword
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# when-keyword
+
+A custom Python class that simulates a new keyword `when` with `do` and `during` methods.
+
+## Installation
+
+```bash
+pip install when-keyword
