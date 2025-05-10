@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: opeira
+Version: 0.0.4
+Summary: An awesome package
+Home-page: http://pypi.python.org/pypi/opeira/
+Author: opeira
+License: MIT
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary
+
+# OPEIRA - Energy and Process Systems Toolbox
+
+
