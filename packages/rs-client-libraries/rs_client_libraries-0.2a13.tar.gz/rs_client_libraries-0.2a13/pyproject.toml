@@ -1,0 +1,123 @@
+[project]
+name = "rs-client-libraries"
+version = "0.0.0" # see: https://github.com/mtkennerly/poetry-dynamic-versioning
+
+[tool.poetry]
+name = "rs-client-libraries"
+version = "0.2a13"
+description = "Copernicus Sentinel rs-client library and processing workflows."
+license = "Apache-2.0"
+authors = ["ESA under contract with Airbus and CS <ops_coprs@airbus.com>"]
+readme = "README.adoc"
+homepage = "https://home.rs-python.eu/"
+repository = "https://github.com/RS-PYTHON/rs-client-libraries"
+documentation = "https://home.rs-python.eu/rs-documentation/rs-client-libraries/docs/doc/"
+keywords = ["stac", "copernicus", "sentinel", "processing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: OpenTelemetry",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+packages = [
+    { include = "rs_client" },
+    { include = "rs_common" },
+]
+
+# Add configuration files to the .whl package
+include = [
+    { path = "config", format = ["wheel"] }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+opentelemetry-distro = "^0.53b1" # then run 'poetry run opentelemetry-bootstrap -a install'
+opentelemetry-instrumentation-aws-lambda = "^0.53b1"
+opentelemetry-test-utils = "^0.53b1"
+opentelemetry-exporter-otlp = "^1.32.1"
+python-logging-loki = "^0.3.1" # to avoid otl error: No module named 'logging_loki'
+cachetools = "^5.5.2"
+pystac = "^1.13.0"
+pystac-client = "^0.8.6"
+python-dateutil = "^2.9.0.post0"
+stac-pydantic = "^3.1.5"
+openapi-core = "^0.19.5"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-cov = "^6.0.0"
+pytest-mock = "^3.14.0"
+pytest-error-for-skips = "^2.0.2"
+black = "==25.1.0"
+mypy = "^1.15.0"
+pre-commit = "^4.1.0"
+bandit = "^1.8.2"
+safety = "^3.2.14"
+pylint = "^3.3.4"
+pytest-docker = "^3.1.2"
+sphinx = "^8.1.3"
+sphinx-rtd-theme = "^3.0.2"
+flake8 = "^7.1.1"
+flake8-pyproject = "^1.2.3"
+responses = "^0.25.7"
+starlette = "^0.45.3"
+
+[tool.poetry.group.demo.dependencies] # for hybrid mode
+jupyterlab = "^4.2.1"
+boto3 = "^1.37.11"
+papermill = "^2.6.0"
+
+[tool.poetry-dynamic-versioning] # needs: poetry self add "poetry-dynamic-versioning[plugin]"
+enable = false
+metadata = false
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.black]
+line-length = 120
+
+[tool.pytest.ini_options]
+markers = [
+    "unit", # mark a test as unittest
+    "integration", # mark a test as integration test
+]
+asyncio_mode = "auto"
+
+[tool.mypy]
+warn_redundant_casts = true
+# Force analyze of partially annotate function signatures
+check_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.flake8]
+max-line-length = 120
+# per-file-ignores = [
+#     '__init__.py:F401',
+# ]
+
+[tool.pylint.messages_control]
+max-line-length=120
+disable = "logging-fstring-interpolation"
+
+[tool.pylint.MASTER]
+ignore-paths = '^docs/.*$'
+
+[tool.pylint.MISCELLANEOUS]
+notes = ["XXX"] # no errors on TODO and FIXME
+
+[tool.pylint.SIMILARITIES]
+# Minimum lines number of a similarity FIXME.
+min-similarity-lines=10
+
+[tool.bandit.assert_used]
+skips = ['*/test_*.py']
