@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wordnet_db_migrator"
+version = "1.0.0"
+description = "A utility to migrate WordNet database from SQLite to PostgreSQL"
+authors = [
+    {name = "David Long", email = "davidlong@unr.edu"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.6"
+dynamic = ["keywords", "classifiers", "urls", "scripts", "dependencies", "optional-dependencies"]
+
+[tool.black]
+line-length = 88
+target-version = ['py36', 'py37', 'py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.pytest]
+testpaths = ["tests"]
+python_files = "test_*.py"

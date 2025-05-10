@@ -1,0 +1,2 @@
+[console_scripts]
+wordnet-db-migrator = wordnet_db_migrator.main:main

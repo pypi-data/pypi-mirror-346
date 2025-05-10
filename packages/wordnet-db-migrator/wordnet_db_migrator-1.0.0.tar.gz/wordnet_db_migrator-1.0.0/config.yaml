@@ -1,0 +1,20 @@
+databases:
+  sqlite:
+    path: "/tmp/wordnet/wn.db"
+  postgres:
+    host: "localhost"
+    port: 5432
+    database: "wordnet_test"
+    user: null
+    password: null
+
+output:
+  directory: "./output"
+  log_level: "info"
+  show_console_logs: true
+  show_db_name: false
+
+application:
+  batch_size: 1000
+  max_login_attempts: 3
+  force_mode: false
