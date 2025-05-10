@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: hpfrec
+Version: 0.2.14.post1
+Summary: Hierarchical Poisson matrix factorization for recommender systems
+Home-page: https://github.com/david-cortes/hpfrec
+Author: David Cortes
+Keywords: poisson,probabilistic,factorization,variational inference,collaborative filtering
+License-File: LICENSE
