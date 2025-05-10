@@ -1,0 +1,9 @@
+km3det/__init__.py,sha256=bMbBsQxtY1XGFnwgkuhCD-uqPcjVZMg0WeqVXrzec5Y,292
+km3det/detector.py,sha256=bZ27Cn7_Rp64d4lEUx2pr3V7MST-O_PnxkN6QrkFBgA,8403
+km3det/pmt_parameters.py,sha256=qNTWRNSyzcnXzWeLN7uJLNfqXMZA_kdYEMh1s-irXrQ,1068
+km3det/version.py,sha256=wD8hnA5gV5UmPkQnpT3xR6V2csgj9K5NEADogbLK79M,511
+km3det-0.2.3.dist-info/LICENSE,sha256=r6jdhbSLttMxFBglePOJ-GFlTIO_WLBMZt7gghKtUSk,1524
+km3det-0.2.3.dist-info/METADATA,sha256=itv26mqJWp0BsNs6SKP4mP-tva1G_V0FTdX4oyuxJM0,3960
+km3det-0.2.3.dist-info/WHEEL,sha256=pOwdCRdxkCaq8tWTvnGIC-q_meWYHwmqvvQPkeaM2I4,109
+km3det-0.2.3.dist-info/top_level.txt,sha256=m6-WHZ3J1btkBp_OtpnR2G5BUtrDM323TuDDY8ISitU,7
+km3det-0.2.3.dist-info/RECORD,,
