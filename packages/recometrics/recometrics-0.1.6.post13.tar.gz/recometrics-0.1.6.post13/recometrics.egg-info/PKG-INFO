@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: recometrics
+Version: 0.1.6.post13
+Summary: Library-agnostic evaluation framework for implicit-feedback recommender systems
+Home-page: https://github.com/david-cortes/recometrics
+Author: David Cortes
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: cython
+Requires-Dist: pandas
