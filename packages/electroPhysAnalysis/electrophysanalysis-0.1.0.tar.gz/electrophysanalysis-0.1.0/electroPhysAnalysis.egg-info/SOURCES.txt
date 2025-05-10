@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+electroPhysAnalysis/__init__.py
+electroPhysAnalysis/gui.py
+electroPhysAnalysis.egg-info/PKG-INFO
+electroPhysAnalysis.egg-info/SOURCES.txt
+electroPhysAnalysis.egg-info/dependency_links.txt
+electroPhysAnalysis.egg-info/entry_points.txt
+electroPhysAnalysis.egg-info/requires.txt
+electroPhysAnalysis.egg-info/top_level.txt

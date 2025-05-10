@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: electroPhysAnalysis
+Version: 0.1.0
+Summary: Visualizador interactivo de registros ABF con promediado por selección
+Home-page: https://github.com/GeraZerbetto/electroPhysAnalysis
+Author: Gerardo Zerbetto De Palma
+Author-email: g.zerbetto@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyabf
+Requires-Dist: PyQt5
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# electroPhysAnalysis
+
+Visualizador interactivo de archivos ABF para análisis de registros electrofisiológicos con selección de regiones y cálculo de promedios.

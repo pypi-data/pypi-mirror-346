@@ -1,0 +1,4 @@
+pyabf
+PyQt5
+matplotlib
+numpy
