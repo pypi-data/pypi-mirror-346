@@ -1,0 +1,23 @@
+[project]
+name = "finbr"
+version = "0.2.2"
+description = "Coleção de utilitários Python para o mercado financeiro brasileiro."
+authors = [
+    {name = "Renan Moretto",email = "renan_moretto@outlook.com"}
+]
+readme = "README.md"
+repository = "https://github.com/renanmoretto/finbr"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas (>=2.2.0,<3.0.0)",
+    "yfinance (>=0.2.54,<0.3.0)",
+    "requests (>=2.30.0,<3.0.0)",
+    "unidecode (>=1.3.8,<2.0.0)",
+    "polars (>=1.20.0,<2.0.0)",
+    "pyarrow (>=19.0.0,<20.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
