@@ -1,0 +1,15 @@
+authors/__init__.py,sha256=fxO8Nn-D5LpJ9QXDRh34Qhto3YCAIM_ybiD3vOAjn5M,530
+authors/authors.py,sha256=pnKoNjzt9tSAD3ijVziCa7DBQnMWgE8aUfgpjWjIahM,25434
+authors/cli.py,sha256=HzarNvuE_Hi5o6UaOY4-oivTlP4B1ZxZLOxc90H_6YA,1769
+authors/crowd.png,sha256=lM82Lw8AN4KiNX7Q4OabzsSiSa4NHVEapgWN7KUHjhU,68608
+authors/latex_pdf_utils.py,sha256=yDO47cmZd9MDoU1tSSgSyvbVEeFaKPmKqGOQznHZvMk,1880
+authors/utils.py,sha256=Lr6fsovrsONJ6lY3RntJqResHDoO_v3oRz_5qDWYV3A,9507
+authors/data/all_known_authors.yml,sha256=wYy6S7hE9uvp94bvs27HuJRGzCtITtZYwrAYGYW1FkQ,216
+authors/journals/AandA.py,sha256=VflT0gHJIXPpHhZz9wN3lP_qyC2LSa_9ViEBdypCEn4,5579
+authors/journals/MNRAS.py,sha256=b56OZmxo0tqZ8e4PFKRmyau8dQqVGFyMB0xCG-zUafs,4499
+authors-0.5.dist-info/licenses/LICENSE,sha256=189uCqCnaJpIZjDnJHPtF9us3uHHk6jnIm7xZoGRJtM,1068
+authors-0.5.dist-info/METADATA,sha256=Bw8j2292YuNUaimfd40sDX_pWZsW6z-A5XlbsICMK9w,1084
+authors-0.5.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+authors-0.5.dist-info/entry_points.txt,sha256=cGngvqFrhK9-DIEFWH_k19awlc5Egd7dhmqpaSLMuQc,302
+authors-0.5.dist-info/top_level.txt,sha256=OdjsLLVBAD8PyjAzGDPW6D8HrcTu8wadGAjTY2E0YVg,8
+authors-0.5.dist-info/RECORD,,
