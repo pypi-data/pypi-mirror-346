@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+voedl.py
+voedl.egg-info/PKG-INFO
+voedl.egg-info/SOURCES.txt
+voedl.egg-info/dependency_links.txt
+voedl.egg-info/entry_points.txt
+voedl.egg-info/requires.txt
+voedl.egg-info/top_level.txt
