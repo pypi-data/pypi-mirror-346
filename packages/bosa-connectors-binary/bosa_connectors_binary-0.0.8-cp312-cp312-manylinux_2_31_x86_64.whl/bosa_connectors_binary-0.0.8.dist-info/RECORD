@@ -1,0 +1,6 @@
+bosa_connectors.build/.gitignore,sha256=aEiIwOuxfzdCmLZe4oB1JsBmCUxwG8x-u-HBCV9JT8E,1
+bosa_connectors.cpython-312-x86_64-linux-gnu.so,sha256=5vWnJoc72QrEomdfhApFDxvcrqV217_B7SPCAespIhk,1360776
+bosa_connectors.pyi,sha256=GpJC_3rac6Hzg8IhYq8D-OVxsnF2zP9XMrf34YtWOK0,549
+bosa_connectors_binary-0.0.8.dist-info/METADATA,sha256=wPUzDGAfFJ3J8Si-0LqmURUJErHfOhDak2uoz-G0P2I,14409
+bosa_connectors_binary-0.0.8.dist-info/WHEEL,sha256=mNY4pwQL4AOAoPmLYEQs2SSpMIbATFeiJFktRD5iKkY,110
+bosa_connectors_binary-0.0.8.dist-info/RECORD,,
