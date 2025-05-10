@@ -1,0 +1,2 @@
+[console_scripts]
+webscraper = webscraper.cli:main

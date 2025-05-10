@@ -1,0 +1,13 @@
+py_webscrapper-0.1.0.dist-info/licenses/LICENSE,sha256=MrSAzCY_7J3C4Hp8PaXaaFJP2ygfmuAWoLTVowEE3B0,1073
+webscraper/__init__.py,sha256=BeAQhjfDqeHMXHGw8KJC_LvOMOx8AebWCL1ntTjmDfU,367
+webscraper/cli.py,sha256=D4xOmPEWDETVXzVU3uiHN-NVOS7IzIg0XlqvSdingrM,3704
+webscraper/scraper.py,sha256=r52P9NL3R5ENUWggGkO3a7bCgT1AwPTW219ZJ37IcEs,22168
+webscraper/utils.py,sha256=M1U42UwYodH3R9qvPDJY2hRMHMUP9qsfqAwxHITpQgE,6220
+webscraper/extraction/__init__.py,sha256=hdOFZln-l8Xpb1Qib4YbzKGdfcbSd-uJ7BUiM9xRt20,63
+webscraper/extraction/document.py,sha256=UqLUZQPlIdv1RwXI3dkRjJP7OZ5uJbw3G4Ve7kLgUYQ,7631
+webscraper/extraction/image.py,sha256=vIsuuga7Fe56J8aw5STIgaAiYc1aYqVIfsFHnAjTYBs,2645
+py_webscrapper-0.1.0.dist-info/METADATA,sha256=Yp9X5c1SEHNfqph_0AVM0nxiQCYi0QcV4s70rmD_zkw,8161
+py_webscrapper-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+py_webscrapper-0.1.0.dist-info/entry_points.txt,sha256=G-WkChB7bvBAoOE1lKxGiBe91qq3ateUcaBwNw2bDhM,51
+py_webscrapper-0.1.0.dist-info/top_level.txt,sha256=b9ffzKtpzSgkw30oOp3wRFHCIf0cYJZj9s0JcbYG2Fo,11
+py_webscrapper-0.1.0.dist-info/RECORD,,
