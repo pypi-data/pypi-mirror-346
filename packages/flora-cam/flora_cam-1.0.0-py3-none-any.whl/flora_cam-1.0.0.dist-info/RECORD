@@ -1,0 +1,10 @@
+flora_cam/__init__.py,sha256=2Qsg7VIvMDXmppUnVFAOrstPFlcnogWvILL2854Nb1U,40
+flora_cam/flora_cam.py,sha256=mOSHZonUuayTYt9bC5hVWeMXxJmnP02L4BUmjGhdo3g,2067
+flutter/flora_cam/pubspec.yaml,sha256=qJg47AI6HyKJHqaewx-_w7_vnu1_wk7M4oaCWwj3_AU,463
+flutter/flora_cam/lib/flora_cam.dart,sha256=befUux75r9D1L47F5ImJH0qumS2gbyQRBzacMhhOY_g,98
+flutter/flora_cam/lib/src/create_control.dart,sha256=ZukTGM9fOMPcJ2g7t05vqHgfXv28JuW6nKRrbyOTk5M,416
+flutter/flora_cam/lib/src/flora_cam.dart,sha256=qEdkGDhKMu8DhjKGY9JOJcOjRv68b3VPUF44E5QkkSY,4721
+flora_cam-1.0.0.dist-info/METADATA,sha256=hkLhh33G8fxMI0wSpeS4FmXZgd82K-0KCDEPdUJpULM,222
+flora_cam-1.0.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+flora_cam-1.0.0.dist-info/top_level.txt,sha256=yKFOhkQH0LECQlha3RHov_EANmszI6PH6GoRUZO0e50,18
+flora_cam-1.0.0.dist-info/RECORD,,
