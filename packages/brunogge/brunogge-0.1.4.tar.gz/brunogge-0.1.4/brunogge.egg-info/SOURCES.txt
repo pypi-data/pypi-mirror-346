@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+brunogge/__init__.py
+brunogge/barony.py
+brunogge/get_ws.py
+brunogge/getconfig.py
+brunogge/ggs_stuff.py
+brunogge/just_funcs.py
+brunogge/server_list.json
+brunogge.egg-info/PKG-INFO
+brunogge.egg-info/SOURCES.txt
+brunogge.egg-info/dependency_links.txt
+brunogge.egg-info/top_level.txt

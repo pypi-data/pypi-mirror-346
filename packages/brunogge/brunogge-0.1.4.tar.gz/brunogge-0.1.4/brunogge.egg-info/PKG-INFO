@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: brunogge
+Version: 0.1.4
+Summary: Bilbioteka Python dla Goodgame Empire.
+Author-email: WojtS & ThunderStorm <wojts8@proton.me>
+Project-URL: Homepage, https://github.com/wojtsik/brunogge
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# brunogge
+Biblioteka Pythona dla GoodGame Empire

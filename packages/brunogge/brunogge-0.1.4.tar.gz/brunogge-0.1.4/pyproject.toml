@@ -1,0 +1,22 @@
+[project]
+name = "brunogge"
+version = "0.1.4"
+description = "Bilbioteka Python dla Goodgame Empire."
+authors = [{ name = "WojtS & ThunderStorm", email = "wojts8@proton.me" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/wojtsik/brunogge"
+
+[build-system]
+requires = ["setuptools>=61.0", "websockets==13.1", "asyncio"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["brunogge"]
+
+[tool.setuptools.package-data]
+"brunogge" = ["*.json"]
