@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: richernural
+Version: 0.2
+Summary: MNIST SVM and Neural Network example with PyTorch and sklearn
+Home-page: https://github.com/yourusername/mnist_model_package
+Author: Akshay
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+
+UNKNOWN
+
