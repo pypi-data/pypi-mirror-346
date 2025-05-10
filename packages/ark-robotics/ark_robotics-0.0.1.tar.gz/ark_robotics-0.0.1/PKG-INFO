@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: ark_robotics
+Version: 0.0.1
+Summary: A python first robot framework for the ARK ecosystem.
+Author-email: Sarthak Das <sdas4@icloud.com>
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file

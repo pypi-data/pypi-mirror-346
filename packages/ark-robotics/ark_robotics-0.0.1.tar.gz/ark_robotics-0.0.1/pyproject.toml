@@ -1,0 +1,15 @@
+[project]
+name = "ark_robotics"
+version = "0.0.1"
+authors = [
+  { name="Sarthak Das", email="sdas4@icloud.com" },
+]
+description = "A python first robot framework for the ARK ecosystem."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
