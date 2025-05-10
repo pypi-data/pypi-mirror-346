@@ -1,0 +1,8 @@
+pyorcasdk/__init__.py,sha256=2Wyk9Bz2CZHO08gStQ4e3Ca4DzRDYTQ61TbhJlBNFmU,131
+pyorcasdk/_pyorcasdk.pypy38-pp73-aarch64-linux-gnu.so,sha256=hqjRFJPxL44MzFatVNItNapilLB5nxbb-ZZ-1743GTI,661240
+pyorcasdk/_pyorcasdk.pyi,sha256=ylhU_FZIjJ-Y5GYcU_gi93d2hF6QMOvZQpfkMYSkxYs,14714
+pyorcasdk/py.typed,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+pyorcasdk-0.1.0.dist-info/RECORD,,
+pyorcasdk-0.1.0.dist-info/WHEEL,sha256=xfS_4nsIMiibhAHWvYKvCQWHEtC2jx8YUHQyF5DeFOo,168
+pyorcasdk-0.1.0.dist-info/METADATA,sha256=yqKMqkUHrvyV-ETA6sKyDtKZSBuqEadtVTEDp_WqeeM,15008
+pyorcasdk-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
