@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+code_annotator/__init__.py
+code_annotator/annotator.py
+code_annotator.egg-info/PKG-INFO
+code_annotator.egg-info/SOURCES.txt
+code_annotator.egg-info/dependency_links.txt
+code_annotator.egg-info/entry_points.txt
+code_annotator.egg-info/requires.txt
+code_annotator.egg-info/top_level.txt
