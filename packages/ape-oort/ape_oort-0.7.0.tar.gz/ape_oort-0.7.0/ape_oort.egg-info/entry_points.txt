@@ -1,0 +1,2 @@
+[ape.plugins]
+oort = ape_oort
