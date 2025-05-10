@@ -1,0 +1,10 @@
+sip_python/sip_python_ext.so,sha256=YTJmoO_et17yks7jfAEKpuW7C7fE9PWFxReeUhk0SM0,379832
+sip_python/sip_python_ext.pyi,sha256=JYlMSrfgDfZLMuWc0Ct0f6hlApV7451mHlqAD9vg4dE,11436
+sip_python/__init__.py,sha256=IvptYaORugo2GkzSIdBVTYgu2mTHHkqtft6N0MCG8-Y,88
+sip_python/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sip_python/helpers.py,sha256=3v_6Fu0pVIvqVsYfsUSbE-L4FcHSz2AlTCmARv_45CE,2009
+sip_python-0.0.2.dist-info/RECORD,,
+sip_python-0.0.2.dist-info/WHEEL,sha256=RAFdN6_MLXZS6P9afJhe9AUPY4K22E96d_oZ2faO2EQ,137
+sip_python-0.0.2.dist-info/top_level.txt,sha256=5QmJfOhrh7J2oFyurVi_u8iADQdBrS2anrclo5fn0Bg,11
+sip_python-0.0.2.dist-info/METADATA,sha256=bVsdDbKs_e_C0VHBSRB_XcmF6KgHNVtgiMeKEzDQvWc,935
+sip_python-0.0.2.dist-info/licenses/LICENSE,sha256=9L6yq8X3phCPq2M-xu5UgKHwDXk9hQWnO_EM5qoY9v0,1074
