@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: freegpts
+Version: 1.1.0
+Summary: The project provides free access to ChatGPT-4, GPT-4o-mini, and SearchGPT models for integration into Python applications.
+Project-URL: GitHub, https://github.com/xevvv/free-chat-gpt
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+## DOCUMENTATION ##
+Usage documentation: [link](https://github.com/xevvv/free-chat-gpt/) 
+
+## ДОКУМЕНТАЦИЯ ##
+ДОКУМЕНТАЦИЯ ПО ИСПОЛЬЗОВАНИЮ: [link](https://github.com/xevvv/free-chat-gpt/) 

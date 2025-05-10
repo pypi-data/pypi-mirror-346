@@ -1,0 +1,11 @@
+README.md
+setup.py
+freegpts/__init__.py
+freegpts/gpt4.py
+freegpts/gpt4o.py
+freegpts/gpt4omini.py
+freegpts.egg-info/PKG-INFO
+freegpts.egg-info/SOURCES.txt
+freegpts.egg-info/dependency_links.txt
+freegpts.egg-info/requires.txt
+freegpts.egg-info/top_level.txt
