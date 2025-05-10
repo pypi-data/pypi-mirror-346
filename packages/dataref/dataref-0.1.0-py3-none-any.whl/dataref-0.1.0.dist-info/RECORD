@@ -1,0 +1,13 @@
+dataref/__init__.py,sha256=admdtMisS4tukPVkS3iEufofl3MI-RX22MApv8qPMWg,445
+dataref/cons/constants.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataref/pipeline/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataref/pipeline/financial_nse_pipeline.py,sha256=mAZjr-425hg_bCnNJZo7EBV4brMfnY6VNpmRnj2HFUM,13320
+dataref/pipeline/shareholding_nse_pipeline.py,sha256=_eD0PKuT-UCStKBDMqizGHGgvTqpSyCotWDjJEUI5Dk,29390
+dataref/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataref/util/download_nse_financial_result_xbrl.py,sha256=4OIV1SSX7zWijUDBZtV-w0a9sfsMJNPW_YjBLDuutU8,6616
+dataref/util/download_nse_shareholding_xbrl.py,sha256=W_fRYrgtIEUu6ERqFHu0kcafeXT1hqPOMdKSrwoFNqE,5929
+dataref-0.1.0.dist-info/licenses/LICENSE,sha256=eiXmF9L2bv2LSS3E5sUq4pYT17YAMdCkFAyvtCEy16U,1088
+dataref-0.1.0.dist-info/METADATA,sha256=uA_HQaydRo7eQ76qpz7weQGIR-RWaQBQOVSiKia1O7I,1596
+dataref-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+dataref-0.1.0.dist-info/top_level.txt,sha256=OM3AEw97iwAlTYDCJQ7vmZu5By-2qbmp0eBKMl51KCE,8
+dataref-0.1.0.dist-info/RECORD,,
