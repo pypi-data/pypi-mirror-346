@@ -1,0 +1,13 @@
+kusto_mcp/__init__.py,sha256=QTYqXqSTHFRkM9TEgpDFcHvwLbvqHDqvqfQ9EiXkcAM,23
+kusto_mcp/kusto_config.py,sha256=6jd4-lmQd3s4ZQsWgITu5l5AYgZOwPOOMr5OXOwJvSE,185
+kusto_mcp/kusto_connection.py,sha256=8cMx2lgAIvWBOteWpxKdMfx8PaRYL3kKcSf-IE8Wetg,1712
+kusto_mcp/kusto_query_formatter.py,sha256=udsTkThPMqRWE6EZLqtqjrjYxz9sCNYyRl6v2KQG3WQ,484
+kusto_mcp/kusto_service.py,sha256=m9h4w_oYKzMlb192TEgTmaT6nDcEsFc55pHV76QkIWc,7820
+kusto_mcp/launcher.py,sha256=m6S7kUBbRrur2I1Wm9z2EW_2YctH4sCv1lpKtPjm_yM,1349
+kusto_mcp/server.py,sha256=eGiFMJjIMLNpO_bSkDc5FpFXELZFqVnhEJiKvKOQOKw,429
+kusto_mcp/bin/kusto-mcp.exe,sha256=XJ4C6nac0mwMi2msGra7ty9Xns3seea_4GxPaY4JOcE,25011846
+kusto_mcp-0.0.5.dist-info/licenses/LICENSE,sha256=mQaUD2Gx8LUz-n2ZuvVReLKAj74RPqUd-_rYVyzNXys,1162
+kusto_mcp-0.0.5.dist-info/METADATA,sha256=0a6bnSd19Hp-0q-kJRdkyomDutnkkORjzd5C30nGx2c,9296
+kusto_mcp-0.0.5.dist-info/WHEEL,sha256=nALZTncxQMc3_oaYY-7kNs-mWNehAcsCzIzH28FCq14,101
+kusto_mcp-0.0.5.dist-info/top_level.txt,sha256=euS4ui-oIvzIGtM0y40AxrfldBG5shYCxHIg_lteDk0,10
+kusto_mcp-0.0.5.dist-info/RECORD,,
