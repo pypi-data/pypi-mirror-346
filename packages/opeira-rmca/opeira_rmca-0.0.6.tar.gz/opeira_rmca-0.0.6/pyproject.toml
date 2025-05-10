@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "opeira-rmca"
+version = "0.0.6"
+description = "Rapid Monte Carlo Analysis"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+urls = { Homepage = "http://pypi.python.org/pypi/rmca/" }
+
+dependencies = [
+  # Add actual dependencies here
+]
+
+[tool.hatch.build]
+sources = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["opeira.rmca"]
