@@ -1,0 +1,11 @@
+{
+    "servers": {
+        "ExcelMCP": {
+            "type": "stdio",
+            "command": "uvx",
+            "args": [
+                "excelmcp"
+            ]
+        }
+    }
+}

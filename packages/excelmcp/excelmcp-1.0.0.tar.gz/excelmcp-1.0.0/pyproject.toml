@@ -1,0 +1,21 @@
+[project]
+name = "excelmcp"
+version = "1.0.0"
+description = "This is a MCP server tool for ai to automate microsoft excel application"
+readme = "README.md"
+authors = [
+    { name = "Monologist", email = "monologist@mail.ustc.edu.cn" }
+]
+requires-python = ">=3.11.4"
+dependencies = [
+    "fastmcp>=2.3.0",
+    "openpyxl>=3.1.5",
+    "pywin32>=310",
+]
+
+[project.scripts]
+excelmcp = "excelmcp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
