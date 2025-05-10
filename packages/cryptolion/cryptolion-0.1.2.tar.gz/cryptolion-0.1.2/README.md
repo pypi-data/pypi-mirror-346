@@ -1,0 +1,186 @@
+# CryptoLion
+
+CryptoLion is a lightweight Python library for backtesting and running cryptocurrency trading strategies locally.
+
+---
+
+## Installation
+
+Build and publish a new release:
+
+```bash
+# Clean previous builds
+tm rm -rf build/ dist/
+
+# Build distributions
+tm python -m build
+
+# (Optional) Upload to TestPyPI for testing
+tm twine upload --repository testpypi dist/*
+
+# Publish to PyPI
+export TWINE_USERNAME="__token__"
+export TWINE_PASSWORD="<your-pypi-token>"
+tm twine upload dist/*
+```
+
+---
+
+## Data Acquisition
+
+Load your own OHLCV data into a pandas `DataFrame` with a datetime index and a `close` column. Examples:
+
+### Binance (python-binance)
+
+```python
+from binance.client import Client
+import pandas as pd
+
+client = Client(api_key, api_secret)
+klines = client.get_historical_klines(
+    "BTCUSDT", Client.KLINE_INTERVAL_1DAY,
+    "1 Jan 2020", "1 Jan 2021"
+)
+
+df = pd.DataFrame(klines, columns=[
+    "open_time", "open", "high", "low", "close", "volume",
+    "close_time", "quote_asset_volume", "num_trades",
+    "taker_buy_base_asset_volume", "taker_buy_quote_asset_volume", "ignore"
+])
+df["Date"] = pd.to_datetime(df["open_time"], unit="ms")
+df.set_index("Date", inplace=True)
+data = df[["close", "volume"]].astype(float)
+```
+
+### Yahoo Finance (yfinance)
+
+```python
+import yfinance as yf
+
+data = yf.download("BTC-USD", start="2020-01-01", end="2021-01-01")
+```
+
+---
+
+## Quickstart Example
+
+```python
+import pandas as pd
+from cryptolion.strategies.ultra import MACrossoverStrategy
+from cryptolion.engine import StrategyEngine
+
+# Load OHLCV data (datetime index with 'close' column)
+# e.g. data = pd.read_csv('data/BTC_USD.csv', parse_dates=['Date'], index_col='Date')
+
+data = pd.read_csv('data/BTC_USD.csv', parse_dates=['Date'], index_col='Date')
+
+# Initialize engine and run backtest
+en = StrategyEngine()
+en.run(data, strategy=MACrossoverStrategy(fast=10, slow=50), fee=0.001)
+
+# Retrieve equity curve
+equity = en.equity
+
+# Display results
+print(equity)
+print(equity.describe())
+```
+
+---
+
+## Bumping Version (v0.1.2)
+
+1. **Update version** in:
+
+   - `pyproject.toml`
+   - `src/cryptolion/__init__.py`
+     set to `0.1.2`.
+
+2. **Commit & tag**:
+
+   ```bash
+   git add pyproject.toml src/cryptolion/__init__.py
+   git commit -m "chore: bump version to v0.1.2"
+   git tag v0.1.2
+   git push origin main --tags
+   ```
+
+3. **Build & publish**:
+
+   ```bash
+   rm -rf build/ dist/
+   python -m build
+   export TWINE_USERNAME="__token__"
+   export TWINE_PASSWORD="<your-pypi-token>"
+   twine upload dist/*
+   ```
+
+4. **Verify** on PyPI:
+
+   [https://pypi.org/project/cryptolion/0.1.2/](https://pypi.org/project/cryptolion/0.1.2/)
+
+---
+
+## Publishing Troubleshooting
+
+### "HTTPError: 403 Forbidden – Invalid or non‑existent authentication information"
+
+- **New token, correct scope:** Generate a fresh _Publish projects_ API token on PyPI (it will start with `pypi-`). Delete or revoke old ones.
+- **Separate exports:** In Bash/Z‑sh put each export on **its own line** _or_ separate with `;` — for example:
+
+  ```bash
+  export TWINE_USERNAME="__token__"
+  export TWINE_PASSWORD="pypi-XXXXXXXXXXXX"
+  ```
+
+- **No angle‑brackets or extra quotes** around the token.
+- **Verify variables are set:** `echo $TWINE_USERNAME; echo ${#TWINE_PASSWORD}` (should print `__token__` and a non‑zero length).
+- **No duplicate version:** A 400 with _File already exists_ means that exact version is already on PyPI — bump `version` in both `pyproject.toml` and `src/cryptolion/__init__.py`.
+- **No inline `#` comments** on the same line as the `twine upload` command. Place comments on a new line (or escape the `#`) so they aren’t treated as part of the filename pattern.
+- **Separate token for Test PyPI:** the production token from pypi.org **will not work** on test.pypi.org. Log in to [https://test.pypi.org/manage/account/](https://test.pypi.org/manage/account/), create a new _API token_, and export it as `TWINE_PASSWORD` when you upload to Test PyPI.
+- **Test first:**
+
+  ```bash
+  twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+  ```
+
+  If TestPyPI succeeds, the credentials are fine.
+
+---
+
+## Persistent credentials via `~/.pypirc`
+
+Instead of exporting `TWINE_USERNAME` and `TWINE_PASSWORD` every time you publish, create a config file in your home directory:
+
+```ini
+[pypi]
+username = __token__
+password = pypi-<your-production-token>
+
+[testpypi]
+repository = https://test.pypi.org/legacy/
+username = __token__
+password = pypi-<your-testpypi-token>
+```
+
+> **Security tip:** keep this file private — `chmod 600 ~/.pypirc` — and **never commit real tokens to version control or chat.**
+
+With this file in place you can simply run:
+
+```bash
+python -m build
+# Test upload first
+ twine upload --repository testpypi dist/*
+# Then production
+ twine upload dist/*
+```
+
+---
+
+## Contributing
+
+For bug reports or feature requests, please open an issue on GitHub:
+
+[https://github.com/phoenixsenses/cryptolion](https://github.com/phoenixsenses/cryptolion)
+
+Pull requests are welcome!
