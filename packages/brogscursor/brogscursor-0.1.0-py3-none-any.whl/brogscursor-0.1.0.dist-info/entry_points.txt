@@ -1,0 +1,2 @@
+[console_scripts]
+brogscursor = brogscursor.cli:main
