@@ -1,0 +1,12 @@
+cube_solver/__init__.py,sha256=3t2s_GCVoNaQpBJx1Qm56itwBAdDiCxMinVx5K8_hOI,234
+cube_solver/cli.py,sha256=ddnEOPyLU1ggRfA7najU7tYao9nXSRu7OkdVxfzIX64,1205
+cube_solver/constants.py,sha256=9kOaNzxOW6t39v0LS_lzz5HdyyGQuo-kOs_JhbNNaro,7442
+cube_solver/cube.py,sha256=i0mfOcvnx608_WyLG8Eo225ViKULhtpY_bdi5qMeldI,13471
+cube_solver/solver.py,sha256=jlwA2SLfr2kaQRcUfCbyRKIa93g9Le-TSJCUUz_AVj0,11312
+cube_solver-1.0.0.dist-info/licenses/AUTHORS.rst,sha256=pbzqcyGAYlojhZCEVZ73iDr8U5kF1Z84NfTplsvef6k,158
+cube_solver-1.0.0.dist-info/licenses/LICENSE,sha256=ldu3eXb-0XXiLmfgu8vBCjQrZpj4vm_xpQgx9Ocvmr8,1072
+cube_solver-1.0.0.dist-info/METADATA,sha256=1B9TMrICdVKEv73ZCUHyBCW6drncW3L9YIj7rqOAXnc,4589
+cube_solver-1.0.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+cube_solver-1.0.0.dist-info/entry_points.txt,sha256=1hEdMx3bARXuXK9Dd0M-Ghb8xDAKxfJWCvrvc9TVY9U,45
+cube_solver-1.0.0.dist-info/top_level.txt,sha256=OXBt9fIKA5Jipm0M_JOFzy8hqJplDNsx50-Cjbo_RZI,12
+cube_solver-1.0.0.dist-info/RECORD,,
