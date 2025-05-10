@@ -1,0 +1,44 @@
+.home,
+.move {
+    h1 {
+        font-size: 2em;
+        font-weight: 600;
+        margin: 1em 0 0.5em 0;
+    }
+    h2{
+        font-size: 1.25em;
+        font-weight: 600;
+        margin: 1em 0 0.5em 0;
+    }
+    h3{
+        padding: 0.25em 0.5em;
+        border-radius: 2px;
+    }
+    p, ul, ol{
+        margin: 0.5em 0;
+    }
+    li{
+        margin-left: 2em;
+        margin-bottom: 0.25em;
+        list-style-type: none;
+    }
+    li.liggend{
+        display: inline-block;
+        width: 24em;
+    }
+}
+.move {
+    input[type="radio"],
+    span{
+        display: inline-block;
+        text-align: center;
+        font-size: 1em;
+        padding: 2px 5px;
+        background-color: #BCC6CC;
+        border-radius: 1em;
+        cursor: pointer;
+    }
+    td > span{
+        width: 3em;
+    }
+}
