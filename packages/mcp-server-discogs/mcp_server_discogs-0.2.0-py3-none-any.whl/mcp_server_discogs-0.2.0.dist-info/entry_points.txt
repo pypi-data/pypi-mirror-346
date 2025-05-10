@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-discogs = mcp_server_discogs:main
