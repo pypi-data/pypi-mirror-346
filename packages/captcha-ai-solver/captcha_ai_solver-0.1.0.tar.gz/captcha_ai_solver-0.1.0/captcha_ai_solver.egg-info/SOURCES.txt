@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+captcha_ai_solver.egg-info/PKG-INFO
+captcha_ai_solver.egg-info/SOURCES.txt
+captcha_ai_solver.egg-info/dependency_links.txt
+captcha_ai_solver.egg-info/requires.txt
+captcha_ai_solver.egg-info/top_level.txt
+captcha_solver/__init__.py
+captcha_solver/audio_challenge_solver.py
+captcha_solver/captcha_replicator.py
+captcha_solver/captcha_solver.py
+captcha_solver/hosts_manager.py
