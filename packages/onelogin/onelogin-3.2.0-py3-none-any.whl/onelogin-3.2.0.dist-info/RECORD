@@ -1,0 +1,10 @@
+onelogin/__init__.py,sha256=nUVf9gWapakM8TDuF4lSZwtB1PmuPq-RtnwvfYgDzcA,13395
+onelogin/api_client.py,sha256=YmUFEuePNmfFMLC5nuQ7gLWbvBWmA4mweuAFE8mOoRg,29794
+onelogin/api_response.py,sha256=PVUEilYSo_CCiR5NaxyzzyJAlKL1xkNoWvtkfk7r528,844
+onelogin/configuration.py,sha256=fzdl-5iijORM_3tw3ZHcK9bPaRH3VvLYs2sWmM7uKAI,15244
+onelogin/exceptions.py,sha256=wRLeZqTZQ_TqQTovZNyKJ9whRBLa4_kB23fA4r8SZ3U,4950
+onelogin/rest.py,sha256=1YD2iVi1barExkJJAj1J3Qdu0-V5KIBQghfVmfU-hjc,12583
+onelogin-3.2.0.dist-info/METADATA,sha256=uWM6hHrgb-FQIxb4IalitDaOx8tJKF9yQ9Z_CD0hs-A,5639
+onelogin-3.2.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+onelogin-3.2.0.dist-info/top_level.txt,sha256=GyvRGD_zfo_KGcrXtohvb08RxMgxASrXtln-kRfqZ5c,9
+onelogin-3.2.0.dist-info/RECORD,,
