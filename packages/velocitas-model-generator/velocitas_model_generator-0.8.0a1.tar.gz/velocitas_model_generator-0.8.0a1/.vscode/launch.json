@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "compounds": [],
+    "configurations": [
+        {
+            "type": "python",
+            "request": "launch",
+            "name": "gen-vehicle-model",
+            "program": "${workspaceFolder}/src/velocitas/model_generator/cli.py",
+            "console": "internalConsole",
+            "args": [
+                "-T", "velocitas_model",
+                "-N", "velocitas_model",
+                "-l", "${input:languageId}",
+                "-I", "${input:includeDir}",
+                "${input:inputFilePath}"
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "type":"promptString",
+            "id": "inputFilePath",
+            "description": "Path to the main input file. Either .vspec or .json."
+        },
+        {
+            "type": "promptString",
+            "id": "includeDir",
+            "description": "Included directories for a vspec tree."
+        },
+        {
+            "type": "pickString",
+            "id": "languageId",
+            "description": "What type of component do you want to create?",
+            "options": [
+                "python",
+                "cpp"
+            ],
+            "default": "python"
+        }
+    ]
+}
