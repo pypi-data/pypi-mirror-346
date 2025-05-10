@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+fashiondata00.egg-info/PKG-INFO
+fashiondata00.egg-info/SOURCES.txt
+fashiondata00.egg-info/dependency_links.txt
+fashiondata00.egg-info/not-zip-safe
+fashiondata00.egg-info/requires.txt
+fashiondata00.egg-info/top_level.txt
+sumifs/__init__.py
+sumifs/core.py
