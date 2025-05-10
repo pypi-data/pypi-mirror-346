@@ -1,0 +1,13 @@
+from __future__ import annotations
+from .organization import MaleoIdentityOrganizationGeneralResultsTransfers
+from .user import MaleoIdentityUserGeneralResultsTransfers
+from .user_profile import MaleoIdentityUserProfileGeneralResultsTransfers
+from .user_system_role import MaleoIdentityUserSystemRoleGeneralResultsTransfers
+from .user_organization import MaleoIdentityUserOrganizationGeneralResultsTransfers
+
+class MaleoIdentityGeneralResultsTransfers:
+    Organization = MaleoIdentityOrganizationGeneralResultsTransfers
+    User = MaleoIdentityUserGeneralResultsTransfers
+    UserProfile = MaleoIdentityUserProfileGeneralResultsTransfers
+    UserSystemRole = MaleoIdentityUserSystemRoleGeneralResultsTransfers
+    UserOrganization = MaleoIdentityUserOrganizationGeneralResultsTransfers
