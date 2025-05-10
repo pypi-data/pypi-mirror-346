@@ -1,0 +1,13 @@
+from __future__ import annotations
+from .organization import MaleoIdentityOrganizationParametersSchemas
+from .user import MaleoIdentityUserParametersSchemas
+from .user_profile import MaleoIdentityUserProfileParametersSchemas
+from .user_system_role import MaleoIdentityUserSystemRoleParametersSchemas
+from .user_organization import MaleoIdentityUserOrganizationParametersSchemas
+
+class MaleoIdentityParametersSchemas:
+    Organization = MaleoIdentityOrganizationParametersSchemas
+    User = MaleoIdentityUserParametersSchemas
+    UserProfile = MaleoIdentityUserProfileParametersSchemas
+    UserSystemRole = MaleoIdentityUserSystemRoleParametersSchemas
+    UserOrganization = MaleoIdentityUserOrganizationParametersSchemas
