@@ -1,0 +1,11 @@
+schema_markdown/__init__.py,sha256=A7u-K4xEQeDUQmq1Hi8pKObsoGPBfukeuZNKc5MnfbQ,578
+schema_markdown/encode.py,sha256=xBR-AdUvO8MxM-l2qarrEjezYpWR1y925mGpi4qaUjo,6222
+schema_markdown/parser.py,sha256=PHWCAYhnNpft11ySxpprqxJyoFbQ_ghZ8VJBZJ3jgLA,18763
+schema_markdown/schema.py,sha256=3tAeLSqN_4tYpDYRdgGgGV9ZLUlSxYYXfD-ux5qDx6k,19055
+schema_markdown/schema_util.py,sha256=s3tvv3MOMDvpdLmcWX_dwoxNe3KqR7uWV9L1gzQF1pQ,11083
+schema_markdown/type_model.py,sha256=x6WzkEHnmcYBKATqCZWbFD9Nikg5QAuHkVzABOhiXMg,4365
+schema_markdown-1.2.11.dist-info/licenses/LICENSE,sha256=WEdcvUP0ss49P4VaSw8ZD3oHHk_Ung8ojCBmRI0voDU,1081
+schema_markdown-1.2.11.dist-info/METADATA,sha256=k2TZ1IiWei-QN4wFG0kVp_EAhR5AAjpUE-CZtkcbu_s,4310
+schema_markdown-1.2.11.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+schema_markdown-1.2.11.dist-info/top_level.txt,sha256=7Y17BowwqRNqBUSfVHXJlQRvoujw8ZH74IfgkK5DAtA,16
+schema_markdown-1.2.11.dist-info/RECORD,,
