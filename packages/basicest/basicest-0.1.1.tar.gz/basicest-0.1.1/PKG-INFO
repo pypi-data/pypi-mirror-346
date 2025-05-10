@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: basicest
+Version: 0.1.1
+Summary: Minimal SSG
+License: GPL-3.0-or-later
+Author: Jamie Bliss
+Author-email: jamie@ivyleav.es
+Requires-Python: >=3.12,<4
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: jinjax (>=0.56)
+Description-Content-Type: text/markdown
+
+# Basicest
+
+Basicest is basic static site generator. It's mostly a component processor over
+a collection of files.
+
+See the `site` directory for an example.
