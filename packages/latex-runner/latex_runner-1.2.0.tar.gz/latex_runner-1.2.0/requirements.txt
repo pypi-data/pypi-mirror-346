@@ -1,0 +1,22 @@
+# This file does not contain the requirements for this package.
+# They are listed in pyproject.toml and installed automatically when installing this package.
+-e .
+
+# Requirements for testing and debugging
+mypy
+types-colorama
+pytest
+pudb
+pytest-pudb
+pytest-reporter-html-dots
+pdbpp
+ptpython
+
+# Requirements for building documentation
+#sphinx
+#sphinx-paramlinks
+#sphinx_rtd_theme >= 0.5.2
+#sphinx-link-fixer >= 1.1.2
+
+# Requirements for releasing
+flit

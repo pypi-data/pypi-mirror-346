@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "latex-runner"
+authors = [{name = "erzo", email = "erzo@posteo.de"}]
+readme = "README.md"
+dynamic = ["version", "description"]
+classifiers = [
+	"Operating System :: POSIX",
+	"Operating System :: Unix",
+	"Operating System :: MacOS",
+	"Operating System :: Microsoft :: Windows",
+	"Environment :: Console",
+	"License :: OSI Approved :: BSD License",
+	"Typing :: Typed",
+]
+requires-python = ">=3.8"
+dependencies = [
+	"confattr >= 1.4.0, < 2",
+	"colorama",
+]
+
+[project.urls]
+Documentation = "https://erzo.gitlab.io/latex-runner/latest"
+"Source code" = "https://gitlab.com/erzo/latex-runner"
+"Bug tracker" = "https://gitlab.com/erzo/latex-runner/-/issues"
+"Change log" = "https://gitlab.com/erzo/latex-runner/-/tags"
+
+[project.scripts]
+latex-runner = "latex_runner.main:main"
