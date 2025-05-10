@@ -1,0 +1,10 @@
+pymongo_voyageai/__init__.py,sha256=iSwURTyTAxJFvNvBEtMYCavP3G6sr3Wm9xZNdZjMHRY,436
+pymongo_voyageai/_version.py,sha256=HRh7tImpdPuhLmuNUflKJzl4y_MyPX2rFiPX5eE4RXU,24
+pymongo_voyageai/client.py,sha256=TmlZW3NPk8F9TeXqbOlAtoPDHumd77iQtdE-CtQYq-g,28176
+pymongo_voyageai/document.py,sha256=k5IMHdgNKN5iVHEcyVmuyWSutMDqmy0YmbLT3CURMiE,1175
+pymongo_voyageai/storage.py,sha256=9tT8B61Oe-1RBhmyRT8ANcOLOYhb5P7-_oMjvDF0IBY,3436
+pymongo_voyageai/utils.py,sha256=Q042ufEk3rxznjepRy5Zi9pySi5oXxOf2WxQ8ulzxPI,4716
+pymongo_voyageai-0.1.0a0.dist-info/METADATA,sha256=4jaSnrJCtRBL_WrMjKDrW1Mu7z7nrq3olxbd9qBr1HQ,15318
+pymongo_voyageai-0.1.0a0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pymongo_voyageai-0.1.0a0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pymongo_voyageai-0.1.0a0.dist-info/RECORD,,
