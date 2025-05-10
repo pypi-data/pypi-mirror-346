@@ -1,0 +1,7 @@
+boto3_pydantic_connectcampaignsv2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_connectcampaignsv2/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_connectcampaignsv2/connectcampaignsv2_classes.py,sha256=B9Qyw8QBxeYDA1yOq6699pKgz07d3BUDdkQfkF7Gk_U,18033
+boto3_pydantic_connectcampaignsv2/connectcampaignsv2_constants.py,sha256=quGi8r4JiXAdHRibJJfSFjD-IIEqa8Hkx8fmG5dWREo,8319
+boto3_pydantic_connectcampaignsv2-1.0.1.dist-info/METADATA,sha256=fUVHCLGfgNGVCFOK0-BFFw_X543-NN6vZzn3pR2JeH0,1457
+boto3_pydantic_connectcampaignsv2-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_connectcampaignsv2-1.0.1.dist-info/RECORD,,
