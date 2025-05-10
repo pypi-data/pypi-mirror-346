@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tests/__init__.py
+tests/test_text2pix.py
+text2pix/__init__.py
+text2pix.egg-info/PKG-INFO
+text2pix.egg-info/SOURCES.txt
+text2pix.egg-info/dependency_links.txt
+text2pix.egg-info/requires.txt
+text2pix.egg-info/top_level.txt
