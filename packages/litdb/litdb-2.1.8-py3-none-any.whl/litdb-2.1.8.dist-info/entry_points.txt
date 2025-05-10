@@ -1,0 +1,3 @@
+[console_scripts]
+litdb = litdb.cli:cli
+litdb_mcp = litdb.mcp:main
