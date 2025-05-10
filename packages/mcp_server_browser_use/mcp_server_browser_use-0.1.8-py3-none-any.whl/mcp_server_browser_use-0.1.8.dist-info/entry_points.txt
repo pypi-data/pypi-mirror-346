@@ -1,0 +1,3 @@
+[console_scripts]
+mcp-browser-cli = mcp_server_browser_use.cli:app
+mcp-server-browser-use = mcp_server_browser_use.server:main
