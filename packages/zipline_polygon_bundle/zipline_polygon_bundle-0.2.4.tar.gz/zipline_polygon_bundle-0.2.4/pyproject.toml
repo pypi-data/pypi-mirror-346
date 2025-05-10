@@ -1,0 +1,56 @@
+[project]
+name = 'zipline_polygon_bundle'
+version = '0.2.4'
+description = 'A zipline-reloaded data provider bundle for Polygon.io'
+authors = [
+    { name = 'Jim White', email = 'jim@fovi.com' },
+]
+license = { file = 'LICENSE' }
+readme = 'README.md'
+keywords = ['zipline', 'data-bundle', 'finance']
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: GNU Affero General Public License v3',
+    'Operating System :: OS Independent',
+]
+
+requires-python = ">= 3.10,<4.0"
+
+dependencies = [
+    "fsspec>=2024.10",
+    "filelock>=3.16.0",
+    "polygon-api-client>=1.14.2",
+    "pandas>=2.2,<3",
+    # "pandas-market-calendars>=4.4.2",
+    # "pandas-ta>=0.3", # pandas-ta install doesn't work with poetry for some reason.
+    # It is used in compute_signals.py which we're not using yet.
+    "pytz>=2018.5",
+    "requests>=2.9.1",
+    "bcolz-zipline>=1.2.11",
+    # There was an issue in PyArrow 19 which is probably fixed but don't remember how to test it.
+    "pyarrow>=18.1.0,<19",
+    "numpy<2",
+    "toolz>=0.8.2",
+    "zipline-arrow>=3.2.2",
+    # "zipline-arrow = { git = 'https://github.com/fovi-llc/zipline-arrow.git' }"
+]
+
+[project.urls]
+Repository = 'https://github.com/fovi-llc/zipline-polygon-bundle'
+
+
+[poetry.group.dev.dependencies]
+pytest = "*"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry_core>=2.1.0"]
+
+[tool.pytest.ini_options]
+# https://docs.pytest.org/en/stable/how-to/capture-warnings.html#controlling-warnings
+filterwarnings = [
+    # "error",
+    # "ignore::UserWarning",
+    # note the use of single quote below to denote "raw" strings in TOML
+    'ignore:co_lnotab is deprecated, use co_lines instead:DeprecationWarning',
+]
