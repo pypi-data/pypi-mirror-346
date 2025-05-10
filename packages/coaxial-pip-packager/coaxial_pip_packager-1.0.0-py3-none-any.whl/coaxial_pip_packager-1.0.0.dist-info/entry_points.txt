@@ -1,0 +1,2 @@
+[console_scripts]
+coaxial-pip-packager = coaxial_pip_packager.packager:main
