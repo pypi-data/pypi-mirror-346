@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+omnimail/__init__.py
+omnimail.egg-info/PKG-INFO
+omnimail.egg-info/SOURCES.txt
+omnimail.egg-info/dependency_links.txt
+omnimail.egg-info/top_level.txt

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnimail"
+version = "0.1.0"
+description = "A unified email library supporting SMTP, OAuth2, and API-based sending"
+authors = [{ name="Stephen Glombicki", email="github@sglombicki.com" }]
+readme = "README.md"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Communications :: Email",
+]
+requires-python = ">=3.7"
+dependencies = []
