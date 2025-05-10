@@ -1,0 +1,9 @@
+board_game_recommender/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+board_game_recommender/abc.py,sha256=jDoaeWSNPzNWcMFqbYHEZmpaKdtTPPJ6ojOne7vyHkQ,3281
+board_game_recommender/baseline.py,sha256=xnEqsJW7LvUXBdioOtZeJ0LNoVqggSO3GEaUeYhchBI,9694
+board_game_recommender/light.py,sha256=3-1KK116x9xdGR9dAVL7ps6iW4ua3FC5RBBhSihVN_Y,10657
+board_game_recommender/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+board_game_recommender-4.0.0.dist-info/LICENSE,sha256=nwkCAefOs58iZvA2YdFmLIT0yJVPeO8qdLkwvRCee5M,1107
+board_game_recommender-4.0.0.dist-info/METADATA,sha256=L5mLBs0WNdOT7D_UZY6vioPbkntc16le3MlKkAIeyjg,4337
+board_game_recommender-4.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+board_game_recommender-4.0.0.dist-info/RECORD,,
