@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+json_include/__init__.py
+json_include/__main__.py
+json_include/json_include.py
+krozark_json_include.egg-info/PKG-INFO
+krozark_json_include.egg-info/SOURCES.txt
+krozark_json_include.egg-info/dependency_links.txt
+krozark_json_include.egg-info/entry_points.txt
+krozark_json_include.egg-info/top_level.txt
