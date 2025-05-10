@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: data_manipulation
+Version: 0.49
+Summary: Powerful data manipulation
+Home-page: https://github.com/shawnngtq/data-manipulation
+Author: Shawn Ng
+Author-email: shawn.coding.acc@gmail.com
+License: BSD-3
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Cython
+Classifier: Topic :: Scientific/Engineering
+License-File: LICENSE
+Requires-Dist: beautifulsoup4
+Requires-Dist: boto3
+Requires-Dist: cryptography
+Requires-Dist: django
+Requires-Dist: flask
+Requires-Dist: geopandas
+Requires-Dist: ipython
+Requires-Dist: loguru
+Requires-Dist: mysql-connector-python
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: psycopg
+Requires-Dist: pyspark
+Requires-Dist: python-dotenv
+Requires-Dist: sqlalchemy
+
+
+Data Manipulation is a Python package providing powerful utility functions. 
+It contains many subpackages with utility functions built for popular packages such as Pandas, PySpark and many more.

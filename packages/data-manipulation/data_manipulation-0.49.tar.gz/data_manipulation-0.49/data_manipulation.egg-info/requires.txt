@@ -1,0 +1,15 @@
+beautifulsoup4
+boto3
+cryptography
+django
+flask
+geopandas
+ipython
+loguru
+mysql-connector-python
+numpy
+pandas
+psycopg
+pyspark
+python-dotenv
+sqlalchemy
