@@ -1,0 +1,12 @@
+AUTHORS.rst
+LICENSE
+README.md
+pyproject.toml
+src/MomentumPyClient/__init__.py
+src/MomentumPyClient/ui.py
+src/MomentumPyClient/ws.py
+src/MomentumPyClient.egg-info/PKG-INFO
+src/MomentumPyClient.egg-info/SOURCES.txt
+src/MomentumPyClient.egg-info/dependency_links.txt
+src/MomentumPyClient.egg-info/requires.txt
+src/MomentumPyClient.egg-info/top_level.txt

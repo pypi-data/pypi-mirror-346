@@ -1,0 +1,10 @@
+requests
+python-dotenv
+
+[dev]
+pytest>8.3.3
+
+[streamlit]
+streamlit
+plotly
+pandas
