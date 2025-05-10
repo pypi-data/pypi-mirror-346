@@ -1,0 +1,10 @@
+brogcursor-0.1.1.dist-info/licenses/LICENSE,sha256=A0GDHXuEIksuywLw3xVu77m5bKUeGjbb_SmsNAMScUc,1100
+brogscursor/__init__.py,sha256=VJ9PZCnZL-EwEecCjPzSylqJZKg2rZEbeKx8VSXe6xo,336
+brogscursor/cli.py,sha256=-E4wfwRMxqf4ct84h8A0J8NdB7L44dy6H0V1Q4DB_8o,12921
+brogscursor/recorder.py,sha256=38QquH9A8Z4gMzMSSsmJqkMhs-ovtO1BoI3hbQQW4mE,20118
+brogscursor/utils.py,sha256=v2fJq74-N3zQGV3evCKMdDym9eixrfQuazS-yPttTYs,9676
+brogcursor-0.1.1.dist-info/METADATA,sha256=wSLendoaWQmhtlyWv88ZeK0nCATYOHHPvCPIuEimaS0,10159
+brogcursor-0.1.1.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+brogcursor-0.1.1.dist-info/entry_points.txt,sha256=5V5hqu6gK1cZnQuLyGSjVhv4dlGT7X6dQTJtdQX95B0,51
+brogcursor-0.1.1.dist-info/top_level.txt,sha256=cdsDlI9aNUPVwli64Cq-c4E_QDndxCjarwLCkrvNzlg,12
+brogcursor-0.1.1.dist-info/RECORD,,
