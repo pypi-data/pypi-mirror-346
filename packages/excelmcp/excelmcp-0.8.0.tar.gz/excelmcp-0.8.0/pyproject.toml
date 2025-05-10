@@ -1,0 +1,20 @@
+[project]
+name = "excelmcp"
+version = "0.8.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Monologist", email = "monologist@mail.ustc.edu.cn" }
+]
+requires-python = ">=3.11.4"
+dependencies = [
+    "fastmcp>=2.3.0",
+    "pywin32>=310",
+]
+
+[project.scripts]
+excelmcp = "excelmcp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
