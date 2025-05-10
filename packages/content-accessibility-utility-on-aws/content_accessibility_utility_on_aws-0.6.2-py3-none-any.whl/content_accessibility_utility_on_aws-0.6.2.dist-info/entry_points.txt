@@ -1,0 +1,3 @@
+[console_scripts]
+content-accessibility-utility = content_accessibility_utility_on_aws.cli:main
+content-accessibility-utility-on-aws = content_accessibility_utility_on_aws.cli:main
