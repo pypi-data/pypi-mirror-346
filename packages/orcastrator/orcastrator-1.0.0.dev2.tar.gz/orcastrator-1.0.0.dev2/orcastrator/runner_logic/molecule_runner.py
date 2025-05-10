@@ -1,0 +1,199 @@
+import concurrent.futures
+import queue
+from pathlib import Path
+from typing import List, Optional
+
+from orcastrator.calculation import OrcaCalculation
+from orcastrator.logger import debug, error, info, warning
+from orcastrator.molecule import Molecule
+
+
+def process_molecule(
+    molecule: Molecule, config: dict, cpus: Optional[int] = None
+) -> bool:
+    """Process a single molecule with the given configuration.
+
+    Args:
+        molecule: The molecule to process
+        config: Dictionary containing calculation configuration
+        cpus: Optional number of CPUs to use for this calculation. If None,
+              will use the default from the config.
+
+    Returns:
+        bool: True if all calculation steps completed successfully, False otherwise
+    """
+    info(
+        f"Processing molecule: {molecule.name} (charge={molecule.charge}, mult={molecule.mult})"
+    )
+
+    output_dir = Path(config["main"]["output_dir"]) / molecule.name
+    output_dir.mkdir(parents=True, exist_ok=True)
+    debug(f"Created output directory: {output_dir}")
+
+    scratch_dir = Path(config["main"]["scratch_dir"])
+    debug(f"Using scratch directory: {scratch_dir}")
+
+    # Get the CPU count for this calculation
+    cpu_count = cpus if cpus is not None else config["main"]["cpus"]
+    debug(f"Using {cpu_count} CPUs for calculation")
+
+    # Process each step in the calculation pipeline
+    previous_calc = None
+    success = True
+
+    for step in config["step"]:
+        info(f"Starting calculation step: {step['name']} for molecule {molecule.name}")
+        step_dir = output_dir / step["name"]
+        step_dir.mkdir(exist_ok=True)
+        debug(f"Created step directory: {step_dir}")
+
+        # Get molecule for this step (either initial or from previous calculation)
+        if previous_calc is None:
+            debug(f"Using initial molecule for step {step['name']}")
+            step_molecule = molecule
+        else:
+            # Get molecule from previous calculation's output
+            try:
+                charge = step.get("charge", molecule.charge)
+                mult = step.get("mult", molecule.mult)
+                debug(
+                    f"Loading molecule from previous calculation output. charge={charge}, mult={mult}"
+                )
+                xyz_file = previous_calc.output_file.with_suffix(".xyz")
+                debug(f"Reading XYZ from: {xyz_file}")
+                step_molecule = Molecule.from_xyz_file(
+                    xyz_file,
+                    charge=charge,
+                    mult=mult,
+                )
+                debug("Successfully loaded molecule from previous step")
+            except Exception as e:
+                error(
+                    f"Error getting molecule from previous step for {molecule.name}: {e}",
+                    exc_info=True,
+                )
+                success = False
+                break
+
+        # Create and run the calculation
+        debug(f"Creating calculation with keywords: {step['keywords']}")
+        calc = OrcaCalculation(
+            directory=step_dir,
+            molecule=step_molecule,
+            keywords=step["keywords"],
+            blocks=step.get("blocks", []),
+            overwrite=config["main"]["overwrite"],
+            cpus=cpu_count,
+            mem_per_cpu_gb=config["main"]["mem_per_cpu_gb"],
+            scratch_dir=scratch_dir,
+        )
+
+        try:
+            debug(f"Running calculation step {step['name']} for {molecule.name}")
+            calc_success = calc.run()
+            if not calc_success:
+                warning(
+                    f"Calculation failed for molecule {molecule.name} at step {step['name']}"
+                )
+                success = False
+                break
+            info(
+                f"Step {step['name']} completed successfully for molecule {molecule.name}"
+            )
+            previous_calc = calc
+        except Exception as e:
+            error(
+                f"Error running calculation for {molecule.name} at step {step['name']}: {e}",
+                exc_info=True,
+            )
+            success = False
+            break
+
+    if success:
+        info(
+            f"All calculation steps completed successfully for molecule {molecule.name}"
+        )
+    else:
+        warning(f"Calculation pipeline failed for molecule {molecule.name}")
+
+    return success
+
+
+def process_molecules_parallel(
+    molecules: List[Molecule], n_workers: int, worker_cpus: int, config: dict
+) -> None:
+    """Process molecules in parallel using a thread pool and a shared queue.
+
+    This function distributes molecule processing tasks among multiple worker
+    threads. Each worker takes a new molecule from the shared queue when it
+    finishes processing its current molecule, ensuring efficient load balancing.
+
+    Args:
+        molecules: List of molecules to process
+        n_workers: Number of parallel workers to use
+        worker_cpus: Number of CPUs to allocate to each worker
+        config: Dictionary containing calculation configuration
+    """
+    info(
+        f"Starting parallel processing with {n_workers} workers, {worker_cpus} CPUs per worker"
+    )
+    debug(f"Processing {len(molecules)} molecules in parallel")
+
+    # Create a shared queue of molecules
+    molecule_queue = queue.Queue()
+    for molecule in molecules:
+        molecule_queue.put(molecule)
+        debug(f"Added {molecule.name} to processing queue")
+
+    # Create a function for worker to process molecules from queue
+    def worker():
+        debug("Worker thread starting")
+        while True:
+            try:
+                molecule = molecule_queue.get_nowait()
+                debug(f"Worker picked up molecule {molecule.name}")
+                try:
+                    success = process_molecule(molecule, config, cpus=worker_cpus)
+                    status = "completed successfully" if success else "failed"
+                    info(f"Molecule {molecule.name} {status}")
+                except Exception as e:
+                    error(
+                        f"Error processing molecule {molecule.name}: {e}", exc_info=True
+                    )
+                finally:
+                    molecule_queue.task_done()
+                    debug(f"Worker finished processing molecule {molecule.name}")
+            except queue.Empty:
+                debug("Queue empty, worker thread ending")
+                break
+
+    # Start worker threads
+    debug(f"Starting ThreadPoolExecutor with {n_workers} workers")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=n_workers) as executor:
+        futures = [executor.submit(worker) for _ in range(n_workers)]
+        debug(f"Submitted {len(futures)} worker tasks")
+        concurrent.futures.wait(futures)
+        debug("All worker threads have completed")
+
+    info("All molecules have been processed")
+
+
+def process_molecules_sequential(molecules: List[Molecule], config: dict) -> None:
+    """Process molecules sequentially.
+
+    This function processes each molecule one after another, using all available
+    resources for each calculation.
+
+    Args:
+        molecules: List of molecules to process
+        config: Dictionary containing calculation configuration
+    """
+    info(f"Starting sequential processing of {len(molecules)} molecules")
+    for i, molecule in enumerate(molecules):
+        info(f"Processing molecule {i + 1}/{len(molecules)}: {molecule.name}")
+        try:
+            success = process_molecule(molecule, config)
+            status = "completed successfully" if success else "failed"
+            info(f"Molecule {molecule.name} {status}")
+        except Exception as e:
+            error(f"Error processing molecule {molecule.name}: {e}", exc_info=True)
