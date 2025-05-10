@@ -1,0 +1,2 @@
+[console_scripts]
+wordcount = word_counter.cli:main

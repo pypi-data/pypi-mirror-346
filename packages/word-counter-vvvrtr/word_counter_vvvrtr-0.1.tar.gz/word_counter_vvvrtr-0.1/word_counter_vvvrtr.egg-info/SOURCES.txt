@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+word_counter/__init__.py
+word_counter/cli.py
+word_counter/counter.py
+word_counter_vvvrtr.egg-info/PKG-INFO
+word_counter_vvvrtr.egg-info/SOURCES.txt
+word_counter_vvvrtr.egg-info/dependency_links.txt
+word_counter_vvvrtr.egg-info/entry_points.txt
+word_counter_vvvrtr.egg-info/top_level.txt
