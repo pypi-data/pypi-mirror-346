@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: unit-converter-plus
+Version: 0.1.0
+Summary: A comprehensive unit conversion library for scientific, engineering and everyday calculations
+License: MIT
+Author: Mohamad Ibrahim
+Author-email: mhmdmohamad501@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+**A comprehensive unit conversion library for scientific, engineering and everyday calculations**
