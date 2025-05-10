@@ -1,0 +1,4 @@
+uploads:
+  - local_path: "~/WIFI"
+    remote_path: "/wifi-logs"
+    # No retention policy - file will be kept indefinitely
