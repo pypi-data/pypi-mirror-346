@@ -1,0 +1,2 @@
+[console_scripts]
+protoc-gen-pydantic = protobuf_pydantic_gen.main:main

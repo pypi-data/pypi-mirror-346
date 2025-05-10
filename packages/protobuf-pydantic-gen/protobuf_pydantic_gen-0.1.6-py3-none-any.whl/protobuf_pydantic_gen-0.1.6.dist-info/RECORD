@@ -1,0 +1,14 @@
+protobuf_pydantic_gen/__init__.py,sha256=f_AbDWglRXOfb0cFuqVOdfIDxcSwpp0-2WEe3q5I9LE,128
+protobuf_pydantic_gen/ext.py,sha256=WhljTSJR4UWoUIkKHpSihZtpIarNNq4OdL91vkFTxms,9060
+protobuf_pydantic_gen/main.py,sha256=nDeSkzTYqIcJVMXvmOKjwwBOAxoeL519z5Q3JqCDkQ0,21058
+protobuf_pydantic_gen/pydantic_pb2.py,sha256=iixZcjhD-wn9IG9RCAvdq7wEyIJky77J9qoDaN1HJMQ,2912
+protobuf_pydantic_gen/pydantic_pb2.pyi,sha256=wLj32sfPnGFgjFgENXiOgnxp-yelSJeOn1rVCSyfdsE,3563
+protobuf_pydantic_gen/pydantic_pb2_grpc.py,sha256=1oboBPFxaTEXt9Aw7EAj8gXHDCNMhZD2VXqocC9l_gk,159
+protobuf_pydantic_gen/template.j2,sha256=srBYiOJxgJ9i-Zu-Fc3xt7KlsV63dIT-ZF3pcJ77O3U,1670
+protobuf_pydantic_gen/utils.py,sha256=v-RdhU6ZoIVb22wLplrkIH_gTC-L1gshjSvIAZs-E7s,2006
+protobuf_pydantic_gen-0.1.6.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+protobuf_pydantic_gen-0.1.6.dist-info/METADATA,sha256=X3u1URqMvwcrrFPqX3Vcft1SFLogKHmjiu1z2TGlHkQ,3723
+protobuf_pydantic_gen-0.1.6.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+protobuf_pydantic_gen-0.1.6.dist-info/entry_points.txt,sha256=sXrHYtjPiL2XFIPgm73hAoAj_bLC88Ar0DMkkoWdVNo,72
+protobuf_pydantic_gen-0.1.6.dist-info/top_level.txt,sha256=LNiSFXEn22xzu9RLh9311g8PmhWj-Hkwe4Z6IMG9i_0,22
+protobuf_pydantic_gen-0.1.6.dist-info/RECORD,,
