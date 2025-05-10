@@ -1,0 +1,11 @@
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+serapis_metrics/__init__.py
+serapis_metrics/core.py
+serapis_metrics.egg-info/PKG-INFO
+serapis_metrics.egg-info/SOURCES.txt
+serapis_metrics.egg-info/dependency_links.txt
+serapis_metrics.egg-info/top_level.txt
