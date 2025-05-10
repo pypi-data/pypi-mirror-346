@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: aybIG
+Version: 0.1.2
+Summary: Instagram API logic for user data extraction
+Home-page: UNKNOWN
+Author: AYOUB QADDA
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# aybIG
+
+`aybIG` is a Python package for interacting with Instagram APIs to fetch user data. It allows users to easily fetch a user's Instagram profile information by entering the username. The tool automatically retrieves the user ID and additional data such as follower count, media count, account type, and more. 
+ developer credits to "dev by @rootsecc."
+
+## Features
+
+- Fetch Instagram user data by username
+- Retrieve user profile information, including:
+  - Username
+  - Full name
+  - User ID
+  - Account type (Personal, Business, Creator)
+  - Biography and external links
+  - Follower count, following count, media count, reels count, etc.
+- "dev by @rootsecc" included in the response for credit
+
+## Installation
+
+You can install the package using `pip`:
+
+```bash
+set IG_BEARER_TOKEN=.....
+pip install aybIG
+Usage
+To use aybIG to get Instagram user data, simply call the function getinf() with the Instagram username you wish to retrieve information for:
+
+
+from aybIG import usrinfo
+
+
+user_data = usrinfo.getinf('instagram_username')
+
+
+{
+    "username": "someusername",
+    "full_name": "Some User",
+    "user_id": "1234567890",
+    "is_private": false,
+    "is_verified": true,
+    "account_type": "personal",
+    "dev_by": "dev by @rootsecc"
+}
+Requirements
+Python 3.6+
+
+Requests library (pip install requests)
+
+A way to generate a user-agent string (e.g., using a custom function or library)
+
+Credits
+Developer: @rootsecc
+
+
+
+
