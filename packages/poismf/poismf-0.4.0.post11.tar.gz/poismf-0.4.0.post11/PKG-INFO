@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: poismf
+Version: 0.4.0.post11
+Summary: Fast and memory-efficient Poisson factorization for sparse count matrices
+Home-page: https://github.com/david-cortes/poismf
+Author: David Cortes
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas>=0.24
+Requires-Dist: cython
+Requires-Dist: scipy
