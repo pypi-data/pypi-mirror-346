@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: splent_app
+Version: 0.0.3
+Summary: splent_app is an app built with SPLENT (https://www.splent.io)
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Provides-Extra: core
+Requires-Dist: splent_framework; extra == "core"
+Requires-Dist: splent_cli; extra == "core"
+Provides-Extra: features
+Requires-Dist: splent_feature_public; extra == "features"
+Requires-Dist: splent_feature_mail; extra == "features"
+Requires-Dist: splent_feature_confirmemail; extra == "features"
+Requires-Dist: splent_feature_auth; extra == "features"
+Requires-Dist: splent_feature_profile; extra == "features"
+Requires-Dist: splent_feature_reset; extra == "features"
+Dynamic: license-file
+
+# splent_app
