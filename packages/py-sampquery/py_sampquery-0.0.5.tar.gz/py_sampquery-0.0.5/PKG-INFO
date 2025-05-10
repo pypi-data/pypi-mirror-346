@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: py_sampquery
+Version: 0.0.5
+Summary: A better and fixed SA:MP Query Client written in Python
+Author-email: Leo Araya <larayavrs@gmail.com>
+Project-URL: Homepage, https://github.com/larayavrs/sampquery
+Project-URL: Issues, https://github.com/larayavrs/sampquery/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.md
+Requires-Dist: trio
+Requires-Dist: faust-cchardet
+Dynamic: license-file
+
+> **NEWS**: Documentation is being rewritten due the important changes in the library.
+
+<div align="center">
+    <h3>SA:MP Query</h3>
+    <i>Better, flexible, re-written and fast SA:MP/OMP query server client</i>
+</div>
+
+```bash
+pip install py-sampquery
+```
