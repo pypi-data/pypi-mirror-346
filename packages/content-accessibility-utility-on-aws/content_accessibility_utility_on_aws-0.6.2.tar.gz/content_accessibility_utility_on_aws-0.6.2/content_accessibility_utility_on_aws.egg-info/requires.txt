@@ -1,0 +1,13 @@
+Pillow>=11.1.0
+boto3>=1.37.11
+botocore>=1.37.11
+beautifulsoup4>=4.11.0
+bs4>=0.0.1
+pydantic>=2.10.6
+defusedcsv>=2.0.0
+Flask>=3.1.0
+PyYaml>=6.0.0
+pypdf>=5.4.0
+
+[WebApp]
+streamlit>=1.43.2
