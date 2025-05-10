@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/pynsupdate/__init__.py
+src/pynsupdate/pynsupdate.py
+src/pynsupdate.egg-info/PKG-INFO
+src/pynsupdate.egg-info/SOURCES.txt
+src/pynsupdate.egg-info/dependency_links.txt
+src/pynsupdate.egg-info/entry_points.txt
+src/pynsupdate.egg-info/requires.txt
+src/pynsupdate.egg-info/top_level.txt

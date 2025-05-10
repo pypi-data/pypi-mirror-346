@@ -1,0 +1,35 @@
+[project]
+name = "pynsupdate"
+version = "0.6.0"
+authors = [
+  { name="Júlio Dantas" },
+]
+description = "A python wrapper to Dynamically update DNS using nsupdate"
+readme =  {file = "README.txt", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+classifiers = [
+   "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Other Audience",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Internet :: Name Service (DNS)"
+]
+dependencies = [
+  "psutil>=6.1.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/jldantas/pynsupdate"
+Issues = "https://github.com/jldantas/pynsupdate/issues"
+Repository = "https://github.com/jldantas/pynsupdat.git"
+
+[project.scripts]
+pynsupdate = "pynsupdate.pynsupdate:main"
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
