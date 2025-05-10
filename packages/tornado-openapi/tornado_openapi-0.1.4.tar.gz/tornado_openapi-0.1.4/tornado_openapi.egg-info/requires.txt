@@ -1,0 +1,7 @@
+tornado>=6
+
+[dev]
+build
+punit>=1.1.4
+twine
+urllib3-future>=2.12.920
