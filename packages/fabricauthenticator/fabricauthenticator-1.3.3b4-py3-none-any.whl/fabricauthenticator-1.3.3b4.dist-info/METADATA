@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: fabricauthenticator
+Version: 1.3.3b4
+Summary: Fabric OAuth Authenticator
+Keywords: Swagger,Fabric OAuth Authenticator
+Author-email: Komal Thareja <kthare10@renci.org>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: jupyterhub>=1.0
+Requires-Dist: oauthenticator==15.1.0
+Requires-Dist: requests
+Requires-Dist: ldap3
+Project-URL: Home, https://fabric-testbed.net/
+Project-URL: Sources, https://github.com/fabric-testbed/fabricauthenticator
+
+[![PyPI](https://img.shields.io/pypi/v/fabricauthenticator?style=plastic)](https://pypi.org/project/fabricauthenticator/)
+
+# Fabric Authenticator for Jupyterhub
+
+The authenticator for Fabric Testbed Jupyterhub
+Based on CILogon authentication, in addition it checks if user belongs to Fabric JUPYTERHUB COU group
+
+## Usage
+### If using dockerspawner:
+
+In jupyter_config.py:
+
+```
+   import fabricauthenticator
+   c.JupyterHub.authenticator_class = 'fabricauthenticator.FabricAuthenticator'
+   c.Authenticator.enable_auth_state = True
+
+   # set the OIDC client info in following CILogon configuration
+   c.CILogonOAuthenticator.client_id = ""
+   c.CILogonOAuthenticator.client_secret = ""
+   c.CILogonOAuthenticator.oauth_callback_url = "<host>/hub/oauth_callback"
+```
+
+### if using KubeSpawner
+
+in config.yaml:
+
+```
+hub:
+  extraConfig:
+    authconfig: |
+      c.Authenticator.enable_auth_state = True
+      c.CILogonOAuthenticator.client_id = ""
+      c.CILogonOAuthenticator.client_secret = ""
+      c.CILogonOAuthenticator.oauth_callback_url = "<host>/hub/oauth_callback"
+auth:
+  type: custom
+  custom:
+      className: fabricauthenticator.FabricAuthenticator
+```
+
