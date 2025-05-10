@@ -1,0 +1,10 @@
+cmaes>=0.11.1
+intel-cmplr-lib-rt>=2025.1.1
+numpy>=2.2.5
+numba>=0.61.2
+matplotlib>=3.10.3
+pdfo>=2.2.0
+psutil>=7.0.0
+pycommons>=0.8.65
+scikit-learn>=1.6.1
+scipy>=1.15.3
