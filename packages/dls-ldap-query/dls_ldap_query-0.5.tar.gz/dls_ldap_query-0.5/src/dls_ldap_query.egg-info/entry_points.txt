@@ -1,0 +1,2 @@
+[console_scripts]
+dls-ldap-query = dls_ldap_query.__main__:main

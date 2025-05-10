@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dls-ldap-query
+  title: dls-ldap-query
+  description: Format lists of users by querying LDAP
+spec:
+  type: user-interface
+  lifecycle: experimental
+  owner: group:default/beamline-controls
