@@ -1,0 +1,5 @@
+pandas
+plotly
+commodutil
+scipy
+jinja2
