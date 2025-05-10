@@ -1,0 +1,155 @@
+Metadata-Version: 2.1
+Name: PythonTool
+Version: 0.1.6
+Summary: A package for tools in Python
+Author: Zhu Chongjing
+Author-email: tommy1008@dingtalk.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: manim
+
+# PythonTool使用说明
+
+`PythonTool`依赖库：`manim`
+
+***发现任何bug或问题，请反馈到tommy1008@dingtalk.com，谢谢！**
+
+## `ManimTool`：$\text{Manim}$相关工具
+
+了解更多详情，请前往$\text{Manim}$官网：[manim.community](https://www.manim.community)
+
+```python
+ChineseMathTex(*texts, color=WHITE, font="SimSun", font_size=DEFAULT_FONT_SIZE, tex_to_color_map={})
+```
+
+创建中文数学公式，在此函数的公式部分和直接写入中文即可，无需包裹`\text{}`，返回`MathTex()`。
+
+- 其余用法与$\text{Manim}$原版`MathTex()`相同。
+
+```python
+YellowCircle(dot1, dot2)
+```
+
+创建以`dot1`为圆心，`dot1`到`dot2`的距离为半径的黄色圆，返回`Circle()`。
+
+- `dot1`和`dot2`均为$\text{Manim}$中的位置`[x,y,z]`。
+
+```python
+YellowLine(start, end)
+```
+
+创建以`start`开始，到`end`结束的黄色线，返回`Line()`。
+
+- 用法与$\text{Manim}$原版`Line()`相同。
+
+```python
+LabelDot(dot_label, dot_pos, label_pos=DOWN, buff=0.1)
+```
+
+创建一个带有名字的点，返回带有点和名字的`VGroup()`。
+
+1. `dot_label`：点的名字，字符串。
+
+2. `dot_pos`：点的位置，$\text{Manim}$中的位置`[x,y,z]`。
+
+3. `label_pos`：点的名字相对于点的位置，$\text{Manim}$中的八个方向。
+
+4. `buff`：点的名字与点的间距，数值。
+
+```python
+MathTexLine(start, end, mathtex, color=WHITE, font_size=DEFAULT_FONT_SIZE, direction=UP, buff=0.5):
+```
+
+创建以`start`开始，到`end`结束的线，但可以标注文字、公式等，返回带有线和标注内容的`VGroup()`。
+
+1. `start`和`end`用法与$\text{Manim}$原版`Line()`相同。
+
+2. `mathtex`、`color`、`font_size`用法与$\text{Manim}$原版`MathTex()`相同，不过`mathtex`只能是单个字符串。
+
+3. `direction`：标注内容相对于线的位置，$\text{Manim}$中的八个方向。
+
+4. `buff`：标注内容与线的间距，数值。
+
+```python
+MathTexBrace(start, end, mathtex, color=WHITE, font_size=DEFAULT_FONT_SIZE, direction=UP, buff=0.5)
+```
+
+创建一个从`start`开始，`end`结束的大括号，并且可以在大括号上标注文字、公式等，返回带有大括号和标注内容的`VGroup()`。
+
+- 用法与`MathTexLine()`相同。
+
+```python
+MathTexDoublearrow(start, end, mathtex, color=WHITE, font_size=DEFAULT_FONT_SIZE, direction=UP, buff=0.5)
+```
+
+创建一个从`start`开始，`end`结束的双箭头线，并且可以在双箭头上标注文字、公式等，返回带有双箭头线和标注内容的`VGroup()`。
+
+- 用法与`MathTexLine()`相同。
+
+```python
+CircleInt(circle1, circle2)
+```
+
+寻找两个圆的两个交点并返回$\text{Manim}$位置，如果没有交点会返回`None`。
+
+`circle1`和`circle2`均为$\text{Manim}$中的`Circle()`类型。
+
+```python
+LineCircleInt(line, circle)
+```
+
+寻找一条线和一个圆的一个或两个交点并返回$\text{Manim}$位置，如果没有交点会返回`None`。
+
+1. `line`：$\text{Manim}$中的`Line()`类型。
+
+2. `circle`：$\text{Manim}$中的`Circle()`类型。
+
+```python
+LineInt(line1: Line, line2: Line) -> Optional[Tuple[float, float]]
+```
+
+寻找两条线的一个交点并返回$\text{Manim}$位置，如果没有交点会返回`None`。
+
+- `line1`和`line2`均为$\text{Manim}$中的`Line()`类型。
+
+```python
+ExtendLine(line: Line, extend_distance: float) -> Line:_point)
+```
+
+将一条线延长`extend_distance`的距离，返回延长后的`Line()`。
+
+1. `line`：$\text{Manim}$中的`Line()`类型。
+
+2. `extend_distance`：要延长的距离，数值。
+
+
+
+## `SortTool`：排序相关工具
+
+```python
+...(arr, reverse=False)
+```
+
+参数`arr`为列表，`reverse=False`为升序排序，`reverse=True`为降序排序，返回排序后的列表
+
+1. `bubsort`：冒泡排序。
+
+2. `inssort`：插入排序。
+
+3. `selsort`：选择排序。
+
+4. `quicksort`：快速排序。
+
+5. `mergesort`：归并排序。
+
+6. `heapsort`：堆排序。
+
+7. `shellsort`：希尔排序。
+
+8. `cousort`：计数排序。
+
+9. `bucsort`：桶排序。
+
+10. `radsort`：基数排序。
