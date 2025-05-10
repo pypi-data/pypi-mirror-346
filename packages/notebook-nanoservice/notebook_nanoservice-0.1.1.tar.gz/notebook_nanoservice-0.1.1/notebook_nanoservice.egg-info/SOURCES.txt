@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+notebook_nanoservice/__init__.py
+notebook_nanoservice/nanoservice.py
+notebook_nanoservice.egg-info/PKG-INFO
+notebook_nanoservice.egg-info/SOURCES.txt
+notebook_nanoservice.egg-info/dependency_links.txt
+notebook_nanoservice.egg-info/top_level.txt
