@@ -1,0 +1,6 @@
+nomad_docs/__init__.py,sha256=210ae948978c50015a10f189e19289bf7a541f1030d85e808419d6653b919cd1,13644
+nomad_docs/metainfo.py,sha256=bae41307911333fba6c177f2d99be93d79dd15798a56bab5428f4105ba6f23f6,5039
+nomad_docs/pydantic.py,sha256=16e120bf9f1be5619c64ca017bfe990988dc5d446c55c9b4d449552cc528bf28,5885
+nomad_docs-0.1.0.dist-info/WHEEL,sha256=65f6765ba93534713730ff2172cd912ef280aa42867625a73f77c2fef0639dae,78
+nomad_docs-0.1.0.dist-info/METADATA,sha256=e08682788ef6de3a4574bc75e892176f9c2dcf13afc4a1978ce534230ed7bfca,1153
+nomad_docs-0.1.0.dist-info/RECORD,,
