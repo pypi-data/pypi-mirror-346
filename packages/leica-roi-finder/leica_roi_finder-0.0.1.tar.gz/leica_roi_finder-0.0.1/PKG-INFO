@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: leica_roi_finder
+Version: 0.0.1
+Summary: Automatic ROI detection using cellpose, exports to .rgn files
+Author: KJ van Beem
+License: GPL-3.0
+Project-URL: Homepage, https://github.com/JvB22/Leica_ROI_finder
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cellpose>=3.1.1.1
+Requires-Dist: numpy>=2.0.2
+Requires-Dist: pyshortcuts>=1.9.5
+Requires-Dist: PyQt6>=6.9.0
+Requires-Dist: lxml>=5.4.0
+Requires-Dist: pyqtgraph>=0.13.7
+Requires-Dist: superqt>=0.7.3
+Requires-Dist: scikit-image>=0.25.2
+Dynamic: license-file
+
+# Leica_ROI_finder
+Automatic ROI finder for Leica microscopes
