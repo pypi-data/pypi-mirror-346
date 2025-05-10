@@ -1,0 +1,6 @@
+openai
+pydantic
+requests
+numpy
+scikit-learn
+tqdm
