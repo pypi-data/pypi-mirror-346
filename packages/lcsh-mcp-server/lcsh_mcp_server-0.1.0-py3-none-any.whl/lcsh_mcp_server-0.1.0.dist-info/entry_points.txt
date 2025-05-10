@@ -1,0 +1,2 @@
+[console_scripts]
+lcsh-mcp-server = lcsh_mcp_server.cli:main
