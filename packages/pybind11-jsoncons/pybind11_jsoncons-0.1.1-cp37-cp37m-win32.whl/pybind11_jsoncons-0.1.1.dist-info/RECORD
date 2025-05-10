@@ -1,0 +1,8 @@
+pybind11_jsoncons/__init__.py,sha256=ne9EfakTRHVjgrgGgZ1y2KIlf7xE3HXd4mu8UbIVuKI,337
+pybind11_jsoncons/__init__.pyi,sha256=KxATXBSxSWSyZxAD83IaahaU7cuWdbIribAyy8RXuWw,6493
+pybind11_jsoncons/__main__.py,sha256=-YxhZ6DeD6kNrXlJATRUT1FMrnFJznL_sxkJYqfqxj4,687
+pybind11_jsoncons/_core.pyd,sha256=bMDVOWXZYHlDGynbErzzyumJ4_5ffgN2A1-ZLp91gzk,455680
+pybind11_jsoncons-0.1.1.dist-info/METADATA,sha256=d752Fa7898KL6JxcJyQzzykXcxHrVG3xf3pMb79XfQA,1131
+pybind11_jsoncons-0.1.1.dist-info/WHEEL,sha256=0jqwLq1QEQxAxQ8s6kub4lrGP70AxxK4kIUHpH0xAdM,101
+pybind11_jsoncons-0.1.1.dist-info/licenses/LICENSE,sha256=N_R9-5l0U5HZyk0-el1LtB0nxSXttAIy78h4x_w_bgk,2218
+pybind11_jsoncons-0.1.1.dist-info/RECORD,,
