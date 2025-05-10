@@ -1,0 +1,93 @@
+Metadata-Version: 2.4
+Name: cpol_pyscf
+Version: 0.1.10
+Summary: A package for calculating molecular moments and polarizabilities using PySCF
+Home-page: https://github.com/pypa/sampleproject
+Author: 
+Author-email: mailanoopanair@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pyscf
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Molecular Moments and Polarizabilities Calculator
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+![HMPOLImage](./img/HMpolImg.jpg)
+## Overview
+
+The Python code is designed for calculating higher-order moments and polarizabilities of small molecules. It is a versatile tool that provides insights into the molecular properties essential for understanding electronic structure and molecular interactions. The moments and polarizabilites so calculated are used as the parameter sets for the SCME code. 
+
+## Features
+
+### Moments Calculation
+- **Dipole Moment**
+- **Quadrupole Moment** 
+- **Octapole Moment** 
+- **Hexadecapole Moment** 
+
+### Polarizabilities Calculation
+- **Dipole-Dipole Polarizability** 
+- **Dipole-Quadrupole Polarizability** 
+- **Quadrupole-Quadrupole Polarizability** 
+
+## How to Use
+
+### Running the code [with PYSCF]
+    conda create --name cpol-pyscf
+    conda activate cpol-pyscf
+    pip3 install cpol-pyscf
+
+
+copy the following H2O molecule geometry in a  **molecule.xyz** file
+
+    3
+    Properties=species:S:1:pos:R:3 pbc="F F F"
+    O       -0.00000000       0.00000000       0.06664447
+    H        0.76804750       0.00000000      -0.52889132
+    H       -0.76804750       0.00000000      -0.52889132
+
+
+And run the following script to test out the implementation with pyscf
+
+    from pyscf import gto
+    from ase.io import read
+    from cpol_pyscf import Pols
+    import numpy as np
+    from ase.visualize import view
+    from ase.units import Bohr, Ha
+
+
+    mol = gto.Mole()
+    molecule = read("molecule.xyz")
+    mol.atom = "molecule.xyz" 
+    mol.basis = "augccpvqz"
+    mol.build()
+
+
+    field_strength_F = 0.00486/Ha*Bohr
+
+
+    pols = Pols(molecule,mol, irrep=False, field_strength_F=field_strength_F)
+
+    print("dd polarizability")
+    print(pols.calc_dd_pol())
+    print("dq polarizability")
+    print(pols.calc_dq_pol())
+    print("qq polarizability")
+    print(pols.calc_qq_pol())
