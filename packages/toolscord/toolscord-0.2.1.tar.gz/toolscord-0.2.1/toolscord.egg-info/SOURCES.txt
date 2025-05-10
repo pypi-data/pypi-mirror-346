@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+toolscord/__init__.py
+toolscord/banner.py
+toolscord/colors.py
+toolscord/logger.py
+toolscord.egg-info/PKG-INFO
+toolscord.egg-info/SOURCES.txt
+toolscord.egg-info/dependency_links.txt
+toolscord.egg-info/top_level.txt
