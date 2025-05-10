@@ -1,0 +1,22 @@
+[project]
+name = "django-extra-validators"
+version = "0.1.1"
+description = "Reusable Django validators (e.g. Dutch postal code, IBAN number, emoji filter, etc.)"
+authors = [
+    {name = "Rick Verbon", email = "rick89@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "django>=4.2,<5.2.1",
+    "schwifty (>=2025.1.0,<2026.0.0)",
+    "pytest (>=8.3.5,<9.0.0)",
+    "requests (>=2.32.3,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "django_extra_validators", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
