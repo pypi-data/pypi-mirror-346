@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: envchain-python
+Version: 1.0.1
+Summary: 
+Home-page: https://github.com/tddschn/envchain-python
+Author: Teddy Xinyuan Chen
+Author-email: 45612704+tddschn@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Utilities
+Project-URL: Bug Tracker, https://github.com/tddschn/envchain-python/issues
+Project-URL: Repository, https://github.com/tddschn/envchain-python
+Description-Content-Type: text/markdown
+
+
