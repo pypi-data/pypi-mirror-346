@@ -1,0 +1,1381 @@
+% !TeX spellcheck = pl_PL-Polish
+\documentclass[a4paper,12pt]{article}
+\linespread{1.3} %odstepy miedzy liniami
+\usepackage[a4paper, lmargin=2cm, rmargin=2cm, tmargin=2cm, bmargin=2cm]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{ocgx}
+\usepackage{polski}
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+\tcbuselibrary{skins}
+\tcbuselibrary{raster}
+% brak - bez odpowiedzi i bez miejsca, white - bez odpowiedzi z miejscem, red = odpowiedzi ukryte ale dostepne
+\newcommand{\kolorodpowiedzi}{blue}
+\renewcommand{\footrulewidth}{0.4pt}% linia pozioma na końcu strony - default is 0pt
+\DeclareFontShape{OMX}{cmex}{m}{n}
+    {<-7.5> cmex7
+    <7.5-8.5> cmex8
+    <8.5-9.5> cmex9
+    <9.5-> cmex10}{}
+\DeclareSymbolFont{largesymbols}{OMX}{cmex}{m}{n}
+
+
+\newcommand{\ukryte}{1}  % domyślnie odpowiedzi są do pokazywania po kliknięciu
+\ifthenelse{\equal{\kolorodpowiedzi}{red}}  % ukrywamy od pokazywania gdy kolor jest red
+	{\renewcommand{\ukryte}{0}}{}
+
+\newcommand{\zOdpowiedziami}[3]{
+	\ifthenelse{\equal{#1}{brak}}{}{
+		\ifthenelse{\equal{#1}{white}}{\vphantom{#3}}{
+			\switchocg{#2}{\textcolor{\kolorodpowiedzi}{\\Rozwiązanie: }}
+				\begin{ocg}{Warstwa odpowiedzi}{#2}{\ukryte}
+					\textcolor{\kolorodpowiedzi}{#3}
+				\end{ocg}}}}
+
+\begin{document}
+    \pagestyle{fancy}
+    \setlength{\headheight}{27.29453pt}
+    \fancyhead{}
+    \fancyhead[L]{\textbf{Informatyka\\Algebra liniowa - }}
+    \fancyhead[R]{\textbf{Zadania powtórzeniowe na poprawkę\\ 15 grudnia 2024}}
+    \fancyfoot{}
+    \fancyfoot[R]{\tiny\textbf{15 grudnia 2024, 22:04}}
+%    \hspace{1cm}%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 1}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić rozwiązanie.
+			\[
+				\left(4 - i\right)z = 8 + 8i+\left(4 - 5i\right)z
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg0}
+				{$z=2 - 2i.$}
+
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić jedno z rozwiązań.
+			\[
+				\left(1 - i\right)z^2 + \left(-1 + 13 i\right) z + \left(-18 - 26 i\right)=0
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg1}
+				{$\Delta = 8+6i, \quad \sqrt{\Delta}=\pm( 3 + i), \quad z_{1}=3 - 4 i, \quad z_{2}=4 - 2 i$}
+
+		\item Wyznaczyć wszystkie zadane pierwiastki zespolone i zaznaczyć je na płaszczyźnie zespolonej
+			\[
+				\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{3}]{\left(\frac{64}{81} + \frac{64 \sqrt{2} i}{81} \right) \left(-1 + \sqrt{2} i \right)}
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg2}
+				{	\begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+				\[
+					\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{3}]{- \frac{64}{27}}=
+				\]
+				\[
+					 = \left\{ - \frac{4}{3}, \  \frac{2}{3} - \frac{2 \sqrt{3} i}{3}, \  \frac{2}{3} + \frac{2 \sqrt{3} i}{3}\right\}.
+				\]
+				&
+					\raisebox{-3cm}{\resizebox{5.1cm}{!}{\includegraphics{../pics/rozklad_pierwiastkow2}}}
+				\end{tabular}
+			}
+
+		\item Dla jakich rzeczywistych wartości parametru $x$ macierz $A$ posiada odwrotność?
+			\[
+				\textnormal{A=}\left[\begin{matrix}4 & x + 2\\2 x - 2 & x - 1\end{matrix}\right]
+			\]
+		Wyznaczyć macierz odwrotną dla $x=2.$ Wykonać sprawdzenie.\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg3}
+				{$\det A=- 2 x^{2} + 2 x\neq 0, \quad 
+				x\neq 0\ \textnormal{oraz} \ x\neq 1,$\\
+				$A(2)= \left[\begin{matrix}4 & 4\\2 & 1\end{matrix}\right],\ 
+				\det A(2)=-4,\ 
+				A^{-1}=- \frac{1}{4}\left[\begin{matrix}1 & -4\\-2 & 4\end{matrix}\right].$}
+
+		\item Rozwiązać równanie:
+			\[
+				\left[\begin{matrix}-1 & -1 & 2 & 1 & -1\\0 & 2 & 2 & 1 & 0\end{matrix}\right]\cdot 
+				\left[\begin{matrix}-2 & -2 & 1 & -1 & 0\\1 & -2 & 1 & 1 & 1\end{matrix}\right]^T + 
+				4X=
+				X \cdot \left[\begin{matrix}2 & 1\\2 & 1\\2 & -1\\0 & -1\\0 & 2\end{matrix}\right]^T \cdot
+				\left[\begin{matrix}-1 & -1\\1 & -2\\0 & 0\\1 & -1\\-1 & 1\end{matrix}\right] 
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg4}
+				{$ \left[\begin{matrix}5 & 3\\-3 & -1\end{matrix}\right] + 
+				4X=
+				X \cdot \left[\begin{matrix}0 & -6\\-3 & 0\end{matrix}\right] , \quad 
+				\left[\begin{matrix}5 & 3\\-3 & -1\end{matrix}\right] = 
+				X \cdot \left[\begin{matrix}-4 & -6\\-3 & -4\end{matrix}\right] $ \\ 
+				$X=\frac{1}{-2}\left[\begin{matrix}-11 & 18\\9 & -14\end{matrix}\right].$}
+
+		\item Z układu równań wyznaczyć niewiadomą $y$
+			\[
+				\left\{
+					\begin{matrix}
+						x + z = 1 \\ 
+						- 2 x - y + z = -1 \\ 
+						3 z = -1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg5}
+				{$\det(A) = -3,\ \det(A_y)=6,\ y = -2$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						- 7 t + x + y + 2 z = -1 \\ 
+						7 t - x + 2 y - 3 z = 8 \\ 
+						5 t + y - 2 z = 4 \\ 
+						- 2 t - x - 4 y + 2 z = -9 \\ 
+						- 4 t - 2 y + 2 z = -6 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg6}
+				{$\left\{ t  =  \frac{z}{3} + \frac{1}{3}, \  x  =  -1, \  y  =  \frac{z}{3} + \frac{7}{3}\right\}$}
+
+		\item Wyznaczyć miary kątów wewnętrznych trójkąta $ABC,$ gdzie
+			\[
+				A = (-3, 2, 1),\ B = (1, 0, 2),\ C = (-1, -2, 5)
+			\]
+			Sprawdzić, czy sumują się do $180^{\circ}.$\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg7}
+				{$\alpha \approx 43.33^{\circ},\  \beta \approx 86.97^{\circ},\  \gamma \approx 49.70^{\circ}.$}
+
+		\item Wyznaczyć pole trójkąta $ABC$ oraz długość wysokości opuszczonej z wierzchołka A dla
+			\[
+				A = (2, 2, 3),\ B = (4, -2, 1),\ C = (1, -2, 4)
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg8}
+				{$P=6 \sqrt{2},\ \ h_A=4$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (-3, 4, -2)
+			\]
+			względem prostej
+			\[
+				l\colon \frac{x - 2}{1}= \frac{y + 3}{-2}= \frac{z - 1}{3}.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg9}
+				{Płaszczyzna prostopadła: $\pi\colon x - 2 y + 3 z + 17 = 0, \quad t_p=-2$ \\
+							Punkt przecięcia to: $P_p =(0,1,-5),$ \quad 
+							Punkt symetryczny to: $P_s = (3,-2,-8)$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (-3, -1, 1)
+			\]
+			względem płaszczyzny
+			\[
+				\pi\colon x + y + z - 3  = 0.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg10}
+				{Prosta prostopadła: $ \frac{x + 3}{1}= \frac{y + 1}{1}= \frac{z - 1}{1}= t,$ \quad $t_p=2$ \\
+			Punkt przecięcia to: $P_p =(-1,1,3),$ \quad 
+			Punkt symetryczny to: $P_s = (1,3,5)$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 2}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić rozwiązanie.
+			\[
+				-4 - 3i+\left(7 + 7i\right)z = \left(6 + 5i\right)z
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg11}
+				{$z=2 - i.$}
+
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić jedno z rozwiązań.
+			\[
+				\left(1 - i\right)z^2 + \left(9 + i\right) z + \left(8 + 14 i\right)=0
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg12}
+				{$\Delta = -8-6i, \quad \sqrt{\Delta}=\pm( 1 - 3 i), \quad z_{1}=-3 - 2 i, \quad z_{2}=-1 - 3 i$}
+
+		\item Wyznaczyć wszystkie zadane pierwiastki zespolone i zaznaczyć je na płaszczyźnie zespolonej
+			\[
+				\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{3}]{\left(- \frac{32}{81} - \frac{32 \sqrt{5} i}{81} \right) \left(-1 + \sqrt{5} i \right)}
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg13}
+				{	\begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+				\[
+					\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{3}]{\frac{64}{27}}=
+				\]
+				\[
+					 = \left\{ \frac{4}{3}, \  - \frac{2}{3} - \frac{2 \sqrt{3} i}{3}, \  - \frac{2}{3} + \frac{2 \sqrt{3} i}{3}\right\}.
+				\]
+				&
+					\raisebox{-3cm}{\resizebox{5.1cm}{!}{\includegraphics{../pics/rozklad_pierwiastkow13}}}
+				\end{tabular}
+			}
+
+		\item Dla jakich rzeczywistych wartości parametru $x$ macierz $A$ posiada odwrotność?
+			\[
+				\textnormal{A=}\left[\begin{matrix}2 x - 4 & x - 4\\x + 2 & 2\end{matrix}\right]
+			\]
+		Wyznaczyć macierz odwrotną dla $x=2.$ Wykonać sprawdzenie.\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg14}
+				{$\det A=- x^{2} + 6 x\neq 0, \quad 
+				x\neq 0\ \textnormal{oraz} \ x\neq 6,$\\
+				$A(2)= \left[\begin{matrix}0 & -2\\4 & 2\end{matrix}\right],\ 
+				\det A(2)=8,\ 
+				A^{-1}=\frac{1}{8}\left[\begin{matrix}2 & 2\\-4 & 0\end{matrix}\right].$}
+
+		\item Rozwiązać równanie:
+			\[
+				\left[\begin{matrix}0 & 2 & 1 & 1 & -1\\0 & -1 & 0 & -1 & 0\end{matrix}\right]\cdot 
+				\left[\begin{matrix}0 & 1 & -1 & -2 & 0\\-1 & -1 & -2 & 0 & 0\end{matrix}\right]^T + 
+				2X=
+				X \cdot \left[\begin{matrix}-1 & 2\\-1 & 1\\-1 & -1\\0 & -1\\-1 & 2\end{matrix}\right]^T \cdot
+				\left[\begin{matrix}1 & 0\\-1 & 0\\-2 & -2\\0 & 1\\-2 & -1\end{matrix}\right] 
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg15}
+				{$ \left[\begin{matrix}-1 & -4\\1 & 1\end{matrix}\right] + 
+				2X=
+				X \cdot \left[\begin{matrix}4 & 3\\-1 & -1\end{matrix}\right] , \quad 
+				\left[\begin{matrix}-1 & -4\\1 & 1\end{matrix}\right] = 
+				X \cdot \left[\begin{matrix}2 & 3\\-1 & -3\end{matrix}\right] $ \\ 
+				$X=\frac{1}{-3}\left[\begin{matrix}-1 & -5\\-2 & -1\end{matrix}\right].$}
+
+		\item Z układu równań wyznaczyć niewiadomą $x$
+			\[
+				\left\{
+					\begin{matrix}
+						y + z = -2 \\ 
+						- 3 x - 3 z = 1 \\ 
+						- 2 x - 2 y - z = 2 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg16}
+				{$\det(A) = 9,\ \det(A_x)=5,\ x = \frac{5}{9}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						- 2 x - 2 y + 6 z = -2 \\ 
+						t + 2 x + 2 y - 6 z = 4 \\ 
+						t + 4 x + 2 y - 8 z = -2 \\ 
+						- 3 x - y + 5 z = 5 \\ 
+						- t - 3 x - 2 y + 7 z = -1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg17}
+				{$\left\{ t  =  2, \  x  =  z - 3, \  y  =  2 z + 4\right\}$}
+
+		\item Wyznaczyć miary kątów wewnętrznych trójkąta $ABC,$ gdzie
+			\[
+				A = (1, -1, -2),\ B = (1, 2, 1),\ C = (2, -2, 2)
+			\]
+			Sprawdzić, czy sumują się do $180^{\circ}.$\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg18}
+				{$\alpha = 60.00^{\circ},\  \beta = 60.00^{\circ},\  \gamma = 60.00^{\circ}.$}
+
+		\item Wyznaczyć pole trójkąta $ABC$ oraz długość wysokości opuszczonej z wierzchołka C dla
+			\[
+				A = (-2, -2, 4),\ B = (-2, -3, 4),\ C = (5, 4, -2)
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg19}
+				{$P=\frac{\sqrt{85}}{2},\ \ h_C=\sqrt{85}$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (4, 3, 5)
+			\]
+			względem prostej
+			\[
+				l\colon \frac{x - 4}{-1}= \frac{y + 2}{-1}= \frac{z - 4}{-1}.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg20}
+				{Płaszczyzna prostopadła: $\pi\colon - x - y - z + 12 = 0, \quad t_p=-2$ \\
+							Punkt przecięcia to: $P_p =(6,0,6),$ \quad 
+							Punkt symetryczny to: $P_s = (8,-3,7)$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (5, 3, 4)
+			\]
+			względem płaszczyzny
+			\[
+				\pi\colon x + 2 y + z + 3  = 0.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg21}
+				{Prosta prostopadła: $ \frac{x - 5}{1}= \frac{y - 3}{2}= \frac{z - 4}{1}= t,$ \quad $t_p=-3$ \\
+			Punkt przecięcia to: $P_p =(2,-3,1),$ \quad 
+			Punkt symetryczny to: $P_s = (-1,-9,-2)$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 3}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić rozwiązanie.
+			\[
+				\left(9 - i\right)z = 9 + 2i+\left(9 - 2i\right)z
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg22}
+				{$z=2 - 9i.$}
+
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić jedno z rozwiązań.
+			\[
+				\left(2 - i\right)z^2 + \left(6 - 13 i\right) z + \left(-6 - 22 i\right)=0
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg23}
+				{$\Delta = 3-4i, \quad \sqrt{\Delta}=\pm( 2 - i), \quad z_{1}=-3 + 2 i, \quad z_{2}=-2 + 2 i$}
+
+		\item Wyznaczyć wszystkie zadane pierwiastki zespolone i zaznaczyć je na płaszczyźnie zespolonej
+			\[
+				\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{3}]{\left(\frac{9 \sqrt{2}}{64} - \frac{9 i}{64} \right) \left(1 - \sqrt{2} i \right)}
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg24}
+				{	\begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+				\[
+					\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{3}]{- \frac{27 i}{64}}=
+				\]
+				\[
+					 = \left\{ \frac{3 i}{4}, \  - \frac{3 \sqrt{3}}{8} - \frac{3 i}{8}, \  \frac{3 \sqrt{3}}{8} - \frac{3 i}{8}\right\}.
+				\]
+				&
+					\raisebox{-3cm}{\resizebox{5.1cm}{!}{\includegraphics{../pics/rozklad_pierwiastkow24}}}
+				\end{tabular}
+			}
+
+		\item Dla jakich rzeczywistych wartości parametru $x$ macierz $A$ posiada odwrotność?
+			\[
+				\textnormal{A=}\left[\begin{matrix}2 x - 2 & 0 & x - 1\\-4 & x + 4 & -2\\1 & -2 & 2\end{matrix}\right]
+			\]
+		Wyznaczyć macierz odwrotną dla $x=-1.$ Wykonać sprawdzenie.\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg25}
+				{$\det A=3 x^{2} + 9 x - 12\neq 0, \quad 
+				x\neq -4\ \textnormal{oraz} \ x\neq 1,$\\
+				$A(-1)= \left[\begin{matrix}-4 & 0 & -2\\-4 & 3 & -2\\1 & -2 & 2\end{matrix}\right],\ 
+				\det A(-1)=-18,\ 
+				A^{-1}=- \frac{1}{18}\left[\begin{matrix}2 & 4 & 6\\6 & -6 & 0\\5 & -8 & -12\end{matrix}\right].$}
+
+		\item Rozwiązać równanie:
+			\[
+				\left[\begin{matrix}1 & -1 & 0 & 0 & 0\\0 & 0 & 0 & 1 & 1\end{matrix}\right]\cdot 
+				\left[\begin{matrix}-1 & 0 & -2 & -2 & 0\\0 & 0 & 1 & -2 & 0\end{matrix}\right]^T + 
+				3X=
+				X \cdot \left[\begin{matrix}1 & 1\\-1 & 0\\-1 & -1\\0 & 1\\1 & 2\end{matrix}\right]^T \cdot
+				\left[\begin{matrix}-1 & 0\\1 & 1\\1 & 0\\-2 & 0\\1 & 1\end{matrix}\right] 
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg26}
+				{$ \left[\begin{matrix}-1 & 0\\-2 & -2\end{matrix}\right] + 
+				3X=
+				X \cdot \left[\begin{matrix}-2 & 0\\-2 & 2\end{matrix}\right] , \quad 
+				\left[\begin{matrix}-1 & 0\\-2 & -2\end{matrix}\right] = 
+				X \cdot \left[\begin{matrix}-5 & 0\\-2 & -1\end{matrix}\right] $ \\ 
+				$X=\frac{1}{5}\left[\begin{matrix}1 & 0\\-2 & 10\end{matrix}\right].$}
+
+		\item Z układu równań wyznaczyć niewiadomą $x$
+			\[
+				\left\{
+					\begin{matrix}
+						4 x - y + 3 z = -1 \\ 
+						- 3 x + 2 y - 3 z = 1 \\ 
+						- 2 x - y + z = 1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg27}
+				{$\det(A) = 8,\ \det(A_x)=-4,\ x = - \frac{1}{2}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						2 t - 2 x + 2 z = -4 \\ 
+						t - x + y + 5 z = -3 \\ 
+						t - x + z = -2 \\ 
+						- t + 2 x + y + 2 z = 5 \\ 
+						t - 2 x - y - 2 z = -5 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg28}
+				{$\left\{ t  =  2, \  x  =  z + 4, \  y  =  - 4 z - 1\right\}$}
+
+		\item Wyznaczyć miary kątów wewnętrznych trójkąta $ABC,$ gdzie
+			\[
+				A = (5, 2, -1),\ B = (-1, 4, -1),\ C = (1, 0, -1)
+			\]
+			Sprawdzić, czy sumują się do $180^{\circ}.$\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg29}
+				{$\alpha = 45.00^{\circ},\  \beta = 45.00^{\circ},\  \gamma = 90.00^{\circ}.$}
+
+		\item Wyznaczyć pole trójkąta $ABC$ oraz długość wysokości opuszczonej z wierzchołka C dla
+			\[
+				A = (4, -1, 5),\ B = (4, -2, 5),\ C = (2, -1, 5)
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg30}
+				{$P=1,\ \ h_C=2$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (5, 5, 5)
+			\]
+			względem prostej
+			\[
+				l\colon \frac{x - 4}{1}= \frac{y + 1}{1}= \frac{z + 3}{1}.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg31}
+				{Płaszczyzna prostopadła: $\pi\colon x + y + z - 15 = 0, \quad t_p=5$ \\
+							Punkt przecięcia to: $P_p =(9,4,2),$ \quad 
+							Punkt symetryczny to: $P_s = (13,3,-1)$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (2, -1, -3)
+			\]
+			względem płaszczyzny
+			\[
+				\pi\colon x + y - z + 2  = 0.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg32}
+				{Prosta prostopadła: $ \frac{x - 2}{1}= \frac{y + 1}{1}= \frac{z + 3}{-1}= t,$ \quad $t_p=-2$ \\
+			Punkt przecięcia to: $P_p =(0,-3,-1),$ \quad 
+			Punkt symetryczny to: $P_s = (-2,-5,1)$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 4}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić rozwiązanie.
+			\[
+				\left(8 + 3i\right)z = 8 - 2i+\left(5 + 8i\right)z
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg33}
+				{$z=1 + i.$}
+
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić jedno z rozwiązań.
+			\[
+				\left(1 - i\right)z^2 + \left(9 + 3 i\right) z + \left(2 + 14 i\right)=0
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg34}
+				{$\Delta = 8+6i, \quad \sqrt{\Delta}=\pm( 3 + i), \quad z_{1}=-2 - 4 i, \quad z_{2}=-1 - 2 i$}
+
+		\item Wyznaczyć wszystkie zadane pierwiastki zespolone i zaznaczyć je na płaszczyźnie zespolonej
+			\[
+				\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{4}]{\left(1 - 2 \sqrt{5} i \right) \left(- \frac{16 \sqrt{15}}{21} - \frac{8}{21} + i \left(- \frac{16 \sqrt{5}}{21} + \frac{8 \sqrt{3}}{21}\right) \right)}
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg35}
+				{	\begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+				\[
+					\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{4}]{-8 + 8 \sqrt{3} i}=
+				\]
+				\[
+					 = \left\{ -1 + \sqrt{3} i, \  1 - \sqrt{3} i, \  - \sqrt{3} - i, \  \sqrt{3} + i\right\}.
+				\]
+				&
+					\raisebox{-3cm}{\resizebox{5.1cm}{!}{\includegraphics{../pics/rozklad_pierwiastkow35}}}
+				\end{tabular}
+			}
+
+		\item Dla jakich rzeczywistych wartości parametru $x$ macierz $A$ posiada odwrotność?
+			\[
+				\textnormal{A=}\left[\begin{matrix}x - 1 & 4 & x + 1\\2 & 3 & 3\\2 & x + 4 & x - 2\end{matrix}\right]
+			\]
+		Wyznaczyć macierz odwrotną dla $x=2.$ Wykonać sprawdzenie.\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg36}
+				{$\det A=2 x^{2} - 22 x + 60\neq 0, \quad 
+				x\neq 5\ \textnormal{oraz} \ x\neq 6,$\\
+				$A(2)= \left[\begin{matrix}1 & 4 & 3\\2 & 3 & 3\\2 & 6 & 0\end{matrix}\right],\ 
+				\det A(2)=24,\ 
+				A^{-1}=\frac{1}{24}\left[\begin{matrix}-18 & 18 & 3\\6 & -6 & 3\\6 & 2 & -5\end{matrix}\right].$}
+
+		\item Rozwiązać równanie:
+			\[
+				\left[\begin{matrix}0 & 2 & 0 & -1 & 0\\0 & 0 & 0 & -1 & 0\end{matrix}\right]\cdot 
+				\left[\begin{matrix}-2 & 1 & -1 & 0 & 0\\-2 & 1 & 0 & -2 & 0\end{matrix}\right]^T + 
+				2X=
+				\left[\begin{matrix}-1 & -1\\1 & 2\\-1 & -1\\2 & 1\\0 & 1\end{matrix}\right]^T \cdot
+				\left[\begin{matrix}1 & -2\\1 & 0\\-1 & 0\\-2 & 0\\-1 & 1\end{matrix}\right] \cdot X
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg37}
+				{$ \left[\begin{matrix}2 & 4\\0 & 2\end{matrix}\right] + 
+				2X=
+				\left[\begin{matrix}-3 & 2\\-1 & 3\end{matrix}\right] \cdot X, \quad 
+				\left[\begin{matrix}2 & 4\\0 & 2\end{matrix}\right] = 
+				\left[\begin{matrix}-5 & 2\\-1 & 1\end{matrix}\right] \cdot X $ \\ 
+				$X=\frac{1}{-3}\left[\begin{matrix}2 & 0\\2 & -6\end{matrix}\right].$}
+
+		\item Z układu równań wyznaczyć niewiadomą $z$
+			\[
+				\left\{
+					\begin{matrix}
+						x + y - 2 z = 3 \\ 
+						- 3 x + y + 3 z = 2 \\ 
+						- z = -2 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg38}
+				{$\det(A) = -4,\ \det(A_z)=-8,\ z = 2$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						3 t + y - z = 1 \\ 
+						7 t + 2 x + y - 2 z = 7 \\ 
+						- 2 t + 2 x - 2 y + z = 4 \\ 
+						t - x + y - z = -1 \\ 
+						t + 2 x - y = 5 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg39}
+				{$\left\{ t  =  - \frac{y}{3} - \frac{1}{3}, \  x  =  \frac{2 y}{3} + \frac{8}{3}, \  z  =  -2\right\}$}
+
+		\item Wyznaczyć miary kątów wewnętrznych trójkąta $ABC,$ gdzie
+			\[
+				A = (1, -1, -1),\ B = (1, -2, -1),\ C = (5, -1, 5)
+			\]
+			Sprawdzić, czy sumują się do $180^{\circ}.$\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg40}
+				{$\alpha = 90.00^{\circ},\  \beta \approx 82.10^{\circ},\  \gamma \approx 7.90^{\circ}.$}
+
+		\item Wyznaczyć pole trójkąta $ABC$ oraz długość wysokości opuszczonej z wierzchołka C dla
+			\[
+				A = (-1, -3, 1),\ B = (5, 2, 2),\ C = (2, 2, 3)
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg41}
+				{$P=\frac{\sqrt{331}}{2},\ \ h_C=\frac{\sqrt{20522}}{62}$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (5, 5, 4)
+			\]
+			względem prostej
+			\[
+				l\colon \frac{x + 2}{2}= \frac{y + 1}{1}= \frac{z - 3}{-2}.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg42}
+				{Płaszczyzna prostopadła: $\pi\colon 2 x + y - 2 z - 7 = 0, \quad t_p=2$ \\
+							Punkt przecięcia to: $P_p =(2,1,-1),$ \quad 
+							Punkt symetryczny to: $P_s = (-1,-3,-6)$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (-1, 2, 5)
+			\]
+			względem płaszczyzny
+			\[
+				\pi\colon x - 2 y - 2 z - 3  = 0.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg43}
+				{Prosta prostopadła: $ \frac{x + 1}{1}= \frac{y - 2}{-2}= \frac{z - 5}{-2}= t,$ \quad $t_p=2$ \\
+			Punkt przecięcia to: $P_p =(1,-2,1),$ \quad 
+			Punkt symetryczny to: $P_s = (3,-6,-3)$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 5}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić rozwiązanie.
+			\[
+				5 - 5i+\left(5 + 9i\right)z = \left(6 + 7i\right)z
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg44}
+				{$z=3 + i.$}
+
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić jedno z rozwiązań.
+			\[
+				\left(1 - 2 i\right)z^2 + \left(6 + 13 i\right) z + \left(-22 - 6 i\right)=0
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg45}
+				{$\Delta = 3+4i, \quad \sqrt{\Delta}=\pm( 2 + i), \quad z_{1}=2 - 3 i, \quad z_{2}=2 - 2 i$}
+
+		\item Wyznaczyć wszystkie zadane pierwiastki zespolone i zaznaczyć je na płaszczyźnie zespolonej
+			\[
+				\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{4}]{\left(- \frac{8}{7} + \frac{24 \sqrt{3} i}{7} \right) \left(-2 + \sqrt{3} i \right)}
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg46}
+				{	\begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+				\[
+					\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{4}]{-8 - 8 \sqrt{3} i}=
+				\]
+				\[
+					 = \left\{ -1 - \sqrt{3} i, \  1 + \sqrt{3} i, \  - \sqrt{3} + i, \  \sqrt{3} - i\right\}.
+				\]
+				&
+					\raisebox{-3cm}{\resizebox{5.1cm}{!}{\includegraphics{../pics/rozklad_pierwiastkow46}}}
+				\end{tabular}
+			}
+
+		\item Dla jakich rzeczywistych wartości parametru $x$ macierz $A$ posiada odwrotność?
+			\[
+				\textnormal{A=}\left[\begin{matrix}x - 3 & x - 1 & x - 2\\3 & 4 & x + 1\\-4 & -3 & -3\end{matrix}\right]
+			\]
+		Wyznaczyć macierz odwrotną dla $x=-2.$ Wykonać sprawdzenie.\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg47}
+				{$\det A=- x^{2} - 2 x + 8\neq 0, \quad 
+				x\neq -4\ \textnormal{oraz} \ x\neq 2,$\\
+				$A(-2)= \left[\begin{matrix}-5 & -3 & -4\\3 & 4 & -1\\-4 & -3 & -3\end{matrix}\right],\ 
+				\det A(-2)=8,\ 
+				A^{-1}=\frac{1}{8}\left[\begin{matrix}-15 & 3 & 19\\13 & -1 & -17\\7 & -3 & -11\end{matrix}\right].$}
+
+		\item Rozwiązać równanie:
+			\[
+				\left[\begin{matrix}-1 & 0 & 1 & 1 & 0\\2 & 2 & 0 & -1 & 1\end{matrix}\right]\cdot 
+				\left[\begin{matrix}-2 & -1 & 0 & 1 & 1\\0 & 1 & 1 & 0 & -2\end{matrix}\right]^T + 
+				4X=
+				\left[\begin{matrix}2 & -1\\-1 & 0\\0 & -1\\-1 & 2\\2 & 1\end{matrix}\right]^T \cdot
+				\left[\begin{matrix}-1 & -2\\1 & -2\\0 & -1\\-2 & 0\\-2 & -2\end{matrix}\right] \cdot X
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg48}
+				{$ \left[\begin{matrix}3 & 1\\-6 & 0\end{matrix}\right] + 
+				4X=
+				\left[\begin{matrix}-5 & -6\\-5 & 1\end{matrix}\right] \cdot X, \quad 
+				\left[\begin{matrix}3 & 1\\-6 & 0\end{matrix}\right] = 
+				\left[\begin{matrix}-9 & -6\\-5 & -3\end{matrix}\right] \cdot X $ \\ 
+				$X=\frac{1}{-3}\left[\begin{matrix}-45 & -3\\69 & 5\end{matrix}\right].$}
+
+		\item Z układu równań wyznaczyć niewiadomą $x$
+			\[
+				\left\{
+					\begin{matrix}
+						- 3 x - y - 2 z = 2 \\ 
+						- x + z = 0 \\ 
+						4 x + 2 y + 3 z = 3 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg49}
+				{$\det(A) = 3,\ \det(A_x)=-7,\ x = - \frac{7}{3}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						4 t + x - y + z = -6 \\ 
+						- x + y + z = 2 \\ 
+						2 t + x + y + 2 z = -2 \\ 
+						- 2 t + x - 2 y - 3 z = -1 \\ 
+						- x + y + z = 2 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg50}
+				{$\left\{ t  =  - \frac{z}{2} - 1, \  x  =  -1, \  y  =  1 - z\right\}$}
+
+		\item Wyznaczyć miary kątów wewnętrznych trójkąta $ABC,$ gdzie
+			\[
+				A = (0, 0, 3),\ B = (5, 5, 1),\ C = (-3, 3, 3)
+			\]
+			Sprawdzić, czy sumują się do $180^{\circ}.$\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg51}
+				{$\alpha = 90.00^{\circ},\  \beta = 30.00^{\circ},\  \gamma = 60.00^{\circ}.$}
+
+		\item Wyznaczyć pole trójkąta $ABC$ oraz długość wysokości opuszczonej z wierzchołka C dla
+			\[
+				A = (4, -3, 2),\ B = (1, 4, 3),\ C = (3, 5, 3)
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg52}
+				{$P=\frac{7 \sqrt{6}}{2},\ \ h_C=\frac{7 \sqrt{354}}{59}$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (3, 3, -2)
+			\]
+			względem prostej
+			\[
+				l\colon \frac{x + 3}{2}= \frac{y + 1}{1}= \frac{z - 2}{1}.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg53}
+				{Płaszczyzna prostopadła: $\pi\colon 2 x + y + z - 7 = 0, \quad t_p=2$ \\
+							Punkt przecięcia to: $P_p =(1,1,4),$ \quad 
+							Punkt symetryczny to: $P_s = (-1,-1,10)$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (2, 4, 3)
+			\]
+			względem płaszczyzny
+			\[
+				\pi\colon x + 3 y + z + 5  = 0.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg54}
+				{Prosta prostopadła: $ \frac{x - 2}{1}= \frac{y - 4}{3}= \frac{z - 3}{1}= t,$ \quad $t_p=-2$ \\
+			Punkt przecięcia to: $P_p =(0,-2,1),$ \quad 
+			Punkt symetryczny to: $P_s = (-2,-8,-1)$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 6}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić rozwiązanie.
+			\[
+				-6 + 8i+\left(7 + 9i\right)z = \left(7 + 8i\right)z
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg55}
+				{$z=-8 - 6i.$}
+
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić jedno z rozwiązań.
+			\[
+				\left(1 - i\right)z^2 + \left(-13 + 3 i\right) z + \left(28 + 10 i\right)=0
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg56}
+				{$\Delta = 8-6i, \quad \sqrt{\Delta}=\pm( 3 - i), \quad z_{1}=3 + 2 i, \quad z_{2}=5 + 3 i$}
+
+		\item Wyznaczyć wszystkie zadane pierwiastki zespolone i zaznaczyć je na płaszczyźnie zespolonej
+			\[
+				\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{3}]{\left(-1 + \sqrt{3} i \right) \left(\frac{16 \sqrt{3}}{27} - \frac{16 i}{27} \right)}
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg57}
+				{	\begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+				\[
+					\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{3}]{\frac{64 i}{27}}=
+				\]
+				\[
+					 = \left\{ - \frac{4 i}{3}, \  - \frac{2 \sqrt{3}}{3} + \frac{2 i}{3}, \  \frac{2 \sqrt{3}}{3} + \frac{2 i}{3}\right\}.
+				\]
+				&
+					\raisebox{-3cm}{\resizebox{5.1cm}{!}{\includegraphics{../pics/rozklad_pierwiastkow57}}}
+				\end{tabular}
+			}
+
+		\item Dla jakich rzeczywistych wartości parametru $x$ macierz $A$ posiada odwrotność?
+			\[
+				\textnormal{A=}\left[\begin{matrix}x + 1 & x - 4 & -4\\2 & 0 & -1\\-2 & x + 2 & x + 3\end{matrix}\right]
+			\]
+		Wyznaczyć macierz odwrotną dla $x=2.$ Wykonać sprawdzenie.\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg58}
+				{$\det A=- x^{2} - x + 2\neq 0, \quad 
+				x\neq -2\ \textnormal{oraz} \ x\neq 1,$\\
+				$A(2)= \left[\begin{matrix}3 & -2 & -4\\2 & 0 & -1\\-2 & 4 & 5\end{matrix}\right],\ 
+				\det A(2)=-4,\ 
+				A^{-1}=- \frac{1}{4}\left[\begin{matrix}4 & -6 & 2\\-8 & 7 & -5\\8 & -8 & 4\end{matrix}\right].$}
+
+		\item Rozwiązać równanie:
+			\[
+				\left[\begin{matrix}0 & 2 & 0 & 0 & 2\\1 & 1 & 1 & 1 & 0\end{matrix}\right]\cdot 
+				\left[\begin{matrix}-2 & -2 & 0 & 1 & 0\\1 & 0 & 1 & -2 & 1\end{matrix}\right]^T + 
+				2X=
+				\left[\begin{matrix}1 & 0\\1 & 0\\2 & 1\\-1 & 1\\2 & 0\end{matrix}\right]^T \cdot
+				\left[\begin{matrix}-1 & -1\\0 & 0\\0 & 1\\-1 & 1\\-2 & 1\end{matrix}\right] \cdot X
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg59}
+				{$ \left[\begin{matrix}-4 & 2\\-3 & 0\end{matrix}\right] + 
+				2X=
+				\left[\begin{matrix}-4 & 2\\-1 & 2\end{matrix}\right] \cdot X, \quad 
+				\left[\begin{matrix}-4 & 2\\-3 & 0\end{matrix}\right] = 
+				\left[\begin{matrix}-6 & 2\\-1 & 0\end{matrix}\right] \cdot X $ \\ 
+				$X=\frac{1}{2}\left[\begin{matrix}6 & 0\\14 & 2\end{matrix}\right].$}
+
+		\item Z układu równań wyznaczyć niewiadomą $x$
+			\[
+				\left\{
+					\begin{matrix}
+						- x + 3 y - z = 0 \\ 
+						- 2 y + z = -2 \\ 
+						- 3 x + y - 2 z = 2 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg60}
+				{$\det(A) = -6,\ \det(A_x)=-8,\ x = \frac{4}{3}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						2 t + y - z = -5 \\ 
+						5 t - 3 x + y - z = 4 \\ 
+						- t + x + z = -1 \\ 
+						- 3 t + x - y + z = 2 \\ 
+						4 t - 2 x + y - z = 1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg61}
+				{$\left\{ t  =  - \frac{y}{2} - \frac{3}{2}, \  x  =  - \frac{y}{2} - \frac{9}{2}, \  z  =  2\right\}$}
+
+		\item Wyznaczyć miary kątów wewnętrznych trójkąta $ABC,$ gdzie
+			\[
+				A = (-2, 4, 1),\ B = (-1, 4, 4),\ C = (0, 4, 3)
+			\]
+			Sprawdzić, czy sumują się do $180^{\circ}.$\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg62}
+				{$\alpha \approx 26.57^{\circ},\  \beta \approx 63.43^{\circ},\  \gamma = 90.00^{\circ}.$}
+
+		\item Wyznaczyć pole trójkąta $ABC$ oraz długość wysokości opuszczonej z wierzchołka A dla
+			\[
+				A = (4, -2, 5),\ B = (1, 3, 5),\ C = (1, 2, 5)
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg63}
+				{$P=\frac{3}{2},\ \ h_A=3$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (-1, 5, -3)
+			\]
+			względem prostej
+			\[
+				l\colon \frac{x + 3}{1}= \frac{y - 3}{2}= \frac{z - 3}{-2}.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg64}
+				{Płaszczyzna prostopadła: $\pi\colon x + 2 y - 2 z - 15 = 0, \quad t_p=2$ \\
+							Punkt przecięcia to: $P_p =(-1,7,-1),$ \quad 
+							Punkt symetryczny to: $P_s = (-1,9,1)$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (-3, -3, 5)
+			\]
+			względem płaszczyzny
+			\[
+				\pi\colon - x - y + z + 4  = 0.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg65}
+				{Prosta prostopadła: $ \frac{x + 3}{-1}= \frac{y + 3}{-1}= \frac{z - 5}{1}= t,$ \quad $t_p=-5$ \\
+			Punkt przecięcia to: $P_p =(2,2,0),$ \quad 
+			Punkt symetryczny to: $P_s = (7,7,-5)$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 7}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić rozwiązanie.
+			\[
+				3 - i+\left(7 + 6i\right)z = \left(9 + 7i\right)z
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg66}
+				{$z=1 - i.$}
+
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić jedno z rozwiązań.
+			\[
+				\left(2 - i\right)z^2 + \left(12 - i\right) z + \left(15 + 5 i\right)=0
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg67}
+				{$\Delta = 3-4i, \quad \sqrt{\Delta}=\pm( 2 - i), \quad z_{1}=-3 - i, \quad z_{2}=-2 - i$}
+
+		\item Wyznaczyć wszystkie zadane pierwiastki zespolone i zaznaczyć je na płaszczyźnie zespolonej
+			\[
+				\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{4}]{\left(-2 + 2 \sqrt{3} i \right) \left(-2 + 2 \sqrt{3} i \right)}
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg68}
+				{	\begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+				\[
+					\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{4}]{-8 - 8 \sqrt{3} i}=
+				\]
+				\[
+					 = \left\{ -1 - \sqrt{3} i, \  1 + \sqrt{3} i, \  - \sqrt{3} + i, \  \sqrt{3} - i\right\}.
+				\]
+				&
+					\raisebox{-3cm}{\resizebox{5.1cm}{!}{\includegraphics{../pics/rozklad_pierwiastkow68}}}
+				\end{tabular}
+			}
+
+		\item Dla jakich rzeczywistych wartości parametru $x$ macierz $A$ posiada odwrotność?
+			\[
+				\textnormal{A=}\left[\begin{matrix}x - 3 & 4 & 4\\x + 1 & 3 & 1\\1 & 4 & 2 x - 4\end{matrix}\right]
+			\]
+		Wyznaczyć macierz odwrotną dla $x=3.$ Wykonać sprawdzenie.\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg69}
+				{$\det A=- 2 x^{2} - 10 x + 72\neq 0, \quad 
+				x\neq -9\ \textnormal{oraz} \ x\neq 4,$\\
+				$A(3)= \left[\begin{matrix}0 & 4 & 4\\4 & 3 & 1\\1 & 4 & 2\end{matrix}\right],\ 
+				\det A(3)=24,\ 
+				A^{-1}=\frac{1}{24}\left[\begin{matrix}2 & 8 & -8\\-7 & -4 & 16\\13 & 4 & -16\end{matrix}\right].$}
+
+		\item Rozwiązać równanie:
+			\[
+				\left[\begin{matrix}-1 & 0 & -1 & 0 & -1\\0 & 1 & 1 & 2 & 2\end{matrix}\right]\cdot 
+				\left[\begin{matrix}-2 & 0 & 1 & -2 & -2\\-2 & 0 & 0 & -2 & 0\end{matrix}\right]^T + 
+				4X=
+				X \cdot \left[\begin{matrix}0 & 0\\2 & 1\\0 & 1\\2 & 0\\0 & -1\end{matrix}\right]^T \cdot
+				\left[\begin{matrix}0 & 0\\1 & 0\\1 & 1\\-1 & 0\\0 & -2\end{matrix}\right] 
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg70}
+				{$ \left[\begin{matrix}3 & 2\\-7 & -4\end{matrix}\right] + 
+				4X=
+				X \cdot \left[\begin{matrix}0 & 0\\2 & 3\end{matrix}\right] , \quad 
+				\left[\begin{matrix}3 & 2\\-7 & -4\end{matrix}\right] = 
+				X \cdot \left[\begin{matrix}-4 & 0\\2 & -1\end{matrix}\right] $ \\ 
+				$X=\frac{1}{4}\left[\begin{matrix}-7 & -8\\15 & 16\end{matrix}\right].$}
+
+		\item Z układu równań wyznaczyć niewiadomą $z$
+			\[
+				\left\{
+					\begin{matrix}
+						2 x + y + z = 1 \\ 
+						2 x + 4 y - 3 z = 0 \\ 
+						3 y - 3 z = 0 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg71}
+				{$\det(A) = 6,\ \det(A_z)=6,\ z = 1$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						- 2 t - 2 x - 2 y + 2 z = 4 \\ 
+						- 4 t - 7 x - 4 y - 2 z = 2 \\ 
+						2 t + 4 x + 3 y - z = -2 \\ 
+						t + 2 x + 4 z = 2 \\ 
+						2 t + 4 x + 2 y + 2 z = 0 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg72}
+				{$\left\{ t  =  -2, \  x  =  2 - 2 z, \  y  =  3 z - 2\right\}$}
+
+		\item Wyznaczyć miary kątów wewnętrznych trójkąta $ABC,$ gdzie
+			\[
+				A = (0, 3, -3),\ B = (3, 2, 4),\ C = (-2, -3, -3)
+			\]
+			Sprawdzić, czy sumują się do $180^{\circ}.$\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg73}
+				{$\alpha = 90.00^{\circ},\  \beta \approx 39.47^{\circ},\  \gamma \approx 50.53^{\circ}.$}
+
+		\item Wyznaczyć pole trójkąta $ABC$ oraz długość wysokości opuszczonej z wierzchołka C dla
+			\[
+				A = (2, -1, 5),\ B = (2, 3, 5),\ C = (2, 5, 1)
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg74}
+				{$P=8,\ \ h_C=4$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (-3, 2, 5)
+			\]
+			względem prostej
+			\[
+				l\colon \frac{x - 2}{2}= \frac{y + 2}{-2}= \frac{z - 5}{-1}.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg75}
+				{Płaszczyzna prostopadła: $\pi\colon 2 x - 2 y - z + 15 = 0, \quad t_p=-2$ \\
+							Punkt przecięcia to: $P_p =(-2,2,7),$ \quad 
+							Punkt symetryczny to: $P_s = (-1,2,9)$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (1, -2, -3)
+			\]
+			względem płaszczyzny
+			\[
+				\pi\colon - x + y + z - 3  = 0.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg76}
+				{Prosta prostopadła: $ \frac{x - 1}{-1}= \frac{y + 2}{1}= \frac{z + 3}{1}= t,$ \quad $t_p=3$ \\
+			Punkt przecięcia to: $P_p =(-2,1,0),$ \quad 
+			Punkt symetryczny to: $P_s = (-5,4,3)$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 8}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić rozwiązanie.
+			\[
+				\left(7 + 6i\right)z = -3 + 4i+\left(6 + 4i\right)z
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg77}
+				{$z=1 + 2i.$}
+
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić jedno z rozwiązań.
+			\[
+				\left(1 - i\right)z^2 + \left(-3 - 11 i\right) z + \left(-22 - 4 i\right)=0
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg78}
+				{$\Delta = -8-6i, \quad \sqrt{\Delta}=\pm( 1 - 3 i), \quad z_{1}=-3 + 4 i, \quad z_{2}=-1 + 3 i$}
+
+		\item Wyznaczyć wszystkie zadane pierwiastki zespolone i zaznaczyć je na płaszczyźnie zespolonej
+			\[
+				\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{4}]{\left(- \frac{4 \sqrt{15}}{3} - \frac{4}{3} + i \left(- \frac{4 \sqrt{5}}{3} + \frac{4 \sqrt{3}}{3}\right) \right) \left(1 - \sqrt{5} i \right)}
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg79}
+				{	\begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+				\[
+					\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{4}]{-8 + 8 \sqrt{3} i}=
+				\]
+				\[
+					 = \left\{ -1 + \sqrt{3} i, \  1 - \sqrt{3} i, \  - \sqrt{3} - i, \  \sqrt{3} + i\right\}.
+				\]
+				&
+					\raisebox{-3cm}{\resizebox{5.1cm}{!}{\includegraphics{../pics/rozklad_pierwiastkow79}}}
+				\end{tabular}
+			}
+
+		\item Dla jakich rzeczywistych wartości parametru $x$ macierz $A$ posiada odwrotność?
+			\[
+				\textnormal{A=}\left[\begin{matrix}0 & x + 1 & x + 4\\x + 2 & 3 & 1\\x + 2 & 4 & 3\end{matrix}\right]
+			\]
+		Wyznaczyć macierz odwrotną dla $x=3.$ Wykonać sprawdzenie.\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg80}
+				{$\det A=4 - x^{2}\neq 0, \quad 
+				x\neq -2\ \textnormal{oraz} \ x\neq 2,$\\
+				$A(3)= \left[\begin{matrix}0 & 4 & 7\\5 & 3 & 1\\5 & 4 & 3\end{matrix}\right],\ 
+				\det A(3)=-5,\ 
+				A^{-1}=- \frac{1}{5}\left[\begin{matrix}5 & 16 & -17\\-10 & -35 & 35\\5 & 20 & -20\end{matrix}\right].$}
+
+		\item Rozwiązać równanie:
+			\[
+				\left[\begin{matrix}-1 & 0 & -1 & 1 & 0\\0 & 1 & 1 & -1 & 1\end{matrix}\right]\cdot 
+				\left[\begin{matrix}0 & 1 & 0 & -1 & -2\\-2 & -2 & -1 & 1 & 1\end{matrix}\right]^T + 
+				3X=
+				\left[\begin{matrix}-1 & 0\\2 & 2\\2 & -1\\0 & 0\\0 & -1\end{matrix}\right]^T \cdot
+				\left[\begin{matrix}0 & 1\\1 & 1\\0 & -1\\1 & 0\\-2 & 0\end{matrix}\right] \cdot X
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg81}
+				{$ \left[\begin{matrix}-1 & 4\\0 & -3\end{matrix}\right] + 
+				3X=
+				\left[\begin{matrix}2 & -1\\4 & 3\end{matrix}\right] \cdot X, \quad 
+				\left[\begin{matrix}-1 & 4\\0 & -3\end{matrix}\right] = 
+				\left[\begin{matrix}-1 & -1\\4 & 0\end{matrix}\right] \cdot X $ \\ 
+				$X=\frac{1}{4}\left[\begin{matrix}0 & -3\\4 & -13\end{matrix}\right].$}
+
+		\item Z układu równań wyznaczyć niewiadomą $y$
+			\[
+				\left\{
+					\begin{matrix}
+						- x + y - z = 1 \\ 
+						- 3 y - z = -1 \\ 
+						2 x + 2 y + 3 z = 1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg82}
+				{$\det(A) = -1,\ \det(A_y)=-2,\ y = 2$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						- t + 2 x + y - 7 z = -3 \\ 
+						- t - x + 3 z = 4 \\ 
+						3 t - 2 x - 3 y + 9 z = -3 \\ 
+						- 2 t + 2 x + 2 y - 8 z = 0 \\ 
+						- t + 2 x + 2 y - 8 z = -1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg83}
+				{$\left\{ t  =  -1, \  x  =  3 z - 3, \  y  =  z + 2\right\}$}
+
+		\item Wyznaczyć miary kątów wewnętrznych trójkąta $ABC,$ gdzie
+			\[
+				A = (1, -2, 2),\ B = (-3, -3, -1),\ C = (1, -3, -1)
+			\]
+			Sprawdzić, czy sumują się do $180^{\circ}.$\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg84}
+				{$\alpha \approx 51.67^{\circ},\  \beta \approx 38.33^{\circ},\  \gamma = 90.00^{\circ}.$}
+
+		\item Wyznaczyć pole trójkąta $ABC$ oraz długość wysokości opuszczonej z wierzchołka C dla
+			\[
+				A = (1, 4, 3),\ B = (4, 5, 1),\ C = (3, 1, 4)
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg85}
+				{$P=\frac{\sqrt{195}}{2},\ \ h_C=\frac{\sqrt{2730}}{14}$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (-2, 5, 4)
+			\]
+			względem prostej
+			\[
+				l\colon \frac{x - 4}{2}= \frac{y + 2}{-2}= \frac{z - 5}{-2}.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg86}
+				{Płaszczyzna prostopadła: $\pi\colon 2 x - 2 y - 2 z + 22 = 0, \quad t_p=-2$ \\
+							Punkt przecięcia to: $P_p =(0,2,9),$ \quad 
+							Punkt symetryczny to: $P_s = (2,-1,14)$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (4, -2, 2)
+			\]
+			względem płaszczyzny
+			\[
+				\pi\colon x + y + z + 2  = 0.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg87}
+				{Prosta prostopadła: $ \frac{x - 4}{1}= \frac{y + 2}{1}= \frac{z - 2}{1}= t,$ \quad $t_p=-2$ \\
+			Punkt przecięcia to: $P_p =(2,-4,0),$ \quad 
+			Punkt symetryczny to: $P_s = (0,-6,-2)$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 9}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić rozwiązanie.
+			\[
+				9 + 3i+\left(9 + 2i\right)z = \left(7 + 3i\right)z
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg88}
+				{$z=-3 - 3i.$}
+
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić jedno z rozwiązań.
+			\[
+				\left(1 - i\right)z^2 + \left(-13 + i\right) z + \left(24 + 16 i\right)=0
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg89}
+				{$\Delta = 8+6i, \quad \sqrt{\Delta}=\pm( 3 + i), \quad z_{1}=3 + 2 i, \quad z_{2}=4 + 4 i$}
+
+		\item Wyznaczyć wszystkie zadane pierwiastki zespolone i zaznaczyć je na płaszczyźnie zespolonej
+			\[
+				\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{4}]{\left(- \frac{4 \sqrt{6}}{3} - \frac{8}{3} + i \left(- \frac{4 \sqrt{2}}{3} + \frac{8 \sqrt{3}}{3}\right) \right) \left(2 - \sqrt{2} i \right)}
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg90}
+				{	\begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+				\[
+					\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{4}]{-8 + 8 \sqrt{3} i}=
+				\]
+				\[
+					 = \left\{ -1 + \sqrt{3} i, \  1 - \sqrt{3} i, \  - \sqrt{3} - i, \  \sqrt{3} + i\right\}.
+				\]
+				&
+					\raisebox{-3cm}{\resizebox{5.1cm}{!}{\includegraphics{../pics/rozklad_pierwiastkow90}}}
+				\end{tabular}
+			}
+
+		\item Dla jakich rzeczywistych wartości parametru $x$ macierz $A$ posiada odwrotność?
+			\[
+				\textnormal{A=}\left[\begin{matrix}x - 3 & 4 & -2\\2 x + 1 & x + 2 & 1\\1 & -4 & 2\end{matrix}\right]
+			\]
+		Wyznaczyć macierz odwrotną dla $x=-2.$ Wykonać sprawdzenie.\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg91}
+				{$\det A=2 x^{2} + 4 x - 16\neq 0, \quad 
+				x\neq -4\ \textnormal{oraz} \ x\neq 2,$\\
+				$A(-2)= \left[\begin{matrix}-5 & 4 & -2\\-3 & 0 & 1\\1 & -4 & 2\end{matrix}\right],\ 
+				\det A(-2)=-16,\ 
+				A^{-1}=- \frac{1}{16}\left[\begin{matrix}4 & 0 & 4\\7 & -8 & 11\\12 & -16 & 12\end{matrix}\right].$}
+
+		\item Rozwiązać równanie:
+			\[
+				\left[\begin{matrix}-1 & 1 & 0 & -1 & 1\\1 & 1 & 0 & 1 & -1\end{matrix}\right]\cdot 
+				\left[\begin{matrix}0 & -1 & -1 & -1 & -2\\-2 & 1 & -1 & -1 & -1\end{matrix}\right]^T + 
+				4X=
+				\left[\begin{matrix}1 & 2\\1 & 0\\1 & 2\\0 & 0\\0 & 1\end{matrix}\right]^T \cdot
+				\left[\begin{matrix}1 & 1\\1 & -2\\-1 & 1\\-2 & 1\\-1 & 1\end{matrix}\right] \cdot X
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg92}
+				{$ \left[\begin{matrix}-2 & 3\\0 & -1\end{matrix}\right] + 
+				4X=
+				\left[\begin{matrix}1 & 0\\-1 & 5\end{matrix}\right] \cdot X, \quad 
+				\left[\begin{matrix}-2 & 3\\0 & -1\end{matrix}\right] = 
+				\left[\begin{matrix}-3 & 0\\-1 & 1\end{matrix}\right] \cdot X $ \\ 
+				$X=\frac{1}{-3}\left[\begin{matrix}-2 & 3\\-2 & 6\end{matrix}\right].$}
+
+		\item Z układu równań wyznaczyć niewiadomą $x$
+			\[
+				\left\{
+					\begin{matrix}
+						x - y + z = -1 \\ 
+						4 x - 3 y + 3 z = -2 \\ 
+						- 3 x + 3 y + 4 z = -2 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg93}
+				{$\det(A) = 7,\ \det(A_x)=7,\ x = 1$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						- 3 t + 3 x + z = 7 \\ 
+						- 2 t + 7 x + 2 y + 4 z = 9 \\ 
+						- t + 2 x + y + z = 2 \\ 
+						- 2 t + 4 x + y + 2 z = 6 \\ 
+						- 3 t + 3 x + z = 7 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg94}
+				{$\left\{ t  =  - \frac{z}{3} - \frac{2}{3}, \  x  =  \frac{5}{3} - \frac{2 z}{3}, \  y  =  -2\right\}$}
+
+		\item Wyznaczyć miary kątów wewnętrznych trójkąta $ABC,$ gdzie
+			\[
+				A = (-2, 3, 4),\ B = (2, 4, 3),\ C = (4, 2, 5)
+			\]
+			Sprawdzić, czy sumują się do $180^{\circ}.$\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg95}
+				{$\alpha \approx 32.73^{\circ},\  \beta \approx 105.79^{\circ},\  \gamma \approx 41.47^{\circ}.$}
+
+		\item Wyznaczyć pole trójkąta $ABC$ oraz długość wysokości opuszczonej z wierzchołka C dla
+			\[
+				A = (5, 3, 2),\ B = (5, 4, 2),\ C = (5, 2, 4)
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg96}
+				{$P=1,\ \ h_C=2$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (-3, 1, -3)
+			\]
+			względem prostej
+			\[
+				l\colon \frac{x - 2}{-3}= \frac{y + 3}{2}= \frac{z - 4}{-3}.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg97}
+				{Płaszczyzna prostopadła: $\pi\colon - 3 x + 2 y - 3 z - 20 = 0, \quad t_p=2$ \\
+							Punkt przecięcia to: $P_p =(-4,1,-2),$ \quad 
+							Punkt symetryczny to: $P_s = (-5,1,-1)$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (4, 5, 3)
+			\]
+			względem płaszczyzny
+			\[
+				\pi\colon - x - 2 y - z - 1  = 0.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg98}
+				{Prosta prostopadła: $ \frac{x - 4}{-1}= \frac{y - 5}{-2}= \frac{z - 3}{-1}= t,$ \quad $t_p=3$ \\
+			Punkt przecięcia to: $P_p =(1,-1,0),$ \quad 
+			Punkt symetryczny to: $P_s = (-2,-7,-3)$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 10}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić rozwiązanie.
+			\[
+				7 - i+\left(6 + 5i\right)z = \left(2 + 2i\right)z
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg99}
+				{$z=-1 + i.$}
+
+		\item Rozwiązać równanie w zbiorze liczb zespolonych.\ Sprawdzić jedno z rozwiązań.
+			\[
+				\left(1 - i\right)z^2 + \left(-3 + 11 i\right) z + \left(-6 - 24 i\right)=0
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg100}
+				{$\Delta = 8+6i, \quad \sqrt{\Delta}=\pm( 3 + i), \quad z_{1}=3 - 3 i, \quad z_{2}=4 - i$}
+
+		\item Wyznaczyć wszystkie zadane pierwiastki zespolone i zaznaczyć je na płaszczyźnie zespolonej
+			\[
+				\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{3}]{\left(- \frac{16}{27} - \frac{16 \sqrt{3} i}{27} \right) \left(1 - \sqrt{3} i \right)}
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg101}
+				{	\begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+				\[
+					\sqrt[\leftroot{2}\uproot{-4} \displaystyle ^{3}]{- \frac{64}{27}}=
+				\]
+				\[
+					 = \left\{ - \frac{4}{3}, \  \frac{2}{3} - \frac{2 \sqrt{3} i}{3}, \  \frac{2}{3} + \frac{2 \sqrt{3} i}{3}\right\}.
+				\]
+				&
+					\raisebox{-3cm}{\resizebox{5.1cm}{!}{\includegraphics{../pics/rozklad_pierwiastkow101}}}
+				\end{tabular}
+			}
+
+		\item Dla jakich rzeczywistych wartości parametru $x$ macierz $A$ posiada odwrotność?
+			\[
+				\textnormal{A=}\left[\begin{matrix}x + 2 & 3 & 4\\x + 1 & -3 & x + 2\\x + 1 & 0 & 4\end{matrix}\right]
+			\]
+		Wyznaczyć macierz odwrotną dla $x=2.$ Wykonać sprawdzenie.\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg102}
+				{$\det A=3 x^{2} - 3 x - 18\neq 0, \quad 
+				x\neq -2\ \textnormal{oraz} \ x\neq 3,$\\
+				$A(2)= \left[\begin{matrix}4 & 3 & 4\\3 & -3 & 4\\3 & 0 & 4\end{matrix}\right],\ 
+				\det A(2)=-12,\ 
+				A^{-1}=- \frac{1}{12}\left[\begin{matrix}-12 & -12 & 24\\0 & 4 & -4\\9 & 9 & -21\end{matrix}\right].$}
+
+		\item Rozwiązać równanie:
+			\[
+				\left[\begin{matrix}1 & -1 & 2 & 2 & -1\\-1 & 2 & -1 & 1 & -1\end{matrix}\right]\cdot 
+				\left[\begin{matrix}-2 & -1 & -2 & 0 & -2\\-2 & 1 & 0 & -1 & -1\end{matrix}\right]^T + 
+				4X=
+				\left[\begin{matrix}0 & 1\\0 & 2\\1 & 2\\-1 & 2\\0 & 0\end{matrix}\right]^T \cdot
+				\left[\begin{matrix}1 & -1\\1 & 0\\0 & 1\\-1 & 1\\-2 & -1\end{matrix}\right] \cdot X
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg103}
+				{$ \left[\begin{matrix}-3 & -4\\4 & 4\end{matrix}\right] + 
+				4X=
+				\left[\begin{matrix}1 & 0\\1 & 3\end{matrix}\right] \cdot X, \quad 
+				\left[\begin{matrix}-3 & -4\\4 & 4\end{matrix}\right] = 
+				\left[\begin{matrix}-3 & 0\\1 & -1\end{matrix}\right] \cdot X $ \\ 
+				$X=\frac{1}{3}\left[\begin{matrix}3 & 4\\-9 & -8\end{matrix}\right].$}
+
+		\item Z układu równań wyznaczyć niewiadomą $x$
+			\[
+				\left\{
+					\begin{matrix}
+						2 x - 3 y + z = 0 \\ 
+						x - 2 y - z = -1 \\ 
+						x + 2 y + 4 z = 1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg104}
+				{$\det(A) = 7,\ \det(A_x)=-9,\ x = - \frac{9}{7}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						2 x - 2 z = 8 \\ 
+						- t - 3 x - 2 y - z = -5 \\ 
+						2 t + 2 x + 3 y + 4 z = -3 \\ 
+						- t - 2 x - 2 y - 2 z = -1 \\ 
+						- 2 t - 4 x - 4 y - 4 z = -2 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg105}
+				{$\left\{ t  =  -1, \  x  =  z + 4, \  y  =  - 2 z - 3\right\}$}
+
+		\item Wyznaczyć miary kątów wewnętrznych trójkąta $ABC,$ gdzie
+			\[
+				A = (1, 2, -3),\ B = (3, 3, -2),\ C = (3, 4, -3)
+			\]
+			Sprawdzić, czy sumują się do $180^{\circ}.$\\
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg106}
+				{$\alpha = 30.00^{\circ},\  \beta = 90.00^{\circ},\  \gamma = 60.00^{\circ}.$}
+
+		\item Wyznaczyć pole trójkąta $ABC$ oraz długość wysokości opuszczonej z wierzchołka C dla
+			\[
+				A = (-2, 1, 2),\ B = (5, 1, 2),\ C = (-3, 3, 4)
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg107}
+				{$P=7 \sqrt{2},\ \ h_C=2 \sqrt{2}$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (4, -3, 4)
+			\]
+			względem prostej
+			\[
+				l\colon \frac{x - 1}{-1}= \frac{y - 4}{1}= \frac{z + 1}{-1}.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg108}
+				{Płaszczyzna prostopadła: $\pi\colon - x + y - z + 11 = 0, \quad t_p=-5$ \\
+							Punkt przecięcia to: $P_p =(6,-1,4),$ \quad 
+							Punkt symetryczny to: $P_s = (8,1,4)$}
+
+		\item Wyznaczyć punkt symetryczny do punktu
+			\[
+				P = (4, -2, 5)
+			\]
+			względem płaszczyzny
+			\[
+				\pi\colon 2 x - y + 2 z - 2  = 0.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg109}
+				{Prosta prostopadła: $ \frac{x - 4}{2}= \frac{y + 2}{-1}= \frac{z - 5}{2}= t,$ \quad $t_p=-2$ \\
+			Punkt przecięcia to: $P_p =(0,0,1),$ \quad 
+			Punkt symetryczny to: $P_s = (-4,2,-3)$}
+
+    \end{enumerate}
+\end{document}

@@ -1,0 +1,673 @@
+% !TeX spellcheck = pl_PL-Polish
+\documentclass[a4paper,12pt]{article}
+\linespread{1.3} %odstepy miedzy liniami
+\usepackage[a4paper, lmargin=2cm, rmargin=2cm, tmargin=2cm, bmargin=2cm]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{ocgx}
+\usepackage{polski}
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+\tcbuselibrary{skins}
+\tcbuselibrary{raster}
+% brak - bez odpowiedzi i bez miejsca, white - bez odpowiedzi z miejscem, red = odpowiedzi ukryte ale dostepne
+\newcommand{\kolorodpowiedzi}{blue}
+\renewcommand{\footrulewidth}{0.4pt}% linia pozioma na końcu strony - default is 0pt
+\DeclareFontShape{OMX}{cmex}{m}{n}
+    {<-7.5> cmex7
+    <7.5-8.5> cmex8
+    <8.5-9.5> cmex9
+    <9.5-> cmex10}{}
+\DeclareSymbolFont{largesymbols}{OMX}{cmex}{m}{n}
+
+
+\newcommand{\ukryte}{1}  % domyślnie odpowiedzi są do pokazywania po kliknięciu
+\ifthenelse{\equal{\kolorodpowiedzi}{red}}  % ukrywamy od pokazywania gdy kolor jest red
+	{\renewcommand{\ukryte}{0}}{}
+
+\newcommand{\zOdpowiedziami}[3]{
+	\ifthenelse{\equal{#1}{brak}}{}{
+		\ifthenelse{\equal{#1}{white}}{\vphantom{#3}}{
+			\switchocg{#2}{\textcolor{\kolorodpowiedzi}{\\Rozwiązanie: }}
+				\begin{ocg}{Warstwa odpowiedzi}{#2}{\ukryte}
+					\textcolor{\kolorodpowiedzi}{#3}
+				\end{ocg}}}}
+
+\begin{document}
+    \pagestyle{fancy}
+    \setlength{\headheight}{27.29453pt}
+    \fancyhead{}
+    \fancyhead[L]{\textbf{Teleinformatyka\\Algebra - }}
+    \fancyhead[R]{\textbf{Zadania powtórzeniowe na kolokwium nr 2\\ 143 stycznia 2024}}
+    \fancyfoot{}
+    \fancyfoot[R]{\tiny\textbf{23 stycznia 2025, 14:37}}
+%    \hspace{1cm}%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 1}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Z układu równań wyznaczyć niewiadomą $t$
+			\[
+				\left\{
+					\begin{matrix}
+						- 2 t + x - y - 3 z = 3 \\ 
+						- 2 y - 2 z = 4 \\ 
+						- t - 2 x - 3 y + 2 z = 2 \\ 
+						4 t - z = -1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg0}
+				{$\det(A) = -2,\ \det(A_t)=-6,\ t = 3$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						6 t + 3 x + 2 y = 2 \\ 
+						- 3 t + y + z = -4 \\ 
+						- 6 t - 3 x - 2 y + z = -4 \\ 
+						- 5 t - 5 x - 5 y + 2 z = -4 \\ 
+						3 t + 3 x + 3 y - z = 2 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg1}
+				{$\left\{ t  =  \frac{y}{3} + \frac{2}{3}, \  x  =  - \frac{4 y}{3} - \frac{2}{3}, \  z  =  -2\right\}$}
+
+		\item Wyznaczyć wszystkie asymptoty funkcji
+			\[
+				f(x)= \frac{- 2 x^{2} - x - 2}{2 - x}.
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg2}
+				{$D_f\colon \mathbb{R}\setminus \left\{2\right\}.$\\Asymptota pionowa dwustronna w $x_0=2.$ \\Asymptota ukośna w plus i minus nieskończoności o równaniu $y=2 x + 5.$ }
+
+		\item Wyznaczyć równanie stycznej i normalnej do wykresu funkcji
+			\[
+				f(x) = e^{x^{2} + x - 2}
+			\]
+		 w punkcie $x_0 = -2.$
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg3}
+				{Styczna: $y = - 3 x - 5,$ \quad
+			Normalna: $y = \frac{x}{3} + \frac{5}{3}$}
+
+		\item Zbadać monotoniczność i ekstrema funkcji
+			\[
+				f(x)=\frac{x^{2} + 2 x + 1}{3 - 2 x} 
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg4}
+				{$D_f\colon \mathbb{R}\setminus \left\{\frac{3}{2}\right\}$\newline
+			$f'(x)=- \frac{2 \left(x - 4\right) \left(x + 1\right)}{\left(2 x - 3\right)^{2}}$\newline
+			$f'(x) > 0 \textnormal{ dla: }x > -1 \wedge x < 4 \wedge x \neq \frac{3}{2} \implies f(x) \textnormal{ jest rosnąca dla } x \in \left(-1,\frac{3}{2}  \right)\textnormal{ oraz } x \in \left(\frac{3}{2},4  \right) $\newline
+			$f'(x) < 0 \textnormal{ dla: }4 < x \vee x < -1 \implies f(x) \textnormal{ jest malejąca dla } x \in \left( -\infty, -1  \right)\textnormal{ oraz } x \in \left(4, \infty  \right) $\newline
+			$f'(x) = 0 \textnormal{ dla } x \in \left\{ -1, \  4\right\} \implies f_{\min}\left(-1\right) = 0 \textnormal{ oraz } f_{\max}\left(4\right) = -5$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 2}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Z układu równań wyznaczyć niewiadomą $x$
+			\[
+				\left\{
+					\begin{matrix}
+						- 2 x + y = 0 \\ 
+						4 x = -3 \\ 
+						- 3 x + y + 2 z = 3 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg5}
+				{$\det(A) = -8,\ \det(A_x)=6,\ x = - \frac{3}{4}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						t - x + 2 y + z = -1 \\ 
+						2 t + x - 2 y - 2 z = 2 \\ 
+						- 6 t + 3 x - 3 y = -3 \\ 
+						t - y - z = 2 \\ 
+						t - x + 2 y + z = -1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg6}
+				{$\left\{ t  =  \frac{z}{3} + \frac{1}{3}, \  x  =  -2, \  y  =  - \frac{2 z}{3} - \frac{5}{3}\right\}$}
+
+		\item Wyznaczyć wszystkie asymptoty funkcji
+			\[
+				f(x)= \frac{- 2 x^{2} - 2 x - 1}{- 2 x^{2} - 2 x - 2}.
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg7}
+				{$D_f\colon \mathbb{R}.$\\Asymptota pozioma w plus i minus nieskończoności o równaniu $y=1.$ }
+
+		\item Wyznaczyć równanie stycznej i normalnej do wykresu funkcji
+			\[
+				f(x) = \frac{3 x^{2} + 3 x + 4}{2 x - 1}
+			\]
+		 w punkcie $x_0 = 3.$
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg8}
+				{Styczna: $y = x + 5,$ \quad
+			Normalna: $y = 11 - x$}
+
+		\item Zbadać monotoniczność i ekstrema funkcji
+			\[
+				f(x)=\frac{- 2 x^{2} - x + 3}{3 - x} 
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg9}
+				{$D_f\colon \mathbb{R}\setminus \left\{3\right\}$\newline
+			$f'(x)=\frac{2 x \left(x - 6\right)}{\left(x - 3\right)^{2}}$\newline
+			$f'(x) > 0 \textnormal{ dla: }6 < x \vee x < 0\implies f(x) \textnormal{ jest rosnąca dla } x \in \left( -\infty, 0  \right)\textnormal{ oraz } x \in \left(6, \infty  \right)$\newline
+			$f'(x) < 0 \textnormal{ dla: }x > 0 \wedge x < 6 \wedge x \neq 3 \implies f(x) \textnormal{ jest malejąca dla } x \in \left(0,3  \right)\textnormal{ oraz } x \in \left(3,6  \right)$\newline
+			$f'(x) = 0 \textnormal{ dla } x \in \left\{ 0, \  6\right\} \implies f_{\max}\left(0\right) = 1 \textnormal{ oraz } f_{\min}\left(6\right) = 25$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 3}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Z układu równań wyznaczyć niewiadomą $z$
+			\[
+				\left\{
+					\begin{matrix}
+						2 x + 2 y - 3 z = 0 \\ 
+						- 2 x - y + 2 z = -3 \\ 
+						3 x + y = 4 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg10}
+				{$\det(A) = 5,\ \det(A_z)=-4,\ z = - \frac{4}{5}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						4 t - 2 y - 2 z = -2 \\ 
+						- 4 t + y + 2 z = 3 \\ 
+						- 8 t + 2 x + 2 y + z = -4 \\ 
+						- 5 t + x + y + z = -1 \\ 
+						5 t - x - y - z = 1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg11}
+				{$\left\{ t  =  \frac{z}{2} - 1, \  x  =  \frac{3 z}{2} - 5, \  y  =  -1\right\}$}
+
+		\item Wyznaczyć wszystkie asymptoty funkcji
+			\[
+				f(x)= \frac{- x^{2} + x + 2}{- x - 1}.
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg12}
+				{$D_f\colon \mathbb{R}\setminus \left\{-1\right\}.$\\Asymptota ukośna w plus i minus nieskończoności o równaniu $y=x - 2.$ }
+
+		\item Wyznaczyć równanie stycznej i normalnej do wykresu funkcji
+			\[
+				f(x) = \frac{e^{- x^{2} + 2 x + 3}}{4 - 2 x}
+			\]
+		 w punkcie $x_0 = 3.$
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg13}
+				{Styczna: $y = \frac{5 x}{2} - 8,$ \quad
+			Normalna: $y = \frac{7}{10} - \frac{2 x}{5}$}
+
+		\item Zbadać monotoniczność i ekstrema funkcji
+			\[
+				f(x)=\frac{x^{2} + 3 x + 3}{x + 1} 
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg14}
+				{$D_f\colon \mathbb{R}\setminus \left\{-1\right\}$\newline
+			$f'(x)=\frac{x \left(x + 2\right)}{\left(x + 1\right)^{2}}$\newline
+			$f'(x) > 0 \textnormal{ dla: }0 < x \vee x < -2\implies f(x) \textnormal{ jest rosnąca dla } x \in \left( -\infty, -2  \right)\textnormal{ oraz } x \in \left(0, \infty  \right)$\newline
+			$f'(x) < 0 \textnormal{ dla: }x > -2 \wedge x < 0 \wedge x \neq -1 \implies f(x) \textnormal{ jest malejąca dla } x \in \left(-2,-1  \right)\textnormal{ oraz } x \in \left(-1,0  \right)$\newline
+			$f'(x) = 0 \textnormal{ dla } x \in \left\{ -2, \  0\right\} \implies f_{\max}\left(-2\right) = -1 \textnormal{ oraz } f_{\min}\left(0\right) = 3$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 4}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Z układu równań wyznaczyć niewiadomą $z$
+			\[
+				\left\{
+					\begin{matrix}
+						2 x - 3 y = -3 \\ 
+						4 x + y + 4 z = 2 \\ 
+						3 x + 3 z = 0 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg15}
+				{$\det(A) = 6,\ \det(A_z)=-9,\ z = - \frac{3}{2}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						- 2 t + 2 x + 2 y = 0 \\ 
+						- 3 t + x + y + 2 z = 6 \\ 
+						- 5 t + 3 x + 4 y + 2 z = 4 \\ 
+						- 2 t + x + y + z = 3 \\ 
+						2 t - x - 2 y - z = -1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg16}
+				{$\left\{ t  =  z - 3, \  x  =  z - 1, \  y  =  -2\right\}$}
+
+		\item Wyznaczyć wszystkie asymptoty funkcji
+			\[
+				f(x)= \frac{- x^{2} + 3 x - 2}{3 x^{2} - 2 x - 1}.
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg17}
+				{$D_f\colon \mathbb{R}\setminus \left\{- \frac{1}{3}, 1\right\}.$\\Asymptota pionowa dwustronna w $x_1=- \frac{1}{3}.$ \\Asymptota pozioma w plus i minus nieskończoności o równaniu $y=- \frac{1}{3}.$ }
+
+		\item Wyznaczyć równanie stycznej i normalnej do wykresu funkcji
+			\[
+				f(x) = e^{x^{2} - x - 2}
+			\]
+		 w punkcie $x_0 = -1.$
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg18}
+				{Styczna: $y = - 3 x - 2,$ \quad
+			Normalna: $y = \frac{x}{3} + \frac{4}{3}$}
+
+		\item Zbadać monotoniczność i ekstrema funkcji
+			\[
+				f(x)=\frac{x + 3}{x^{2} + x - 2} 
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg19}
+				{$D_f\colon \mathbb{R}\setminus \left\{ -2, \  1\right\}$\newline
+			$f'(x)=- \frac{\left(x + 1\right) \left(x + 5\right)}{\left(x - 1\right)^{2} \left(x + 2\right)^{2}}$\newline
+			$f'(x) > 0 \textnormal{ dla: }x > -5 \wedge x < -1 \wedge x \neq -2 \implies f(x) \textnormal{ jest rosnąca dla } x \in \left(-5,-2  \right)\textnormal{ oraz } x \in \left(-2,-1  \right) $\newline
+			$f'(x) < 0 \textnormal{ dla: }\left(-1 < x \wedge x < 1\right) \vee 1 < x \vee x < -5 \implies f(x) \textnormal{ jest malejąca dla } x \in \left( -\infty, -5  \right)\textnormal{ oraz } x \in \left(-1, 1  \right) \textnormal{ oraz } x \in \left(1, \infty  \right) $\newline
+			$f'(x) = 0 \textnormal{ dla } x \in \left\{ -5, \  -1\right\} \implies f_{\min}\left(-5\right) = - \frac{1}{9} \textnormal{ oraz } f_{\max}\left(-1\right) = -1$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 5}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Z układu równań wyznaczyć niewiadomą $z$
+			\[
+				\left\{
+					\begin{matrix}
+						y - 3 z = 3 \\ 
+						2 y + 2 z = 1 \\ 
+						x - y - z = 3 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg20}
+				{$\det(A) = 8,\ \det(A_z)=-5,\ z = - \frac{5}{8}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						4 t - 2 x + y - z = 4 \\ 
+						8 t - x + 2 y - 2 z = 2 \\ 
+						t - z = 2 \\ 
+						5 t - x + y - 2 z = 4 \\ 
+						- 4 t + 2 x - y + z = -4 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg21}
+				{$\left\{ t  =  z + 2, \  x  =  -2, \  y  =  - 3 z - 8\right\}$}
+
+		\item Wyznaczyć wszystkie asymptoty funkcji
+			\[
+				f(x)= \frac{2 e^{x} + 2}{1 - x}.
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg22}
+				{$D_f\colon \mathbb{R}\setminus \left\{1\right\}.$\\Asymptota pionowa dwustronna w $x_0=1.$ \\Asymptota pozioma w minus nieskończoności o równaniu $y=0.$ }
+
+		\item Wyznaczyć równanie stycznej i normalnej do wykresu funkcji
+			\[
+				f(x) = \frac{- 2 x^{2} - x - 1}{4 x + 3}
+			\]
+		 w punkcie $x_0 = -1.$
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg23}
+				{Styczna: $y = 5 x + 7,$ \quad
+			Normalna: $y = \frac{9}{5} - \frac{x}{5}$}
+
+		\item Zbadać monotoniczność i ekstrema funkcji
+			\[
+				f(x)=\frac{2 x + 1}{2 x^{2} - x + 1} 
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg24}
+				{$D_f\colon \mathbb{R}$\newline
+			$f'(x)=- \frac{\left(2 x - 1\right) \left(2 x + 3\right)}{\left(2 x^{2} - x + 1\right)^{2}}$\newline
+			$f'(x) > 0 \textnormal{ dla: }- \frac{3}{2} < x \wedge x < \frac{1}{2} \implies f(x) \textnormal{ jest rosnąca dla } x \in \left( - \frac{3}{2}, \frac{1}{2}  \right) $\newline
+			$f'(x) < 0 \textnormal{ dla: }\frac{1}{2} < x \vee x < - \frac{3}{2} \implies f(x) \textnormal{ jest malejąca dla } x \in \left( -\infty, - \frac{3}{2}  \right)\textnormal{ oraz } x \in \left(\frac{1}{2}, \infty  \right) $\newline
+			$f'(x) = 0 \textnormal{ dla } x \in \left\{ - \frac{3}{2}, \  \frac{1}{2}\right\} \implies f_{\min}\left(- \frac{3}{2}\right) = - \frac{2}{7} \textnormal{ oraz } f_{\max}\left(\frac{1}{2}\right) = 2$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 6}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Z układu równań wyznaczyć niewiadomą $y$
+			\[
+				\left\{
+					\begin{matrix}
+						x - 3 y + 4 z = -2 \\ 
+						2 x + y - 3 z = 2 \\ 
+						2 x - 3 y + 2 z = 0 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg25}
+				{$\det(A) = -9,\ \det(A_y)=8,\ y = - \frac{8}{9}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						3 x + 5 y - 5 z = -6 \\ 
+						- 3 t + x + 2 y - z = -3 \\ 
+						3 t + 3 x + 5 y - 6 z = -5 \\ 
+						3 t + x + 2 y - 3 z = -1 \\ 
+						- x - 2 y + 2 z = 2 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg26}
+				{$\left\{ t  =  \frac{z}{3} + \frac{1}{3}, \  x  =  -2, \  y  =  z\right\}$}
+
+		\item Wyznaczyć wszystkie asymptoty funkcji
+			\[
+				f(x)= x + \frac{\ln{\left(x \right)}}{x}.
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg27}
+				{$D_f\colon \left(0, \infty\right).$\\Asymptota pionowa prawostronna w $x_0=0.$ \\Asymptota ukośna w plus nieskończoności o równaniu $y=x.$ }
+
+		\item Wyznaczyć równanie stycznej i normalnej do wykresu funkcji
+			\[
+				f(x) = \frac{- x^{2} + 4 x + 4}{2 x - 2}
+			\]
+		 w punkcie $x_0 = 2.$
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg28}
+				{Styczna: $y = 12 - 4 x,$ \quad
+			Normalna: $y = \frac{x}{4} + \frac{7}{2}$}
+
+		\item Zbadać monotoniczność i ekstrema funkcji
+			\[
+				f(x)=\frac{- x^{3} - 3 x^{2} - 3 x - 1}{1 - x} 
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg29}
+				{$D_f\colon \mathbb{R}\setminus \left\{1\right\}$\newline
+			$f'(x)=\frac{2 \left(x - 2\right) \left(x + 1\right)^{2}}{\left(x - 1\right)^{2}}$\newline
+			$f'(x) > 0 \textnormal{ dla: }2 < x \implies f(x) \textnormal{ jest rosnąca dla } x \in \left(2,\infty\right) $\newline
+			$f'(x) < 0 \textnormal{ dla: }\left(-1 < x \wedge x < 1\right) \vee \left(1 < x \wedge x < 2\right) \vee x < -1 \implies f(x) \textnormal{ jest malejąca dla } x \in \left(-\infty,1\right) \textnormal{ oraz } x \in  \left(1,2\right) $\newline
+			$f'(x) = 0 \textnormal{ dla } x \in \left\{ -1, \  2\right\} \implies f_{\min}\left(2\right) = 27$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 7}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Z układu równań wyznaczyć niewiadomą $z$
+			\[
+				\left\{
+					\begin{matrix}
+						- x + 3 y - 2 z = 2 \\ 
+						4 x - z = 2 \\ 
+						4 x + 2 y - 3 z = 3 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg30}
+				{$\det(A) = 6,\ \det(A_z)=8,\ z = \frac{4}{3}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						6 t + 3 x + y + 2 z = -2 \\ 
+						3 t - 3 y - z = 9 \\ 
+						- 4 t - x + y = -4 \\ 
+						- 2 t - 2 x - 2 y - 2 z = 6 \\ 
+						t + x + y + z = -3 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg31}
+				{$\left\{ t  =  \frac{z}{3} + 1, \  x  =  - \frac{4 z}{3} - 2, \  y  =  -2\right\}$}
+
+		\item Wyznaczyć wszystkie asymptoty funkcji
+			\[
+				f(x)= \frac{- x - 1 + e^{- x}}{x}.
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg32}
+				{$D_f\colon \mathbb{R}\setminus \left\{0\right\}.$\\Asymptota pozioma w plus nieskończoności o równaniu $y=-1.$ }
+
+		\item Wyznaczyć równanie stycznej i normalnej do wykresu funkcji
+			\[
+				f(x) = \frac{2 x^{2} + 4 x - 2}{2 x + 1}
+			\]
+		 w punkcie $x_0 = -1.$
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg33}
+				{Styczna: $y = 8 x + 12,$ \quad
+			Normalna: $y = \frac{31}{8} - \frac{x}{8}$}
+
+		\item Zbadać monotoniczność i ekstrema funkcji
+			\[
+				f(x)=\frac{4 x^{2} - x - 2}{- x - 2} 
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg34}
+				{$D_f\colon \mathbb{R}\setminus \left\{-2\right\}$\newline
+			$f'(x)=- \frac{4 x \left(x + 4\right)}{\left(x + 2\right)^{2}}$\newline
+			$f'(x) > 0 \textnormal{ dla: }x > -4 \wedge x < 0 \wedge x \neq -2 \implies f(x) \textnormal{ jest rosnąca dla } x \in \left(-4,-2  \right)\textnormal{ oraz } x \in \left(-2,0  \right) $\newline
+			$f'(x) < 0 \textnormal{ dla: }0 < x \vee x < -4 \implies f(x) \textnormal{ jest malejąca dla } x \in \left( -\infty, -4  \right)\textnormal{ oraz } x \in \left(0, \infty  \right) $\newline
+			$f'(x) = 0 \textnormal{ dla } x \in \left\{ -4, \  0\right\} \implies f_{\min}\left(-4\right) = 33 \textnormal{ oraz } f_{\max}\left(0\right) = 1$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 8}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Z układu równań wyznaczyć niewiadomą $x$
+			\[
+				\left\{
+					\begin{matrix}
+						2 t + 3 x + 3 y + z = -1 \\ 
+						2 x + 3 z = 1 \\ 
+						- t + x + 2 z = 2 \\ 
+						- t + 3 x + 3 y + 3 z = 3 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg35}
+				{$\det(A) = 3,\ \det(A_x)=6,\ x = 2$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						- t + 3 x + 3 y - 9 z = -5 \\ 
+						2 t - 2 x - 2 y + 6 z = 6 \\ 
+						t + x - y - z = -3 \\ 
+						t - x - 2 y + 4 z = 1 \\ 
+						- x + 2 z = 3 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg36}
+				{$\left\{ t  =  2, \  x  =  2 z - 3, \  y  =  z + 2\right\}$}
+
+		\item Wyznaczyć wszystkie asymptoty funkcji
+			\[
+				f(x)= x - \operatorname{atan}{\left(2 x \right)} + 1.
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg37}
+				{$D_f\colon \mathbb{R}.$\\Asymptota ukośna w minus nieskończoności o równaniu $y=x + 1 + \frac{\pi}{2}.$ \\Asymptota ukośna w plus nieskończoności o równaniu $y=x - \frac{\pi}{2} + 1.$ }
+
+		\item Wyznaczyć równanie stycznej i normalnej do wykresu funkcji
+			\[
+				f(x) = \frac{x^{2} + 4 x + 1}{2 x + 3}
+			\]
+		 w punkcie $x_0 = -2.$
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg38}
+				{Styczna: $y = 6 x + 15,$ \quad
+			Normalna: $y = \frac{8}{3} - \frac{x}{6}$}
+
+		\item Zbadać monotoniczność i ekstrema funkcji
+			\[
+				f(x)=\frac{4 x^{2} - 2 x + 3}{2 x + 2} 
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg39}
+				{$D_f\colon \mathbb{R}\setminus \left\{-1\right\}$\newline
+			$f'(x)=\frac{\left(2 x - 1\right) \left(2 x + 5\right)}{2 \left(x + 1\right)^{2}}$\newline
+			$f'(x) > 0 \textnormal{ dla: }\frac{1}{2} < x \vee x < - \frac{5}{2}\implies f(x) \textnormal{ jest rosnąca dla } x \in \left( -\infty, - \frac{5}{2}  \right)\textnormal{ oraz } x \in \left(\frac{1}{2}, \infty  \right)$\newline
+			$f'(x) < 0 \textnormal{ dla: }x > - \frac{5}{2} \wedge x < \frac{1}{2} \wedge x \neq -1 \implies f(x) \textnormal{ jest malejąca dla } x \in \left(- \frac{5}{2},-1  \right)\textnormal{ oraz } x \in \left(-1,\frac{1}{2}  \right)$\newline
+			$f'(x) = 0 \textnormal{ dla } x \in \left\{ - \frac{5}{2}, \  \frac{1}{2}\right\} \implies f_{\max}\left(- \frac{5}{2}\right) = -11 \textnormal{ oraz } f_{\min}\left(\frac{1}{2}\right) = 1$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 9}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Z układu równań wyznaczyć niewiadomą $z$
+			\[
+				\left\{
+					\begin{matrix}
+						2 x + 3 y = 3 \\ 
+						2 x + 2 y + 4 z = 4 \\ 
+						2 x + 2 y + 3 z = 2 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg40}
+				{$\det(A) = 2,\ \det(A_z)=4,\ z = 2$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						2 t + 2 x - 2 y + 2 z = 4 \\ 
+						- 5 t - x + y + z = -4 \\ 
+						2 t - z = 1 \\ 
+						- t - x + y - z = -2 \\ 
+						t + x - 2 y + z = 3 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg41}
+				{$\left\{ t  =  \frac{z}{2} + \frac{1}{2}, \  x  =  \frac{1}{2} - \frac{3 z}{2}, \  y  =  -1\right\}$}
+
+		\item Wyznaczyć wszystkie asymptoty funkcji
+			\[
+				f(x)= \frac{2 x^{2} - 2 x - 2}{- x^{2} + 2 x - 1}.
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg42}
+				{$D_f\colon \mathbb{R}\setminus \left\{1\right\}.$\\Asymptota pionowa dwustronna w $x_0=1.$ \\Asymptota pozioma w plus i minus nieskończoności o równaniu $y=-2.$ }
+
+		\item Wyznaczyć równanie stycznej i normalnej do wykresu funkcji
+			\[
+				f(x) = \frac{\sqrt{- 2 x^{2} + 4 x + 1}}{2 - 2 x}
+			\]
+		 w punkcie $x_0 = 2.$
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg43}
+				{Styczna: $y = \frac{3 x}{2} - \frac{7}{2},$ \quad
+			Normalna: $y = \frac{5}{6} - \frac{2 x}{3}$}
+
+		\item Zbadać monotoniczność i ekstrema funkcji
+			\[
+				f(x)=\frac{x^{3} + 3 x^{2} + 2 x - 2}{x + 3} 
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg44}
+				{$D_f\colon \mathbb{R}\setminus \left\{-3\right\}$\newline
+			$f'(x)=\frac{2 \left(x + 1\right)^{2} \left(x + 4\right)}{\left(x + 3\right)^{2}}$\newline
+			$f'(x) > 0 \textnormal{ dla: }\left(-4 < x \wedge x < -3\right) \vee \left(-3 < x \wedge x < -1\right) \vee -1 < x \implies f(x) \textnormal{ jest rosnąca dla } x \in \left(-4,-3\right) \textnormal{ oraz } x \in  \left(-3,\infty\right) $\newline
+			$f'(x) < 0 \textnormal{ dla: }x < -4 \implies f(x) \textnormal{ jest malejąca dla } x \in \left(-\infty,-4\right) $\newline
+			$f'(x) = 0 \textnormal{ dla } x \in \left\{ -4, \  -1\right\} \implies f_{\min}\left(-4\right) = 26$}
+
+    \end{enumerate}
+\newpage % \hspace{1cm}
+%--------------------------------------------------------------------------------
+    \fancyhead[C]{\textbf{Zestaw nr 10}}
+    \begin{enumerate}[label= \textbf{Zadanie \arabic*. }, leftmargin=1cm, align=left, itemsep=0pt]
+		\item Z układu równań wyznaczyć niewiadomą $y$
+			\[
+				\left\{
+					\begin{matrix}
+						4 y + 3 z = 4 \\ 
+						- x + 2 y + 4 z = 2 \\ 
+						x + 3 y - 2 z = -1 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg45}
+				{$\det(A) = -7,\ \det(A_y)=5,\ y = - \frac{5}{7}$}
+
+		\item Rozwiązać układ równań.\ Jeśli możliwe podać trzy przykładowe rozwiązania.\ Jedno rozwiązanie sprawdzić. 
+			\[
+				\left\{
+					\begin{matrix}
+						t - 2 x - 5 y - 8 z = 5 \\ 
+						- 2 t + 4 x + 6 y + 8 z = -6 \\ 
+						2 x + 3 y + 4 z = -5 \\ 
+						- t + 3 x + 4 y + 5 z = -5 \\ 
+						x + 2 y + 3 z = -3 \\ 
+					\end{matrix}
+				\right.
+			\]
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg46}
+				{$\left\{ t  =  -2, \  x  =  z - 1, \  y  =  - 2 z - 1\right\}$}
+
+		\item Wyznaczyć wszystkie asymptoty funkcji
+			\[
+				f(x)= - x + \frac{\ln{\left(x \right)}}{x}.
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg47}
+				{$D_f\colon \left(0, \infty\right).$\\Asymptota pionowa prawostronna w $x_0=0.$ \\Asymptota ukośna w plus nieskończoności o równaniu $y=- x.$ }
+
+		\item Wyznaczyć równanie stycznej i normalnej do wykresu funkcji
+			\[
+				f(x) = \sqrt{x^{2} + 2 x + 1}
+			\]
+		 w punkcie $x_0 = -2.$
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg48}
+				{Styczna: $y = - x - 1,$ \quad
+			Normalna: $y = x + 3$}
+
+		\item Zbadać monotoniczność i ekstrema funkcji
+			\[
+				f(x)=\frac{3 x^{3}}{2 x - 2} 
+			\]
+
+			\zOdpowiedziami{\kolorodpowiedzi}{ocg49}
+				{$D_f\colon \mathbb{R}\setminus \left\{1\right\}$\newline
+			$f'(x)=\frac{3 x^{2} \left(2 x - 3\right)}{2 \left(x - 1\right)^{2}}$\newline
+			$f'(x) > 0 \textnormal{ dla: }\frac{3}{2} < x \implies f(x) \textnormal{ jest rosnąca dla } x \in \left(\frac{3}{2},\infty\right) $\newline
+			$f'(x) < 0 \textnormal{ dla: }\left(0 < x \wedge x < 1\right) \vee \left(1 < x \wedge x < \frac{3}{2}\right) \vee x < 0 \implies f(x) \textnormal{ jest malejąca dla } x \in \left(-\infty,1\right) \textnormal{ oraz } x \in  \left(1,\frac{3}{2}\right) $\newline
+			$f'(x) = 0 \textnormal{ dla } x \in \left\{ 0, \  \frac{3}{2}\right\} \implies f_{\min}\left(\frac{3}{2}\right) = \frac{81}{8}$}
+
+    \end{enumerate}
+\end{document}
