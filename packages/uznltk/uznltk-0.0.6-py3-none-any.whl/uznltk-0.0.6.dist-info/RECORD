@@ -1,0 +1,14 @@
+uznltk/__init__.py,sha256=IIL47yoJbbv83guSIhkxCliUZ6lmL0UFGdpO3YI_C2g,298
+uznltk/clean.py,sha256=ZonAPC7VeTZ_4xZpVie42GxB0EiS3YkXFncBxTcbp_k,390
+uznltk/download.py,sha256=rux7OoySikkcVOJlkdylx150I-IXxsN6Go0M0NkBbhU,2056
+uznltk/lemmatizer.py,sha256=KzJW3CxBTyq8-blBwIVlbho-w9TXeG42g2AVLY9h-Qw,216
+uznltk/ssign.py,sha256=Z3OJSmNPHF7Q2ZLPAS8u6QSTtdbabd3_O3JaI4ztR4U,367
+uznltk/stem.py,sha256=XUUoY1lHR7ha5q4wAnxKbXtCzOqM9TI9O6cPwJ5SIu8,211
+uznltk/stop_words.py,sha256=kmNvDqJaw9CgrHU8iFReNxxewbQNxZ9nIeFD7340eKQ,417
+uznltk/syllable.py,sha256=AICz4MJlnx-vmBZoDqs42QVLMdi1twtELyVOZSIHFpU,4951
+uznltk/tokenizer.py,sha256=jdUzCRQj_HmI43G5XeDrMPbGZ3I4x69niIwEHzzqUVc,1693
+uznltk-0.0.6.dist-info/licenses/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+uznltk-0.0.6.dist-info/METADATA,sha256=uY8MkScC04XSHCmECWVMbAcNTXnDpK_-GFrRWTPXfuw,6308
+uznltk-0.0.6.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+uznltk-0.0.6.dist-info/top_level.txt,sha256=7MPJ8EuYOv8uFo_cgHfiSSeHCBKe5lywceSKglUoLxI,7
+uznltk-0.0.6.dist-info/RECORD,,
