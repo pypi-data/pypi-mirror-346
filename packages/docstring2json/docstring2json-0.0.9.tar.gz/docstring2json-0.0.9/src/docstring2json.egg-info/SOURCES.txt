@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/docstring2json/__init__.py
+src/docstring2json/__main__.py
+src/docstring2json/converter.py
+src/docstring2json.egg-info/PKG-INFO
+src/docstring2json.egg-info/SOURCES.txt
+src/docstring2json.egg-info/dependency_links.txt
+src/docstring2json.egg-info/entry_points.txt
+src/docstring2json.egg-info/requires.txt
+src/docstring2json.egg-info/top_level.txt
+src/docstring2json/utils/__init__.py
+src/docstring2json/utils/shared.py
+src/docstring2json/utils/signature_formatter.py
