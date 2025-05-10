@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: ellc
+Version: 1.8.11
+Summary: Light curve model for eclipsing binary stars and transiting exoplanets
+Home-page: https://github.com/pmaxted/ellc
+Author: Pierre Maxted
+Author-email: p.maxted@keele.ac.uk
+License: GNU GPLv3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Fortran
+License-File: LICENSE.txt
+Requires-Dist: numpy>=1.10.0
+Requires-Dist: astropy>=1.1.1
+Requires-Dist: scipy
+Requires-Dist: emcee
+Requires-Dist: corner
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
