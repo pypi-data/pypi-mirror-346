@@ -1,0 +1,15 @@
+del_msh-0.1.39.dist-info/METADATA,sha256=JEB-09DoylphJ7rZn7Hq38yA-WJ3Sk2e9v268HLIt8g,817
+del_msh-0.1.39.dist-info/WHEEL,sha256=_nhCQgvmUgJYZvZj7ltzSOcxMtGazmYKmlyI9SHSMcI,127
+del_msh/BVH.py,sha256=QcJlyvAw-w0t2sjF2uHceDG_CTJfBzqrm3Xx3384EyI,2766
+del_msh/BlendShape.py,sha256=M2OCvOR6COewRu9Ot3LRRavI7li-NiXfI-hxDE5yPY4,3357
+del_msh/DeformMLS.py,sha256=dMmvm300aIziiQObi4V7p0Zmw0pOR_xeyI3dAm1dB6g,1780
+del_msh/KdTree.py,sha256=PIwhh441y16IBNiEsi1jqDtJhVytRWM3sxWZ43wU_PQ,564
+del_msh/PolyLoop.py,sha256=LHWZ-ogzZ8O1IU6ZBVxyDRVtRvBNb5xaoq-H-tDieuY,535
+del_msh/PolygonMesh.py,sha256=TtGOVHnYmwvylTsq30daNMvyNGrIiKpudbacHf68RKo,875
+del_msh/Tet.py,sha256=cjo3MbSB0pfZLyrYtXx6hTB3apdBWYSkbD4aillI5no,295
+del_msh/Tri.py,sha256=XBm54Xn_YAfuAo2zbeaif2MPfxvZo4w3EHqzcALZfns,620
+del_msh/TriMesh.py,sha256=ynWu_7wkt0AWbxuh7kNpJqm_oxBw1iuDcAoHg_qM0H0,14158
+del_msh/WavefrontObj.py,sha256=_F0StU6w2h4OBJaZJ6jS6WTxIhJRfunvSPpZBSKqKHQ,3998
+del_msh/__init__.py,sha256=WzesKFeSBbvKrXHM98hCgB2yJOZNcIzHKXxFDeS2GLo,1527
+del_msh/del_msh.cpython-38-x86_64-linux-gnu.so,sha256=jqx24gOtEodJEnHtiaMXVrzNs4hs5DkYGdiwnTV7C6A,1381696
+del_msh-0.1.39.dist-info/RECORD,,
