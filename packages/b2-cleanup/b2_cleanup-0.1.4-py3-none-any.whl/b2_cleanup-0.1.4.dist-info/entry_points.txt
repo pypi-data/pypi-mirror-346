@@ -1,0 +1,2 @@
+[console_scripts]
+b2-cleanup = b2_cleanup.cli:cli
