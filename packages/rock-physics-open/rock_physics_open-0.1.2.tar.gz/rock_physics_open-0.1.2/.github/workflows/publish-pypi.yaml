@@ -1,0 +1,49 @@
+name: Publish to PyPI
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build wheels
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Build wheels
+        run: |
+          pip install build
+          python -m build
+
+      - name: Upload wheels to workflow assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: distribution
+          path: dist/
+
+  publish:
+    name: Publish release to PyPI
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/rock-physics-open
+    permissions:
+      id-token: write  # required for Trusted Publishing to PyPI
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: distribution
+          path: dist/
+          merge-multiple: true
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1

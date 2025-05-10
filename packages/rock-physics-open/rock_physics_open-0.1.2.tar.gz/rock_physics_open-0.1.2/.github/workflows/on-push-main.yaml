@@ -1,0 +1,22 @@
+name: push to main branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint-and-format:
+    uses: ./.github/workflows/lint-and-format.yaml
+
+  test:
+    uses: ./.github/workflows/test.yaml
+
+  release-please:
+    needs: test
+    uses: ./.github/workflows/release-please.yaml
+
+  publish-latest:
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release_created }}
+    uses: ./.github/workflows/publish-pypi.yaml
