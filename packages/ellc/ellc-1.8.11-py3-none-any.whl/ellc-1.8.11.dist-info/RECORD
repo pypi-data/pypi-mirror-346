@@ -1,0 +1,13 @@
+ellc/__init__.py,sha256=YD28Jg3i8Tz4wAquK9Ki_ZhuxUR3inBckHOq4TsRRto,917
+ellc/fluxes.py,sha256=DTMbE91M1GFYJj7s1aSIQBbUmJK2lhcwe6Lbts3bx3E,22643
+ellc/lc.py,sha256=VjQOILeEMKRqn3BihjBYgcQfETrYhCLRxMmASEn1LL8,23218
+ellc/ldy.py,sha256=hw75XDTvdZmhRd_EaJqaVfpRaMpGUASrTZsPivw1HyU,4726
+ellc/libellc.so,sha256=YquwfyDB1DN2P7C-nxJNOqAqzVPtQ0eWGk2KDai9lcw,434464
+ellc/rv.py,sha256=S5xAccuv-HLHnpAhXpzRaCdkIVxLFV4zafDHH1r3Eys,25331
+ellc/version.py,sha256=t5Pqz6gSamH_qj-MTDPAr-hvt46P1HB2Bd7y3LrWHoA,50
+ellc-1.8.11.data/scripts/ellc_emcee,sha256=pKOcOUArlDTQpUBi5RskbgjUeVPPHMDQ2PVwfhgk5Ks,40911
+ellc-1.8.11.dist-info/licenses/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+ellc-1.8.11.dist-info/METADATA,sha256=nzeudWiirUmAShfoyE7pCoXlD3IqycqL1RFXJewVV6U,803
+ellc-1.8.11.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+ellc-1.8.11.dist-info/top_level.txt,sha256=oifp842Ll9s-HhgaPfJzIULnpVept6agMNjLKvH-Hig,5
+ellc-1.8.11.dist-info/RECORD,,
