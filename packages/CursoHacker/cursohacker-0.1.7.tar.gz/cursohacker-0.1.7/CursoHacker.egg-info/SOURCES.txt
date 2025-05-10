@@ -1,0 +1,9 @@
+README.md
+setup.py
+CursoHacker.egg-info/PKG-INFO
+CursoHacker.egg-info/SOURCES.txt
+CursoHacker.egg-info/dependency_links.txt
+CursoHacker.egg-info/top_level.txt
+cursoHack/__init__.py
+cursoHack/courses.py
+cursoHack/utils.py
