@@ -1,0 +1,7 @@
+boto3_pydantic_ecr_public/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_ecr_public/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_ecr_public/ecr_public_classes.py,sha256=aWHiJnc4fxyY6KbZkMEgOvR_f7zE0sKeY61fN9xD7ZQ,11061
+boto3_pydantic_ecr_public/ecr_public_constants.py,sha256=-v3_-OOM90RsmVxscI3-ezU7stV5qy_YzVbvxPjFC_w,7382
+boto3_pydantic_ecr_public-1.0.1.dist-info/METADATA,sha256=DWwmTc9I3WLt4m-WdGtQ-ZDPYYhRqHr_Mp-uxW_q7nM,1417
+boto3_pydantic_ecr_public-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_ecr_public-1.0.1.dist-info/RECORD,,
