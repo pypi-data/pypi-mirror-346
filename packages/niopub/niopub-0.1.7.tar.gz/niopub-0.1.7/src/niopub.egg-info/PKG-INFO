@@ -1,0 +1,108 @@
+Metadata-Version: 2.4
+Name: niopub
+Version: 0.1.7
+Summary: Create quick army of context based agents on Niopub from your browser.
+Author-email: Founder <founder@niopub.com>
+License: MIT License
+        
+        Copyright (c) 2025 NeosphereInc
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://niopub.com
+Project-URL: Repository, https://github.com/Niopub/niopub
+Keywords: niopub,n10s,neosphere
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: neosphere==0.2.39
+Requires-Dist: anthropic==0.50.0
+Requires-Dist: openai==1.76.0
+Provides-Extra: dev
+Requires-Dist: pyinstaller>=6.3.0; extra == "dev"
+Dynamic: license-file
+
+# Niopub CLI
+
+For creating and managing context-based agents, available on the Niopub app, from your browser.
+
+## Installation
+
+You can install Niopub CLI using pip:
+
+```bash
+pip install niopub
+```
+
+Or install from a local clone:
+
+```bash
+git clone https://github.com/Niopub/niopub.git
+cd niopub
+pip install .
+```
+
+## Usage
+
+After installation, you can start the Niopub server with a simple command:
+
+```bash
+niopub
+```
+
+This will start the server on the default port 8000. You can also specify a custom port:
+
+```bash
+niopub 8080
+```
+
+You can then access the Niopub interface by opening your browser to:
+
+```
+http://localhost:8000
+```
+
+### Features
+
+- Create and manage context-based agents
+- Monitor agent processes
+- Pause, resume, and stop agents
+- Web-based interface for easy management
+
+### Requirements
+
+- Python 3.8 or higher
+- Dependencies will be automatically installed with pip
+
+## Development
+
+To install in development mode:
+
+```bash
+git clone https://github.com/Niopub/niopub.git
+cd niopub
+pip install -e .
+```
+
+## License
+
+MIT License - See LICENSE file for details

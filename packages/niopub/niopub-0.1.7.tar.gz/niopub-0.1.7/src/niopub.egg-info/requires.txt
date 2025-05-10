@@ -1,0 +1,6 @@
+neosphere==0.2.39
+anthropic==0.50.0
+openai==1.76.0
+
+[dev]
+pyinstaller>=6.3.0
