@@ -1,0 +1,154 @@
+Metadata-Version: 2.4
+Name: cube-solver
+Version: 1.0.1
+Summary: Rubik's Cube Solver
+Author-email: Dave Barragan <itsdaveba@gmail.com>
+Maintainer-email: Dave Barragan <itsdaveba@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025, Dave Barragan
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+        
+Project-URL: changelog, https://github.com/itsdaveba/cube-solver/blob/main/HISTORY.rst
+Project-URL: documentation, https://cube-solver.readthedocs.io
+Project-URL: issues, https://github.com/itsdaveba/cube-solver/issues
+Project-URL: source, https://github.com/itsdaveba/cube-solver
+Keywords: rubik,cube,solver
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Games/Entertainment :: Puzzle Games
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: typer
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: Sphinx; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: watchdog; extra == "docs"
+Provides-Extra: build
+Requires-Dist: bump2version; extra == "build"
+Requires-Dist: build; extra == "build"
+Requires-Dist: twine; extra == "build"
+Dynamic: license-file
+
+===========
+Cube Solver
+===========
+
+.. image:: https://img.shields.io/pypi/v/cube-solver.svg
+        :target: https://pypi.python.org/pypi/cube-solver
+
+.. image:: https://readthedocs.org/projects/cube-solver/badge/?version=latest
+        :target: https://cube-solver.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+Rubik's Cube Solver
+
+* Free software: MIT License
+* Documentation: https://cube-solver.readthedocs.io.
+
+
+Features
+--------
+
+* Command-line interface
+* Transition and pruning tables
+* Thistlethwaite solver algorithm
+
+
+============
+Installation
+============
+
+Stable release
+--------------
+
+To install **Cube Solver**, run the following command in your terminal:
+
+.. code-block:: console
+
+    pip install cube-solver
+
+This is the preferred method to install **Cube Solver**, as it will always install the most recent stable release.
+
+
+=====
+Usage
+=====
+
+After installation, you can use the ``cube`` command straight away:
+
+.. code-block:: console
+
+    cube --help
+
+To generate a scramble, use the ``scramble`` subcommand:
+
+.. code-block:: console
+
+    cube scramble --help
+    cube scramble              # random scramble of length 25
+    cube scramble --length 30  # random scramble of specific length
+
+To solve a cube using the **Thistlethwaite** algorithm, use the ``solve`` subcommand.
+The first time you solve a cube, it will generate the required tables, which takes around 5 minutes:
+
+.. code-block:: console
+
+    cube solve --help
+    cube solve "U F R"      # solve specific scramble
+    cube solve --random     # solve random scramble of length 25
+    cube solve --random 30  # solve random scramble of specific length
+
+To use **Cube Solver** in a Python project:
+
+.. code-block:: python
+
+    from cube_solver import Cube, Solver
+
+    scramble = Cube.generate_scramble()
+    print("Scramble:", scramble)
+
+    cube = Cube(scramble)
+    print(cube)
+
+    solver = Solver(transition_tables=True, pruning_tables=True)
+    solution = solver.thistlethwaite(cube)
+    print("Solution:", solution)
+
+
+=======
+Credits
+=======
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
