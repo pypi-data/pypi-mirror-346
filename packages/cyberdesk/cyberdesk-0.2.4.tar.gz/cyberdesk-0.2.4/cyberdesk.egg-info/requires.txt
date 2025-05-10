@@ -1,0 +1,6 @@
+httpx
+
+[dev]
+openapi-python-client
+build
+twine
