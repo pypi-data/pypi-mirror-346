@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+prism_logger/__init__.py
+prism_logger/logger.py
+prism_logger.egg-info/PKG-INFO
+prism_logger.egg-info/SOURCES.txt
+prism_logger.egg-info/dependency_links.txt
+prism_logger.egg-info/requires.txt
+prism_logger.egg-info/top_level.txt
