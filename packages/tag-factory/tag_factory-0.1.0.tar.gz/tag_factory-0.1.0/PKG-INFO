@@ -1,0 +1,126 @@
+Metadata-Version: 2.4
+Name: tag-factory
+Version: 0.1.0
+Summary: CLI tool for Tag Factory
+Author: Tag Factory Team
+License: MIT
+Project-URL: Homepage, https://github.com/tag-factory/tag-factory
+Project-URL: Bug Tracker, https://github.com/tag-factory/tag-factory/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: pydantic
+
+# Tag Factory CLI
+
+Tag Factoryのコマンドラインインターフェースツール
+
+## インストール
+
+開発モードでインストール：
+
+```bash
+# プロジェクトディレクトリ内で
+pip install -e cli/
+```
+
+## 使い方
+
+### 基本的なコマンド
+
+バージョン確認：
+
+```bash
+tag-factory --version
+```
+
+ヘルプの表示：
+
+```bash
+tag-factory --help
+```
+
+### タグ関連コマンド
+
+ワークスペース内のタグ一覧表示：
+
+```bash
+tag-factory tags list --workspace WORKSPACE_ID
+```
+
+## 設定
+
+環境変数を使用して設定します：
+
+- `TAG_FACTORY_API_KEY`: API認証キー（必須）
+- `TAG_FACTORY_API_URL`: API URL（オプション、デフォルトは `http://localhost:3000/api`）
+
+例：
+
+```bash
+# APIキーの設定
+export TAG_FACTORY_API_KEY="your-api-key"
+
+# カスタムAPIエンドポイントの設定（オプション）
+export TAG_FACTORY_API_URL="https://your-api-url.com/api"
+```
+
+## 開発
+
+開発環境のセットアップ：
+
+```bash
+# 依存関係のインストール
+pip install -e cli/
+```
+
+## PyPIへのパブリッシュ
+
+このCLIツールは、「tag-factory」という名前でPyPIに公開することができます。
+パブリッシュするには、同梱の `publish.sh` スクリプトを使用してください：
+
+```bash
+cd cli
+./publish.sh
+```
+
+このスクリプトは以下の処理を行います：
+1. パッケージをビルド
+2. オプションでTest PyPIにアップロード（テスト用）
+3. 本番PyPIにアップロード
+
+PyPIにパブリッシュするには、以下のいずれかの方法で認証情報を提供する必要があります：
+- 環境変数 `PYPI_API_TOKEN` の設定（推奨）
+- パブリッシュ時に対話的にAPIトークンを入力
+- `~/.pypirc` ファイルの設定（APIトークンを使用）
+
+### PyPI APIトークンの取得方法
+
+PyPIは現在ユーザー名/パスワード認証をサポートしていないため、APIトークンが必要です：
+
+1. [PyPI](https://pypi.org/) にログイン
+2. アカウントメニュー -> アカウント設定 -> APIトークン
+3. 「APIトークンを追加」をクリック
+4. スコープを「プロジェクト: tag-factory」に設定し、トークンを作成
+5. 生成されたトークンを安全に保存（表示は1回のみ）
+
+APIトークンを環境変数として設定：
+
+```bash
+export PYPI_API_TOKEN="pypi-AgEI..."
+```
+
+### インストール
+
+パブリッシュ後は、以下のコマンドでインストールできます：
+
+```bash
+pip install tag-factory
+```
