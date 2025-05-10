@@ -1,0 +1,6 @@
+[console_scripts]
+CONTEXT = ContExt:Main
+ContExt = ContExt:Main
+Context = ContExt:Main
+contExt = ContExt:Main
+context = ContExt:Main

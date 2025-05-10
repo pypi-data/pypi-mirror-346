@@ -1,0 +1,12 @@
+ContactExtractor/ContExt.py,sha256=4cznqz3Z7UBJ3cxr3NZOLshSf2-ZgZEsjC7wSqdU2x4,11324
+ContactExtractor/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ContactExtractor/README.md,sha256=-OgkMDw1t-n76mCsT5CrmHum-dOAOCf3NrHwCVRvT8U,3662
+ContactExtractor/__init__.py,sha256=oTkyseIqYETht96EKXXv9WKFMTtJPcsn_45Ex2CXTSI,44
+ContactExtractor/examples/1ffk_0_kt7.cif,sha256=CdFVTa95yESIB6XKaq9s8VM_lAW96CxCGDW4VJCMPhg,23950
+ContactExtractor/examples/2fmt.pdb,sha256=uNeBRnJFypS-tZj5MSGEuwyBYSLM9PNRZKfGXB050Gg,733536
+ContactExtractor/examples/3d2g_A_kj.cif,sha256=Tpjd4WYwwUlbznWTaUwIvO8IHacX3a78qENOkE3Xh8Y,46287
+contactextractor-0.9.9.dist-info/METADATA,sha256=JLVNIwg_Ktarn58e_uq3Wzj5dHPPWZfJAaY5RA8L1ns,4275
+contactextractor-0.9.9.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+contactextractor-0.9.9.dist-info/entry_points.txt,sha256=-BzOU95lHoiqXEWgYKQhWrRe896pAAAkSkMDKnwhvzQ,133
+contactextractor-0.9.9.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+contactextractor-0.9.9.dist-info/RECORD,,
