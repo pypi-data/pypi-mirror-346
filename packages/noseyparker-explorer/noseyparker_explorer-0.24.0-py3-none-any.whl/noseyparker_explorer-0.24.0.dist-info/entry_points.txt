@@ -1,0 +1,2 @@
+[console_scripts]
+noseyparker-explorer = noseyparker_explorer.main:main
