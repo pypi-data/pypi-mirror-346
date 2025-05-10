@@ -1,0 +1,2 @@
+[console_scripts]
+sbcli-fix-logger = simplyblock_cli.cli:main
