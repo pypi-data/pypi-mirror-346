@@ -1,0 +1,12 @@
+claudette/__init__.py,sha256=W24dt9y_00Quo9EUc6DfCPkqroxW8SQ46nvP-gD07_U,88
+claudette/_modidx.py,sha256=A-OyweW3F5KJc_EMoFALREL71dWeZxs7c8H5E8MYWMM,7543
+claudette/asink.py,sha256=tkbIC0FnDiBwdnHCA2HQ2IaGl9BWfje-itcpIH3KoWs,6298
+claudette/core.py,sha256=9Zl_9wzWs9UzrNEc0NMn4FkJjucaGc_YHoo-HnyC4fs,17692
+claudette/text_editor.py,sha256=WvOUVV-Vyb5J1qc3kb2AUBEJ41kUh1OfuFNJ55r_yjs,4033
+claudette/toolloop.py,sha256=XCBYqt2JkUc7hPtf9QeIxu0jXn1Rs_uDEV4b5FEaook,2851
+claudette-0.1.8.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+claudette-0.1.8.dist-info/METADATA,sha256=igiSpmUZc3VEG5AO0_FqJDGaTgsJL7GCVrEcJBVfDqk,31916
+claudette-0.1.8.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+claudette-0.1.8.dist-info/entry_points.txt,sha256=tsYTZ782ou-FtoJcOGPxumxDfw8eqkjgdmhtRFInK18,40
+claudette-0.1.8.dist-info/top_level.txt,sha256=Bj3Tw2eQc0MY38cGf3ulQo3WWJU2TkhbhWfjfZRL0-Y,10
+claudette-0.1.8.dist-info/RECORD,,
