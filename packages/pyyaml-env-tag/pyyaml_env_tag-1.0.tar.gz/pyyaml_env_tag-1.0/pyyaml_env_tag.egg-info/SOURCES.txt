@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+yaml_env_tag.py
+pyyaml_env_tag.egg-info/PKG-INFO
+pyyaml_env_tag.egg-info/SOURCES.txt
+pyyaml_env_tag.egg-info/dependency_links.txt
+pyyaml_env_tag.egg-info/requires.txt
+pyyaml_env_tag.egg-info/top_level.txt
