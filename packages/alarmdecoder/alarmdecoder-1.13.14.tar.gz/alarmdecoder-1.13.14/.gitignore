@@ -1,0 +1,13 @@
+alarmdecoder.sublime-project
+alarmdecoder.sublime-workspace
+build/
+dist
+tmp
+*.pyc
+*.pyo
+*.egg-info
+bin/ad2-test
+*~
+.vscode
+venv
+.venv
