@@ -1,0 +1,11 @@
+linkup/__init__.py,sha256=PzuyvmuxEj0VgAMqw7Yg-A1G8TM4vUYjk9pKZm5cz_g,739
+linkup/_version.py,sha256=Xsa3ayOMVkhUWm4t06YeyHE0apjpZefxLH4ylp0CDtU,22
+linkup/client.py,sha256=y4jZ0iliIb1sS-OHi22-ymM2WDOVgJQG-vk1ZuFfsw8,14466
+linkup/errors.py,sha256=YbLyH1DBflZu5P8iEf9oWB1SW2I5yqUO3Bm69hUCRbA,1118
+linkup/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+linkup/types.py,sha256=QxZcQv94gXFuTIOdql3xPGth366eGE7oKvRlgaQZuS0,1595
+linkup_sdk-0.2.5.dist-info/licenses/LICENSE,sha256=zZj9oWsPnYXfbvEE8ybLzGhT9EBDTjKO-h362FojBCk,1076
+linkup_sdk-0.2.5.dist-info/METADATA,sha256=wBPsXo2THqMXH6abXlLEuodNEESFt5fJqkzLwswdvsU,4195
+linkup_sdk-0.2.5.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+linkup_sdk-0.2.5.dist-info/top_level.txt,sha256=R0wryvjX-HLPpIno1b_trT3_GjGk75QVyDK3m3sN4Ak,7
+linkup_sdk-0.2.5.dist-info/RECORD,,
