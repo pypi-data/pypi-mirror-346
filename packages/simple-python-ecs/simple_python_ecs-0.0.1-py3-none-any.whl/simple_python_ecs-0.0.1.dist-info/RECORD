@@ -1,0 +1,12 @@
+specs/Component.py,sha256=6QeHqL66R_sFzN63wpYkolslekAyrrtYkEHv8ySLq3c,994
+specs/ComponentManager.py,sha256=QhLfi2TV-LYitvp0Bze7LitkSZny--ZT5G2OWm4ZGqo,7375
+specs/Entity.py,sha256=VMaLgVOGgMrmpAjrqzfMtjCo-USP7BZMOLRVvBS8NBw,5355
+specs/EntityManager.py,sha256=rXV-X6nTU_k3hmPIKJqVSLPNXHb8F2BDC5eREXrGHQo,1484
+specs/Globals.py,sha256=Ol5lL5iGAz8grtY4WAq95xo36I2kGYTiV4QEUR1ZABA,328
+specs/Scene.py,sha256=5kQ4ZMIPT7a1AZflFtW04ncs2fjN3zmuG3BcogwvBEA,6485
+specs/System.py,sha256=_ho-Kadwn2PrSedajO-CKTli1RMPImn0awlEaNh9DZg,4039
+specs/__init__.py,sha256=gAmA7oqXmWwvkgsx3Ybl0NhPjtzPY07zpVxfweQMWho,389
+simple_python_ecs-0.0.1.dist-info/METADATA,sha256=WIICC9HYi9E9LqUueMI6G4w-BYk2FDz3PBOv-RHzdRI,345
+simple_python_ecs-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+simple_python_ecs-0.0.1.dist-info/licenses/LICENSE,sha256=054Ldk2-ToFapmLSHUIMzVun8YDZhzfBuiD9zLxoBDg,1066
+simple_python_ecs-0.0.1.dist-info/RECORD,,
