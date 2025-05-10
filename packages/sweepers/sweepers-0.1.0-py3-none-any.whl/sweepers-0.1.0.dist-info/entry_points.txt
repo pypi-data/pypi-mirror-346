@@ -1,0 +1,2 @@
+[console_scripts]
+sweepers = sweepers.cli:entrypoint
