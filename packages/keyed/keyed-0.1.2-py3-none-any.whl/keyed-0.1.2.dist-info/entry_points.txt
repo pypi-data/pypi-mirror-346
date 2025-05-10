@@ -1,0 +1,2 @@
+[console_scripts]
+keyed = keyed.cli:main
