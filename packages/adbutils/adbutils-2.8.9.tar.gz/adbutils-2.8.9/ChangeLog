@@ -1,0 +1,11 @@
+CHANGES
+=======
+
+2.8.9
+-----
+
+* use retry2 instead of retry
+* fix bug, close #165
+* make apkutils optional
+* add apkutils to parse APK, make it simple to install
+* make apkutils2 as optional
