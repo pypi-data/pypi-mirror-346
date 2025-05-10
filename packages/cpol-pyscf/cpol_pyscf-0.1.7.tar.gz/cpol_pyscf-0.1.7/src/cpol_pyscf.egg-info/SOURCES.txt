@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+src/cpol_pyscf.egg-info/PKG-INFO
+src/cpol_pyscf.egg-info/SOURCES.txt
+src/cpol_pyscf.egg-info/dependency_links.txt
+src/cpol_pyscf.egg-info/top_level.txt
