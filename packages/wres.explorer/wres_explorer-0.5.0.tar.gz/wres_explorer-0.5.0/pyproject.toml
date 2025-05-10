@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=77.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wres.explorer"
+authors = [
+    {name = "Jason A. Regina", email = "jason.regina@noaa.gov"},
+]
+description = "Utilities to visualize and explore output from the NOAA Office of Water Prediction's (OWP) Water Resources Evaluation Service (WRES)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Hydrology",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "pandas",
+    "click",
+    "panel",
+    "plotly",
+    "geopandas",
+    "colorcet"
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "wres.explorer._version.__version__"}
+
+[project.optional-dependencies]
+develop = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/jarq6c/wres-explorer"
+Documentation = "https://github.com/jarq6c/wres-explorer"
+Repository = "https://github.com/jarq6c/wres-explorer"
+"Bug Tracker" = "https://github.com/jarq6c/wres-explorer/issues"
+
+[project.scripts]
+wres-explorer = "wres.explorer.cli:run"

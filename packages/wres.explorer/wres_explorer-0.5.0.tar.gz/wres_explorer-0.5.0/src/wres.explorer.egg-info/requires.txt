@@ -1,0 +1,9 @@
+pandas
+click
+panel
+plotly
+geopandas
+colorcet
+
+[develop]
+pytest

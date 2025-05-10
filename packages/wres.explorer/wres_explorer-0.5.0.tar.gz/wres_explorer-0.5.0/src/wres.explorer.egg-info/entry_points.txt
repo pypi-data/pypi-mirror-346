@@ -1,0 +1,2 @@
+[console_scripts]
+wres-explorer = wres.explorer.cli:run
