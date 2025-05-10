@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-ssh-exec = mcp_server_ssh_exec:main
