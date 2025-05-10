@@ -1,0 +1,13 @@
+m4p/__init__.py,sha256=0HbBqT5pox1ySr9sVhRRBa-4qtzswk038USqK9tH7qM,732
+m4p/m4_eval.py,sha256=51IMAEoG_ZHONYabNDKaB83Ro0ysKntm7gQIvp-K0Rg,10262
+m4p/m4_translit.py,sha256=IY480KsYnLYRRs1bbKJ6Uw-Quh40HNNiHPXR2-wVxPk,3828
+m4p/main.py,sha256=XCc-ca58oLfqfyHcP4RN8Jl4_7uAg2lxoug4-Itca5E,3262
+m4p/parser.py,sha256=kKHFsxGAn0IefZvpStYFKBnPdHB9nQN97kXSU-XFkqM,51258
+m4p/regionbuffer.py,sha256=aq1RCHXB8-FO0OwQ4ZTxDUb96uq4yyTkbc7D70esKEk,4971
+m4p/stream.py,sha256=qhBhaIZF-7PYFXdAOxX7pVAYz71RrxXKvG3p1w7OBAs,8050
+m4p-0.1.0.dist-info/licenses/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+m4p-0.1.0.dist-info/METADATA,sha256=Yo5hd-fpoC3c2jHRJKod1HgnpydYzAbCkmAnGOWNUH8,738
+m4p-0.1.0.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+m4p-0.1.0.dist-info/entry_points.txt,sha256=7dXBfCES5OPNV0hGtl2KDml_zQNWUMNIGWxVEiuQGSw,38
+m4p-0.1.0.dist-info/top_level.txt,sha256=ihwf7zYFV-Mo9FsaxnfnK62ZxVnD1TUOW5L6P4Ftfw0,4
+m4p-0.1.0.dist-info/RECORD,,
