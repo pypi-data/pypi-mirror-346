@@ -1,0 +1,12 @@
+spiel_des_jahres/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spiel_des_jahres/data.py,sha256=8-kSwQf2eMu4bPPmbn8BWjTj3tWShGQLhxs3DHCB8so,645
+spiel_des_jahres/kennerspiel.py,sha256=03wsrMb_szQ--KIIgnVg-JIq7MgJDGUimcRN8i55m1g,6773
+spiel_des_jahres/llm_pipeline.py,sha256=oD3-_0Sqz3AAiqvvUwZxn6YOhcTgwr5leW5c0bEyPkQ,2892
+spiel_des_jahres/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spiel_des_jahres/ratings.py,sha256=NaS6WjefFbu7beDQYEF2dg7GE_RupES69AQkQbB59yc,8186
+spiel_des_jahres/review_spider.py,sha256=REu-B-xYEsL0E4coT3yUg-feN_COksokUsFz1D4eTy4,4022
+spiel_des_jahres/utils.py,sha256=eWWh3dVr7kWRwyKZtK86b8Tq76fYjC5cEqQpWW37m50,211
+spiel_des_jahres-0.1.0.dist-info/LICENSE,sha256=nwkCAefOs58iZvA2YdFmLIT0yJVPeO8qdLkwvRCee5M,1107
+spiel_des_jahres-0.1.0.dist-info/METADATA,sha256=IKfbAByou3mMTu-IhliqZqgkvp_nqL3ajfllV6KXark,4806
+spiel_des_jahres-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+spiel_des_jahres-0.1.0.dist-info/RECORD,,
