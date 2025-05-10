@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: ultrasound_processing_package_minimal
+Version: 0.1.0
+Summary: Ultrahangos képfeldolgozó Python csomag (minimal változat)
+Author-email: Mart <mart@example.com>
+Project-URL: Homepage, https://github.com/Mart-SciecPyt/ultrasound-processing-minimal
+Project-URL: Documentation, https://ultrasound-processing-minimal.readthedocs.io
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python
+Requires-Dist: Pillow
+Requires-Dist: scipy
+
+# ScPytone_ultrasound_processing
+Ultrasound image transformation and noise removal package
