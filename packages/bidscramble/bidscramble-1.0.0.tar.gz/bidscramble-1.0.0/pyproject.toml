@@ -1,0 +1,68 @@
+[build-system]
+requires        = ['setuptools >= 62.2.0', 'wheel']
+build-backend   = 'setuptools.build_meta'
+
+[project]
+name            = 'bidscramble'
+description     = 'Generates scrambled datasets that are organized according to the Brain Imaging Data Structure (BIDS)'
+version         = '1.0.0'
+readme          = 'README.rst'
+requires-python = '>= 3.10'
+authors         = [{email = 'm.zwiers@donders.ru.nl'}, {name = 'Marcel Zwiers'}]
+classifiers     = ['Programming Language :: Python :: 3.10',
+                   'Operating System :: OS Independent',
+                   'Intended Audience :: Science/Research']
+dependencies    = ['pandas',
+                   'numpy',
+                   'scipy',
+                   'nibabel',
+                   'pybids',
+                   'bids-validator',
+                   'tqdm',
+                   'drmaa',
+                   'brainvision']
+
+[project.optional-dependencies]
+fif             = ['mne']
+dev             = ['bidscramble[fif]', 'tox', 'pytest', 'sphinx-rtd-theme', 'myst-parser', 'sphinx_design']
+
+[project.urls]
+homepage        = 'https://github.com/Donders-Institute/bidscramble'
+repository      = 'https://github.com/Donders-Institute/bidscramble'
+
+[project.scripts]
+scramble        = 'bidscramble.scramble:main'
+merge           = 'bidscramble.merge:main'
+
+[tool.pytest.ini_options]
+testpaths       = ['tests']
+
+[tool.tox]
+legacy_tox_ini  = """
+[tox]
+min_version     = 4.0
+envlist         = py310, py311, py312, py313, docs
+
+[testenv]
+extras          = fif
+deps            = pytest
+commands        = pytest
+
+[testenv:docs]
+deps            = sphinx-rtd-theme
+                  myst-parser
+                  sphinx_design
+                  linkchecker
+                  tomli >= 1.1.0 ; python_version < "3.11"
+                  pyspelling
+allowlist_externals = make
+commands        = make -C docs html
+                  linkchecker docs/_build/html/index.html
+                  pyspelling -c docs/.pyspelling.yml
+"""
+
+# Ref: https://github.com/codespell-project/codespell#using-a-config-file
+[tool.codespell]
+skip              = '.git,*.pdf,*.svg,go.sum'
+check-hidden      = true
+ignore-words-list = 'uptodate,mis'

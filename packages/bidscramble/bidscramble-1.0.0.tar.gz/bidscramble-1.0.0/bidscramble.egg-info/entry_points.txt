@@ -1,0 +1,3 @@
+[console_scripts]
+merge = bidscramble.merge:main
+scramble = bidscramble.scramble:main

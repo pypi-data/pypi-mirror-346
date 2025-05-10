@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: bidscramble
+Version: 1.0.0
+Summary: Generates scrambled datasets that are organized according to the Brain Imaging Data Structure (BIDS)
+Author: Marcel Zwiers
+Author-email: m.zwiers@donders.ru.nl
+Project-URL: homepage, https://github.com/Donders-Institute/bidscramble
+Project-URL: repository, https://github.com/Donders-Institute/bidscramble
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: COPYING
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: nibabel
+Requires-Dist: pybids
+Requires-Dist: bids-validator
+Requires-Dist: tqdm
+Requires-Dist: drmaa
+Requires-Dist: brainvision
+Provides-Extra: fif
+Requires-Dist: mne; extra == "fif"
+Provides-Extra: dev
+Requires-Dist: bidscramble[fif]; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: sphinx-rtd-theme; extra == "dev"
+Requires-Dist: myst-parser; extra == "dev"
+Requires-Dist: sphinx_design; extra == "dev"
+Dynamic: license-file
+
+BIDScramble
+===========
+
+|BIDS| |GPLv3| |RTD| |Tests|
+
+The BIDScramble tool generates scrambled or pseudo-random BIDS datasets from existing BIDS datasets, while preserving statistical distributions of user-specified variables and preserving user-specified effects of interest. The output data of this tool is not (or at least minimally) traceable and does not contain personal data.
+
+Having access to pseudo-random datasets allows researchers to interact with the data in detail and develop code to implement and test their pipelines. The pipelines should run on the scrambled data just as it runs on the real input data.
+
+Related tools
+-------------
+
+-  https://github.com/PennLINC/CuBIDS
+-  https://peerherholz.github.io/BIDSonym
+-  https://arx.deidentifier.org
+
+
+.. |PyPI version| image:: https://img.shields.io/pypi/v/bidscramble?color=success
+   :target: https://pypi.org/project/bidscramble
+   :alt: BIDScramble
+.. |Python Version| image:: https://img.shields.io/pypi/pyversions/bidscramble.svg
+   :alt: Python 3
+.. |GPLv3| image:: https://img.shields.io/badge/License-GPLv3+-blue.svg
+   :target: https://www.gnu.org/licenses/gpl-3.0
+   :alt: GPL-v3.0 license
+.. |RTD| image:: https://readthedocs.org/projects/bidscramble/badge/?version=latest
+   :target: https://bidscramble.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation status
+.. |BIDS| image:: https://img.shields.io/badge/BIDS-v1.10.0-blue
+   :target: https://bids-specification.readthedocs.io/en/v1.10.0/
+   :alt: Brain Imaging Data Structure (BIDS)
+.. |Tests| image:: https://github.com/Donders-Institute/bidscramble/actions/workflows/tests.yml/badge.svg
+   :target: https://github.com/Donders-Institute/bidscramble/actions
+   :alt: Pytest results
