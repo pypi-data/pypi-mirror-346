@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/niopub/__init__.py
+src/niopub/__main__.py
+src/niopub/index.html
+src/niopub/server.py
+src/niopub.egg-info/PKG-INFO
+src/niopub.egg-info/SOURCES.txt
+src/niopub.egg-info/dependency_links.txt
+src/niopub.egg-info/entry_points.txt
+src/niopub.egg-info/requires.txt
+src/niopub.egg-info/top_level.txt
+src/niopub/images/niopub_studio.png
