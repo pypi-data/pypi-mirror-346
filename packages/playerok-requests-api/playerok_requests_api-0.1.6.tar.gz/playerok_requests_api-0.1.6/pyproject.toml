@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "playerok-requests-api"
+version = "0.1.6"
+authors = [
+  { name = "lydyxxx", email = "lydyxxxgt@gmail.com" },
+]
+description = "Библиотека для взаимодействия с GraphQL API платформы Playerok"
+readme = "README.md"
+requires-python = ">=3.6"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "wrapper-tls-requests==1.1.2",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/lydyxxx/PlayerokRequestsApi"
+"Bug Tracker" = "https://github.com/lydyxxx/PlayerokRequestsApi/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["playerok_requests_api*"]
