@@ -1,0 +1,3 @@
+[console_scripts]
+nginx-set-conf = nginx_set_conf.nginx_set_conf:start_nginx_set_conf
+
