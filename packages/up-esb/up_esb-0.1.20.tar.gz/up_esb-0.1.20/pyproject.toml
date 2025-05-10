@@ -1,0 +1,92 @@
+# Pyproject.toml
+#
+#
+# Installation
+# ------------
+# pip install -e .
+# pip install -e .[dev]
+#
+# ... other project metadata fields as specified in:
+#     https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61.0.0", "setuptools-scm", "pip>=22.3"]
+
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3",
+]
+dependencies = [
+  "unified-planning>=1.0.0",
+  "networkx",
+  "matplotlib",
+]
+description = "General functionalities for using unified-planning in robotic applications"
+keywords = ["unified-planning", "embedded-systems-bridge"]
+license = {text = "Apache-2.0 License"}
+name = "up_esb"
+readme = "README.md"
+requires-python = ">=3.8"
+version = "0.1.20"
+
+[project.urls]
+Homepage = "https://www.aiplan4eu-project.eu/"
+Repository = "https://github.com/aiplan4eu/embedded-systems-bridge"
+
+[project.optional-dependencies]
+dev = ["black", "mypy", "ruff", "pytest", "pre-commit"]
+engines = [
+  "up-aries",
+  # "up-fast-downward>=0.3.1",
+  "up-pyperplan",
+]
+
+####################################################################################################
+#
+# DEVELOPMENT
+#
+####################################################################################################
+
+# ──────────────────────────────
+#  CODE FORMATTER – Black
+# ──────────────────────────────
+[tool.black]
+exclude = '''
+/(
+  \.toml
+  |\.sh
+  |\.git
+  |\.ini
+  |docker
+  |env
+)/
+'''
+line-length = 100
+target-version = ["py38", "py39", "py310", "py311", "py312"]
+
+# ──────────────────────────────
+#  TEST RUNNER – Pytest
+# ──────────────────────────────
+[tool.pytest.ini_options]
+
+# Sets list of directories that should be searched for tests when no specific
+# directories, files or test ids are given in the command line when executing
+# pytest from the rootdir directory. Useful when all project tests are in a
+# known location to speed up test collection and to avoid picking up undesired
+# tests by accident.
+testpaths = ["up_esb.tests"]
+
+
+# ──────────────────────────────
+#  LINTER & IMPORT-SORTER – Ruff
+# ──────────────────────────────
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+lint.extend-select = [
+  "I",    # isort-compatible import sorting
+  "B",    # bugbear – opinionated bug patterns
+  "SIM",  # flake8-simplify
+  "C4",   # flake8-comprehensions
+]
