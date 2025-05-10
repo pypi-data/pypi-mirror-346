@@ -1,0 +1,30 @@
+name: Tag a new version
+
+on:
+  workflow_dispatch:
+    inputs:
+        version:
+            description: 'Version to release. Can be a version number, or one of major|minor|patch'
+            required: false
+            default: patch
+
+jobs:
+  bump-version-and-tag:
+    name: Bump the version and tag that new version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{secrets.PRERELEASE_TOKEN}}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install hatch
+      - run: |
+          git config --global user.email "paul@eventuallyanyway.com"
+          git config --global user.name "Paul Hummer"
+
+          hatch version ${{ inputs.version }}
+          git commit -a -m "release: bump to version `hatch version`"
+          git tag `hatch version`
+          git push && git push --tags
