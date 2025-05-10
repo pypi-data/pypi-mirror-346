@@ -1,0 +1,12 @@
+claudette
+openai
+anthropic
+cosette
+requests
+pymupdf
+python-pptx
+pandas
+pillow-heif
+PyYAML
+
+[extras]

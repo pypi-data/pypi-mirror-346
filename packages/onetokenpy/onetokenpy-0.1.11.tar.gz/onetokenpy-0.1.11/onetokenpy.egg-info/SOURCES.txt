@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+onetokenpy/__init__.py
+onetokenpy/attachments_handlers.py
+onetokenpy/core.py
+onetokenpy/helpers.py
+onetokenpy.egg-info/PKG-INFO
+onetokenpy.egg-info/SOURCES.txt
+onetokenpy.egg-info/dependency_links.txt
+onetokenpy.egg-info/requires.txt
+onetokenpy.egg-info/top_level.txt
+tests/test_core.py
