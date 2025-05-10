@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+tests/__init__.py
+tests/test_analyzer.py
+tests/test_stats.py
+textinsights/__init__.py
+textinsights/analyzer.py
+textinsights/stats.py
+textinsights/visualizer.py
+textinsights.egg-info/PKG-INFO
+textinsights.egg-info/SOURCES.txt
+textinsights.egg-info/dependency_links.txt
+textinsights.egg-info/requires.txt
+textinsights.egg-info/top_level.txt
