@@ -1,0 +1,2 @@
+git+https://github.com/fzimmermann89/pylbfgs.git@fzimmermann89-cython
+git+https://github.com/yudelevi/doublemetaphone.git@af0ffc9195c0e3d6bac7afc1a898e85ee938afb4

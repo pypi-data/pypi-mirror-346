@@ -1,0 +1,90 @@
+Metadata-Version: 2.2
+Name: mobio-dedupe-sdk-test
+Version: 1.0.39
+Summary: Mobio dedupe SDK
+Home-page: https://github.com/mobiovn
+Author: MOBIO
+Author-email: contact@mobio.vn
+License: MIT
+Project-URL: Source, https://github.com/mobiovn
+Keywords: mobio,dedupe,contact spam
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: m-singleton
+Requires-Dist: asv
+Requires-Dist: black
+Requires-Dist: coverage[toml]
+Requires-Dist: coveralls
+Requires-Dist: flake8
+Requires-Dist: mock
+Requires-Dist: mypy
+Requires-Dist: pytest
+Requires-Dist: pytest-cov
+Requires-Dist: virtualenv
+Requires-Dist: isort
+Requires-Dist: affinegap==1.12
+Requires-Dist: autopep8==1.6.0
+Requires-Dist: BTrees==5.0
+Requires-Dist: categorical-distance==1.9
+Requires-Dist: cffi==1.15.1
+Requires-Dist: datetime-distance==0.1.3
+Requires-Dist: dedupe-Levenshtein-search==1.4.5
+Requires-Dist: flake8==5.0.4
+Requires-Dist: future==0.18.3
+Requires-Dist: haversine==2.8.0
+Requires-Dist: highered==0.2.1
+Requires-Dist: joblib==1.2.0
+Requires-Dist: mccabe==0.7.0
+Requires-Dist: numpy==1.24.3
+Requires-Dist: persistent==5.0
+Requires-Dist: pycodestyle==2.9.1
+Requires-Dist: pycparser==2.21
+Requires-Dist: pyflakes==2.5.0
+Requires-Dist: pyhacrf-datamade==0.2.8
+Requires-Dist: python-dateutil==2.8.2
+Requires-Dist: scikit-learn==1.5.0
+Requires-Dist: scipy==1.10.1
+Requires-Dist: simplecosine==1.2
+Requires-Dist: six==1.16.0
+Requires-Dist: threadpoolctl==3.1.0
+Requires-Dist: toml==0.10.2
+Requires-Dist: typing_extensions==4.5.0
+Requires-Dist: zope.index==6.0
+Requires-Dist: zope.interface==6.0
+Requires-Dist: cython-npm==0.2.4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+This might look like \
+install postgresql
+```bash
+createdb campfin
+export DATABASE_URL=postgres:///campfin
+```
+
+Once that's all done you can run the example:
+
+```bash
+python pgsql_big_dedupe_example_init_db.py 
+python test.py
+```
