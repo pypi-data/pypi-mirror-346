@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools_scm[toml]>=6.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marEx"
+authors = [
+    {name = "Aaron Wienkers", email = "aaron@wienkers.com"},
+]
+description = "Marine Extremes Detection and Tracking"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+dynamic = ["version"]
+dependencies = [
+    "numpy",
+    "xarray[complete]",
+    "dask[complete]==2025.3.0",
+    "netcdf4",
+    "scipy",
+    "scikit-image",
+    "dask_image",
+    "pandas",
+    "numba",
+    "pillow",
+    "xhistogram",
+    "flox",
+    "matplotlib",
+    "cartopy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+]
+full = [
+    "jax",
+    "jaxlib",
+    "dask_jobqueue",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/wienkers/marEx"
+"Bug Tracker" = "https://github.com/wienkers/marEx/issues"
+
+[tool.setuptools]
+packages = ["marEx"]
+
+[tool.setuptools_scm]
+version_scheme = "guess-next-dev"
+local_scheme = "node-and-date"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']

@@ -1,0 +1,28 @@
+.gitignore
+README.md
+pyproject.toml
+examples/gridded data/01_preprocess_extremes.ipynb
+examples/gridded data/02_id_track_events.ipynb
+examples/gridded data/03_visualise_events.ipynb
+examples/unstructured data/01_preprocess_extremes.ipynb
+examples/unstructured data/02_id_track_events.ipynb
+examples/unstructured data/03_visualise_events.ipynb
+marEx/__init__.py
+marEx/detect.py
+marEx/helper.py
+marEx/track.py
+marEx.egg-info/PKG-INFO
+marEx.egg-info/SOURCES.txt
+marEx.egg-info/dependency_links.txt
+marEx.egg-info/requires.txt
+marEx.egg-info/top_level.txt
+marEx/plotX/__init__.py
+marEx/plotX/base.py
+marEx/plotX/gridded.py
+marEx/plotX/unstructured.py
+media/logo.png
+media/movie_ID_field_basic_gridded.mp4
+media/movie_ID_field_gridded.mp4
+media/old/movie_ID_field_centroid.mp4
+media/old/movie_ID_field_nn.mp4
+media/old/movie_ID_field_original.mp4
