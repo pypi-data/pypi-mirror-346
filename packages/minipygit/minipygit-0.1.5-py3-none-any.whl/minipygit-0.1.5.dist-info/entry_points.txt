@@ -1,0 +1,2 @@
+[console_scripts]
+py-git = py_git.cli:main
