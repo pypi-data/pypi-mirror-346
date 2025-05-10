@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: pyagentmesh
+Version: 0.0.1
+Summary: Orchestration Framework for Multi-Agent and Micro-Agent
+Author: eric-epsilla
+Author-email: eric@epsilla.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
