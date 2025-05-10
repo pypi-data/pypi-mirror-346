@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: protdata
+Version: 0.1.0
+Summary: Proteomics data loaders for AnnData format.
+Author: Max Frank
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: anndata
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: pyteomics
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Dynamic: license-file
+
+# protdata
+
+Proteomics data loaders for the [AnnData](https://anndata.readthedocs.io/) format.
+
+This package provides loader functions to import proteomics data (e.g., MaxQuant) into the AnnData structure for downstream analysis and integration with single-cell and multi-omics workflows.
+
+## Features
+- Load MaxQuant output into AnnData
+- Designed for extensibility (other loaders coming soon)
+
+## Installation
+```bash
+pip install .
+```
+
+## Usage Example
+```python
+from protdata.io.maxquant_loader import load_maxquant_to_anndata
+adata = load_maxquant_to_anndata("/path/to/proteinGroups.txt")
+print(adata)
+``` 
