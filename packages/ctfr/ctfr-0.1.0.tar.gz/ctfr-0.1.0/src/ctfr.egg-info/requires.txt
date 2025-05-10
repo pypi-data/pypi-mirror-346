@@ -1,0 +1,13 @@
+numpy
+librosa
+scipy
+pooch
+
+[dev]
+cython>=3
+setuptools>=69
+pip>=24
+matplotlib>=3.3
+
+[display]
+matplotlib>=3.3
