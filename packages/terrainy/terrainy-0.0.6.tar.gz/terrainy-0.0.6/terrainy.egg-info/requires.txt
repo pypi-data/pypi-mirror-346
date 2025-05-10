@@ -1,0 +1,10 @@
+rasterio
+geopandas
+shapely
+fiona
+owslib
+numpy
+rtree
+contextily
+xyzservices
+click

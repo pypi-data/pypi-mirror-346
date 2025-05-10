@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: terrainy
+Version: 0.0.6
+Summary: Auto-downloader for global terrain data and satellite imagery
+Home-page: https://github.com/emerald-geomodelling/terrainy
+Author: Ed Harrison
+Author-email: eh@emrld.no
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+Library to download a raster of 
+    global height data such as a DTM, or satellite imagery for a polygon.
+
