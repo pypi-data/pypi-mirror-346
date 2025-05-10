@@ -1,0 +1,5 @@
+aws_service_mcp_generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_service_mcp_generator/generator.py,sha256=6F2dtgO3hW0uzsFq66FsP0xsSE75yQtEtsWLS6dUeZE,11254
+aws_service_mcp_generator-2.0.0.dist-info/METADATA,sha256=hb70PuyEd4QZtL34tWq9IdWDkVCTvmrrStyesX7uJH0,6313
+aws_service_mcp_generator-2.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aws_service_mcp_generator-2.0.0.dist-info/RECORD,,
