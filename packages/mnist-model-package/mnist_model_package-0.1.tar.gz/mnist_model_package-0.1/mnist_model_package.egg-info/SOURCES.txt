@@ -1,0 +1,9 @@
+README.txt
+setup.py
+mnist_model_package.egg-info/PKG-INFO
+mnist_model_package.egg-info/SOURCES.txt
+mnist_model_package.egg-info/dependency_links.txt
+mnist_model_package.egg-info/requires.txt
+mnist_model_package.egg-info/top_level.txt
+richernural/__init__.py
+richernural/nural.py
