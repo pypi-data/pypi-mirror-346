@@ -1,0 +1,16 @@
+id: line-works
+
+info:
+  name: LINE WORKS
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Communication
+  references:
+    - https://line.worksmobile.com/jp/en/
+
+rule:
+  type: regex
+  regex:
+    - "worksmobile-certification=(?P<token>[A-Za-z0-9\\-]+)"
+    - "worksmobile.certification.(?P<token>[A-Za-z0-9.\\-]+)"
+  params:
+    - token

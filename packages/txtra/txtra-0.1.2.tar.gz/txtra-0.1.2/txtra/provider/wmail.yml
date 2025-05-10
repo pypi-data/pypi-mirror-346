@@ -1,0 +1,15 @@
+id: wmail
+
+info:
+  name: wmail
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Cloud
+  references:
+    - https://blog.wavebox.io/introducing-wavebox/
+
+rule:
+  type: regex
+  regex:
+    - "wmail-verification:\\s?(?P<token>[a-f0-9]+)"
+  params:
+    - token

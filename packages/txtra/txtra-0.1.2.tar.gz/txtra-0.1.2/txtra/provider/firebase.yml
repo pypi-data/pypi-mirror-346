@@ -1,0 +1,15 @@
+id: firebase
+
+info:
+  name: Firebase
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Cloud
+  references:
+    - https://medium.com/@alansimpson/connect-your-domain-or-subdomain-to-firebase-hosting-365c721c395a
+
+rule:
+  type: regex
+  regex:
+    - "firebase=(?P<token>[A-Za-z0-9.\\-]+)"
+  params:
+    - token

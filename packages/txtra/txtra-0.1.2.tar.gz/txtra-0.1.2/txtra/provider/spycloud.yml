@@ -1,0 +1,12 @@
+id: spycloud
+
+info:
+  name: spycloud
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Security
+rule:
+  type: regex
+  regex:
+    - "spycloud-domain-verification=(?P<token>[a-f0-9\\-]+)"
+  params:
+    - token

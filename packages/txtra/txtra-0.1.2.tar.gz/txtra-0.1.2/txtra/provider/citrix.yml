@@ -1,0 +1,16 @@
+id: citrix
+
+info:
+  name: Citrix
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Collaboration
+  references:
+    - https://support.citrix.com/article/CTX217369
+
+rule:
+  type: regex
+  regex:
+    - "citrix-verification-code=(?P<token>[A-Za-z0-9.\\-]+)"
+    - "citrix.mobile.ads.otp=(?P<token>[A-Za-z0-9.\\-]+)"
+  params:
+    - token

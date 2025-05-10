@@ -1,0 +1,13 @@
+id: mailru
+
+info:
+  name: Mail.Ru
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Mail
+
+rule:
+  type: regex
+  regex:
+    - "mailru-verification:\\s?(?P<token>[A-Za-z0-9]+)"
+  params:
+    - token

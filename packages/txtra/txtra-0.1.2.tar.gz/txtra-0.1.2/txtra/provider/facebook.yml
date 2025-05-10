@@ -1,0 +1,15 @@
+id: facebook
+
+info:
+  name: Facebook
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Cloud
+  references:
+    - https://developers.facebook.com/docs/sharing/domain-verification/
+
+rule:
+  type: regex
+  regex:
+    - "facebook-domain-verification=(?P<token>[A-Za-z0-9]+)"
+  params:
+    - token

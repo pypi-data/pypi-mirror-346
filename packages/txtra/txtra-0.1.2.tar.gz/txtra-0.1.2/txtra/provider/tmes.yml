@@ -1,0 +1,13 @@
+id: tmes
+
+info:
+  name: Trend Micro
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Security
+
+rule:
+  type: regex
+  regex:
+    - "tmes=(?P<token>[0-9a-f]+)"
+  params:
+    - token

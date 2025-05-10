@@ -1,0 +1,13 @@
+id: twilio
+
+info:
+  name: Twilio
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Communication
+
+rule:
+  type: regex
+  regex:
+    - "twilio-domain-verification=(?P<token>[0-9a-f.]+)"
+  params:
+    - token

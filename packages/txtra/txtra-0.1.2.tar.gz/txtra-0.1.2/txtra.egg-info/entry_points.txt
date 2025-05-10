@@ -1,0 +1,2 @@
+[console_scripts]
+txtra = txtra.__main__:main
