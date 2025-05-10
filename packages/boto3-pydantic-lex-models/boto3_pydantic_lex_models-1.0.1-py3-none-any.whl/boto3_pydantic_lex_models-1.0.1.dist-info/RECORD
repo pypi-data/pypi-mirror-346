@@ -1,0 +1,7 @@
+boto3_pydantic_lex_models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_lex_models/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_lex_models/lex_models_classes.py,sha256=qgR89ERKUnGgMKtxS5MSgYj2WHM9ut4h9XJZnR_jk64,26011
+boto3_pydantic_lex_models/lex_models_constants.py,sha256=nZSmlyF8IM8LN21ggQQ-CH6vSESEybNn8S96SSuPOjg,9057
+boto3_pydantic_lex_models-1.0.1.dist-info/METADATA,sha256=jTMHcKaGIKj2AMLNyuNZQfY96UFJiyADaFF9AtgIrsw,1417
+boto3_pydantic_lex_models-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_lex_models-1.0.1.dist-info/RECORD,,
