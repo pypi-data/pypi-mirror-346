@@ -1,0 +1,9 @@
+README.txt
+setup.py
+richernural/__init__.py
+richernural/nural.py
+richernural.egg-info/PKG-INFO
+richernural.egg-info/SOURCES.txt
+richernural.egg-info/dependency_links.txt
+richernural.egg-info/requires.txt
+richernural.egg-info/top_level.txt
