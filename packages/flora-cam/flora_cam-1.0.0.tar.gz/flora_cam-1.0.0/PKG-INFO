@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: flora-cam
+Version: 1.0.0
+Summary: Camera Controller Widgets in Flet Apps
+Author-email: Flora developer <floraplantprocessing@gmail.com>
+Requires-Python: >=3.9
+Requires-Dist: flet>=0.26.0
