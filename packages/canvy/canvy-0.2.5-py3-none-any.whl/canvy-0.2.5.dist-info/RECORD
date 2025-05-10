@@ -1,0 +1,16 @@
+canvy/__init__.py,sha256=FIu8zyUYaBQJa8LXMeacbhRhjjAxeqe-Xn0V8g1cjnE,37
+canvy/const.py,sha256=NqzBVJtaIRzq9NarPT9m89PJrxa5GOWOm-UHQmZMg2M,2985
+canvy/main.py,sha256=tBjowtJq8jadzrk1BnVeSN1SFiKjsAXoq-JuEIhXrb0,7671
+canvy/types.py,sha256=_p-0yHiVIWY7DC0TFw80YFj0hf9CzMkk5oBkyiuyfw4,2727
+canvy/utils.py,sha256=vOHwdHsFlQzU80xUhaPzxrchFRkKJTKTe3xe9FWjA4E,3601
+canvy/scripts/__init__.py,sha256=etQpfUQQ3Taz-uFrgDa4jCxfvQ-vkEytgLqfT5kZMxc,211
+canvy/scripts/downloader.py,sha256=VzVifEAABnleF3QWXMxI3SPBcEYsCyZniF0CssCXpn0,5444
+canvy/scripts/grades.py,sha256=6ShugzqFe3VIg_FDkstadsPgMTJW1hQXIa8tx7FNWEs,1519
+canvy/scripts/teacher.py,sha256=Iwj8o6xyfREKhyNqCzeynutT_RxHEktzbUYx-MvFdis,5478
+canvy/tui/__init__.py,sha256=fPGy34cAiX70n62g8hIViT-g-GyNF-mMaMzVO6qopIQ,49
+canvy/tui/toy.py,sha256=9uaTQUMf__PrEj0lhW0SMviJxC0-cn6Bo-Amt_nQc2Y,3681
+canvy/tui/tui.py,sha256=3eXEQ7nm48XvPTAEWXp_cAPQX8YmlocZW66C7XIlyrY,637
+canvy-0.2.5.dist-info/METADATA,sha256=ZwWoJUgSb9A3FmNpF0-MJciCxg5KG881W7mO1PtEz9U,1975
+canvy-0.2.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+canvy-0.2.5.dist-info/entry_points.txt,sha256=FakePpNWWEW45C5mnlrwiwXuVXEab1HIUgYN3BEJUD8,42
+canvy-0.2.5.dist-info/RECORD,,
