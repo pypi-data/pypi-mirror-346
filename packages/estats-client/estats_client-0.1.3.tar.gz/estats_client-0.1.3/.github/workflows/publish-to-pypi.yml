@@ -1,0 +1,59 @@
+name: Publish Python Package to PyPI
+
+on:
+  push:
+    tags:
+      - 'v*.*.*' # バージョンタグ (例: v0.1.0, v1.2.3) がプッシュされた時に実行
+  workflow_dispatch: # 手動実行を許可
+
+permissions:
+  id-token: write # OIDCトークンをリクエストするために必須
+  contents: read  # リポジトリのチェックアウトのため
+
+jobs:
+  build:
+    name: Build distribution
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Rye
+        uses: eifinger/setup-rye@v2
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: rye sync --all-features
+
+      - name: Run tests
+        env:
+          APP_ID: ${{ secrets.ESTATS_APP_ID_FOR_TESTS }} # テスト用APP_IDをSecretから設定
+        run: rye run pytest -s tests/test_client.py
+
+      - name: Build package
+        run: rye build
+
+      - name: Upload distribution as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package-distribution
+          path: dist/
+          if-no-files-found: error
+
+  publish-to-pypi:
+    name: Publish to PyPI
+    needs: build # buildジョブの完了後に実行
+    runs-on: ubuntu-latest
+    environment: pypi # PyPIで設定したEnvironment名を指定 (推奨)
+    steps:
+      - name: Download distribution artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distribution
+          path: dist/
+
+      - name: Publish package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        # OIDCによる認証が自動的に使用されます (id-token: write パーミッションが必要)
+        # APIトークン (secrets.PYPI_API_TOKEN) は不要です

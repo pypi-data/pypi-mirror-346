@@ -1,0 +1,100 @@
+[project]
+name = "estats-client"
+version = "0.1.3"
+description = "A Python client for the e-Stat API."
+authors = [
+    { name = "EFEXP", email = "maeda_kentaro@cyberagent.co.jp" }
+]
+dependencies = [
+    "tenacity>=9.1.2",
+    "requests>=2.32.3",
+    "pydantic>=2.7.4",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+license = {text = "MIT License"}
+keywords = ["estat", "api", "client", "statistics", "政府統計"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet",
+]
+
+[project.urls]
+Homepage = "https://github.com/example/estats-client"
+Repository = "https://github.com/example/estats-client"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.2.2",
+    "build>=1.2.1",
+    "twine>=5.1.1",
+    "python-dotenv>=1.0.1",
+    "ruff>=0.4.0", # Ruffを追加
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/estats_client"]
+
+[tool.ruff]
+# Pythonのバージョンを指定 (プロジェクトに合わせて変更)
+target-version = "py38"
+
+# 無視するルール (必要に応じて追加)
+# ignore = ["D100", "D104"]
+
+# 1行の最大文字数
+line-length = 88
+
+# 除外するファイルやディレクトリ
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+[tool.ruff.lint]
+# 有効にするルールセット (デフォルト + Pydocstyle + Isort)
+select = ["E", "F", "W", "C90", "I", "D"]
+# Pydocstyleの規約 (google, numpy, pep257など)
+pydocstyle.convention = "google"
+
+[tool.ruff.format]
+# Black互換のフォーマットを有効にするか
+# preview = true # 必要に応じて有効化
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
