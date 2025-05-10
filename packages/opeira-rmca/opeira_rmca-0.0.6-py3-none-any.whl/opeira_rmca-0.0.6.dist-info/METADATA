@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: opeira-rmca
+Version: 0.0.6
+Summary: Rapid Monte Carlo Analysis
+Project-URL: Homepage, http://pypi.python.org/pypi/rmca/
+License: MIT
+License-File: LICENSE
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# RMCA - Rapid Monte Carlo Analysis
