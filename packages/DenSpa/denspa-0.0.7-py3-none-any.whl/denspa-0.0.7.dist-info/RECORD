@@ -1,0 +1,17 @@
+denspa/__init__.py,sha256=UkFXF0c4RZNguq21OX0BFmHfNNRJLooBtIsC-lW52uU,39
+denspa/vector_search.py,sha256=AtzTjnP0DD1LOporRU0VSxcRRsdSsqqnv_sUMq8ynHk,5927
+denspa/dense/__init__.py,sha256=BFETQ1wgP51O9h6Vi-LemhrW0vc4177LQA_incqcoNo,37
+denspa/dense/faiss/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+denspa/dense/faiss/faiss_api.py,sha256=-RavuHewGFbaDu6sT3fQv6QxH9Mxp3cciZsaQPwaNdY,2636
+denspa/sparse/__init__.py,sha256=pSvh3ilcPDuNpLWUdPZA7pKB8HYDXtcGi4YTpAB2hhc,66
+denspa/sparse/doc_store.py,sha256=X63tvcsRBNv9XQJEzeTyZG022EY5CV64E4veh3W2r58,1088
+denspa/sparse/bm25/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+denspa/sparse/bm25/bm25.py,sha256=6gXU3sfJbraV30k3VzS2Vz2YAs5fQsOc6e_p5WA2Zao,5606
+denspa/sparse/bm25/bm25_api.py,sha256=hV3qjWiipoR-rdTPG2ly76VKHE6ohbIvxYEb8wKd3Yo,3761
+denspa/tokenizer/__init__.py,sha256=pqP11ZPbJtClN99487TztsXoLD38emrBUYj5guxAH-g,32
+denspa/tokenizer/tokenizer.py,sha256=u42iej-NyWDSu8VLxF9GypzUzzZitybXAC9JY8r9364,1334
+denspa-0.0.7.dist-info/licenses/LICENSE,sha256=sAdpymNofAoH5yYdvqtbYsYx-c3msvxea1RoIhrx3mI,1086
+denspa-0.0.7.dist-info/METADATA,sha256=GWtbAZ7BT8_lgNEUmn8nmgk6QhOfOHTtuBi5p0EBj8k,4147
+denspa-0.0.7.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+denspa-0.0.7.dist-info/top_level.txt,sha256=w-zkubkFJ5FzYYHeaO-fXGs_MNia3jqRdXm5kYw0nUc,7
+denspa-0.0.7.dist-info/RECORD,,
