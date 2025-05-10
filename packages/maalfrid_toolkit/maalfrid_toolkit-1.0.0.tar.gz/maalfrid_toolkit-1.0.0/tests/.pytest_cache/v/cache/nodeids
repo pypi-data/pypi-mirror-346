@@ -1,0 +1,18 @@
+[
+  "test_htmlclean.py::test_ensure_valid_html",
+  "test_htmlclean.py::test_get_links",
+  "test_htmlclean.py::test_remove_bp",
+  "test_langdet.py::test_get_stopword_density",
+  "test_langdet.py::test_langdet",
+  "test_langdet.py::test_language_filter",
+  "test_utils.py::test_convert_encoding",
+  "test_utils.py::test_get_stoplist",
+  "test_utils.py::test_return_all_stop_words",
+  "test_utils.py::test_return_stoplists",
+  "test_warctools.py::test_maalfrid_record_ft_extract_doc",
+  "test_warctools.py::test_maalfrid_record_ft_extract_html",
+  "test_warctools.py::test_maalfrid_record_ft_extract_pdf",
+  "test_warctools.py::test_maalfrid_record_get_simhash",
+  "test_warctools.py::test_maalfrid_record_init",
+  "test_warctools.py::test_warc_filter"
+]
