@@ -1,0 +1,6 @@
+[console_scripts]
+CONTEXT = ContactExtractor:Main
+ContExt = ContactExtractor:Main
+Context = ContactExtractor:Main
+contExt = ContactExtractor:Main
+context = ContactExtractor:Main
