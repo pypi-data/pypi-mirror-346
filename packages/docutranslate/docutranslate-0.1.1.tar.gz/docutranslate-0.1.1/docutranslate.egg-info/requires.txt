@@ -1,0 +1,4 @@
+docling>=2.31.0
+httpx>=0.28.1
+markdown2>=2.5.3
+transformers>=4.50.1
