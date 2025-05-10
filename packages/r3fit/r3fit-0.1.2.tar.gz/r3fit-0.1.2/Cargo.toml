@@ -1,0 +1,15 @@
+[package]
+name = "r3fit-python"
+version = "0.1.2"
+edition = "2021"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "r3fit"
+crate-type = ["cdylib"]
+
+[dependencies]
+numpy = "0.24.0"
+pyo3 = { version = "0.24.2", features = ["extension-module"] }
+r3fit = "0.1.1"
