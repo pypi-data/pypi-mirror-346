@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+metapkg/__init__.py
+metapkg/cli.py
+metapkg/import_scanner.py
+metapkg/req_writer.py
+metapkg/toml_manager.py
+metapkg/utils.py
+metapkg.egg-info/PKG-INFO
+metapkg.egg-info/SOURCES.txt
+metapkg.egg-info/dependency_links.txt
+metapkg.egg-info/entry_points.txt
+metapkg.egg-info/requires.txt
+metapkg.egg-info/top_level.txt
