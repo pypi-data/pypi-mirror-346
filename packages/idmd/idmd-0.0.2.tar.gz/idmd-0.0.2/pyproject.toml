@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "idmd"
+version = "0.0.2"
+authors = [
+  { name="Bence Gercuj"},
+  { name="Csongor Loránd Laczkó"},
+  { name="Richárd Bence Rózsa"},
+]
+maintainers = [
+  { name="Bence Gercuj", email = "gercuj.bence@hallgato.ppke.hu"},
+  { name="Csongor Loránd Laczkó", email = "laczko.csongor.lorand@hallgato.ppke.hu"},
+  { name="Richárd Bence Rózsa", email = "rozsa.richard.bence@hallgato.ppke.hu"},
+]
+description = "IDMD - Interactive Data Manipulator and Descriptor"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.urls]
+Homepage = "https://github.com/CsongorLaczko/idmd"
+Documentation = "https://idmd.readthedocs.io"
+Repository = "https://github.com/CsongorLaczko/idmd.git"
+Issues = "https://github.com/CsongorLaczko/idmd/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["idmd*"]
+
+[tool.black]
+line-length = 120
+skip-string-normalization = false
+skip-magic-trailing-comma = false
+
+[tool.isort]
+profile = "black"
+line_length = 120
+known_third_party = ["idmd"]
+
+[tool.flake8]
+max-line-length = 120
+exclude = ["__init__.py", "docs", "tests", ".venv", ".git", ".tox", ".eggs", "*.egg-info"]
