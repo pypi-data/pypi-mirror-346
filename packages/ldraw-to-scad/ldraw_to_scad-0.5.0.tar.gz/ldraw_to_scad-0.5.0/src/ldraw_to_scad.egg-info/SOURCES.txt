@@ -1,0 +1,13 @@
+LICENSE
+README.md
+ldraw2scad
+pyproject.toml
+setup.cfg
+src/ldraw_to_scad/__init__.py
+src/ldraw_to_scad/ldrawconverter.py
+src/ldraw_to_scad/lib.scad
+src/ldraw_to_scad.egg-info/PKG-INFO
+src/ldraw_to_scad.egg-info/SOURCES.txt
+src/ldraw_to_scad.egg-info/dependency_links.txt
+src/ldraw_to_scad.egg-info/top_level.txt
+tests/test_ldraw_to_scad.py
