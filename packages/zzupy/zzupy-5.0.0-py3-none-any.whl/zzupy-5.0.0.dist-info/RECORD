@@ -1,0 +1,12 @@
+zzupy/__init__.py,sha256=NUCIESGzW-BvsvWsJGxnNMxVBpMeKfqJ-XhLWO_zbCA,119
+zzupy/api.py,sha256=yxGGpaBwGuNkkJAGD14G_x3rd2de0KPHmwjizOuk0fM,9943
+zzupy/ecard.py,sha256=cFungYjXGDXir6uCLLTByK9mDG7tsYkGUnqXLDtmaCs,22162
+zzupy/exception.py,sha256=WTpMK0leTQrhN6qu4KcBW7JJdujRLgd75ioJAjWPDFs,438
+zzupy/models.py,sha256=b5KN1a0XQsswPCkxaHxgamlJETMX0lEvqLHgHx3agLs,7706
+zzupy/network.py,sha256=6OMiMyDnLgJRy2AKmWyu2B7yBAp_CAZ-gCScDP1toL8,15533
+zzupy/supwisdom.py,sha256=CTNefCHNyI4zSikXkD5MEkQCzwTzUhnAW7XcWllBt7Y,15655
+zzupy/utils.py,sha256=idH6c2UoEbYST1vjkVd1vwZW7xtAyhGnlcL9FppxBzQ,4983
+zzupy-5.0.0.dist-info/METADATA,sha256=Vbt1p1VYwGSKF-QcFJ_VZbiztHmrTWVTYIuXYiFmSwc,2521
+zzupy-5.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+zzupy-5.0.0.dist-info/licenses/LICENSE,sha256=8AyPBXmdMTDdjnhxg08ecV51vglymI5dW9JzrceTamM,1074
+zzupy-5.0.0.dist-info/RECORD,,
