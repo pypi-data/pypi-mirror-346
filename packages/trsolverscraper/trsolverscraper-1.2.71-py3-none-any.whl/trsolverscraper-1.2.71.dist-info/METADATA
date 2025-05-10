@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: trsolverscraper
+Version: 1.2.71
+Summary: A Python module to bypass Cloudflare's anti-bot page (fork of cloudscraper)
+Home-page: https://github.com/yourusername/trsolverscraper
+Author: Original: VeNoMouS, Modified: TRSolver
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: requests>=2.9.2
+Requires-Dist: requests-toolbelt>=0.9.1
+Requires-Dist: brotli
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+A Python module to bypass Cloudflare's anti-bot page
