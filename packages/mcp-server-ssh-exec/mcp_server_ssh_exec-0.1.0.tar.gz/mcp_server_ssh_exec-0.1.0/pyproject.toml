@@ -1,0 +1,17 @@
+[project]
+name = "mcp-server-ssh-exec"
+version = "0.1.0"
+description = "Execute commands remotely through an ssh connection"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [ "mcp>=1.6.0", "paramiko>=3.4.0",]
+[[project.authors]]
+name = "Jarad DeLorenzo"
+email = "jaradd@gmail.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+mcp-server-ssh-exec = "mcp_server_ssh_exec:main"
