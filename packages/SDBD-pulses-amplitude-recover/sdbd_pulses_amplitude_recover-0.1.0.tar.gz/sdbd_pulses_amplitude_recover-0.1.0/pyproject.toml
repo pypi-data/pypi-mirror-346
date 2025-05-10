@@ -1,0 +1,19 @@
+[project]
+name = "SDBD_pulses_amplitude_recover"
+version = "0.1.0"
+authors = [
+  { name="Nizamov Danil", email="danil.nizamov@codesignal.com" },
+]
+description = "A package for recovering clipped current pulses"
+readme = "README.md"
+requires-python = ">=3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/reediculous/SDBD_pulses_recovery"
+Issues = "https://github.com/reediculous/SDBD_pulses_recovery"
