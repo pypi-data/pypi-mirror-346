@@ -1,0 +1,10 @@
+scanpy
+matplotlib
+anndata
+celltypist
+ipython
+joblib
+numpy
+pandas
+seaborn
+scikit-learn

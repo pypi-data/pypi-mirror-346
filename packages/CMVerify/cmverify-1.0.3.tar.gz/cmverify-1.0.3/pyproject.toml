@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CMVerify"
+version = "1.0.3"
+description = "CMV serostatus predictor using scRNA-seq data"
+authors = [{ name = "Luke Trinity", email = "luke.trinity@jax.org" }]
+readme = "README.md"
+license = "AGPL-3.0-only"
+license-files = ["LICEN[CS]E*"]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "scanpy",
+    "matplotlib",
+    "anndata",
+    "celltypist",
+    "ipython",
+    "joblib",
+    "numpy",
+    "pandas",
+    "seaborn",
+    "scikit-learn"
+]
+[project.urls]
+Homepage = "https://ucarlab.github.io/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
