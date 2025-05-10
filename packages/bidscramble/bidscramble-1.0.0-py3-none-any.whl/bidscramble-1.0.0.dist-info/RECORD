@@ -1,0 +1,17 @@
+bidscramble/__init__.py,sha256=ZnEU85cZF-Jyol3xdgoF6FwtN76JIsu1UOvVHN_EDKw,6315
+bidscramble/merge.py,sha256=QD9DaPlEvuJIB81kniv9Ii7XJBezujjUjVgxrryT3FI,3193
+bidscramble/scramble.py,sha256=E88ZyP3xbm_0ZMLVmMZnv8C2Tpfs3v8XjbNftDk3M-c,15221
+bidscramble/scramble_brainvision.py,sha256=NE2ZkE8aGNFKfnaa4p9-Nke0xCDFyUv9E8AnRlaE8ro,1419
+bidscramble/scramble_fif.py,sha256=XIZlaC2mB3_mdDOaepE9wq0HBSLcfEWZxHzSrWV-ahY,2171
+bidscramble/scramble_json.py,sha256=T2Wk6ROs2v_N4jkvBu-3md9hCkTM4hoJ3zGRB7w0tCM,1492
+bidscramble/scramble_nii.py,sha256=5uRgQXBSRgOUORq-RywHt2PTJ5xzXwihCAxhtf81h5g,9198
+bidscramble/scramble_pseudo.py,sha256=6h_CLG17dP3oNDgKyAkaVMiR15vip-Qu6L5YwZL6zz8,5406
+bidscramble/scramble_stub.py,sha256=53jT8yg8MaC1S-231kl-LAV5dcZOkSRkoF0nxES4Od0,2064
+bidscramble/scramble_swap.py,sha256=jI7adtLAavBPoq9n2iI3iIU8c3vNDiJDHOqcEIHwBNg,1915
+bidscramble/scramble_tsv.py,sha256=fZP-AyUGtmyqh1ISrhNOIxKNSdYlKG5ZToKinIH90Zc,1673
+bidscramble-1.0.0.dist-info/licenses/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+bidscramble-1.0.0.dist-info/METADATA,sha256=CUcbYRp-saAJy7G4DhudPciGyCAJqsHi9rl6cf9KHOI,2890
+bidscramble-1.0.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+bidscramble-1.0.0.dist-info/entry_points.txt,sha256=xOMpOhP4oaruU40TL78urw_WkBeAWn9HHgODohHwlcs,86
+bidscramble-1.0.0.dist-info/top_level.txt,sha256=0NCYvs5B9HvtQWIw25tbKlxej1Kxy80qhcBYS4CJ6n8,12
+bidscramble-1.0.0.dist-info/RECORD,,
