@@ -1,0 +1,11 @@
+ImageTopoDec/__init__.py,sha256=SCiiuhSW5MM4i_DdTe7X-K-8gzHhNHy_I7UAIPRz4wA,54
+ImageTopoDec/barcode.py,sha256=F_KmGJSk7NfU252emDjlFm4NDmJIprh7TwuWliF3lxM,3609
+ImageTopoDec/barplot.py,sha256=9pnIysaVt7sBPY9nSAgEdO4J7Be9wvq9X4Y216wo7mI,1887
+ImageTopoDec/bin_state.py,sha256=gH6XALciau119FPOmZEqhKLxpPdrRNErvLlpH_a7VNY,2108
+ImageTopoDec/libbarpy.pyd,sha256=WiG84x_-GXDwbwAO6G8KWAmiRDcU6h96WQO66YXXbpE,2144256
+ImageTopoDec/libbarpy.pyi,sha256=3SMLd1ww1BFU4lp-v0hPYMHATEhWj7R7ZInh_5JcYu0,8943
+imagetopodec-1.0.5.dist-info/licenses/LICENSE,sha256=b3bNRmruI0IZswhZDP9NhEyl3R_Ff5a5RNwJJViCg44,1101
+imagetopodec-1.0.5.dist-info/METADATA,sha256=w9T4ZMN7JrzTkV_mgvm9is3FTptq7UtIhavz9kOpbE4,26860
+imagetopodec-1.0.5.dist-info/WHEEL,sha256=nALZTncxQMc3_oaYY-7kNs-mWNehAcsCzIzH28FCq14,101
+imagetopodec-1.0.5.dist-info/top_level.txt,sha256=u2k6LnWWWLmywdo7VvoDzLpbo2lM5wkRBvphk68bG4o,13
+imagetopodec-1.0.5.dist-info/RECORD,,
