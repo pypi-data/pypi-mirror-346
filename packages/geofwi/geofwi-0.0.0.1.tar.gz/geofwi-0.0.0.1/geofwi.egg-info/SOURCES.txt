@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+data/data.jsonl
+data/geofwi-size-layer-fault-salt-1-10.npy
+demos/test_quick_visualize.py
+geofwi/__init__.py
+geofwi/acc.py
+geofwi/plot.py
+geofwi/utils.py
+geofwi.egg-info/PKG-INFO
+geofwi.egg-info/SOURCES.txt
+geofwi.egg-info/dependency_links.txt
+geofwi.egg-info/not-zip-safe
+geofwi.egg-info/requires.txt
+geofwi.egg-info/top_level.txt
+notebooks/README.md
