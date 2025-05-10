@@ -1,0 +1,10 @@
+a5client/__init__.py,sha256=gp9aSRMJCpCGdzw0L-5Xvbg2zE8ScojUqbW6aHGVLn0,457
+a5client/a5_client.py,sha256=vPcNqV-Wtr-jidGs32CpV2uaGqD7nYxoE3yJa-T-N54,41856
+a5client/a5_schemas.py,sha256=q_bVObaLpKDshwPLRjChK8RT-YWRtnlm8ihe454IyUw,47264
+a5client/config.py,sha256=lxCAHNWQj_4s72aqNvQSisG1NMZtZrT9kwFgQd-QWSI,2106
+a5client/schemas.py,sha256=q_bVObaLpKDshwPLRjChK8RT-YWRtnlm8ihe454IyUw,47264
+a5client/types.py,sha256=9ScxEawhsS77cnIqclgX5MZFWiSYBpUiNhbDj5fxdrY,1052
+a5_client-0.1.10.4.dist-info/METADATA,sha256=2b38PwFQu6lAhY5O9Vdypf8_s3TqapFrtsWGf2HvTYw,6696
+a5_client-0.1.10.4.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+a5_client-0.1.10.4.dist-info/top_level.txt,sha256=y7_V7lE9Eztohgr5R0bQZIMQ4-7rmr_HgbKj97vkJ0s,9
+a5_client-0.1.10.4.dist-info/RECORD,,
