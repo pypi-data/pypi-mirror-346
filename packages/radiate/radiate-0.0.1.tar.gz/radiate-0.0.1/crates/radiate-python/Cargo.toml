@@ -1,0 +1,10 @@
+[package]
+name = "radiate-python"
+version = { workspace = true}
+edition = { workspace = true }
+authors = { workspace = true }
+
+[dependencies]
+radiate = { workspace = true, features = ["gp"] }
+pyo3 = { workspace = true, features = ["multiple-pymethods"] }
+
