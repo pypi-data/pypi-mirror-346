@@ -1,0 +1,11 @@
+playerok_requests_api/__init__.py,sha256=l1lWRV5fzx6-C3xpWdEYCx3Y5TNykf_HgoEs12q6cfQ,21
+playerok_requests_api/chats.py,sha256=RMbXpkD3w1n2vDEFRUNnasubXRM36WZnfn798dyQtk0,23450
+playerok_requests_api/deals.py,sha256=Zn63sFA_pesi7uQNWFbtPfm3KnF0IX8RrVDTn6wSrhY,8184
+playerok_requests_api/items.py,sha256=2EB-fVwLuTUdFr9V6uynMpeCO7bKI4Ir8Idu7Grsjp8,21985
+playerok_requests_api/users.py,sha256=9h0NEo17AO-XoIhJu17zfdV0oGTqUT381HfI1y1DSDI,8694
+playerok_requests_api/utils.py,sha256=qqT5ijv0zlr47uTZeyxNU5G9Ht354XAyNj7Z_0MC9H4,1605
+playerok_requests_api-0.1.6.dist-info/licenses/LICENSE,sha256=i_UUVwIfySTvnqEsGTLxGwAY6WXtgRqzSX1I7S5BD8M,1085
+playerok_requests_api-0.1.6.dist-info/METADATA,sha256=YuiGM26TJpdKV403v3HVFHVlHsifhV8u2w5LkmduRtU,18622
+playerok_requests_api-0.1.6.dist-info/WHEEL,sha256=0CuiUZ_p9E4cD6NyLD6UG80LBXYyiSYZOKDm5lp32xk,91
+playerok_requests_api-0.1.6.dist-info/top_level.txt,sha256=YY6w9ZMGeLfcnRKaX-x9l-I4sTuXQr_pagLYiN0hepk,22
+playerok_requests_api-0.1.6.dist-info/RECORD,,
