@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+bjones_testing_actions.egg-info/PKG-INFO
+bjones_testing_actions.egg-info/SOURCES.txt
+bjones_testing_actions.egg-info/dependency_links.txt
+bjones_testing_actions.egg-info/requires.txt
+bjones_testing_actions.egg-info/top_level.txt
+hello_world/__init__.py
+tests/test_hello_world.py
+tests/test_package_compatibility.py
+tests/test_pypi_package.py
