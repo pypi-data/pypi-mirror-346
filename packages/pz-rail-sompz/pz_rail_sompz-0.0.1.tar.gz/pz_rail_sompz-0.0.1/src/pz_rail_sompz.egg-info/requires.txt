@@ -1,0 +1,10 @@
+numba
+pz-rail-base>=1.0.3
+qp-prob[full]
+tqdm
+
+[dev]
+pytest
+pytest-cov
+pre-commit
+pylint
