@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/schema_markdown/__init__.py
+src/schema_markdown/encode.py
+src/schema_markdown/parser.py
+src/schema_markdown/schema.py
+src/schema_markdown/schema_util.py
+src/schema_markdown/type_model.py
+src/schema_markdown.egg-info/PKG-INFO
+src/schema_markdown.egg-info/SOURCES.txt
+src/schema_markdown.egg-info/dependency_links.txt
+src/schema_markdown.egg-info/top_level.txt
