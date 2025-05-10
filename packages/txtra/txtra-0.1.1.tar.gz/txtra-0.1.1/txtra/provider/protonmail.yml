@@ -1,0 +1,15 @@
+id: protonmail
+
+info:
+  name: protonmail
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Mail
+  references:
+    - https://protonmail.com/support/knowledge-base/dns-records/
+
+rule:
+  type: regex
+  regex:
+    - "protonmail-verification=(?P<token>[A-Za-z0-9\\-]+)"
+  params:
+    - token

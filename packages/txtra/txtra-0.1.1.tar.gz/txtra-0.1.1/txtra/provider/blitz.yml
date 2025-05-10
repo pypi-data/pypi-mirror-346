@@ -1,0 +1,15 @@
+id: blitz
+
+info:
+  name: Feedblitz
+  author: NetSPI(https://raw.githubusercontent.com/NetSPI/PowerShell/master/Resolve-DnsDomainValidationToken.ps1)
+  category: Analytics
+  references:
+    - https://www.feedblitz.com/quick-tips-where-can-i-edit-my-dkim-and-spf-authentication/
+
+rule:
+  type: regex
+  regex:
+    - "blitz=(?P<token>[A-Za-z0-9\\-]+)"
+  params:
+    - token
