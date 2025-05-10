@@ -1,0 +1,281 @@
+Metadata-Version: 2.4
+Name: gengineapi
+Version: 0.2.0
+Summary: G-Engine API Client
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: typing-extensions>=4.0.0
+Requires-Dist: aiohttp-socks>=0.7.1
+
+# G-Engine API Client
+
+Асинхронный модульный клиент для взаимодействия с API G-Engine.
+
+## Особенности
+
+- Полностью асинхронный интерфейс на базе `aiohttp` и `asyncio`
+- Модульная структура с разделением по доменам API
+- Детальная обработка ошибок и исключений
+- Автоматические повторные попытки для временных ошибок
+- Поддержка JWT-аутентификации
+- Поддержка прокси, включая SOCKS5
+- Ферма клиентов с балансировкой нагрузки и стратегиями ротации
+- Подробное логирование
+- Строгая типизация с помощью аннотаций типов
+- Класс-конфигурация для централизованной настройки и повторного использования
+
+## Установка
+
+```bash
+pip install -r requirements.txt
+```
+
+Или с помощью setup.py:
+
+```bash
+pip install .
+```
+
+## Структура проекта
+
+```
+src/
+└── gengineapi/
+    ├── __init__.py         # Экспорт основных классов
+    ├── client.py           # Основной класс клиента
+    ├── http.py             # HTTP клиент с поддержкой аутентификации
+    ├── exceptions.py       # Иерархия исключений API
+    ├── config.py           # Класс-конфигурация для настройки параметров
+    ├── farm.py             # Ферма клиентов для управления множеством клиентов
+    └── modules/            # Папка с модулями API
+        ├── __init__.py
+        ├── base.py         # Базовый класс для всех модулей
+        ├── payments.py     # Модуль для работы с платежами
+        ├── finances.py     # Модуль для работы с финансами
+        ├── auth.py         # Модуль для аутентификации
+        ├── users.py        # Модуль для работы с пользователями
+        ├── transactions.py # Модуль для работы с транзакциями
+        └── currencies.py   # Модуль для работы с валютами
+```
+
+## Использование
+
+### Инициализация с существующим токеном
+
+```python
+import asyncio
+from src.gengineapi import GEngineClient
+
+async def main():
+    # Создаем клиент с существующим токеном
+    async with GEngineClient(
+        base_url="https://api.example.com/api/v2",
+        jwt_token="your-jwt-token",
+        timeout=30,
+        max_retries=3
+    ) as client:
+        # Используем API
+        user_info = await client.users.get_me()
+        print(f"Текущий пользователь: {user_info['login']}")
+
+asyncio.run(main())
+```
+
+### Получение нового токена
+
+```python
+import asyncio
+from src.gengineapi import GEngineClient
+
+async def main():
+    # Создаем клиент без токена
+    async with GEngineClient(
+        base_url="https://api.example.com/api/v2",
+        timeout=30,
+        max_retries=3
+    ) as client:
+        # Аутентифицируемся и получаем токен
+        token_info = await client.auth.login(
+            login="user@example.com",
+            password="secure_password"
+        )
+        
+        # Получаем токен
+        token = token_info["access_token"]
+        print(f"Получен токен: {token}")
+        
+        # Обновляем токен в клиенте
+        client.update_token(token)
+        
+        # Используем API
+        user_info = await client.users.get_me()
+        print(f"Текущий пользователь: {user_info['login']}")
+
+asyncio.run(main())
+```
+
+### Использование прокси
+
+Клиент поддерживает работу через прокси, включая SOCKS5:
+
+```python
+import asyncio
+from src.gengineapi import GEngineClient
+
+async def main():
+    # Создаем клиент с использованием SOCKS5 прокси
+    async with GEngineClient(
+        base_url="https://api.example.com/api/v2",
+        jwt_token="your-jwt-token",
+        timeout=60,  # Увеличиваем таймаут для прокси
+        max_retries=5,  # Увеличиваем количество повторных попыток
+        proxy="socks5://user:pass@host:port"  # Адрес SOCKS5 прокси
+    ) as client:
+        # Используем API через прокси
+        user_info = await client.users.get_me()
+        print(f"Текущий пользователь: {user_info['login']}")
+        
+        # Можно изменить настройки прокси на лету
+        client.update_proxy("socks5://another-host:port")
+        
+        # Или отключить прокси
+        client.update_proxy(None)
+
+asyncio.run(main())
+```
+
+### Использование класса-конфигурации
+
+Класс-конфигурация позволяет настроить параметры клиента один раз и затем использовать их многократно:
+
+```python
+import asyncio
+from src.gengineapi import GEngineConfig
+
+async def main():
+    # Настройка параметров клиента
+    GEngineConfig.setup(
+        base_url="https://api.example.com/api/v2",
+        jwt_token="your-jwt-token",
+        timeout=30,
+        max_retries=3,
+        proxy="socks5://127.0.0.1:9050"  # Опционально - прокси
+    )
+    
+    # Получение глобального экземпляра клиента
+    client = await GEngineConfig.get_client()
+    
+    # Использование клиента
+    user_info = await client.users.get_me()
+    print(f"Текущий пользователь: {user_info['login']}")
+    
+    # Не нужно закрывать клиент при каждом использовании,
+    # так как он хранится глобально
+    
+    # В другой части приложения
+    # Получение того же экземпляра клиента
+    client = await GEngineConfig.get_client()
+    
+    # Использование клиента
+    balance = await client.users.get_balance()
+    print(f"Баланс: {balance['balance']} {balance['currency']}")
+    
+    # Обновление настройки прокси в конфигурации
+    await GEngineConfig.update_proxy(None)  # Отключение прокси
+    
+    # При завершении приложения
+    await GEngineConfig.reset()  # Закрывает глобальный клиент
+
+asyncio.run(main())
+```
+
+### Использование фермы клиентов
+
+Ферма клиентов позволяет управлять множеством клиентов с разными конфигурациями и стратегиями ротации:
+
+```python
+import asyncio
+from src.gengineapi import ClientFarm
+
+async def main():
+    # Создаем ферму клиентов
+    farm = ClientFarm()
+    
+    # Добавляем несколько конфигураций с разными прокси
+    farm.create_config(
+        name="client1",
+        base_url="https://api.example.com/api/v2",
+        jwt_token="token1",
+        proxy="socks5://user1:pass1@host1:port1",
+        tags=["group1", "production"]
+    )
+    
+    farm.create_config(
+        name="client2",
+        base_url="https://api.example.com/api/v2",
+        jwt_token="token2",
+        proxy="socks5://user2:pass2@host2:port2",
+        tags=["group1", "backup"]
+    )
+    
+    # Устанавливаем стратегию выбора клиента
+    farm.set_selection_strategy("round_robin")  # или "random", "least_errors", "least_recently_used"
+    
+    # Получаем клиент по имени
+    client1 = await farm.get_client("client1")
+    await client1.users.get_me()
+    
+    # Получаем следующий клиент согласно стратегии
+    client = await farm.get_next_client()
+    await client.currencies.get_rate(source="cb_rf", pair="USD:RUB")
+    
+    # Получаем клиент по тегу
+    client = await farm.get_next_client(tag="production")
+    await client.transactions.get_transactions(limit=5)
+    
+    # При завершении работы закрываем все клиенты
+    await farm.close_all()
+
+asyncio.run(main())
+```
+
+### Экспорт и импорт конфигураций фермы
+
+```python
+import asyncio
+from src.gengineapi import ClientFarm
+
+async def main():
+    # Создаем и настраиваем ферму
+    farm = ClientFarm()
+    
+    # Добавляем конфигурации
+    farm.create_config(name="client1", base_url="...", jwt_token="...", proxy="...")
+    farm.create_config(name="client2", base_url="...", jwt_token="...", proxy="...")
+    
+    # Экспортируем конфигурации в файл
+    await farm.export_configs("farm_config.json")
+    
+    # Импортируем конфигурации из файла
+    new_farm = await ClientFarm.import_configs("farm_config.json")
+    
+    # Используем импортированные конфигурации
+    client = await new_farm.get_next_client()
+    
+    # При завершении работы закрываем все клиенты
+    await new_farm.close_all()
+
+asyncio.run(main())
+```
+
+## Зависимости
+
+- Python 3.7+
+- aiohttp >= 3.8.0
+- typing-extensions >= 4.0.0
+- aiohttp-socks >= 0.7.1 (для поддержки SOCKS5 прокси)
+
+## Лицензия
+
+MIT
