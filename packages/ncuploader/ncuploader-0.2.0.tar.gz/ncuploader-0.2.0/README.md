@@ -1,0 +1,125 @@
+# NCUploader
+
+NCUploader is a modern Python tool for managing file uploads to Nextcloud servers with retention policy management. It provides a seamless way to automate the process of uploading files and directories to Nextcloud while maintaining control over how long they should be retained.
+
+## Features
+
+- Upload files and directories to Nextcloud
+- Track uploaded files with a local index
+- Apply retention policies (e.g., remove files 30 days after upload)
+- Simple YAML configuration
+- Load credentials from .env file for better security
+- Colorized terminal output
+- Comprehensive logging
+- Command-line interface
+
+## Requirements
+
+- Python 3.12+
+- Nextcloud server
+- `nc_py_api` library
+
+## Installation
+
+```bash
+# Using uv (recommended)
+uv pip install ncuploader
+
+# Using pip
+pip install ncuploader
+```
+
+## Configuration
+
+NCUploader uses a YAML configuration file to define upload sources, destinations, and retention policies:
+
+```yaml
+# ncuploader.yaml
+nextcloud:
+  url: "https://your-nextcloud-instance.com"
+  username: "your_username"
+  password: "your_password"  # Consider using .env file instead
+
+uploads:
+  - local_path: "~/path/to/local/file.txt"  # ~ is expanded to your home directory
+    remote_path: "/remote/destination/file.txt"
+    retention_policy:
+      delete_after_upload: "30d"  # Supported formats: Xd (days), Xw (weeks), Xm (months)
+  
+  - local_path: "~/path/to/local/directory"  # ~ is expanded to your home directory
+    remote_path: "/remote/destination/directory"
+    retention_policy:
+      delete_after_upload: "2w"
+```
+
+### Using .env for Credentials
+
+For better security, you can use a .env file to store your credentials:
+
+```
+# .env
+NEXTCLOUD_URL=https://your-nextcloud-instance.com
+NEXTCLOUD_USERNAME=your_username
+NEXTCLOUD_PASSWORD=your_super_secret_password
+# NEXTCLOUD_TOKEN=your_super_secret_token  # Alternative to password
+```
+
+Then, your YAML config can omit sensitive information:
+
+```yaml
+# ncuploader.yaml (credentials loaded from .env)
+nextcloud:
+  # Credentials loaded from .env file
+  
+uploads:
+  - local_path: "~/path/to/local/file.txt"  # ~ is expanded to your home directory
+    remote_path: "/remote/destination/file.txt"
+    retention_policy:
+      delete_after_upload: "30d"
+```
+
+## Usage
+
+### Command Line
+
+```bash
+# Upload using the default config file (ncuploader.yaml in current directory)
+ncuploader
+
+# Specify a custom config file
+ncuploader --config /path/to/config.yaml
+
+# Run in dry-run mode (no actual uploads or deletions)
+ncuploader --dry-run
+
+# Show verbose output
+ncuploader --verbose
+```
+
+### Environment Variables
+
+In addition to using a .env file, you can also use environment variables directly:
+
+```bash
+export NEXTCLOUD_URL="https://your-nextcloud-instance.com"
+export NEXTCLOUD_USERNAME="your_username"
+export NEXTCLOUD_PASSWORD="your_password"
+```
+
+## How It Works
+
+1. NCUploader reads your YAML configuration file
+2. It loads credentials from .env file or environment variables
+3. It loads the existing index of previously uploaded files
+4. For each path in your configuration:
+   - If not in the index: uploads to Nextcloud and adds to the index
+   - If already in the index: checks the retention policy and removes if needed
+5. The index is updated with the current state
+
+## License
+
+MIT
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.

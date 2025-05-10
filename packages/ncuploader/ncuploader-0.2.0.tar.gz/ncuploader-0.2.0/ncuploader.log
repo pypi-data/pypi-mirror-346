@@ -1,0 +1,1325 @@
+2025-05-08 16:59:56.523 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x10e7a0220>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x10ba903e0>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x10ba903e0>
+           └ <function get_command at 0x10cd46d40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x10cd44fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x10cd44540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10e7906b0>
+         │    └ <function Command.invoke at 0x10bfde7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+           │   │      │    │           └ <click.core.Context object at 0x10e7906b0>
+           │   │      │    └ <function upload at 0x10e7a0540>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x10bfdd120>
+           └ <click.core.Context object at 0x10e7906b0>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('ncuploader.yaml'), 'dry_run': False, 'verbose': False}
+           └ <function upload at 0x10e7a02c0>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 53, in upload
+    config_obj = load_config(config)
+                 │           └ PosixPath('ncuploader.yaml')
+                 └ <function load_config at 0x10d1f4900>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/config.py", line 137, in load_config
+    return Config.model_validate(yaml_config)
+           │      │              └ {'uploads': [{'local_path': '/path/to/local/file.txt', 'remote_path': '/remote/destination/file.txt', 'retention_policy': {'d...
+           │      └ <classmethod(<function BaseModel.model_validate at 0x10d4b9d00>)>
+           └ <class 'ncuploader.config.Config'>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/pydantic/main.py", line 703, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           │   │                      └ <method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>
+           │   └ SchemaValidator(title="Config", validator=Model(
+           │         ModelValidator {
+           │             revalidate: Never,
+           │             validator: ModelFiel...
+           └ <class 'ncuploader.config.Config'>
+
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for Config
+uploads.0.local_path
+  Value error, Local path does not exist: /path/to/local/file.txt [type=value_error, input_value='/path/to/local/file.txt', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/value_error
+uploads.1.local_path
+  Value error, Local path does not exist: /path/to/local/directory [type=value_error, input_value='/path/to/local/directory', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/value_error
+uploads.2.local_path
+  Value error, Local path does not exist: /path/to/another/file.pdf [type=value_error, input_value='/path/to/another/file.pdf', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/value_error
+2025-05-08 17:04:00.557 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/file.txt
+2025-05-08 17:04:00.558 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/directory
+2025-05-08 17:04:00.558 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/another/file.pdf
+2025-05-08 17:04:00.558 | INFO     | ncuploader.index:load_index:139 - Index file not found, creating new index: ncuploader_index.json
+2025-05-08 17:04:00.894 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x10dd50220>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x10b6b7a40>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x10b6b7a40>
+           └ <function get_command at 0x10c342d40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x10c340fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x10c340540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10dbb2db0>
+         │    └ <function Command.invoke at 0x10b5de7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+           │   │      │    │           └ <click.core.Context object at 0x10dbb2db0>
+           │   │      │    └ <function upload at 0x10dd50540>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x10b5dd120>
+           └ <click.core.Context object at 0x10dbb2db0>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('ncuploader.yaml'), 'dry_run': False, 'verbose': False}
+           └ <function upload at 0x10dd502c0>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 62, in upload
+    uploader.process_uploads()
+    │        └ <function NextcloudUploader.process_uploads at 0x10dd50040>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10c77dca0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 193, in process_uploads
+    self.connect()
+    │    └ <function NextcloudUploader.connect at 0x10dd2fd80>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10c77dca0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 66, in connect
+    user_info = self.nc.users.get_user(self.config.nextcloud.username)
+                │    │  │     │        │    │      │         └ 'toolbox-robot'
+                │    │  │     │        │    │      └ NextcloudConfig(url='https://next-qa.sdsz.dev/', username='toolbox-robot', password=SecretStr('**********'), token=None)
+                │    │  │     │        │    └ Config(nextcloud=NextcloudConfig(url='https://next-qa.sdsz.dev/', username='toolbox-robot', password=SecretStr('**********'),...
+                │    │  │     │        └ <ncuploader.uploader.NextcloudUploader object at 0x10c77dca0>
+                │    │  │     └ <function _UsersAPI.get_user at 0x10dd02f20>
+                │    │  └ <nc_py_api.users._UsersAPI object at 0x10dda1580>
+                │    └ <nc_py_api.nextcloud.Nextcloud object at 0x10dbb32c0>
+                └ <ncuploader.uploader.NextcloudUploader object at 0x10c77dca0>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/nc_py_api/users.py", line 178, in get_user
+    return UserInfo(self._session.ocs("GET", f"{self._ep_base}/{user_id}" if user_id else "/ocs/v1.php/cloud/user"))
+           │        │    │        │             │    │          │            └ 'toolbox-robot'
+           │        │    │        │             │    │          └ 'toolbox-robot'
+           │        │    │        │             │    └ '/ocs/v1.php/cloud/users'
+           │        │    │        │             └ <nc_py_api.users._UsersAPI object at 0x10dda1580>
+           │        │    │        └ <function NcSessionBasic.ocs at 0x10db4f740>
+           │        │    └ <nc_py_api._session.NcSession object at 0x10dce27e0>
+           │        └ <nc_py_api.users._UsersAPI object at 0x10dda1580>
+           └ <class 'nc_py_api.users.UserInfo'>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/nc_py_api/_session.py", line 215, in ocs
+    check_error(response, info)
+    │           │         └ 'request: GET /ocs/v1.php/cloud/users/toolbox-robot'
+    │           └ <Response [401 Unauthorized]>
+    └ <function check_error at 0x10cfb6660>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/nc_py_api/_exceptions.py", line 65, in check_error
+    raise NextcloudException(status_code, reason=codes(status_code).phrase, info=info)
+          │                  │                   │     │                         └ 'request: GET /ocs/v1.php/cloud/users/toolbox-robot'
+          │                  │                   │     └ 401
+          │                  │                   └ <enum 'codes'>
+          │                  └ 401
+          └ <class 'nc_py_api._exceptions.NextcloudException'>
+
+nc_py_api._exceptions.NextcloudException: [401] Unauthorized <request: GET /ocs/v1.php/cloud/users/toolbox-robot>
+2025-05-08 17:06:39.064 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/file.txt
+2025-05-08 17:06:39.065 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/directory
+2025-05-08 17:06:39.065 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/another/file.pdf
+2025-05-08 17:06:39.065 | INFO     | ncuploader.index:load_index:139 - Index file not found, creating new index: ncuploader_index.json
+2025-05-08 17:06:39.067 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 54, in connect
+    self.nc = Nextcloud(nc_config.url, auth=auth)
+    │    │    │         │         │         └ ('toolbox-robot', 'ubY]s7y$A{M[')
+    │    │    │         │         └ 'https://next-qa.sdsz.dev/'
+    │    │    │         └ NextcloudConfig(url='https://next-qa.sdsz.dev/', username='toolbox-robot', password=SecretStr('**********'), token=None)
+    │    │    └ <class 'nc_py_api.nextcloud.Nextcloud'>
+    │    └ None
+    └ <ncuploader.uploader.NextcloudUploader object at 0x111751ee0>
+
+TypeError: Nextcloud.__init__() takes 1 positional argument but 2 were given
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x1117f8220>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x10efb7a40>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x10efb7a40>
+           └ <function get_command at 0x10fccad40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x10fcc8fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x10fcc8540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1117e86e0>
+         │    └ <function Command.invoke at 0x10edae7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+           │   │      │    │           └ <click.core.Context object at 0x1117e86e0>
+           │   │      │    └ <function upload at 0x1117f8540>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x10edad120>
+           └ <click.core.Context object at 0x1117e86e0>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('ncuploader.yaml'), 'dry_run': False, 'verbose': False}
+           └ <function upload at 0x1117f82c0>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 62, in upload
+    uploader.process_uploads()
+    │        └ <function NextcloudUploader.process_uploads at 0x1117f8040>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x111751ee0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 208, in process_uploads
+    self.connect()
+    │    └ <function NextcloudUploader.connect at 0x1117d3d80>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x111751ee0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 81, in connect
+    except requests.RequestException as e:
+
+NameError: name 'requests' is not defined
+2025-05-08 17:07:47.127 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/file.txt
+2025-05-08 17:07:47.129 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/directory
+2025-05-08 17:07:47.129 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/another/file.pdf
+2025-05-08 17:07:47.130 | INFO     | ncuploader.index:load_index:139 - Index file not found, creating new index: ncuploader_index.json
+2025-05-08 17:07:47.131 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 54, in connect
+    self.nc = Nextcloud(nc_config.url, auth=auth)
+    │    │    │         │         │         └ ('toolbox-robot', 'ubY]s7y$A{M[')
+    │    │    │         │         └ 'https://next-qa.sdsz.dev/'
+    │    │    │         └ NextcloudConfig(url='https://next-qa.sdsz.dev/', username='toolbox-robot', password=SecretStr('**********'), token=None)
+    │    │    └ <class 'nc_py_api.nextcloud.Nextcloud'>
+    │    └ None
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10b01ba40>
+
+TypeError: Nextcloud.__init__() takes 1 positional argument but 2 were given
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x10b05c180>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x1094c7350>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x1094c7350>
+           └ <function get_command at 0x109562d40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x109560fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x109560540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10af635c0>
+         │    └ <function Command.invoke at 0x1087da7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+           │   │      │    │           └ <click.core.Context object at 0x10af635c0>
+           │   │      │    └ <function upload at 0x10b05c4a0>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x1087d9120>
+           └ <click.core.Context object at 0x10af635c0>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('ncuploader.yaml'), 'dry_run': False, 'verbose': False}
+           └ <function upload at 0x10b05c220>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 62, in upload
+    uploader.process_uploads()
+    │        └ <function NextcloudUploader.process_uploads at 0x10b037f60>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10b01ba40>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 208, in process_uploads
+    self.connect()
+    │    └ <function NextcloudUploader.connect at 0x10b037ce0>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10b01ba40>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 81, in connect
+    except requests.RequestException as e:
+
+NameError: name 'requests' is not defined
+2025-05-08 17:08:06.839 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/file.txt
+2025-05-08 17:08:06.839 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/directory
+2025-05-08 17:08:06.839 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/another/file.pdf
+2025-05-08 17:08:06.839 | INFO     | ncuploader.index:load_index:139 - Index file not found, creating new index: ncuploader_index.json
+2025-05-08 17:08:06.840 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x10c9e4720>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x109a373e0>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x109a373e0>
+           └ <function get_command at 0x10ad46d40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x10ad44fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x10ad44540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10c9baa50>
+         │    └ <function Command.invoke at 0x109fde7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+           │   │      │    │           └ <click.core.Context object at 0x10c9baa50>
+           │   │      │    └ <function upload at 0x10c9e4a40>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x109fdd120>
+           └ <click.core.Context object at 0x10c9baa50>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('ncuploader.yaml'), 'dry_run': False, 'verbose': False}
+           └ <function upload at 0x10c9e47c0>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 62, in upload
+    uploader.process_uploads()
+    │        └ <function NextcloudUploader.process_uploads at 0x10c9e4540>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10b17db80>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 209, in process_uploads
+    self.connect()
+    │    └ <function NextcloudUploader.connect at 0x10c9e42c0>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10b17db80>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 55, in connect
+    self.nc = Nextcloud(nc_config.url, auth=auth)
+    │    │    │         │         │         └ ('toolbox-robot', 'ubY]s7y$A{M[')
+    │    │    │         │         └ 'https://next-qa.sdsz.dev/'
+    │    │    │         └ NextcloudConfig(url='https://next-qa.sdsz.dev/', username='toolbox-robot', password=SecretStr('**********'), token=None)
+    │    │    └ <class 'nc_py_api.nextcloud.Nextcloud'>
+    │    └ None
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10b17db80>
+
+TypeError: Nextcloud.__init__() takes 1 positional argument but 2 were given
+2025-05-08 17:08:10.576 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/file.txt
+2025-05-08 17:08:10.576 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/directory
+2025-05-08 17:08:10.576 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/another/file.pdf
+2025-05-08 17:08:10.576 | INFO     | ncuploader.index:load_index:139 - Index file not found, creating new index: ncuploader_index.json
+2025-05-08 17:08:10.577 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x10de8ede0>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x10af2f3e0>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x10af2f3e0>
+           └ <function get_command at 0x10c246d40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x10c244fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x10c244540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10de2d070>
+         │    └ <function Command.invoke at 0x10b4de7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+           │   │      │    │           └ <click.core.Context object at 0x10de2d070>
+           │   │      │    └ <function upload at 0x10de8f100>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x10b4dd120>
+           └ <click.core.Context object at 0x10de2d070>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'ncuploader.yaml', 'dry_run': False, 'verbose': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('ncuploader.yaml'), 'dry_run': False, 'verbose': False}
+           └ <function upload at 0x10de8ee80>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 62, in upload
+    uploader.process_uploads()
+    │        └ <function NextcloudUploader.process_uploads at 0x10de8ec00>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10dc48200>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 209, in process_uploads
+    self.connect()
+    │    └ <function NextcloudUploader.connect at 0x10de8e980>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10dc48200>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 55, in connect
+    self.nc = Nextcloud(nc_config.url, auth=auth)
+    │    │    │         │         │         └ ('toolbox-robot', 'ubY]s7y$A{M[')
+    │    │    │         │         └ 'https://next-qa.sdsz.dev/'
+    │    │    │         └ NextcloudConfig(url='https://next-qa.sdsz.dev/', username='toolbox-robot', password=SecretStr('**********'), token=None)
+    │    │    └ <class 'nc_py_api.nextcloud.Nextcloud'>
+    │    └ None
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10dc48200>
+
+TypeError: Nextcloud.__init__() takes 1 positional argument but 2 were given
+2025-05-08 17:12:59.399 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/file.txt
+2025-05-08 17:12:59.401 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/directory
+2025-05-08 17:12:59.401 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/another/file.pdf
+2025-05-08 17:12:59.401 | INFO     | ncuploader.index:load_index:139 - Index file not found, creating new index: ncuploader_index.json
+2025-05-08 17:22:22.748 | INFO     | ncuploader.index:load_index:139 - Index file not found, creating new index: test_ncuploader_index.json
+2025-05-08 17:22:23.250 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:23.251 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:23.252 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:23.253 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:23.254 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:23.255 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/dir1: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:23.256 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/subdir1: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:23.257 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/dir2: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:24.529 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:24.530 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:24.531 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:24.532 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:24.532 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:24.533 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/dir1: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:24.535 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/subdir1: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:24.536 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/dir2: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:22:24.536 | DEBUG    | ncuploader.index:save_index:163 - Index saved to test_ncuploader_index.json
+2025-05-08 17:24:40.464 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:40.465 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:40.465 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:40.466 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:40.467 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:40.468 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/dir1: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:40.470 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/subdir1: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:40.471 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/dir2: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:41.766 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:41.767 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:41.768 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:41.769 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:41.769 | ERROR    | ncuploader.uploader:upload_file:130 - Failed to create remote directory /test-upload: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:41.771 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/dir1: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:41.772 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/subdir1: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:41.773 | ERROR    | ncuploader.uploader:upload_directory:168 - Failed to create remote directory /test-upload/dir2: FilesAPI.mkdir() takes 2 positional arguments but 3 were given
+2025-05-08 17:24:41.774 | DEBUG    | ncuploader.index:save_index:163 - Index saved to test_ncuploader_index.json
+2025-05-08 17:30:44.800 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x10ade2f20>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x107e69460>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x107e69460>
+           └ <function get_command at 0x109146d40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x109144fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x109144540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10ac09eb0>
+         │    └ <function Command.invoke at 0x1083da7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'test_ncuploader_config.yaml', 'dry_run': False, 'verbose': False}
+           │   │      │    │           └ <click.core.Context object at 0x10ac09eb0>
+           │   │      │    └ <function upload at 0x10ade3240>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x1083d9120>
+           └ <click.core.Context object at 0x10ac09eb0>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'test_ncuploader_config.yaml', 'dry_run': False, 'verbose': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('test_ncuploader_config.yaml'), 'dry_run': False, 'verbose': False}
+           └ <function upload at 0x10ade2fc0>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 62, in upload
+    uploader.process_uploads()
+    │        └ <function NextcloudUploader.process_uploads at 0x10ade2d40>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x1095cdca0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 255, in process_uploads
+    self._process_upload_item(item)
+    │    │                    └ UploadItem(local_path=PosixPath('/var/folders/jx/6qlh4zz95c744fgw9jx2s75w0000gn/T/tmpr_8o9uyp/file1.txt'), remote_path='/test...
+    │    └ <function NextcloudUploader._process_upload_item at 0x10ade2de0>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x1095cdca0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 286, in _process_upload_item
+    success = self.upload_file(local_path, remote_path)
+              │    │           │           └ '/test-upload/file1.txt'
+              │    │           └ PosixPath('/var/folders/jx/6qlh4zz95c744fgw9jx2s75w0000gn/T/tmpr_8o9uyp/file1.txt')
+              │    └ <function NextcloudUploader.upload_file at 0x10ade2b60>
+              └ <ncuploader.uploader.NextcloudUploader object at 0x1095cdca0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 161, in upload_file
+    if not self.ensure_remote_dir_exists(remote_dir):
+           │    │                        └ '/test-upload'
+           │    └ <function NextcloudUploader.ensure_remote_dir_exists at 0x10ade2ac0>
+           └ <ncuploader.uploader.NextcloudUploader object at 0x1095cdca0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 119, in ensure_remote_dir_exists
+    self.nc.files.info(remote_path)
+    │    │  │          └ '/test-upload'
+    │    │  └ <nc_py_api.files.files.FilesAPI object at 0x10aec59d0>
+    │    └ <nc_py_api.nextcloud.Nextcloud object at 0x10a9c8920>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x1095cdca0>
+
+AttributeError: 'FilesAPI' object has no attribute 'info'
+2025-05-08 17:30:46.083 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x10938ee80>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x109233290>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x109233290>
+           └ <function get_command at 0x107746d40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x107744fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x107744540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10937e3f0>
+         │    └ <function Command.invoke at 0x1069de7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+           │   │      │    │           └ <click.core.Context object at 0x10937e3f0>
+           │   │      │    └ <function upload at 0x10938f1a0>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x1069dd120>
+           └ <click.core.Context object at 0x10937e3f0>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('test_ncuploader_config.yaml'), 'dry_run': False, 'verbose': True}
+           └ <function upload at 0x10938ef20>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 62, in upload
+    uploader.process_uploads()
+    │        └ <function NextcloudUploader.process_uploads at 0x10938eca0>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x1092318b0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 255, in process_uploads
+    self._process_upload_item(item)
+    │    │                    └ UploadItem(local_path=PosixPath('/var/folders/jx/6qlh4zz95c744fgw9jx2s75w0000gn/T/tmpr_8o9uyp/file1.txt'), remote_path='/test...
+    │    └ <function NextcloudUploader._process_upload_item at 0x10938ed40>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x1092318b0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 286, in _process_upload_item
+    success = self.upload_file(local_path, remote_path)
+              │    │           │           └ '/test-upload/file1.txt'
+              │    │           └ PosixPath('/var/folders/jx/6qlh4zz95c744fgw9jx2s75w0000gn/T/tmpr_8o9uyp/file1.txt')
+              │    └ <function NextcloudUploader.upload_file at 0x10938eac0>
+              └ <ncuploader.uploader.NextcloudUploader object at 0x1092318b0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 161, in upload_file
+    if not self.ensure_remote_dir_exists(remote_dir):
+           │    │                        └ '/test-upload'
+           │    └ <function NextcloudUploader.ensure_remote_dir_exists at 0x10938ea20>
+           └ <ncuploader.uploader.NextcloudUploader object at 0x1092318b0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 119, in ensure_remote_dir_exists
+    self.nc.files.info(remote_path)
+    │    │  │          └ '/test-upload'
+    │    │  └ <nc_py_api.files.files.FilesAPI object at 0x109479be0>
+    │    └ <nc_py_api.nextcloud.Nextcloud object at 0x108eb2480>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x1092318b0>
+
+AttributeError: 'FilesAPI' object has no attribute 'info'
+2025-05-08 17:33:22.509 | DEBUG    | ncuploader.index:save_index:163 - Index saved to test_ncuploader_index.json
+2025-05-08 17:37:11.909 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/file.txt
+2025-05-08 17:37:11.909 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/directory
+2025-05-08 17:37:11.910 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/another/file.pdf
+2025-05-08 17:37:58.138 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/file.txt
+2025-05-08 17:37:58.138 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/directory
+2025-05-08 17:37:58.138 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/another/file.pdf
+2025-05-08 17:38:17.775 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/file.txt
+2025-05-08 17:38:17.775 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/directory
+2025-05-08 17:38:17.775 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/another/file.pdf
+2025-05-08 17:38:22.912 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/file.txt
+2025-05-08 17:38:22.913 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/local/directory
+2025-05-08 17:38:22.913 | WARNING  | ncuploader.config:check_local_path:63 - Local path does not exist: /path/to/another/file.pdf
+2025-05-08 17:52:45.779 | DEBUG    | ncuploader.index:save_index:163 - Index saved to test_ncuploader_index.json
+2025-05-08 18:05:24.051 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x11165bec0>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x10ef7c710>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x10ef7c710>
+           └ <function get_command at 0x10f9aed40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x10f9acfe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x10f9ac540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x11164b3e0>
+         │    └ <function Command.invoke at 0x10eaae7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'test_ncuploader_config.yaml', 'dry_run': False, 'verbose': False}
+           │   │      │    │           └ <click.core.Context object at 0x11164b3e0>
+           │   │      │    └ <function upload at 0x11167c220>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x10eaad120>
+           └ <click.core.Context object at 0x11164b3e0>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'test_ncuploader_config.yaml', 'dry_run': False, 'verbose': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('test_ncuploader_config.yaml'), 'dry_run': False, 'verbose': False}
+           └ <function upload at 0x11165bf60>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 53, in upload
+    config_obj = load_config(config)
+                 │           └ PosixPath('test_ncuploader_config.yaml')
+                 └ <function load_config at 0x10fe5c9a0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/config.py", line 195, in load_config
+    return Config.model_validate(yaml_config)
+           │      │              └ {'nextcloud': {'url': 'https://next-qa.sdsz.dev/', 'username': 'toolbox-robot', 'password': 'ubY]s7y$A{M['}, 'upload': {'sour...
+           │      └ <classmethod(<function BaseModel.model_validate at 0x110121d00>)>
+           └ <class 'ncuploader.config.Config'>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/pydantic/main.py", line 703, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           │   │                      └ <method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>
+           │   └ SchemaValidator(title="Config", validator=Model(
+           │         ModelValidator {
+           │             revalidate: Never,
+           │             validator: ModelFiel...
+           └ <class 'ncuploader.config.Config'>
+
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Config
+uploads
+  Field required [type=missing, input_value={'nextcloud': {'url': 'ht...after_upload': '7d'}}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-05-08 18:05:24.826 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x10b65bec0>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x10b56f320>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x10b56f320>
+           └ <function get_command at 0x1099aed40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x1099acfe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x1099ac540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10b64a360>
+         │    └ <function Command.invoke at 0x108aae7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+           │   │      │    │           └ <click.core.Context object at 0x10b64a360>
+           │   │      │    └ <function upload at 0x10b67c220>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x108aad120>
+           └ <click.core.Context object at 0x10b64a360>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('test_ncuploader_config.yaml'), 'dry_run': False, 'verbose': True}
+           └ <function upload at 0x10b65bf60>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 53, in upload
+    config_obj = load_config(config)
+                 │           └ PosixPath('test_ncuploader_config.yaml')
+                 └ <function load_config at 0x109e5c9a0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/config.py", line 195, in load_config
+    return Config.model_validate(yaml_config)
+           │      │              └ {'nextcloud': {'url': 'https://next-qa.sdsz.dev/', 'username': 'toolbox-robot', 'password': 'ubY]s7y$A{M['}, 'upload': {'sour...
+           │      └ <classmethod(<function BaseModel.model_validate at 0x10a121d00>)>
+           └ <class 'ncuploader.config.Config'>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/pydantic/main.py", line 703, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           │   │                      └ <method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>
+           │   └ SchemaValidator(title="Config", validator=Model(
+           │         ModelValidator {
+           │             revalidate: Never,
+           │             validator: ModelFiel...
+           └ <class 'ncuploader.config.Config'>
+
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Config
+uploads
+  Field required [type=missing, input_value={'nextcloud': {'url': 'ht...after_upload': '7d'}}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-05-08 18:05:27.621 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x105b5bec0>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x10597c410>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x10597c410>
+           └ <function get_command at 0x103eaed40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x103eacfe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x103eac540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x105a1aa20>
+         │    └ <function Command.invoke at 0x102fae7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+           │   │      │    │           └ <click.core.Context object at 0x105a1aa20>
+           │   │      │    └ <function upload at 0x105b7c220>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x102fad120>
+           └ <click.core.Context object at 0x105a1aa20>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('test_ncuploader_config.yaml'), 'dry_run': False, 'verbose': True}
+           └ <function upload at 0x105b5bf60>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 53, in upload
+    config_obj = load_config(config)
+                 │           └ PosixPath('test_ncuploader_config.yaml')
+                 └ <function load_config at 0x10435c9a0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/config.py", line 195, in load_config
+    return Config.model_validate(yaml_config)
+           │      │              └ {'nextcloud': {'url': 'https://next-qa.sdsz.dev/', 'username': 'toolbox-robot', 'password': 'ubY]s7y$A{M['}, 'upload': {'sour...
+           │      └ <classmethod(<function BaseModel.model_validate at 0x104b9dd00>)>
+           └ <class 'ncuploader.config.Config'>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/pydantic/main.py", line 703, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           │   │                      └ <method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>
+           │   └ SchemaValidator(title="Config", validator=Model(
+           │         ModelValidator {
+           │             revalidate: Never,
+           │             validator: ModelFiel...
+           └ <class 'ncuploader.config.Config'>
+
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Config
+uploads
+  Field required [type=missing, input_value={'nextcloud': {'url': 'ht...after_upload': '7d'}}]}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-05-08 18:08:04.746 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x108c93ec0>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x105cf73e0>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x105cf73e0>
+           └ <function get_command at 0x106ff2d40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x106ff0fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x106ff0540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x108c836b0>
+         │    └ <function Command.invoke at 0x1062da7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'test_ncuploader_config.yaml', 'dry_run': False, 'verbose': False}
+           │   │      │    │           └ <click.core.Context object at 0x108c836b0>
+           │   │      │    └ <function upload at 0x108cb4220>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x1062d9120>
+           └ <click.core.Context object at 0x108c836b0>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'test_ncuploader_config.yaml', 'dry_run': False, 'verbose': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('test_ncuploader_config.yaml'), 'dry_run': False, 'verbose': False}
+           └ <function upload at 0x108c93f60>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 53, in upload
+    config_obj = load_config(config)
+                 │           └ PosixPath('test_ncuploader_config.yaml')
+                 └ <function load_config at 0x10747c9a0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/config.py", line 195, in load_config
+    return Config.model_validate(yaml_config)
+           │      │              └ {'nextcloud': {'url': 'https://next-qa.sdsz.dev/', 'username': 'toolbox-robot', 'password': 'ubY]s7y$A{M['}, 'uploads': {'sou...
+           │      └ <classmethod(<function BaseModel.model_validate at 0x107741d00>)>
+           └ <class 'ncuploader.config.Config'>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/pydantic/main.py", line 703, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           │   │                      └ <method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>
+           │   └ SchemaValidator(title="Config", validator=Model(
+           │         ModelValidator {
+           │             revalidate: Never,
+           │             validator: ModelFiel...
+           └ <class 'ncuploader.config.Config'>
+
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Config
+uploads
+  Input should be a valid list [type=list_type, input_value={'source_dir': '/var/fold..._after_upload': '7d'}}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/list_type
+2025-05-08 18:08:05.545 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x10ea3fec0>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x10cb08710>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x10cb08710>
+           └ <function get_command at 0x10cda2d40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x10cda0fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x10cda0540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10ea2f590>
+         │    └ <function Command.invoke at 0x10bea67a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+           │   │      │    │           └ <click.core.Context object at 0x10ea2f590>
+           │   │      │    └ <function upload at 0x10ea60220>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x10bea5120>
+           └ <click.core.Context object at 0x10ea2f590>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('test_ncuploader_config.yaml'), 'dry_run': False, 'verbose': True}
+           └ <function upload at 0x10ea3ff60>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 53, in upload
+    config_obj = load_config(config)
+                 │           └ PosixPath('test_ncuploader_config.yaml')
+                 └ <function load_config at 0x10d22c9a0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/config.py", line 195, in load_config
+    return Config.model_validate(yaml_config)
+           │      │              └ {'nextcloud': {'url': 'https://next-qa.sdsz.dev/', 'username': 'toolbox-robot', 'password': 'ubY]s7y$A{M['}, 'uploads': {'sou...
+           │      └ <classmethod(<function BaseModel.model_validate at 0x10d4f1d00>)>
+           └ <class 'ncuploader.config.Config'>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/pydantic/main.py", line 703, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           │   │                      └ <method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>
+           │   └ SchemaValidator(title="Config", validator=Model(
+           │         ModelValidator {
+           │             revalidate: Never,
+           │             validator: ModelFiel...
+           └ <class 'ncuploader.config.Config'>
+
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Config
+uploads
+  Input should be a valid list [type=list_type, input_value={'source_dir': '/var/fold..._after_upload': '7d'}}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/list_type
+2025-05-08 18:08:08.309 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x10f80bec0>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x10cc28f20>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x10cc28f20>
+           └ <function get_command at 0x10db5ed40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x10db5cfe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x10db5c540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x10f7fb410>
+         │    └ <function Command.invoke at 0x10cdd67a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+           │   │      │    │           └ <click.core.Context object at 0x10f7fb410>
+           │   │      │    └ <function upload at 0x10f82c220>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x10cdd5120>
+           └ <click.core.Context object at 0x10f7fb410>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('test_ncuploader_config.yaml'), 'dry_run': False, 'verbose': True}
+           └ <function upload at 0x10f80bf60>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 53, in upload
+    config_obj = load_config(config)
+                 │           └ PosixPath('test_ncuploader_config.yaml')
+                 └ <function load_config at 0x10e00c9a0>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/config.py", line 195, in load_config
+    return Config.model_validate(yaml_config)
+           │      │              └ {'nextcloud': {'url': 'https://next-qa.sdsz.dev/', 'username': 'toolbox-robot', 'password': 'ubY]s7y$A{M['}, 'uploads': {'sou...
+           │      └ <classmethod(<function BaseModel.model_validate at 0x10e2d1d00>)>
+           └ <class 'ncuploader.config.Config'>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/pydantic/main.py", line 703, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           │   │                      └ <method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>
+           │   └ SchemaValidator(title="Config", validator=Model(
+           │         ModelValidator {
+           │             revalidate: Never,
+           │             validator: ModelFiel...
+           └ <class 'ncuploader.config.Config'>
+
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Config
+uploads
+  Input should be a valid list [type=list_type, input_value={'source_dir': '/var/fold..._after_upload': '7d'}}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/list_type
+2025-05-08 18:11:42.151 | WARNING  | ncuploader.index:should_delete:50 - Unknown retention unit: s
+2025-05-08 18:11:42.152 | WARNING  | ncuploader.index:should_delete:50 - Unknown retention unit: s
+2025-05-08 18:11:45.462 | WARNING  | ncuploader.index:should_delete:50 - Unknown retention unit: s
+2025-05-08 18:11:45.462 | WARNING  | ncuploader.index:should_delete:50 - Unknown retention unit: s
+2025-05-08 18:11:45.464 | DEBUG    | ncuploader.index:save_index:163 - Index saved to test_ncuploader_index.json
+2025-05-08 18:16:14.554 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x106f94040>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x1040034d0>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x1040034d0>
+           └ <function get_command at 0x1052c6d40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x1052c4fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x1052c4540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x106f22db0>
+         │    └ <function Command.invoke at 0x1043a67a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'test_ncuploader_config.yaml', 'dry_run': False, 'verbose': False}
+           │   │      │    │           └ <click.core.Context object at 0x106f22db0>
+           │   │      │    └ <function upload at 0x106f94360>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x1043a5120>
+           └ <click.core.Context object at 0x106f22db0>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'test_ncuploader_config.yaml', 'dry_run': False, 'verbose': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('test_ncuploader_config.yaml'), 'dry_run': False, 'verbose': False}
+           └ <function upload at 0x106f940e0>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 62, in upload
+    uploader.process_uploads()
+    │        └ <function NextcloudUploader.process_uploads at 0x106f63e20>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x106c57e00>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 258, in process_uploads
+    self._process_upload_item(item)
+    │    │                    └ UploadItem(local_path=PosixPath('/var/folders/jx/6qlh4zz95c744fgw9jx2s75w0000gn/T/tmpfwzxddrp/file1.txt'), remote_path='/test...
+    │    └ <function NextcloudUploader._process_upload_item at 0x106f63ec0>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x106c57e00>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 300, in _process_upload_item
+    self.index.add_entry(local_path, remote_path, retention_dict)
+    │    │     │         │           │            └ {'delete_after_upload': '30d'}
+    │    │     │         │           └ '/test-upload/file1.txt'
+    │    │     │         └ PosixPath('/var/folders/jx/6qlh4zz95c744fgw9jx2s75w0000gn/T/tmpfwzxddrp/file1.txt')
+    │    │     └ <function UploadIndex.add_entry at 0x106f63740>
+    │    └ UploadIndex(entries={'/var/folders/jx/6qlh4zz95c744fgw9jx2s75w0000gn/T/tmp11a3rbw2/file1.txt:/test-upload/file1.txt': IndexEn...
+    └ <ncuploader.uploader.NextcloudUploader object at 0x106c57e00>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/index.py", line 103, in add_entry
+    upload_time=datetime.datetime.now(tz=datetime.UTC),
+                │                        └ <class 'datetime.datetime'>
+                └ <class 'datetime.datetime'>
+
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2025-05-08 18:16:20.226 | ERROR    | ncuploader.cli:upload:66 - An error occurred during upload process
+Traceback (most recent call last):
+
+  File "/Users/dx/SD/ncuploader/.venv/bin/ncuploader", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <function main at 0x110197ec0>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 72, in main
+    app()
+    └ <typer.main.Typer object at 0x10d21c050>
+
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 323, in __call__
+    return get_command(self)(*args, **kwargs)
+           │           │      │       └ {}
+           │           │      └ ()
+           │           └ <typer.main.Typer object at 0x10d21c050>
+           └ <function get_command at 0x10e4fad40>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function TyperCommand.main at 0x10e4f8fe0>
+           └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 677, in main
+    return _main(
+           └ <function _main at 0x10e4f8540>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/core.py", line 195, in _main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x1101865d0>
+         │    └ <function Command.invoke at 0x10d7de7a0>
+         └ <TyperCommand upload>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+           │   │      │    │           └ <click.core.Context object at 0x1101865d0>
+           │   │      │    └ <function upload at 0x1101b8220>
+           │   │      └ <TyperCommand upload>
+           │   └ <function Context.invoke at 0x10d7dd120>
+           └ <click.core.Context object at 0x1101865d0>
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'config': 'test_ncuploader_config.yaml', 'verbose': True, 'dry_run': False}
+                       └ ()
+  File "/Users/dx/SD/ncuploader/.venv/lib/python3.12/site-packages/typer/main.py", line 698, in wrapper
+    return callback(**use_params)
+           │          └ {'config': PosixPath('test_ncuploader_config.yaml'), 'dry_run': False, 'verbose': True}
+           └ <function upload at 0x110197f60>
+
+> File "/Users/dx/SD/ncuploader/ncuploader/cli.py", line 62, in upload
+    uploader.process_uploads()
+    │        └ <function NextcloudUploader.process_uploads at 0x110197ce0>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10fa19a00>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 258, in process_uploads
+    self._process_upload_item(item)
+    │    │                    └ UploadItem(local_path=PosixPath('/var/folders/jx/6qlh4zz95c744fgw9jx2s75w0000gn/T/tmpfwzxddrp/file1.txt'), remote_path='/test...
+    │    └ <function NextcloudUploader._process_upload_item at 0x110197d80>
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10fa19a00>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/uploader.py", line 300, in _process_upload_item
+    self.index.add_entry(local_path, remote_path, retention_dict)
+    │    │     │         │           │            └ {'delete_after_upload': '30d'}
+    │    │     │         │           └ '/test-upload/file1.txt'
+    │    │     │         └ PosixPath('/var/folders/jx/6qlh4zz95c744fgw9jx2s75w0000gn/T/tmpfwzxddrp/file1.txt')
+    │    │     └ <function UploadIndex.add_entry at 0x110197600>
+    │    └ UploadIndex(entries={'/var/folders/jx/6qlh4zz95c744fgw9jx2s75w0000gn/T/tmp11a3rbw2/file1.txt:/test-upload/file1.txt': IndexEn...
+    └ <ncuploader.uploader.NextcloudUploader object at 0x10fa19a00>
+
+  File "/Users/dx/SD/ncuploader/ncuploader/index.py", line 103, in add_entry
+    upload_time=datetime.datetime.now(tz=datetime.UTC),
+                │                        └ <class 'datetime.datetime'>
+                └ <class 'datetime.datetime'>
+
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2025-05-08 18:17:29.479 | ERROR    | ncuploader.uploader:delete_file:245 - Failed to delete /test-upload/short_retention1.txt: [404] Not Found <request: DELETE https://next-qa.sdsz.dev/remote.php/dav/files/toolbox-robot/test-upload/short_retention1.txt>
+2025-05-08 18:17:29.546 | ERROR    | ncuploader.uploader:delete_file:245 - Failed to delete /test-upload/short_retention2.txt: [404] Not Found <request: DELETE https://next-qa.sdsz.dev/remote.php/dav/files/toolbox-robot/test-upload/short_retention2.txt>
+2025-05-08 18:17:33.793 | ERROR    | ncuploader.uploader:delete_file:245 - Failed to delete /test-upload/short_retention1.txt: [404] Not Found <request: DELETE https://next-qa.sdsz.dev/remote.php/dav/files/toolbox-robot/test-upload/short_retention1.txt>
+2025-05-08 18:17:34.415 | ERROR    | ncuploader.uploader:delete_file:245 - Failed to delete /test-upload/short_retention2.txt: [404] Not Found <request: DELETE https://next-qa.sdsz.dev/remote.php/dav/files/toolbox-robot/test-upload/short_retention2.txt>
+2025-05-08 18:17:34.417 | DEBUG    | ncuploader.index:save_index:191 - Index saved to test_ncuploader_index.json
+2025-05-09 09:48:33.935 | ERROR    | ncuploader.uploader:delete_file:245 - Failed to delete /test-upload/short_retention1.txt: [404] Not Found <request: DELETE https://next-qa.sdsz.dev/remote.php/dav/files/toolbox-robot/test-upload/short_retention1.txt>
+2025-05-09 09:48:34.014 | ERROR    | ncuploader.uploader:delete_file:245 - Failed to delete /test-upload/short_retention2.txt: [404] Not Found <request: DELETE https://next-qa.sdsz.dev/remote.php/dav/files/toolbox-robot/test-upload/short_retention2.txt>
+2025-05-09 09:48:38.306 | ERROR    | ncuploader.uploader:delete_file:245 - Failed to delete /test-upload/short_retention1.txt: [404] Not Found <request: DELETE https://next-qa.sdsz.dev/remote.php/dav/files/toolbox-robot/test-upload/short_retention1.txt>
+2025-05-09 09:48:39.049 | ERROR    | ncuploader.uploader:delete_file:245 - Failed to delete /test-upload/short_retention2.txt: [404] Not Found <request: DELETE https://next-qa.sdsz.dev/remote.php/dav/files/toolbox-robot/test-upload/short_retention2.txt>
+2025-05-09 09:48:39.051 | DEBUG    | ncuploader.index:save_index:191 - Index saved to test_ncuploader_index.json

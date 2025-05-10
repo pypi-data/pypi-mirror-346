@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ncuploader"
+version = "0.2.0"
+description = "A CLI tool to upload files and directories to Nextcloud with support for retention policies, dry-run, and tilde expansion for local paths."
+readme = "README.md"
+authors = [
+    {name = "NCUploader Authors", email = "a.v.kolupaev@ya.ru"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Archiving :: Backup",
+    "Topic :: Utilities"
+]
+requires-python = ">=3.12"
+dependencies = [
+    "loguru>=0.7.3",
+    "nc-py-api>=0.20.1",
+    "pydantic>=2.11.4",
+    "python-dotenv>=1.1.0",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.3",
+    "rich>=14.0.0",
+    "typer>=0.15.3",
+]
+[project.urls]
+Homepage = "https://gitverse.ru/avkolupaev/ncuploader"
+
+[project.scripts]
+ncuploader = "ncuploader.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
