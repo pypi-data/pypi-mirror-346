@@ -1,0 +1,9 @@
+brain_proxy/__init__.py,sha256=AYzNulxDCdnSKErWa5mjWOZAFPS8dOUlvXCgPeWyH1A,150
+brain_proxy/brain_proxy.py,sha256=YQ6SCOwngG1wHwiRCMMi8q5plvq0CM2NtnhwP50VkLA,33723
+brain_proxy/brain_proxy_langchain.py,sha256=5rc2ZcMP6QapKUhOUCBztqjwtIEoweORQCqws9adbNg,9575
+brain_proxy/temporal_utils.py,sha256=KbRGJKU51P-zHO8wDyJavpgTVoq9id-I3A2gzG_11uw,2223
+brain_proxy/upstash_adapter.py,sha256=gAOeJPHwtYh9RuMShEXExyU6rC31p18YvDOVs5arIp4,4840
+brain_proxy-0.1.5.dist-info/METADATA,sha256=qPErEhkfLP-NGQpTgv3KZV5iHge7ZxbFO6dMdL19AxY,24375
+brain_proxy-0.1.5.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+brain_proxy-0.1.5.dist-info/top_level.txt,sha256=-MwlzkQ7GD6uVJooCwizQv6vTzYoJq7_NCyVFU8iNds,12
+brain_proxy-0.1.5.dist-info/RECORD,,
