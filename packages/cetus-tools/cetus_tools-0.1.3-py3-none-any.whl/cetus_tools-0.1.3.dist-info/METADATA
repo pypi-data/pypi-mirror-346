@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: cetus_tools
+Version: 0.1.3
+Summary: Library for python tools used in Cetus developments
+Author: Camilo Alaguna
+Author-email: camilo.alaguna@itrmachines.com
+Keywords: Cetus,Binance,Bitso,Telegram,Public API
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.31.0
+
+# cetus-tools-py
+Library for python tools used in Cetus developments
