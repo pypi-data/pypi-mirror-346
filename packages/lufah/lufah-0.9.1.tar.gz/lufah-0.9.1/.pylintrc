@@ -1,0 +1,21 @@
+[MESSAGES CONTROL]
+disable=
+    bare-except,
+    broad-exception-caught,
+    broad-exception-raised,
+    chained-comparison,
+    fixme,
+    missing-function-docstring,
+    too-many-branches,
+    too-many-instance-attributes,
+    too-many-lines,
+    too-many-locals,
+    too-many-return-statements,
+    too-many-statements,
+    unused-import,
+    unused-wildcard-import,
+    wildcard-import,
+    R0801  # Similar lines in files
+
+[FORMAT]
+indent-string='    '
