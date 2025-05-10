@@ -1,0 +1,11 @@
+io/__init__.py,sha256=UaNfWlZPWKhblNZo2D2vYiJs4ZSpi5pOLzIAnCuP5mE,234
+io/diann_loader.py,sha256=CB1-Ec9vaDt7B2DuPBOxhNIcdUBs9paRbIzs_em-Z2g,2332
+io/fragpipe_loader.py,sha256=dPkZzdWe2X2-aiUI2B1AUFqqVWe55HpjCcrT09EdxKY,3088
+io/maxquant_loader.py,sha256=fUhd7Q9m7Pfqt4EMV9wc-V0P5kdVdqR24vsXAt-HX6c,3114
+io/mztab_loader.py,sha256=GROk0Cv4pAErhTekRs1LAswXkJ4rRkG1E9huuqY6pYQ,1840
+io/test_loaders.py,sha256=IoxPsZkHVfJQOwJWEHajItVoMXTOZoUfKGF9vbblSGw,744
+protdata-0.1.0.dist-info/licenses/LICENSE,sha256=VKZRFKsnJP4_hBYDK3imU1zJCJ7oVzUEmBDOckhySFs,1116
+protdata-0.1.0.dist-info/METADATA,sha256=SU6252IkZRLfKZ5FNV8A1qoTMVHcjHZ3fKcrwJfQnRo,1276
+protdata-0.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+protdata-0.1.0.dist-info/top_level.txt,sha256=OfDt2rw7sJoV0Zxjiiuqx19W0dVQyP53izxE31dz0p8,3
+protdata-0.1.0.dist-info/RECORD,,
