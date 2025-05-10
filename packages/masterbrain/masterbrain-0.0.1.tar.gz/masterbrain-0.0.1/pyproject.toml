@@ -1,0 +1,17 @@
+[project]
+name = "masterbrain"
+version = "0.0.1"
+description = "Airalogy MasterBrain"
+readme = "README.md"
+authors = [{ name = "Airalogy MasterBrain Team" }]
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+]
+license = "Apache-2.0"
+license-files = ['LICENSE']
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
