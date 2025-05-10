@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+bsb_adv_monitor.egg-info/PKG-INFO
+bsb_adv_monitor.egg-info/SOURCES.txt
+bsb_adv_monitor.egg-info/dependency_links.txt
+bsb_adv_monitor.egg-info/entry_points.txt
+bsb_adv_monitor.egg-info/requires.txt
+bsb_adv_monitor.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+sp = bsb_adv_monitor.cli:main

@@ -1,0 +1,6 @@
+flask
+pyngrok
+requests
+keyboard
+opencv-python
+Pillow
