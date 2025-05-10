@@ -1,0 +1,13 @@
+from __future__ import annotations
+from .organization import MaleoIdentityOrganizationClientParametersTransfers
+from .user import MaleoIdentityUserClientParametersTransfers
+from .user_profile import MaleoIdentityUserProfileClientParametersTransfers
+from .user_system_role import MaleoIdentityUserSystemRoleClientParametersTransfers
+from .user_organization import MaleoIdentityUserOrganizationClientParametersTransfers
+
+class MaleoIdentityClientParametersTransfers:
+    Organization = MaleoIdentityOrganizationClientParametersTransfers
+    User = MaleoIdentityUserClientParametersTransfers
+    UserProfile = MaleoIdentityUserProfileClientParametersTransfers
+    UserSystemRole = MaleoIdentityUserSystemRoleClientParametersTransfers
+    UserOrganization = MaleoIdentityUserOrganizationClientParametersTransfers
