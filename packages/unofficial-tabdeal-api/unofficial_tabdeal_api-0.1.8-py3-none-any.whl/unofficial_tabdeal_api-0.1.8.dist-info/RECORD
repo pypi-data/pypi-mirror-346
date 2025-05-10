@@ -1,0 +1,13 @@
+unofficial_tabdeal_api/__init__.py,sha256=RUyggfF1U7t7PpQre0JSYA_LBNI8RUNJA7LKzx8xyuU,364
+unofficial_tabdeal_api/authorization.py,sha256=_QITc_fRVTdnK2wm6YqHspAKcWtp66sekLgUb4qjv1g,3850
+unofficial_tabdeal_api/base.py,sha256=-KBMCehKB3Q1u9fUHVsNCNyeEqaGMzPEzDFx-PaO4PM,4993
+unofficial_tabdeal_api/constants.py,sha256=IZSJ8mRrq9oo3jnRpN6zPNEinDIz221eCLwi5o_U8Ek,1890
+unofficial_tabdeal_api/enums.py,sha256=xQkVEJaV5ObAwe6tPGD04sjvJKj0HtK7Da0AA867I-U,223
+unofficial_tabdeal_api/exceptions.py,sha256=s-yMobLvnGzzUrfDu8e767s6PRr3VU1rRP9mW8qKmTQ,3592
+unofficial_tabdeal_api/margin.py,sha256=C_9C__pLkIh88Mscgs3ZO91OgPbdD9rfQi1Dhb8iaJs,10975
+unofficial_tabdeal_api/tabdeal_client.py,sha256=rnq-sBG0sCgNLKOaeT4nSEUfeowNI5h4i9F7SThqB54,285
+unofficial_tabdeal_api/utils.py,sha256=PLXAodZgkFAndSs9O95tEKIyejaHGmKFDQHKAvdzLGM,2988
+unofficial_tabdeal_api-0.1.8.dist-info/LICENSE,sha256=1vaN-cL16EPrBNBNQYP8Zh7a3CQExqlyzVDlDuzto44,1066
+unofficial_tabdeal_api-0.1.8.dist-info/METADATA,sha256=fPp-Rwb_FU276Dwf4MtPEE0QLrH7WPYl1ZK0cg-eSM0,11561
+unofficial_tabdeal_api-0.1.8.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+unofficial_tabdeal_api-0.1.8.dist-info/RECORD,,
