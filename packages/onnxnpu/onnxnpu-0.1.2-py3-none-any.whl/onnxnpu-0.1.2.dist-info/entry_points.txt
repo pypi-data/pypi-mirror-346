@@ -1,0 +1,3 @@
+[console_scripts]
+onnxnpu = onnxnpu.cli:main
+onpu = onnxnpu.cli:main
