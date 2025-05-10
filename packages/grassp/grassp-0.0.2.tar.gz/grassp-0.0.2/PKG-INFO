@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: grassp
+Version: 0.0.2
+Summary: A python package to facilitate Organellar profiling
+License: BSD 3-Clause License
+Project-URL: homepage, https://github.com/czbiohub/some-package
+Project-URL: documentation, https://github.com/czbiohub/some-package
+Project-URL: repository, https://github.com/czbiohub/some-package
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: <4.0,>=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scanpy[leiden]
+Requires-Dist: protdata
+Requires-Dist: anndata
+Requires-Dist: scipy
+Requires-Dist: networkx
+Requires-Dist: matplotlib
+Requires-Dist: umap-learn
+Requires-Dist: pysankeybeta
+Requires-Dist: gseapy
+Requires-Dist: markov_clustering
+Provides-Extra: dev
+Requires-Dist: black~=22.3; extra == "dev"
+Requires-Dist: flake8~=5.0; extra == "dev"
+Requires-Dist: isort~=5.10; extra == "dev"
+Requires-Dist: pre-commit~=2.19; extra == "dev"
+Requires-Dist: pylint~=2.14; extra == "dev"
+Requires-Dist: pytest~=7.1; extra == "dev"
+Provides-Extra: notebook
+Requires-Dist: jupyterlab; extra == "notebook"
+Requires-Dist: matplotlib; extra == "notebook"
+Provides-Extra: build
+Requires-Dist: twine; extra == "build"
+Requires-Dist: build; extra == "build"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints; extra == "docs"
+Requires-Dist: scanpydoc[theme,typehints]>=0.15.1; extra == "docs"
+Requires-Dist: myst_parser; extra == "docs"
+
+# grassp
+A python package for "GRaph-based Analysis of Subcellular/Spatial Proteomics"
+
+## [Documentation](https://onsite.czbiohub.org/compbio/grassp)

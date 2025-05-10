@@ -1,0 +1,143 @@
+[build-system]
+requires = [
+  "setuptools >= 42",
+  "wheel",
+  "setuptools_scm[toml]>=3.4"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "no-local-version"
+write_to = "grassp/_version.py"
+fallback_version = "0.0.1"
+
+[project]
+name =  "grassp"
+description = "A python package to facilitate Organellar profiling"
+readme = "README.md"
+license = {text = "BSD 3-Clause License"}
+requires-python = ">=3.7, <4.0"
+
+# the dynamically determined project metadata attributes
+dynamic = ["version"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+# list package dependencies here
+dependencies = [
+    "numpy",
+    "pandas",
+    "scanpy[leiden]",
+    "protdata",
+#    "alphastats",
+    "anndata",
+    "scipy",
+    "networkx",
+#    "scikit-learn",
+    "matplotlib",
+    "umap-learn",
+    "pysankeybeta",
+    "gseapy",
+    "markov_clustering",
+]
+
+
+[project.optional-dependencies]
+# note that dev dependencies are only pinned to major versions
+dev = [
+    "black~=22.3",
+    "flake8~=5.0",
+    "isort~=5.10",
+    "pre-commit~=2.19",
+    "pylint~=2.14",
+    "pytest~=7.1",
+]
+notebook = [
+    "jupyterlab",
+    "matplotlib",
+]
+build = [
+    "twine",
+    "build",
+]
+docs = [
+    "sphinx",
+    "sphinx-autodoc-typehints",
+    "scanpydoc[theme,typehints] >=0.15.1",
+    "myst_parser",
+]
+
+[project.scripts]
+some-cli = "some_package.cli.some_cli:main"
+
+
+[project.urls]
+homepage = "https://github.com/czbiohub/some-package"
+documentation = "https://github.com/czbiohub/some-package"
+repository = "https://github.com/czbiohub/some-package"
+
+
+[tool.setuptools]
+# Use find_namespace_packages to discover all packages
+packages = ["grassp"]
+
+# allow use of __file__ to load data files included in the package
+zip-safe = false
+
+# Don't include LICENSE as a license-file in the metadata
+license-files = []
+
+
+[tool.black]
+line-length = 95
+target-version = ['py310', 'py311', 'py312']
+include = '\.pyi?$'
+skip-string-normalization = true
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | build
+    | dist
+    | notebooks
+    | ignore
+  )/
+  | some/specific/module.py
+)
+'''
+
+
+[tool.isort]
+profile = "black"
+line_length = 95
+lines_between_types = 1
+default_section = "THIRDPARTY"
+no_lines_before = ["STDLIB",]
+ensure_newline_before_comments = true
+
+
+[tool.pylint]
+# disable all conventions, refactors, warnings (C, R, W) and the following:
+# E0401: unable-to-import (since it is possible that no one environment has all required packages)
+# E1136: unsubscriptable-object (anecdotal false positives for numpy objects)
+disable = ["C", "R", "W", "unsubscriptable-object", "import-error"]
+msg-template = "{line},{column},{category},{symbol}:{msg}"
+reports = "n"
+
+
+[tool.pytest.ini_options]
+log_cli = false
