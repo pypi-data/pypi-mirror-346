@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: wristband
+Version: 4.0.0
+Summary: SDK for integrating your Python FastAPI application with Wristband. Handles user authentication and token management.
+License: MIT
+Author: fddiferd
+Author-email: fddiferd@gmail.com
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: cryptography (>=44.0.3,<45.0.0)
+Requires-Dist: fastapi (>=0.115.12,<0.116.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: twine (>=6.1.0,<7.0.0)
+Description-Content-Type: text/markdown
+
+# fastapi-auth
+SDK for integrating your Python FastAPI application with Wristband. Handles user authentication and token management.
+
+
+1. Build package
+```bash
+poetry build
+```
+2. Set token 
+```bash
+poetry config pypi-token.pypi <your-token>
+```
