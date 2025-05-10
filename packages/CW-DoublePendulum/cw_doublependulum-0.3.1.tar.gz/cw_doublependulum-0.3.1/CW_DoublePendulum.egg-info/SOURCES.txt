@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+CWDoublePendulum/__init__.py
+CWDoublePendulum/manualRun.py
+CWDoublePendulum/sim.py
+CW_DoublePendulum.egg-info/PKG-INFO
+CW_DoublePendulum.egg-info/SOURCES.txt
+CW_DoublePendulum.egg-info/dependency_links.txt
+CW_DoublePendulum.egg-info/entry_points.txt
+CW_DoublePendulum.egg-info/requires.txt
+CW_DoublePendulum.egg-info/top_level.txt
