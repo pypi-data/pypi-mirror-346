@@ -1,0 +1,15 @@
+Licence
+README.md
+setup.py
+complexity_analyzer/__init__.py
+complexity_analyzer/analyzer.py
+complexity_analyzer/cli.py
+complexity_analyzer/profiler.py
+complexity_analyzer/utils.py
+complexity_analyzer.egg-info/PKG-INFO
+complexity_analyzer.egg-info/SOURCES.txt
+complexity_analyzer.egg-info/dependency_links.txt
+complexity_analyzer.egg-info/entry_points.txt
+complexity_analyzer.egg-info/requires.txt
+complexity_analyzer.egg-info/top_level.txt
+tests/test_analyzer.py

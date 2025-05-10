@@ -1,0 +1,145 @@
+# Complexity Analyzer
+
+A Python module to analyze time and space complexity of functions using static analysis and runtime profiling, with visualization via graphs.
+
+## Features
+- **Static Analysis**: Infers complexity from code structure (e.g., loops, recursion).
+- **Profiling**: Measures actual time and memory usage across input sizes.
+- **Visualization**: Plots time and space complexity graphs using Matplotlib.
+- **Command-Line Interface**: Analyze algorithms directly from the terminal.
+
+## Installation
+```bash
+pip install complexity-analyzer
+```
+
+## Quick Start
+```python
+from complexity_analyzer import complexity
+
+@complexity
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+
+# Run with sample data
+data = [5, 3, 8, 6, 7, 2]
+sorted_data = bubble_sort(data)
+# The decorator will automatically:
+# 1. Print the static analysis complexity
+# 2. Run profiling with varying input sizes
+# 3. Display complexity graphs
+```
+
+## Usage
+
+### As a Decorator
+The simplest way to use Complexity Analyzer is as a decorator:
+
+```python
+from complexity_analyzer import complexity
+
+@complexity
+def your_function(input_data):
+    # Your algorithm here
+    return result
+```
+
+### Manual Analysis
+You can also analyze code directly:
+
+```python
+from complexity_analyzer import analyze_code
+
+code = """
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+"""
+
+result = analyze_code(code)
+print(result)  # Outputs: "Time Complexity: O(log n), Space Complexity: O(1)"
+```
+
+### Advanced Usage
+
+#### Custom Input Sizes
+You can customize the input sizes used for profiling:
+
+```python
+from complexity_analyzer import complexity
+
+@complexity(input_sizes=[10, 50, 100, 500, 1000])
+def your_function(input_data):
+    # Your algorithm here
+    return result
+```
+
+#### Disable Visualization
+If you don't want to display the graphs automatically:
+
+```python
+from complexity_analyzer import complexity
+
+@complexity(visualize=False)
+def your_function(input_data):
+    # Your algorithm here
+    return result
+```
+
+#### Silent Mode
+For silent operation without any output:
+
+```python
+from complexity_analyzer import complexity
+
+@complexity(verbose=False, visualize=False)
+def your_function(input_data):
+    # Your algorithm here
+    return result
+```
+
+## Command-Line Interface
+
+The package provides a command-line interface for quick analysis of Python code:
+
+```bash
+# Analyze code directly
+complexity-analyzer --code "def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr"
+
+# Analyze a specific function in a file
+complexity-analyzer --file my_algorithm.py --function bubble_sort
+
+# Run and profile a function
+complexity-analyzer --file my_algorithm.py --function bubble_sort --run
+
+# Run with custom input sizes and save the plot
+complexity-analyzer --file my_algorithm.py --function bubble_sort --run --input-sizes 50 500 5000 --save-plot complexity_plot.png
+
+# Analyze all functions in a file
+complexity-analyzer --file my_algorithm.py --analyze-all
+```
+
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
