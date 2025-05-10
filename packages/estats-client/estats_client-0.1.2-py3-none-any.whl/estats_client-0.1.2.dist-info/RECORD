@@ -1,0 +1,9 @@
+estats_client/__init__.py,sha256=_KEk5gkBX-aI4sdr8kOL8g_xSUyNSYvHDEnGJL22leU,2934
+estats_client/py.typed,sha256=8ZJUsxZiuOy1oJeVhsTWQhTG_6pTVHVXk5hJL79ebTk,25
+estats_client/models/catalog.py,sha256=SU4ONU2oPIawLFNvCImZPQHSt2gz7g3S-73dZ6qJ0v0,1594
+estats_client/models/client.py,sha256=lsg68wu_b4rTz2Gbi4bMNlQ2DlXxZTQWI15d4HNB5oc,3730
+estats_client/models/result.py,sha256=e0VKdYjjL23Nv2JHx8UkZtB8iy4ByrPZtfqd29-RVxQ,5000
+estats_client/models/result_get_catalog.py,sha256=LWGfHeRlZsuaIKRrHLtLuUic4coVU16hzDuwpGc0QI0,4478
+estats_client-0.1.2.dist-info/METADATA,sha256=Z_3S_Hosm4DOV2GU5LZluvl0fFUG2Aqfbo34VuQlR2I,12658
+estats_client-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+estats_client-0.1.2.dist-info/RECORD,,
