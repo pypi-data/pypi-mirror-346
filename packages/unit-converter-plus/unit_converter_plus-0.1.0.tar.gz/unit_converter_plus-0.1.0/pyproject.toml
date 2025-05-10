@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "unit-converter-plus"
+version = "0.1.0"
+description = "A comprehensive unit conversion library for scientific, engineering and everyday calculations"
+authors = ["Mohamad Ibrahim <mhmdmohamad501@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
