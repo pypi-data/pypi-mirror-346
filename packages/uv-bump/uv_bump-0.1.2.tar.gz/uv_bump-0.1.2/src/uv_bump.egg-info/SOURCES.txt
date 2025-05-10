@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/uv_bump/__init__.py
+src/uv_bump/cli.py
+src/uv_bump/main.py
+src/uv_bump.egg-info/PKG-INFO
+src/uv_bump.egg-info/SOURCES.txt
+src/uv_bump.egg-info/dependency_links.txt
+src/uv_bump.egg-info/entry_points.txt
+src/uv_bump.egg-info/top_level.txt
+tests/test_main.py
