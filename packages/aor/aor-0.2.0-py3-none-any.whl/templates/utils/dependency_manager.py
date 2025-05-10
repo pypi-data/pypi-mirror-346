@@ -1,0 +1,153 @@
+"""
+Dependency management for AI-on-Rails templates.
+"""
+
+import subprocess
+from pathlib import Path
+from typing import Set, Dict, Any, List, Optional
+
+
+class DependencyManager:
+    """
+    Manages dependencies for templates.
+    """
+
+    def __init__(
+        self, ui, default_requirements_path: Path = Path("requirements.txt")
+    ):
+        """
+        Initialize dependency manager.
+
+        Args:
+            ui: UI instance for displaying messages
+            default_requirements_path: Default path to requirements.txt file
+        """
+        self.default_requirements_path = default_requirements_path
+        self.ui = ui
+
+    def update_requirements(
+        self, dependencies: Set[str], requirements_path: Path = Path("requirements.txt")
+    ) -> Set[str]:
+        """
+        Update requirements.txt with new dependencies.
+
+        Args:
+            dependencies: Set of dependencies to add
+            requirements_path: Path to requirements.txt file
+
+        Returns:
+            Set of newly added dependencies
+        """
+        # Read existing dependencies if file exists
+        existing_dependencies = set()
+        if requirements_path.exists():
+            with open(requirements_path, "r", encoding="utf-8") as f:
+                existing_dependencies = set(line.strip() for line in f if line.strip())
+
+        # Add new unique dependencies
+        new_dependencies = dependencies - existing_dependencies
+        all_dependencies = existing_dependencies.union(dependencies)
+
+        # Write updated requirements.txt
+        with open(requirements_path, "w", encoding="utf-8") as f:
+            for dependency in sorted(all_dependencies):
+                f.write(f"{dependency}\n")
+
+        self.ui.debug(
+            f"Updated requirements file at {requirements_path} with new dependencies: {new_dependencies}"
+        )
+
+        if new_dependencies:
+            self.ui.success(
+                f"Added {len(new_dependencies)} new dependencies to {requirements_path}"
+            )
+            for dep in sorted(new_dependencies):
+                self.ui.info(f"  - {dep}")
+
+        return new_dependencies
+
+    def install_dependencies(
+        self, dependencies: Set[str], use_poetry: bool = True
+    ) -> Dict[str, List]:
+        """
+        Install dependencies using pip or poetry.
+
+        Args:
+            dependencies: Set of dependencies to install
+            use_poetry: Whether to use poetry instead of pip
+
+        Returns:
+            Dictionary with installed and failed dependencies
+        """
+        results = {"installed": [], "failed": []}
+
+        self.ui.section("Installing Dependencies")
+        progress, task_id = self.ui.start_progress(
+            f"Installing {len(dependencies)} dependencies", total=len(dependencies)
+        )
+
+        for dependency in dependencies:
+            try:
+                self.ui.update_progress(0, f"Installing {dependency}")
+
+                if use_poetry:
+                    result = subprocess.run(
+                        ["poetry", "add", dependency], capture_output=True, text=True
+                    )
+                else:
+                    result = subprocess.run(
+                        ["pip", "install", dependency], capture_output=True, text=True
+                    )
+
+                if result.returncode == 0:
+                    results["installed"].append(dependency)
+                    self.ui.update_progress(1, f"Installed {dependency}")
+                else:
+                    results["failed"].append(
+                        {"dependency": dependency, "error": result.stderr}
+                    )
+                    self.ui.warning(
+                        f"Failed to install {dependency}: {result.stderr}"
+                    )
+
+            except Exception as e:
+                results["failed"].append({"dependency": dependency, "error": str(e)})
+                self.ui.error(f"Error installing {dependency}: {str(e)}")
+
+        self.ui.stop_progress("Installation complete")
+
+        if results["installed"]:
+            self.ui.success(
+                f"Successfully installed {len(results['installed'])} dependencies"
+            )
+
+        if results["failed"]:
+            self.ui.error(
+                f"Failed to install {len(results['failed'])} dependencies"
+            )
+
+        return results
+
+    def _read_requirements(self, path: Path) -> Set[str]:
+        """Read requirements from file."""
+        if not path.exists():
+            return set()
+
+        with open(path, "r", encoding="utf-8") as f:
+            return set(
+                line.strip() for line in f if line.strip() and not line.startswith("#")
+            )
+
+    def _write_requirements(self, path: Path, dependencies: Set[str]) -> None:
+        """Write requirements to file."""
+        path.parent.mkdir(parents=True, exist_ok=True)
+
+        with open(path, "w", encoding="utf-8") as f:
+            # Write header comment
+            f.write("# Auto-generated by AI-on-Rails\n\n")
+
+            # Write sorted dependencies
+            for dependency in sorted(dependencies):
+                f.write(f"{dependency}\n")
+
+        self.ui.success(f"Updated requirements file at {path}")

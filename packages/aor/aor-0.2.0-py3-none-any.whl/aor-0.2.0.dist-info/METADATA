@@ -1,0 +1,106 @@
+Metadata-Version: 2.4
+Name: aor
+Version: 0.2.0
+Summary: AI-on-Rails: A Python library for prototyping and publishing AI applications with guardrails.
+Project-URL: Homepage, https://aionrails.com
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: boto3>=1.37.32
+Requires-Dist: click>=8.1.8
+Requires-Dist: fastjsonschema>=2.21.1
+Requires-Dist: poetry>=2.1.2
+Requires-Dist: requests>=2.32.3
+Requires-Dist: requests-toolbelt>=1.0.0
+Requires-Dist: rich-click>=1.8.8
+Requires-Dist: ruamel-yaml>=0.18.10
+Requires-Dist: fastapi>=0.95.0
+Requires-Dist: uvicorn>=0.21.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: langgraph>=0.0.26
+Requires-Dist: anthropic>=0.8.0
+Requires-Dist: jinja2<4.0.0,>=3.1.6
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: typing-extensions>=4.5.0
+Requires-Dist: langchain<0.4.0,>=0.3.24
+Requires-Dist: langchain-anthropic<0.4.0,>=0.3.12
+Requires-Dist: rich>=13.6.0
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+
+# AI-on-Rails
+
+Rapidly create AI applications and publish to the AI Agent marketplace and AI-to-AI broker at [https://aionrails.com](https://aionrails.com).
+
+## Intro
+
+[AI-on-Rails](https://aionrails.com) helps bootstrapping AI agents that are triggered by external request and brokers such requests.
+
+An AI-on-Rails application is one or more agents that accept external requests.
+Such agents can be new AI Agents deployed using AI-on-Rails (on your own infrastructure).
+But AI-on-Rails agents can also be AI agents that already exist somewhere but follow a known protocol convention (e.g. A2A).
+
+## Usage
+
+### Creating a New AI Agent
+
+Create a new application with a basic conversation agent:
+
+```bash
+# Install the AI-on-Rails command line tools
+pip install aionrails
+
+# Create an application
+aor new my-application
+cd my-application
+
+# Create a new AI Agent using a template
+aor add my-conversation-agent --template langgraph/basic_conversation
+
+# List available templates
+aor templates list
+
+# Get details about a specific template
+aor templates info langgraph/basic_conversation
+```
+
+### Deploying to Cloud Services
+
+Deploy your AI agent to AWS Lambda:
+
+```bash
+# Add AWS Lambda deployment configuration
+aor add my-agent --langgraph --aws-lambda
+
+# Deploy to AWS using the default CLI profile
+aor deploy
+
+# Publish
+aor publish --token "<your-personal-token-obtained-on-aionrails.com>"
+```
+
+### Adding Existing Services
+
+Integrate existing A2A-compatible services:
+
+```bash
+# Add an existing A2A service agent
+aor add --existing --a2a "https://<my-a2a-domain>/<uri>" my-agent
+
+# Publish to AI-on-Rails
+aor publish --token "<your-personal-token-obtained-on-aionrails.com>"
+```
+
+## Examples
+
+While you would expect ``aor`` to generate the necessary service definition files automatically,
+several examples can be found in the ``examples`` folder to better understand the syntax for advanced users.
+
+- [X post using LangGraph](./examples/langgraph/)
+- [Existing AI Agent via A2A](./examples/a2a/)
+
+## F.A.Q.
+
+### What happens when the peer agent changes its functionality or the protocol (e.g. inputs/outputs)?
+
+Applications are versioned and more than one version can be published at the same time.
+When integrating with an agent published on AI-on-Rails, it is recommended to pin a specific version to continue using it even when newer revisions are getting published.
