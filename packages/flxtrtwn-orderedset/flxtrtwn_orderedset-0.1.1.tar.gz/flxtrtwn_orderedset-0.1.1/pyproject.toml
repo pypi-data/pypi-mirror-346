@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "flxtrtwn-orderedset"
+version = "0.1.1"
+description = "Python implementation of an ordered set."
+authors = ["Felix Trautwein <mail@felixtrautwein.de>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
