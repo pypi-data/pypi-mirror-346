@@ -1,0 +1,9 @@
+CHANGELOG.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+prosper_s_basic_calculator.egg-info/PKG-INFO
+prosper_s_basic_calculator.egg-info/SOURCES.txt
+prosper_s_basic_calculator.egg-info/dependency_links.txt
+prosper_s_basic_calculator.egg-info/top_level.txt
