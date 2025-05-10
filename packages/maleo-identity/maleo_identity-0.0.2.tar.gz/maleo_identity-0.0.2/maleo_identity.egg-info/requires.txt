@@ -1,0 +1,2 @@
+maleo_foundation>=0.1.82
+maleo_metadata>=0.1.60
