@@ -1,0 +1,2 @@
+recursive-include sapiens *
+include LICENSE

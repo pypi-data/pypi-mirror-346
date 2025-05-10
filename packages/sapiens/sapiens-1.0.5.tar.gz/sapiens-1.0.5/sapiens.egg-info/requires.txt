@@ -1,0 +1,3 @@
+pandas
+fairseq
+torch<2.5
