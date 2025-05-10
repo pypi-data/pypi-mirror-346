@@ -1,0 +1,34 @@
+Metadata-Version: 2.3
+Name: errorhandling
+Version: 2.0.1
+Summary: Errorhandling inspired by Rust
+License: Apache-2.0
+Author: dominicparga
+Author-email: dominic.parga@icloud.com
+Maintainer: dominicparga
+Maintainer-email: dominic.parga@icloud.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Project-URL: Documentation, https://github.com/dominicparga/errorhandling-py
+Project-URL: Homepage, https://github.com/dominicparga/errorhandling-py
+Project-URL: Issues, https://github.com/dominicparga/errorhandling-py/issues
+Project-URL: Repository, https://github.com/dominicparga/errorhandling-py
+Description-Content-Type: text/markdown
+
+# errorhandling
+
+[![Version](https://img.shields.io/github/v/tag/dominicparga/errorhandling-py?label=Version&style=for-the-badge)](https://pypi.org/project/errorhandling/)
+[![Latest commit](https://img.shields.io/github/last-commit/dominicparga/errorhandling-py?label=Latest%20Commit&logo=github&style=for-the-badge)](https://github.com/dominicparga/errorhandling-py/commits)
+[![License](https://img.shields.io/github/license/dominicparga/errorhandling-py?style=for-the-badge)](https://github.com/dominicparga/errorhandling-py/blob/stable/LICENSE)
+
+## Usage
+
+```bash
+pip install errorhandling
+```
+
