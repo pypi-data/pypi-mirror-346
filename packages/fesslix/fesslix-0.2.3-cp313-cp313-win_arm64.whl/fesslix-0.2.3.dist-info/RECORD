@@ -1,0 +1,12 @@
+fesslix/__init__.py,sha256=HcTIT0dNZ7TKdrLYo5_UpY0XJ4RA8a4uDyoA--VKHso,2542
+fesslix/core.cp313-win_amd64.pyd,sha256=y_ecgG0zxfo2G5w3yYiV0r-AiuB76LUSAPAJoWCi6_U,432128
+fesslix/flxlib.dll,sha256=6jTCA3QT0FaKtrM04xupYO3DIWi0WmceVJP-zQAsBew,2676224
+fesslix/flxlib.lib,sha256=gNsNGU8NP-XAmNxs67e3SbhutIEkqGKEOBrkies8sLE,1299154
+fesslix/gausspoints.dat,sha256=gtWP-cwc0VOyoFPcABi9xrYel4FG7Sw2RkWEmbIy6fw,42364
+fesslix/model_templates.py,sha256=P760YEQDKf4Lk27-WoYPTkLrnULWEgpyjEBMlS0yVBA,1806
+fesslix/plot.py,sha256=AtswNKYvlyoCcDU2kNOB2aNYVU8Ul3kAMaZu2y6we4o,7747
+fesslix/tools.py,sha256=VLYBz0N808HLL5jPwtcbjU3gx539R-JJVStI5mPe6VA,29833
+fesslix-0.2.3.dist-info/METADATA,sha256=_53b40hWzzib2zCY9Vtg5ptPDm4OzkXBeLf8sRTimCQ,42458
+fesslix-0.2.3.dist-info/WHEEL,sha256=5xM7gWbFATaqXd1JjmoYkm5h4TGxXOJ7M5sFsPu4xIU,106
+fesslix-0.2.3.dist-info/licenses/LICENSE,sha256=X2MfrkZ8grjNKP0exCXIFolaNfnZTja-4OAWRXDo4PY,35823
+fesslix-0.2.3.dist-info/RECORD,,
