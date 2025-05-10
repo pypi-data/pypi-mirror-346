@@ -1,0 +1,43 @@
+[build-system]
+requires = [
+    "scikit-build-core",
+    "pxr-arch-dev==0.25.5.*",
+    "pxr-tf-dev==0.25.5.*"
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "pxr-gf"
+version = "0.25.5"
+description = "Graphics Foundations library used in OpenUSD"
+readme = "README.md"
+requires-python = ">=3.8"
+license-files = ["LICENSE.txt", "NOTICE.txt"]
+keywords = ["pixar", "open-usd"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+]
+dependencies = [
+    "pxr-arch==0.25.5.*",
+    "pxr-tf==0.25.5.*",
+]
+
+[project.urls]
+Repository = "https://github.com/untwine/pxr-gf"
+
+[tool.scikit-build]
+cmake.version = ">=3.21,<4"
+cmake.args = [
+    "-DBUILD_TESTS=OFF",
+    "-DBUILD_SHARED_LIBS=ON",
+    "-DBUILD_PYTHON_BINDINGS=ON",
+    "-DCMAKE_INSTALL_LIBDIR=pxr/.libs",
+    "-DCMAKE_INSTALL_INCLUDEDIR=pxr-gf/include",
+    "-DCMAKE_INSTALL_DATAROOTDIR=pxr-gf",
+    "-DCMAKE_INSTALL_PYTHON_LIBDIR=.",
+]
+wheel.exclude = ["pxr-gf"]
+sdist.exclude = ["test", ".github"]
