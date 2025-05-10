@@ -1,0 +1,12 @@
+pyinit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyinit/__main__.py,sha256=-D_h2EFAf75O63Y_R05Bg2bDja2teEVwtaP1LBR_wuA,7155
+pyinit/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyinit/templates/data_management.py.tpl,sha256=K1x2q9B04B5_f4_ZTXAeZi3MLioKAyTELwqo0m-6qOI,6442
+pyinit/templates/env.tpl,sha256=zKLZ_BmE5PENHPTRitwqwjhzYZRP4BUL7VmlgalxDzQ,56
+pyinit/templates/mailosaur_configuration.py.tpl,sha256=RupycveeI48C5_b-mN-gUjoQn0g1v2mBEqipoWkKEu8,1509
+pyinit/templates/project_configuration.py.tpl,sha256=_zf3-Kq6ICtQbkfOQGmB17c3BYdQWFZHOB3XRAp58lI,430
+pyinitpro-0.1.9.dist-info/METADATA,sha256=wVLwlMSuBimtlwJqbNSIhIC4hj5_xNHaWnerr5-XpIk,1740
+pyinitpro-0.1.9.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+pyinitpro-0.1.9.dist-info/entry_points.txt,sha256=Y3IE620kyRC6XxsAePfEjvuzqviOpU5C4YgTLQfm8rE,52
+pyinitpro-0.1.9.dist-info/top_level.txt,sha256=PEOJi2D5OPh_jx1P3WjuC9HS5IR5hGUFUv-x3eWMWRc,7
+pyinitpro-0.1.9.dist-info/RECORD,,
