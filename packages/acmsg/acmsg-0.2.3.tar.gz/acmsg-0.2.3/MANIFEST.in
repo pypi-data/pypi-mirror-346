@@ -1,0 +1,2 @@
+include src/acmsg/assets/*.md
+include src/acmsg/assets/*.yaml
