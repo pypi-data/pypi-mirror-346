@@ -1,0 +1,10 @@
+nextdnsctl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nextdnsctl/api.py,sha256=g-tyvoSDSeJm8YEwoXeRjmqye4fpKoryBiNP8QQQRug,6064
+nextdnsctl/config.py,sha256=gxIG8eH1irKxEw3lDn2aIXn7zNrem4ErWYrNWqJAqow,805
+nextdnsctl/nextdnsctl.py,sha256=KnCpPom1gLWAZ0ZEerfDhuL798TS3obdBAKJEQBSmLI,10061
+nextdnsctl-0.2.0.dist-info/licenses/LICENSE,sha256=hsUbJ9alCe3v6dvf_FLHNjLdt0ada1O26pkXm93KM-s,1069
+nextdnsctl-0.2.0.dist-info/METADATA,sha256=6UuySSpVqNSeAe4RwhbG0uwOoJ9InRbc_TMQl_JQfVw,3611
+nextdnsctl-0.2.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+nextdnsctl-0.2.0.dist-info/entry_points.txt,sha256=IlTihlhBSI5vMqsSR96BsCHHtyQizBlfzfsteS_MKng,57
+nextdnsctl-0.2.0.dist-info/top_level.txt,sha256=PjOIBTX9duvhmKnJK0SLXET47WZ3GCi_J3xV-lYaszI,11
+nextdnsctl-0.2.0.dist-info/RECORD,,
