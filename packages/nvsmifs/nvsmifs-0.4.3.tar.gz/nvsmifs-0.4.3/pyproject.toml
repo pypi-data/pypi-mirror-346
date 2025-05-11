@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "nvsmifs"
+version = "0.4.3"
+description = "A (user-)friendly wrapper to nvidia-smi"
+authors = ["Panos Mavrogiorgos <pmav99@gmail.com>", "Jason King <jason@initiateit.com.au>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/initiateit/nvsmifs"
+documentation = "https://github.com/initiateit/nvsmifs"
+keywords = ["nvidia", "gpu", "nvidia-smi", "cli", "hardware", "monitoring"]
+packages = [{ include = "nvsmifs" }]  # ✅ <- add this
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^1.18"
+bump2version = "^0.5.10"
+
+[tool.poetry.scripts]
+nvsmifs = "nvsmifs:_main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

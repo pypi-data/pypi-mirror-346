@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: nvsmifs
+Version: 0.4.3
+Summary: A (user-)friendly wrapper to nvidia-smi
+Home-page: https://github.com/initiateit/nvsmifs
+License: MIT
+Keywords: nvidia,gpu,nvidia-smi,cli,hardware,monitoring
+Author: Panos Mavrogiorgos
+Author-email: pmav99@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Project-URL: Documentation, https://github.com/initiateit/nvsmifs
+Project-URL: Repository, https://github.com/initiateit/nvsmifs
+Description-Content-Type: text/markdown
+
+# nvsmifs
+
+A (user-)friendly wrapper to `nvidia-smi` forked from https://github.com/pmav99 to include fan speed support.
+
+It can be used to filter the GPUs based on resource usage (e.g. to choose the least utilized GPU on a multi-GPU system).
+
+## Usage
+
+### CLI
+
+```
+nvsmifs --help
+nvsmifs ls --help
+nvsmifs ps --help
+```
+
+### As a library
+
+```
+import nvsmifs
+
+nvsmifs.get_gpus()
+nvsmifs.get_available_gpus()
+nvsmifs.get_gpu_processes()
+```
+
+## Prerequisites
+
+- An nvidia GPU
+- `nvidia-smi`
+- Python 2.7 or 3.6+
+
+## Installation
+
+### pipx
+
+The recommended installation method is [pipx](https://github.com/pipxproject/pipx).
+More specifically, you can install `nvsmifs` for your user with:
+
+``` shell
+pipx install nvsmifs
+```
+
+The above command will create a virtual environment in `~/.local/pipx/venvs/nvsmifs` and
+add the `nvsmifs` executable in `~/.local/bin`.
+
+### pip
+
+Alternatively you can use good old `pip` but this is more fragile than `pipx`:
+
+```
+pip install --user nvsmifs
+```
+
