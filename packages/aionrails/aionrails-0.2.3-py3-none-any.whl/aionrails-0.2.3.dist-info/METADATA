@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: aionrails
+Version: 0.2.3
+Summary: A meta package for AI-on-Rails: A Python library for prototyping and publishing AI applications with guardrails.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: aor>=0.2.3
+
+# aionrails
+
+This is an alias for the main Python package from 'AI on Rails': [aor](https://pypi.org/project/aor)
