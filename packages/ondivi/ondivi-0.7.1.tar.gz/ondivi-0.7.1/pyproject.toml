@@ -1,0 +1,131 @@
+# The MIT License (MIT).
+#
+# Copyright (c) 2024-2025 Almaz Ilaletdinov <a.ilaletdinov@yandex.ru>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+# IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+# DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+# OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+# OR OTHER DEALINGS IN THE SOFTWARE.
+
+[tool.poetry]
+name = "ondivi"
+version = "0.7.1"
+description = ""
+authors = ["Almaz Ilaletdinov <a.ilaletdinov@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+gitpython = ">=2.1.15"
+parse = "^1.4"
+click = "*"
+
+[tool.poetry.scripts]
+ondivi = "ondivi.entry:main"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "0.11.8"
+pytest = "8.3.5"
+pytest-cov = "6.1.1"
+mypy = "1.15.0"
+deltaver = "0.2.3"
+mutmut = "2.5.1"
+junit-xml = "1.9" # lock for mutmut
+pytest-randomly = "3.16.0"
+tomli = "2.2.1"
+pyyaml = "6.0.2"
+types-pyyaml = "6.0.12.20250402"
+
+[tool.isort]
+line_length = 120
+multi_line_output = 3
+include_trailing_comma = true
+
+[tool.ruff.lint]
+select = ["ALL"]
+fixable = [
+  "F401",   # Unused import
+  "I001",   # sort imports
+  "Q000",   # quotes
+]
+ignore = [
+  "ARG001",  # Unused function argument
+  "ARG002",  # Unused method argument
+  "D203",    # no-blank-line-before-class
+  "D213",    # multi-line-summary-first-line
+  "D401",    # First line of docstring should be in imperative mood
+  "D418",    # Function decorated with `@overload` shouldn't contain a docstring
+  "FBT001",  # Boolean-typed positional argument in function definition
+  "FBT002",  # Boolean-typed positional argument in function definition
+  "FIX002",  # Line contains T0DO, consider resolving the issue
+  "FLY002",  # We not use f-strings
+  "RUF100",  # WPS primary linter
+  "RUF001",  # Project contain cyrillic symbols
+  "RUF002",  # Project contain cyrillic symbols
+  "RET505",  # Unnecessary `elif` after `return` statement
+  "RET506",  # Unnecessary `elif` after `raise` statement
+  "UP030",   # We use explicit references
+  "UP032",   # We not use f-strings
+  "UP004",   # Class `PrayerReaction` inherits from `object`
+  "TD",      # "t0do" formats
+  "PLR630",  # We disrespect staticmethods
+  "TC003",   # Move standard library import `...` into a type-checking block
+  "TC001",   # Move application import into a type-checking block
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "single"
+multiline-quotes = "double"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+  "S101",    # use of `assert` detected
+  "PLR2004", # Magic value
+  "PLR0913", # Too many arguments to function call
+  "INP001",  # Add an `__init__.py`. Tests is closed to import
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = [
+  "tests/*",
+]
+
+[tool.deltaver]
+fail_on_avg = 50
+fail_on_max = 360
+excluded = [
+  "smmap",  # https://github.com/gitpython-developers/gitdb
+  # gitpython >=2.1.15
+  # └── gitdb >=4.0.1,<5
+  #     └── smmap >=3.0.1,<6
+  "junit-xml",
+  # mutmut 3.1.0 mutation testing for Python 3
+  # └── junit-xml 1.8
+]
+
+[tool.mutmut]
+paths_to_mutate = "ondivi"
+runner = "pytest tests/unit -x -q --tb=no -o addopts=''"
+tests_dir = "tests"
