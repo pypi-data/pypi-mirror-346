@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pymsgbboxexmaple10525"
+version = "0.1.0"
+description = "Hello test ptoject"
+authors = ["Karolina <you@example.com>"]
+readme = "README.md"
+#packages = [
+#    { include = "pythonproject10.py"}
+#]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pymsgbox = "^1.0.9"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
