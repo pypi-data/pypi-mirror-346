@@ -1,0 +1,8 @@
+setup.py
+baizhanNath2/__init__.py
+baizhanNath2/demo_01.py
+baizhanNath2/demo_02.py
+setup_baizhanMath02.egg-info/PKG-INFO
+setup_baizhanMath02.egg-info/SOURCES.txt
+setup_baizhanMath02.egg-info/dependency_links.txt
+setup_baizhanMath02.egg-info/top_level.txt
