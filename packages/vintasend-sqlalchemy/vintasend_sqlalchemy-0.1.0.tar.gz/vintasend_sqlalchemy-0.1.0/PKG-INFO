@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: vintasend-sqlalchemy
+Version: 0.1.0
+Summary: SQLAlchemy backend implementation for VintaSend
+License: MIT
+Author: Hugo bessa
+Author-email: hugo@vinta.com.br
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: alembic (>=1.14.0,<2.0.0)
+Requires-Dist: greenlet (>=3.1.1,<4.0.0)
+Requires-Dist: pytest-asyncio (>=0.24.0,<0.25.0)
+Requires-Dist: sqlalchemy (>=2.0.36,<3.0.0)
+Requires-Dist: vintasend
+Description-Content-Type: text/markdown
+
+# VintaSend SQLAlchemy
+
+SQLAlchemy implementations for VintaSend
