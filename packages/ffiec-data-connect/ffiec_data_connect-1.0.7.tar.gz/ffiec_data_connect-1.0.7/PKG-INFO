@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: ffiec_data_connect
+Version: 1.0.7
+Summary: Wrapper for the FFIEC's Webservice API
+Author-email: Michael Handelman <m@mikeh.dev>
+License-Expression: MIT
+Project-URL: Documentation, https://ffiec-data-connect.readthedocs.io/en/latest/
+Project-URL: Repo, https://github.com/call-report/ffiec-data-connect
+Project-URL: Additional-Info, http://call.report
+Project-URL: Author, https://mikeh.dev
+Keywords: ffiec,call report,bank,regulatory,federal,financial institution examination council
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Office/Business :: Financial
+Requires-Python: >=3.11.0
+License-File: LICENSE.txt
+Requires-Dist: zeep<4.4.0,>=4.3.0
+Requires-Dist: xmltodict<0.15.0,>=0.14.0
+Requires-Dist: requests>=2.32.0
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: polars>=1.29.0
+Requires-Dist: pyarrow>=22.0.0
+Dynamic: license-file
