@@ -1,0 +1,7 @@
+README.md
+setup.py
+homegrown.egg-info/PKG-INFO
+homegrown.egg-info/SOURCES.txt
+homegrown.egg-info/dependency_links.txt
+homegrown.egg-info/requires.txt
+homegrown.egg-info/top_level.txt
