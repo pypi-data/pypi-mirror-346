@@ -1,0 +1,10 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+OpenRouterProvider/Chat_message.py,sha256=lQd8bFp7OHOgeOrcpcVZMdkV2Mb4reUsv5Ixo6WecYY,4424
+OpenRouterProvider/Chatbot_manager.py,sha256=2kWnyf0SFWACfK4tA0wr2rzlqSnF8AQ3QC-sKpoMFhI,7274
+OpenRouterProvider/LLMs.py,sha256=-0ELd6fqmdDvsdaPIElRsluiK85-Y6USwvQb2b4M8TA,2607
+OpenRouterProvider/OpenRouterProvider.py,sha256=5mKrGbRWOsjKTcE7-WbWYcwy3avTT7-9H5cy6N25d0M,9572
+OpenRouterProvider/Tool.py,sha256=QeeWOD2oaYjB9tjF-Jvcjd_G_qSUIuKwFgyh20Ne06I,2010
+openrouter_provider-0.0.7.dist-info/METADATA,sha256=j9FsXCm8g5SRkiwqlwv3ptc3i5NnfhL7CvweoOG-_kE,5995
+openrouter_provider-0.0.7.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+openrouter_provider-0.0.7.dist-info/top_level.txt,sha256=I5BMEzkQFEnEYTqOY1Ktmnp7r1rrZQyeWdclKyyyHKs,28
+openrouter_provider-0.0.7.dist-info/RECORD,,
