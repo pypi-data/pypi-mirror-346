@@ -1,0 +1,32 @@
+FROM {{ build.base_image }}
+
+LABEL maintainer="Dockit <theizekry@gmail.com, https://github.com/theizekry>"
+
+{% for arg, value in compose.args %}
+ARG {{ arg }}={{ value }}
+{% endfor %}
+
+# Install system dependencies
+RUN apt-get update
+
+{% for package in build.apt %}
+RUN apt-get install -y {{ package }}
+{% endfor %}
+
+# Copy files
+{% for copy in build.copies %}
+COPY {{ copy }}
+{% endfor %}
+
+# Run custom commands
+{% for cmd in build.run %}
+RUN {{ cmd }}
+{% endfor %}
+
+# Set working directory
+{% if build.working_dir %}
+WORKDIR {{ build.working_dir }}
+{% endif %}
+
+# Command to run
+CMD {{ build.command|tojson }}
