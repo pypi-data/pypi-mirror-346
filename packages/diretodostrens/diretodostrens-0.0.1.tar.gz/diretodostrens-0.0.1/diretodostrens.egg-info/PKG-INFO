@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: diretodostrens
+Version: 0.0.1
+Summary: DiretoDosTrens
+Author: Anderson Duarte
+Author-email: reddragondggda@gmail.com
+Keywords: trens,trem,diretodostrens,api,sp,são paulo
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+
+Interface para a API diretodostrens.
+
+Visite https://github.com/Philliaezer/DiretoDosTrens para saber mais
