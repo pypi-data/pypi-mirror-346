@@ -1,0 +1,15 @@
+# NOTICE
+
+## Licensing and Attribution
+
+This project includes code based on original work "unijson" by Bastien Pietropaoli,
+licensed under the Apache License, Version 2.0. Those portions of the code remain
+subject to the Apache License.
+The concerned code portions are located in the following files:
+pipelex/tools/serde/kajson.py
+pipelex/tools/serde/json_decoder.py
+pipelex/tools/serde/json_encoder.py
+
+All modifications of these code portions as well as all other code, modifications,
+and new features © 2023-2024 Pipelex, All rights reserved.
+
