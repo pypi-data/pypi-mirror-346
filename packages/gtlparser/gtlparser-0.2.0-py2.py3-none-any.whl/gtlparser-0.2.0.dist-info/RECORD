@@ -1,0 +1,13 @@
+gtlparser/Convert_GTL_2_GeoJSON.py,sha256=xZJtqL29bRqltZRQ07pj8cWGwNcE1GlNl8PvCpD2gr0,14135
+gtlparser/__init__.py,sha256=uO0l8_oHDrkWx8DpMfBx9ftjoR8TDEdOMeXLUVoMLPQ,180
+gtlparser/common.py,sha256=Rw6d9qmZDu3dUGTyJto1Y97S7-QA-m2p-pbCNvMDrm4,184
+gtlparser/foliumap.py,sha256=R4iLz3BtOl_lZvTRGALs90v3664P8uAueHXZARWctG8,5139
+gtlparser/gtl2geojson.py,sha256=TsSZ9yanlGXSE8d8f2l1MRjhKhzYB9S-YTzzFdQ63Uc,8236
+gtlparser/gtlparser.py,sha256=Qw1HuncOy5qrRZAXZTsrcylcj6g7Cyzqn5ShOxKMBCs,17698
+gtlparser/test.ipynb,sha256=MVVLOr4HxUaOD9o2lFs0clvAGj6i1LyWepGOO0bij4Y,13290
+gtlparser-0.2.0.dist-info/licenses/LICENSE,sha256=SALAoLdaxIbt1MaX34aP3tGVCx3N7molfoNELjUtuiU,1069
+gtlparser-0.2.0.dist-info/METADATA,sha256=3-bO1IQSwixOJTW7HbPqm44wGlTI_rkf7ZID2DspPwo,1556
+gtlparser-0.2.0.dist-info/WHEEL,sha256=joeZ_q2kZqPjVkNy_YbjGrynLS6bxmBj74YkvIORXVI,109
+gtlparser-0.2.0.dist-info/entry_points.txt,sha256=aOF_dBTfWnZNZGkLZ1eQQFlTCc6OmBRFx0Xy80MF0Ik,49
+gtlparser-0.2.0.dist-info/top_level.txt,sha256=0dMxrpNVynJ8TledlFVFZ8_LVMEGQSJDLmKpeCbGgJo,10
+gtlparser-0.2.0.dist-info/RECORD,,
