@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tcinvest-mcp-server"
+version = "0.1.0"
+description = "A Model Context Protocol (MCP) server for TCInvest, enabling LLM-powered access to TCBS stock and bond data."
+authors = [
+    { name = "hoangpd", email = "phamdinhhoang.fetk54@email.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "python-dotenv",
+    "matplotlib",
+    "pydantic"
+]
+
+[project.scripts]
+tcinvest-mcp-server = "tcinvest_mcp_server.__main__:main"
