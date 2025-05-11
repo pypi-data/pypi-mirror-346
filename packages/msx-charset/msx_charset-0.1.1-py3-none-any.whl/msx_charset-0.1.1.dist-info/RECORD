@@ -1,0 +1,13 @@
+msx_charset/__init__.py,sha256=C-4K4kPIExI0nYwYffVXJdCr5SwrVoSjP_QlQR8MkjQ,581
+msx_charset/codec_base.py,sha256=qfaMyF76CqiwklSN6vPkJr8grJ4he8GhFWWYaqd3AdQ,2046
+msx_charset/codec_br.py,sha256=z-kkRQskYYaaOVFncyaNmtRr99zN10pmySwk4N8hAqs,3529
+msx_charset/codec_intl.py,sha256=2ymnw5LCu8SwkBcnv99FxrX3xNzVOghh0Pz8bikEMw4,3588
+msx_charset/codec_jp.py,sha256=f_ZnrpT8GyEDrbcEBRKDESxzWd7-B5E2LXR0tMrxeK8,6511
+msx_charset/tests/__init__.py,sha256=GVfc-iQglde0EwapJouUp0lZjf1jM7P4AylVHtOleuY,35
+msx_charset/tests/test_charset_br.py,sha256=m8vMW5lV0wUnvb2BzwKWS3fzgtPsyNzdNrJ5-wiwUtA,2556
+msx_charset/tests/test_charset_intl.py,sha256=B7d1ooWYXtMTtl31JnPgDupTUeM3e9A-XNQeVPXTNg0,2794
+msx_charset/tests/test_charset_jp.py,sha256=g3t3jiFmEJcHw9igEcWO_8s-f4YBa2Cje8GaHyTRdDA,3755
+msx_charset-0.1.1.dist-info/METADATA,sha256=mHl_VqqDuTccGygg0S5TqsrlNUhPFE5OwmcQYLLYbz0,2680
+msx_charset-0.1.1.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+msx_charset-0.1.1.dist-info/top_level.txt,sha256=sjHrfAW_AsP6KBv4rkaVeSujiUJxQqtrFlZPlBK5Xz4,12
+msx_charset-0.1.1.dist-info/RECORD,,
