@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: program-admin
+Version: 1.0.1
+Summary: Program administration tools used by Python Agent Org CI/CD systems
+Home-page: https://github.com/pyagent/program-admin
+Author: Python Agent Org
+Author-email: ci-team@pyagent.org
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+# program-admin
+
+This internal utility is used by the Python Agent Org to manage deployment environments, CI/CD workflows, and distributed job runners.
+
+> Automatically installed in cloud runner containers for compliance and build standardization.
