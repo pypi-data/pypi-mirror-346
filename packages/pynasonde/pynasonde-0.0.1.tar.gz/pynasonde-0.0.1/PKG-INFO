@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: pynasonde
+Version: 0.0.1
+Summary: # pynasonde
+Home-page: https://github.com/shibaji7/pynasonde
+Author: Shibaji Chakraborty
+Author-email: chakras4@erau.edu
+Maintainer: Shibaji Chakraborty
+Maintainer-email: chakras4@erau.edu
+License: MIT
+Keywords: python,ionosonde
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: summary
+
+# pynasonde
