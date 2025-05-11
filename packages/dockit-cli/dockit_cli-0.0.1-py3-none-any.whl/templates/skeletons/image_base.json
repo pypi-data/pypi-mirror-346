@@ -1,0 +1,21 @@
+{
+    "version": {
+        "image": "",
+        "compose": {
+            "ports": [],
+            "volumes": [],      
+            "environment": [],
+            "depends_on": []
+        },
+        "publishes": {
+            "filename": {
+                "source": "",
+                "destination": ""
+            },
+            "filename2": {
+                "source": "",
+                "destination": ""
+            }
+        }
+    }
+} 
