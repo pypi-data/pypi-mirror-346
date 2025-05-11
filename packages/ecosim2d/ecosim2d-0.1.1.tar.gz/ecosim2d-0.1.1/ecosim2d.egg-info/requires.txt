@@ -1,0 +1,6 @@
+numpy
+matplotlib
+imageio
+Pillow
+scipy
+seaborn
