@@ -1,0 +1,42 @@
+[tool.poetry]
+name            = "the-flow2025"
+version         = "0.2.17"
+description     = "Personal automation framework (The Flow)"
+authors         = ["Benjamin Swancutt <benswancutt99@gmail.com>"]
+license         = "MIT"
+readme          = "README.md"
+homepage        = "https://github.com/00groundsfalloff/the-flow"
+repository      = "https://github.com/00groundsfalloff/the-flow"
+keywords        = ["automation", "productivity", "chatgpt", "obsidian", "ticktick"]
+classifiers     = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent"
+]
+
+packages = [
+  { include = "the_flow", from = "src" }
+]
+include = ["src/the_flow/py.typed"]
+
+[tool.poetry.scripts]      # legacy entry‑point table – still supported
+the-flow = "the_flow.__main__:cli"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openai   = ">=1.77.0,<2.0.0"
+chromadb = ">=1.0.7,<2.0.0"
+click    = "^8.1.7"        # needed by CLI
+
+[tool.poetry.group.dev.dependencies]  # canonical syntax ≥1.5
+pytest      = "^8.3.5"
+black       = "^25.1.0"
+flake8      = "^7.2.0"
+mypy        = "^1.15.0"
+pre-commit  = "^3.7.0"
+twine = "^6.1.0"
+
+[build-system]
+requires      = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
