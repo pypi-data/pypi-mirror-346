@@ -1,0 +1,12 @@
+lfdfiles/__init__.py,sha256=BVSoy5QJ-K3J3BDheKithJpoWQ8HJnUQwh3SNUYjjtQ,400
+lfdfiles/__main__.py,sha256=8WNtlWGqhQRUOcfE2gl3ACruNJUSeIrnyk-9IO6P6FM,135
+lfdfiles/_lfdfiles.cp311-win32.pyd,sha256=A8aZG2F_MgdUooWSwBN7LM-BYTijpnU2as28qJg7J4Y,251904
+lfdfiles/fbd2b64.py,sha256=TgxbY7eSP-K-vzzBPYg8pn5fqIlt-mjhNbCIEgnjkQ4,6535
+lfdfiles/lfdfiles.py,sha256=vMToWP3rt1UJoKYjL2C3F4jaGV7xSEkDh6aujyUq_O0,234557
+lfdfiles/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lfdfiles-2025.5.10.dist-info/licenses/LICENSE,sha256=goK8I3gRpvvzDrBE1gWZVio91RrSCHVMCMfegZ_I6kQ,1559
+lfdfiles-2025.5.10.dist-info/METADATA,sha256=x3qYRti3FQw1TWDkclBnK635q3Q9CRDXJKUeZe7ibd8,8468
+lfdfiles-2025.5.10.dist-info/WHEEL,sha256=n2Q8-sjEmRkoc2ogHfeoE3wVic3W9LWOsNU9VGyuDpI,97
+lfdfiles-2025.5.10.dist-info/entry_points.txt,sha256=t6geUirHxKXaV-Ii9YZ4pUxxJzcrFhbsNMlJy3MRpLQ,84
+lfdfiles-2025.5.10.dist-info/top_level.txt,sha256=57ed1wWaI26xMH0KgmUMy6MefsknRrCIetAITP7OtBU,9
+lfdfiles-2025.5.10.dist-info/RECORD,,
