@@ -1,0 +1,4 @@
+[console_scripts]
+ffg = findx:ffg
+ffx = findx:ffx
+findx = findx:main
