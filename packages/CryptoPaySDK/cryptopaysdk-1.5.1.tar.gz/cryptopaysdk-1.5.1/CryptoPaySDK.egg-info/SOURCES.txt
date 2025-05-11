@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+CryptoPaySDK/__init__.py
+CryptoPaySDK/cryptopay.py
+CryptoPaySDK.egg-info/PKG-INFO
+CryptoPaySDK.egg-info/SOURCES.txt
+CryptoPaySDK.egg-info/dependency_links.txt
+CryptoPaySDK.egg-info/requires.txt
+CryptoPaySDK.egg-info/top_level.txt
