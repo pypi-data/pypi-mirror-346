@@ -1,0 +1,2 @@
+[console_scripts]
+videomaster = src.videomaster.cli.main:app
