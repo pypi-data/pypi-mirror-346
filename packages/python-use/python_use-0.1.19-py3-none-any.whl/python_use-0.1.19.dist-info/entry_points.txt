@@ -1,0 +1,2 @@
+[console_scripts]
+pyuse = python_use.__main__:main
