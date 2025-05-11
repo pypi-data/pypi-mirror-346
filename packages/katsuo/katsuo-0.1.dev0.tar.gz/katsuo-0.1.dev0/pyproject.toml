@@ -1,0 +1,23 @@
+[project]
+name = "katsuo"
+description = "Components and utilities for Amaranth"
+readme = "README.md"
+authors = [
+    { name = "Vegard Storheil Eriksen", email = "zyp@jvnv.net" },
+]
+dependencies = []
+requires-python = ">=3.10"
+dynamic = []
+version = "0.1.dev0"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm.version]
+source = "scm"
