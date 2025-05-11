@@ -1,0 +1,7 @@
+boto3_pydantic_workspaces_web/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_workspaces_web/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_workspaces_web/workspaces_web_classes.py,sha256=7NHVC2mNew0f8b2ljYXSE7zBLvdKEF4-Jjotm1ghie4,29594
+boto3_pydantic_workspaces_web/workspaces_web_constants.py,sha256=xadZlbFvnP1NBhYj_sFuz-204-5HwHyidkYAkO1JScE,7943
+boto3_pydantic_workspaces_web-1.0.1.dist-info/METADATA,sha256=LumtaN_0uy2stcnMHRM7QQzY4WdRS7XzkWn8oJ6mXS4,1437
+boto3_pydantic_workspaces_web-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_workspaces_web-1.0.1.dist-info/RECORD,,
