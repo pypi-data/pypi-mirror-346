@@ -1,0 +1,17 @@
+openai>=0.27.0
+
+[all]
+bce-python-sdk>=0.8.0
+pytest>=6.0
+black
+flake8
+pytest-cov
+
+[bos]
+bce-python-sdk>=0.8.0
+
+[dev]
+pytest>=6.0
+black
+flake8
+pytest-cov
