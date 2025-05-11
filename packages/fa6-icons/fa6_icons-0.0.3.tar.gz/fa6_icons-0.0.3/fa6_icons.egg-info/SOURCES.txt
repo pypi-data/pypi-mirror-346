@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+settings.ini
+setup.py
+fa6_icons/__init__.py
+fa6_icons/_modidx.py
+fa6_icons/core.py
+fa6_icons/icons.py
+fa6_icons.egg-info/PKG-INFO
+fa6_icons.egg-info/SOURCES.txt
+fa6_icons.egg-info/dependency_links.txt
+fa6_icons.egg-info/entry_points.txt
+fa6_icons.egg-info/not-zip-safe
+fa6_icons.egg-info/requires.txt
+fa6_icons.egg-info/top_level.txt
