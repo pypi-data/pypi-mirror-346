@@ -1,0 +1,9 @@
+keyvec/__init__.py,sha256=SeNh2TskJK4vCEDr5fVJQlgbO4qD4V1KpZrSt5Pw2qc,425
+keyvec/batch_text.py,sha256=s62uocKBV-RrunO4PfoIaotwpODzrHhyt9oh6zBsehY,1809
+keyvec/embed_chunk.py,sha256=Ks838Rh-M-eWdu4nm25kuoZ8UoQXHBOWUJAY-o00LbU,1988
+keyvec/embed_store.py,sha256=U0tJf3-ethWp3-Jf8BbtsmRcU0q5gta_LVSVK6MM5lc,20516
+keyvec/hf_model.py,sha256=zY5fFxwUGd3Slefwn_ta3DVuFAXPfns-9jUF78J7yCc,3307
+keyvec-1.0.3.dist-info/LICENSE,sha256=Ea6itrykT9pvPGd0Kgl6FbrqdDwKswPZJmXMFVjUBqw,1064
+keyvec-1.0.3.dist-info/METADATA,sha256=HihLQwhSbL6Kq7ZwwQznB6KKonqkDzvisiVv8a3vKvk,753
+keyvec-1.0.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+keyvec-1.0.3.dist-info/RECORD,,
