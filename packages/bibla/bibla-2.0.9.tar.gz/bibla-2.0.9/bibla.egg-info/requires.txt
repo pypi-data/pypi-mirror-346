@@ -1,0 +1,13 @@
+click>=7
+fuzzywuzzy>=0.10
+markdown-table
+pybtex==0.23.0
+pyyaml>=5
+unidecode<2,>=1
+setuptools>=69.0.0
+
+[dev]
+anybadge
+markdown
+check-manifest
+twine

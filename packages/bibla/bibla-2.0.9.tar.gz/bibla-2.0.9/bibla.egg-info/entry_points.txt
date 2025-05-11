@@ -1,0 +1,2 @@
+[console_scripts]
+bibla = bibla.__main__:cli
