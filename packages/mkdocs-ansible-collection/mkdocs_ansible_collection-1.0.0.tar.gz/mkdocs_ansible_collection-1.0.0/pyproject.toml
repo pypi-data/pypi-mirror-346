@@ -1,0 +1,85 @@
+[project]
+name = "mkdocs-ansible-collection"
+version = "1.0.0"
+description = "MkDocs Plugin that automatically generates pages for Ansible Collections."
+authors = [
+    { name = "Cristian Sirbu", email = "cristian@trueneutral.eu" }
+]
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+keywords = ["mkdocs", "ansible"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Documentation",
+    "Topic :: Text Processing",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "mkdocs (>=1.6.0,<2.0.0)",
+    "ansible-core (>=2.15,<3.0)"
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.3",
+    "yamllint>=1.35.1",
+]
+docs = [
+    "mkdocs-material>=9.6.11",
+]
+
+[project.urls]
+homepage = "https://mkdocs-ansible-collection.readthedocs.io/en/latest/"
+repository = "https://github.com/cmsirbu/mkdocs-ansible-collection"
+documentation = "https://mkdocs-ansible-collection.readthedocs.io/en/latest/"
+
+[project.entry-points]
+"mkdocs.plugins" = { ansible-collection = "mkdocs_ansible_collection.plugin:AnsibleDocsPlugin" }
+
+# Poetry Section - Build Only
+[tool.poetry]
+packages = [{ include = "mkdocs_ansible_collection" }]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+# Poetry Section - END
+
+[tool.uv]
+default-groups = ["dev", "docs"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = [
+    "D",  # pydocstyle
+    "F",  # pyflakes
+    "E",  # pyflakes
+    "W",  # pyflakes
+    "PL", # pylint
+    "I",  # isort
+    "UP", # pyupgrade
+    "PL", # pylint
+]
+ignore = [
+    "D212", # Multi-line docstring summary should start at the first line
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
