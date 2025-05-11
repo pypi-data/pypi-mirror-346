@@ -1,0 +1,10 @@
+openai>=1.0.0
+rich
+python-dotenv
+beautifulsoup4
+requests
+faiss-cpu
+numpy
+thinc==8.1.12
+spacy[ja]==3.6.1
+simpleaudio~=1.0.4
