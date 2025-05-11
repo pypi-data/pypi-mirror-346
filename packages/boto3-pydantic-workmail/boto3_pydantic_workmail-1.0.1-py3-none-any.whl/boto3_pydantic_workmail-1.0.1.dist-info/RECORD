@@ -1,0 +1,7 @@
+boto3_pydantic_workmail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_workmail/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_workmail/workmail_classes.py,sha256=IZm5r1fEC1VfW6XfCV8Sx0pl7f2yI4qx097kRdA_L0s,34493
+boto3_pydantic_workmail/workmail_constants.py,sha256=vFGtJR5PvDGwowLut_vEqOaj70AmSvE_a-kZqiat1YI,8660
+boto3_pydantic_workmail-1.0.1.dist-info/METADATA,sha256=weQychcha4PGTxULQyFGFLCLGzijeSCzDezXuTn4Of4,1407
+boto3_pydantic_workmail-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_workmail-1.0.1.dist-info/RECORD,,
