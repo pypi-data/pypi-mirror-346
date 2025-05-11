@@ -1,0 +1,10 @@
+autosec/__init__.py,sha256=blUEhr41Zdx6usH18vAhRjMfQQeu8QpmttAGt60lez8,64
+autosec/autocred.py,sha256=KKuD6260lKxlym_u4qh4_1v2ia1AzwPRIjzNdXCbz50,4035
+autosec/autolog.py,sha256=_HveselHO3EIvVA-lGkAg7KuGK4hAggcH3_ic4n6W3Q,4628
+autosec/cli.py,sha256=pVB1MU60OSK0JTrFERaUhcqwnB3SBb3WcsiqGwYSqu8,1144
+autosec-1.0.0.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+autosec-1.0.0.dist-info/METADATA,sha256=bU3OdP457Cb56KnDaYeFsxR20qe3YjLQlOaNCHQviOw,2312
+autosec-1.0.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+autosec-1.0.0.dist-info/entry_points.txt,sha256=b6cha211Px3SigGNMPqHMUN3G2Dhe5aCAc_9pS62CoU,54
+autosec-1.0.0.dist-info/top_level.txt,sha256=oWXXE_mQL5cmw2VIdazAqCmB9j0wky25ns97xKeCzbI,8
+autosec-1.0.0.dist-info/RECORD,,

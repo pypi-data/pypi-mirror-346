@@ -1,0 +1,2 @@
+[console_scripts]
+autocred = autosec.cli:autocred_cli
