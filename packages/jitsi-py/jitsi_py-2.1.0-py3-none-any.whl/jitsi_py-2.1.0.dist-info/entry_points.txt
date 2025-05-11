@@ -1,0 +1,2 @@
+[console_scripts]
+jitsi-py = jitsi_py.utils.cli:main
