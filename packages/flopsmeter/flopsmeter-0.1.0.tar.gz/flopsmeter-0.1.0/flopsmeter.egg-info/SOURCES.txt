@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+flopsmeter/__init__.py
+flopsmeter/flopsmeter.py
+flopsmeter.egg-info/PKG-INFO
+flopsmeter.egg-info/SOURCES.txt
+flopsmeter.egg-info/dependency_links.txt
+flopsmeter.egg-info/requires.txt
+flopsmeter.egg-info/top_level.txt
