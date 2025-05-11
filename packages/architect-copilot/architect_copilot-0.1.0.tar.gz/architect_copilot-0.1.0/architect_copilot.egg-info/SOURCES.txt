@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+architect_copilot.egg-info/PKG-INFO
+architect_copilot.egg-info/SOURCES.txt
+architect_copilot.egg-info/dependency_links.txt
+architect_copilot.egg-info/entry_points.txt
+architect_copilot.egg-info/requires.txt
+architect_copilot.egg-info/top_level.txt
+architect_mcp/__init__.py
+architect_mcp/main.py
