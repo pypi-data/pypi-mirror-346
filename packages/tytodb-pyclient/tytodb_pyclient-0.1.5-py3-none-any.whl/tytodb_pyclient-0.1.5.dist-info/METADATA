@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: tytodb-pyclient
+Version: 0.1.5
+Summary: A TytoDB client for python
+Author: ttd3v
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: blake3
+Requires-Dist: cffi
+Requires-Dist: cryptography
+Requires-Dist: requests
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
