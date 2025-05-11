@@ -1,0 +1,8 @@
+bayesnest/__init__.py,sha256=yLAcN9EkRD_jFvzD4gdEwUvPRGi47vP_JnALZv8UicU,99
+bayesnest/priors.py,sha256=SISkmMBL6qQRmCZrkweUuuYYiTaG-S4kLmJPjOdSgWs,886
+bayesnest/sampler.py,sha256=g9wRKWYUaIubK2sOKjIqCgKmqGG8B09N-r-UiUeewf8,14630
+bayesnest/utils.py,sha256=_sqQ2P3_eenXbV81IVEjB2woRLxjqCQmvKDp97kuovc,148
+bayesnest-1.0.0.dist-info/METADATA,sha256=ZrxXi3UjBO1oICLtDdlf1-WpkGlbdewwnLeCEWWEoQs,3615
+bayesnest-1.0.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+bayesnest-1.0.0.dist-info/top_level.txt,sha256=487u_y12IFiiMVv6ZWrHJ69mylVax3T6II5H9B61hV4,10
+bayesnest-1.0.0.dist-info/RECORD,,
