@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: fatmanurprojects
+Version: 0.0.1
+Summary: A basic statistics package
+Author-email: fatmanuryvz <fatmanuryvz.3535@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/fatmanuryvz/pythonProject
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# pythonProject
+
+This is a test package for the PyPI tutorial.
+
