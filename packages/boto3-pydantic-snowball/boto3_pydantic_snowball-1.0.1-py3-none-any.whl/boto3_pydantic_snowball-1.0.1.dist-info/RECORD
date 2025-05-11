@@ -1,0 +1,7 @@
+boto3_pydantic_snowball/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_snowball/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_snowball/snowball_classes.py,sha256=S5TfKL6-1TW42SEOrwb-AQfPDc0tcZjw5aj31OtfpiY,18937
+boto3_pydantic_snowball/snowball_constants.py,sha256=ke6nKlHB2XVng-JT6chdcksz-m43B5lKD_snL5i0Swg,8791
+boto3_pydantic_snowball-1.0.1.dist-info/METADATA,sha256=o1TZet2xc0XpE85zbX7E8OLqaA3P_Z1aZHvuF8Mwo3Q,1407
+boto3_pydantic_snowball-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_snowball-1.0.1.dist-info/RECORD,,
