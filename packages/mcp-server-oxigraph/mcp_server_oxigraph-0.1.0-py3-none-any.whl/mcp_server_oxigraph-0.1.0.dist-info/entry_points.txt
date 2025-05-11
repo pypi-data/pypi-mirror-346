@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-oxigraph = mcp_server_oxigraph.__main__:main

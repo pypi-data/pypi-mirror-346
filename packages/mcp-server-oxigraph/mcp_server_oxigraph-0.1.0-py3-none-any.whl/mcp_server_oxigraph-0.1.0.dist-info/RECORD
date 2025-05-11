@@ -1,0 +1,15 @@
+mcp_server_oxigraph/__init__.py,sha256=u7yIyakTJy_9R6nmadO-c99m7OuAgCu7xed9Nhz9umw,2141
+mcp_server_oxigraph/__main__.py,sha256=TIUKc1RNvjkSMDTmm6GYCYTxvXXljhUMvMngloFLvrQ,1357
+mcp_server_oxigraph/server.py,sha256=G2XzvPN5nsnGdbtD91FOs-0BjlW1EDGeTqB1oSjaKgY,4354
+mcp_server_oxigraph/utils.py,sha256=Xeiow6CuTARRs8hi1awqiWpJVvZ0l6eum5tDpFqfDHg,1406
+mcp_server_oxigraph/core/__init__.py,sha256=U9RoQEk_mGo0I3wcdsPumWvTZoSdCLJY6j4FOwKJgVw,338
+mcp_server_oxigraph/core/config.py,sha256=2ol_z6wc_qiGilisT3-t0YvCLiV_5NT_0puSE-9hm-E,1158
+mcp_server_oxigraph/core/format.py,sha256=4vTu_j_TIv7TfjGOdD4NFRmC7OqAN-pcXLclDZ4fZjo,11307
+mcp_server_oxigraph/core/rdf.py,sha256=J9CZHrv4yW2pkMg3eGXkL-yxU5PAJQppX6bRHhjVtrc,4887
+mcp_server_oxigraph/core/sparql.py,sha256=0pkmZzbDLBbepyWkysSQ7ssCFCkkIZDbvQqeTiwoLBQ,2088
+mcp_server_oxigraph/core/store.py,sha256=NEfM_dtT_ohPncMSSVGKp_Ke5TZy-By2TwH0Y35C4i4,39786
+mcp_server_oxigraph-0.1.0.dist-info/METADATA,sha256=rzARBhHA8gRlVZU_caHfHLgh5YgKBcQHzC7rluPHFMI,7630
+mcp_server_oxigraph-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_server_oxigraph-0.1.0.dist-info/entry_points.txt,sha256=Bs_vGegnoS9-JUcVTHwM5UnUHTe4C-E5Ud-5q6eioe4,74
+mcp_server_oxigraph-0.1.0.dist-info/licenses/LICENSE,sha256=mnxgbhYn7K71v_xzsVUFRVeXIMYebeqdmubgALMnuIg,1068
+mcp_server_oxigraph-0.1.0.dist-info/RECORD,,
