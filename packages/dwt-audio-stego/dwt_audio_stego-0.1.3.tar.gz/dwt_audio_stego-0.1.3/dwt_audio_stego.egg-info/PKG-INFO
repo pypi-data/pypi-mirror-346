@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: dwt-audio-stego
+Version: 0.1.3
+Summary: Audio steganography using DWT
+Author: HVT
+License: MIT
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: soundfile
+Requires-Dist: PyWavelets
+Requires-Dist: librosa
+Requires-Dist: argparse
