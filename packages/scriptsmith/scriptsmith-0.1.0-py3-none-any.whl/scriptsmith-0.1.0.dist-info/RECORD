@@ -1,0 +1,11 @@
+scriptsmith/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scriptsmith/config.py,sha256=q9jSO3WcJqe-0kP_s7siSI5vVtgRJqG5EbdKks2Ii7M,1057
+scriptsmith/main.py,sha256=B4ZPodonYNnIiCvVe_170jjZRmmwo2MHhCM-AQNk0iw,5971
+scriptsmith/setup.py,sha256=xo5pUccwznbC3cbS_TPf9NlDZUqmXg12ktOVzZpTLEE,2902
+scriptsmith/utils.py,sha256=Z4_BNDJZmCRtN3IfugXn4_oaIZI3JyNulxrElINPehY,1589
+scriptsmith-0.1.0.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scriptsmith-0.1.0.dist-info/METADATA,sha256=VsQ2cXYfFyWWuLemL8l87FUlSKtGs6evYAbEDHpVjnw,586
+scriptsmith-0.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+scriptsmith-0.1.0.dist-info/entry_points.txt,sha256=ZnTukOUQ62ufGvKN4YSDow_WOmcX4vAuefgGTAn-4tA,53
+scriptsmith-0.1.0.dist-info/top_level.txt,sha256=raqLboynBuYlM_DXGVO53NziugpnQSzQyD0Lhm7KnaQ,12
+scriptsmith-0.1.0.dist-info/RECORD,,
