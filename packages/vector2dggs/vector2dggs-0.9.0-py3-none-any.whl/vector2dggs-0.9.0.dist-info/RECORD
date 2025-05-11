@@ -1,0 +1,15 @@
+vector2dggs/__init__.py,sha256=L8qKCe-XFylNfRXefZ1yGESlLF24qwQQ87szPZJO6Zg,27
+vector2dggs/cli.py,sha256=d_4skD62k6pXUWgDdVHbDwpe4A4yo62ZFx8Cp_6GpBA,767
+vector2dggs/common.py,sha256=l5koOX1Ps0v5D7MgzHtK1t99hXnGA7b6I82n2rBOldE,10496
+vector2dggs/constants.py,sha256=_cj3Pf52gsXfWwvpsbekE8h1yD_1jS9xqzRg2mRCq3w,1759
+vector2dggs/geohash.py,sha256=t90FlZRQCH8lmtTHe2kPMcLTIf1nrrf2j-m95xk4xPc,7534
+vector2dggs/h3.py,sha256=Bu_4T1WIDuTv_tJWTS8BgPmHRiCozfUUh2CxBwk98Gw,6310
+vector2dggs/katana.py,sha256=v4BRzVCsroC6RzIYdxLfrr9eFOdmXb5S9jXBMs5tgSo,3571
+vector2dggs/rHP.py,sha256=tC4LvqRPMmgUd36BppkvYeq94pPBhO1vBDQ-aaiHUg4,6410
+vector2dggs/s2.py,sha256=HEpFTEL4UaZLjybKZ_q06QFjPuQ48MDLeg_qGc0NMEw,10835
+vector2dggs-0.9.0.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+vector2dggs-0.9.0.dist-info/COPYING.LESSER,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+vector2dggs-0.9.0.dist-info/METADATA,sha256=7y97ZXmDNqUQ-n8M-BgOE2XLG-pJ6f_aNGjzVlCUFzc,11534
+vector2dggs-0.9.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+vector2dggs-0.9.0.dist-info/entry_points.txt,sha256=5h8LB9L2oOE5u_N7FRGtu4JDwa553iPs4u0XhcLeLZU,52
+vector2dggs-0.9.0.dist-info/RECORD,,
