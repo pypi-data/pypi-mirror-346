@@ -1,0 +1,2 @@
+[console_scripts]
+autoupdate-languages = autoupdate_languages.core:AutoUpdateLanguages
