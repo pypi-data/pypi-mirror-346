@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "scraipe-cyber"
+version = "0.1.3"
+description = "Scraipe scrapers for cyber research."
+readme = "README.md"
+license = "MIT"
+authors = ["Nibs"]
+homepage = "https://github.com/snpm/scraipe-cyber-research"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"  # Correct placement of Python version requirement
+scraipe = { version = "^0.1.30", extras = ["extended"]}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+asdftimer = "*"
+pytest-asyncio = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+aioresponses = "*"
+dotenv = "*"
