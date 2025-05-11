@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyotel.egg-info/PKG-INFO
+pyotel.egg-info/SOURCES.txt
+pyotel.egg-info/dependency_links.txt
+pyotel.egg-info/requires.txt
+pyotel.egg-info/top_level.txt
+simple_logger/__init__.py
+simple_logger/context.py
+simple_logger/middleware.py
