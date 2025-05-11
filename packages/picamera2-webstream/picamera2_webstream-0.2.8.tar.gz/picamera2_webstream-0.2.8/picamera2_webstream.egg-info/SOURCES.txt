@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+picamera2_webstream/__init__.py
+picamera2_webstream/camera_utils.py
+picamera2_webstream/stream_ffmpeg.py
+picamera2_webstream/stream_picamera.py
+picamera2_webstream.egg-info/PKG-INFO
+picamera2_webstream.egg-info/SOURCES.txt
+picamera2_webstream.egg-info/dependency_links.txt
+picamera2_webstream.egg-info/requires.txt
+picamera2_webstream.egg-info/top_level.txt
