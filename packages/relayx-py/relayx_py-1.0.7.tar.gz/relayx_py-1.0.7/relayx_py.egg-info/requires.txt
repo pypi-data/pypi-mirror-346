@@ -1,0 +1,4 @@
+nats-py
+pytest-asyncio
+nkeys
+msgpack
