@@ -1,0 +1,171 @@
+Metadata-Version: 2.4
+Name: docstring2json
+Version: 0.0.10
+Summary: A tool to convert Google-style docstrings to JSON format
+Author-email: Vladimir Iglovikov <iglovikov@gmail.com>
+Maintainer: Vladimir Iglovikov
+License: # CUSTOM LICENSE AGREEMENT FOR GOOGLE DOCSTRING TO JSON CONVERTER
+        
+        Copyright (c) 2025 Vladimir Iglovikov
+        
+        ## 1. DEFINITIONS
+        
+        "Software" refers to the Google Docstring Parser library, including all source code, documentation, and associated files.
+        
+        "Licensor" refers to Vladimir Iglovikov, the copyright holder of the Software.
+        
+        "Albumentations Team" refers to all projects hosted under the GitHub organization at https://github.com/albumentations-team.
+        
+        "User" refers to any individual or entity that uses, copies, modifies, or distributes the Software.
+        
+        ## 2. GRANT OF LICENSE
+        
+        ### 2.1 Albumentations Team Projects Use
+        The Licensor hereby grants, free of charge, to all projects within the Albumentations Team GitHub organization and their official contributors the right to use, copy, modify, merge, publish, and distribute the Software for the purpose of developing and maintaining any project within the Albumentations Team organization.
+        
+        ### 2.2 All Other Use
+        All other Users, including but not limited to individuals, commercial entities, non-profit organizations, and open source projects other than Albumentations, must obtain a paid license from the Licensor before using, copying, modifying, or distributing the Software for any purpose.
+        
+        ## 3. RESTRICTIONS
+        
+        ### 3.1 General Restrictions
+        Without a paid license, no User (except as specified in Section 2.1) may:
+        - Use the Software for any purpose
+        - Copy, modify, or distribute the Software
+        - Create derivative works based on the Software
+        - Sublicense the Software
+        
+        ### 3.2 Albumentations Team Restrictions
+        The Albumentations Team projects may not:
+        - Grant rights to the Software to any third party beyond what is necessary for the development and maintenance of the Albumentations Team projects
+        - Use the Software for purposes unrelated to the Albumentations Team projects
+        
+        ## 4. OBTAINING A PAID LICENSE
+        
+        To obtain a paid license for the Software, please contact:
+        
+        Vladimir Iglovikov
+        iglovikov@gmail.com
+        
+        ## 5. WARRANTY DISCLAIMER
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+        ## 6. TERMINATION
+        
+        This license automatically terminates if you violate any of its terms. Upon termination, you must cease all use of the Software and destroy all copies of the Software in your possession.
+        
+        ## 7. MISCELLANEOUS
+        
+        This License represents the complete agreement concerning the subject matter hereof. If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable.
+        
+        ## 8. GOVERNING LAW
+        
+        This License shall be governed by the laws of the United States of America.
+        
+Project-URL: bug tracker, https://github.com/ternaus/docstring2json/issues
+Project-URL: homepage, https://github.com/ternaus/docstring2json
+Keywords: docstring,documentation,google-style,json,parser,python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google-docstring-parser>=0.0.7
+Requires-Dist: tqdm>=4.65
+Provides-Extra: dev
+Requires-Dist: pre-commit>=3.5; extra == "dev"
+Requires-Dist: pytest>=8.3.3; extra == "dev"
+Dynamic: license-file
+
+# Google Docstring to JSON Converter
+
+A tool that converts Python package docstrings to JSON files.
+
+## License
+
+This software is licensed under a custom license agreement. The Albumentations Team and their official contributors have free access to use this software for their projects. All other users must obtain a paid license.
+
+For licensing inquiries, please contact:
+Vladimir Iglovikov (iglovikov@gmail.com)
+
+See the [LICENSE](LICENSE) file for full details.
+
+## Features
+
+- Converts Google-style docstrings to JSON format
+- Maintains the original package structure in the output
+- Supports both class and function documentation
+- Handles module-level docstrings
+- Preserves code examples and formatting
+- Supports complex type definitions with interactive display
+
+## Installation
+
+```bash
+pip install docstring2json
+```
+
+## Usage
+
+```bash
+python -m src.docstring2json.__main__ --package-name PACKAGE_NAME --output-dir OUTPUT_DIR
+```
+
+or:
+```bash
+docstring2json --package-name PACKAGE_NAME --output-dir OUTPUT_DIR
+```
+
+This will:
+1. Import the specified package
+2. Extract docstrings from all classes, functions, and modules
+3. Write JSON files for each module with proper routing
+
+## Output Structure
+
+The tool creates a directory structure that matches the input package:
+
+```
+output_dir/
+  module1/
+    file1/
+      data.json
+    file2/
+      data.json
+  module2/
+    submodule/
+      file2/
+        data.json
+```
+
+Each `data.json` file contains:
+- Module name and description
+- Parameter descriptions with type information
+- Return values and exceptions with proper formatting
+- Code examples with syntax highlighting
+- References and links to related documentation
+
+## Development
+
+```bash
+# Install dependencies
+pip install -e .
+
+# Run tests
+pytest
+
+# Run pre-commit hooks
+pre-commit run --all-files
+```
