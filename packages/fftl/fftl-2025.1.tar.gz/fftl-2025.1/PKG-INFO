@@ -1,0 +1,108 @@
+Metadata-Version: 2.4
+Name: fftl
+Version: 2025.1
+Summary: Generalised FFTLog for integral transforms
+Project-URL: Documentation, https://fftl.readthedocs.io
+Project-URL: Repository, https://github.com/ntessore/fftl
+Project-URL: Issues, https://github.com/ntessore/fftl/issues
+Author-email: Nicolas Tessore <n.tessore@ucl.ac.uk>
+License: MIT License
+        
+        Copyright (c) 2022 Nicolas Tessore
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: FFTLog,Hankel transform,Laplace transform,Stieltjes transform,integral transform
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: docs
+Requires-Dist: furo; extra == 'docs'
+Requires-Dist: jax; extra == 'docs'
+Requires-Dist: matplotlib; extra == 'docs'
+Requires-Dist: numpydoc; extra == 'docs'
+Requires-Dist: sphinx; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: jax; extra == 'test'
+Requires-Dist: matplotlib; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+*FFTL* — generalised FFTLog for Python
+======================================
+
+The *FFTL* package for Python contains a routine to calculate integral
+transforms of the type *ã(k) = ∫ a(r) T(kr) dr* for arbitrary kernels *T*.  It
+uses a modified FFTLog [2] method of Hamilton [1] to efficiently compute the
+transform on logarithmic input and output grids.
+
+The package supports any array implementation such as Numpy, JAX, Torch, dask,
+etc. as long as it provides a reasonable set of standard Array API functions
+(e.g. `log()`, `exp()`, `linspace()`, etc.) and Fast Fourier Transforms
+(`fft.rfft()` and `fft.irfft()`).
+
+Besides the generalised FFTLog algorithm, the package also provides a number of
+standard integral transforms implemented using SciPy.
+
+
+Installation
+------------
+
+Install with pip:
+
+    pip install fftl
+
+For development, it is recommended to clone the GitHub repository, and perform
+an editable pip installation.
+
+The core package only requires `numpy`.
+
+The standard integral transforms in the `fftl.scipy` module additionally
+require `scipy`.  You can install *FFTL* with these additional dependencies
+using `pip install fftl[scipy]`.
+
+
+Usage
+-----
+
+The core functionality of the package is provided by the [`fftl`] module.  The
+[`fftl()`] routine computes the generalised FFTLog integral transform for a
+given kernel.
+
+For convenience, a number of standard integral transforms are implemented in
+the [`fftl.scipy`] module.
+
+[`fftl`]: https://fftl.readthedocs.io/en/latest/fftl.html
+[`fftl()`]: https://fftl.readthedocs.io/en/latest/fftl.html#fftl.fftl
+[`fftl.scipy`]: https://fftl.readthedocs.io/en/latest/scipy.html
+
+
+User manual
+-----------
+
+* [`fftl` — Generalised FFTLog][`fftl`]
+* [`fftl.scipy` — Standard Integral Transforms using SciPy][`fftl.scipy`]
+
+
+References
+----------
+
+1.  Hamilton A. J. S., 2000, MNRAS, 312, 257 (astro-ph/9905191)
+2.  Talman J. D., 1978, J. Comp. Phys., 29, 35

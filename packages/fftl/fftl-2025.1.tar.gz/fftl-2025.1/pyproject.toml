@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fftl"
+authors = [{name = "Nicolas Tessore", email = "n.tessore@ucl.ac.uk"}]
+description = "Generalised FFTLog for integral transforms"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["FFTLog", "integral transform", "Hankel transform",
+    "Laplace transform", "Stieltjes transform"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = ">=3.8"
+dependencies = ["numpy", "scipy"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = ["pytest", "matplotlib", "jax"]
+docs = ["sphinx", "furo", "numpydoc", "jax", "matplotlib"]
+
+[project.urls]
+Documentation = "https://fftl.readthedocs.io"
+Repository = "https://github.com/ntessore/fftl"
+Issues = "https://github.com/ntessore/fftl/issues"
+
+[tool.hatch]
+version.source = "vcs"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--doctest-modules"
+testpaths = [
+    "fftl",
+]
