@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+anonweather.egg-info/PKG-INFO
+anonweather.egg-info/SOURCES.txt
+anonweather.egg-info/dependency_links.txt
+anonweather.egg-info/requires.txt
+anonweather.egg-info/top_level.txt
+theanonweather/__init__.py
+theanonweather/fetcher.py
