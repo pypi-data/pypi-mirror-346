@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "keyvec"
+version = "1.0.3"
+description = "For storing mapping from keys to vectors in your disk"
+authors = ["Binh Vu <binh@toan2.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^2.1.1"
+hugedict = "^2.14.0"
+serde2 = "^1.8.3"
+ray = "^2.35.0"
+sem-desc = "^6.13.0"
+
+
+[tool.poetry.group.dev.dependencies]
+autoflake = "^2.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
