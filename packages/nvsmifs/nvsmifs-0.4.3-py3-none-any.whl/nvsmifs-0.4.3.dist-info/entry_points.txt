@@ -1,0 +1,3 @@
+[console_scripts]
+nvsmifs=nvsmifs:_main
+
