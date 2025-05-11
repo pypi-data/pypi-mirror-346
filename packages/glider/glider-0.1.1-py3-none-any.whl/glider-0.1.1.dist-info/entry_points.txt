@@ -1,0 +1,3 @@
+[console_scripts]
+glider=glider.cli:configure
+
