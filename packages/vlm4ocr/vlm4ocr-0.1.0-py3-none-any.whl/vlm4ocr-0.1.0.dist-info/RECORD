@@ -1,0 +1,15 @@
+vlm4ocr/__init__.py,sha256=gD7WuuxH9_iUu8dgbfonRQD89xiveVP3e9YP4RAHeIQ,219
+vlm4ocr/assets/default_prompt_templates/ocr_HTML_system_prompt.txt,sha256=igPOntiLDZXTB71-QrTmMJveb6XC1TgArg1serPc9V8,547
+vlm4ocr/assets/default_prompt_templates/ocr_HTML_user_prompt.txt,sha256=cVn538JojZfCtIhfrcOPWt0dO7dtDqgB9xdS_5VvAqo,41
+vlm4ocr/assets/default_prompt_templates/ocr_markdown_system_prompt.txt,sha256=pIsYO2G3jkZ5EWg7MJixre3Itz1oPqJSduUZT34_RNY,436
+vlm4ocr/assets/default_prompt_templates/ocr_markdown_user_prompt.txt,sha256=61EJv8POsQGIIUVwCjDU73lMXJE7F3qhPIYl6zSbl1Q,45
+vlm4ocr/assets/default_prompt_templates/ocr_text_system_prompt.txt,sha256=WbLSOerqFjlYGaGWJ-w2enhky1WhnPl011s0fgRPgnQ,398
+vlm4ocr/assets/default_prompt_templates/ocr_text_user_prompt.txt,sha256=ftgNAIPy_UlrcY6m7-IkH2ApHkCzRnymra1w2wg60Ks,47
+vlm4ocr/cli.py,sha256=8UDZtJXyJp7CTBpzub_fece7wgWay7jBNDwTAPUwMXg,16880
+vlm4ocr/ocr_engines.py,sha256=_sGg4rgDKJv9Y0CIpn933OBY7YXQrNIseeY6o6n_02E,14728
+vlm4ocr/utils.py,sha256=1vEPdXb0HXrj8CLhMufijnDqqmD-XdReG3eI4cNDvxE,2423
+vlm4ocr/vlm_engines.py,sha256=Q8eQP6cfJBCHLfT4FGNhhkJchyIEtm0wzFTBKvGwKiM,18841
+vlm4ocr-0.1.0.dist-info/METADATA,sha256=NP25Bu0w8HJnsK6nLb8AiziBSuxhLKY0qI9B2YY1Pcc,551
+vlm4ocr-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+vlm4ocr-0.1.0.dist-info/entry_points.txt,sha256=qzWUk_QTZ12cH4DLjjfqce89EAlOydD85dreRRZF3K4,44
+vlm4ocr-0.1.0.dist-info/RECORD,,
