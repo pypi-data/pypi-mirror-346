@@ -1,0 +1,6 @@
+dummy.py
+setup.py
+pwnpkg.egg-info/PKG-INFO
+pwnpkg.egg-info/SOURCES.txt
+pwnpkg.egg-info/dependency_links.txt
+pwnpkg.egg-info/top_level.txt
