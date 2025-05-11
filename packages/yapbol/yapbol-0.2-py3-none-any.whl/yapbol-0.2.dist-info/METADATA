@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: yapbol
+Version: 0.2
+Summary: Yet Another PBO Library
+Author: Lukasz Taczuk
+License-Expression: GPL-3.0-only
+Project-URL: Homepage, https://github.com/overfl0/yapbol
+Project-URL: Repository, https://github.com/overfl0/yapbol
+Keywords: arma,pbo
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Yet Another PBO Library
+
+Yapbol is yet another pbo library to unpack and/or modify PBO files used by the
+game Arma 3.
+
+## Installing
+
+```
+pip install yapbol
+```
+
+## Usage
+
+### Read the contents of a file in the PBO
+```python
+from yapbol import PBOFile
+
+pbo = PBOFile.read_file('filepath.pbo')
+
+# Get metadata.hpp file, that's encoded in utf-8, from the PBO
+file = pbo['metadata.hpp']
+print('File contents: ', file.data.decode('utf-8'))
+```
+
+### Print the contents of a PBO file
+```python
+from yapbol import PBOFile
+
+pbo = PBOFile.read_file('filepath.pbo')
+
+for file in pbo:
+    print('File name: ', file.filename)
+```
+
+### Modify and save the PBO
+```python
+from yapbol import PBOFile
+
+pbo = PBOFile.read_file('filepath.pbo')
+
+# TODO: Modify the file here
+
+pbo.save_file('filepath.repack.pbo')
+```
