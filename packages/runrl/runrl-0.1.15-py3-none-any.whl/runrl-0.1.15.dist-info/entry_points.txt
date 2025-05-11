@@ -1,0 +1,3 @@
+[console_scripts]
+runrl=cli.main:app
+
