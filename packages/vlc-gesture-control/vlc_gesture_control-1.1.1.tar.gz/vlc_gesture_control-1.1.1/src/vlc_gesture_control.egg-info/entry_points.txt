@@ -1,0 +1,5 @@
+[console_scripts]
+vlc-gesture-control = vlc_gesture_control.cli:main
+vlc-gesture-control-cpu = vlc_gesture_control.vlc_m_cpu:main
+vlc-gesture-control-gpu = vlc_gesture_control.vlc_m_gpu:main
+vlc-setup-paths = vlc_gesture_control.setup_paths:main

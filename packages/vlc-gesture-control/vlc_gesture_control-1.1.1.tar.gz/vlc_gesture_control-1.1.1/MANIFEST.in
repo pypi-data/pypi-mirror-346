@@ -1,0 +1,10 @@
+include LICENSE
+include README.md
+include pyproject.toml
+include pytest.ini
+include setup.py
+
+recursive-include src/vlc_gesture_control *.py
+recursive-include src/vlc_gesture_control/tests *.py
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib .DS_Store 
