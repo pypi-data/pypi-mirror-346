@@ -1,0 +1,13 @@
+cc_plugin_cc6/__init__.py,sha256=iLmy2rOkHS_4KZWMD8BgT7R3tLMKeaTCDVf3B4FyYxM,91
+cc_plugin_cc6/_constants.py,sha256=RaJezWCvSH3LxGA1Y9b3X82UBKmJOI6AFfstUITaTh4,1098
+cc_plugin_cc6/_version.py,sha256=iB5DfB5V6YB5Wo4JmvS-txT42QtmGaWcWp3udRT7zCI,511
+cc_plugin_cc6/base.py,sha256=Pj2SibC_oR2kgRqvO7V-7A0QZAB_aaa9R2f3y9tLURI,74108
+cc_plugin_cc6/cc6.py,sha256=DBknKYbqqMsgD_eMmuPwrJAecLmMHbkA06ObM0OJFC4,37147
+cc_plugin_cc6/tables.py,sha256=d7xxLWHAF6X7TKykJYQtZiXTj2ezzTshQBTN86_8qVo,521
+cc_plugin_cc6/utils.py,sha256=JxH49BUqLmgkXUGVyWPy0PKqMG0Ea15NrRuADUT6pzA,1906
+cc_plugin_cc6-0.2.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cc_plugin_cc6-0.2.0.dist-info/METADATA,sha256=2WcfDHdI52oHaqVqR-VACoMkyovIeAKalKExjJtmaoA,17159
+cc_plugin_cc6-0.2.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+cc_plugin_cc6-0.2.0.dist-info/entry_points.txt,sha256=4RMK4Ha1q0DZnnLNKycbaMvwJ5qiMmtiHvLhoopG54Y,100
+cc_plugin_cc6-0.2.0.dist-info/top_level.txt,sha256=KE8d9w3fDPploqrghaNNjrnyInI2QyFKQkkCN8ZCvGc,14
+cc_plugin_cc6-0.2.0.dist-info/RECORD,,
