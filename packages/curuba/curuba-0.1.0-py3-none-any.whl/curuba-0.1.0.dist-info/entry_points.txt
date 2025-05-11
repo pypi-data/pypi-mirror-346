@@ -1,0 +1,3 @@
+[console_scripts]
+curuba=curuba.main:app
+
