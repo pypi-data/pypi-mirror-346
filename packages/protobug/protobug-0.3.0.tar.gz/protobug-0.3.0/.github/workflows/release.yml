@@ -1,0 +1,38 @@
+name: Release
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      # trusted publishing
+      id-token: write
+      # creating a release
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: astral-sh/setup-uv@v3
+      with:
+        version: latest
+    - name: Install hatch
+      run: uv tool install hatch
+
+    - name: Build package
+      run: hatch build
+
+    - name: Create release
+      env:
+        GH_TOKEN: ${{ github.token }}
+        tag: ${{ github.ref_name }}
+      run: |
+        gh release create --generate-notes --title "protobug v${tag}" "${tag}" dist/*
+
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
