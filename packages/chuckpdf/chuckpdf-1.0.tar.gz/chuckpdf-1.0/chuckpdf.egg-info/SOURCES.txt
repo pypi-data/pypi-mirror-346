@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+chuckpdf/__init__.py
+chuckpdf/pdf2image.py
+chuckpdf/pdf2text.py
+chuckpdf.egg-info/PKG-INFO
+chuckpdf.egg-info/SOURCES.txt
+chuckpdf.egg-info/dependency_links.txt
+chuckpdf.egg-info/top_level.txt
