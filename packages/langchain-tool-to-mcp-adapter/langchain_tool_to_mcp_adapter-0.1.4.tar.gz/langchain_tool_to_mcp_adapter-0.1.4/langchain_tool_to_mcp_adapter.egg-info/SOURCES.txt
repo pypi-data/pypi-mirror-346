@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+langchain_tool_to_mcp_adapter/__init__.py
+langchain_tool_to_mcp_adapter/adapter.py
+langchain_tool_to_mcp_adapter.egg-info/PKG-INFO
+langchain_tool_to_mcp_adapter.egg-info/SOURCES.txt
+langchain_tool_to_mcp_adapter.egg-info/dependency_links.txt
+langchain_tool_to_mcp_adapter.egg-info/requires.txt
+langchain_tool_to_mcp_adapter.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/test_adapters.py
+tests/test_convert.py
+tests/test_tools.py
