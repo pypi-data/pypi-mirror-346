@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/rotation_plots3d/__init__.py
+src/rotation_plots3d/errors.py
+src/rotation_plots3d/graph.py
+src/rotation_plots3d.egg-info/PKG-INFO
+src/rotation_plots3d.egg-info/SOURCES.txt
+src/rotation_plots3d.egg-info/dependency_links.txt
+src/rotation_plots3d.egg-info/requires.txt
+src/rotation_plots3d.egg-info/top_level.txt
