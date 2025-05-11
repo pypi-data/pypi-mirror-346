@@ -1,0 +1,7 @@
+boto3_pydantic_sqs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_sqs/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_sqs/sqs_classes.py,sha256=k--BDcqhm2TisvaTMPiBFLnxdLJ5K6IgGZlpro5unpY,11426
+boto3_pydantic_sqs/sqs_constants.py,sha256=VSPM6KFuEUP0NlEHDtPRX1Nt48u7i4MTGkzkHtqgonY,8836
+boto3_pydantic_sqs-1.0.1.dist-info/METADATA,sha256=bH8_TrT8MT8yXCyYJpgUWeMsd_IBqBvmfj0WnLne1Es,1382
+boto3_pydantic_sqs-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_sqs-1.0.1.dist-info/RECORD,,
