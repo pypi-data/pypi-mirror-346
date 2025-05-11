@@ -1,0 +1,2 @@
+[console_scripts]
+organizze-mcp = organizze_mcp.cli:main
