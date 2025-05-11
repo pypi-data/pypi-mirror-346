@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "octopus-cloud-storage-hub"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "oss2>=2.19.1",
+    "python-dotenv==1.0.1",
+    "twine>=6.1.0",
+    "typer>=0.15.3",
+]
+
+[project.scripts]
+ocsh = "app.cli.main:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
