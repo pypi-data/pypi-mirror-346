@@ -1,0 +1,11 @@
+bamread/__init__.py,sha256=4uBMY-_Z7N1BMSFKcj97qq43EJkCj_bYQE0Se30skPM,487
+bamread/read.py,sha256=FNdHIDg35gvaDWdG_GYhbS3t1uq5j-Uc2JlkPC8KvmI,2424
+bamread/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bamread/src/bamread.c,sha256=laBe-piqfX3ZiYlI3wTkcOz-Uuf5SNPc9Gwgp3OrzfA,1228964
+bamread/src/bamread.cp311-win32.pyd,sha256=T5ZyvJD01m4t0A2UewJ_-12JnjwYG8qvnSaViRcGszw,133120
+bamread/src/bamread.pyx,sha256=7t_MTkhglBj-_DXpDNh-45VKcOLBGS2aDxO3kJ-4L7M,4796
+tests/control.bam,sha256=mDTPARGRyguKwm4nCDVfV5DN5CkGzNvz80vN04KFXUA,69054
+bamread-0.0.19.dist-info/METADATA,sha256=_y-Wr9LGwEBj4hVkdG0EIFwxQg4y2YcOfDMk4VqVsLg,2160
+bamread-0.0.19.dist-info/WHEEL,sha256=QnBwTGpPoo30er1IscBNOhokX2hwVTCSfvFVP9-vNi8,97
+bamread-0.0.19.dist-info/top_level.txt,sha256=a2CDf5AF6pmAT3vAWPPt5okb2fmzLUA1Tt9NF4Q2KQo,25
+bamread-0.0.19.dist-info/RECORD,,
