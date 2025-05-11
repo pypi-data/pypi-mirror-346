@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+oneworldsync/__init__.py
+oneworldsync/auth.py
+oneworldsync/client.py
+oneworldsync/exceptions.py
+oneworldsync/models.py
+oneworldsync/utils.py
+oneworldsync.egg-info/PKG-INFO
+oneworldsync.egg-info/SOURCES.txt
+oneworldsync.egg-info/dependency_links.txt
+oneworldsync.egg-info/requires.txt
+oneworldsync.egg-info/top_level.txt
