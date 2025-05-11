@@ -1,0 +1,11 @@
+llm_food/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_food/app.py,sha256=EBt3SocHdZ3XiuR8tSEEphoX9lJUPiSxHZLLmZAe50g,62099
+llm_food/cli.py,sha256=ucwgz0gWQwbe48Ry9LOal5v4Vw1AdmXcLbnY_LJuI3c,4315
+llm_food/client.py,sha256=-cAihxnJBxS_nxAZ9PpXOeUXyiuYgcFfoYXUv3XM6zU,7287
+llm_food/config.py,sha256=DedsVXpaEgzhDOn20sjpSDuLkW2291acrMDVIFi1WiM,2037
+llm_food/models.py,sha256=FKlAqkCAM2kpb0it3sbe27yVzTALsFCqsif1f2wrNeA,873
+llm_food-0.1.0.dist-info/METADATA,sha256=f7sBJsdksC5ntafNBBcyPQBs4ezn2rb2l4fKRqeHywg,18243
+llm_food-0.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+llm_food-0.1.0.dist-info/entry_points.txt,sha256=zxzK2sgQkLLPDgprZLrtWYjY0kcYYFxkUPAr2ZJuSkc,82
+llm_food-0.1.0.dist-info/top_level.txt,sha256=La3AAaRZTfAu68YG4qSaB3Xq7WMsmwUwp3uA5Xe0c-c,9
+llm_food-0.1.0.dist-info/RECORD,,
