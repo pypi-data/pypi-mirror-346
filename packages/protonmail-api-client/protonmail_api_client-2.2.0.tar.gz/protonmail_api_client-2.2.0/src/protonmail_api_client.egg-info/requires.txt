@@ -1,0 +1,14 @@
+PGPy13==0.6.1rc1
+aiohttp
+bcrypt
+cryptography
+pycryptodome
+requests
+requests-toolbelt
+typing_extensions
+tqdm
+
+[dev]
+setuptools>=63.0.0
+build
+twine
