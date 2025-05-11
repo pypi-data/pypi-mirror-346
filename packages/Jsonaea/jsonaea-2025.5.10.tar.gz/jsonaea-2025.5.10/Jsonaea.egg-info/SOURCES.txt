@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+Jsonaea.egg-info/PKG-INFO
+Jsonaea.egg-info/SOURCES.txt
+Jsonaea.egg-info/dependency_links.txt
+Jsonaea.egg-info/top_level.txt
+jsonaea/Tools.py
+jsonaea/__init__.py
