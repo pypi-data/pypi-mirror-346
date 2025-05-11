@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: anonweather
+Version: 0.1.0
+Summary: Weather module using api.theanon.xyz API
+Home-page: https://api.theanon.xyz
+Author: Amit Ranabhat
+Author-email: ranabhatamit04@gmail,com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# theanonweather
+
+A simple Python module that fetches real-time weather data using theanon.xyz API.
+
+## Example
+
+```python
+from theanonweather import WeatherFetcher
+
+fetcher = WeatherFetcher()
+print(fetcher.get_weather("Pokhara"))
+```
