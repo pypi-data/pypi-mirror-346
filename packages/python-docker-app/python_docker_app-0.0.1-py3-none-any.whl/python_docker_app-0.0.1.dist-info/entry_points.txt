@@ -1,0 +1,2 @@
+[console_scripts]
+python_docker_app = python_docker_app.cli:main
