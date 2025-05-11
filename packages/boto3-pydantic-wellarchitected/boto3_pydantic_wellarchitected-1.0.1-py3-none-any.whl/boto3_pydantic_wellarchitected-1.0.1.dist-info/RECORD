@@ -1,0 +1,7 @@
+boto3_pydantic_wellarchitected/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_wellarchitected/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_wellarchitected/wellarchitected_classes.py,sha256=NDKCMeKo3FZc6jQt9u2hBJwHzmTXtMAUoVtvFLoBAw0,42916
+boto3_pydantic_wellarchitected/wellarchitected_constants.py,sha256=E5Ux6g7ZC0TJwv6ldmdkdZQs9_TrVdsQzYwHrJQR4Mk,9628
+boto3_pydantic_wellarchitected-1.0.1.dist-info/METADATA,sha256=hYluyoeJ_BpN5zCgZqGQgE9pnMaxqrxNu0ecvjd6du8,1442
+boto3_pydantic_wellarchitected-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_wellarchitected-1.0.1.dist-info/RECORD,,
