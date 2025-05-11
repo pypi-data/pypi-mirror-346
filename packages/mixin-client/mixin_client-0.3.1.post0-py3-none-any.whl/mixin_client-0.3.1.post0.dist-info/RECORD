@@ -1,0 +1,16 @@
+mixin_client/__init__.py,sha256=RdeypFqm4p9VOdwLefsI0EZ92zuEwkBgbkhmJVO_WPk,298
+mixin_client/_version.py,sha256=PyMVWmNcrsxPDl-3F4epjcELowD82MtrVbVxewtxGbQ,526
+mixin_client/auth.py,sha256=pgE_DVEJm_s9BYivJQTbHVlVbNJdkF_DTtEnHjNCKlk,3634
+mixin_client/client.py,sha256=0zDC2vtsXXYJ82FPHjU9Db-lnIG7KC2EoPHATZENEYM,7160
+mixin_client/config.py,sha256=Urhbz3GnszZQqvpWR7-0Wg7JzuX_FEWSYY4edFf7MIw,2701
+mixin_client/http.py,sha256=utyDzDKcmFEFuga61_oLApm3n9wfSE_1O62uLU2U-VM,8318
+mixin_client/models.py,sha256=9-9frTKG1rr6a7j6OL_hY1rM3ygEVzJxa3I9zm3-hno,4188
+mixin_client/api/__init__.py,sha256=e5QbzN5eBCY80CCBvdsnpvkpx_hdlT89tvlS7LQzA0I,108
+mixin_client/api/conversation.py,sha256=U3_xfG04jAC1UXLd7a5nfVtVCWWk0MmRHTzERU3YtYg,5968
+mixin_client/api/message.py,sha256=Ixmsb-bYlwWMCIc2H9HNOG7j-jAeCFkPxOqB2Zmd13o,12596
+mixin_client/api/user.py,sha256=mfr8Z439Usz1WnjCwO9Aa2_cYs5uVcQfCBLPVLXLYgc,3927
+mixin_client-0.3.1.post0.dist-info/licenses/LICENSE,sha256=FyuBsNr3YLXHPRQfWIpCAC4brUeSdYelr01V-Fkog8U,1066
+mixin_client-0.3.1.post0.dist-info/METADATA,sha256=F0SgkjIcCGPdT2KVxWG40DA8eHxg3KjPA_oML98KKq8,4621
+mixin_client-0.3.1.post0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+mixin_client-0.3.1.post0.dist-info/top_level.txt,sha256=ONqqktq1We-C0CqB97mj-UpLkOd60jFtHdPj6Xja3NU,13
+mixin_client-0.3.1.post0.dist-info/RECORD,,
