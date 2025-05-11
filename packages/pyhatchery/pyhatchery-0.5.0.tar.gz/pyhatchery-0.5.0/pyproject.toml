@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyhatchery"
+dynamic = ["version"]
+description = "PyHatchery: A Python project scaffolding tool."
+authors = [{ name = "Kayvan Sylvan", email = "kayvan@sylvan.com" }]
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["requests"]
+
+[project.urls]
+"Homepage" = "https://github.com/ksylvan/pyhatchery"
+"Releases" = "https://github.com/ksylvan/pyhatchery/releases"
+"Bug Tracker" = "https://github.com/ksylvan/pyhatchery/issues"
+"Documentation" = "https://github.com/ksylvan/pyhatchery#readme"
+
+[project.scripts]
+pyhatchery = "pyhatchery.cli:main"
+
+# [tool.hatch.build.targets.wheel.shared-scripts]
+# "pyhatchery/bin/pyhatchery" = "pyhatchery"
+
+[dependency-groups]
+dev = [
+    "hatch>=1.14.1",
+    "hatchling>=1.27.0",
+    "pylint>=3.3.7",
+    "pytest>=8.3.5",
+    "ruff>=0.11.9",
+    "uv>=0.7.3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+
+# Tell hatchling where to find the version variable
+[tool.hatch.version]
+path = "src/pyhatchery/__about__.py"
+
+[tool.uv]
+index = [
+    { name = "testpypi", url = "https://test.pypi.org/simple/", publish-url = "https://test.pypi.org/legacy/", explicit = true },
+    { name = "pypi", url = "https://pypi.org/simple/", publish-url = "https://upload.pypi.org/legacy/", explicit = true },
+]
+
+[tool.hatch.build]
+# ensure editable installs pick up code under src/
+dev-mode-dirs = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pyhatchery"]
+
+[tool.hatch.build.targets.sdist]
+sources = ["src"]
