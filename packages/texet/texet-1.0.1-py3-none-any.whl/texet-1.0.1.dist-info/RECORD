@@ -1,0 +1,16 @@
+texet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+texet/main.py,sha256=FJeznCb7VNE6SDWLSbuN7KhH6XnEZRfrGkI4ctBEbzE,616
+texet/.system/imports.py,sha256=FEL3IGFzNq3dBOck0s7LuUYJACc3D7KWwQXNBpxF7X4,354
+texet/.system/index.py,sha256=SFiTT7aZRyKtwoHA6G-OZ7T6Vu2rzZ2a7V3VZCJ9FE8,11931
+texet/.system/modules/ai.py,sha256=IU4pGfqgWuUd5h8xjGIMs8Dk7r6y1uWUDRNHUuhwmuI,3755
+texet/.system/modules/speak.py,sha256=ThxubovrAoOrf21wA61JBm8SA3yKGy6OqLsJo9txwQM,384
+texet/.system/sources/clight.json,sha256=5bScg_UdJS2e4YOOKqr4y3x6LC2139FSrKFlMiy37Oc,387
+texet/.system/sources/ext.yml,sha256=0-rt9cYmGow4CpQvwmYG0dhNdgqg6tjEA6qOEwyj1k0,462
+texet/.system/sources/lng.yml,sha256=kideIgOxcDJHqVx0vFu021FD3xsfjZKJwD1cVnTTOkg,429
+texet/.system/sources/logo.ico,sha256=HBsohqsMOuhav8E_nA4Hl4ihNRKACPnTwYYrbH-qKbg,103378
+texet-1.0.1.dist-info/licenses/LICENSE,sha256=3U_CaMRQisXoQHsc9kJrlUBUKI6_M5KcJvzkURHBRmU,1096
+texet-1.0.1.dist-info/METADATA,sha256=bP_ninZwyk9yZvA1xyKWfVcxzewnuMXjIrxWKVLYajM,2494
+texet-1.0.1.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+texet-1.0.1.dist-info/entry_points.txt,sha256=N2g2hLgJMwFD1viSvkizftFHPITjWB8gzxSvdLA3YcI,42
+texet-1.0.1.dist-info/top_level.txt,sha256=mnZPiROWcV2uPnwdP4gJ1jop88r1bMAVdxKcNDwFWIc,6
+texet-1.0.1.dist-info/RECORD,,
