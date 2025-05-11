@@ -1,0 +1,15 @@
+llm_samplers/__init__.py,sha256=XnJd75SQLqDSnUIpDjRrCbwjxVCBlcwPQ6OpsEU8zWo,447
+llm_samplers/anti_slop.py,sha256=JDJp6AP85q2Cl8d2bHaHC2nV_JKHgV-jDPxr_hZqw54,4244
+llm_samplers/base.py,sha256=Sed2FbNYopiEmYGbCG_jwmbpMvZHJElIQM11VnTbHd8,2156
+llm_samplers/min_p.py,sha256=1hzzvcT80WadgAmdu9jyNP4vD9YmXZMqt05MStGqQkM,2625
+llm_samplers/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_samplers/qalign.py,sha256=jvsdgRjjHHGZEMF5n2CVmnOwtexqXtAC3YgCqaZeZ0U,5401
+llm_samplers/temperature.py,sha256=-Zq4tLT-WsB4K1wCaPrv-_Qv9n7Oq41ilviR8JPlp7k,2145
+llm_samplers/top_k.py,sha256=dvTJO9OYCeho2iVdZhennNXSLjwtBrNVfH1KZCW3_KM,2410
+llm_samplers/top_p.py,sha256=w1Q-wGNyxto78vwbcS9CKlP8SaDqJHdqJfNiKWlGN2w,2888
+llm_samplers/xtc.py,sha256=RKHq5Sq7i6Oc1vYWm5c-OR5hOb4jW-lryu3ZVul5VoI,3422
+llm_samplers-0.1.2.dist-info/licenses/LICENSE,sha256=zHKcVoS04xuk4yMaLFNMq1qQihFj3SO4VEgRZTUxuHo,1067
+llm_samplers-0.1.2.dist-info/METADATA,sha256=qgCYUz4ah7lD42v_xDzHBdQTj4VEOnnMwSelkw6Zmok,7138
+llm_samplers-0.1.2.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+llm_samplers-0.1.2.dist-info/top_level.txt,sha256=3wmk61BMm5Zdy8XKtag15gzF8FSpt1051QY1q0UcLtA,13
+llm_samplers-0.1.2.dist-info/RECORD,,
