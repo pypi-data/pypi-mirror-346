@@ -1,0 +1,17 @@
+python -m src.videomaster.cli.main process_video d:\Code\temp\demo.mp4 -o d:\Code\temp\demo_rotate.mp4 -r 3
+
+python -m src.videomaster.cli.main process_video d:\Code\temp\demo.mp4 -o d:\Code\temp\demo_blur.mp4 -b 3
+
+python -m src.videomaster.cli.main process_video d:\Code\temp\demo.mp4 -o d:\Code\temp\demo_fh.mp4 -fh
+
+python -m src.videomaster.cli.main process_video d:\Code\temp\demo.mp4 -o d:\Code\temp\demo_fv.mp4 -fv
+
+python -m src.videomaster.cli.main process_video d:\Code\temp\demo.mp4 -o d:\Code\temp\demo_scale.mp4 -sc 0.95
+
+python -m src.videomaster.cli.main process_video d:\Code\temp\demo.mp4 -o d:\Code\temp\demo_speed.mp4 -sp 2
+
+python -m src.videomaster.cli.main process_video d:\Code\temp\demo.mp4 -o d:\Code\temp\demo_noise.mp4 -n 10
+
+python -m src.videomaster.cli.main process_video d:\Code\temp\demo.mp4 -o d:\Code\temp\demo_df.mp4 -df 3
+
+python -m src.videomaster.cli.main process_video d:\Code\temp\demo.mp4 -o d:\Code\temp\demo_if.mp4 -if 30 -ii d:\Code\Octopus\octopus-videomaster\src\videomaster\assets\blank_frame.png
