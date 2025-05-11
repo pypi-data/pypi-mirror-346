@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+metatemplating/Template.py
+metatemplating/__init__.py
+metatemplating.egg-info/PKG-INFO
+metatemplating.egg-info/SOURCES.txt
+metatemplating.egg-info/dependency_links.txt
+metatemplating.egg-info/requires.txt
+metatemplating.egg-info/top_level.txt
