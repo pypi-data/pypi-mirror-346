@@ -1,0 +1,3 @@
+[console_scripts]
+claro=claro.main:app
+
