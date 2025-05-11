@@ -1,0 +1,210 @@
+# GitLab Schedule Badge
+
+The following project provides the means to generate badges based on
+the status of a GitLab project's scheduled job. This tool can be used to
+host a website that presents users the option to pass in a GitLab project
+URL. Users can then request available scheduled pipelines for the project
+and the page will provide badge links that can be used in other
+documentation.
+
+<div align="center" style="text-align: center">
+    <img style="border: 1px solid #111; width: 80%" width="80%"
+        src="https://gitlab.com/gitlab-schedule-badge/gitlab-schedule-badge/-/raw/main/resources/demo.png" />
+</div>
+
+## Requirements
+
+* [Python][python] 3.11+
+* [Flask][flask]
+* [Requests][requests]
+* [pybadges2][pybadges2]
+* WSGI-compatible web server
+
+## Installation
+
+### Manual
+
+This tool can be installed using [pip][pip]:
+
+```shell
+pip install gitlab-schedule-badge
+ (or)
+python -m pip install gitlab-schedule-badge
+```
+
+For an initial setup/testing, users can start the application from the
+command line:
+
+```shell
+gitlab-schedule-badge --help
+ (or)
+python -m gitlab_schedule_badge --help
+```
+
+Running the instance will require a configuration to be prepared (discussed
+below).
+
+When looking to deploy this tool for production use, there are
+[various ways to use this application][flask-deploying]. This application
+uses the following for WSGI startup:
+
+- Module: `gitlab_schedule_badge.wsgi`
+- Call: `main`
+
+For example, users can use [Gunicorn][gunicorn] as follows:
+
+```
+gunicorn --bind 0.0.0.0 "gitlab_schedule_badge.wsgi:main()"
+```
+
+### Docker
+
+This project supports multiple ways to use this utility inside a Docker
+environment. A recommended choice is to use a pre-built image available
+from GitLab's container registry.
+
+### Pre-built image
+
+A pre-built image can be acquired using the following command:
+
+```
+docker pull registry.gitlab.com/gitlab-schedule-badge/gitlab-schedule-badge:0.4.0
+```
+
+Prepare a configuration for this container by creating a file
+`/etc/gitlab-schedule-badge.toml` with the contents defined in the
+[configuration template][config-template] (users can use any path or
+filename they desire, as long as the following `docker run` command
+points to this file). Adjust these options to the configuration desired.
+
+The container than can be run using the following command:
+
+```
+docker run \
+    --name gitlab-schedule-badge \
+    --detach \
+    --publish 8080:8000 \
+    --restart unless-stopped \
+    --volume /etc/gitlab-schedule-badge.toml:/etc/gitlab-schedule-badge.toml \
+    registry.gitlab.com/gitlab-schedule-badge/gitlab-schedule-badge:0.4.0
+```
+
+Feel free to change the value of `8080` to a more preferred port value.
+
+#### Self-managed Docker Compose
+
+Users can also take advantage of the Docker compose definition. First, copy
+the contents in this repository's `docker/` folder to a desired location.
+
+Next, load up the container using `docker compose` from within the folder:
+
+```
+docker compose build
+docker compose up --detach
+```
+
+Both Docker build calls will by default load a container with the
+PyPI version of `gitlab-schedule-badge`. Users wanting to use the local
+implementation in their container can do so by performing a Docker
+build with the `--build-arg local` argument.
+
+For example:
+
+```
+docker compose build --build-arg BUILD_MODE=local
+docker compose up --detach
+```
+
+## Configuration
+
+Configuration is performed using a `gitlab-schedule-badge.toml` file.
+
+An example of a bare minimum configuration is as follows:
+
+```
+[[gitlab-schedule-badge-instance]]
+url = 'https://git.example.com/'
+token = 'glpat-value'
+```
+
+1. Define a GitLab instance with the `[[gitlab-schedule-badge-instance]]`
+   section.
+2. Specifies the GitLab instance that API requests will be made to.
+3. Specifies the [token][tokens] used to authenticate API requests.
+
+The token can be either a personal access token, a project access token
+or a group access token. Only projects which the token has access to can
+query the scheduled pipeline information for said projects. A token only
+requires the `read_api` scope. For project/group access tokens, only the
+`Guest` role is required if the project is public. For private
+projects/groups, a role of `Reporter` may be required.
+
+Multiple instances can be added by adding additional instance sections.
+For example, the following configuration supports querying projects from
+two GitLab self-hosted instances:
+
+```
+[[gitlab-schedule-badge-instance]]
+url = 'https://git.example.com/'
+token = 'glpat-value1'
+
+[[gitlab-schedule-badge-instance]]
+url = 'https://git.example.org/'
+token = 'glpat-value2'
+```
+
+Users can also define group or project-specific keys to apply on an
+instance:
+
+```
+[[gitlab-schedule-badge-instance]]
+url = 'https://git.example.com/'
+namespace = 'group-a'
+token = 'glpat-value1'
+
+[[gitlab-schedule-badge-instance]]
+url = 'https://git.example.com/'
+namespace = 'group-b'
+token = 'glpat-value2'
+```
+
+With a configuration prepared, a user can validate this tool can query
+configured GitLab instances using the following command:
+
+```
+gitlab-schedule-badge --api-check
+```
+
+See the [configuration template][config-template] for more details.
+
+## Troubleshooting
+
+### "Project Not Found"
+
+If GitLab reports that a project cannot be found, this is either two things:
+
+1. The project does not exist. Sanity check that the project path is valid.
+2. Access to the project is not permitted with the provided token. Verify
+   the token created is done by a user who has access to the specific project,
+   or is created for project (or container group) being queried.
+
+### Reverse Proxy with NGINX
+
+If running this tool behind an [NGINX][nginx] reverse proxy, ensure that:
+
+1. Ensure [appropriate `X-Forwarded-*` headers][flask-nginx] are set.
+2. Configure both the `server-name` and `reverse-proxy-chain` entries in
+   configuration file (`gitlab-schedule-badge.toml`).
+
+
+[config-template]: https://gitlab.com/gitlab-schedule-badge/gitlab-schedule-badge/-/blob/main/gitlab-schedule-badge.toml.default
+[flask-deploying]: https://flask.palletsprojects.com/deploying/
+[flask-nginx]: https://flask.palletsprojects.com/deploying/nginx/#configuration
+[flask]: https://flask.palletsprojects.com/
+[gunicorn]: https://gunicorn.org/
+[nginx]: https://nginx.org/
+[pip]: https://pip.pypa.io/
+[pybadges2]: https://pypi.org/project/pybadges2/
+[python]: https://www.python.org/
+[requests]: https://requests.readthedocs.io/
+[tokens]: https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html

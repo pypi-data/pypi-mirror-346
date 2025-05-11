@@ -1,0 +1,50 @@
+[build-system]
+requires = [
+    'flit_core>=3.7',
+]
+build-backend = 'flit_core.buildapi'
+
+[project]
+name = 'gitlab-schedule-badge'
+description = 'Service to share GitLab scheduled job statuses with badges'
+authors = [
+    {name = 'James Knight', email = 'git@jdknight.me'},
+]
+requires-python = '>=3.11'
+readme = 'README.md'
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Environment :: Web Environment',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+]
+dependencies = [
+    'flask',
+    'pybadges2',
+    'requests',
+]
+dynamic = [
+    'version',
+]
+
+[project.urls]
+Download = 'https://pypi.python.org/pypi/gitlab-schedule-badge'
+Source = 'https://gitlab.com/gitlab-schedule-badge/gitlab-schedule-badge'
+
+[project.scripts]
+gitlab-schedule-badge = 'gitlab_schedule_badge.__main__:main'
+
+[tool.flit.module]
+name = 'gitlab_schedule_badge'
+
+[tool.flit.sdist]
+include = [
+    'LICENSE',
+]

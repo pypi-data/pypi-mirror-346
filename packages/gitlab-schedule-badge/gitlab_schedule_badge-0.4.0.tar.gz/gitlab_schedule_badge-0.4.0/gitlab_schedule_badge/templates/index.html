@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GitLab Schedule Badge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='normalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="{{url_for('static', filename='jquery-3.7.1.min.js')}}"></script>
+</head>
+<body>
+    <header>
+        <h1>GitLab Schedule Badge</h1>
+    </header>
+    <div>
+        <div>
+            Enter the GitLab project URL below:
+        </div>
+        <form class="container">
+            <input id="query-url" type="text"
+                placeholder="GitLab Project URL" />
+            <button id="query-submit" type="submit" disabled>FETCH</button>
+        </form>
+        <div id="url-examples">
+            Some fictitious examples:
+            <ul>
+                <li>https://gitlab.com/example/my-project</li>
+                <li>https://git.example.com/my-team/my-project</li>
+            </ul>
+        </div>
+    </div>
+    <div id="results">
+        <div id="project-name"></div>
+        <div id="pipeline-schedules"></div>
+    </div>
+    <footer>
+        <span>
+            <a href="https://gitlab.com/gitlab-schedule-badge/gitlab-schedule-badge">
+            GitLab Schedule Badge</a>/{{version}}
+        </span>
+    </footer>
+
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
