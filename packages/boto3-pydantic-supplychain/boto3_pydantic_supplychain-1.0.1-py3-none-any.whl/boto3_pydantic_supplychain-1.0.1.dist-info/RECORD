@@ -1,0 +1,7 @@
+boto3_pydantic_supplychain/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_supplychain/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_supplychain/supplychain_classes.py,sha256=Z2sfjTTxQO298kJ0EFWWbEL_oAAPHUWSyBxT_s5zc4o,10423
+boto3_pydantic_supplychain/supplychain_constants.py,sha256=k4QhhV39Vc1Oma7HiVSehShCmYTvIiYtEgRWZLU0sio,7936
+boto3_pydantic_supplychain-1.0.1.dist-info/METADATA,sha256=GBxjzOirpgZPR-q5CUavH8xJsVLF6i9wd_szjVPWgkQ,1422
+boto3_pydantic_supplychain-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_supplychain-1.0.1.dist-info/RECORD,,
