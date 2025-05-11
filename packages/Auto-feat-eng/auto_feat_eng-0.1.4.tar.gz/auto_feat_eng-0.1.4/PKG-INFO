@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: Auto_feat_eng
+Version: 0.1.4
+Summary: This library is used to do feature engineering work automatic
+Author: Khemraj Mangal
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary

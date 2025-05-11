@@ -1,0 +1,11 @@
+README.md
+setup.py
+Auto_feat_eng.egg-info/PKG-INFO
+Auto_feat_eng.egg-info/SOURCES.txt
+Auto_feat_eng.egg-info/dependency_links.txt
+Auto_feat_eng.egg-info/requires.txt
+Auto_feat_eng.egg-info/top_level.txt
+mypythonlib/__init__.py
+mypythonlib/auto_feature_eng.py
+mypythonlib/myfunctions.py
+tests/test_myfunctions.py
