@@ -1,0 +1,2 @@
+[console_scripts]
+puccinialize = puccinialin.__main__:main
