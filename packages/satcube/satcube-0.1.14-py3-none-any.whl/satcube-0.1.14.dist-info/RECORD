@@ -1,0 +1,14 @@
+satcube/__init__.py,sha256=93AVVWcj-sdRjht8uhPOeoCfLMOJRw3G8MsoU7aXCXQ,251
+satcube/align.py,sha256=4Ny1qz1bNcGdTAbQAnFtXiE1yVFIGTSd_CVDl4Kybf8,5461
+satcube/cloud_detection.py,sha256=qeofq5_R-zJYOoTe3ylQS8QIHtdidH43Ii-yFfBGU94,8104
+satcube/cloud_detection_old.py,sha256=7MviF8QlT2tj6QC3seepr8SZU0nHOK9Pji8AU94Z2q0,751
+satcube/dataclass.py,sha256=TAAKouyTts5eMtVXRmwWgJb5EaUXryEtkKMtt1O8TKM,934
+satcube/download.py,sha256=y54zVYATaHyIi2k1Y9dS3iAezeuog4R4kONud_PhMMs,1556
+satcube/download_old.py,sha256=Y7dUgq7Gl7jVKHZl5x9cpxALN9T6dCjtZwNjBiq1CAA,2647
+satcube/main.py,sha256=BpQJbPXl6Ydj6X3pX2lFepH7w1-cfJ3LeTTsTmQih6s,14841
+satcube/utils.py,sha256=QBdmSg6_4Vy-4mXH1Z3Z2AvbIKAXBYi5g3-IgWSE1MY,3660
+satcube/utils_old.py,sha256=UBCI2oaL7E5MEjebobnyqGqgOtK6jU9O3t-c58JqZ0k,35057
+satcube-0.1.14.dist-info/LICENSE,sha256=YdB4BQMkMzWuKvXRIpQR4g91IQ_pwA5PSH2lNM97zFI,1070
+satcube-0.1.14.dist-info/METADATA,sha256=eJpLSXf0_NPVCYLlDnKAY93B0wBRxB1dBe7Y7LIOE90,6528
+satcube-0.1.14.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+satcube-0.1.14.dist-info/RECORD,,
