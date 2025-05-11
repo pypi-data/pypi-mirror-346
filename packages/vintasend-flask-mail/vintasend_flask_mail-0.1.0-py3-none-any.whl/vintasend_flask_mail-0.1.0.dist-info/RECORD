@@ -1,0 +1,10 @@
+vintasend_flask_mail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_flask_mail/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_flask_mail/services/notification_adapters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_flask_mail/services/notification_adapters/flask_mail.py,sha256=BUMscVeZeiHh0QkxotswF_N8lqHr8eph-Yge-ysTn28,2365
+vintasend_flask_mail/services/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_flask_mail/services/tests/test_adapters.py,sha256=fllMKCJVIjOs62Ql3S1HRkTvJtr6GpQjImx5lrAyLtc,3903
+vintasend_flask_mail-0.1.0.dist-info/LICENSE.txt,sha256=gydDNz2DGPNG5y5sRlrez6aqjYX3xgphqdCHwqw1F-k,1104
+vintasend_flask_mail-0.1.0.dist-info/METADATA,sha256=LZRFedI4dQwwzDk5DmSLcEGAmT_EjJRKruNE8pOWrdI,620
+vintasend_flask_mail-0.1.0.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+vintasend_flask_mail-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: vintasend-flask-mail
+Version: 0.1.0
+Summary: Flask Mail adapter for VintaSend
+License: MIT
+Author: Hugo bessa
+Author-email: hugo@vinta.com.br
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: flask-mail (>=0.10.0,<0.11.0)
+Requires-Dist: vintasend
+Description-Content-Type: text/markdown
+
+# VintaSend Flask Mail
+
+Flask Mail adapter for VintaSend
