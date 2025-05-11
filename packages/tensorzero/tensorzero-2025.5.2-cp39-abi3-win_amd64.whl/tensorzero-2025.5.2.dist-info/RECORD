@@ -1,0 +1,12 @@
+.cargo/config.toml,sha256=rRFsH_rIZcmBCKN2x2DI2u0Nje5Of1dWv9i1Jf5aVFU,540
+tensorzero-2025.5.2.dist-info/METADATA,sha256=P7uzI2uK7N-S8dzcLbxy0-FDrQwsAuLozx9k1qPVAF8,6701
+tensorzero-2025.5.2.dist-info/WHEEL,sha256=d9SUgrVt_wtMr6C1D8-mfA3v9Ua4s5VuwUtAU03oBwo,94
+tensorzero/__init__.py,sha256=gal69HCyWwDc9rLjNw2h5vKaHnvGc1rC3S_D8mPyVSY,5424
+tensorzero/client.py,sha256=79rMZ4gAgbZqbW5GQBUf2jM7CxPmQvHV1ZIVJeCE-70,282
+tensorzero/internal_optimizations_server_types.py,sha256=XvNFQ91GJZfW19tPsOMpcEsT4CK09gJMSRThxyiUPBg,668
+tensorzero/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tensorzero/tensorzero.pyd,sha256=f1LTOfuV9Y6oTEkO5kHCxzWO6VE6M_HtyeZ6qvK2fWs,39525376
+tensorzero/tensorzero.pyi,sha256=xedikwrdA_gRb1E-PjXMrcSUjAAsL6iH5wUPre0Pii0,22915
+tensorzero/types.py,sha256=vbCXM_B0kqzr4iuQcMeGlYEVM_cgmz41c7TkKvrBXqU,13138
+tensorzero/util.py,sha256=FbsSYXPDdqLyYK3XsRYJJ24GTf1glp_zZEh_baimm2Q,286
+tensorzero-2025.5.2.dist-info/RECORD,,
