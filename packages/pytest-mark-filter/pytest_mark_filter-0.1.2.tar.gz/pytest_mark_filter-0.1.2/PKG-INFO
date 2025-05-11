@@ -1,0 +1,66 @@
+Metadata-Version: 2.4
+Name: pytest-mark-filter
+Version: 0.1.2
+Summary: Filter pytest marks by name using match kw
+Project-URL: Homepage, https://github.com/ygorpontelo/pytest-mark-filter
+Author-email: Ygor Pontelo <ygorpontelo@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: filter,mark,match,plugin
+Classifier: Framework :: Pytest
+Requires-Python: >=3.10
+Requires-Dist: pytest>=8.3.0
+Description-Content-Type: text/markdown
+
+### Mark Filter
+
+
+Most pytest marks accept additional keywords arguments. This plugin will check for the __match__ and __not_match__ keywords. Any test that has the string in its name will be filtered accordingly. You can use both at the same time too.
+
+#### Match
+
+```python
+import pytest
+
+pytestmark = [
+    pytest.mark.skipif(match="skip")
+]
+
+def test_normal():
+    pass
+
+def test_skip():
+    pass
+
+def test_other():
+    pass
+```
+
+Any test that has "skip" in the name will get the mark. In this case, test_skip.
+
+#### Not Match
+
+```python
+import pytest
+
+pytestmark = [
+    pytest.mark.skipif(not_match="skip")
+]
+
+def test_normal():
+    pass
+
+def test_skip():
+    pass
+
+def test_other():
+    pass
+```
+
+Any test that doesn't have "skip" in the name will get the mark. In this case, test_normal and test_other.
+
+### Installing
+
+```
+pip install pytest-mark-filter
+```
