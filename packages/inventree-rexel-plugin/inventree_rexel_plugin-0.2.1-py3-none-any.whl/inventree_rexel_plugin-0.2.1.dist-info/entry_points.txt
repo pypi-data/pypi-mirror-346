@@ -1,0 +1,2 @@
+[inventree_plugins]
+rexelPlugin = inventree_rexel.core:RexelPlugin

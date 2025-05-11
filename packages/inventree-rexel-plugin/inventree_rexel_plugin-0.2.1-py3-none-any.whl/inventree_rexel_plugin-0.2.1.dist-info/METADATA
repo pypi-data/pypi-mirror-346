@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: inventree-rexel-plugin
+Version: 0.2.1
+Summary: rexel product import plugin for InvenTree
+Home-page: https://github.com/philipboy881/inventree-rexel-plugin
+Author: Philip van der honing
+Author-email: philipvanderhoning@gmail.com
+License: MIT
+Keywords: inventree rexel product import inventory
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tablib
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: python-dotenv
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+# inventree-rexel-plugin
+
+This is a product import plugin for [InvenTree](https://inventree.org), which provides
+support for importing product from rexel:
+
+Error handling is very basic.
+
+## Installation
+
+The plugin is on pypi. Install this plugin using pip with the following command:
+
+```
+pip install inventree-rexel-plugin
+```
+
+## Configuration Options
+### username
+
+### password
+
+## How it works
