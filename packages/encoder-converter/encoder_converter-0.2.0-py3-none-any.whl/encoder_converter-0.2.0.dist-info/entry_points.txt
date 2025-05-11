@@ -1,0 +1,3 @@
+[console_scripts]
+convertencoder=encoder_converter.cli:main
+
