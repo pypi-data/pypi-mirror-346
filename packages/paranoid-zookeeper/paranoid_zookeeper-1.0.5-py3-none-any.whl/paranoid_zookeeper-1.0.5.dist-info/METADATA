@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: paranoid-zookeeper
+Version: 1.0.5
+Summary: Python Paranoid Zookeeper SDK
+Home-page: https://paranoid.software
+Author: Paranoid Software
+Author-email: info@paranoid.software
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: requests
+
+# Paranoid Zookeeper SDK
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install paranoid_zookeeper
+```
+
+## Usage
+
+### Example
+
+```python
+from paranoid_zookeeper import ZookeeperServiceContext, Artifact, HttpHealthCheck, Zookeeper
+
+# Set up the service context
+settings = {
+    'id': 'my-service',
+    'baseEndpoint': 'http://localhost:8080/zookeeper',
+    'headers': {
+        'Authorization': 'Bearer abc123'
+    }
+}
+context = ZookeeperServiceContext(settings)
+
+# Create the health check and artifact
+health_check = HttpHealthCheck(url='/health', port_number=8080)
+artifact = Artifact(
+    id='artifact-1',
+    name='My Service',
+    description='A demo microservice',
+    id_address='192.168.1.10',
+    http_health_check=health_check,
+    type='Service',
+    depends_on=[],
+    tags=['demo', 'microservice']
+)
+
+# Register the artifact
+zk = Zookeeper(context)
+result = zk.check_in(artifact)
+
+if result.success:
+    print("Check-in successful")
+else:
+    print("Check-in failed:", result.serviceResponse)
+```
+
+## Requirements
+
+- Python 3.6 or higher
+- `requests` library
+
+## License
+
+This project is licensed under the MIT License.
