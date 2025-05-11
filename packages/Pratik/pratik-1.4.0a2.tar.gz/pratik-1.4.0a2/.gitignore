@@ -1,0 +1,6 @@
+/dist/
+/.idea/
+/.github/
+.gitignore
+pyproject.toml
+toDoList.tdl
