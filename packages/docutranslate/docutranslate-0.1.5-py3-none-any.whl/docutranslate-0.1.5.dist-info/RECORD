@@ -1,0 +1,14 @@
+docutranslate/__init__.py,sha256=JiU4t40h4WAVp5f4C73fxbbIHVfCsCROjPp_W7OkHvg,38
+docutranslate/translater.py,sha256=E_aGrLUDSfk137zdcO9pl2PXdWORXu2kHk7V_ViC4pc,10664
+docutranslate/Agents/__init__.py,sha256=kL_TmwMInL79Co1_cHti95JrNDaHTSG5B3VQMRlvugM,98
+docutranslate/Agents/agent.py,sha256=Z8b7qU0XNC_yKg9dH2yfD3sYB1xDrMt7QaQzfI13J58,4384
+docutranslate/Agents/markdown_agent.py,sha256=nUfPz0SMH1fS5epGiSi-rwhdutKHIZuD5JDZ8CkmP1Y,1862
+docutranslate/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docutranslate/utils/convert.py,sha256=wdWG0B6HvFBh9IHMLi5-P-07eWI9t6WToSH4Qb7UvsA,1475
+docutranslate/utils/docling_utils.py,sha256=fUBM7F1uSXjJs2JpUdvIdA80Lg8igwAWQXoktSvJxmc,172
+docutranslate/utils/markdown_splitter.py,sha256=QoRKod_X9hMNBTrJdEKO2Uya3ioxMpj5gXhXRShoC8c,8917
+docutranslate/utils/markdown_utils.py,sha256=Mr9bbYXWap23aRHKMSn_aADys2H3stYZOZF79XsYNS8,1967
+docutranslate-0.1.5.dist-info/METADATA,sha256=oO2BEjPTQPHGluHFKueb5qKy9FwA3U4tQrBVCcEGOI8,9128
+docutranslate-0.1.5.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+docutranslate-0.1.5.dist-info/top_level.txt,sha256=zqoV29GlxqOvZ4RY7Fqyglhf4h4o_Ub7pruwITtwkmI,14
+docutranslate-0.1.5.dist-info/RECORD,,
