@@ -1,0 +1,25 @@
+{
+    "priority": 100,
+    "latest": {
+        "image": "nginx:latest",
+        "compose": {
+            "ports": [
+                "${APP_PORT:-7070}:80"
+            ],
+            "volumes": [
+                "./:/var/www/html"
+            ]
+        },
+        "publishes": {
+            "laravel.conf": {
+                "source": "conf/{version}/laravel.conf",
+                "destination": "/etc/nginx/conf.d/default.conf"
+            },
+            "node.conf": {
+                "source": "conf/{version}/node.conf",
+                "destination": "/etc/nginx/conf.d/default.conf",
+                "skipVolumes": true
+            }
+        }
+    }
+}
