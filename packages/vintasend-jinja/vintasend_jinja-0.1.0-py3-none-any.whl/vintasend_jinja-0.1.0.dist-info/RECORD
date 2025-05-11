@@ -1,0 +1,14 @@
+vintasend_jinja/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_jinja/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_jinja/services/notification_template_renderers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_jinja/services/notification_template_renderers/jinja_templated_email_renderer.py,sha256=BqcZ3TwWDVZIwrbCzFpEdCMJPMG7NzWZI5RsNclW3Mg,2109
+vintasend_jinja/services/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_jinja/services/tests/test_template_renderers.py,sha256=6Sg2o0DVWA_EjfuUzKxXoJBLTZpXDAFg2cxEkQEU3GA,1984
+vintasend_jinja/templates/vintasend_jinja/emails/base_notification.html,sha256=_K5htY1p7CmUix4U3NM7capeIuXqz-MV-ezBhNs-u-A,1425
+vintasend_jinja/templates/vintasend_jinja/emails/test/test_templated_email_body.html,sha256=iOyBGX8GntHFWD8Ib0ytyYI2XZBEGQWgqPX8JCDpogw,204
+vintasend_jinja/templates/vintasend_jinja/emails/test/test_templated_email_preheader.html,sha256=WEdJ9hC3CAZqhIc2txjKGM5P1yYVdW8RtaqvP36AwWU,47
+vintasend_jinja/templates/vintasend_jinja/emails/test/test_templated_email_subject.txt,sha256=O1QChjLg38YuBVV2lbx7MT1ApGbi4Pcg6aXLaxmVT0E,35
+vintasend_jinja-0.1.0.dist-info/LICENSE.txt,sha256=gydDNz2DGPNG5y5sRlrez6aqjYX3xgphqdCHwqw1F-k,1104
+vintasend_jinja-0.1.0.dist-info/METADATA,sha256=pB-3vbLnaox5wkl3hC24qljJr4UavQKNdGQZYtc-BpM,656
+vintasend_jinja-0.1.0.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+vintasend_jinja-0.1.0.dist-info/RECORD,,
