@@ -1,0 +1,3 @@
+[console_scripts]
+imhotep-mail = imhotep_mail:hello
+imhotep-mail-cli = imhotep_mail.cli:main
