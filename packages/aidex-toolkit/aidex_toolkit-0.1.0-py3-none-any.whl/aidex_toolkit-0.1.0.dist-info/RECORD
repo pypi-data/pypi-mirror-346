@@ -1,0 +1,13 @@
+project1/__init__.py,sha256=wfdWGkk5AVFycaiwjU5J_X4yKlK5Q9DnRSw5Av6AfOg,119
+project1/advanced_linear_regression.py,sha256=3rOdq2Gsd6w9shMFPuT7nR8y5zaiqyjaKaYxdxc3Cg0,1340
+project1/simple_linear.py,sha256=n4Kd_ItmGizwiWewCBfqGTka7v4RtDOmqzrYXJRF7DU,547
+project2/__init__.py,sha256=Gv-n8EQnLzXAgS2iI9LHQALpdBQfCWZDCIir7XKh5p8,91
+project2/xor_neural_network_basic.py,sha256=82qmBOAfxufE5lTw_ha3xSYgZh7Yv6u9TODbw5gug-0,2235
+project3/__init__.py,sha256=6p8mrQG70AsXExWv8DplzTXR51LWK6yBVO1msra25oU,115
+project3/binary_logistic_trainer.py,sha256=GU5GpKhHXLAIKmOltK9i_cs6SkAgAfo9emwwrJR2VgY,1098
+project3/sample_data_loader.py,sha256=PmsGTonnOe9WxmWvk4UXfh1r09wjgd0qTFvqv939PMU,552
+aidex_toolkit-0.1.0.dist-info/LICENSE,sha256=33vIBJJ7y1AhHtvgQvTlWVfKTZBuB3TfMDj3McFYps8,1093
+aidex_toolkit-0.1.0.dist-info/METADATA,sha256=2U33I_tZA_wZPxQ8Xi4GcD0Fv2RjeMP1gf9zhW-wIkE,636
+aidex_toolkit-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+aidex_toolkit-0.1.0.dist-info/top_level.txt,sha256=yk_BZpIYDvYIHBedIUqmOyPjfU-7vVrVgI2H23nRC6s,27
+aidex_toolkit-0.1.0.dist-info/RECORD,,

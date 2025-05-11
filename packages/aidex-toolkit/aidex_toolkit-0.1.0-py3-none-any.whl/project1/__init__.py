@@ -1,0 +1,2 @@
+from .simple_linear import simple_linear_regression
+from .advanced_linear_regression import advanced_linear_regression
