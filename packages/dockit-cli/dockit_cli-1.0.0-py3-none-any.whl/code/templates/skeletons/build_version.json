@@ -1,0 +1,31 @@
+{
+   "version": {
+    "build": {
+        "base_image": "",
+        "copies": [],
+        "apt": [],
+        "run": [],
+        "working_dir": "",
+        "command": ""
+    },
+    "compose": {
+        "ports": [],
+        "volumes": [],
+        "environment": [],
+        "context": ".",
+        "dockerfile": "Dockerfile",
+        "args": {},
+        "depends_on": []
+    },
+    "publishes": {
+        "filename": {
+            "source": "",
+            "destination": ""
+        },
+        "filename2": {
+            "source": "",
+            "destination": ""
+        }
+    }
+   }
+} 
