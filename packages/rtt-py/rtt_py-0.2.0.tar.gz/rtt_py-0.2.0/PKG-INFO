@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: rtt-py
+Version: 0.2.0
+Summary: Default template for PDM package
+Author-Email: Shammi Anand <shammianand101@gmail.com>
+License: MIT
+Requires-Python: ==3.12.*
+Requires-Dist: typer>=0.15.3
+Requires-Dist: structlog>=25.3.0
+Requires-Dist: markdownify>=1.1.0
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# rtt
+
+`rtt` is a cli application which allows you to convert a repository of code/files
+and webpages into flat files (both `txt` and `md` formats are supported) and
+interact with LLMs all using one CLI
+
+## Author
+
+[@shammianand](https://www.github.com/shammianand)
