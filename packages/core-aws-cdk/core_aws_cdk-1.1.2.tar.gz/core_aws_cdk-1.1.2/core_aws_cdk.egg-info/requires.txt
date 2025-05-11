@@ -1,0 +1,6 @@
+aws-cdk-lib>=2.173.4
+core-tests>=1.1.0
+
+[docs]
+pydata-sphinx-theme==0.16.1
+Sphinx==8.2.3

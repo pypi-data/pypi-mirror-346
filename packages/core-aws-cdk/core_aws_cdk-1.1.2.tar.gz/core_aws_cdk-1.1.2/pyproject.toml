@@ -1,0 +1,57 @@
+# Other project metadata fields as specified in:
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "core-aws-cdk"
+description = "This project contains the commons elements to create infrastructure in AWS using AWS CDK..."
+version = "1.1.2"
+
+authors = [
+    {name = "Alejandro Cora González", email = "alek.cora.glez@gmail.com"}
+]
+
+maintainers = [
+    {name = "Alejandro Cora González"}
+]
+
+requires-python = ">=3.9"
+license = {text = "MIT"}
+readme = "README.md"
+
+classifiers = [
+    # Classifiers -> https://pypi.org/classifiers/
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13"
+]
+
+dependencies = [
+    "aws-cdk-lib>=2.173.4",
+    "core-tests>=1.1.0"
+]
+
+[project.optional-dependencies]
+docs = [
+    "pydata-sphinx-theme==0.16.1",
+    "Sphinx==8.2.3"
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/bytecode-solutions/infrastructure/core-aws-cdk"
+Repository = "https://gitlab.com/bytecode-solutions/core/core-aws-cdk"
+Documentation = "https://core-aws-cdk.readthedocs.io/en/latest/"
+Issues = "https://gitlab.com/bytecode-solutions/core/core-aws-cdk/-/issues"
+Changelog = "https://gitlab.com/bytecode-solutions/core/core-aws-cdk/-/blob/master/CHANGELOG.md"
