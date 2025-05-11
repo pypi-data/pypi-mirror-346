@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-discovery = server.main:__main__
