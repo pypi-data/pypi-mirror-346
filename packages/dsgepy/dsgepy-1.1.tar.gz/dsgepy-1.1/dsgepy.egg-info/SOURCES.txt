@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+dsgepy/__init__.py
+dsgepy/data_api.py
+dsgepy/lineardsge.py
+dsgepy/pycsminwel.py
+dsgepy.egg-info/PKG-INFO
+dsgepy.egg-info/SOURCES.txt
+dsgepy.egg-info/dependency_links.txt
+dsgepy.egg-info/requires.txt
+dsgepy.egg-info/top_level.txt
+dsgepy/kalman/__init__.py
+dsgepy/kalman/kalman.py
+dsgepy/kalman/utils.py
