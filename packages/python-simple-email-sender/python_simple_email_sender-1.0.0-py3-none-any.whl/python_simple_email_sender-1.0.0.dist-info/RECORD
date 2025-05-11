@@ -1,0 +1,9 @@
+python_simple_email_sender/__init__.py,sha256=NL11dbIuEH10WZaleVRd5car0iKqDq4ZRPUPhuFbq4U,45
+python_simple_email_sender/gmail_sender.py,sha256=02hnjueIzw2Bsqh-T1X1t2pIOJ50A0P-wz-SzrsHvNs,2221
+python_simple_email_sender-1.0.0.dist-info/licenses/LICENSE,sha256=cSikHY6SZFsPZSBizCDAJ0-Bjjzxt-JtX6TVbKxwimo,1067
+usage_example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+usage_example/send_email.py,sha256=Rn74TdUH9rGJMTL6DZS3d25zt5F05WumQKYO2OKMLXw,865
+python_simple_email_sender-1.0.0.dist-info/METADATA,sha256=K9F-Gg3RBU_F6YN1OSCjtf_n9NyZJAxw5M2Nm2GyNyg,3761
+python_simple_email_sender-1.0.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+python_simple_email_sender-1.0.0.dist-info/top_level.txt,sha256=tY690vPqQ_2d5UJwjVxY1hLkLxuVHsZ20GyAvtOc5Lo,41
+python_simple_email_sender-1.0.0.dist-info/RECORD,,
