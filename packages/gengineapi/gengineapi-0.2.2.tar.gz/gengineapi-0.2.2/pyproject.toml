@@ -1,0 +1,11 @@
+[project]
+name = "gengineapi"
+version = "0.2.2"
+description = "G-Engine API Client"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.8.0",     # Для асинхронных HTTP-запросов и WebSocket
+    "typing-extensions>=4.0.0",  # Для расширенных типов аннотаций
+    "aiohttp-socks>=0.7.1",
+]
