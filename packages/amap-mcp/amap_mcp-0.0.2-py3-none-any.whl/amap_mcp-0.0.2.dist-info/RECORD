@@ -1,0 +1,11 @@
+amap_mcp/__init__.py,sha256=Y0fNgo_ELVaGODr6O93lPbSNDKKRuxbZ_B_7SJC-Tyg,53
+amap_mcp/server.py,sha256=b6rV2hW1HBuKkcsgJE3itsGn5bqc6uvr23v3GInOAvk,1203
+amap_mcp/amap/__init__.py,sha256=4a_fzYcM6WqZWDITBajb2Yndu6vo6RdtpOxzHh6Bk8o,30
+amap_mcp/amap/client.py,sha256=3dxzKK-2pyhV5nmUDY4Zc-hIYYGixyz6E1C8qYwCUTs,676
+amap_mcp/amap/query_weather/__init__.py,sha256=d3ekK-AclPjRzgsD6lePfGXAOX6WmVVW1KHcZnJPTok,42
+amap_mcp/amap/query_weather/client.py,sha256=y4V7MSrljX924cUafib-O4WM3dq0jr8hWlBY2ODrm9Y,1098
+amap_mcp-0.0.2.dist-info/METADATA,sha256=7C2kxTH2nKvgXKIfzp9uUnODo4TFYjiX5kMlzaRSmnY,2747
+amap_mcp-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+amap_mcp-0.0.2.dist-info/entry_points.txt,sha256=ybv2pO_Inbo3QgtuOn0IEDi9-_adwKEag7pjjcPbyuI,50
+amap_mcp-0.0.2.dist-info/licenses/LICENSE,sha256=sLNAxP9MqY9oVDPdIK8tf2tCd6dNIeeZ0As4zn_7xAw,1068
+amap_mcp-0.0.2.dist-info/RECORD,,
