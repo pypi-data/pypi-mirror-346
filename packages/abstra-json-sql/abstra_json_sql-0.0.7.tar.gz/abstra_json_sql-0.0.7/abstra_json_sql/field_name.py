@@ -1,0 +1,23 @@
+from .ast import SelectField, NameExpression, FunctionCallExpression, Expression
+
+
+def field_name(field: SelectField) -> str:
+    """
+    Get the field name from a SelectField object.
+    """
+    if field.alias:
+        return field.alias
+    else:
+        return expression_name(field.expression)
+
+
+def expression_name(expression: Expression):
+    """
+    Get the field name from an Expression object.
+    """
+    if isinstance(expression, NameExpression):
+        return expression.name
+    elif isinstance(expression, FunctionCallExpression):
+        return expression.name
+    else:
+        return "?column?"
