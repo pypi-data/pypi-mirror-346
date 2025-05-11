@@ -1,0 +1,20 @@
+[package]
+name = "kideo"
+version = "0.2.2"
+edition = "2024"
+
+include = ["src/**", "Cargo.toml", "bin/ffmpeg"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.21", features = ["extension-module"] }
+
+[package.metadata.maturin]
+# This ensures that the embedded FFmpeg is included in the wheel
+include = ["bin/ffmpeg"]
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"

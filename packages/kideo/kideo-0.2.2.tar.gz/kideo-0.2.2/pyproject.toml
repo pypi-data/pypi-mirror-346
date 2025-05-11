@@ -1,0 +1,11 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "kideo"
+version = "0.2.2"
+description = "Compress videos to WebM with 240p, 15fps, CRF 28"
+authors = [{ name="vovota company" , email="vovotacompany@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.7"
