@@ -1,0 +1,4 @@
+[console_scripts]
+comload=comload.__main__:main
+comload2desc=comload.description:main
+
