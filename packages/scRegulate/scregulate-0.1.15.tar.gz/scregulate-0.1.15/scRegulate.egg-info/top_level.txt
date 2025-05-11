@@ -1,0 +1,5 @@
+assets
+dist
+notebooks
+priors
+scregulate
