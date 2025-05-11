@@ -1,0 +1,8 @@
+tests/test_lazy.py,sha256=pS3V2vNvTSyx25j-DIr2nwRmBY5c6sxhVluV6uvXyIA,278
+tstring/__init__.py,sha256=f9zhONT3V4744CfxsFNO9rZyZfZ3qDaXAMKqfUB_S40,179
+tstring/lazy.py,sha256=NgogpO7WDhslhb--LN4mGyWJ58ZYZLjFo-EQuwlCuBE,2799
+tstring_util-0.1.dist-info/LICENSE,sha256=K8iktxVVkoSBcR27-qa0n7ApnSzaPUKRU6Qpq8TmVlI,1065
+tstring_util-0.1.dist-info/METADATA,sha256=U9wVxDPF87ENNQKZy7xotR86W-RVtdH8js8_aTC8ZJ8,628
+tstring_util-0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+tstring_util-0.1.dist-info/top_level.txt,sha256=2gGX0VdHB4mAKCgLto_Kv7z9ddS9_5dNpOvOL2w3I-o,14
+tstring_util-0.1.dist-info/RECORD,,
