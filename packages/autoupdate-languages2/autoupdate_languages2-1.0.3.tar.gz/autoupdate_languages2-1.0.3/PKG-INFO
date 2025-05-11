@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: autoupdate-languages2
+Version: 1.0.3
+Summary: Automatically updates and maintains a list of programming languages
+Author-email: mek0124 <mek0124@proton.me>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: beautifulsoup4==4.13.3
+Requires-Dist: build==1.2.2.post1
+Requires-Dist: html5lib==1.1
+Requires-Dist: pip==24.0
+Requires-Dist: pytest==8.3.5
+Requires-Dist: pytest-asyncio==0.26.0
+Requires-Dist: requests==2.32.3
+Requires-Dist: twine==6.1.0
+Requires-Dist: uv==0.6.14
+Requires-Dist: uvloop==0.21.0
+Dynamic: license-file
+
+# AutoUpdate Languages 2
+
+A package that automatically maintains an updated list of programming languages by scraping programminglanguages.info.
+
+## Installation
+
+```bash
+pip install autoupdate-languages2
+```
+
+## Usage
+
+```python
+from autoupdate_languages2 import AutoUpdateLanguages2
+
+app = AutoUpdateLanguages2()
+asyncio.run(app.start())
+```
+
+<!-- fix codebase for command below to work -->
+<!-- Or from command line:
+```bash
+autoupdate-languages2
+``` -->
+
+## Features
+- Automatically updates language list monthly
+- Lightweight and easy to use
+
