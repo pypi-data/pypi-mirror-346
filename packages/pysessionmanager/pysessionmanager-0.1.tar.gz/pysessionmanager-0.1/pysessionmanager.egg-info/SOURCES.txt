@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pysessionmanager/__init__.py
+pysessionmanager/core.py
+pysessionmanager/presistence.py
+pysessionmanager/security.py
+pysessionmanager/utils.py
+pysessionmanager.egg-info/PKG-INFO
+pysessionmanager.egg-info/SOURCES.txt
+pysessionmanager.egg-info/dependency_links.txt
+pysessionmanager.egg-info/top_level.txt
+tests/test_core.py
