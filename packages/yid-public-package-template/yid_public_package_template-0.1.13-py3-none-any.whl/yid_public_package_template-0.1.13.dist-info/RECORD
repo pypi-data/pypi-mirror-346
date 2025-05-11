@@ -1,0 +1,7 @@
+public_package_template/module.py,sha256=8-TO8iodB1W8KpHXPXO-WyK9RDQGwMZ2UTH314LtRhY,213
+public_package_template/nested/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+public_package_template/nested/module.py,sha256=8Vq7RVVWyXyDM319NWaNsQkdZ1ZqFH2NxrNroBEejm4,97
+yid_public_package_template-0.1.13.dist-info/METADATA,sha256=9zVt2C1RPPDnQpFVo_Q3eAKrkH-mFwaSvjuK5L0vUyY,2399
+yid_public_package_template-0.1.13.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+yid_public_package_template-0.1.13.dist-info/top_level.txt,sha256=C56B2W1zdkjYYDoOqlN5JC8YhGicNjO20fFEWFrmLqY,24
+yid_public_package_template-0.1.13.dist-info/RECORD,,
