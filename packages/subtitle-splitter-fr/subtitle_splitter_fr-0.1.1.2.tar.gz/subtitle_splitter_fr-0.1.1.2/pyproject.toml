@@ -1,0 +1,42 @@
+# subtitle_splitter_fr/pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "subtitle_splitter_fr"
+version = "0.1.1.2"
+authors = [
+  { name="Jules Goueffon", email="jules.goueffon89@gmail.com" },
+]
+description = "Divise des textes en sous-titres basés sur un modèle ONNX."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Natural Language :: French",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "nltk",
+    "numpy",
+    "onnxruntime",
+    "transformers",
+    "importlib-resources",
+    "huggingface_hub",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/julesGoueffon/subtitle_splitter_fr"
+"Bug Tracker" = "https://github.com/julesGoueffon/subtitle_splitter_fr/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["subtitle_splitter_fr*"]
+
+[tool.setuptools.package-data]
+"subtitle_splitter_fr" = ["models/tokenizer/*"]

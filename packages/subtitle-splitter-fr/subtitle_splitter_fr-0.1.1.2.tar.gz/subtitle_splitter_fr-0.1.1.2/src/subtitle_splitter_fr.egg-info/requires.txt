@@ -1,0 +1,6 @@
+nltk
+numpy
+onnxruntime
+transformers
+importlib-resources
+huggingface_hub

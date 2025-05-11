@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/subtitle_splitter_fr/__init__.py
+src/subtitle_splitter_fr/preprocessing_utils.py
+src/subtitle_splitter_fr/splitter.py
+src/subtitle_splitter_fr/splitting_strategies.py
+src/subtitle_splitter_fr.egg-info/PKG-INFO
+src/subtitle_splitter_fr.egg-info/SOURCES.txt
+src/subtitle_splitter_fr.egg-info/dependency_links.txt
+src/subtitle_splitter_fr.egg-info/requires.txt
+src/subtitle_splitter_fr.egg-info/top_level.txt
+src/subtitle_splitter_fr/models/tokenizer/added_tokens.json
+src/subtitle_splitter_fr/models/tokenizer/sentencepiece.bpe.model
+src/subtitle_splitter_fr/models/tokenizer/special_tokens_map.json
+src/subtitle_splitter_fr/models/tokenizer/tokenizer.json
+src/subtitle_splitter_fr/models/tokenizer/tokenizer_config.json
+test/test.py
