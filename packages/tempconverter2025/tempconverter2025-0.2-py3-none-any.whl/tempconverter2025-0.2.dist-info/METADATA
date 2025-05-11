@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: tempconverter2025
+Version: 0.2
+Summary: Simple temperature conversion library
+Home-page: https://github.com/Cryptonations/tempconverter2025
+Author: Boss
+Author-email: Vladimirtlv@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
