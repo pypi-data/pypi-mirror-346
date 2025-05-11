@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+rmlib/__init__.py
+rmlib/elem_set.py
+rmlib/item.py
+rmlib/util.py
+rmlib.egg-info/PKG-INFO
+rmlib.egg-info/SOURCES.txt
+rmlib.egg-info/dependency_links.txt
+rmlib.egg-info/top_level.txt
