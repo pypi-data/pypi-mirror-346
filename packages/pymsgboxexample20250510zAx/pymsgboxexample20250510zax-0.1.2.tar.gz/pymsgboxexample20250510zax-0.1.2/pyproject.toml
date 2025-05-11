@@ -1,0 +1,24 @@
+[project]
+name = "pymsgboxexample20250510zAx"
+version = "0.1.2"
+description = "Hello world example"
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "pymsgbox (>=1.0.9,<2.0.0)"
+]
+
+#[tool.poetry]
+#packages = [{include = "pymsgboxexample20250510zAx.py"},
+#            {include = 'jakisinny.py'}]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
