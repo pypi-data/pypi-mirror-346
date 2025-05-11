@@ -1,0 +1,7 @@
+boto3_pydantic_mediastore/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_mediastore/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_mediastore/mediastore_classes.py,sha256=38B1OISELIkk7TQRo5nRswti26bH181fFimL8-G52fQ,4949
+boto3_pydantic_mediastore/mediastore_constants.py,sha256=dmwHVWbCiXl9XTR-AIt10CJRrdZoszTQ3HUU6nE8PWI,7015
+boto3_pydantic_mediastore-1.0.1.dist-info/METADATA,sha256=Fj7_fMfLsB0sSlsNpqkyB3p_sxeKpLl7lL9s5ersHpU,1417
+boto3_pydantic_mediastore-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_mediastore-1.0.1.dist-info/RECORD,,
