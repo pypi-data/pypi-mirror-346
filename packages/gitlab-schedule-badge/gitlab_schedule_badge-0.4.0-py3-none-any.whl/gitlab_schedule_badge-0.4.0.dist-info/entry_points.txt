@@ -1,0 +1,3 @@
+[console_scripts]
+gitlab-schedule-badge=gitlab_schedule_badge.__main__:main
+
