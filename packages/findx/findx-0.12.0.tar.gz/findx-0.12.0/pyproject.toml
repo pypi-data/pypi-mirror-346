@@ -1,0 +1,114 @@
+[project]
+name = "findx"
+version = "0.12.0"
+include = [
+  { path = "CHANGES.rst", format="sdist" },
+  { path = "LICENSE.rst", format="sdist" },
+  { path = "README.rst", format="sdist" },
+  { path = "maintainer.rst", format="sdist" },
+  { path = "noxfile.py", format="sdist" },
+  { path = "requirements.txt", format="sdist" },
+  { path = "findx-wrapper.py", format="sdist" },
+  { path = "ffx-wrapper.py", format="sdist" },
+  { path = "ffg-wrapper.py", format="sdist" },
+]
+description = "``findx``, an extended ``find`` command."
+keywords = ["extended", "find", "file", "search"]
+authors = [
+    { name = "Michael Henry", email = "drmikehenry@drmikehenry.com" }
+]
+license = "MIT"
+readme = "README.rst"
+repository = "https://github.com/drmikehenry/findx"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Utilities",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    # Include this classifier to prevent accidently publishing private code to PyPI.
+    #   https://pypi.org/classifiers/
+    # "Private :: Do Not Upload",
+]
+requires-python = ">=3.8"
+
+[dependency-groups]
+nox = [
+    "nox",
+]
+
+install = [
+    "pyinstaller>=6.3",
+]
+
+test = [
+    "pytest",
+    "pytest-cov",
+    "pytest-gitignore",
+]
+
+type_check = [
+    "mypy",
+    # As of mypy 0.900, mypy no longer bundles the stubs for third-party
+    # libraries that reside in the typeshed project. Add these "types-" packages
+    # here if you depend on them (e.g. `types-requests`).
+    # See: http://mypy-lang.blogspot.com/2021/06/mypy-0900-released.html
+    #      https://github.com/python/typeshed/tree/main/stubs
+    "types-toml",
+    "types-setuptools",
+]
+
+lint = [
+  "ruff",
+]
+
+[tool.uv]
+default-groups = "all"
+
+[project.scripts]
+findx = "findx:main"
+ffx = "findx:ffx"
+ffg = "findx:ffg"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+ignore = [
+    "N811",
+    "N812",
+    "N813",
+    "N814",
+]
+select = [
+    "C9",
+    "E",
+    "F",
+    "N",
+    "Q",
+    "W",
+]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 15
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+
+[tool.coverage.run]
+branch = true

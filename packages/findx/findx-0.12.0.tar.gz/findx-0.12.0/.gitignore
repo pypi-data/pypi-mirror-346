@@ -1,0 +1,9 @@
+*.egg-info/
+*.pyc
+/.coverage
+/.coverage.py*
+/.nox/
+/build/
+/dist/
+/htmlcov/
+__pycache__/
