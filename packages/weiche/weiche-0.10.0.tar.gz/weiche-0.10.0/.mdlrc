@@ -1,0 +1,7 @@
+# Auto-generated from https://github.com/xcnt/xcnt-gardener/blob/main/templates/common/.mdlrc
+
+# See set of available rules here: https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md
+rules "MD001", "MD002", "MD003", "MD009", "MD012", "MD018", "MD019", "MD022", "MD023", "MD025", "MD026", "MD041", "MD047"
+
+# header style
+rule "MD003", :style => atx

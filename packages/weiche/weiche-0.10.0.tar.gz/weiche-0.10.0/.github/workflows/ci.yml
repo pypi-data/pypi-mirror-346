@@ -1,0 +1,27 @@
+name: CI
+run-name: Run unit tests, code checker, build docs.
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+          python-version: ['3.10', '3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4.5.0
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --use-pep517 pytest-cov pytest-random pytest-remove-stale-bytecode flake8 pycodestyle pydocstyle
+          python -m pip install .[test]
+      - name: Run unittest
+        run: pytest -v  --random --cov=src/weiche --cov-report=term
+      - name: flake8
+        run: flake8 src
+      - name: pycodestyle
+        run: pycodestyle -v --first src
+      - name: pydocstyle
+        run: pydocstyle -v --match='(?!test_|version)(.*)?\.py' src
