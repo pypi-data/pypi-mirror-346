@@ -1,0 +1,25 @@
+Metadata-Version: 2.3
+Name: comload
+Version: 0.3.0
+Summary: MediaWiki file bulk downloader
+License: GPL-3.0-only
+Author: Taavi Väänänen
+Author-email: taavi@majava.org
+Maintainer: Taavi Väänänen
+Maintainer-email: taavi@majava.org
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Multimedia
+Classifier: Topic :: System :: Archiving
+Classifier: Typing :: Typed
+Requires-Dist: mwclient (>=0.11.0,<0.12.0)
+Project-URL: Homepage, https://git.majava.org/software/comload
+Project-URL: Repository, https://git.majava.org/software/comload

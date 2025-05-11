@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "comload"
+version = "0.3.0"
+description = "MediaWiki file bulk downloader"
+authors = ["Taavi Väänänen <taavi@majava.org>"]
+maintainers = ["Taavi Väänänen <taavi@majava.org>"]
+license = "GPL-3.0-only"
+homepage = "https://git.majava.org/software/comload"
+repository = "https://git.majava.org/software/comload"
+classifiers = [
+	"Development Status :: 5 - Production/Stable",
+	"Environment :: Console",
+	"Operating System :: OS Independent",
+	"Topic :: Internet :: WWW/HTTP",
+	"Topic :: Multimedia",
+	"Topic :: System :: Archiving",
+	"Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mwclient = "^0.11.0"
+
+[tool.poetry.scripts]
+comload = "comload.__main__:main"
+comload2desc = "comload.description:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+strict = true
+
+[[tool.mypy.overrides]]
+module = 'mwclient.*'
+ignore_missing_imports = true
