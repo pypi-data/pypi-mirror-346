@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: pynasonde
+Version: 0.0.2.2
+Summary: # pynasonde
+Home-page: https://github.com/shibaji7/pynasonde
+Author: Shibaji Chakraborty
+Author-email: chakras4@erau.edu
+Maintainer: Shibaji Chakraborty
+Maintainer-email: chakras4@erau.edu
+License: MIT
+Keywords: python,ionosonde
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Requires-Dist: loguru
+Requires-Dist: numpy==1.26.4
+Requires-Dist: matplotlib==3.9.2
+Requires-Dist: xarray==2024.9.0
+Requires-Dist: toml==0.10.2
+Requires-Dist: tqdm==4.66.5
+Requires-Dist: timezonefinder==6.5.5
+Requires-Dist: scipy==1.14.1
+Requires-Dist: SciencePlots==2.1.1
+Requires-Dist: pysolar==0.11
+Requires-Dist: pytz==2024.2
+Requires-Dist: requests==2.32.3
+Requires-Dist: opencv-python
+Requires-Dist: nrlmsise00==0.1.2
+Requires-Dist: scikit-image==0.24.0
+Requires-Dist: scikit-learn==1.5.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary
+
+# pynasonde
