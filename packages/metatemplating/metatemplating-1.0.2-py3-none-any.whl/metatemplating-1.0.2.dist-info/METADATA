@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: metatemplating
+Version: 1.0.2
+Summary: A Python templating engine for dynamic text generation.
+Home-page: https://github.com/guanxiaohan/MetaTemplating
+Author: guanxiaohan
+Author-email: 13792898752@163.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: uuid
+Requires-Dist: json
+
