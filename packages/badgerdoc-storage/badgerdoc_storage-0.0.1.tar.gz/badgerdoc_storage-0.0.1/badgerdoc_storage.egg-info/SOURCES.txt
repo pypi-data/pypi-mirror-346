@@ -1,0 +1,7 @@
+README.md
+setup.py
+badgerdoc-storage/__init__.py
+badgerdoc_storage.egg-info/PKG-INFO
+badgerdoc_storage.egg-info/SOURCES.txt
+badgerdoc_storage.egg-info/dependency_links.txt
+badgerdoc_storage.egg-info/top_level.txt

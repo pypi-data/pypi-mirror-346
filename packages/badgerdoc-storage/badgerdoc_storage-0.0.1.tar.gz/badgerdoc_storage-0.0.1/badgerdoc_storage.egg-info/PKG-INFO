@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: badgerdoc-storage
+Version: 0.0.1
+Summary: Internal storage adapter used by the BadgerDoc platform (EPAM)
+Home-page: https://github.com/epam/badgerdoc-storage
+Author: EPAM AI Ops
+Author-email: aiops@epam.com
+License: Apache 2.0
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+# badgerdoc-storage
+
+Internal data storage abstraction for the BadgerDoc AI annotation pipeline.  
+Used by jobs, users, and processing services. Not intended for external use.
