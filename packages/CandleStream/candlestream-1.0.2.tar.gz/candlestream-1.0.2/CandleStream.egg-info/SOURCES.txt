@@ -1,0 +1,13 @@
+README.md
+setup.py
+CandleStream.egg-info/PKG-INFO
+CandleStream.egg-info/SOURCES.txt
+CandleStream.egg-info/dependency_links.txt
+CandleStream.egg-info/requires.txt
+CandleStream.egg-info/top_level.txt
+Candlestream.egg-info/PKG-INFO
+Candlestream.egg-info/SOURCES.txt
+Candlestream.egg-info/dependency_links.txt
+Candlestream.egg-info/requires.txt
+Candlestream.egg-info/top_level.txt
+backtest/__init__.py
