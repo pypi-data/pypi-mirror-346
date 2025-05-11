@@ -1,0 +1,18 @@
+{
+    "priority": 60,
+    "latest": {
+        "image": "mysql:latest",
+        "compose": {
+            "volumes": [
+                "./dockit/data/mysql/:/var/lib/mysql/"
+            ],
+            "environment": [
+                "MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}",
+                "MYSQL_DATABASE: ${DB_DATABASE:-dockit}",
+                "MYSQL_ALLOW_EMPTY_PASSWORD: true",
+                "MYSQL_USER: ${DB_USERNAME}",
+                "MYSQL_PASSWORD: ${DB_PASSWORD}"
+            ]
+        }
+    }
+}
