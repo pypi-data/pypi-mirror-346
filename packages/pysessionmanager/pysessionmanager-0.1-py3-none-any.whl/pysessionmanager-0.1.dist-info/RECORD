@@ -1,0 +1,10 @@
+pysessionmanager/__init__.py,sha256=Zq30TLEIfJy8LZadWuLXtS75vwC6OD9D1O8b3LblHPQ,32
+pysessionmanager/core.py,sha256=v0x0734LbVDN731dvXFZXx0zs2XKXUUi-VFqn2pe6aw,1688
+pysessionmanager/presistence.py,sha256=rD_kHK5NnnS6nveFnKRvtn2El-Cdye3qMaend3SAmyY,526
+pysessionmanager/security.py,sha256=E38ROrtJfTdwQ_J_yFGij9SC8VNtcfB8EGfQWsgYHBA,78
+pysessionmanager/utils.py,sha256=rU3VkF2m0_lkwsMWaOZfBbEYudsja2JGYUH5SKqg_Oc,111
+pysessionmanager-0.1.dist-info/LICENSE,sha256=Afy6DTEls6nEspAqARKhzvd5r3l32isQYG26LgghIWc,244
+pysessionmanager-0.1.dist-info/METADATA,sha256=ytivt8iCtTERWKYOklmIscEBbGTMXLivNSmt8FiH2sI,554
+pysessionmanager-0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+pysessionmanager-0.1.dist-info/top_level.txt,sha256=JZv15Mp-e2oVt9dG98TB9stfLGzOpkdkBCm4B2mZmHQ,17
+pysessionmanager-0.1.dist-info/RECORD,,

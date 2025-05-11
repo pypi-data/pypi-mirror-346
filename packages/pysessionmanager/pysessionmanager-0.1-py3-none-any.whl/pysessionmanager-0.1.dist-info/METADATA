@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: pysessionmanager
+Version: 0.1
+Summary: Een eenvoudige maar uitbreidbare sessiebeheer library voor Python
+Author: Ahmad Al Dibo
+Author-email: ahmadaldibo212009@gmail.com
+License: MIT
+Keywords: session,beheer,python,gebruikers,tijd
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: keywords
+Dynamic: license
+Dynamic: summary
