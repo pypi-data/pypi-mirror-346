@@ -1,0 +1,37 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = [ "poetry-core" ]
+
+[tool.poetry]
+name = "capture-run"
+version = "0.0.0"
+description = "A drop-in replacement for `subprocess.run` that captures stdout and stderr while also displaying output live in the console."
+authors = [ "Christoph Dörrer <d-chris@web.de>" ]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+pytest-randomly = "^3.16.0"
+
+[tool.isort]
+profile = "black"
+force_single_line = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = "tests"
+addopts = [ "--color=yes" ]
+
+[tool.coverage.run]
+sigterm = true
+omit = [ "*/tests/*" ]
+
+[tool.coverage.report]
+exclude_lines = [ "^if TYPE_CHECKING:" ]
+show_missing = true
+precision = 2
