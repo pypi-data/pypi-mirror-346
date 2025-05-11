@@ -1,0 +1,7 @@
+boto3_pydantic_storagegateway/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_storagegateway/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_storagegateway/storagegateway_classes.py,sha256=c-_wXqvWeJWg46B3EiC3uT5Obj2s8J3CPLtYGVkDObY,44753
+boto3_pydantic_storagegateway/storagegateway_constants.py,sha256=F5mpJWBaKQ1J5oUw3NTgtjopUdyTPubRS4vxGirdubg,9258
+boto3_pydantic_storagegateway-1.0.1.dist-info/METADATA,sha256=VzqwEIQpU8tqPa1nB67uARJQ0qKSfpnYK6NkoQ_qLBE,1437
+boto3_pydantic_storagegateway-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_storagegateway-1.0.1.dist-info/RECORD,,
