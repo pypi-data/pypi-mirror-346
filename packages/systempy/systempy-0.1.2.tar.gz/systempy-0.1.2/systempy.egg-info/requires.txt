@@ -1,0 +1,6 @@
+typing-extensions
+
+[extra]
+celery>=5.5.1
+ptpython>=3.0.30
+starlette>=0.46.2
