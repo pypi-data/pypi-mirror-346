@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "runrl"
+version = "0.1.13"
+description = "Python client for the RunRL API"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+websockets = "^12.0"
+typer = {extras = ["all"], version = "^0.12.3"} # Added typer with extras
+rich = "^13.7.1" # Added rich
+
+[tool.poetry.scripts]
+runrl = "cli.main:app" # Added script entry point pointing to cli/main.py
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

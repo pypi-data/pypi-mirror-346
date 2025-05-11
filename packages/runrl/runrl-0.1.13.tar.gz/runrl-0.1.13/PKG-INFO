@@ -1,0 +1,117 @@
+Metadata-Version: 2.3
+Name: runrl
+Version: 0.1.13
+Summary: Python client for the RunRL API
+License: MIT
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: typer[all] (>=0.12.3,<0.13.0)
+Requires-Dist: websockets (>=12.0,<13.0)
+Description-Content-Type: text/markdown
+
+# RunRL Python Client
+
+A Python client library for interacting with the RunRL API.
+
+## Installation
+
+It's recommended to use a virtual environment.
+
+```bash
+# Using pip
+pip install runrl
+
+# Using uv (recommended)
+uv pip install runrl
+```
+
+## Usage
+
+```python
+import os
+import asyncio
+from runrl import RunRL, RunRLError
+
+# Get API key from environment variable or replace directly
+api_key = os.getenv("RUNRL_API_KEY", "rl-your_api_key_here")
+
+client = RunRL(api_key=api_key)
+
+try:
+    # List your runs
+    runs = client.list_runs()
+    print(f"Found {len(runs)} runs.")
+    if runs:
+        print(f"Latest run: {runs[0]}")
+
+    # Upload a reward file
+    # Create a dummy reward file first
+    with open("my_reward_function.py", "w") as f:
+        f.write("def reward_function(data):\n    return 1.0")
+    reward_file_info = client.upload_reward_file("my_reward_function.py", friendly_name="My Test Reward")
+    print(f"Uploaded reward file: {reward_file_info}")
+    reward_file_id = reward_file_info['file_id']
+
+    # Create a run (replace with actual parameters)
+    # run_details = client.create_run(
+    #     model_name="gpt2",
+    #     reward_file=reward_file_id, # Use the ID from upload
+    #     # ... other parameters like prompt_file, epochs, etc.
+    # )
+    # print(f"Created run: {run_details}")
+    # run_id = run_details['id'] # Or use job_name if available
+
+    # Example: Stream logs (needs an async context)
+    async def stream_example(run_id):
+        print(f"\nStreaming logs for run {run_id}...")
+        log_stream = client.stream_logs(run_id=run_id, follow=False) # Use async generator
+        async for log_entry in log_stream:
+            print(log_entry)
+
+    # Replace 'your_run_id_or_job_name' with an actual ID/name from a completed run
+    # asyncio.run(stream_example('your_run_id_or_job_name'))
+
+    # Example: Download a model (replace with actual job_name)
+    # client.download_model("your_job_name", "downloaded_model.zip")
+
+    # Clean up uploaded file
+    client.delete_reward_file(reward_file_id)
+    print(f"Deleted reward file: {reward_file_id}")
+    os.remove("my_reward_function.py")
+
+except RunRLError as e:
+    print(f"An API error occurred: {e}")
+except FileNotFoundError as e:
+    print(f"File error: {e}")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+
+```
+
+## API Client Methods
+
+See `runrl_client/client.py` for available methods corresponding to the API endpoints.
+
+## Error Handling
+
+The client raises specific exceptions found in `runrl_client.exceptions` for different error conditions (e.g., `AuthenticationError`, `NotFoundError`, `APIServerError`). All inherit from `RunRLError`.
+
+## Contributing
+
+[Details on contributing, if applicable]
+
+## License
+
+MIT License 
+
