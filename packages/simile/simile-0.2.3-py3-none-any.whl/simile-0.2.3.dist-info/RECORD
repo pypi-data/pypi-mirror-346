@@ -1,0 +1,10 @@
+simile/__init__.py,sha256=2OZ1LQIkAEtSs0EI5Fzlg7QGKduCgCe_nTh9FfIuHlQ,865
+simile/client.py,sha256=RUwJ9AN8rhAHTUfLba4uQXeP4eT4IF-pm6flWuuBUOU,8966
+simile/exceptions.py,sha256=-rJ3KZcpvNRi9JXbDpxWDSL2lU1mEJX2piwYRZvhKmg,1406
+simile/models.py,sha256=bdvKNT10VlZHC51S5U1vpm2i-HV-2hVVeQZFOB-5jmQ,2104
+simile/resources.py,sha256=n6TSuqEplO0Gyim-pqhrrxg8yPqsHWcFflOcZpd-uVo,2950
+simile-0.2.3.dist-info/licenses/LICENSE,sha256=tpxX3bpODfyOQVyEM6kCMvPHFCpkjFDj0AICRqKqOFA,1066
+simile-0.2.3.dist-info/METADATA,sha256=JbNwyPSup57sSsp0VegYaxp4EWrEyu6ncQlITB-LQvE,1245
+simile-0.2.3.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+simile-0.2.3.dist-info/top_level.txt,sha256=41lJneubAG4-ZOAs5qn7iDtDb-MDxa6DdvgBKwNX84M,7
+simile-0.2.3.dist-info/RECORD,,
