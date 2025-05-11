@@ -1,0 +1,10 @@
+pyladoc/__init__.py,sha256=OjMnC1UoxB5JmQCb1VavmELSmZRBK8ehrl2VZQkZbqs,27751
+pyladoc/latex.py,sha256=SS_9Vuyvbmv9Lyqa2A6VcNKguwqF1qpHjQM7z8UoWgo,10812
+pyladoc/latex_escaping.py,sha256=_sX2MKPzhZHbw-1Tenm2sxQB1RHjPyIGdEKvXCCMZQA,2567
+pyladoc/templates/default_template.tex,sha256=jogVcBxTQa-N7BZVmwQbprw4O0XlurPKtACs-NJHXDs,1071
+pyladoc/templates/test_template.html,sha256=GBiglhSkGBvXr9kGSNBB99EhfW92St5_R8hwpWhaoM4,2352
+pyladoc-1.2.0.dist-info/licenses/LICENSE,sha256=zAxT_y402ApeVKuK9ASzYsIJdzApTFF0rlzFkYD2gFo,1091
+pyladoc-1.2.0.dist-info/METADATA,sha256=AdY7GGRjOLQLyeooMPw10gsAfBkIjlumz86_KhYFXGk,5414
+pyladoc-1.2.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+pyladoc-1.2.0.dist-info/top_level.txt,sha256=Q4HzXhnLbJM11focbW94wZdM2yd5cs5VGIJbdz5cWts,8
+pyladoc-1.2.0.dist-info/RECORD,,
