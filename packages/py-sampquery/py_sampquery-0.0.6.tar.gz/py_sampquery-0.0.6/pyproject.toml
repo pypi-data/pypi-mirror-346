@@ -1,0 +1,55 @@
+[project]
+name = "py_sampquery"
+version = "0.0.6"
+description = "A better and fixed SA:MP Query Client written in Python"
+authors = [
+    { name = "Leo Araya", email = "larayavrs@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "trio",
+  "faust-cchardet"
+]
+
+[project.urls]
+Homepage = "https://github.com/larayavrs/sampquery"
+Issues = "https://github.com/larayavrs/sampquery/issues"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[tool.hatch.build]
+include = [
+    "sampquery/**.py",
+    "sampquery/py.typed",
+]
+
+[tool.flake8]
+exclude = [
+    ".git",
+    ".mypy_cache",
+    "__pycache__",
+    "env",
+    "build",
+    "dist",
+]
+
+[tool.mypy]
+strict = true
+files = ["."]
+exclude = [
+    ".git",
+    ".mypy_cache",
+    "__pycache__",
+    "env",
+    "build",
+    "dist",
+    "docs",
+]

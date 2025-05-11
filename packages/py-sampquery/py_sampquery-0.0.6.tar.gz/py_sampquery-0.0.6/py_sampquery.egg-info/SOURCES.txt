@@ -1,0 +1,17 @@
+AUTHORS.md
+LICENSE
+README.md
+pyproject.toml
+py_sampquery.egg-info/PKG-INFO
+py_sampquery.egg-info/SOURCES.txt
+py_sampquery.egg-info/dependency_links.txt
+py_sampquery.egg-info/requires.txt
+py_sampquery.egg-info/top_level.txt
+sampquery/__init__.py
+sampquery/client.py
+sampquery/exceptions.py
+sampquery/player.py
+sampquery/py.typed
+sampquery/rule.py
+sampquery/server.py
+sampquery/utils.py
