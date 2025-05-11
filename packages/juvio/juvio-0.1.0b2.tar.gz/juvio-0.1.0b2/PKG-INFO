@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: juvio
+Version: 0.1.0b2
+Summary: Jupyter kernel using uv and per-notebook dependencies
+Author-email: Oleh Kostromin <oleh@beastbyte.ai>
+License: MIT
+Requires-Python: >=3.11
+Requires-Dist: notebook<8.0,>=7.0
+Requires-Dist: jupyterlab<5.0,>=4.0
+Requires-Dist: ipykernel<8.0,>=6.25
+Requires-Dist: aiofiles>=23.0.0
