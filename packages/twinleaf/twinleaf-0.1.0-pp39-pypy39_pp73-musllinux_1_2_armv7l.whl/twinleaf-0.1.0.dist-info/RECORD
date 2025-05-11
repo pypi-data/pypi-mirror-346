@@ -1,0 +1,10 @@
+twinleaf-0.1.0.data/scripts/itl.py,sha256=bpvwlwnh24JMXBnN9qCBP9NFjJcyEQvMsE1tfol71rc,81
+twinleaf-0.1.0.data/scripts/tiopy-meta.py,sha256=A8sre-ukjy7_aVEFHrdSMgJqq8A9aOKyI3wH3HUwxnQ,159
+twinleaf-0.1.0.data/scripts/tiopy-samples.py,sha256=o9o8gTcyKI8qILLNcUG1p5gphdzM4IQqBWXMu8e9eXI,224
+twinleaf-0.1.0.data/scripts/tiopy-settings.py,sha256=_Lpl6FmaHoG4Cj0ZKb3gJlj-dl4gsasTWvT9rANZBpA,162
+twinleaf-0.1.0.dist-info/METADATA,sha256=xwlbcxJrVFia28ghrwZP73oF2zz2FsNl7Wjb0d2RbWc,257
+twinleaf-0.1.0.dist-info/WHEEL,sha256=7QCq0uIUn0VJnOpVgMVQR8b5QzpFmwUlWwcKXcueEH0,112
+twinleaf.libs/libgcc_s-5b5488a6.so.1,sha256=HGKUsVmTeNAxEdSy7Ua5Vh_I9FN3RCbPWzvZ7H_TrwE,2749061
+twinleaf/__init__.py,sha256=X-_x76Id2e6lzp5ky5BONnruDm4VaYH1CnnsgMC_Tp0,8661
+twinleaf/_twinleaf.pypy39-pp73-arm-linux-gnu.so,sha256=yk13U5h_sIzpa3sE_v_9H1b9_TRf2dKAS9rKOsGivhM,1321941
+twinleaf-0.1.0.dist-info/RECORD,,
