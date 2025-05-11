@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+agri/__init__.py
+agri/auth.py
+agri/repo_manager.py
+agri.egg-info/PKG-INFO
+agri.egg-info/SOURCES.txt
+agri.egg-info/dependency_links.txt
+agri.egg-info/requires.txt
+agri.egg-info/top_level.txt
