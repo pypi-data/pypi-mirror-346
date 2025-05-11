@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: adtr_client
+Version: 0.0.3
+Summary: A simple Python client for the [Adtr Translation API]
+Author-email: pi11 <webii@pm.me>
+License-Expression: WTFPL
+Project-URL: Homepage, https://github.com/pi11/adtr_client
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: license-file
+
+# Adtr Translation Client
+
+A simple Python client for the [Adtr Translation API](https://adtr.webnova.one/docs).
+
+## Installation
+
+Install the client using pip:
+
+```bash
+pip install adtr_client
+```
+
+## Usage
+
+Use the client to translate text via the Adtr Translation API.
+
+Example:
+
+```python
+from adtr_client import translate
+
+result = translate(
+    user_id="your_user_id",
+    api_key="your_api_key",
+    text="text to translate",
+    target_language="target_language"
+)
+
+print(result)
+```
+
+## Configuration
+
+1. Obtain your `user_id` and `api_key` from the rkn.name service
+2. Replace `"your_user_id"`, `"your_api_key"`, and other parameters in the example above with your credentials and desired values.
+
+```
+

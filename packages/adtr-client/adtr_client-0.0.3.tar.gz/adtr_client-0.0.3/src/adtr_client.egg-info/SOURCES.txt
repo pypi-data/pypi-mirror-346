@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/adtr_client.py
+src/adtr_client.egg-info/PKG-INFO
+src/adtr_client.egg-info/SOURCES.txt
+src/adtr_client.egg-info/dependency_links.txt
+src/adtr_client.egg-info/requires.txt
+src/adtr_client.egg-info/top_level.txt

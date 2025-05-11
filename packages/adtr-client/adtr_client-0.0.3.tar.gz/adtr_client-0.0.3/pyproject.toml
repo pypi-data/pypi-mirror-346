@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adtr_client"
+version = "0.0.3"
+authors = [
+  { name="pi11", email="webii@pm.me" },
+]
+description = "A simple Python client for the [Adtr Translation API]"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests"
+]
+license = "WTFPL" 
+
+[project.urls]
+Homepage = "https://github.com/pi11/adtr_client"
