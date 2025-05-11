@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: glider
+Version: 0.1.1
+Summary: Glider CLI
+License: Proprietary
+Author: glider@boltu.ai
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# glider
+Command line tool for GL 
+

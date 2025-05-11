@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "glider"
+version = "0.1.1"
+description = "Glider CLI"
+authors = ["glider@boltu.ai"]
+license = "Proprietary"
+readme = "README.md"
+
+[tool.poetry.scripts]
+glider = "glider.cli:configure"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
