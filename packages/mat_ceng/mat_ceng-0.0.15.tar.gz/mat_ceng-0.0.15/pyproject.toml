@@ -1,0 +1,32 @@
+
+[project]
+name = "mat_ceng"
+version = "0.0.15"
+description = "Package For Some Civil Engineering Tools."
+authors = [{name = "Mohamad Ali", email = "mohamadalitellawi@gmail.com"}]
+readme = {file = "README.md", content-type = "text/markdown"}
+keywords = ["library", "civil", "structural", "python"]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+dependencies = [
+    "numpy",
+    "pandas",
+    "xlwings",
+    "streamlit",
+    "shapely",
+    "plotly",
+    "more_itertools",
+    "pythonnet",
+    "matplotlib",
+    "openpyxl",
+]
+
+
+[project.urls]
+Home = "https://github.com/mohamadalitellawi/Civil_Engineering_Tools/"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "pytest",
+]
