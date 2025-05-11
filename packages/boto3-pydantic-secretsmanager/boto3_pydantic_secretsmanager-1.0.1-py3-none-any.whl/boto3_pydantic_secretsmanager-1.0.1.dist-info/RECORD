@@ -1,0 +1,7 @@
+boto3_pydantic_secretsmanager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_secretsmanager/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_secretsmanager/secretsmanager_classes.py,sha256=oHtDftqPTZIHri7-ML3nndgXyxCA0rumSqrhVOroOA4,11125
+boto3_pydantic_secretsmanager/secretsmanager_constants.py,sha256=KFmmSpSiePyfA67AAuRQviu-MQ-j8MzAovRVdB90cwE,7411
+boto3_pydantic_secretsmanager-1.0.1.dist-info/METADATA,sha256=M7WmgCdJNlCtPPultppt4Pt984Q1yB4THG5ZTHigO_0,1437
+boto3_pydantic_secretsmanager-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_secretsmanager-1.0.1.dist-info/RECORD,,
