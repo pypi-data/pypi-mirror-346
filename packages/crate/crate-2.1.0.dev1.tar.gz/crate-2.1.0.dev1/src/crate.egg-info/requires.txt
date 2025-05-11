@@ -1,0 +1,22 @@
+orjson<4
+urllib3
+verlib2>=0.3
+
+[doc]
+crate-docs-theme>=0.26.5
+sphinx<9,>=3.5
+
+[test]
+certifi
+createcoverage<2,>=1
+mypy<1.16
+poethepoet<1
+ruff<0.12
+stopit<2,>=1.1.2
+pytz
+zc.customdoctests<2,>=1.0.1
+zope.testing<6,>=4
+zope.testrunner<8,>=5
+
+[test:python_version < "3.9"]
+backports.zoneinfo<1
