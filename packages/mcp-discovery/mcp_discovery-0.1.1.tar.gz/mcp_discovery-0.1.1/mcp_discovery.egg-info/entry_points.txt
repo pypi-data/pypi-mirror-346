@@ -1,0 +1,2 @@
+[console_scripts]
+ssay = server.__main__:main

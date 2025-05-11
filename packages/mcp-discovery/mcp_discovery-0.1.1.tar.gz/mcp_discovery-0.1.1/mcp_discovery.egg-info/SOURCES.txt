@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+mcp_discovery.egg-info/PKG-INFO
+mcp_discovery.egg-info/SOURCES.txt
+mcp_discovery.egg-info/dependency_links.txt
+mcp_discovery.egg-info/entry_points.txt
+mcp_discovery.egg-info/requires.txt
+mcp_discovery.egg-info/top_level.txt
+server/main.py
