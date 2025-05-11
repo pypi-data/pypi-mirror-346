@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pymsgboxexample1996wg"
+version = "0.1.0"
+description = "This is a simple example script using PyMsgBox."
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pymsgbox = "^1.0.9"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
