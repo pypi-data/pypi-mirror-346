@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: bbdd_utils
+Version: 0.3.2
+Summary: actualizacion mysql y sqlite3
+Author: Luis_J_Domingo
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: summary
+
+
+# bbdd_utils
+
+**bbdd_utils** es una librerÃ­a en Python diseÃ±ada para facilitar la gestiÃ³n de bases de datos SQL y NoSQL. Ofrece funciones para conectar a bases de datos SQLite, MySQL y MongoDB, asÃ­ como para cerrar conexiones de manera sencilla.
+
+## InstalaciÃ³n
+
+Puedes instalar la librerÃ­a localmente utilizando `pip`:
+
+```bash
+pip install .
