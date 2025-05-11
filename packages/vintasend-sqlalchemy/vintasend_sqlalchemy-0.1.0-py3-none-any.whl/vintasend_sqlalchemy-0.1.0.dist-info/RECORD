@@ -1,0 +1,14 @@
+vintasend_sqlalchemy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_sqlalchemy/alembic_initial_migration_ops.py,sha256=-O2VJjb2Lo7YWceh0QBCNdLnF0QGnIZzlzxXsDObyHQ,1622
+vintasend_sqlalchemy/model_factory.py,sha256=Sj9TS8aTWDPk_zZ1rUj47PYimISHxS3ZKYlhVxedZEU,4748
+vintasend_sqlalchemy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_sqlalchemy/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_sqlalchemy/services/notification_backends/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_sqlalchemy/services/notification_backends/sqlalchemy_notification_backend.py,sha256=a4JnqSv-CMWTovNNQvnZiWucSLbDMflCfjQitXaqquA,32991
+vintasend_sqlalchemy/services/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_sqlalchemy/services/tests/test_sqlalchemy_asyncio_notification_backend.py,sha256=eLQdGrONRmDxdP6L0CC-e9VBKHcDsIF4zJnV0VUxvsc,19700
+vintasend_sqlalchemy/services/tests/test_sqlalchemy_notification_backend.py,sha256=YwcLWpDY3biO20yHHAuAiD8fi3Nu7JUh1xQRDBrbgY4,19048
+vintasend_sqlalchemy-0.1.0.dist-info/LICENSE.txt,sha256=gydDNz2DGPNG5y5sRlrez6aqjYX3xgphqdCHwqw1F-k,1104
+vintasend_sqlalchemy-0.1.0.dist-info/METADATA,sha256=empGRkawLR4w5yQlGSAn1aal0Ok5hG2LpGt5IP3PUes,773
+vintasend_sqlalchemy-0.1.0.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+vintasend_sqlalchemy-0.1.0.dist-info/RECORD,,
