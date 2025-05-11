@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: bayesnest
+Version: 0.1.2
+Summary: Lightweight log-space nested sampling for Bayesian inference
+Author-email: Wahidur Rahman <rahmanw@email.com>
+Project-URL: Homepage, https://github.com/Wahidur-Rahman/BayesNest
+Project-URL: Bug Tracker, https://github.com/Wahidur-Rahman/BayesNest/issues
+Keywords: bayesian,nested,sampling,inference,posterior,likelihood
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: corner
+Requires-Dist: scikit-learn
+
+General-purpose log-space nested sampler for Bayesian inference which uses naive rejection sampling.
+
+After installing you should be able to run the simple linear gaussian model example in `examples/example.py` which generates a two dimensional corner plot of the posterior distribution of the two linear coefficient parameters `a` and `b` and prints out the calculated log evidence

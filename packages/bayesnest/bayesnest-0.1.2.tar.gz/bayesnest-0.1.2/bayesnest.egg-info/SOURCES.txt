@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+bayesnest/__init__.py
+bayesnest/priors.py
+bayesnest/sampler.py
+bayesnest/utils.py
+bayesnest.egg-info/PKG-INFO
+bayesnest.egg-info/SOURCES.txt
+bayesnest.egg-info/dependency_links.txt
+bayesnest.egg-info/requires.txt
+bayesnest.egg-info/top_level.txt
