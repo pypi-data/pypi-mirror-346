@@ -1,0 +1,11 @@
+robot_browser/__init__.py,sha256=-Oq4QQdHbJutX1PWnlzPFrawj8SyHrh0YnliQeGMALM,44
+robot_browser/browser_extension.py,sha256=O8CLHIurtOfDnfSEc1IukQp4F49q3p2JAbh68wdUzzY,27387
+robot_browser/index.py,sha256=ZhFSbQWqIxxsILZqMlcn8ZbZKnMQPxWEqTRgULK1f6A,21744
+robot_browser/playwright_browser.py,sha256=rDvUu6f4g10Ki27eLXP4-L79RbMeIjDrQ1maqTvTnpg,27777
+robot_browser/utils.py,sha256=sHkHpHyq7PwkRZ_0OgkM8RM9v0BH-IgjimSP4A79pR8,5072
+robot_browser/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+robot_browser/tests/test_extension.py,sha256=VWI4oBNbnst-dobF33nj6STt5Tkw-1W7Emoirrmdunk,33468
+robot_browser/tests/test_playwright.py,sha256=LAX6Cz3DPtRdKTmm-bgLROwzSGHYChSvEPi9nUmCK-o,31436
+robot_browser-0.1.8.dist-info/METADATA,sha256=KXG70aJzpaR9kJ3AeHN7Hel9EvnObDETw_wqsbzsKh8,494
+robot_browser-0.1.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+robot_browser-0.1.8.dist-info/RECORD,,
