@@ -1,0 +1,128 @@
+Metadata-Version: 2.4
+Name: smart-geocubes
+Version: 0.0.9
+Summary: A high-performance library for intelligent loading and caching of remote geospatial raster data, built with xarray and zarr.
+Project-URL: Documentation, https://relativityhd.github.io/smart-geocubes/latest/
+Project-URL: Repository, https://github.com/relativityhd/smart-geocubes
+Project-URL: Issues, https://github.com/relativityhd/smart-geocubes/issues
+Author-email: relativityhd <tobiashoelzer@hotmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: geopandas>=1.0.1
+Requires-Dist: icechunk<0.3,>=0.2.5
+Requires-Dist: numcodecs<0.16,>=0.15.0
+Requires-Dist: numpy<3,>=1.20
+Requires-Dist: odc-geo<0.5,>=0.4.5
+Requires-Dist: stopuhr>=0.0.3
+Requires-Dist: xarray>=2025.1.1
+Requires-Dist: zarr<4,>=3
+Provides-Extra: dask
+Requires-Dist: bokeh>=3.6.3; extra == 'dask'
+Requires-Dist: dask>=2025.1.0; extra == 'dask'
+Requires-Dist: distributed>=2025.1.0; extra == 'dask'
+Provides-Extra: gee
+Requires-Dist: earthengine-api>=1.1.5; extra == 'gee'
+Requires-Dist: rasterio>=1.4.3; extra == 'gee'
+Requires-Dist: rioxarray>=0.18.2; extra == 'gee'
+Requires-Dist: xee>=0.0.20; extra == 'gee'
+Provides-Extra: stac
+Requires-Dist: odc-stac>=0.3.11; extra == 'stac'
+Requires-Dist: pyarrow>=19.0.1; extra == 'stac'
+Requires-Dist: pystac-client>=0.8.5; extra == 'stac'
+Requires-Dist: pystac>=1.12.1; extra == 'stac'
+Requires-Dist: xpystac>=0.1.3; extra == 'stac'
+Provides-Extra: viz
+Requires-Dist: cartopy>=0.24.1; extra == 'viz'
+Requires-Dist: folium>=0.19.4; extra == 'viz'
+Requires-Dist: mapclassify>=2.8.1; extra == 'viz'
+Requires-Dist: matplotlib>=3.10.0; extra == 'viz'
+Description-Content-Type: text/markdown
+
+# Smart Geocubes
+
+A high-performance library for intelligent loading and caching of remote geospatial raster data, built with xarray, zarr and icechunk.
+
+> The concept of this package is heavily inspired by [EarthMovers implementation of serverless datacube generation](https://earthmover.io/blog/serverless-datacube-pipeline).
+
+## Quickstart
+
+Install the package with `uv` or `pip`:
+
+```sh
+pip install smart-geocubes
+```
+
+```sh
+uv add smart-geocubes
+```
+
+Open data for your region of interest:
+
+```python
+import smart_geocubes
+from odc.geo.geobox import GeoBox
+
+accessor = smart_geocubes.ArcticDEM32m("datacubes/arcticdem_32m.icechunk")
+
+roi = GeoBox.from_bbox((150, 65, 151, 65.5), shape=(1000, 1000), crs="EPSG:4326")
+
+arcticdem_at_roi = accessor.load(roi, create=True)
+```
+
+## Out of the box included datasets
+
+| Dataset              | Quickuse                      | Source                                   | Link                                                                         |
+| -------------------- | ----------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------- |
+| ArcticDEM Mosaic 2m  | `smart_geocubes.ArcticDEM2m`  | [STAC](https://stac.pgc.umn.edu/api/v1/) | [PGC](https://www.pgc.umn.edu/data/arcticdem/)                               |
+| ArcticDEM Mosaic 10m | `smart_geocubes.ArcticDEM10m` | [STAC](https://stac.pgc.umn.edu/api/v1/) | [PGC](https://www.pgc.umn.edu/data/arcticdem/)                               |
+| ArcticDEM Mosaic 32m | `smart_geocubes.ArcticDEM32m` | [STAC](https://stac.pgc.umn.edu/api/v1/) | [PGC](https://www.pgc.umn.edu/data/arcticdem/)                               |
+| Tasseled Cap Tren    | `smart_geocubes.TCTrend`      | Google Earth Engine                      | [AWI](https://apgc.awi.de/dataset/pan-arctic-vis-landscape-change-2003-2022) |
+
+## Implemented Remote Accessors
+
+| Accessor                        | Description                                                                               |
+| ------------------------------- | ----------------------------------------------------------------------------------------- |
+| `smart_geocubes.accessors.STAC` | Accessor for the STAC API, which allows to download data from a STAC API.                 |
+| `smart_geocubes.accessors.GEE`  | Accessor for Google Earth Engine, which allows to download data from Google Earth Engine. |
+
+## What is the purpose of this package?
+
+This package solves a specific problem that most people who work with Earth observation data don't need to worry about.
+When you're creating new data from existing data (for example, doing image segmentation with machine learning on Sentinel-2 images), people usually:
+
+1. Download all the data
+2. Run the algorithms and data science on it
+3. Delete the data afterwards
+
+This "batched-processing" works great if you have a big computer with lots of storage space, like a cluster.
+
+But if you're working on a smaller computer (like a laptop with a few hundred GB of storage and 16GB of RAM), this approach creates problems.
+It makes it really hard to test and improve your programs because you don't have enough space.
+Using frameworks like Ray for processing is also tricky with this approach.
+They work better with "concurrent-processing": when each step of your processing pipeline can be done for each elements separately instead expecting to run a single step for all your data at once.
+Plus, if you only need to look at certain areas but don't know which ones ahead of time, downloading everything is wasteful.
+
+So instead, this package downloads the data only when you need it. But downloading the same thing over and over is inefficient. That's why we save (or "cache") the data on your computer's hard drive in form of zarr datacubes.
+We call this way of working "procedural download" because you download pieces as you need them.
+
+Therefore, this package does handle:
+
+1. The download "on-demand" (or "procedural download") of the data
+2. The caching of the data on your computer's hard drive
+3. The loading of the data into memory for regions specified by the user
+4. Making everything thread-safe, so you can run on any scaling framework you like.
+
+> **Danger!**
+> On linux systems it is necessary to the the multiprocessing start method to `spawn` or `forkserver`.
+> Read more about this [here](https://icechunk.io/en/latest/icechunk-python/parallel/#uncooperative-distributed-writes), [here](https://github.com/earth-mover/icechunk/discussions/802) and [here](https://docs.pola.rs/user-guide/misc/multiprocessing/).
+
+The approach itself is already implemented in one of the pipelines we develop at the AWI, you can read more about [their docs](https://awi-response.github.io/darts-nextgen/latest/dev/auxiliary/#procedural-download).
+
+> This won't help if your computer doesn't have fast storage space available - like if you're working on a cloud-cluster that can't save files locally.
+
+## Contribute
+
+Please read the [contribution guidelines](docs/contribute.md) for more information on how to contribute to this project.
