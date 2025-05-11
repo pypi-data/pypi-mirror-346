@@ -1,0 +1,12 @@
+LICENSE.md
+MANIFEST.in
+setup.py
+paranoid_logy/__init__.py
+paranoid_logy/logy.py
+paranoid_logy/logyservicecontext.py
+paranoid_logy/traceresult.py
+paranoid_logy.egg-info/PKG-INFO
+paranoid_logy.egg-info/SOURCES.txt
+paranoid_logy.egg-info/dependency_links.txt
+paranoid_logy.egg-info/requires.txt
+paranoid_logy.egg-info/top_level.txt

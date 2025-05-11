@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: paranoid_logy
+Version: 1.0.7
+Summary: Python Paranoid Logy SDK
+Home-page: http://pypi.paranoid.software/simple/paranoid-logy/
+Author: Paranoid Software
+Author-email: info@paranoid.software
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# Paranoid Logy SDK
