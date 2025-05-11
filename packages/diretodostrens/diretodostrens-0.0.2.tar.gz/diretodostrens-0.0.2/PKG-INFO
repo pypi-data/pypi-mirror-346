@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: diretodostrens
+Version: 0.0.2
+Summary: Checa o estado das linhas de trem de São Paulo (CPTM, Metro, Viaquatro e Viamobilidade)
+Author: Anderson Duarte
+Author-email: reddragondggda@gmail.com
+Keywords: trens,trem,diretodostrens,api,sp,são paulo,cptm,metro,viamobilidade,viaquatro
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+
+Interface para a API [DiretoDosTrens](https://static.diretodostrens.com.br/swagger/
+)
+
+Visite https://github.com/Philliaezer/DiretoDosTrens para saber mais

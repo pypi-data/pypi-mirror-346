@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+diretodostrens.egg-info/PKG-INFO
+diretodostrens.egg-info/SOURCES.txt
+diretodostrens.egg-info/dependency_links.txt
+diretodostrens.egg-info/requires.txt
+diretodostrens.egg-info/top_level.txt
+trens/__init__.py
+trens/dados.py
