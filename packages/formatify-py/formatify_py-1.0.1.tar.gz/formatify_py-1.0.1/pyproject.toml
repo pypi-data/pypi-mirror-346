@@ -1,0 +1,46 @@
+[project]
+name = "formatify_py"
+version = "1.0.1"
+description = "Auto-detect and standardize datetime formats from raw timestamps"
+keywords = ["timestamp", "datetime", "standardization", "parsing"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+readme = "README.md"
+authors = [
+  { name = "AR", email = "roy.aalekh@gmail.com" }
+]
+license = "MIT"
+license-files = ["LICENSE"]
+
+requires-python = ">=3.9"
+dependencies = [
+    "pytest>=8.3.5",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "ruff>=0.0",
+  "build>=0.9"
+]
+
+[project.urls]
+"Homepage"   = "https://github.com/PieceWiseProjects/formatify"
+"Repository" = "https://github.com/PieceWiseProjects/formatify"
+
+[build-system]
+requires    = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 88
+select      = ["E", "F", "W", "C90"]
+fix         = true
+
+[tool.ruff.mccabe]
+# allow up to 30 McCabe complexity (raise from the default 10)
+max-complexity = 30
