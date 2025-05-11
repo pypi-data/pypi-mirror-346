@@ -1,0 +1,17 @@
+simple_voice_chat/__init__.py,sha256=NVMDMfPAPWVb_NnU5gvj6XFvQ71EgVbJXqYEDzBI1Qo,70
+simple_voice_chat/__main__.py,sha256=LZDEsQra1RGXDzt-eIvTzLhS359K3S3pHQhJJXuNtFE,212
+simple_voice_chat/index.html,sha256=hc6PMVrD5XbAt1xP36u5kA0xrryzCI6KXRcRdcKtHlA,135609
+simple_voice_chat/simple_voice_chat.py,sha256=SU5xb9lrPLZV42_MnV9mhfiUM0ujrMimv6f9QjLcZbQ,158839
+simple_voice_chat/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_voice_chat/utils/config.py,sha256=mVmldtEnh3O8_1pnFzhyT6EcBKq_XF6OMHkTu_pnjYk,7522
+simple_voice_chat/utils/env.py,sha256=Y67HWt8_ipndbV0ywDHdfGNi0H-f4bDZEx1EEKnvK9Q,5057
+simple_voice_chat/utils/llms.py,sha256=hEck-4jX9hNItZOvaba2-wFzOFa7KqbSsjuCEvCd8hE,8871
+simple_voice_chat/utils/logging_config.py,sha256=OWiF9MAuJNR7XsqSZ4YCUQxKbw1t_r2r0QZM1BwELB0,2526
+simple_voice_chat/utils/misc.py,sha256=F4Yten2-q5xvRKY3rb-11xnDhzzLxFsBJPm7IzxTOpU,1181
+simple_voice_chat/utils/stt.py,sha256=PkvmaQI9g5ewr-aB86iqAkMgGQooo8F7dKhVuYyJIbA,6067
+simple_voice_chat/utils/tts.py,sha256=i6NvUkYXbHiINlSUy1H2WKMktRTTsJt-gyjn1DiZyUI,9245
+simple_voice_chat-4.1.0.dist-info/METADATA,sha256=6yhxYFf4oHrb1EophwbUtflyH5p6-sGgUgtMV_Z-osY,17579
+simple_voice_chat-4.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+simple_voice_chat-4.1.0.dist-info/entry_points.txt,sha256=sTOIbce4fySc897BjaIhajy53cyQx6YebDD0R8qSFJ8,79
+simple_voice_chat-4.1.0.dist-info/top_level.txt,sha256=hPWAP7xcpBZChiniX9FT-Ik_8SAQLXEtHXr00VgsPtk,18
+simple_voice_chat-4.1.0.dist-info/RECORD,,
