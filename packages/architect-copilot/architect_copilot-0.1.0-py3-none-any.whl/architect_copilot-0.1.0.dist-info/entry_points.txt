@@ -1,0 +1,2 @@
+[console_scripts]
+architect-copilot = architect_mcp.main:main
