@@ -1,0 +1,12 @@
+include pyproject.toml
+include CHANGELOG.md
+include LICENSE
+include README.md
+
+recursive-include zstd/lib *
+recursive-include src *
+recursive-include tests *
+recursive-include build_script *
+
+recursive-exclude * __pycache__
+recursive-exclude * *.pyc
