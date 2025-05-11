@@ -1,0 +1,81 @@
+[tool.poetry]
+name = "PSNAWP-HA"
+version = "2.3.5"
+description = "Python API Wrapper for PlayStation Network API with Home Assistant Support"
+authors = ["jackjpowell <jackjpowell@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/JackJPowell/psnawp"
+repository = "https://github.com/JackJPowell/psnawp"
+documentation = "https://github.com/JackJPowell/psnawp"
+keywords = ["PSN", "PlayStation"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+packages = [{ include = "psnawp_api", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+attrs = ">=23.2.0, *"
+requests = "^2.32.3"
+typing-extensions = "^4.12.2"
+pyright = "^1.1.370"
+pyrate_limiter = ">3.0.0, <4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "--cov=psnawp_api --cov-report html --junitxml=pytest.xml"
+testpaths = ["tests"]
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "@overload",
+    "raise NotImplementedError",
+    "__repr__",
+    "__str__",
+]
+
+
+[tool.mypy]
+strict = true
+check_untyped_defs = true
+disallow_any_generics = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
+
+[tool.pyright]
+exclude = [".venv", "venv"]
+pythonVersion = "3.11"
+typeCheckingMode = "strict"
+reportPrivateUsage = false
+
+[tool.black]
+line-length = 160
+
+[tool.ruff]
+line-length = 160
+
+[tool.ruff.lint]
+select = ["E", "F", "I001", "I002", "TID252"]
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 88
