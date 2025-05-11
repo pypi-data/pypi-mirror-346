@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: pynekoapi
+Version: 0.5.2
+Summary: PyNekoApi from Python language.
+Author-email: Ling-ex <nekochan@rizkiofficial.com>
+Project-URL: Homepage, https://github.com/NekoChan29
+Project-URL: Community, https://t.me/ExclusiveFeedback
+Project-URL: Source, https://github.com/NekoChan29/PyNekoApi
+Project-URL: Documentation, https://api.rizkiofficial.com/docs
+Keywords: nekobin,register-date
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: ~=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx[http2]>=0.28.1
+Requires-Dist: requests>=2.32.3
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.3; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.26.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Dynamic: license-file
