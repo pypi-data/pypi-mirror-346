@@ -1,0 +1,2 @@
+[markitdown.plugin]
+advanced_pdf = markitdown_advanced_pdf_llm
