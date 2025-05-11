@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: pycuts
+Version: 2025.5.10
+Summary: A lightweight Python utility toolkit
+Author: Daniel Ialcin Misser Westergaard
+Project-URL: Homepage, https://github.com/dwancin/pycuts
+Project-URL: Repository, https://github.com/dwancin/pycuts
+Project-URL: Issues, https://github.com/dwancin/pycuts/issues
+Keywords: utilities,torch,gradio,huggingface,developer-tools
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: torch>=1.10.0
+Requires-Dist: gradio>=3.0.0
+Requires-Dist: huggingface_hub>=0.14.0
+Dynamic: license-file
+
+# pycuts
+
+[![PyPI version](https://badge.fury.io/py/pycuts.svg)](https://pypi.org/project/pycuts/)
+[![GitHub](https://img.shields.io/github/stars/dwancin/pycuts?style=social)](https://github.com/dwancin/pycuts)
+
+## A lightweight Python utility toolkit
+
+**pycuts** is a flexible Python utility toolkit that provides convenient, modular shortcuts for working with popular libraries such as [PyTorch](https://github.com/pytorch/pytorch), [Gradio](https://github.com/gradio-app/gradio), and [Hugging Face](https://github.com/huggingface). It simplifies common tasks, offers helpful runtime utilities, and is designed to evolve alongside the workflow.
+
+> This is a personal collection of utilities and shortcuts I find useful when working with various Python libraries. While tailored to my own needs, others may very well find them helpful too.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+© 2025 Daniel Ialcin Misser Westergaard ([dwancin](https://github.com/dwancin))
