@@ -1,0 +1,2 @@
+[nbdev]
+fa6_icons = fa6_icons._modidx:d
