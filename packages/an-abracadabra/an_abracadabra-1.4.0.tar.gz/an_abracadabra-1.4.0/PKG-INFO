@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: an_abracadabra
+Version: 1.4.0
+Summary: A package for an_abracadabra.
+Home-page: https://github.com/Atsushi888/Atsushi888
+Author: Atsushi888
+Author-email: Atsushi888 <vtgrotxu@gmail.com>
+Project-URL: Homepage, https://github.com/Atsushi888/an_abracadabra
+Project-URL: Repository, https://github.com/Atsushi888/an_abracadabra
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
