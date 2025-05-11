@@ -1,0 +1,1 @@
+Automatically convert Obsidian-style admonitions (e.g. ```ad-note) into proper !!! admonitions for MkDocs Material.

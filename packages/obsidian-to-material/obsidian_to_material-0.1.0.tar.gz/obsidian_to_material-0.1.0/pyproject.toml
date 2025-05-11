@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obsidian-to-material"
+version = "0.1.0"
+description = "Transform Obsidian-style admonitions into MkDocs Material admonitions automatically."
+authors = [
+  { name="Ángel Bonet", email="dev@example.com" }
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+
+[project.entry-points."markdown.extensions"]
+obsidian_admonitions = "obsidian_admonitions.extension:makeExtension"

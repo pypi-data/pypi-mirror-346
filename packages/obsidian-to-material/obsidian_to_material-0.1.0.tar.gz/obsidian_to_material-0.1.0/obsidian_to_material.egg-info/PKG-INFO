@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: obsidian-to-material
+Version: 0.1.0
+Summary: Transform Obsidian-style admonitions into MkDocs Material admonitions automatically.
+Author-email: Ángel Bonet <dev@example.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+Automatically convert Obsidian-style admonitions (e.g. ```ad-note) into proper !!! admonitions for MkDocs Material.

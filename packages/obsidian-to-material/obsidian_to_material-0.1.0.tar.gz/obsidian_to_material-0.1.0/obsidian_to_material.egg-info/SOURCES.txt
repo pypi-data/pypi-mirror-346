@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+obsidian_admonitions/__init__.py
+obsidian_admonitions/extension.py
+obsidian_to_material.egg-info/PKG-INFO
+obsidian_to_material.egg-info/SOURCES.txt
+obsidian_to_material.egg-info/dependency_links.txt
+obsidian_to_material.egg-info/entry_points.txt
+obsidian_to_material.egg-info/top_level.txt
