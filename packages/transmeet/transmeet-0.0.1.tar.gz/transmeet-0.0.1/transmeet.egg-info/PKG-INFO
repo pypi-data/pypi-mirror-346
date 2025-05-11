@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: transmeet
+Version: 0.0.1
+Summary: Transmeet is a Python package that transcribes audio files and generates meeting minutes using advanced AI models. It supports various audio formats and provides customizable transcription options.
+Home-page: https://github.com/codeperfectplus/transmeet
+Author: Deepak Raj
+Author-email: deepak008@live.com
+License: MIT
+Project-URL: Documentation, https://transmeet.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/codeperfectplus/transmeet
+Project-URL: Tracker, https://github.com/codeperfectplus/transmeet/issues
+Keywords: markdown,html,converter,mathjax,tailwind,latex,documentation
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pydub
+Requires-Dist: groq
+Requires-Dist: SpeechRecognition
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# MeetingSummarizer
+
+LLM based meeting summarization
+
+
+## How to use
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/codeperfectplus/MeetingSummarizer
+cd MeetingSummarizer
+```
+
+2. Install the dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Set up the environment variables
+
+```bash
+export GROQ_API_KEY=<your_groq_api_key>
+```
+
