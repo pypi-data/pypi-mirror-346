@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+jira2py/__init__.py
+jira2py/issue_comments.py
+jira2py/issue_fields.py
+jira2py/issue_search.py
+jira2py/issues.py
+jira2py/jira_base.py
+jira2py.egg-info/PKG-INFO
+jira2py.egg-info/SOURCES.txt
+jira2py.egg-info/dependency_links.txt
+jira2py.egg-info/requires.txt
+jira2py.egg-info/top_level.txt

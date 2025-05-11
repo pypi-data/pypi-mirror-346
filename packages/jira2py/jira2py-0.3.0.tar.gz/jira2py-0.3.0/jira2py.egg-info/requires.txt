@@ -1,0 +1,14 @@
+email-validator==2.2.0
+pydantic==2.11.4
+pydantic-core==2.33.2
+python-dotenv==1.1.0
+requests==2.32.3
+
+[deployment]
+setuptools>=42
+wheel
+twine
+build
+
+[dev]
+ipykernel
