@@ -1,0 +1,17 @@
+name: openscvx
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - pip
+  - numpy
+  - termcolor
+  - plotly
+  - pip:
+      - jax
+      - cvxpy
+      - cvxpygen
+      - qoco
+      - qocogen
+      - diffrax
