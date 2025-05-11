@@ -1,0 +1,17 @@
+[project]
+name = "interweb"
+version = "0.1.0"
+description = "Collection of common web utilities."
+readme = "README.md"
+authors = [
+    { name = "Hart Traveller", email = "ruling_fiction.0b@icloud.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.1",
+    "rich>=14.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
