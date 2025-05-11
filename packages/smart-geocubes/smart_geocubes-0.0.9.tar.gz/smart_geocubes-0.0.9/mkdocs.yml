@@ -1,0 +1,173 @@
+site_name: Smart-Geocubes
+site_url: https://relativityhd.github.io/smart-geocubes
+site_author: Tobias Hölzer
+site_description: >
+  A high-performance library for intelligent loading and caching of remote geospatial raster data, built with xarray, zarr and icechunk.
+
+repo_name: smart-geocubes
+repo_url: https://github.com/relativityhd/smart-geocubes
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Getting Started: examples/quickstart.ipynb
+  - How does it work?: how_it_works.md
+  - Contribute: contribute.md
+
+theme:
+  name: material
+  logo: assets/smart-geocubes-logo.png
+  favicon: assets/favicon.ico
+  language: en
+  custom_dir: docs/overrides
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+  palette:
+    # Palette toggle for automatic mode
+    - media: '(prefers-color-scheme)'
+      primary: light-green
+      accent: green
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - scheme: default
+      media: '(prefers-color-scheme: light)'
+      primary: light-green
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      media: '(prefers-color-scheme: dark)'
+      primary: black
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  font:
+    text: Montserrat
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - toc.follow
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.footer
+    - content.action.edit
+    - content.code.copy
+    - content.code.annotate
+plugins:
+  - glightbox
+  - mkdocs-jupyter
+  - mkdocstrings:
+      handlers:
+        python:
+          paths:
+            - 'src'
+          inventories:
+            - https://docs.python.org/3/objects.inv
+            - https://docs.xarray.dev/en/stable/objects.inv
+            - https://numpy.org/doc/stable/objects.inv
+            - https://icechunk.io/en/latest/objects.inv
+            - https://odc-geo.readthedocs.io/en/latest/objects.inv
+            - https://relativityhd.github.io/stopuhr/objects.inv
+          options:
+            docstring_section_style: list # or "table"
+            docstring_style: 'google'
+            filters: ['!^_']
+            heading_level: 1
+            merge_init_into_class: true
+            parameter_headings: true
+            separate_signature: true
+            show_root_heading: true
+            show_signature_annotations: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            summary: true
+            inherited_members: true
+  - api-autonav:
+      modules: ['src/smart_geocubes']
+  - autorefs:
+      resolve_closest: true
+  - privacy:
+      enabled: !ENV [CI, false]
+  - search:
+      lang: en
+  - social:
+      enabled: !ENV [CI, false]
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      enable_creation_date: true
+      type: date
+  - git-committers:
+      enabled: !ENV [CI, false]
+      repository: relativityhd/smart-geocubes
+      branch: main
+extra:
+  version:
+    provider: mike
+    default: latest
+    alias: true
+  social:
+    - icon: fontawesome/brands/github
+      name: GitHub
+      link: https://github.com/relativityhd/smart-geocubes
+    - icon: fontawesome/brands/python
+      name: PyPI
+      link: https://pypi.org/project/smart-geocubes
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    cookies:
+      fonts:
+        name: Google Fonts
+        checked: false
+      github:
+        name: GitHub
+        checked: false
+    actions:
+      - accept
+      - manage
+      - reject
+copyright: >
+  Copyright &copy; 2025 Tobias Hölzer -
+  <a href="#__consent">Change cookie settings</a>
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - admonition
+  - tables
+  - def_list
+  - toc:
+      permalink: true
+      title: Table of Contents
