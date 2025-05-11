@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: rustup
+Version: 1.28.2
+Project-URL: Source Code, https://github.com/konstin/rustup-pypi
+License-Expression: MIT OR Apache-2.0
+
+# rustup-pypi
+
+Unofficial [rustup](https://rustup.rs/) distribution for PyPI.
+
+If you are a rust(up) team member and interested in this package, please DM me.
