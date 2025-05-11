@@ -1,0 +1,2 @@
+[console_scripts]
+ovm = src.videomaster.cli.main:app
