@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+kappaml/__init__.py
+kappaml/kappaml.py
+kappaml.egg-info/PKG-INFO
+kappaml.egg-info/SOURCES.txt
+kappaml.egg-info/dependency_links.txt
+kappaml.egg-info/requires.txt
+kappaml.egg-info/top_level.txt
