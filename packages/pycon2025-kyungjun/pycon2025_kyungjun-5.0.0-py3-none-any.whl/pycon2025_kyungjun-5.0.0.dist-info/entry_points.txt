@@ -1,0 +1,2 @@
+[console_scripts]
+pycon2025-kyungjun = pycon2025_kyungjun:main
