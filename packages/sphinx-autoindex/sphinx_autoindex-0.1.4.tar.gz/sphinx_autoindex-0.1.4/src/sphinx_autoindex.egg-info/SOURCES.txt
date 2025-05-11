@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/sphinx_autoindex/__init__.py
+src/sphinx_autoindex/config.py
+src/sphinx_autoindex/extension.py
+src/sphinx_autoindex/generator.py
+src/sphinx_autoindex/package.py
+src/sphinx_autoindex.egg-info/PKG-INFO
+src/sphinx_autoindex.egg-info/SOURCES.txt
+src/sphinx_autoindex.egg-info/dependency_links.txt
+src/sphinx_autoindex.egg-info/requires.txt
+src/sphinx_autoindex.egg-info/top_level.txt
