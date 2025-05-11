@@ -1,0 +1,127 @@
+Metadata-Version: 2.4
+Name: gPhotosAlbum_JPEGcompression
+Version: 2.1.7
+Summary: Takes Google Photos Album (visible to anyone with url) and produces a zip file with compressed JPEGS.
+Author: Abhishek Venkatachalam
+Author-email: abhishek.venkatachalam06@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pillow
+Requires-Dist: tqdm
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+For more information about the author, visit [LinkedIn](https://www.linkedin.com/in/abhishek-venkatachalam-62121049/).
+
+# Python Package - gPhotosAlbum_JPEGcompression
+
+## Overview
+
+Short Description:
+Takes Google Photos Album (visible to anyone with url) and produces a zip file with compressed JPEGS.
+
+USP:
+- The JPEGS retain the metadata.
+- 1.5x to 15x reduction in file size depending on the JPEG.
+- Larger files with higher megapixel undergo very good compression.
+- Almost perfect image clarity up to 250% magnification.
+
+
+## Release Notes
+
+
+### version 2.1.7
+- Big update, switched to using selenium web driver automation.
+- Auto config selenium, no need to lift a finger.
+- Include some additional tweaks and optimizations.
+
+
+### version 1.4.3
+- Some fixes (as always).
+
+
+### version 1.4.2
+- First public release of gPhotosAlbum_JPEGcompression.
+- JPEGS retain metadata.
+
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install gPhotosAlbum_JPEGcompression
+```
+
+## Methods
+
+### 1. Simple usecase.
+
+Takes the Google Photos Album url as Input. Ensure that the Photos are set to "Accesible by anyone with the url".
+
+Returns: A zip file of the compressed images (JPEGs).
+
+
+```python
+from gPhotosAlbum_JPEGcompression import compress_GoogleAlbum_jpeg
+
+
+googleAlbumURL = "https://photos.app.goo.gl/loremimpsunm56"
+
+compress_GoogleAlbum_jpeg(googleAlbumURL)
+```
+
+#### Parameters:
+
+- Gphotos_url (str): URL of the Google Photos album.
+- scroll_pause_time (float, optional, default=0.5): Time to pause during scrolling for dynamic loading.
+- isHeadless (bool, optional, default=True): Whether to run the browser in headless mode.
+- imageXpath (str, optional, default='//a[@tabindex="0"]/@href'): XPath expression to locate image URLs.
+- url_prefix (str, optional, default="https://photos.google.com/"): Prefix for image URLs.
+- output_path (str, optional, default="defaultlocationpreference"): Path where compressed images will be saved.
+- window_height (str, optional, default="1080"): Browser window height in pixels.
+- window_width (str, optional, default="1920"): Browser window width in pixels.
+- scalefactor (str, optional, default="0.70"): Scaling factor for images in normal mode.
+- headless_scalefactor (str, optional, default="0.3"): Scaling factor for images in headless mode.
+- headless_height (str, optional, default="19900"): Browser height in pixels when in headless mode.
+- headless_width (str, optional, default="2400"): Browser width in pixels when in headless mode.
+
+
+
+### 2. Advanced usecases.
+
+Takes the Google Photos Album url as Input. Ensure that the Photos are set to "Accesible by anyone with the url".
+
+Returns: A zip file of the compressed images (JPEGs).
+
+
+```python
+from gPhotosAlbum_JPEGcompression import compress_GoogleAlbum_jpeg
+
+Gphotos_url = "https://photos.google.com/share/exampleAlbumURL"
+
+compress_GoogleAlbum_jpeg(
+    Gphotos_url=Gphotos_url,
+    scroll_pause_time=1.0,  # Increase scrolling pause to ensure all images are loaded
+    isHeadless=True,  # Run in headless mode for faster execution
+    imageXpath='//a[@tabindex="0"]/@href',  # XPath for locating image links
+    url_prefix="https://photos.google.com/",  # URL prefix for constructing image links
+    output_path="/compressed_images",  # Specify output path for compressed files
+    window_height="1080",  # Window size for normal mode
+    window_width="1920",
+    scalefactor="0.8",  # Image scaling factor for compression
+    headless_scalefactor="0.3",  # Scaling factor when running in headless mode
+    headless_height="19900",  # Browser height for headless mode
+    headless_width="2400"  # Browser width for headless mode
+)
+```
