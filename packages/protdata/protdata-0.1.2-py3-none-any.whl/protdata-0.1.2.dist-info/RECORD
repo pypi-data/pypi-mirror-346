@@ -1,0 +1,13 @@
+protdata/__init__.py,sha256=MtncxortuLwO1jEDmWlFFta7Fov1bCSrni-EaeK5nMc,17
+protdata/io/__init__.py,sha256=UaNfWlZPWKhblNZo2D2vYiJs4ZSpi5pOLzIAnCuP5mE,234
+protdata/io/diann_loader.py,sha256=CB1-Ec9vaDt7B2DuPBOxhNIcdUBs9paRbIzs_em-Z2g,2332
+protdata/io/fragpipe_loader.py,sha256=dPkZzdWe2X2-aiUI2B1AUFqqVWe55HpjCcrT09EdxKY,3088
+protdata/io/maxquant_loader.py,sha256=sFywVfeMBv9Km6D3tYSJds3WOScO2oPudh9Fy4-6Tnk,3096
+protdata/io/mztab_loader.py,sha256=GROk0Cv4pAErhTekRs1LAswXkJ4rRkG1E9huuqY6pYQ,1840
+protdata-0.1.2.dist-info/licenses/LICENSE,sha256=VKZRFKsnJP4_hBYDK3imU1zJCJ7oVzUEmBDOckhySFs,1116
+tests/test_loaders.py,sha256=2QcDs6DywUQDTPkTU57anu3s0Hf1wxOFTkH7FFKuMfE,774
+tests/test_maxquant_loader.py,sha256=f5JjSGG5LyTCRD0vaw0tafmLZ_jZccG-QLnUC7-dC0M,759
+protdata-0.1.2.dist-info/METADATA,sha256=LDykNCVlRzvVHgTi1nNtcUJLfYhq7jBncDLJTCtNpcA,2418
+protdata-0.1.2.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+protdata-0.1.2.dist-info/top_level.txt,sha256=ExagFnVHC4tB4BQO8vxr8Dq2UdsmKMSj7bPmC5_VmFQ,15
+protdata-0.1.2.dist-info/RECORD,,
