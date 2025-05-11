@@ -1,0 +1,62 @@
+Metadata-Version: 2.4
+Name: yadet
+Version: 1.6.0
+Summary: A simple and effective Python data extraction tool for getting batch data exports and store in a simple format.
+Home-page: https://github.com/robbitt07/yadet
+Author: Robert Goss
+Author-email: Robert Goss <robertgoss07@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/robbitt07/yadet
+Project-URL: Bug Tracker, https://github.com/robbitt07/yadet/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+
+# YADET (Yet Another Data Extract Tool)
+
+A simple and effective Python data extraction tool for getting batch data exports 
+and store in a simple format.  
+
+Current functionality is relatively limited with MsSQL Source integration
+and File System Target Integration.
+
+## Install 
+
+With Python 3.7 or greater install the package with simple pip command.
+
+```
+pip install yadet
+```
+
+## Usage
+
+
+Import and load data
+```python
+from yadet.config import ProjectConfig
+from yadet.batch import ProjectBatchRun
+from yadet.engine import SourceMssqlEngine, TargetFileSystemEngine
+
+import os
+
+conn_str = "<>"
+
+project = ProjectConfig(
+    name="example", 
+    source_engine=SourceMssqlEngine, 
+    source_engine_params={"connection_str": conn_str}, 
+    target_engine=TargetFileSystemEngine, 
+    target_engine_params={
+        "base_directory": os.path.join("data", "example"), "compression": "gzip"
+    }
+)
+
+batch_run = ProjectBatchRun(project=project, debug=True)
+batch_run.run_batch()
+```
