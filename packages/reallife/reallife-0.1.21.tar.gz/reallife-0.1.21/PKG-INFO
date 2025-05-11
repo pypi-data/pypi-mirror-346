@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: reallife
+Version: 0.1.21
+Summary: 开始测试
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: chinese-calendar>=1.10.0
+Requires-Dist: grapherz>=0.1.5
+Requires-Dist: kanbanz>=0.2.0
+Requires-Dist: llmada>=0.1.8
+Requires-Dist: numpy>=2.2.5
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: promptlibz>=0.2.1
+Requires-Dist: pyppeteer>=2.0.0
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: pytest-html>=4.1.1
+Requires-Dist: pytest-ordering>=0.6
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: toml>=0.10.2
+Requires-Dist: toolsz>=0.1.5
+
+# obragtools
+实践级别
+
+这是一个偏项目级别的工具包了提供的是现在阶段的便携指令的代码化
+我们的管理系统
+
+## 常规操作
+
+### 导出环境
+```
+uv export --format requirements-txt > requirements.txt
+```
+### 更新文档
+```
+mkdocs serve # 预览
+mkdocs gh-deploy -d ../.temp # 同步到github网站
+```
+
+### 发布
+```
+uv build
+uv publish
+```
+
+### 运行测试并同步到测试服务
+```
+bash run_test.sh
+```
+
+
