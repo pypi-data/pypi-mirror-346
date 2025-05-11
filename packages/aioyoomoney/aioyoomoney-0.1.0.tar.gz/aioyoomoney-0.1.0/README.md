@@ -1,0 +1,162 @@
+---
+
+````markdown
+# aioyoomoney
+
+**aioyoomoney** — это асинхронная Python-библиотека для работы с [YooMoney API](https://yoomoney.ru/docs/wallet).  
+Позволяет получать информацию о счёте, просматривать историю операций, получать детали операций, создавать счета для оплаты и проверять их статус.
+
+---
+
+## 🔑 Получение Access Token
+
+1. Войдите в свой кошелек YooMoney. Если кошелька ещё нет — [создайте](https://yoomoney.ru/).
+2. Перейдите на [страницу регистрации приложения](https://yoomoney.ru/myservices/new).
+3. Укажите параметры приложения:
+   - Скопируйте `CLIENT_ID`, `CLIENT_SECRET` и `REDIRECT_URI` — они понадобятся для авторизации.
+4. Подтвердите регистрацию.
+5. Выполните следующий код для получения токена:
+
+```python
+from aioyoomoney import authorize
+
+token = authorize(
+    client_id="YOUR_CLIENT_ID",
+    redirect_uri="YOUR_REDIRECT_URI",
+    client_secret="YOUR_CLIENT_SECRET",
+    scope=[
+        "account-info",
+        "operation-history",
+        "operation-details",
+        "incoming-transfers",
+        "payment-p2p",
+    ]
+)
+
+print(token)
+````
+
+> После выполнения кода вы получите токен, который можно использовать для доступа к API. Это самый сложный шаг — дальше всё просто!
+
+---
+
+## 🚀 Возможности
+
+* 🔐 Получение информации о счете
+* 💳 История операций с фильтрами
+* 🧾 Детали конкретной операции
+* 🧨 Создание платёжной формы (инвойса)
+* ✅ Проверка оплаты по метке (label)
+
+---
+
+## 📦 Установка
+
+```bash
+pip install aioyoomoney
+```
+
+> Требования: Python 3.9+, aiohttp, pydantic, yarl
+
+---
+
+## ⚡ Быстрый старт
+
+```python
+import asyncio
+from aioyoomoney import YooMoney
+
+async def main():
+    client = YooMoney(
+        token="your_yoomoney_token", 
+        receiver="410011161616877"  # ваш кошелек для приёма платежей
+    )
+
+    account = await client.account_info()
+    print(f"Баланс: {account.balance} ₽")
+
+asyncio.run(main())
+```
+
+---
+
+## 📘 Примеры
+
+### Получить информацию о счёте
+
+```python
+account = await client.account_info()
+print(account.balance, account.account)
+```
+
+---
+
+### Получить историю операций
+
+```python
+history = await client.operation_history(records=10)
+for op in history.operations:
+    print(op.amount, op.datetime, op.title)
+```
+
+---
+
+### Получить детали операции
+
+```python
+details = await client.operation_details(operation_id="1234567890")
+print(details.amount, details.message)
+```
+
+---
+
+### Создать форму оплаты (инвойс)
+
+```python
+invoice = await client.create_invoice(
+    amount=500.0,
+    invoice_id="order_123",
+    redirect_url="https://example.com/success"
+)
+print(invoice.url_pay)
+```
+
+---
+
+### Проверка оплаты по `invoice_id`
+
+```python
+is_paid = await client.check_invoice("order_123")
+print("Оплачено!" if is_paid else "Ожидает оплату")
+```
+
+---
+
+## 🧪 Тестирование
+
+Для запуска тестов (в процессе написания):
+
+```bash
+pytest
+```
+
+---
+
+## 🛠 Используемые технологии
+
+* [aiohttp](https://docs.aiohttp.org/)
+* [Pydantic](https://docs.pydantic.dev/)
+* [YooMoney API](https://yoomoney.ru/docs/wallet/user-account)
+
+---
+
+## 📄 Лицензия
+
+Проект распространяется под лицензией [MIT](LICENSE).
+
+---
+
+## 👤 Автор
+
+Разработано с ❤️ [@belyankiss](https://github.com/belyankiss)
+
