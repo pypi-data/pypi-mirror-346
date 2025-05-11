@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: aiob2
+Version: 0.9.0
+Summary: A simple and easy to use async wrapper for Backblaze's B2 bucket API.
+Home-page: https://github.com/Void-ux/aiob2
+License: MIT
+Keywords: backblaze,b2,cloud,storage
+Author: Dan
+Author-email: the.void.altacc@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: speed
+Requires-Dist: aiofiles (>=24.1.0,<25.0.0)
+Requires-Dist: aiohttp (>=3.8.1,<4.0.0)
+Requires-Dist: typing-extensions (>=4.4.0,<5.0.0)
+Project-URL: Bug Tracker, https://github.com/Void-ux/aiob2/issues/
+Project-URL: Documentation, https://aiob2.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/Void-ux/aiob2
+Description-Content-Type: text/markdown
+
+# aiob2
+
+<p align="center">
+    <a href="https://www.python.org/downloads/">
+        <img src="https://img.shields.io/pypi/pyversions/aiob2?style=for-the-badge" alt="Python version">
+    </a>
+    <a href="https://github.com/Void-ux/aiob2/actions">
+        <img src="https://img.shields.io/github/actions/workflow/status/Void-ux/aiob2/build.yaml?branch=master&style=for-the-badge" alt="Build status">
+    </a>
+    <a href="https://pypi.org/project/aiob2/">
+        <img src="https://img.shields.io/pypi/v/aiob2?color=8BC34A&style=for-the-badge" alt="PyPi">
+    </a>
+    <a href="https://opensource.org/licenses/MIT">
+        <img src="https://img.shields.io/pypi/l/aiob2?color=C0C0C0&style=for-the-badge" alt="License">
+    </a>
+</p>
+
+aiob2 is an asynchronous API wrapper for the [Backblaze B2 Native API](https://www.backblaze.com/apidocs/introduction-to-the-b2-native-api).
+
+It will allow you to interact with your B2 bucket and its files in a modern, object-oriented fashion.
+
+**NOTE:** There are API endpoints left to implement, eventually they will be added. To speed up this process you can submit a [pull request](https://github.com/Void-ux/aiob2/pulls) or [suggest it](https://github.com/Void-ux/aiob2/discussions/categories/ideas).
+
+## Installation
+
+---
+
+aiob2 is compatible with Python 3.8+. To install aiob2, run the following command in your (virtual) environment.
+
+```shell
+pip install aiob2
+```
+
+Alternatively, for the latest though least stable version, you can download it from the GitHub repo:
+
+```shell
+pip install git+https://github.com/Void-ux/aiob2.git
+```
+
+## Usage
+
+### Uploading
+
+```python
+import aiohttp
+import asyncio
+
+from aiob2 import Client
+
+# Our image to upload to our bucket
+with open(r'C:\Users\MS1\Pictures\Camera Roll\IMG_5316.jpeg', 'rb') as file:
+    data = file.read()
+
+async def main():
+    async with Client('key_id', 'key') as client:
+        file = await client.upload_file(
+            content_bytes=data,
+            file_name='test.jpg',
+            bucket_id='bucket_id',
+        )
+
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+And that's it! `upload_file()` returns a `File` object that neatly wraps everything Backblaze's API has provided us with.
+The `File` object's documentation can be found [here](https://aiob2.readthedocs.io/en/latest/pages/api.html#aiob2.File)
+
+## License
+
+This project is released under the [MIT License](https://opensource.org/licenses/MIT).
+
