@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: '{"prompt": "Generate a short description of fal.ai", "temperature": 0.7}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '69'
+      content-type:
+      - application/json
+      host:
+      - api.fal.ai
+      user-agent:
+      - python-requests/2.31.0
+    method: POST
+    uri: https://api.fal.ai/v1/models/fal-ai/text-generation/llm/inference
+  response:
+    body:
+      string: '{"data": {"text": "This is a sample response from a fal.ai text model."}}'
+    headers:
+      content-length:
+      - '71'
+      content-type:
+      - application/json
+      date:
+      - Sat, 19 Apr 2025 12:34:56 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+version: 1

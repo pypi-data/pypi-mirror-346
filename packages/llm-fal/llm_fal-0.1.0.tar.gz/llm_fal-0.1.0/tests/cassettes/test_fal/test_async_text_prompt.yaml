@@ -1,0 +1,70 @@
+interactions:
+- request:
+    body: '{"prompt": "Tell me about fal.ai", "temperature": 0.7}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '54'
+      content-type:
+      - application/json
+      host:
+      - api.fal.ai
+      user-agent:
+      - python-aiohttp/3.9.1
+    method: POST
+    uri: https://api.fal.ai/v1/models/fal-ai/text-generation/llm/inference
+  response:
+    body:
+      string: '{"data": {"text": "This is an async response from fal.ai."}}'
+    headers:
+      content-length:
+      - '59'
+      content-type:
+      - application/json
+      date:
+      - Sat, 19 Apr 2025 12:35:15 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"prompt": "What services does it offer?", "temperature": 0.7}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '65'
+      content-type:
+      - application/json
+      host:
+      - api.fal.ai
+      user-agent:
+      - python-aiohttp/3.9.1
+    method: POST
+    uri: https://api.fal.ai/v1/models/fal-ai/text-generation/llm/inference
+  response:
+    body:
+      string: '{"data": {"text": "Fal.ai provides AI services through APIs."}}'
+    headers:
+      content-length:
+      - '62'
+      content-type:
+      - application/json
+      date:
+      - Sat, 19 Apr 2025 12:35:18 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: '{"prompt": "Smooth camera motion zooming in", "image_url": "https://example.com/input-image.jpg", "seed": 12345}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '107'
+      content-type:
+      - application/json
+      host:
+      - api.fal.ai
+      user-agent:
+      - python-requests/2.31.0
+    method: POST
+    uri: https://api.fal.ai/v1/models/fal-ai/kling-video/v2/master/image-to-video/inference
+  response:
+    body:
+      string: '{"videos": [{"url": "https://cdn.fal.ai/generated/kling-video-abcd1234-5678-90ef-ghij-klmnopqrstuv.mp4", "width": 768, "height": 768, "duration": 6.0}], "seed": 12345, "metadata": {"prompt": "Smooth camera motion zooming in", "model_id": "fal-ai/kling-video/v2/master/image-to-video", "generation_time": 18.5, "input_image": "https://example.com/input-image.jpg"}}'
+    headers:
+      content-length:
+      - '382'
+      content-type:
+      - application/json
+      date:
+      - Sat, 19 Apr 2025 14:12:30 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,52 @@
+[project]
+name = "llm-fal"
+version = "0.1.0"
+description = "LLM CLI plugin for fal.ai generative AI models and services"
+readme = "README.md"
+authors = [{name = "LLM CLI Contributors"}]
+license = {text = "MIT"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "llm>=0.23,<1.0.0",
+    "fal-client>=0.2.0,<1.0.0",
+    "aiohttp>=3.8.0,<4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/nicobailon/llm-fal"
+Issues = "https://github.com/nicobailon/llm-fal/issues"
+
+[project.entry-points.llm]
+fal = "llm_fal"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0,<8.0.0",
+    "pytest-asyncio>=0.18.0,<1.0.0",
+    "pytest-cov>=4.0.0,<5.0.0",
+    "pytest-mock>=3.10.0,<4.0.0",
+    "pytest-vcr>=1.0.0,<2.0.0",
+]
+dev = [
+    "black>=23.0.0,<24.0.0",
+    "isort>=5.0.0,<6.0.0",
+    "mypy>=1.0.0,<2.0.0",
+    "ruff>=0.0.0,<1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

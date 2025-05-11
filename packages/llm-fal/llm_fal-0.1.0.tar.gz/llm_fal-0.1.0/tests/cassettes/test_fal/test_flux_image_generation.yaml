@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: '{"prompt": "A futuristic cityscape with flying cars and neon lights", "temperature": 0.7}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '85'
+      content-type:
+      - application/json
+      host:
+      - api.fal.ai
+      user-agent:
+      - python-requests/2.31.0
+    method: POST
+    uri: https://api.fal.ai/v1/models/fal-ai/flux-pro/v1.1-ultra/inference
+  response:
+    body:
+      string: '{"images": [{"url": "https://cdn.fal.ai/generated/flux-pro-abcd1234-5678-90ef-ghij-klmnopqrstuv.png", "width": 1024, "height": 1024}], "seed": 987654, "metadata": {"prompt": "A futuristic cityscape with flying cars and neon lights", "model_id": "fal-ai/flux-pro/v1.1-ultra", "generation_time": 2.75}}'
+    headers:
+      content-length:
+      - '287'
+      content-type:
+      - application/json
+      date:
+      - Sat, 19 Apr 2025 14:10:22 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+version: 1

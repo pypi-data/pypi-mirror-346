@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: '{"input": "This is a test of the text to speech capabilities", "voice": "default", "outputFormat": "mp3"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '92'
+      content-type:
+      - application/json
+      host:
+      - api.fal.ai
+      user-agent:
+      - python-requests/2.31.0
+    method: POST
+    uri: https://api.fal.ai/v1/models/fal-ai/playai/tts/dialog/inference
+  response:
+    body:
+      string: '{"url": "https://fal-ai-audio-uploads.s3.amazonaws.com/example-audio-12345.mp3", "audio": {"file_size": 123456, "duration": 5.2, "file_name": "example-audio-12345.mp3", "content_type": "audio/mpeg", "url": "https://fal-ai-audio-uploads.s3.amazonaws.com/example-audio-12345.mp3"}}'
+    headers:
+      content-length:
+      - '259'
+      content-type:
+      - application/json
+      date:
+      - Sat, 20 Apr 2025 18:45:22 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+version: 1

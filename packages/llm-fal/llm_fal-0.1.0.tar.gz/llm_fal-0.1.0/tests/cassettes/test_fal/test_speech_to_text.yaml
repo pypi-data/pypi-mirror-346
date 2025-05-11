@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: '{"audio_url": "https://example.com/audio-file.mp3"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '46'
+      content-type:
+      - application/json
+      host:
+      - api.fal.ai
+      user-agent:
+      - python-requests/2.31.0
+    method: POST
+    uri: https://api.fal.ai/v1/models/fal-ai/playai/tts/dialog/inference
+  response:
+    body:
+      string: '{"data": {"text": "Hello, this is a sample transcription of speech to text using the fal.ai API. The model accurately converts spoken words into written text.", "detected_language": "en"}, "metadata": {"model_id": "fal-ai/playai/tts/dialog", "audio_duration": 8.75, "processing_time": 2.1}}'
+    headers:
+      content-length:
+      - '259'
+      content-type:
+      - application/json
+      date:
+      - Sat, 19 Apr 2025 14:13:15 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: '{"prompt": "A person walking through a city street", "image_url": "https://example.com/input-image.jpg", "num_inference_steps": 30, "seed": 42}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '146'
+      content-type:
+      - application/json
+      host:
+      - api.fal.ai
+      user-agent:
+      - python-requests/2.31.0
+    method: POST
+    uri: https://api.fal.ai/v1/models/fal-ai/wan-pro/image-to-video/inference
+  response:
+    body:
+      string: '{"videos": [{"url": "https://cdn.fal.ai/generated/video-abcd1234-5678-90ef-ghij-klmnopqrstuv.mp4", "width": 512, "height": 512, "duration": 4.5}], "seed": 42, "metadata": {"prompt": "A person walking through a city street", "model_id": "fal-ai/wan-pro/image-to-video", "generation_time": 12.3, "input_image": "https://example.com/input-image.jpg"}}'
+    headers:
+      content-length:
+      - '348'
+      content-type:
+      - application/json
+      date:
+      - Sat, 19 Apr 2025 14:11:45 GMT
+      server:
+      - uvicorn
+    status:
+      code: 200
+      message: OK
+version: 1
