@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyonstar"
+version = "0.0.13"
+description = "Unofficial package for making OnStar API requests"
+readme = "README.md"
+authors = [
+    {name = "Bryan Leboff", email = "leboff@gmail.com"}
+]
+requires-python = ">=3.10"
+license = {text = "MIT License"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "httpx>=0.24.0",
+    "pyjwt>=2.8.0",
+    "pyotp>=2.9.0",
+    "aiofiles>=23.2.1",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/leboff/pyonstar"
+"Bug Tracker" = "https://github.com/leboff/pyonstar/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+markers = [
+    "asyncio: marks tests as asyncio tests",
+]
+addopts = "--strict-markers -v"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.bumpversion]
+current_version = "0.0.13"
+commit = true
+tag = true
+tag_name = "v{new_version}"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
+serialize = ["{major}.{minor}.{patch}"]
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = "version = \"{current_version}\""
+replace = "version = \"{new_version}\""
+
+[[tool.bumpversion.files]]
+filename = "pyonstar/__init__.py"
+search = "__version__ = \"{current_version}\""
+replace = "__version__ = \"{new_version}\"" 
