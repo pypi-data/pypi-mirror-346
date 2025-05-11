@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: aidex_toolkit
+Version: 0.1.0
+Summary: Ai/ML trainings package and guide from scratch with sample data support.
+Home-page: https://github.com/Perfect-Aimers-Enterprise/aidex_toolkit.git
+Author: Godsave Kawurem
+Author-email: godsaveogbidor@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
+
