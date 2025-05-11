@@ -1,0 +1,19 @@
+[package]
+name = "fuzzydate"
+version = "0.5.6"
+edition = "2024"
+
+[workspace]
+members = ["fuzzy-date-rs"]
+
+[lib]
+name = "fuzzydate"
+crate-type = ["cdylib"]
+
+[workspace.dependencies]
+chrono = "0.4.41"
+
+[dependencies]
+chrono = { workspace = true }
+fuzzy-date-rs = { path = "fuzzy-date-rs" }
+pyo3 = { version = "0.24.2", features = ["chrono"] }
