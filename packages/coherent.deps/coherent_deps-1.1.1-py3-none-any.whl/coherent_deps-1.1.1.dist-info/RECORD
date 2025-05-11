@@ -1,0 +1,8 @@
+coherent/deps/__init__.py,sha256=_Jm33ti1NJG23Fdd23_fQAG7VulwsaZetjuIFdWSSw0,84
+coherent/deps/imports.py,sha256=oE4D9cxsKFiXou5P0NewNL7IWnM8-2DaqwWgnGQQF58,4766
+coherent/deps/pypi.py,sha256=XHMgLrf5tDY_81mYnBRR_QE4m896yQMKDZggyYCrkyg,10479
+coherent/deps/distributions/load.py,sha256=HDyYi7pEEHs1_EaYVo0Iokz7WfxKbGeaidZttYZE5J4,528
+coherent/deps/distributions/process.py,sha256=TqNtgDjNGELqUs-4mvn9WoXUW57vh9a1Spr0bhIj7YQ,241
+coherent_deps-1.1.1.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+coherent_deps-1.1.1.dist-info/METADATA,sha256=qcZybTPMUWskA1oAeFyunri-_KnJXGIFg99QyLpgwxc,5512
+coherent_deps-1.1.1.dist-info/RECORD,,
