@@ -1,0 +1,8 @@
+mcp_weather_http/__init__.py,sha256=Sc3LtcAyoqZxyt7UgxfDvZuOmjoWdU1fVmNbervjmUE,24
+mcp_weather_http/__main__.py,sha256=H4S-txDypDKrjRl4uhXdWgpOHYok9rIOzCKe8MVOcIg,62
+mcp_weather_http/server.py,sha256=7I16CBZcP0wJIi4nOWHm739Jtpilj9UK7lfXeu7aCqc,7804
+mcp_weather_http_0511-0.1.0.dist-info/METADATA,sha256=tgXi_M643lZSVwCCFZUKeIsXc2InLoUsxutG6KKIG2c,243
+mcp_weather_http_0511-0.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+mcp_weather_http_0511-0.1.0.dist-info/entry_points.txt,sha256=ALcIEJ6KrdI3Opi__Ql1em16V5546ftzx1goW5bC5UM,59
+mcp_weather_http_0511-0.1.0.dist-info/top_level.txt,sha256=9mQ-ib5YocU9rAvPGDo6aW67JG-Uqb5pU-72Heiv7qA,17
+mcp_weather_http_0511-0.1.0.dist-info/RECORD,,
