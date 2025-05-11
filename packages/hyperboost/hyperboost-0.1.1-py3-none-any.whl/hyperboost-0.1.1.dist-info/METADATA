@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: hyperboost
+Version: 0.1.1
+Summary: Библиотека для оптимизации гиперпараметров с использованием байесовской оптимизации и эволюционных алгоритмов
+Home-page: https://github.com/itbert/hyperboost
+Author: itbert
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: numpy>=1.21
+Requires-Dist: scikit-learn>=1.0
+Requires-Dist: scipy>=1.7
+Requires-Dist: matplotlib>=3.4
+Dynamic: author
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
