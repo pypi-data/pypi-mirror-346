@@ -1,0 +1,83 @@
+[build-system]
+requires = ['flit_core >=3.2,<4']
+build-backend = 'flit_core.buildapi'
+
+[project]
+name = 'tsetmc'
+authors = [
+    { name = '5j9', email = '5j9@users.noreply.github.com' },
+]
+description = 'a library to retrieve data from tsetmc.com website'
+keywords = [
+    'tsetmc',
+    'client',
+]
+classifiers = [
+    'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+    'Programming Language :: Python :: 3.12',
+]
+requires-python = '>=3.12'
+dynamic = [
+    'version',
+]
+dependencies = [
+    'aiohutils >= 0.20.0',
+    'jdatetime',
+    'lxml',
+    'numpy',
+    'pandas >= 2.1.0',
+    'pyarrow',  # pd.options.future.infer_string = True
+]
+[project.optional-dependencies]
+test = [
+    'aiohutils[test] >= 0.21.2',
+]
+
+[project.license]
+text = 'GNU General Public License v3 (GPLv3)'
+
+[project.readme]
+file = 'README.rst'
+content-type = 'text/x-rst'
+
+[project.urls]
+Homepage = 'https://github.com/5j9/tsetmc'
+
+[tool.flit.sdist]
+exclude = ['tests', 'dev', '.gitattributes', 'sample_scripts']
+
+[tool.ruff]
+line-length = 79
+format.quote-style = 'single'
+lint.isort.combine-as-imports = true
+lint.extend-select = [
+    'W605', # invalid-escape-sequence
+    'FA',  # flake8-future-annotations
+    'I',  # isort
+    'UP',  # pyupgrade
+    'RUF', # Ruff-specific rules (RUF)
+]
+lint.ignore = [
+    'E721',  # Do not compare types, use `isinstance()`
+    'RUF001',  # ambiguous-unicode-character-string	
+    'RUF003',  # ambiguous-unicode-character-comment
+]
+
+[tool.pytest.ini_options]
+addopts = '--quiet --tb=short'
+asyncio_mode = 'auto'
+asyncio_default_fixture_loop_scope = 'session'
+asyncio_default_test_loop_scope = 'session'
+
+[tool.pyright]
+typeCheckingMode = 'standard'
+reportDeprecated = "warning"
+reportPropertyTypeMismatch = "warning"
+reportUnnecessaryCast = "warning"
+reportUnnecessaryContains = "warning"
+reportUnnecessaryIsInstance = "warning"
+reportUnnecessaryTypeIgnoreComment = true
+reportInvalidStringEscapeSequence = false
+reportConstantRedefinition = 'error'
+reportTypeCommentUsage = 'warning'
+reportUnnecessaryComparison = 'warning'
