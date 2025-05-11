@@ -1,0 +1,8 @@
+seleniumbase
+requests
+python-dotenv
+flask>=2.0.0
+pyOpenSSL
+
+[dev]
+black
