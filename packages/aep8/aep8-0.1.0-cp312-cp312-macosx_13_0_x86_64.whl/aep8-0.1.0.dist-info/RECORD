@@ -1,0 +1,10 @@
+aep8/__init__.py,sha256=hLm2p8PiH69pzlL-carBAL-KqmSubwwvjzCKgrrGU7k,133
+aep8/_core.py,sha256=gBt5U4g8zdfJoXpEROZwQ5Mx6eAjDlnQfIz55u4JqRk,3220
+aep8/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aep8/_irbem.cpython-312-darwin.so,sha256=XYSQeq189kTcAEzDyrNBhgRmVooIxxScLLRneytPOaY,1190288
+aep8/.dylibs/libgfortran.5.dylib,sha256=RX-InSV6CM9yBg9hSdA2AvCeAqXPA65yF5cwysQ0L40,3675456
+aep8/.dylibs/libquadmath.0.dylib,sha256=xJKJ6NnPPPUgIQAN24kMKsW2mbSrKM6rilepjbdL_Mc,379152
+aep8/.dylibs/libgcc_s.1.1.dylib,sha256=NK1A4W1KTIsbmD_1r-XpHHsaZkUC7zHKL29QVDQi5XM,282640
+aep8-0.1.0.dist-info/RECORD,,
+aep8-0.1.0.dist-info/WHEEL,sha256=eLQCEzp0KC7GTL9oY0AcHH5xm26kt4uyzexAZZC4z_U,123
+aep8-0.1.0.dist-info/METADATA,sha256=FWv0hR__HF08PXzrZEJYiCDhpOXmvLfWYpb4lLIA3H0,2185
