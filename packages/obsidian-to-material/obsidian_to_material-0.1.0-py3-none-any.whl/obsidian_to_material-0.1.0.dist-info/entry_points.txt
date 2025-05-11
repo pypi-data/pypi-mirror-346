@@ -1,0 +1,2 @@
+[markdown.extensions]
+obsidian_admonitions = obsidian_admonitions.extension:makeExtension
