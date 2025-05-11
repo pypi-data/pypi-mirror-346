@@ -1,0 +1,2 @@
+[console_scripts]
+evaluate = evaluator.cli.main:main
