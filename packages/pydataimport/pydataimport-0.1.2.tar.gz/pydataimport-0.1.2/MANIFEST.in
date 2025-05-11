@@ -1,0 +1,8 @@
+include LICENSE
+include README.md
+include requirements.txt
+recursive-include pydataimport *
+recursive-include pydataimport/config *
+recursive-include pydataimport/services *
+recursive-include pydataimport/utils *
+recursive-include pydataimport/models * 
