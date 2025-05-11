@@ -1,0 +1,14 @@
+hatch_plugin.py,sha256=NgjXQM95m_b09lSqQx0LfTvYizmR_u9Po290Z9tYRn4,3235
+metadata.json,sha256=-Emyd-oR0e-wFVCvnsptc5aoo29W-o-GXOXuJiyWfbo,284
+pratik/__init__.py,sha256=UiGSZIwbXd0LJQtFCLGoDQUk4HBC3EfvUdtQ2bg-U_4,7255
+pratik/color.py,sha256=ubQGUF0tb4sdvmf0gi0IyAbgX-0cyRocOXbDvpbtMg0,6341
+pratik/functions.py,sha256=qvhG0pbIk7jBp0elUKOvp2pWpxuEvvd9cCWuF1ApVm0,24891
+pratik/logger.py,sha256=IbrXtmm-kZQ1rLJXIuw3Zbgt66J2koDvVGqqerX2Qig,6041
+pratik/menu.py,sha256=Wk2KH3uYqa2yuhFJ5U6otA1b9DajjfOVWzuMpekiUiU,10133
+pratik/metadata.json,sha256=-Emyd-oR0e-wFVCvnsptc5aoo29W-o-GXOXuJiyWfbo,284
+pratik/singleton.py,sha256=zhBTTZZZQmJU7AErcWbee7ob4ewpbzciVNHQdfSMVZA,2809
+pratik/text.py,sha256=oSstq1TyXQ4xPo9Mhves-bGjJPfBaF6M34p6MM7ba5o,14870
+pratik-1.4.0a1.dist-info/METADATA,sha256=4cCRiEMJahuOSQdnNm5ugF8fpavlfmv93h31izyoE1M,3043
+pratik-1.4.0a1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pratik-1.4.0a1.dist-info/licenses/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+pratik-1.4.0a1.dist-info/RECORD,,
