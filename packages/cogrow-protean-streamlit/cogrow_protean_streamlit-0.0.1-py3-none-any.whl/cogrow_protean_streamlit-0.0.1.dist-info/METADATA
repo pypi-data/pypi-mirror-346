@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: cogrow-protean-streamlit
+Version: 0.0.1
+Summary: The official Protean Streamlit library
+Author-email: CoGrow <support@cogrow.tech>
+License-Expression: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: streamlit<2.0.0,>=1.44.0
+Requires-Dist: joserfc>=1.0.4
+Requires-Dist: requests>=2
+Provides-Extra: build
+Requires-Dist: build>=1.2.2; extra == "build"
+Provides-Extra: test
+Requires-Dist: requests_mock; extra == "test"
+Requires-Dist: pytest==8.*; extra == "test"
+Requires-Dist: pytest-cov==6.*; extra == "test"
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: cogrow-protean-streamlit[build,test]; extra == "dev"
+
+# Protean SDK Streamlit
+The CoGrow Protean Streamlit library provides functionality that simplifies integration of Streamlit applications with Protean platform.
+
+## Installation
+```sh
+# install from PyPI
+pip install cogrow-protean-streamlit
+```
+
+## Protean Authenticator
+`ProteanAuthenticator` allows Streamlit applications to leverage Protean platform authentication using [OAuth2 Resource Server](https://www.oauth.com/oauth2-servers/the-resource-server/) pattern.
+
+### Usage
+Using `ProteanAuthenticator` is as simple as importing the module, initializing an instance with the OAuth2 issuer URI and calling `authenticate` to verify logged-in user's credentials:
+```python
+import streamlit as st
+
+from protean_streamlit import ProteanAuthenticator
+
+protean_authenticator = ProteanAuthenticator("https://keycloak.cogrow.tech/realms/cogrow")
+protean_authenticator.authenticate()
+if protean_authenticator.is_logged_in:
+    st.title("Protean Streamlit App")
+```
+You could use Protean bearer token to authenticate and access all Protean platform APIs:
+```python
+import streamlit as st
+from openai import OpenAI
+
+from protean import Protean
+from protean_streamlit import ProteanAuthenticator
+
+protean_authenticator = ProteanAuthenticator("https://keycloak.cogrow.tech/realms/cogrow")
+protean_authenticator.authenticate()
+
+if protean_authenticator.is_logged_in:
+    st.title("💬 Chatbot")
+
+    # Use Protean APIs to fetch the user profile details
+    protean_client = Protean(base_url=st.context.headers.get('Origin'), api_key=protean_authenticator.bearer_token)
+    user_profile = protean_client.user.get_user_profile()
+    with st.sidebar:
+        st.markdown(f"### 👤 Logged in as: [{user_profile.fullname}](mailto:{user_profile.email})")
+
+    if "messages" not in st.session_state:
+        st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
+
+    for msg in st.session_state.messages:
+        st.chat_message(msg["role"]).write(msg["content"])
+
+    if prompt := st.chat_input():
+        client = OpenAI(api_key=protean_authenticator.bearer_token, base_url=f"{st.context.headers.get('Origin')}/api/inference/text")
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        st.chat_message("user").write(prompt)
+        response = client.chat.completions.create(model="llama-3.2-1b-instruct", messages=st.session_state.messages)
+        msg = response.choices[0].message.content
+        st.session_state.messages.append({"role": "assistant", "content": msg})
+        st.chat_message("assistant").write(msg)
+```
