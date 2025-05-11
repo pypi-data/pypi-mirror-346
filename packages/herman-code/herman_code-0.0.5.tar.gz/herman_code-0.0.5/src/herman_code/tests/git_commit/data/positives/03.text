@@ -1,0 +1,43 @@
+This is a commit title
+
+This is some prose text describing the commit. This text precedes the nested list of details.
+
+- LVL0-T1
+  + LVL1-LEAF-[(0,1)]1
+- LVL0-T2
+  - LVL1-T1
+  - LVL1-T2
+    - LVL2-T1
+      - LVL3-T1
+        + LVL4-LEAF-[(0,2),(1,2),(2,1),(3,1)]-1
+        + LVL4-LEAF-[(0,2),(1,2),(2,1),(3,1)]-2
+      - LVL3-T2
+        + LVL4-LEAF-[(0,2),(1,2),(2,1),(3,2)]-1
+        + LVL4-LEAF-[(0,2),(1,2),(2,1),(3,2)]-2
+  - LVL1-T2
+    + LVL2-LEAF-[(0,2),(1,2)]-1
+    + LVL2-LEAF-[(0,2),(1,2)]-2
+- LVL0-T3
+  + LVL1-LEAF-[(0,3)]-1
+- LVL0-T4
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	new file:   LVL1-LEAF-[(0,1)]1
+#	deleted:    LVL4-LEAF-[(0,2),(1,2),(2,1),(3,1)]-1
+#	modified:   LVL4-LEAF-[(0,2),(1,2),(2,1),(3,1)]-2
+#	new file:   LVL4-LEAF-[(0,2),(1,2),(2,1),(3,2)]-1
+#	deleted:    LVL4-LEAF-[(0,2),(1,2),(2,1),(3,2)]-2
+#	renamed:    LVL2-LEAF-[(0,2),(1,2)]-1 -> LVL2-LEAF-[(0,2),(1,2)]-2
+#	modified:   LVL1-LEAF-[(0,3)]-1
+#
+# Untracked files:
+#	folder_1/file_1.py
+#	folder_2/file_2.py
+#	folder_3/file_3.py
+#

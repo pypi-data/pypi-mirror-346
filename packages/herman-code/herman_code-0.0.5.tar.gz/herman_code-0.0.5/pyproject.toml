@@ -1,0 +1,96 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "herman-code"
+dynamic = ["version"]
+description = 'A collection of utility code.'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "GPL-3.0-or-later"
+keywords = [
+    "Franklin",
+    "Herman",
+    "utility"
+]
+authors = [
+  { name = "Herman Franklin Autore", email = "hf.autore@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.scripts]
+
+hcode = "herman_code.scripts:hcode"
+
+[project.urls]
+Documentation = "https://github.com/ChemGuy88/hermanCode#readme"
+Issues = "https://github.com/ChemGuy88/hermanCode/issues"
+Source = "https://github.com/ChemGuy88/hermanCode"
+
+[tool.hatch.version]
+path = "src/herman_code/__about__.py"
+
+[tool.hatch.build.targets.sdist]
+
+include = [
+  "/src",
+  "/tests",
+]
+
+[tool.hatch.envs.default]
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/herman_code tests}"
+
+[tool.coverage.run]
+source_pkgs = ["herman_code", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/herman_code/__about__.py",
+]
+
+[tool.coverage.paths]
+herman_code = ["src/herman_code", "*/herman-code/src/herman_code"]
+tests = ["tests", "*/herman-code/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
