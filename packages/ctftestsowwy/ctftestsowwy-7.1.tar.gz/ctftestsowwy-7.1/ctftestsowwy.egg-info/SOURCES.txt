@@ -1,0 +1,8 @@
+README.md
+setup.py
+ctftestsowwy.egg-info/PKG-INFO
+ctftestsowwy.egg-info/SOURCES.txt
+ctftestsowwy.egg-info/dependency_links.txt
+ctftestsowwy.egg-info/requires.txt
+ctftestsowwy.egg-info/top_level.txt
+src/__init__.py

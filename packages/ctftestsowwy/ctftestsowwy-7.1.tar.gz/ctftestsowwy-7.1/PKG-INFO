@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: ctftestsowwy
+Version: 7.1
+Requires-Dist: RestrictedPython
+Dynamic: requires-dist
