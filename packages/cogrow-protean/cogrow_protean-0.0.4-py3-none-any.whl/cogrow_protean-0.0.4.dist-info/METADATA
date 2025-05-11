@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: cogrow-protean
+Version: 0.0.4
+Summary: The official Python library for the Protean API
+Author-email: CoGrow <support@cogrow.tech>
+License-Expression: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3<3.0.0,>=2.1.0
+Requires-Dist: python_dateutil>=2.8.2
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+
+# Protean SDK Python
+The CoGrow Protean Python library provides convenient access to the Protean REST API from any Python 3.11+ application.
+The library includes type definitions for all request params and response fields.
+
+## Installation
+```sh
+# install from PyPI
+pip install cogrow-protean
+```
+
+## Documentation
+You can find the documentation for this library [here](https://github.com/cogrow-tech/protean-python/blob/main/README.md).
