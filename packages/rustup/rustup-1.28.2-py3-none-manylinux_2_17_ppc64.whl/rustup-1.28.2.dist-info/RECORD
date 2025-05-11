@@ -1,0 +1,4 @@
+rustup-1.28.2.data/scripts/rustup,sha256=d63e99aee6b38817b4605cbd4d15edb20c5952ff5c5cc527ce7daa396b138b6e,4096
+rustup-1.28.2.dist-info/WHEEL,sha256=46c6a2ca8c4fd1a8200fdc96234b62fa2a546bbda80b2a7d7ba56bd757e4b0c7,128
+rustup-1.28.2.dist-info/METADATA,sha256=910cfc13d973a6be3bcbf6e1565b47264369843b0ceec30512621f1f915f0f8c,314
+rustup-1.28.2.dist-info/RECORD,,
