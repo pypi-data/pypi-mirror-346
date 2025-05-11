@@ -1,0 +1,3 @@
+[console_scripts]
+clean-toggl-account = toggl_api.utility._clean_account:main
+generate-fake-toggl-data = toggl_api.utility._generate_fake_data:main
