@@ -1,0 +1,53 @@
+[project]
+name = "sphinx_autoindex"
+version = "0.1.5"
+description = "Sphinx extension to automatically index the source code for autodoc"
+readme = "README.md"
+authors = [
+  { name = "Mickael Descamps"}
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+
+    # Indicate who your project is intended for
+    "Intended Audience :: Developers",
+    "Framework :: Sphinx :: Extension",
+    "Topic :: Documentation :: Sphinx",
+
+    # Specify the Python versions you support here.
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "sphinx",
+]
+
+[project.urls]
+Homepage = "https://mickaeldescamps.github.io/sphinx-autoindex"
+Repository = "https://github.com/MickaelDescamps/sphinx-autoindex"
+Issues = "https://github.com/MickaelDescamps/sphinx-autoindex/issues"
+
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "sphinx-autodoc-typehints",
+    "sphinx-autoindex",
+    "sphinx-copybutton>=0.5.2",
+    "sphinx-prompt>=1.9.0",
+    "sphinx-rtd-theme>=3.0.2",
+    "sphinxemoji>=0.3.1",
+    "toml>=0.10.2",
+    "myst-parser>=4.0.1",
+]
+
+[tool.setuptools]
+packages = ["sphinx_autoindex"]
+package-dir = {"" = "src"}
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
