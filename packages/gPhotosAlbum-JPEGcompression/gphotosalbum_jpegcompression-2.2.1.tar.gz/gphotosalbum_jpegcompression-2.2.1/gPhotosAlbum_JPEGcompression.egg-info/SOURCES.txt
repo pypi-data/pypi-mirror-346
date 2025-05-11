@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+gPhotosAlbum_JPEGcompression/__init__.py
+gPhotosAlbum_JPEGcompression/main.py
+gPhotosAlbum_JPEGcompression.egg-info/PKG-INFO
+gPhotosAlbum_JPEGcompression.egg-info/SOURCES.txt
+gPhotosAlbum_JPEGcompression.egg-info/dependency_links.txt
+gPhotosAlbum_JPEGcompression.egg-info/requires.txt
+gPhotosAlbum_JPEGcompression.egg-info/top_level.txt
+gPhotosAlbum_JPEGcompression/device_chromedriver_autoinstaller/__init__.py
+gPhotosAlbum_JPEGcompression/device_chromedriver_autoinstaller/utils.py
