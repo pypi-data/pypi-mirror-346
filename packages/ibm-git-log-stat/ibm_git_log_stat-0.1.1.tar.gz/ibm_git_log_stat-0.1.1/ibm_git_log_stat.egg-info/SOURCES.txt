@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+git_log_stat/__init__.py
+git_log_stat/cli.py
+ibm_git_log_stat.egg-info/PKG-INFO
+ibm_git_log_stat.egg-info/SOURCES.txt
+ibm_git_log_stat.egg-info/dependency_links.txt
+ibm_git_log_stat.egg-info/entry_points.txt
+ibm_git_log_stat.egg-info/requires.txt
+ibm_git_log_stat.egg-info/top_level.txt
