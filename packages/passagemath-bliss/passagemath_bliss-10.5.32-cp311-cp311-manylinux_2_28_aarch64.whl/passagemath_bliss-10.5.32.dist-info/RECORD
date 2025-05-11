@@ -1,0 +1,8 @@
+passagemath_bliss.libs/libbliss-297bafd3.so,sha256=hF84aWyG5mP2rAUoWCDJr4xK8cl0j7iAXkqHtIeIIFY,2632081
+sage/all__sagemath_bliss.py,sha256=2p3JOEnbjaX22LWk6f1yfiAvhMMkcvNXwTp_NcGw6pM,44
+sage/graphs/all__sagemath_bliss.py,sha256=2p3JOEnbjaX22LWk6f1yfiAvhMMkcvNXwTp_NcGw6pM,44
+sage/graphs/bliss.cpython-311-aarch64-linux-gnu.so,sha256=1oXKToVH_mjaR1V135nHXf4O9WH9mbrV0W90fFYKgHw,1708705
+passagemath_bliss-10.5.32.dist-info/METADATA,sha256=C8qp3w59NNGn19cuJjEDwTz-_Jw4V4jj2pRUW3MbDAY,4229
+passagemath_bliss-10.5.32.dist-info/WHEEL,sha256=Iuem36HOwcuNTTYVzvlhuEIrNrGYL9T8De9ZgFHHkqE,114
+passagemath_bliss-10.5.32.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_bliss-10.5.32.dist-info/RECORD,,
