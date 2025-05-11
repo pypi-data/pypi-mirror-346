@@ -1,0 +1,69 @@
+[project]
+name = "cased-kit"
+version = "0.1.4"
+description = "A modular toolkit for LLM-powered codebase understanding."
+authors = [
+    { name = "Cased", email = "ted@cased.com" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+    "tree-sitter-language-pack>=0.7.2",
+    "pathspec>=0.11.1",
+    "pytest>=8.3.5",
+    "numpy>=1.25",
+    "chromadb>=0.5.23",
+    "sentence-transformers>=2.2.0",
+    "fastapi>=0.100",
+    "uvicorn[standard]>=0.20",
+    "typer>=0.9",
+    "openai>=1.0.0",
+    "tiktoken>=0.4.0",
+    "anthropic>=0.20.0",
+    "google-genai>=1.14.0",
+    "mypy",
+    "ruff",
+    "black",
+    "python-hcl2>=7.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/cased/kit"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"kit.queries" = ["*/*.scm"]
+"kit.queries.typescript" = ["*.scm"] # Be explicit for subdirectories if needed, or use the above
+# Or, more broadly if queries are directly under 'kit' package:
+# "kit" = ["queries/*/*.scm"] 
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests"
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+
+
+[project.scripts]
+kit = "kit.cli:app"
+
+[project.optional-dependencies]
+dev = [
+    "build", # build wheels
+    "twine",  # publish to PyPI
+]
