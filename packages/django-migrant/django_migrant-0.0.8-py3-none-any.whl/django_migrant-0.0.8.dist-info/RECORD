@@ -1,0 +1,13 @@
+django_migrant/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_migrant/__main__.py,sha256=Dhl8S_543rPROVnHXqjzghtdMi8IJf35pDya4SOMgz0,320
+django_migrant/hook_templates/header,sha256=vv7IVU7b5GdN6wj3F7u9VV9oq7bAR8hcYBt_mewlOJs,34
+django_migrant/hook_templates/post-checkout,sha256=iBNNLpKlDTdvcxfszJrmz-M__QzxzVKPUOdhevrY4gQ,564
+django_migrant/hook_templates/pre-rebase,sha256=iOsiwO3T72sz6SMRGfPcZlUYBBLg6lXljldAx6PbGS8,91
+django_migrant/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_migrant/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_migrant/management/commands/migrant.py,sha256=vbo-3Cwi6BRSF5GQz2Nbh68w_e_-Itr2GbHy1xgvf5o,4650
+django_migrant-0.0.8.dist-info/licenses/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+django_migrant-0.0.8.dist-info/METADATA,sha256=RVa4ZpKqLEKQrTEH2pL1iAspAcw0yIVLC7Uguv_BS6g,3569
+django_migrant-0.0.8.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+django_migrant-0.0.8.dist-info/top_level.txt,sha256=LZeIIaJcIz4XKaWkiPHCfhXh9EkFMYj_L0EaxCAyZRY,15
+django_migrant-0.0.8.dist-info/RECORD,,

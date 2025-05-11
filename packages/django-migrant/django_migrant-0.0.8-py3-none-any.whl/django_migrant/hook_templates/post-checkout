@@ -1,0 +1,19 @@
+
+
+##### START django_migrant #####
+# The post-checkout hook receives previous HEAD, current HEAD and a flag that
+# indicates if the checkout is branch or file.
+is_branch_checkout=$3
+
+# If we're rebasing then don't try to migrate.
+if [ "$(cat .migrant)" = "REBASE" ]; then
+    is_rebase=1
+    echo "" > .migrant
+else is_rebase=0
+fi
+
+# $1 (previous) and $2 (current) will be equal when checking out a new branch.
+if [ "$is_rebase" -eq 0 ] && [ "$is_branch_checkout" -eq 1 ] && [ "$1" != "$2" ]; then
+    ./manage.py migrant migrate
+fi
+##### END django_migrant #####
