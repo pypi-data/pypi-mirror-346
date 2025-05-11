@@ -1,0 +1,5 @@
+[console_scripts]
+juvio-kernel-launcher = juvio.kernel_launcher:main
+
+[jupyter_server.extensions]
+juvio = juvio:_load_jupyter_server_extension
