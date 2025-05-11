@@ -1,0 +1,9 @@
+[project]
+name = "aionrails"
+version = "0.2.2"
+description = "A meta package for AI-on-Rails: A Python library for prototyping and publishing AI applications with guardrails."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aor>=0.2.2",
+]
