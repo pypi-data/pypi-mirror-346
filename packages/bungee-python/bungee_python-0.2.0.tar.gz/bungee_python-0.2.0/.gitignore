@@ -1,0 +1,9 @@
+
+# pixi environments
+.pixi
+*.egg-info
+build
+dist
+.pytest_cache
+__pycache__
+output
