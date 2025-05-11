@@ -1,0 +1,16 @@
+loguru
+numpy==1.26.4
+matplotlib==3.9.2
+xarray==2024.9.0
+toml==0.10.2
+tqdm==4.66.5
+timezonefinder==6.5.5
+scipy==1.14.1
+SciencePlots==2.1.1
+pysolar==0.11
+pytz==2024.2
+requests==2.32.3
+opencv-python
+nrlmsise00==0.1.2
+scikit-image==0.24.0
+scikit-learn==1.5.2
