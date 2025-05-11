@@ -1,0 +1,2 @@
+[pytest11]
+mark_filter = mark_filter.plugin
