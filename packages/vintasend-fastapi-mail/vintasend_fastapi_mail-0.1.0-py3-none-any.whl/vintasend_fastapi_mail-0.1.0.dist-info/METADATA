@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: vintasend-fastapi-mail
+Version: 0.1.0
+Summary: FastAPI Mail adapter for VintaSend
+License: MIT
+Author: Hugo bessa
+Author-email: hugo@vinta.com.br
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: fastapi-mail (>=1.4.2,<2.0.0)
+Requires-Dist: vintasend
+Description-Content-Type: text/markdown
+
+# VintaSend FastAPI Mail
+
+FastAPI Mail adapter for VintaSend

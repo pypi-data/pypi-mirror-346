@@ -1,0 +1,10 @@
+vintasend_fastapi_mail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_fastapi_mail/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_fastapi_mail/services/notification_adapters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_fastapi_mail/services/notification_adapters/fastapi_mail.py,sha256=KnOLlOGdkaCKcIe9jmxeUoa0Xao1u-UKWuYKU4eOy7Q,2398
+vintasend_fastapi_mail/services/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vintasend_fastapi_mail/services/tests/test_adapters.py,sha256=vKG0oTC5Rg8GJVflXqObHIlv5m-DTRBe_Z3WbbQDTkM,4420
+vintasend_fastapi_mail-0.1.0.dist-info/LICENSE.txt,sha256=gydDNz2DGPNG5y5sRlrez6aqjYX3xgphqdCHwqw1F-k,1104
+vintasend_fastapi_mail-0.1.0.dist-info/METADATA,sha256=RJtQbxNCSMK5CJOMEFMSI04MvN8SQlj2miHzzY6ePh8,628
+vintasend_fastapi_mail-0.1.0.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+vintasend_fastapi_mail-0.1.0.dist-info/RECORD,,
