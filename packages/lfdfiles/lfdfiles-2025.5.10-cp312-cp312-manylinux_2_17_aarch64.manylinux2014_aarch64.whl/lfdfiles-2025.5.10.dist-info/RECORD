@@ -1,0 +1,13 @@
+lfdfiles/__init__.py,sha256=BVSoy5QJ-K3J3BDheKithJpoWQ8HJnUQwh3SNUYjjtQ,400
+lfdfiles/__main__.py,sha256=8WNtlWGqhQRUOcfE2gl3ACruNJUSeIrnyk-9IO6P6FM,135
+lfdfiles/_lfdfiles.cpython-312-aarch64-linux-gnu.so,sha256=WxSvbEIkHD2k4M5EUmPsB-dL6I8N0K6gpYrYrOtFvdk,3936529
+lfdfiles/fbd2b64.py,sha256=TgxbY7eSP-K-vzzBPYg8pn5fqIlt-mjhNbCIEgnjkQ4,6535
+lfdfiles/lfdfiles.py,sha256=vMToWP3rt1UJoKYjL2C3F4jaGV7xSEkDh6aujyUq_O0,234557
+lfdfiles/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lfdfiles.libs/libgomp-d22c30c5.so.1.0.0,sha256=BTGH6is2VDtn03gF_z6BiPXVdnSzH2mP6Hz-IiGkPtk,274665
+lfdfiles-2025.5.10.dist-info/METADATA,sha256=6rhKegJeDFa2p36nBF3U0QHoTWpZBnKKWExs8MNSqCg,8219
+lfdfiles-2025.5.10.dist-info/WHEEL,sha256=FDXJ-RcfxAULCvJM3u0UV7PBL-oTwDB75rMM--ile6g,153
+lfdfiles-2025.5.10.dist-info/entry_points.txt,sha256=t6geUirHxKXaV-Ii9YZ4pUxxJzcrFhbsNMlJy3MRpLQ,84
+lfdfiles-2025.5.10.dist-info/top_level.txt,sha256=57ed1wWaI26xMH0KgmUMy6MefsknRrCIetAITP7OtBU,9
+lfdfiles-2025.5.10.dist-info/RECORD,,
+lfdfiles-2025.5.10.dist-info/licenses/LICENSE,sha256=goK8I3gRpvvzDrBE1gWZVio91RrSCHVMCMfegZ_I6kQ,1559
