@@ -1,0 +1,7 @@
+simple_logger/__init__.py,sha256=Yj1sPnkgNERN9puYfUXg6B_s66CcpcmYcBFsxUwHfAY,491
+simple_logger/context.py,sha256=ORl1NIZuPt7VpYMUN-m_uEX6vmIXaZ6wYooJGP68hEQ,6647
+simple_logger/middleware.py,sha256=xru4HJNLhzHycVtzdE2NoMIMyHGhSdIt6cqdv5S_42M,8586
+pyotel-0.1.1.dist-info/METADATA,sha256=MHnETY7yDcKcjRhflASyUeULLACS-zVps2ANrwx0Ae8,775
+pyotel-0.1.1.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+pyotel-0.1.1.dist-info/top_level.txt,sha256=eSPiDcVmzwPNT__ua_PttcZKccGTcWCdFQO9pC4hwt4,14
+pyotel-0.1.1.dist-info/RECORD,,
