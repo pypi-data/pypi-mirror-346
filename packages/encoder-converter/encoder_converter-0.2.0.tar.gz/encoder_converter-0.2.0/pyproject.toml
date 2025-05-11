@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "encoder-converter"
+version = "0.2.0"
+description = "Convert huggingface encoder to onnx format."
+authors = ["aveitsme <aveitsme@gmail.com>"]
+packages = [{ include = "encoder_converter" }]
+repository = "https://github.com/AVEitsme/encoder-converter"
+homepage = "https://github.com/AVEitsme/encoder-converter"
+readme = "README.md"
+
+[tool.poetry.scripts]
+convertencoder = "encoder_converter.cli:main"
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.13"
+torch = ">=2.0.0, <3.0.0"
+transformers = ">=4.0.0, <5.0.0"
+tokenizers = ">=0.2.0, <1.0.0"
+onnx = ">=1.0.0, <2.0.0"
+onnxruntime = ">=1.0.0, <2.0.0"
+openvino = "^2025.1.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
