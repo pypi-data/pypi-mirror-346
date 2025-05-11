@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "endpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "inputs",
+          "outputs",
+          "url"
+        ]
+      }
+    }
+  },
+  "required": [
+    "name",
+    "desc",
+    "version",
+    "endpoints"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "required": [
+    "name",
+    "desc",
+    "endpoints"
+  ]
+}
