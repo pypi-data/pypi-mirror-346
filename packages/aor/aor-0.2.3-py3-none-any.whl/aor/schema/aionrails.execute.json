@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "endpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "uuid"
+        ]
+      }
+    }
+  },
+  "required": [
+    "uuid"
+  ]
+}

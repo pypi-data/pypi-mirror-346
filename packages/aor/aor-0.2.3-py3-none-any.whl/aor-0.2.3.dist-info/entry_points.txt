@@ -1,0 +1,2 @@
+[console_scripts]
+aor = aor.cli:cli
