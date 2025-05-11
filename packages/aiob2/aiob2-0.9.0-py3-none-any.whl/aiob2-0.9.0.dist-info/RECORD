@@ -1,0 +1,16 @@
+aiob2/__init__.py,sha256=DYCfyr8v5glqIwO5WayU1CweUiHbdL_xzC4uVQSA1dc,572
+aiob2/bucket.py,sha256=lICI70xetSgQo9oxiUDrVpn_3HcnZnajdmZepwtvGkg,15675
+aiob2/errors.py,sha256=1-ljQb7dEqzgacFFAofCKZdFl7htkd_EnSKtlhzDlyA,2160
+aiob2/file.py,sha256=iR_qz7IVsnuJWeXDFHftWt3VfN3nxm7gsp6xxcpIJyE,7760
+aiob2/http.py,sha256=dCgtFfgyjr41JRQYycvM0N0kEMaD_dqFXXoFRh4mlsE,32782
+aiob2/models/__init__.py,sha256=jfdrTYYmELeYFlqQTtgtllgw5brX0DiuAgcQC-1QLQI,169
+aiob2/models/account.py,sha256=TrMHwDD5ZhAdtgbp8dSmZBn5FFcA6X1eDEBLJnYh7EE,478
+aiob2/models/archetypes.py,sha256=3-PduO1xoV9cSkasQUYYG7kdLqvPt3A91d-KBSOJ0a4,169
+aiob2/models/bucket.py,sha256=O-fMZoyaf3FEBh0_Y1ENX4bbmK-01fVwRCgqqNlWPpo,3755
+aiob2/models/file.py,sha256=9u2QysfcW7RfxkCni1pHqYyyRDFo65OjLGhyz3dha08,9313
+aiob2/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiob2/utils.py,sha256=R5fJDT3H2E75ENkjW6-KBZvLZBWNBX70_kOOFc3U0x4,5617
+aiob2-0.9.0.dist-info/LICENSE,sha256=nO2fNyO_vltVDI4kUU9V1QKiMVRHiKsU65QlZz_m7ZU,1063
+aiob2-0.9.0.dist-info/METADATA,sha256=M7g4dgVMXJ2fx8c6LHAcjglKbIdfYqUFADYqokfmK2Y,3653
+aiob2-0.9.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+aiob2-0.9.0.dist-info/RECORD,,
