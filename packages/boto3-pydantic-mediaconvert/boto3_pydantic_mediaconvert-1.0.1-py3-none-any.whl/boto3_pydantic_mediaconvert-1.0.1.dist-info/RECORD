@@ -1,0 +1,7 @@
+boto3_pydantic_mediaconvert/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_mediaconvert/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_mediaconvert/mediaconvert_classes.py,sha256=Rk7W_zdhGi5HjLDq1I5itGK9ejYW3RBFLNOd4DsWorc,111263
+boto3_pydantic_mediaconvert/mediaconvert_constants.py,sha256=n-cxn9GnXU1yKtPEYmHEsh8mkgJUfcC-FC6RiKGZuLQ,43031
+boto3_pydantic_mediaconvert-1.0.1.dist-info/METADATA,sha256=lJZp87PSnlBjfgRA-Gu__5FHz1GSqC-8pdnOMpSZ2SQ,1427
+boto3_pydantic_mediaconvert-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_mediaconvert-1.0.1.dist-info/RECORD,,
