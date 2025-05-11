@@ -1,0 +1,146 @@
+# Swagger schema for the AI-on-Rails platform
+
+openapi: 3.0.0
+info:
+  title: AI-on-Rails API
+  version: 1.0.0
+  description: Publish, discover and call AI Agents through the AI-on-Rails platform
+  contact:
+    name: AI-on-Rails
+    url: https://aionrails.com
+    email: support@aionrails.com
+
+servers:
+  - url: https://{base}
+    description: The production server
+    variables:
+      base:
+        default: j64up4hf4i.execute-api.us-west-2.amazonaws.com/production
+        description: Use your SaaS URL, if applicable
+
+paths:
+  /login:
+    post:
+      summary: Login to the AI-on-Rails platform
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: The login was successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+  /publish/create-app:
+    post:
+      summary: Publish a new project or an updated version of an existing project
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the project
+                desc:
+                  type: string
+                  description: The description of the project
+                endpoints:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        description: The name of the endpoint
+                      desc:
+                        type: string
+                        description: The description of the endpoint
+                      type:
+                        type: string
+                        enum:
+                          - basic
+                          - a2a
+                          - pydantic
+                        description: The type of the endpoint
+                      showGraph:
+                        type: boolean
+                        description: Whether to display the graph of the inner workings of the endpoint in the UI
+                      path:
+                        type: string
+                        description: The relative path to the file that implements the endpoint (to be deployed, if applicable)
+                      input:
+                        oneOf:
+                          - type: string
+                            description: The description of the only input of this basic endpoint
+                          - type: array
+                            description: The detailed description of the inputs of endpoints other than the basic type
+                            items:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                  description: The name of this input
+                                type:
+                                  type: string
+                                  enum:
+                                    - text
+                                  description: The type of this input
+                                size:
+                                  type: string
+                                  description: The number of lines suggested for this input field
+                                desc:
+                                  type: string
+                                  description: The description of this input
+                              required:
+                                - desc
+                      output:
+                        oneOf:
+                          - type: string
+                            description: The description of the only output of this basic endpoint
+                          - type: array
+                            description: The detailed description of the outputs of endpoints other than the basic type
+                            items:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                  description: The name of this output
+                                type:
+                                  type: string
+                                  enum:
+                                    - text
+                                  description: The type of this output
+                                size:
+                                  type: string
+                                  description: The number of lines suggested for this output field
+                                desc:
+                                  type: string
+                                  description: The description of this output
+                              required:
+                                - desc
+                    required:
+                      - name
+                      - desc
+                      - type
+                      - input
+                      - output
+              required:
+                - name
+                - desc
+                - endpoints
+      responses:
+        "200":
+          description: The project was published successfully

@@ -1,0 +1,67 @@
+[project]
+name = "aor"
+version = "0.2.3"
+description = "AI-on-Rails: A Python library for prototyping and publishing AI applications with guardrails."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "boto3>=1.37.32",
+    "click>=8.1.8",
+    "fastjsonschema>=2.21.1",
+    "poetry>=2.1.2",
+    "requests>=2.32.3",
+    "requests-toolbelt>=1.0.0",
+    "rich-click>=1.8.8",
+    "ruamel-yaml>=0.18.10",
+    "fastapi>=0.95.0",
+    "uvicorn>=0.21.0",
+    "pydantic>=2.0.0",
+    "langgraph>=0.0.26",
+    "anthropic>=0.8.0",
+    "jinja2>=3.1.6,<4.0.0",
+    "aiohttp>=3.8.0",
+    "typing-extensions>=4.5.0",
+    "langchain>=0.3.24,<0.4.0",
+    "langchain-anthropic>=0.3.12,<0.4.0",
+    "rich>=13.6.0",
+    # "a2a_samples @ git+https://github.com/google/A2A#subdirectory=samples/python",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"aor" = ["schema/*.json", "schema/*.yaml"]
+
+[project.urls]
+Homepage = "https://aionrails.com"
+
+[project.scripts]
+aor = "aor.cli:cli"
+
+[project.optional-dependencies]
+test = ["pytest>=8.3.5", "pytest-cov>=6.1.1"]
+dev = [
+    "black>=25.1.0",
+    "isort>=6.0.1",
+    "ruff>=0.11.5",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1"
+]
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
+
+[tool.uv.sources]
+a2a-samples = { git = "https://github.com/google/A2A", subdirectory = "samples/python" }
+
