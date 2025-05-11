@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "claro"
+version = "0.1.0"
+description = ""
+authors = ["Jorge Roldan <roldanjrg@protonmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+claro = "claro.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = "^0.15.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

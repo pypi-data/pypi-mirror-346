@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: claro
+Version: 0.1.0
+Summary: 
+Author: Jorge Roldan
+Author-email: roldanjrg@protonmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: typer (>=0.15.3,<0.16.0)
+Description-Content-Type: text/markdown
+
+
