@@ -1,0 +1,3 @@
+[console_scripts]
+ondivi=ondivi.entry:main
+
