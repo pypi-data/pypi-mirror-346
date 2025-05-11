@@ -1,0 +1,13 @@
+scaffold_fastapi/__init__.py,sha256=RSjioF7hsGWaB5Q0zDik41fvhJxqb019bX5w_24rYlA,166
+scaffold_fastapi/cli.py,sha256=swf43onqpcEsyuS-n31eVArg2_3tpjdLdrQv9_FLRd4,6703
+scaffold_fastapi/generators/__init__.py,sha256=1SXLfwo7vs6SGSk0a2UdD4gXU-PBdoakRJcZ3_Csz2s,423
+scaffold_fastapi/generators/app.py,sha256=jVnJ6GnUUuO4jH9PjGuHyivfsyMEf-UHWepOo4C0Ie4,12523
+scaffold_fastapi/generators/celery.py,sha256=gNkRJh-GhzLySRKHaiRiTMax3xhKrhuEfc8xdku5Oj8,4581
+scaffold_fastapi/generators/docker.py,sha256=krtRzwRyFR9sD6zMDHxVAtL55v6lFvWsoAiv-8B_D9g,7638
+scaffold_fastapi/generators/env.py,sha256=JMQtwDsmaL8iMZSSUw0Gub2jDb0mbebP3e3BsL8U54s,2122
+scaffold_fastapi/generators/terraform.py,sha256=qrC2Y4022ffq6uy7CkcHDECCezfpy89qble9B1yYyQE,16508
+scaffold_fastapi-0.1.0.dist-info/METADATA,sha256=TXHCLQhqlSRkdgCxMA0uCDUocIfvBgyDQbPK8QM8M84,2924
+scaffold_fastapi-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+scaffold_fastapi-0.1.0.dist-info/entry_points.txt,sha256=Hnnsr6xqqWBZPMxqLNsn3xiIAHwnfH1VI-izeRgVcmo,62
+scaffold_fastapi-0.1.0.dist-info/licenses/LICENSE,sha256=UtWDM6w7nMyyFqRyOZnsYCr408jfBPWGJGVXAx8pIKM,1065
+scaffold_fastapi-0.1.0.dist-info/RECORD,,
