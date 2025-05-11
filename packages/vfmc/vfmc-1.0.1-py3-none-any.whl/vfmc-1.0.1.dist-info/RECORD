@@ -1,0 +1,12 @@
+vfmc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vfmc/app.py,sha256=fCWkhQpDa-shBcnZ2s6EsPccQ4iD3oQJQ51BcxxLCA4,48298
+vfmc/attempt.py,sha256=XKKVqyvzc7tOzX_XdQQjrWxaSLz6Jha2KBFz3xCm5r0,14818
+vfmc/palette.py,sha256=74hoOiWzFoTMBr0wfPAZZmKbWK2PXAOAyxZPOPV0xGg,3220
+vfmc/prefs.py,sha256=a5qlFjuF_Ib-npih8Lz9Bn-CjkoEgo_qD5rIozyjpdU,15373
+vfmc/viz.py,sha256=K-qAEgPgXG6zjv0upi9qHF8cj0w-atb5WbWbI3rLILI,13108
+vfmc-1.0.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+vfmc-1.0.1.dist-info/METADATA,sha256=wrx1DQQmpM0dLglXZU7GuuXjY66PVtpkmGl03VQVm04,15156
+vfmc-1.0.1.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+vfmc-1.0.1.dist-info/entry_points.txt,sha256=F3nqoRAj0hla43UwBFzP5_vEk1e9gnsrS-JQgQwsZjA,39
+vfmc-1.0.1.dist-info/top_level.txt,sha256=alPVm8GIHDN-vBAMIgoARynrttp1FCIO8v20zkioMyc,5
+vfmc-1.0.1.dist-info/RECORD,,
