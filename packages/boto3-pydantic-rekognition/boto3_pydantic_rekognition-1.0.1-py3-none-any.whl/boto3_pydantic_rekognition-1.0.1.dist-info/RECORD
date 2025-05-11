@@ -1,0 +1,7 @@
+boto3_pydantic_rekognition/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_rekognition/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_rekognition/rekognition_classes.py,sha256=qF1SX9aG4KID5IcnlcCGg6rlMytwnXWU6FlVMM6M4uA,54565
+boto3_pydantic_rekognition/rekognition_constants.py,sha256=o_oR7QbFTl6yF6wGXBdzx4vi_hvqOKGx4Ftx85P4cyw,12188
+boto3_pydantic_rekognition-1.0.1.dist-info/METADATA,sha256=eQn6QDc9EZNAuTM_hRcwd6iwUYpnpn_0xel_ZfmnORY,1422
+boto3_pydantic_rekognition-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_rekognition-1.0.1.dist-info/RECORD,,
