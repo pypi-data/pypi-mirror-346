@@ -1,0 +1,167 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm>=6.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mixin-client"
+description = "A Python client for Mixin Network"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "Your Name", email = "your.email@example.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    # "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests>=2.25.1",
+    "websockets>=10.0",
+    "cryptography>=41.0.0",
+    "pydantic>=2.0.0",
+    "typing-extensions>=4.0.0",
+]
+# 使用 dynamic version 由 setuptools_scm 管理
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/mixin-client"
+Documentation = "https://github.com/yourusername/mixin-client#readme"
+Repository = "https://github.com/yourusername/mixin-client.git"
+Issues = "https://github.com/yourusername/mixin-client/issues"
+
+[tool.setuptools]
+packages = ["mixin_client"]
+
+# setuptools_scm 配置，从 tag 读取版本
+[tool.setuptools_scm]
+write_to = "mixin_client/_version.py"
+tag_regex = "^v(\\d+\\.\\d+\\.\\d+)$"
+fallback_version = "0.1.0"
+version_scheme = "post-release"
+local_scheme = "no-local-version"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mixin_client"]
+
+# semantic-release 配置，禁止写入版本到文件，只负责创建 tag 和 release
+[tool.semantic_release]
+version_source = "tag"
+commit_version_number = false    # 不写入版本到文件
+
+[tool.semantic_release.publish]
+repository = "github"
+dist_glob_patterns = ["dist/*"]
+upload_to_vcs_release = true
+upload_to_pypi = false    # 禁用 semantic-release 发布 PyPI，由 gh-action-pypi-publish 负责
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v"
+
+[tool.coverage.run]
+source = ["mixin_client"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "pass",
+    "raise ImportError",
+]
+
+[tool.ruff]
+# 启用 Ruff 格式化工具
+target-version = "py39"
+line-length = 88
+indent-width = 4
+
+# 排除目录和文件
+exclude = [
+    ".git",
+    ".ruff_cache",
+    ".venv",
+    "venv",
+    "__pycache__",
+    "dist",
+    "build",
+]
+
+# 自动修复(格式化)时的行为
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+# linter 配置
+[tool.ruff.lint]
+# 默认开启的规则
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions 
+    "RET", # flake8-return
+    "SIM", # flake8-simplify
+    "ARG", # flake8-unused-arguments
+]
+# 忽略的规则
+ignore = [
+    "E203",  # 切片周围的空格 (与 black 冲突)
+    "E501",  # 行长度超过限制 (由 black 处理)
+]
+
+# 允许自动修复所有被选中的规则
+fixable = ["ALL"]
+unfixable = []
+
+# isort 相关配置
+[tool.ruff.lint.isort]
+known-first-party = ["mixin_client"]
+
+# pyupgrade 相关配置
+[tool.ruff.lint.pyupgrade]
+# 要求使用 Python 3.9+ 特性
+keep-runtime-typing = true
+
+# 命名规则相关配置
+[tool.ruff.lint.pep8-naming]
+# 允许 setUp, tearDown 等测试方法名
+classmethod-decorators = ["classmethod", "validator", "root_validator"]
+
+# 每个文件最多修复数量的错误
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ARG001", "S101"]  # 测试文件允许使用 assert
