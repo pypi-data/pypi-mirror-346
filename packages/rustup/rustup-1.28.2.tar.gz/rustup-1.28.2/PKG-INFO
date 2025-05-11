@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: rustup
+Version: 1.28.2
+Summary: rustup distribution for PyPI
+Author: konstin
+Author-email: konstin <konstin@mailbox.org>
+License-Expression: MIT OR Apache-2.0
+Requires-Dist: httpx>=0.28.1,<0.29.0
+Requires-Dist: tqdm>=4.67.1,<5.0.0
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# rustup-pypi
+
+Unofficial [rustup](https://rustup.rs/) distribution for PyPI.
+
+If you are a rust(up) team member and interested in this package, please DM me.
