@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: amap-mcp
+Version: 0.0.3
+Summary: AMap MCP Server
+License: MIT License
+        
+        Copyright (c) 2025 Mobvoi Inc.
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: amap,mcp,query-weather
+Requires-Python: >=3.10
+Requires-Dist: fastapi==0.109.2
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: pydantic>=2.6.1
+Requires-Dist: pytest>=8.0.0
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: requests>=2.31.0
+Requires-Dist: uvicorn==0.27.1
+Provides-Extra: dev
+Requires-Dist: build>=1.0.3; extra == 'dev'
+Requires-Dist: fastmcp==0.4.1; extra == 'dev'
+Requires-Dist: pre-commit==3.6.2; extra == 'dev'
+Requires-Dist: pytest-cov==4.1.0; extra == 'dev'
+Requires-Dist: pytest==8.0.0; extra == 'dev'
+Requires-Dist: ruff==0.3.0; extra == 'dev'
+Requires-Dist: twine==6.1.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+<p align="center">
+  Non-official AMap <a href="https://github.com/modelcontextprotocol">Model Context Protocol (MCP)</a> server that enables interaction with AMap powerful location related service. You can use in the following MCP clients like <a href="https://www.cursor.so">Cursor</a>, <a href="https://www.anthropic.com/claude">Claude Desktop</a>, <a href="https://cline.bot/">Cline</a> </a>, <a href="https://windsurf.com/editor">Windsurf</a> and other Client.
+</p>
+
+## Prerequisite
+
+1. python 3.10+;
+2. Get your AMAP_KEY from [AMAP open platform](https://console.amap.com/dev/key/app).
+3. Install `uv` (Python package manager), install with `pip install uv` or see the `uv` [repo](https://github.com/astral-sh/uv) for additional install methods.
+
+
