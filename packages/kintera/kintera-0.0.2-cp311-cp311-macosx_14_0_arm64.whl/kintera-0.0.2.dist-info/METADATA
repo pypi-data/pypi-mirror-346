@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: kintera
+Version: 0.0.2
+Summary: Mordern Photochemistry Library
+Home-page: https://github.com/chengcli/kintera
+Author: Cheng Li
+Author-email: chengcli@umich.edu
+License: MIT
+Project-URL: Documentation, https://github.com/chengcli/kintera/
+Project-URL: Source, https://github.com/chengcli/kintera/src
+Project-URL: Tracker, https://github.com/chengcli/kintera/issues
+Keywords: atmosphere; photochemistry; kinetics
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: cmake<=3.30
+Requires-Dist: torch>=2.7.0
+Dynamic: license-file
