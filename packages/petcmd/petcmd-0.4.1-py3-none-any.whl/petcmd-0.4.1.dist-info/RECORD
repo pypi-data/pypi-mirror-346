@@ -1,0 +1,13 @@
+petcmd/__init__.py,sha256=uRAFRMHmS8r47N6b8gwhCkfEVLrxYsVaaaBzZn8gmms,247
+petcmd/argparser.py,sha256=Pt5uJcUQW74J0R-fTvygrSVpSa5g03lIdk68ujlIgZA,8337
+petcmd/command.py,sha256=B693S84HbaLX8y3RB4rGo5Ow8cB2s5gU669HjhNHMEM,947
+petcmd/commander.py,sha256=N292Ev8aiSJlqV3ZyPg7vwRfoJxFupkf0XHWvWB0Qwc,4959
+petcmd/exceptions.py,sha256=6G62hkQ9TU5i4-Vsm7415PAC9wSHV9HeItHKMJRL7fc,86
+petcmd/interface.py,sha256=nJc8Jf-g3aTsO1WHyy95HfNCpoaUG6fIeBwm5CMt1BQ,4883
+petcmd/single_command.py,sha256=4Vcq3oiMABODKHxjcHV5hiVhUjzM0IQ5gXl52qIdw4M,1255
+petcmd/utils.py,sha256=b-hnSfL3XmuRN9opAYOBfUIbGs2uSigCOumxnlsbkE0,1786
+petcmd-0.4.1.dist-info/licenses/LICENSE,sha256=VG7J2qOUep8UKDcvYdBsySfJQXkXLTVM7dxsA0o9ky0,1063
+petcmd-0.4.1.dist-info/METADATA,sha256=JqJ_mgJbIWtjNABUBmRyYpnwXBCKmMWflhtqdiJX344,1688
+petcmd-0.4.1.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+petcmd-0.4.1.dist-info/top_level.txt,sha256=L_TWtTOCRc_4rGT7icgtJz2Mgs3MFBthcujwWYT6z68,7
+petcmd-0.4.1.dist-info/RECORD,,
