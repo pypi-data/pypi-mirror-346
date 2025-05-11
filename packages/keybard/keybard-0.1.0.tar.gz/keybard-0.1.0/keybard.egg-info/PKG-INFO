@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: keybard
+Version: 0.1.0
+Summary: Librairie Python pour affichage ASCII, son, et mises à jour auto.
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# mon_projet
+
+Une bibliothÃ¨que Python simple qui permet :
+
+- Dâ€™afficher un dessin ASCII.
+- De jouer un son (MP3).
+- De vÃ©rifier et forcer une mise Ã  jour automatique de la bibliothÃ¨que.
+
+## Installation
+
+```bash
+pip install keybard

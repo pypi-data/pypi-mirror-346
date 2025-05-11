@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+keybard/__init__.py
+keybard/center.py
+keybard.egg-info/PKG-INFO
+keybard.egg-info/SOURCES.txt
+keybard.egg-info/dependency_links.txt
+keybard.egg-info/requires.txt
+keybard.egg-info/top_level.txt
