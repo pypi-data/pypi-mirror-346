@@ -1,0 +1,76 @@
+{
+    "graph": {"id": "integrate"},
+    "nodes": [
+        {
+            "id": "read_slice",
+            "task_type": "class",
+            "task_identifier": "ewoksbm29.tasks.read.ReadScanDataSlice"
+        },
+        {
+            "id": "integrate_slice",
+            "task_type": "class",
+            "task_identifier": "ewoksbm29.tasks.integrate.DahuIntegrate"
+        },
+        {
+            "id": "accumulate_results",
+            "task_type": "class",
+            "task_identifier": "ewoksbm29.tasks.results.AccumulateDahuJobResults"
+        }
+    ],
+    "links": [
+        {
+            "source": "read_slice",
+            "target": "read_slice",
+            "data_mapping": [
+                {
+                    "source_output": "next_lima_file_index",
+                    "target_input": "lima_file_index"
+                }
+            ],
+            "conditions": [
+                {
+                    "source_output": "has_data",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "source": "read_slice",
+            "target": "integrate_slice",
+            "data_mapping": [
+                {
+                    "source_output": "scan_data_slice",
+                    "target_input": "scan_data_slice"
+                },
+                {
+                    "source_output": "lima_file_index",
+                    "target_input": "dahu_job_index"
+                }
+            ],
+            "conditions": [
+                {
+                    "source_output": "has_data",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "source": "integrate_slice",
+            "target": "accumulate_results",
+            "data_mapping": [
+                {
+                    "source_output": "dahu_job_index",
+                    "target_input": "dahu_job_index"
+                },
+                {
+                    "source_output": "dahu_job_id",
+                    "target_input": "dahu_job_id"
+                },
+                {
+                    "source_output": "dahu_result",
+                    "target_input": "dahu_result"
+                }
+            ]
+        }
+    ]
+}

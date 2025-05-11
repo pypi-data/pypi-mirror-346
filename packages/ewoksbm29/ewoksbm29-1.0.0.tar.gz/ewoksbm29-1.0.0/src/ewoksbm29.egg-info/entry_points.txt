@@ -1,0 +1,2 @@
+[ewoks.tasks.class]
+ewoksbm29.tasks.* = ewoksbm29

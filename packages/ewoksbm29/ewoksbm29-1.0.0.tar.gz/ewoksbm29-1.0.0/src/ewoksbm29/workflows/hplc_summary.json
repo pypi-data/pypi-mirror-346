@@ -1,0 +1,35 @@
+{
+    "graph": {"id": "hplc summary"},
+    "nodes": [
+        {
+            "id": "hplc_summary",
+            "task_type": "class",
+            "task_identifier": "ewoksbm29.tasks.hplc_summary.DahuHplcSummary"
+        },
+        {
+            "id": "accumulate_results",
+            "task_type": "class",
+            "task_identifier": "ewoksbm29.tasks.results.AccumulateDahuJobResults"
+        }
+    ],
+    "links": [
+        {
+            "source": "hplc_summary",
+            "target": "accumulate_results",
+            "data_mapping": [
+                {
+                    "source_output": "dahu_job_index",
+                    "target_input": "dahu_job_index"
+                },
+                {
+                    "source_output": "dahu_job_id",
+                    "target_input": "dahu_job_id"
+                },
+                {
+                    "source_output": "dahu_result",
+                    "target_input": "dahu_result"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ewoksbm29"
+version = "1.0.0"
+keywords = ["ewoks"]
+authors = [{ name = "ESRF", email = "dau-pydev@esrf.fr" }]
+description = "Data processing workflows for BM29"
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE.md" }
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "ewokscore",
+    "packaging"
+]
+
+[project.urls]
+Homepage = "https://gitlab.esrf.fr/workflow/ewoksapps/ewoksbm29/"
+Documentation = "https://ewoksbm29.readthedocs.io/"
+Repository = "https://gitlab.esrf.fr/workflow/ewoksapps/ewoksbm29/"
+Issues = "https://gitlab.esrf.fr/workflow/ewoksapps/ewoksbm29/issues"
+Changelog = "https://gitlab.esrf.fr/workflow/ewoksapps/ewoksbm29/-/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+saxs = [
+    "pydantic",
+    "ewoksppf",
+    "ewoksjob",
+    "silx",
+]
+online = [
+    "ewoksbm29[saxs]",
+    "blissdata>=1",
+    "redis-om !=1.0.0b0;python_version < '3.9'",  # https://github.com/redis/redis-om-python/issues/693
+    "pytango",
+]
+test = [
+    "ewoksbm29[online]",
+    "pytest >=7"
+]
+dev = [
+    "ewoksbm29[test]",
+    "black >=25",
+    "flake8 >=4",
+]
+doc = [
+    "ewoksbm29[test]",
+    "sphinx >=4.5",
+    "sphinx-autodoc-typehints >=1.16",
+    "pydata-sphinx-theme",
+    "ewokssphinx"
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.coverage.run]
+omit = ['*/tests/*']
+
+[project.entry-points."ewoks.tasks.class"]
+"ewoksbm29.tasks.*" = "ewoksbm29"
+
+[tool.setuptools.package-data]
+"*" = ["workflows/*.json"]
+
+[tool.isort]
+profile = "black"
+force_single_line = true
