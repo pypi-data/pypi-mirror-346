@@ -1,0 +1,1 @@
+A MCP(Model Context Protocol) server to control instruments through VISA(Virtual Instrument Software Architecture) ethernet interface

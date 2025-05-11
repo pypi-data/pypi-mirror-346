@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: visacontrol
+Version: 0.1.0
+Summary: A MCP server to control instruments through visa
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.8.0
+Requires-Dist: pyvisa>=1.14.1
+Requires-Dist: pyvisa-py>=0.7.2
+
+A MCP(Model Context Protocol) server to control instruments through VISA(Virtual Instrument Software Architecture) ethernet interface
