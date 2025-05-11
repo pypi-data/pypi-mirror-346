@@ -1,0 +1,8 @@
+desto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+desto/_version.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+desto/app/sessions.py,sha256=4YPQuP_smTTkY4K9737s5WqrkZ0BuIF5il7dqK2Nk6w,4351
+desto/app/ui.py,sha256=UjnjpzyznkHQijX7FrYUX-ArpZFvEv6Hp5vqhzLtaZE,16747
+desto-0.0.1.dist-info/METADATA,sha256=8U8WDmWRQKfBMrN5NcjteMYnQ0kWnW3UBdNi2Ys2BUw,1500
+desto-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+desto-0.0.1.dist-info/licenses/LICENSE,sha256=ywEs-mEWvZR7gF65GnqLuBrlRFVwoAGBc1ZTfmzkRWc,1070
+desto-0.0.1.dist-info/RECORD,,
