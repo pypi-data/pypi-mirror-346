@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: paranoid-logy
+Version: 1.0.9
+Summary: Python Paranoid Logy SDK
+Home-page: http://pypi.paranoid.software/simple/paranoid-logy/
+Author: Paranoid Software
+Author-email: info@paranoid.software
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: requests
+
+# Paranoid Logy SDK
+
+The Paranoid Logy SDK is a Python library for logging activities and exceptions to a remote logging service. It provides a simple interface to trace application activities and exceptions with customizable tags and additional information.
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install paranoid_logy
+```
+
+## Usage
+
+To use the Paranoid Logy SDK, initialize the `Logy` class with a source, IP address, and service context, then call the `trace_activity` or `trace_exception` methods.
+
+### Example
+
+```python
+from paranoid_logy import Logy, LogyServiceContext
+
+# Configure the service context
+settings = {
+    'id': 'my-app',
+    'host': 'log-service.example.com',
+    'portNumber': 8080
+}
+context = LogyServiceContext(settings)
+
+# Initialize Logy
+logy = Logy(source='my-app', ip_address='192.168.1.1', context=context)
+
+# Trace an activity
+result = logy.trace_activity(
+    message='User logged in',
+    additional_info={'user_id': 123},
+    tags=['auth', 'info']
+)
+print(result.success)
+
+# Trace an exception
+try:
+    1 / 0
+except Exception as ex:
+    result = logy.trace_exception(
+        ex=ex,
+        additional_info={'operation': 'division'},
+        tags=['error', 'math']
+    )
+    print(result.success)
+```
+
+## Requirements
+
+- Python 3.6 or higher
+- `requests` library
+
+## License
+
+This project is licensed under the MIT License.
