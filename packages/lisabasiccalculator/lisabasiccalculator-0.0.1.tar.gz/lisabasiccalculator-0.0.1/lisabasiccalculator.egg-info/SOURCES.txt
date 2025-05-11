@@ -1,0 +1,8 @@
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+lisabasiccalculator.egg-info/PKG-INFO
+lisabasiccalculator.egg-info/SOURCES.txt
+lisabasiccalculator.egg-info/dependency_links.txt
+lisabasiccalculator.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+This is a simple and basic calculator written in Python. It allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division.
+You can install this calculator using pip

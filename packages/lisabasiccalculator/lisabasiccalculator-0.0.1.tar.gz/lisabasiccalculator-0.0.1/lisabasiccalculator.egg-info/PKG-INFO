@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: lisabasiccalculator
+Version: 0.0.1
+Summary: A very basic calculator
+Home-page: 
+Author: Joshua Lowe
+Author-email: lisakajula@gmail.com
+License: MIT
+Keywords: calculator
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+
+This is a simple and basic calculator written in Python. It allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division.
+You can install this calculator using pip
+
