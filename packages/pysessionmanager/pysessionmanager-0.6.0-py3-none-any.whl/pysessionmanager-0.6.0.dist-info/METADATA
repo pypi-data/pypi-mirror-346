@@ -1,0 +1,153 @@
+Metadata-Version: 2.2
+Name: pysessionmanager
+Version: 0.6.0
+Summary: A Python session management library with support for session timeouts, password-protected sessions, and persistent storage to files or databases. Suitable for web, GUI, and console applications. Provides functionality to create, update, delete, and validate sessions, with optional security and expiration controls. Ideal for managing user sessions in various types of Python projects.
+Author: Ahmad Al Dibo
+Author-email: ahmadaldibo212009@gmail.com
+License: MIT
+Keywords: session management,Python session manager,password protection,session expiration,TTL,persistent storage,CLI,web applications,Flask,Django,user authentication,security,session timeout,Python library,session handling,hashing,user sessions,authentication management,session protection,time-based expiration,persistent sessions,Python CLI tools,session control,session lifecycle,Python web apps,PyPI
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+Certainly! Below is a more detailed and comprehensive `README.md` for your **PySessionManager** library, which includes sections like installation, usage, features, and more.
+
+---
+
+# PySessionManager
+
+**PySessionManager** is an extensible session management library for Python, designed to work seamlessly with both command-line interface (CLI) and web applications. It provides an easy-to-use interface for managing sessions, including session creation, expiration (TTL), and optional password protection.
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage Example](#usage-example)
+* [Features](#features)
+* [Session Management](#session-management)
+* [Security Features](#security-features)
+* [Customization](#customization)
+* [Contributing](#contributing)
+* [License](#license)
+
+## Installation
+
+You can install **PySessionManager** via **pip**:
+
+```bash
+pip install pysessionmanager
+```
+
+## Usage Example
+
+Here is a simple usage example of how to create and manage sessions using **PySessionManager**:
+
+```python
+from pysessionmanager import SessionManager
+
+# Initialize the SessionManager
+sm = SessionManager()
+
+# Add a session for a user
+session_id = sm.add_session("user123")
+
+# Print the session ID and its status
+print("Session started with ID:", session_id)
+
+# Check if the session is active
+if sm.is_active(session_id):
+    print(f"Session {session_id} is active.")
+else:
+    print(f"Session {session_id} has expired.")
+```
+
+## Features
+
+* **Session Creation & Expiration**: Create and manage sessions with optional expiration based on time-to-live (TTL).
+* **Password Protection**: Secure sessions with password protection, which can be enabled or disabled.
+* **Flexible Storage**: Store sessions in files (JSON by default) or connect to a database for more advanced use cases.
+* **Cross-Platform**: Can be used in both CLI applications and web applications, such as with Flask or Django.
+* **Session Retrieval**: Easily retrieve session details by session ID or user ID.
+* **Session Removal**: Remove sessions manually or automatically based on expiration.
+
+## Session Management
+
+### Adding a Session
+
+You can add a session for a user with the `add_session()` method:
+
+```python
+session_id = sm.add_session("user123", duration_seconds=3600)
+```
+
+This will create a session with a 1-hour expiration (TTL).
+
+### Checking Active Sessions
+
+To check whether a session is still active, you can use `is_active()`:
+
+```python
+if sm.is_active(session_id):
+    print(f"Session {session_id} is active.")
+```
+
+### Session Expiration
+
+Sessions automatically expire based on the time-to-live (TTL) you set when creating the session. You can also manually remove a session with the `remove_session()` method:
+
+```python
+sm.remove_session(session_id)
+```
+
+## Security Features
+
+### Password-Protected Sessions
+
+You can protect sessions with a password. This prevents unauthorized access to session data. To enable protection, pass a password when creating the session:
+
+```python
+session_id = sm.add_session("user123", protected=True, password="securepassword")
+```
+
+To unlock a protected session, use the `unlock_session()` method:
+
+```python
+sm.unlock_session("user123", password="securepassword")
+```
+
+### Hashing Passwords
+
+For security reasons, passwords are **hashed** before being stored. The library uses **SHA-256 hashing** to ensure that the password is not stored in plaintext.
+
+## Customization
+
+**PySessionManager** can be customized to fit your applicationâ€™s needs. Here are some options:
+
+* **Session Timeout (TTL)**: You can specify the session duration when creating a session by adjusting the `duration_seconds` parameter.
+* **Custom Storage**: By default, sessions are stored in a JSON file. However, you can modify the storage method to store sessions in a database, cloud storage, or another system.
+* **Session Protection**: Enable or disable password protection for specific sessions based on your needs.
+
+## Contributing
+
+Contributions are welcome! If you have a feature request, bug report, or want to contribute code, feel free to open an issue or submit a pull request.
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and write tests if applicable.
+4. Open a pull request.
+
+## License
+
+**PySessionManager** is released under the MIT License.
+
