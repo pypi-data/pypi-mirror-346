@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/public_package_template/module.py
+src/public_package_template/nested/__init__.py
+src/public_package_template/nested/module.py
+src/yid_public_package_template.egg-info/PKG-INFO
+src/yid_public_package_template.egg-info/SOURCES.txt
+src/yid_public_package_template.egg-info/dependency_links.txt
+src/yid_public_package_template.egg-info/requires.txt
+src/yid_public_package_template.egg-info/top_level.txt
+tests/test_module.py
+tests/test_nested_module.py
