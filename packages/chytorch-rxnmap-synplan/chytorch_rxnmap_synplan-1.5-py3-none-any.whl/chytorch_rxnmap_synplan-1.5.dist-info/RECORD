@@ -1,0 +1,6 @@
+chytorch/zoo/rxnmap/__init__.py,sha256=5f5LyTuM9FsVJCcXzUiDl-O5WdNLdLtXjlB5TTVWeDI,1948
+chytorch/zoo/rxnmap/weights.pt,sha256=tVFMhOIZIBT9TppJsL8iuQ9Jm46h6sogwkh5T5g1kpY,84574673
+chytorch_rxnmap_synplan-1.5.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+chytorch_rxnmap_synplan-1.5.dist-info/METADATA,sha256=LxfbSWZ2pcDmzZWasm3AJFcK5BHop8GfqgVumva3t7s,2329
+chytorch_rxnmap_synplan-1.5.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+chytorch_rxnmap_synplan-1.5.dist-info/RECORD,,
