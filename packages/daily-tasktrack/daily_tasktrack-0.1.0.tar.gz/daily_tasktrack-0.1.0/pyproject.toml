@@ -1,0 +1,15 @@
+[project]
+name = "daily-tasktrack"
+version = "0.1.0"
+description = "Simple YAML task time tracker"
+authors = [{ name="Evgeni Roif", email="eugene@roifgroup.com" }]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = []
+
+[project.scripts]
+tasktrack = "task_tracker.cli:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
