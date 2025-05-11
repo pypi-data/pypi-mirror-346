@@ -1,0 +1,20 @@
+[build-system]
+requires = ["flit-core >=3.11, <4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "coherent.build"
+version = "0.32.1"
+description = "A zero-config Python project build backend"
+readme = "README.md"
+requires-python = ">= 3.9"
+dependencies = ["build", "git-fame", "importlib_resources; python_version < \"3.12\"", "jaraco.compat", "jaraco.functools", "more-itertools", "wheel", "python-gitlab", "jaraco.vcs", "packaging", "requests", "setuptools-scm", "jaraco.context", "pip-run", "coherent.deps", "importlib_metadata", "tomlkit"]
+classifiers = ["Development Status :: 4 - Beta", "Intended Audience :: Developers", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only"]
+license = "MIT"
+
+[[project.authors]]
+name = "Jason R. Coombs"
+email = "jaraco@jaraco.com"
+
+[project.urls]
+Source = "https://github.com/coherent-oss/coherent.build"

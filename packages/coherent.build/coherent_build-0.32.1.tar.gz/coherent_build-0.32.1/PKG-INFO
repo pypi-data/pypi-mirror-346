@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: coherent.build
+Version: 0.32.1
+Author-Email: "Jason R. Coombs" <jaraco@jaraco.com>
+Summary: A zero-config Python project build backend
+Requires-Python: >= 3.9
+Requires-Dist: build
+Requires-Dist: git-fame
+Requires-Dist: importlib_resources; python_version < "3.12"
+Requires-Dist: jaraco.compat
+Requires-Dist: jaraco.functools
+Requires-Dist: more-itertools
+Requires-Dist: wheel
+Requires-Dist: python-gitlab
+Requires-Dist: jaraco.vcs
+Requires-Dist: packaging
+Requires-Dist: requests
+Requires-Dist: setuptools-scm
+Requires-Dist: jaraco.context
+Requires-Dist: pip-run
+Requires-Dist: coherent.deps
+Requires-Dist: importlib_metadata
+Requires-Dist: tomlkit
+Provides-Extra: test
+Provides-Extra: doc
+Project-URL: Source, https://github.com/coherent-oss/coherent.build
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+License-Expression: MIT
+
+[![](https://img.shields.io/pypi/v/coherent.build)](https://pypi.org/project/coherent.build)
+
+![](https://img.shields.io/pypi/pyversions/coherent.build)
+
+[![](https://github.com/coherent-oss/coherent.build/actions/workflows/main.yml/badge.svg)](https://github.com/coherent-oss/coherent.build/actions?query=workflow%3A%22tests%22)
+
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
+[![Coherent Software Development System](https://img.shields.io/badge/coherent%20system-informational)](https://github.com/coherent-oss/system)
+
+A PEP 517 backend for the [Coherent Software Development System](https://github.com/coherent-oss/system/blob/main/README.md).
+
+Put your source in a repo and then build it with:
+
+```
+python -m coherent.build
+```
