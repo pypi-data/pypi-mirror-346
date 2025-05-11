@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "clideq"
+version = "0.1.1"
+description = "clideq CLI"
+authors = ["clideq@boltu.ai"]
+license = "Proprietary"
+readme = "README.md"
+
+[tool.poetry.scripts]
+clideq = "clideq.cli:configure"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
