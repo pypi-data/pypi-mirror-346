@@ -1,0 +1,14 @@
+polars_japanese-0.2.0.dist-info/METADATA,sha256=ecJTH1ACg_qmLA-U0c8BGnuLGG3hiBNDR5oFCcrlwaw,7200
+polars_japanese-0.2.0.dist-info/WHEEL,sha256=2DQrT4izfA9h1HZ0eT_lBFK3CKQ9fyeW0BaeGfDe7HI,94
+polars_japanese-0.2.0.dist-info/licenses/LICENSE,sha256=bd4qIcyE23mIOsm0rJaIVgw-2NwZeSGC1HxtkriFBCc,1088
+polars_japanese/__init__.py,sha256=qK-ap5qKmocNcIzmRhPR3ha9rSge_RHq8cMhNFbbCZM,445
+polars_japanese/common.py,sha256=rEmnSbh1QDGO6oFiKQiitXS8Rc3JOufmzpsu9G2D0kk,7861
+polars_japanese/datetime_util.py,sha256=qIQzBqBB9wkPCAeNnvudBx0R1vntxhy2C9S-DkqubN4,1984
+polars_japanese/japanera_util.py,sha256=2gSqHLqubkIefOdl-D2b8NBubBYCxbnJ-vMeA7NpF5A,3048
+polars_japanese/jpholiday_util.py,sha256=C2izefmi_y22wFhis8NKnVhiI5F-NQ-Wi5LnhfWv7Sc,1439
+polars_japanese/kanjize_util.py,sha256=X00ISEW8g1VSMF3Bck6-33uSzqo_w_IX4R-zIwjp3b4,1252
+polars_japanese/normalize_util.py,sha256=UCmWNYQQyGj1Ya5zfnzgncwTb3WSdQYw0Ks6HXHu66s,2279
+polars_japanese/plugin/__init__.py,sha256=LjUzw6ObZ8xju651sxKciaU-1OoIcbGOReCoFAtKqmk,625
+polars_japanese/polars_japanese.pyd,sha256=Nguwfn4QxCdlSzJ_27LSKLgV170vjhphZnr1WpTp5_A,15689216
+polars_japanese/prefecture.py,sha256=4FGqCv17EoBwBESc9Y-jNWv92XAd_kxiD_vrBOPDLe0,13753
+polars_japanese-0.2.0.dist-info/RECORD,,
