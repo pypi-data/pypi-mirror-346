@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+imhotep_mail/__init__.py
+imhotep_mail/cli.py
+imhotep_mail/main.py
+imhotep_mail.egg-info/PKG-INFO
+imhotep_mail.egg-info/SOURCES.txt
+imhotep_mail.egg-info/dependency_links.txt
+imhotep_mail.egg-info/entry_points.txt
+imhotep_mail.egg-info/requires.txt
+imhotep_mail.egg-info/top_level.txt
