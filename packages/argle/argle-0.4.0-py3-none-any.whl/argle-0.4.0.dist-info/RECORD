@@ -1,0 +1,14 @@
+argle/__init__.py,sha256=fJ6ddo4atK7Szxa_eGLDvl75rpLfDeeudGKWAm8AEHA,94
+argle/_old.py,sha256=xFHk-bCXPVFT_GNbWuowgYFsdyswfOGvpsZPNI1mzEE,38832
+argle/bargparse.py,sha256=mxdvjRgm2Nrm_ANgefntujnj1zAPDjlD6B2-rE5nfJ4,3583
+argle/constants.py,sha256=bBsi10uOARCRbYWaeLQUmZIDIJtNSs0bgSK983XDypo,985
+argle/errors.py,sha256=Dc1t6ZuBzEbD6l8YpjQXCYA_S79jNF1RNUJd5eu1B6s,79
+argle/grammar.py,sha256=h88ZgRvGIrccuuDnY9fT9_DOBv1OGGc7S8GzC7eai6Q,33266
+argle/new_grammar.py,sha256=NyvCuIGtXmaSbc3kyWmVoiEvxf5OU96uYc46AA8nAcg,45973
+argle/parser.py,sha256=WzXqZGrFCReq8nrItOosC-R94_1WdJhgOep6ZeAGa2o,2659
+argle/version.py,sha256=w94zLLXesr9juueY0-i40k-ftogkZlejyEbY3FBFWR4,23
+argle-0.4.0.dist-info/licenses/LICENSE,sha256=HfSecr9VDnwUOkr3oVtJBCG1zeoBdY49O9BQn4PL6ms,1071
+argle-0.4.0.dist-info/METADATA,sha256=x5qhT7bk7tnHHGbCV0w69C7Cd8hFfzV7JeAFIuUXa_A,52837
+argle-0.4.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+argle-0.4.0.dist-info/top_level.txt,sha256=-BYz8ovuBPz49uAjy_Zlp4FzUocxRUuxzHbrs_p97Xo,6
+argle-0.4.0.dist-info/RECORD,,
