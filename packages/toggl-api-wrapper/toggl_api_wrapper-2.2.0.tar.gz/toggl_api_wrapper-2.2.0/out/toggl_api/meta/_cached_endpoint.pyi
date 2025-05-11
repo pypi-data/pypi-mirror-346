@@ -1,0 +1,23 @@
+from ._base_endpoint import TogglEndpoint as TogglEndpoint
+from ._enums import RequestMethod as RequestMethod
+from _typeshed import Incomplete
+from collections.abc import Iterable
+from httpx import BasicAuth as BasicAuth, Client as Client, Headers as Headers, Response as Response, Timeout as Timeout
+from toggl_api._exceptions import NoCacheAssignedError as NoCacheAssignedError
+from toggl_api.meta.cache._base_cache import TogglCache as TogglCache, TogglQuery as TogglQuery
+from toggl_api.models import TogglClass as TogglClass
+from typing import Any, TypeVar
+
+log: Incomplete
+T = TypeVar('T', bound=TogglClass)
+
+class TogglCachedEndpoint(TogglEndpoint[T]):
+    def __init__(self, auth: BasicAuth, cache: TogglCache[T] | None = None, *, client: Client | None = None, timeout: Timeout | int = 10, re_raise: bool = False, retries: int = 3) -> None: ...
+    def request(self, parameters: str, headers: Headers | None = None, body: dict[str, Any] | list[Any] | None = None, method: RequestMethod = ..., *, refresh: bool = False, raw: bool = False) -> T | list[T] | Response | None: ...
+    def load_cache(self) -> Iterable[T]: ...
+    def save_cache(self, response: list[T] | T, method: RequestMethod) -> None: ...
+    def query(self, *query: TogglQuery[Any], distinct: bool = False) -> list[T]: ...
+    @property
+    def cache(self) -> TogglCache[T] | None: ...
+    @cache.setter
+    def cache(self, value: TogglCache[T] | None) -> None: ...

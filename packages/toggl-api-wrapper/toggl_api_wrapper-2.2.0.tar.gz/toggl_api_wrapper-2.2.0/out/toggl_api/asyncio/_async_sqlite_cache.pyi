@@ -1,0 +1,26 @@
+from ._async_cache import TogglAsyncCache as TogglAsyncCache
+from ._async_endpoint import TogglAsyncCachedEndpoint as TogglAsyncCachedEndpoint
+from _typeshed import Incomplete
+from datetime import timedelta
+from os import PathLike
+from pathlib import Path
+from sqlalchemy import MetaData
+from sqlalchemy.ext.asyncio import AsyncEngine as AsyncEngine
+from sqlalchemy.sql.expression import ColumnElement as ColumnElement
+from toggl_api.models import TogglClass as TogglClass
+from typing import TypeVar
+
+async def async_register_tables(engine: AsyncEngine) -> MetaData: ...
+T = TypeVar('T', bound=TogglClass)
+
+class AsyncSqliteCache(TogglAsyncCache[T]):
+    metadata: MetaData
+    database: Incomplete
+    def __init__(self, path: Path | PathLike[str], expire_after: timedelta | int | None = None, parent: TogglAsyncCachedEndpoint[T] | None = None, *, engine: AsyncEngine | None = None, echo_db: bool = False) -> None: ...
+    async def load(self) -> list[T]: ...
+    async def add(self, *entries: T) -> None: ...
+    async def update(self, *entries: T) -> None: ...
+    async def delete(self, *entries: T) -> None: ...
+    async def find(self, pk: int) -> T | None: ...
+    @property
+    def cache_path(self) -> Path: ...

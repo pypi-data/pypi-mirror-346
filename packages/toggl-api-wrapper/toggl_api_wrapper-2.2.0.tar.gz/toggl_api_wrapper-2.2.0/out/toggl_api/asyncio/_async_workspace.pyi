@@ -1,0 +1,23 @@
+from ._async_endpoint import TogglAsyncCachedEndpoint as TogglAsyncCachedEndpoint
+from ._async_sqlite_cache import AsyncSqliteCache as AsyncSqliteCache
+from _typeshed import Incomplete
+from datetime import datetime
+from httpx import AsyncClient as AsyncClient, BasicAuth as BasicAuth, Response as Response
+from sqlalchemy.engine import ScalarResult as ScalarResult
+from sqlalchemy.sql.expression import ColumnElement as ColumnElement
+from toggl_api import DateTimeError as DateTimeError, TogglOrganization as TogglOrganization, TogglWorkspace as TogglWorkspace, WorkspaceBody as WorkspaceBody, WorkspaceStatistics as WorkspaceStatistics
+from toggl_api.meta import RequestMethod as RequestMethod
+from toggl_api.utility import get_timestamp as get_timestamp
+
+log: Incomplete
+
+class AsyncWorkspaceEndpoint(TogglAsyncCachedEndpoint[TogglWorkspace]):
+    MODEL = TogglWorkspace
+    organization_id: Incomplete
+    def __init__(self, organization_id: int | TogglOrganization, auth: BasicAuth, cache: AsyncSqliteCache[TogglWorkspace] | None = None, *, client: AsyncClient | None = None, timeout: int = 10, re_raise: bool = False, retries: int = 3) -> None: ...
+    async def get(self, workspace: TogglWorkspace | int, *, refresh: bool = False) -> TogglWorkspace | None: ...
+    async def add(self, body: WorkspaceBody) -> TogglWorkspace: ...
+    async def collect(self, since: datetime | int | None = None, *, refresh: bool = False) -> list[TogglWorkspace]: ...
+    async def edit(self, workspace_id: TogglWorkspace | int, body: WorkspaceBody) -> TogglWorkspace: ...
+    async def tracker_constraints(self, workspace_id: TogglWorkspace | int) -> dict[str, bool]: ...
+    async def statistics(self, workspace_id: TogglWorkspace | int) -> WorkspaceStatistics: ...

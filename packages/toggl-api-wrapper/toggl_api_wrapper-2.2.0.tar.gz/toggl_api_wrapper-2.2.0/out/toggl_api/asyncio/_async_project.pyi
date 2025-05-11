@@ -1,0 +1,33 @@
+from ._async_endpoint import TogglAsyncCachedEndpoint as TogglAsyncCachedEndpoint
+from ._async_sqlite_cache import AsyncSqliteCache as AsyncSqliteCache
+from _typeshed import Incomplete
+from httpx import AsyncClient as AsyncClient, BasicAuth as BasicAuth
+from sqlalchemy import Column as Column
+from sqlalchemy.engine import ScalarResult as ScalarResult
+from sqlalchemy.sql.expression import ColumnElement as ColumnElement, Select as Select
+from toggl_api import TogglProject as TogglProject, TogglWorkspace as TogglWorkspace
+from toggl_api._exceptions import NamingError as NamingError
+from toggl_api._project import ProjectBody as ProjectBody
+from toggl_api.meta import RequestMethod as RequestMethod
+from typing import Any, Final
+
+log: Incomplete
+
+class AsyncProjectEndpoint(TogglAsyncCachedEndpoint[TogglProject]):
+    MODEL = TogglProject
+    BASIC_COLORS: Final[dict[str, str]]
+    workspace_id: Incomplete
+    def __init__(self, workspace_id: int | TogglWorkspace, auth: BasicAuth, cache: AsyncSqliteCache[TogglProject] | None = None, *, client: AsyncClient | None = None, timeout: int = 10, re_raise: bool = False, retries: int = 3) -> None: ...
+    @staticmethod
+    def status_to_query(status: TogglProject.Status, statement: Select[Any]) -> Select[Any]: ...
+    async def collect(self, body: ProjectBody | None = None, *, refresh: bool = False, sort_pinned: bool = False, only_me: bool = False, only_templates: bool = False) -> list[TogglProject]: ...
+    async def get(self, project_id: int | TogglProject, *, refresh: bool = False) -> TogglProject | None: ...
+    async def delete(self, project: TogglProject | int) -> None: ...
+    async def edit(self, project: TogglProject | int, body: ProjectBody) -> TogglProject: ...
+    async def add(self, body: ProjectBody) -> TogglProject: ...
+    @classmethod
+    def get_color(cls, name: str) -> str: ...
+    @classmethod
+    def get_color_id(cls, color: str) -> int: ...
+    @property
+    def endpoint(self) -> str: ...

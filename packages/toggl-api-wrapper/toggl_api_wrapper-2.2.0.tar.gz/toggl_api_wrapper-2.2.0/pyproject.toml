@@ -1,0 +1,364 @@
+[project]
+name = "toggl-api-wrapper"
+version = "2.2.0"
+description = "Simple Toggl API wrapper for non-premium features."
+authors = [{ name = "David Kasakaitis", email = "davidkasakaitis@proton.me" }]
+maintainers = [
+    { name = "David Kasakaitis", email = "davidkasakaitis@proton.me" },
+]
+license = "MIT"
+license-files = ["LICENSE.md"]
+requires-python = ">=3.10"
+readme = "docs/README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Typing :: Typed",
+]
+keywords = ["wrapper", "toggl", "api", "httpx", "sqlalchemy", "time-tracker"]
+dependencies = ["httpx>=0.28.1"]
+
+
+[project.urls]
+"Homepage" = "https://ddkasa.github.io/toggl-api-wrapper/"
+"Documentation" = "https://ddkasa.github.io/toggl-api-wrapper/api-guide/index.html"
+"Source" = "https://github.com/ddkasa/toggl-api-wrapper"
+"Bug Tracker" = "https://github.com/ddkasa/toggl-api-wrapper/issues"
+"Changelog" = "https://ddkasa.github.io/toggl-api-wrapper/CHANGELOG.html"
+"Coverage" = "https://app.codecov.io/gh/ddkasa/toggl-api-wrapper"
+
+
+[project.optional-dependencies]
+sqlite = ["sqlalchemy>=2.0.37"]
+async = ["sqlalchemy>=2.0.37", "greenlet>=3.1.1", "aiosqlite>=0.20.0"]
+
+[dependency-groups]
+dev = ["tox-uv>=1.25.0"]
+test = [
+    "pytest>=8.2.0",
+    "pytest-env>=1.1.3",
+    "pytest-order>=1.2.1",
+    "coverage>=7.5.1",
+    "tox-gh-actions>=3.2.0",
+    "pytest-httpx>=0.30.0",
+    "pytest-sqlalchemy-mock>=0.1.6",
+    "faker>=25.2.0",
+    "pytest-reportlog >=0.4.0",
+    "pytest-cov>=5.0.0",
+    "pytest-replay>=1.5.2",
+    "pytest-rerunfailures>=14.0",
+    "pytest-dependency>=0.6.0",
+    "tomli>=2.0.2",
+    "pytest-asyncio>=0.25.0",
+]
+docs = [
+    "mkdocs>=1.6.0",
+    "mkdocs-callouts>=1.13.2",
+    "pymdown-extensions>=10.8.1",
+    "markdown>=3.6",
+    "markdown-callouts>=0.4.0",
+    "mdx-gh-links>=0.4",
+    "mkdocs-click>=0.8.1",
+    "mkdocs-redirects>=1.2.1",
+    "mkdocs-autorefs>=1.0.1",
+    "mkdocs-literate-nav>=0.6.1",
+    "mkdocs-simple-hooks>=0.1.5",
+    "mkdocs-material>=9.5.24",
+    "mkdocs-glightbox>=0.4.0",
+    "mkdocs-mermaid2-plugin>=1.1.1",
+    "mkdocs-macros-plugin>=1.0.5",
+    "pygments>=2.18.0",
+    "mkdocs-panzoom-plugin>=0.1.1",
+    "git-cliff>=2.6.1",
+    "ruff>=0.9.2",
+    "mkdocstrings-python>=1.13.0",
+]
+type = [
+    "faker>=37.1.0",
+    "mypy>=1.15.0",
+ "sqlalchemy[mypy]>=2.0.37",
+]
+lint = ["ruff>=0.9.5"]
+
+[project.scripts]
+clean-toggl-account = "toggl_api.utility._clean_account:main"
+generate-fake-toggl-data = "toggl_api.utility._generate_fake_data:main"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/toggl_api"]
+
+[tool.ruff]
+target-version = "py310"
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".mypy_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "build",
+    "dist",
+    "venv",
+]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.lint]
+preview = true
+select = ["ALL"]
+ignore = [
+    "CPY001",  # Copyright notice.
+    "D413",    # Wrong Documentation Style
+    "PLR0913", # Too many arguments
+    "ANN",     # Annotations should be checked by MyPy
+    "S311",    # Random module usage
+    "PLR0912", # Too much complexity
+    "D107",    # Init docstrings moved to class docstring.
+    "C90",     # Complexity
+    "PLR0912", # Branch Complexity
+    "TD",      # NOTE: Temporarily remove todos
+    "FIX",     # NOTE: Temporarily remove todos
+    "D203",    # Uneeded line before class name
+    "COM812",  # Deal with commas when formatting
+    "DOC502",  # Not explicitly raised errors.
+    "PLR6301", # Methods can be functions, classmethods or static
+
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "ANN", "E501", "DOC", "D", "ARG"]
+"noxfile.py" = ["S101", "ANN", "E501"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+
+[tool.mypy]
+python_version = "3.10"
+plugins = ["sqlalchemy.ext.mypy.plugin"]
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+strict_equality = true
+extra_checks = true
+check_untyped_defs = true
+disallow_subclassing_any = true
+disallow_untyped_decorators = true
+disallow_any_generics = true
+disallow_untyped_calls = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+no_implicit_reexport = true
+warn_return_any = true
+
+[[tool.mypy.overrides]]
+module = ["tests/*"]
+strict = false
+ignore_errors = true
+check_untyped_defs = false
+disallow_untyped_defs = false
+disallow_untyped_calls = false
+
+
+[tool.pytest.ini_options]
+markers = [
+    "unit: Basic unit tests using local cache.",
+    "integration: Tests that actively use the API.",
+    "slow: Tests that are slow to run or have delays included.",
+]
+testpaths = ["tests"]
+addopts = "--report-log=logs/pytest.jsonl"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+
+[tool.tox]
+requires = ["tox>=4.25"]
+env_list = ["lint", "type", "3.10", "3.11", "3.12", "3.13"]
+isolated_build = true
+
+
+[tool.tox.env.type]
+description = "Run type check on code base."
+extras = ["sqlite", "async"]
+dependency_groups = ["type"]
+runner = "uv-venv-lock-runner"
+commands = [["mypy", "{posargs:src}"]]
+
+[tool.tox.env.lint]
+description = "run linter on code base"
+extras = ["sqlite", "async"]
+dependency_groups = ["lint"]
+runner = "uv-venv-lock-runner"
+commands = [["ruff", "check", "{posargs:src}"]]
+
+[tool.tox.env_run_base]
+passenv = ["*"]
+description = "Run tests under {base_python}."
+runner = "uv-venv-lock-runner"
+extras = ["sqlite", "async"]
+dependency_groups = ["test"]
+commands = [["pytest", "{posargs:tests}"]]
+
+[tool.tox.env.3.10]
+passenv = ["*"]
+description = "Run tests under {base_python}."
+runner = "uv-venv-lock-runner"
+extras = ["sqlite", "async"]
+dependency_groups = ["test"]
+commands = [["pytest", "{posargs:tests}", "--cov", "--cov-report=xml"]]
+
+
+[tool.coverage.run]
+source = ["src/toggl_api", "tests/"]
+omit = [
+    "*/.venv/*",
+    "*/.mypy_cache/*",
+    "*/.ruff_cache/*",
+    "*/.pytest_cache/*",
+    "docs/*",
+    "scripts/*",
+    "*/.github/*",
+    "*/.tox/*",
+    "*/.git/*",
+    "src/toggl_api/utility/_cleanup.py",
+    "src/toggl_api/utility/_clean_account.py",
+    "src/toggl_api/utility/_generate_fake_data.py",
+]
+
+[tool.coverage.report]
+fail_under = 80
+exclude_also = [
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "except ImportError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+
+]
+
+# git-cliff ~ default configuration file
+# https://git-cliff.org/docs/configuration
+#
+# Lines starting with "#" are comments.
+# Configuration options are organized into tables and keys.
+# See documentation for more information on available options.
+
+[tool.git-cliff.changelog]
+# template for the changelog header
+header = """
+---
+hide:
+  - navigation
+---
+
+# Changelog\n
+All notable changes to this project will be documented in this file.\n
+"""
+# template for the changelog body
+# https://keats.github.io/tera/docs/#introduction
+body = """
+{% if version %}\
+    ## [{{ version | trim_start_matches(pat="v") }}] - {{ timestamp | date(format="%Y-%m-%d") }}
+{% else %}\
+    ## [unreleased]
+{% endif %}\
+{% for group, commits in commits  | group_by(attribute="group") %}
+    ### {{ group | striptags | trim | upper_first }}
+    {% for commit in commits %}
+        - {% if commit.scope %}*({{ commit.scope }})* {% endif %}\
+            {% if commit.breaking %}[**breaking**] {% endif %}\
+            {{ commit.message | upper_first }}\
+    {% endfor %}
+{% endfor %}\n
+"""
+
+# template for the changelog footer
+footer = """
+<!-- generated by git-cliff -->
+"""
+# remove the leading and trailing s
+trim = true
+# postprocessors
+postprocessors = [
+    # { pattern = '<REPO>', replace = "https://github.com/orhun/git-cliff" }, # replace repository URL
+]
+# render body even when there are no releases to process
+# render_always = true
+# output file path
+# output = "test.md"
+
+[tool.git-cliff.git]
+# parse the commits based on https://www.conventionalcommits.org
+conventional_commits = true
+# filter out the commits that are not conventional
+filter_unconventional = true
+# process each line of a commit as an individual commit
+split_commits = false
+# regex for preprocessing the commit messages
+commit_preprocessors = [
+    # Replace issue numbers
+    #{ pattern = '\((\w+\s)?#([0-9]+)\)', replace = "([#${2}](<REPO>/issues/${2}))"},
+    # Check spelling of the commit with https://github.com/crate-ci/typos
+    # If the spelling is incorrect, it will be automatically fixed.
+    #{ pattern = '.*', replace_command = 'typos --write-changes -' },
+]
+commit_parsers = [
+    { message = "^chore\\(release\\):", skip = true },
+    { message = "^chore\\(release\\): prepare for", skip = true },
+    { message = "^chore\\(deps.*\\)", skip = true },
+    { message = "^chore\\(pr\\)", skip = true },
+    { message = "^chore\\(pull\\)", skip = true },
+    { message = "^chore\\(merge\\)", skip = true },
+    { message = "^docs\\(changelog\\):", skip = true },
+    { message = "^feat", group = "<!-- 0 -->🚀 Features" },
+    { message = "^fix", group = "<!-- 1 -->🐛 Bug Fixes" },
+    { message = "^doc", group = "<!-- 4 -->📚 Documentation" },
+    { message = "^perf", group = "<!-- 5 -->⚡ Performance" },
+    { message = "^refactor|^ref", group = "<!-- 2 -->🚜 Refactor" },
+    { message = "^deprecate", group = "<!-- 3 -->🕸 Deprecations" },
+    { message = "^style", group = "<!-- 6 -->🎨 Styling" },
+    { message = "^test", group = "<!-- 7 -->🧪 Testing" },
+    { message = "^chore|^ci", group = "<!-- 7 -->⚙️ Miscellaneous Tasks" },
+    { message = "^build", group = "<!-- 7 -->🏗  Build" },
+    { body = ".*security", group = "<!-- 8 -->🛡️ Security" },
+    { message = "^revert", group = "<!-- 9 -->◀️ Revert" },
+    { message = "^wip", group = "<!-- 10 -->🚧 Work In Progress" },
+] # regex for parsing and grouping commits
+# filter out the commits that are not matched by commit parsers
+filter_commits = false
+# sort the tags topologically
+topo_order = false
+# sort the commits inside sections by oldest/newest order
+sort_commits = "oldest"
+
+[tool.git-cliff.remote.github]
+owner = "ddkasa"
+repo = "toggl-api-wrapper"

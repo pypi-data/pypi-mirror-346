@@ -1,0 +1,103 @@
+name: PyPi Publish
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Type Check
+        run: |
+          uv sync --group type --all-extras --python=3.10
+          uv run --python=3.10 mypy src
+
+      - name: Lint
+        run: |
+          uv sync --group lint --all-extras --python=3.10
+          uv run --python=3.10 ruff check src
+
+  test:
+    needs: lint
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: write
+
+    strategy:
+      max-parallel: 1
+      fail-fast: true
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+
+    env:
+      TOGGL_WORKSPACE_ID: ${{ secrets.TOGGL_WORKSPACE_ID }}
+      TOGGL_API_TOKEN: ${{ secrets.TOGGL_API_TOKEN }}
+      TOGGL_ORGANIZATION_ID: ${{ secrets.TOGGL_ORGANIZATION_ID }}
+      TOGGL_USER_ID: ${{ secrets.TOGGL_USER_ID }}
+      GH_ACTION: "ACTION"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: |
+          uv sync --python ${{ matrix.python-version }}  --all-extras --group test
+
+      - name: Run tests
+        if: ${{ matrix.python-version != '3.10' }}
+        run: uv run --python ${{ matrix.python-version }} tox -e ${{ matrix.python-version }} -- -m not slow and not integration
+
+      - name: Run tests
+        if: ${{ matrix.python-version == '3.10'}}
+        run: uv run --python=3.10 tox -e 3.10
+
+      - name: Upload coverage reports to Codecov
+        if: ${{ matrix.python-version == '3.10' && matrix.os == 'ubuntu-latest' }}
+        uses: codecov/codecov-action@v4.0.1
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    if: github.ref_type == 'tag'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: |
+          uv sync --group type --all-extras
+
+      - name: Generate Stubs
+        run: uv run stubgen src/toggl_api/
+
+      - name: Build
+        run: uv build
+
+      - name: Publish
+        run: uv publish
+
+  release:
+    needs: build
+    permissions:
+      contents: write
+    uses: ./.github/workflows/release.yaml
+
+  documentation:
+    needs: build
+    permissions:
+      contents: write
+    uses: ./.github/workflows/documentation.yaml
