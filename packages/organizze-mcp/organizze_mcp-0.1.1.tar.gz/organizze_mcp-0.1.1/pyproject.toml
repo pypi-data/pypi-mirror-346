@@ -1,0 +1,14 @@
+[project]
+name = "organizze-mcp"
+version = "0.1.1"
+description = "Organizze MCP Server"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.12",
+    "requests>=2.32.3",
+    "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+mcp = "organizze_mcp.main:main"
