@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-weather-http-lxy4633 = mcp_weather_http_lxy4633:main
