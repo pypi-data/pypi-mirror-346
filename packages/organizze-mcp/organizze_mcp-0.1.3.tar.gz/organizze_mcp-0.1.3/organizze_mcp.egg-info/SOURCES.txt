@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+organizze_mcp/main.py
+organizze_mcp.egg-info/PKG-INFO
+organizze_mcp.egg-info/SOURCES.txt
+organizze_mcp.egg-info/dependency_links.txt
+organizze_mcp.egg-info/requires.txt
+organizze_mcp.egg-info/top_level.txt
