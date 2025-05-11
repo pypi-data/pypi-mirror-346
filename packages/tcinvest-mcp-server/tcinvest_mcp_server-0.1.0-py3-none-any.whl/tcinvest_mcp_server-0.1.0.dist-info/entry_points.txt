@@ -1,0 +1,2 @@
+[console_scripts]
+tcinvest-mcp-server = tcinvest_mcp_server.__main__:main
