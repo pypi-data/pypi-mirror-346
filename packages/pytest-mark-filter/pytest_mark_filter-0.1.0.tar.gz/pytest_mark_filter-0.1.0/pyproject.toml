@@ -1,0 +1,27 @@
+[project]
+name = "pytest-mark-filter"
+version = "0.1.0"
+description = "Filter pytest marks by name using match kw"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pytest>=8.3.0",
+]
+classifiers = [
+    "Framework :: Pytest",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.9",
+]
+
+[project.entry-points.pytest11]
+mark_filter = "mark_filter.plugin"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mark_filter"]
