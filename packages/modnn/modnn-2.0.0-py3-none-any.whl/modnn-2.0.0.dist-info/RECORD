@@ -1,0 +1,15 @@
+modnn/Config.py,sha256=EOGTS4iaiBg-BaMIHmydFp_6Jp7EWVbSOCzWGbyDj_c,6260
+modnn/Dataset.py,sha256=gCV_wVNumlsdg2LJkgarJaKaqPgn2fAs-reU7ZLbvwg,9517
+modnn/Play.py,sha256=B1I60XtoIUhjHEVGPfmjV5fK4e2SopMB_MmkZSBqbwk,27667
+modnn/__init__.py,sha256=MZIUf7M2Ju7E7zOpxUQlgMUzYvIqpUBHjF2A9QNpp3k,188
+modnn/run.py,sha256=tyizV5jIOmw_V8sBSj6TXIaKlrCiyNA9g7L2wbn6v84,354
+modnn/utils.py,sha256=3jBOnTDp4z8vdb3qMcLLV0Vx9Rbp7R8H8JfX9jZI7ME,32824
+modnn/Models/BaseNN.py,sha256=aYyEvJH9UHpQ5svhdLMQw6LgUd_EAyZhyy2bNhzFozg,1648
+modnn/Models/ModNN.py,sha256=gqgwUDoUHV3wFxvDbdRX0As99yVTJl-fRqWRED93NiQ,16338
+modnn/Models/Modback.py,sha256=YM202o7TqXdCFXrElh0hPQx1TsJDc-AfcR9U1oIYCaE,11789
+modnn/Models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modnn-2.0.0.dist-info/licenses/LICENSE,sha256=U8pI1eLYLL89yIFgZA8xxpsZRAIJU6aH2X4j-Yar8tE,1058
+modnn-2.0.0.dist-info/METADATA,sha256=ETa_BMu6q0LGqOoGjM89LUXsWr9gdXyX4YCwOH4Nt78,1289
+modnn-2.0.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+modnn-2.0.0.dist-info/top_level.txt,sha256=-J9fweK3lum6WkvM0whBikjVfmhoVst962y533v9npg,6
+modnn-2.0.0.dist-info/RECORD,,
