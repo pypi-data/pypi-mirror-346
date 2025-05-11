@@ -1,0 +1,7 @@
+boto3_pydantic_personalize_events/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_personalize_events/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_personalize_events/personalize_events_classes.py,sha256=21TNGsA7GsmP2Ok-xSgrpB8r6sF8FERG9Aug20ZaMRw,2229
+boto3_pydantic_personalize_events/personalize_events_constants.py,sha256=9OTgMUaHwckS_kZbNHTqug4psWx7yb1R5_FC8OINR7g,6593
+boto3_pydantic_personalize_events-1.0.1.dist-info/METADATA,sha256=Z-91YFLE-Eak2xaP_pYpW563uR41tZK0LjANHSbYzI4,1457
+boto3_pydantic_personalize_events-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_personalize_events-1.0.1.dist-info/RECORD,,
