@@ -1,0 +1,7 @@
+mcp_server_neo4j/__init__.py,sha256=RA_xOSUX97HckxJJyW3hfVO8Q9HxbnR3HTveALoGsWM,757
+mcp_server_neo4j/__main__.py,sha256=n-Et5Y-NMEYtaEp7kBkJfv3xhDo0ZB_Ze4gznln9oy4,41
+mcp_server_neo4j/server.py,sha256=ZEc3rmwArv5OhUe4KHyedh-z1YfNDVsSq7ZfWBarKEI,13372
+mcp_server_neo4j-0.1.5.dist-info/METADATA,sha256=N_u3M3arrk3muX4VHmXfqgv4GT-9Kxa122FJtKrjA2M,5478
+mcp_server_neo4j-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_server_neo4j-0.1.5.dist-info/entry_points.txt,sha256=ymC3Trg5mW6McI8tfEn1c9TxQSs357kLUkrqnTallyM,59
+mcp_server_neo4j-0.1.5.dist-info/RECORD,,
