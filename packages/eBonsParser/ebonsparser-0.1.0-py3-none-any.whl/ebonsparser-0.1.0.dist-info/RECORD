@@ -1,0 +1,10 @@
+eBonsParser/__init__.py,sha256=12V5y3HYLYbsD075qvJOG4i_dhjStujhhDzIVr-O8L0,88
+eBonsParser/models.py,sha256=ojscjySdvK40KpIMfTofmGjq6gf13kScGDxW3pLJoX4,3165
+eBonsParser/utils.py,sha256=vWYeMuWTITt3gcziKJImbjBaDR6_5FQP3A7a68akmeQ,705
+eBonsParser/stores/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eBonsParser/stores/rewe.py,sha256=1xxJKxyQcrGuMShf3bQrXPpiV9wqR_z9neVn6arwryY,7636
+ebonsparser-0.1.0.dist-info/licenses/LICENSE,sha256=45UUnAl-exoxJSBU0_tuGBHbDtTk71I_vKCql1SvyTw,1059
+ebonsparser-0.1.0.dist-info/METADATA,sha256=UZQRsjaQVp8EGCYle7c1mZR8m-PWLhyAgy483_P7Po0,2495
+ebonsparser-0.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+ebonsparser-0.1.0.dist-info/top_level.txt,sha256=4S20ff8knqNofV7OFp81ICgASgCdvh2xNEaOJyYS51Q,12
+ebonsparser-0.1.0.dist-info/RECORD,,
