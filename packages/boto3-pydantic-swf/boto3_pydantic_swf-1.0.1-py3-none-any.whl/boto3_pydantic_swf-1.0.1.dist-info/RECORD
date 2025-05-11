@@ -1,0 +1,7 @@
+boto3_pydantic_swf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_swf/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_swf/swf_classes.py,sha256=CQ_o_ZMh9UPYxyrbuU_1V4EshE85t2n0TPh3TmC9pPk,37563
+boto3_pydantic_swf/swf_constants.py,sha256=uuNAGtrW-S4nnYvpw27b1ETMuvu7QceoCppX3Kjbrz8,13163
+boto3_pydantic_swf-1.0.1.dist-info/METADATA,sha256=KsTTKG9F85Zd0Ppw2j2VHkIX5oim4aDyh2S15c_hyDc,1382
+boto3_pydantic_swf-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_swf-1.0.1.dist-info/RECORD,,
