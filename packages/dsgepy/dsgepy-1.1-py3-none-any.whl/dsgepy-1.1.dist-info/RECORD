@@ -1,0 +1,12 @@
+dsgepy/__init__.py,sha256=rlE0eOS-DCguP2NKuSPydSYk81XtHChLN1D6safI7dA,159
+dsgepy/data_api.py,sha256=_R0lFN5G8tJc9xyDzWmMxw5v203NWhjzAZuikxK7alc,5855
+dsgepy/lineardsge.py,sha256=b378Xa_2kRhgUIUJFSB-dYmGtUVkb3ym7YSVsWAuX1o,41553
+dsgepy/pycsminwel.py,sha256=p7lnxCchrO-XkD_AYGrSdRATkC-5ZWLolG8xzNvBL9s,14556
+dsgepy/kalman/__init__.py,sha256=ktdmGXhszhE9wL2DeRFj6TquQ4KPYI_sjutRpd2A810,61
+dsgepy/kalman/kalman.py,sha256=7wEpivSoE_ozl9r6aOOjZNOwporXaXHa4Bt4qWWLiIA,60878
+dsgepy/kalman/utils.py,sha256=nPhWvT8LMbl3LKnke0C6WHrNfG8M1tSW99wqq9fkvY8,6359
+dsgepy-1.1.dist-info/licenses/LICENSE,sha256=UMPCctUdjYZ5wvPv5MSxa8YQ6nJ2r0yE4RDKv05UM8I,1073
+dsgepy-1.1.dist-info/METADATA,sha256=hqBvHKWpTt0S7dwvWXanOfzEez7IC9MOVXA7DvpQeeU,4187
+dsgepy-1.1.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+dsgepy-1.1.dist-info/top_level.txt,sha256=S6GnReSrC2ny36EW6GzrjJIw7bPN8sItfTCWMgV1YcU,7
+dsgepy-1.1.dist-info/RECORD,,
