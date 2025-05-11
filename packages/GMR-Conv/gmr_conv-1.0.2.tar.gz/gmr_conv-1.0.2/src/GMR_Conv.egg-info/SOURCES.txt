@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/GMR_Conv/__init__.py
+src/GMR_Conv/gmr_conv.py
+src/GMR_Conv/gmr_resnet.py
+src/GMR_Conv/gmr_resnet_3d.py
+src/GMR_Conv/gmr_unet.py
+src/GMR_Conv/transforms.py
+src/GMR_Conv/utils.py
+src/GMR_Conv.egg-info/PKG-INFO
+src/GMR_Conv.egg-info/SOURCES.txt
+src/GMR_Conv.egg-info/dependency_links.txt
+src/GMR_Conv.egg-info/requires.txt
+src/GMR_Conv.egg-info/top_level.txt
