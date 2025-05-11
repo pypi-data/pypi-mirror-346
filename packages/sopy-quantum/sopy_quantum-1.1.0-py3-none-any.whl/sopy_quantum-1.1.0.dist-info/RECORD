@@ -1,0 +1,14 @@
+sopy/__init__.py,sha256=bduXZmRcEwQafhO4tAM01_yTPEgwQ03O20HNP7DRNXU,231
+sopy/amplitude/__init__.py,sha256=XDHzqJjhwayxyVfTNhrb08UtU3hqUAPwtxH4XJXinnU,23
+sopy/amplitude/amplitude.py,sha256=Vq6KUdJlmnBXykPM-PhJ0NdTyDc75eboFm4xLVO2OQU,3374
+sopy/component/__init__.py,sha256=P21-0k5mIFDnbD_5egC3vEQUuopVNNTQZpVYNA5GJEo,46
+sopy/component/component.py,sha256=Dtcj_oC-tWn6YrJHt-KrP7Xx3TyinicKiyvfpgmsHl0,5589
+sopy/component/momentum.py,sha256=HweziZvt-AWkl4QxduXLVr3dZlGsP8N2r_UQJJzNMJ8,4077
+sopy/vector/__init__.py,sha256=Tviy7lDkCO0OECNqf4fE7kXbHuhnZ9WWU2SB1CSt6fE,42
+sopy/vector/operand.py,sha256=mhFiT_c3u0eHj5jRJqfRstFTKZT6jHIV-EhxFPkXMXo,6685
+sopy/vector/vector.py,sha256=wd91KcXrtpFzUbrlJrqQvJsipYT2gF5xz3-UJwx6CC8,11035
+sopy_quantum-1.1.0.dist-info/licenses/LICENSE.txt,sha256=k4mztpVtphCFZYzRxoTrzjDSHFlScAGdYwr74uFBV5g,1111
+sopy_quantum-1.1.0.dist-info/METADATA,sha256=n3CgLo7E3NgrK3UqByjs18tafCgesl18kQU2l06mOKo,3567
+sopy_quantum-1.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+sopy_quantum-1.1.0.dist-info/top_level.txt,sha256=8-e_LHVD84erwNSDYPL-2_KZSIWKApkbGDCer8-Avz0,5
+sopy_quantum-1.1.0.dist-info/RECORD,,
