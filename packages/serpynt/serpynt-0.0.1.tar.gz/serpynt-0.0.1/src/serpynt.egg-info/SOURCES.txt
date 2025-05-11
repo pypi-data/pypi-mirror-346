@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/serpynt/__init__.py
+src/serpynt.egg-info/PKG-INFO
+src/serpynt.egg-info/SOURCES.txt
+src/serpynt.egg-info/dependency_links.txt
+src/serpynt.egg-info/top_level.txt
