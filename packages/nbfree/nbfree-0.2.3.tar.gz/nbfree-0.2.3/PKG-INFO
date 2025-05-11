@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: nbfree
+Version: 0.2.3
+Summary: Edit your jupyter notebook cells as a python file, synchronize back and forth, and be free from the ipynb hell.
+Author-email: rambip <apero1808@gmail.com>
+Requires-Python: >=3.9
+Requires-Dist: dotenv>=0.9.9
+Requires-Dist: nbconvert>=7.16.6
+Requires-Dist: nbformat>=5.10.4
