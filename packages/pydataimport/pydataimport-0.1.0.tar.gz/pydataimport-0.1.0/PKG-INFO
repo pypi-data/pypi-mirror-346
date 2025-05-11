@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: pydataimport
+Version: 0.1.0
+Summary: To fetch data from API and import to SQL Server in Python
+Home-page: https://github.com/nmol2/pydataimport
+Author: nmol
+Author-email: connect@nmol.in
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: certifi>=2024.6.2
+Requires-Dist: charset-normalizer>=3.3.2
+Requires-Dist: idna>=3.7
+Requires-Dist: numpy>=2.0.0
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: pyodbc>=5.1.0
+Requires-Dist: python-dateutil>=2.9.0
+Requires-Dist: pytz>=2024.1
+Requires-Dist: requests>=2.32.3
+Requires-Dist: six>=1.16.0
+Requires-Dist: tzdata>=2024.1
+Requires-Dist: urllib3>=2.2.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PyImport Core
+
+This package provides the core functionality for the PyImport project, which handles data import operations.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install pydataimport
+```
+
+## Usage
+
+```python
+from pydataimport import your_module
+
+# Use the functionality
+```
+
+## Features
+
+- Data import functionality
+- Utility functions
+- Service integrations
+
+## Requirements
+
+- Python 3.8 or higher
+- See requirements.txt for full list of dependencies
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
