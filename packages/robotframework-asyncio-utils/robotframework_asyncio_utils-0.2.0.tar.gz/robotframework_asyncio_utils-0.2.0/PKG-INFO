@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: robotframework-asyncio-utils
+Version: 0.2.0
+Summary: Some keywords to help with async programming in robot framework
+Project-URL: Homepage, https://github.com/ygorpontelo/robot-asyncio-utils
+Author-email: Ygor Pontelo <ygorpontelo@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: async,utils
+Classifier: Framework :: Robot Framework
+Requires-Python: >=3.8
+Requires-Dist: robotframework>=6.1.1
+Description-Content-Type: text/markdown
+
+## Description
+
+This library contains utility functions to use asyncio features from robot easier.
+
+## Requirements
+
+To use this library you need python >=3.8 and Robot Framework >=6.1.1
+
+## Installation
+
+```
+pip install robotframework-asyncio-utils
+```
+
+Once you installed, just put "Library    AsyncioUtils" in the settings section of your robot file.
+
+## Available Keywords
+
+- Async Gather Keywords
+- Async Sleep
+- Async Create Task
+- Async Await Task
+- Async Cancel Task
+- Async Is Task
+
+Each keyword has a doc string too.
+
+Probably more keywords will be added to cover more features from asyncio.
