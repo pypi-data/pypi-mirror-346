@@ -1,0 +1,4 @@
+[console_scripts]
+crawler = lh_webtool.crawler:main
+hf_download = lh_webtool.hf_download:main
+play_image_web = lh_webtool.play_image_web:main
