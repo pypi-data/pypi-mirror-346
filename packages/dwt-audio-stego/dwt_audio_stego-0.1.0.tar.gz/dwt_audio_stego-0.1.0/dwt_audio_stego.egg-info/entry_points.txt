@@ -1,0 +1,2 @@
+[console_scripts]
+dwt_audio_stego = dwt_audio_stego.main:cli
