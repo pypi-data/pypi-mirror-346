@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: logctx
+Version: 0.0.0
+Summary: Management and injection of contextual variables into log messages.
+Author: Alexander Schulte
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/aschulte201/logctx
+Project-URL: Source, https://github.com/aschulte201/logctx
+Project-URL: Documentation, https://github.com/aschulte201/logctx/blob/README.md
+Project-URL: Changelog, https://github.com/aschulte201/logctx/blob/CHANGELOG.md
+Keywords: logging,context,log,logger,logctx,log-context
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing-extensions>=4.12
+Dynamic: license-file
+
+[![CICD](https://github.com/aschulte201/logctx/actions/workflows/cicd.yml/badge.svg?branch=main)](https://github.com/aschulte201/logctx/actions/workflows/cicd.yml)
+
+## Enabling
+
+The core module provides a `logging.Filter` subclass designed to inject the current active context into any log messages.
+
+Below is a demo usage on how to enable context injection:
+
+```python
+import logging
+import logctx
+
+root_logger = logging.getLogger()
+console_handler = logging.StreamHandler()
+
+formatter = jsonlogger.JsonFormatter("%(logctx)s")
+context_filter = ContextInjectingLoggingFilter(output_field="logctx")
+
+console_handler.setFormatter(formatter)
+console_handler.addFilter(context_filter)
+
+root_logger.addHandler(console_handler)
+logger.setLevel(logging.DEBUG)
+```
+
+# Generators
+* During execution
+* Between yields
+
+## Log Arguments
+* Raises during initializtaion
+* Value Error
+* Able to rename args
+* Unable to extract from kwargs
+* Unable to work on generators
+* Unable to work on async functions
+
+# update
+* can change root context
