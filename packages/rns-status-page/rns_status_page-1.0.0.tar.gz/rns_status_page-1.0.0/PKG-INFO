@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: rns-status-page
+Version: 1.0.0
+Summary: A Flask web server to display Reticulum network status.
+License: MIT
+Author: Ivan
+Author-email: rns@quad4.io
+Requires-Python: >=3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: flask (==3.1.0)
+Requires-Dist: flask-limiter (==3.12)
+Requires-Dist: flask-talisman (==1.1.0)
+Requires-Dist: gunicorn (==23.0.0)
+Requires-Dist: python-dotenv (==1.1.0)
+Requires-Dist: rns (==0.9.5)
+Project-URL: Homepage, https://github.com/Sudo-Ivan/rns-status-page
+Project-URL: Repository, https://github.com/Sudo-Ivan/rns-status-page
+Description-Content-Type: text/markdown
+
+# Reticulum Status Page
+
+WIP
+
+## License
+
+MIT 
