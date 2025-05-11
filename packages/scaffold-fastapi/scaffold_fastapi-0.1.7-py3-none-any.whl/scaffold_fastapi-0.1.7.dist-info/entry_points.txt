@@ -1,0 +1,2 @@
+[console_scripts]
+scaffold-fastapi = scaffold_fastapi.cli:app
