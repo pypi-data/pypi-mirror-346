@@ -1,0 +1,142 @@
+[project]
+name = "enkeep_ctp"
+version = "6.7.7.6"
+description = "CTP gateway for enkeep_trade quant trading framework."
+readme = "README.md"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Chinese (Simplified)",
+]
+requires-python = ">=3.10"
+dependencies = ["pybind11>=2.9.0"]
+keywords = ["quant", "quantitative", "investment", "trading", "algotrading", "ctp"]
+
+[project.urls]
+"Homepage" = "https://www.enkeep.com"
+
+
+[build-system]
+requires = [
+    "meson-python>=0.17.1",
+    "meson>=1.7.0",
+    "pybind11>=2.13.6",
+]
+build-backend = "mesonpy"
+
+[tool.mesonpy]
+args = ['--vsenv']
+
+[tool.mesonpy.distribution]
+include = [
+    "**/*.dll",
+    "**/*.so",
+    "**/*.pyd",
+    "**/*.h",
+    "**/*.cpp",
+    "**/*.lib",
+    "**/*.a",
+    "**/*.framework/**",  # 添加Mac框架文件夹支持
+]
+
+preserve-path = true 
+
+[tool.ruff]
+target-version = "py311"
+output-format = "full"
+
+[tool.ruff.lint]
+select = [
+    "B",  # flake8-bugbear
+    "E",  # pycodestyle error
+    "F",  # pyflakes
+    "UP",  # pyupgrade
+    "W",  # pycodestyle warning
+]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+strict_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+ignore_missing_imports = true
+
+[tool.cibuildwheel]
+build = "cp311-*"
+skip = [
+    "*-win32",
+    "*-manylinux_i686",
+    "*-musllinux_*",
+    "pp*"
+]
+test-skip = ""
+free-threaded-support = false
+enable = []
+
+archs = ["auto"]
+build-frontend = "default"
+config-settings = {}
+dependency-versions = "pinned"
+environment = {}
+environment-pass = []
+build-verbosity = 0
+
+before-all = ""
+before-build = ""
+repair-wheel-command = ""
+
+test-command = ""
+before-test = ""
+test-requires = []
+test-extras = []
+test-groups = []
+
+container-engine = "docker"
+
+manylinux-x86_64-image = "manylinux2014"
+manylinux-i686-image = "manylinux2014"
+manylinux-aarch64-image = "manylinux2014"
+manylinux-ppc64le-image = "manylinux2014"
+manylinux-s390x-image = "manylinux2014"
+manylinux-armv7l-image = "manylinux_2_31"
+manylinux-pypy_x86_64-image = "manylinux2014"
+manylinux-pypy_i686-image = "manylinux2014"
+manylinux-pypy_aarch64-image = "manylinux2014"
+
+musllinux-x86_64-image = "musllinux_1_2"
+musllinux-i686-image = "musllinux_1_2"
+musllinux-aarch64-image = "musllinux_1_2"
+musllinux-ppc64le-image = "musllinux_1_2"
+musllinux-s390x-image = "musllinux_1_2"
+musllinux-armv7l-image = "musllinux_1_2"
+
+
+[tool.cibuildwheel.linux]
+repair-wheel-command = "auditwheel repair -w {dest_dir} {wheel}"
+
+[tool.cibuildwheel.macos]
+repair-wheel-command = "delocate-wheel --require-archs {delocate_archs} -w {dest_dir} -v {wheel}"
+
+[tool.cibuildwheel.windows]
+
+[tool.cibuildwheel.pyodide]
