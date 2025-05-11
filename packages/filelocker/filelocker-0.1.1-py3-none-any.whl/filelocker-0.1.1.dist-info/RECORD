@@ -1,0 +1,9 @@
+filelocker/__init__.py,sha256=xkxihxSVZUaglkOAXohFkWnynRr_TkPhmaYuYJZAQHM,4
+filelocker/__main__.py,sha256=MmRj0C8o_DcXNq4-y409h1so4YLV8jbB-FaqYfFbw9E,917
+filelocker/core.py,sha256=y4S4Lnpyi2ieU-kSjtzFPCe00wF0gmBzcRfTibi7CzE,1812
+filelocker/lang.py,sha256=I8HOfwJ2irQsLz2ro9nwvHQB2PNQqfRy1YdX_sPO7Qw,1598
+filelocker-0.1.1.dist-info/METADATA,sha256=1r4uzEXhEb3DeiKiCnnOxdTP6LUkAIcbzJihCZjQdOE,266
+filelocker-0.1.1.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+filelocker-0.1.1.dist-info/entry_points.txt,sha256=ZitvcCjDwQdwA7O3zws1S4chg-gWNNQr_s5YSS49u1A,56
+filelocker-0.1.1.dist-info/top_level.txt,sha256=0vNbdPLq9EDMJxMkUNS3YTRUTFCyb4YhBP6n3lCMiq4,11
+filelocker-0.1.1.dist-info/RECORD,,
