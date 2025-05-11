@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+aidex_toolkit.egg-info/PKG-INFO
+aidex_toolkit.egg-info/SOURCES.txt
+aidex_toolkit.egg-info/dependency_links.txt
+aidex_toolkit.egg-info/requires.txt
+aidex_toolkit.egg-info/top_level.txt
