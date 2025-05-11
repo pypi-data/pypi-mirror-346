@@ -1,0 +1,14 @@
+folium
+geopandas
+ipyleaflet
+leafmap
+localtileserver
+mapclassify
+matplotlib
+numpy
+
+[all]
+gtlparser[extra]
+
+[extra]
+pandas
