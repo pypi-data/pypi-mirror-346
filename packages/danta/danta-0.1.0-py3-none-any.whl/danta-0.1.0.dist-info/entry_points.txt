@@ -1,0 +1,3 @@
+[console_scripts]
+danta=danta.main:app
+
