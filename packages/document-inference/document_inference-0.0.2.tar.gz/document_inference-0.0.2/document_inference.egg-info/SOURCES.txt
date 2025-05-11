@@ -1,0 +1,7 @@
+README.md
+setup.py
+document_inference/__init__.py
+document_inference.egg-info/PKG-INFO
+document_inference.egg-info/SOURCES.txt
+document_inference.egg-info/dependency_links.txt
+document_inference.egg-info/top_level.txt
