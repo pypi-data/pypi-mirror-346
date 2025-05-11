@@ -1,0 +1,86 @@
+{% set pd = plugin_data['doc'] %}
+# {{ plugin_name }}
+
+!!! note "Collection Note"
+    This module is part of the [{{ fqcn }} collection](https://galaxy.ansible.com/{{ fqcn | replace(".", "/") }}). To install the collection, use:
+
+    ```
+    ansible-galaxy collection install {{ fqcn }}
+    ```
+    {% if pd['version_added'] is defined and pd['version_added'] is not none %}
+    Added in version `{{ pd['version_added'] }}`.
+    {% endif %}
+
+    {% if pd['requirements'] is defined and pd['requirements'] is not none %}
+    You need further requirements to be able to use this module, see the [Requirements](#requirements) section for details.
+    {% endif %}
+
+## Synopsis
+
+{% for desc_item in pd['description'] %}
+- {{ desc_item}}
+{% endfor %}
+
+{% if pd['requirements'] is defined and pd['requirements'] is not none %}
+## Requirements
+
+The following Python packages are needed on the host that executes this module:
+
+{% for req in pd['requirements'] %}
+- [{{ req }}](https://pypi.org/project/{{ req }}/)
+{% endfor %}
+{% endif %}
+
+{% if pd['options'] is defined and pd['options'] is not none %}
+## Parameters
+
+| Parameter | Data Type | Environment Variable | Comments |
+| --------- | --------- | -------------------- | -------- |
+{% for param_name, param_values in pd['options'].items() %}
+| **{{ param_name }}**{% if param_values['required'] %}<br>*required*{% endif %} |
+{{- param_values['type'] }} | {% for env_var in param_values['env'] %} {{ env_var['name'] }} {% endfor %} |
+{{- param_values['description'] if param_values['description'] is string else param_values['description'] | join(' ') }}
+{%- if param_values['version_added'] is defined %}<br>{{ 'Version Added: ' ~ param_values['version_added'] }}{% endif %} |
+{% endfor %}
+{% endif %}
+
+{% if pd['notes'] is defined and pd['notes'] is not none %}
+## Notes
+
+!!! note "Note"
+{% for note in pd['notes'] %}
+    - {{ note }}
+{% endfor %}
+{% endif %}
+
+{% if plugin_data['examples'] is defined and plugin_data['examples'] is not none %}
+## Examples
+
+```yaml
+{{ plugin_data['examples'] }}
+```
+{% endif %}
+
+{% if plugin_data['return'] is defined and plugin_data['return'] is not none %}
+## Return Values
+
+| Key | Data Type | Description | Returned |
+| --- | --------- | ----------- | -------- |
+{% for key, values in plugin_data['return'].items() %}
+| {{ key }} | {{ values['type'] }} |
+{{- values['description'] if values['description'] is string else values['description'] | join(' ') }} |
+{{- values['returned'] }} |
+{% endfor %}
+{% endif %}
+
+{% if pd['author'] is defined and pd['author'] is not none %}
+## Authors
+
+{% if pd['author'] is string %}
+- {{ pd['author'] | title }}
+{% else %}
+{% for author in pd['author'] %}
+- {{ author | title }}
+{% endfor %}
+{% endif %}
+{% endif %}
