@@ -1,0 +1,2 @@
+[console_scripts]
+ConvertEcritures-gui = ConvertEcritures.cli:main
