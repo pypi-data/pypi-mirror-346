@@ -1,0 +1,15 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jacpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jacpy/geometry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jacpy/geometry/geoUtils.py,sha256=L7J9snKd1ckZ_V7pmtxkRD87w7VbxvF4-Gwpj44TQBM,2228
+jacpy/hash/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jacpy/hash/hashUtils.py,sha256=MHQroznPIv_fNOXdHO-54u7G7mZf8iPaYAlQWT4cCT4,521
+jacpy/io/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jacpy/io/ioUtils.py,sha256=5kVXR7S4p1WYs4T5b6GAuYjRMfeWSane8k5eupnbb88,4008
+jacpy/time/TimedSampleStore.py,sha256=r0g0wkvX_Y6HojKBdTZ222Z-lkrAP4kYvHkCCjqbnq4,1117
+jacpy/time/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jacpy-0.0.11.dist-info/licenses/LICENSE,sha256=BFIJQpWsxJ9Q3Wz5RQde7y5UJRyO6QxmIqlYsPcAVjo,1072
+jacpy-0.0.11.dist-info/METADATA,sha256=O5witYtv0vg_QeElEdBUc8b44Iisnaof9S-WwhDQ0B8,564
+jacpy-0.0.11.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+jacpy-0.0.11.dist-info/top_level.txt,sha256=v_5RLvCxaTVqFhGHiurtB46i6HOyr2CpER7uvXcYycg,15
+jacpy-0.0.11.dist-info/RECORD,,
