@@ -1,0 +1,8 @@
+paperless_asn_qr_codes/__init__.py,sha256=XK8sZHzdnkoGpvm4wyLCtzabB78FbuTWiy4sIiIMy88,126
+paperless_asn_qr_codes/avery_labels.py,sha256=Tpz2Ym-PzZFohisKFweCYCb1oT77BBLkh-ThCNkbig0,7638
+paperless_asn_qr_codes/main.py,sha256=eOQ5VOgOSXEZXqIfuNwdQv8Ktx_VVRJsM9AdHO3135Y,3508
+paperless_asn_qr_codes-0.4.1.dev2.dist-info/METADATA,sha256=3EWRSii58ThxLHlU-YP63PweUGIWw_djm317S4jYIas,5034
+paperless_asn_qr_codes-0.4.1.dev2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+paperless_asn_qr_codes-0.4.1.dev2.dist-info/entry_points.txt,sha256=nWeLs6G4GhNrrmL6oLYoqfiwQmmIM0pUgZKfrk08t-k,76
+paperless_asn_qr_codes-0.4.1.dev2.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+paperless_asn_qr_codes-0.4.1.dev2.dist-info/RECORD,,
