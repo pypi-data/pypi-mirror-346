@@ -1,0 +1,2 @@
+[console_scripts]
+filelocker = filelocker.__main__:main

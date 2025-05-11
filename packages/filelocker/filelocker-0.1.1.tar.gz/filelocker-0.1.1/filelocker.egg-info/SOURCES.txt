@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+filelocker/__init__.py
+filelocker/__main__.py
+filelocker/core.py
+filelocker/lang.py
+filelocker.egg-info/PKG-INFO
+filelocker.egg-info/SOURCES.txt
+filelocker.egg-info/dependency_links.txt
+filelocker.egg-info/entry_points.txt
+filelocker.egg-info/requires.txt
+filelocker.egg-info/top_level.txt

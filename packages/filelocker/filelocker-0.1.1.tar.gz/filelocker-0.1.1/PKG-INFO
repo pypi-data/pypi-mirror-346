@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: filelocker
+Version: 0.1.1
+Summary: File locker with password verification and multilingual support.
+Author-email: Your Name <you@example.com>
+Description-Content-Type: text/markdown
+Requires-Dist: pyperclip
+Requires-Dist: pycryptodome
+
+?

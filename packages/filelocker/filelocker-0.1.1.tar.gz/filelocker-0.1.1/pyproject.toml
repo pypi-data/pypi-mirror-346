@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "filelocker"
+version = "0.1.1"
+description = "File locker with password verification and multilingual support."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+  { name="Your Name", email="you@example.com" }
+]
+dependencies = [
+    "pyperclip",
+    "pycryptodome"
+]
+
+[project.scripts]
+filelocker = "filelocker.__main__:main"
