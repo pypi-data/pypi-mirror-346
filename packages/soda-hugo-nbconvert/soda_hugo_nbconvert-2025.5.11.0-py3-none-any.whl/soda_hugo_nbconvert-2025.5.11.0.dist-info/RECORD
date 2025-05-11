@@ -1,0 +1,17 @@
+hugo_nbconvert/__main__.py,sha256=GXidyg7rw6_IA1EosjKnYjmuVq9d1CfdbvKEaKNVZOw,358
+hugo_nbconvert/date.py,sha256=c52A2gWDI9IB-PHrDeKP5voMCUFSW_-xrZo4KdUHYSM,1071
+hugo_nbconvert/glob_hugo_ipynb.py,sha256=sbQtAVEK4E3XgkssetLwWT5N7RY9ocIkKTP0PAKCTn8,920
+hugo_nbconvert/global_config.py,sha256=u4fZi33vXNNAWHJ1HQWsrpBxDjWdUpSwet6mH0xHUz0,206
+hugo_nbconvert/hugo_fix.py,sha256=WN3nP29MTWIZdv2cfHu0GFkxxii2Q_3TXxoBl7d0I1U,4162
+hugo_nbconvert/main.py,sha256=CWBNr60k_AyMa08tEe-PWEdrC4jJ8lADHsqVTa-x204,1252
+hugo_nbconvert/markdown_convert.py,sha256=MTosAwRHzLLTT5Qe5CyqsYXJXX0H6NfG1Vfd5g6wDM8,2252
+hugo_nbconvert/markdown_processor.py,sha256=egBWrqjC69ZaP04t600XgZbi5SP9DgGyJFjdw5RIU4c,3885
+hugo_nbconvert/new.py,sha256=GHlpQSuiZIFnHUJwSKJJ5R9prxv6duKPHUhUy3P7uOc,2871
+hugo_nbconvert/resource.py,sha256=DhgqL7Yc0Ysw7ovhwQ6H-l0GJWk7tIMRd0SKqwzrQis,697
+hugo_nbconvert/run.py,sha256=JM28aYpT919av5tzhOaYu94OxTyZ97ADkyomXVFCqEE,1348
+hugo_nbconvert/tools.py,sha256=qDiIRnabPBc_JDjk4b72Yznze_TRGLvnTdUJ9uS2_F0,343
+soda_hugo_nbconvert-2025.5.11.0.dist-info/METADATA,sha256=GWDE_ZAtuagbi65-f14NdXcrZlWYOG4MNQRaRNBqtiA,697
+soda_hugo_nbconvert-2025.5.11.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+soda_hugo_nbconvert-2025.5.11.0.dist-info/entry_points.txt,sha256=EeujODPNmiGkEcfpEp4HuCStVWx69CW9RWu_IJfF7ws,264
+soda_hugo_nbconvert-2025.5.11.0.dist-info/licenses/LICENSE,sha256=F96EzotgWhhpnQTW2TcdoqrMDir1jyEo6H915tGQ-QE,11524
+soda_hugo_nbconvert-2025.5.11.0.dist-info/RECORD,,
