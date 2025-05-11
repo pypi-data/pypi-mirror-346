@@ -1,0 +1,3 @@
+[console_scripts]
+tpal=tpal.main:app
+
