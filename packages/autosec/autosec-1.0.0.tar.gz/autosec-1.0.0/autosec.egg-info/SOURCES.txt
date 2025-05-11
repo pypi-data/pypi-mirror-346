@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+autosec/__init__.py
+autosec/autocred.py
+autosec/autolog.py
+autosec/cli.py
+autosec.egg-info/PKG-INFO
+autosec.egg-info/SOURCES.txt
+autosec.egg-info/dependency_links.txt
+autosec.egg-info/entry_points.txt
+autosec.egg-info/requires.txt
+autosec.egg-info/top_level.txt
