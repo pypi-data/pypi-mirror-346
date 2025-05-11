@@ -1,0 +1,3 @@
+[console_scripts]
+notebook-cat = notebook_cat.main:main
+notebook-cat-web = notebook_cat.webui:launch_ui
