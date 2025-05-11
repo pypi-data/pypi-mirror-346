@@ -1,0 +1,8 @@
+crcmod~=1.7
+pyserial~=3.5
+cobs~=1.2
+dle-encoder~=0.2.3
+
+[test]
+pytest~=8.3
+spacepackets~=0.28.0
