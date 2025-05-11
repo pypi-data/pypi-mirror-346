@@ -1,0 +1,87 @@
+name: Windows
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+ 
+jobs:
+  build_engine:
+    name: Build NLP-ENGINE
+    runs-on: windows-2019
+
+    env:
+      VCPKG_DEFAULT_TRIPLET: x64-windows
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Vcpkg bootstrap Windows
+        run: bootstrap-vcpkg.bat
+        working-directory: vcpkg
+
+      - name: Install 3rd Party
+        run: vcpkg install
+        working-directory: vcpkg
+
+      - name: List $RUNNER_WORKSPACE before build
+        run: find $RUNNER_WORKSPACE
+        shell: bash
+
+      - name: Make build directory
+        run: mkdir build
+
+      - name: Generate Solution Windows
+        run: cmake -B build -A x64 -DCMAKE_TOOLCHAIN_FILE='${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake'
+
+      - name: Cmake Build all targets Windows
+        run: cmake --build build --config Release --target nlp
+        
+      - name: Test executable --version
+        run: ./bin/Release/nlp.exe --version || true
+
+      - name: Copy nlp.exe to nlpw.exe
+        run: cp bin/Release/nlp.exe bin/Release/nlpw.exe
+        shell: bash
+
+      - name: Upload nlpw.exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: nlpw.exe
+          path: bin/Release/nlpw.exe
+
+      - name: Upload icudt74.dll
+        uses: actions/upload-artifact@v4
+        with:
+          name: icudt74.dll
+          path: bin/Release/icudt74.dll
+
+      - name: Upload icuuc74.dll
+        uses: actions/upload-artifact@v4
+        with:
+          name: icuuc74.dll
+          path: bin/Release/icuuc74.dll
+
+      - name: Checkout Analyzers repo
+        uses: actions/checkout@v3
+        with:
+          repository: VisualText/analyzers
+          submodules: recursive
+          path: analyzers
+ 
+      - name: List runner workspace
+        run: find $RUNNER_WORKSPACE
+        shell: bash
+
+      - name: Run English Parser
+        run: ./bin/Release/nlp.exe -ANA .\analyzers\parse-en-us -WORK D:\a\nlp-engine\nlp-engine .\analyzers\parse-en-us\input\doj.txt -DEV || true
+
+      - name: Full English Test
+        uses: LouisBrunner/diff-action@v0.2.0
+        with:
+          old: .github/workflows/tests/parse-en-us/final.tree
+          new: ./analyzers/parse-en-us/input/doj.txt_log/final.tree
+          mode: addition
+          tolerance: same
+          output: parse-en-us-diff-win.txt
