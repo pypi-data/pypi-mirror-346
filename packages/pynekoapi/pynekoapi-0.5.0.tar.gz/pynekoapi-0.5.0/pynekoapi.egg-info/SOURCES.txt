@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+pynekoapi/__init__.py
+pynekoapi.egg-info/PKG-INFO
+pynekoapi.egg-info/SOURCES.txt
+pynekoapi.egg-info/dependency_links.txt
+pynekoapi.egg-info/requires.txt
+pynekoapi.egg-info/top_level.txt

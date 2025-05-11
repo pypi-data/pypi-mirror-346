@@ -1,0 +1,58 @@
+[project]
+dynamic = ["version"]
+name = "pynekoapi"
+description = "PyNekoApi from Python language."
+readme = "README.md"
+requires-python = "~=3.9"
+
+authors = [
+  { name = "Ling-ex", email = "nekochan@rizkiofficial.com" }
+]
+
+dependencies = [
+  "httpx[http2]>=0.28.1",
+  "requests>=2.32.3"
+]
+
+classifiers = [
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13"
+]
+
+keywords = ["nekobin", "register-date"]
+
+[project.urls]
+Homepage = "https://github.com/NekoChan29"
+Community = "https://t.me/ExclusiveFeedback"
+Source = "https://github.com/NekoChan29/PyNekoApi"
+Documentation = "https://api.rizkiofficial.com/docs"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4.3",
+  "pytest-asyncio>=0.26.0",
+  "pytest-cov>=4.1.0"
+]
+
+[build-system]
+requires = ["setuptools >= 69.2.0", "wheel >= 0.43.0"]
+build-backend = "setuptools.build_meta"
+
+# Setuptools configuration for dynamic versioning using pynekoapi.__version__
+[tool.setuptools.dynamic]
+version = {attr = "pynekoapi.__version__"}
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["pynekoapi"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
