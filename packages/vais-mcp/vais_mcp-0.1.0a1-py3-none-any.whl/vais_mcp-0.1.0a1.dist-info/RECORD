@@ -1,0 +1,10 @@
+vais_mcp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vais_mcp/config.py,sha256=aViq8opBjffm5-3oK_fuvIt3PJmsF1gSFRbHgVecaDA,530
+vais_mcp/google_cloud.py,sha256=Aacey4f7qFDOM5ABWBWXGrkzjAOVhhzrpbte2Lw963c,1955
+vais_mcp/server.py,sha256=tTnwADJVjY9dcefyXkn8z7Hd8iX5wLYEDicHPUECsKk,1567
+vais_mcp/vais.py,sha256=gz9hmYzlX8_gLTYybTIYxfsycOjHDjJd5YQ7ylvmvDw,2840
+vais_mcp-0.1.0a1.dist-info/METADATA,sha256=9SDiFBPX8TvQrQr0Jwv5WV-9nNcR9dg5FZkaLI7MT2k,4558
+vais_mcp-0.1.0a1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vais_mcp-0.1.0a1.dist-info/entry_points.txt,sha256=ulaQkI2j9mvsnNQ8fU20ML-GZ4nVHf6Pk5-A22ejDj4,50
+vais_mcp-0.1.0a1.dist-info/licenses/LICENSE,sha256=nBoeBF6j2qaCaLDb593IK8oPQqzWukDmARWKdWDARNQ,9764
+vais_mcp-0.1.0a1.dist-info/RECORD,,
