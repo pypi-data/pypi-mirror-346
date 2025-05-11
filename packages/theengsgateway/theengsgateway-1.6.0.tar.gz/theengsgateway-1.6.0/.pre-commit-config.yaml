@@ -1,0 +1,24 @@
+---
+repos:
+- repo: https://github.com/errata-ai/vale
+  rev: 'v3.0.4'
+  hooks:
+    - id: vale
+      name: vale-sync
+      pass_filenames: false
+      args: [sync]
+    - id: vale
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.8.0
+  hooks:
+  - id: mypy
+    entry: env MYPYPATH=TheengsGateway mypy
+    args: []
+    additional_dependencies:
+    - bleak>=0.19.0
+    - bluetooth-adapters>=0.15.3; python_version>="3.9"
+    - bluetooth-clocks<1.0
+    - bluetooth-numbers>=1.0,<2.0
+    - importlib-metadata
+    - paho-mqtt>=2.0.0,<3.0.0
+    - theengsdecoder>=1.9.5

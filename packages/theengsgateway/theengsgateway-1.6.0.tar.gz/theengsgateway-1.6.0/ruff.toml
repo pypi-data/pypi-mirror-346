@@ -1,0 +1,17 @@
+select = ["ALL"]
+ignore = [
+  "ANN101",  # missing-type-self
+  "COM812",  # missing-trailing-comma (conflicts with formatter)
+  "D107",    # undocumented-public-init
+  "ISC001",  # single-line-implicit-string-concatenation (conflicts with formatter)
+  "N999",    # invalid-module-name
+  "T201",    # print
+]
+# Always generate Python 3.8-compatible code
+target-version = "py38"
+
+[pydocstyle]
+convention = "google"
+
+[lint.mccabe]
+max-complexity = 15

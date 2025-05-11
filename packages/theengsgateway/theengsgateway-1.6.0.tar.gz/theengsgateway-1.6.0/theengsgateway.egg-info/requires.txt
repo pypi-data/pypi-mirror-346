@@ -1,0 +1,10 @@
+bleak>=0.19.0
+bluetooth-clocks<1.0
+bluetooth-numbers<2.0,>=1.0
+importlib-metadata
+paho-mqtt<3.0.0,>=2.0.0
+pycryptodomex>=3.18.0
+theengsdecoder>=1.9.5
+
+[:python_version >= "3.9"]
+bluetooth-adapters>=0.15.3
