@@ -1,0 +1,12 @@
+finance/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+finance/gambling/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+finance/gambling/arbitrage.py,sha256=3ngy-UJmIQjsBdQDv4XD5bNlp5ReQd333zNhSop38PU,2004
+scotils-0.2.0.dist-info/licenses/LICENSE,sha256=DBXERhiyToaR5t1k_HiDfaD85jLgSD5Yn-zx3JCGTWA,1081
+singletons/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+singletons/undefined.py,sha256=5J_L0DDj_0Aoqg8ltAj0BZVM6e9aitNk3_-uZ6Lrne0,1763
+strings/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+strings/utils.py,sha256=fwaTKx5nKc-UoBJX_BJtoL3_EhcjdMbdDHXF7G8wU04,3731
+scotils-0.2.0.dist-info/METADATA,sha256=uklP-1YuJbASxtmxhX9uFqsWxQyoB1f6FwuQuXnx1aM,446
+scotils-0.2.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+scotils-0.2.0.dist-info/top_level.txt,sha256=6koPaCR40aOagIkHDOITKg0JIweQWB-ZjTZt7EePtv0,27
+scotils-0.2.0.dist-info/RECORD,,
