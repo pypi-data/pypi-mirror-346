@@ -1,0 +1,11 @@
+wallpaper_fetcher/__init__.py,sha256=w5tOdSCbx0zkz8LKBgmJlhHn0GsZMleNDQ3ce09uuTA,228
+wallpaper_fetcher/autostart.py,sha256=HRx8XI2EmN1rPVxANwr2zWFN2ZI0qcFCpkSkHYF3K1c,6303
+wallpaper_fetcher/fetcher.py,sha256=NzJoBQbppOK1XlMcEVnQLDektCwmKDlMt9UTZL5CNrA,10211
+wallpaper_fetcher/logger.py,sha256=eUw7d3YIULEboe1XEAm0X5prX-eZWAliwI7XZkZC0SI,237
+wallpaper_fetcher/set_wallpaper.py,sha256=SVILE37akPtmXS15r9mgDDw1nF2rWcY_vDxm92dzMlc,14083
+wallpaper_fetcher/wallpaper.py,sha256=KlfWBSsYPj9Dd8wr9iwHtachjv9x4R1kMQ8BLa9sgdM,1121
+wallpaper_fetcher/wallpaper_rotator.py,sha256=cJabSNslZ0yeI0EQYtoVddy2QT3MYxOCU8lRcjEzqfk,2088
+wallpaper_fetcher-0.2.6.dist-info/METADATA,sha256=UDKBW_u8feMCKEU5PO74XAWFqoK7Hm71UkVdaHUm1kQ,3385
+wallpaper_fetcher-0.2.6.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+wallpaper_fetcher-0.2.6.dist-info/entry_points.txt,sha256=CepouKeGRs-4uwHJ7tuMBuqlz38r8cz-KxGJBD6I39Y,67
+wallpaper_fetcher-0.2.6.dist-info/RECORD,,

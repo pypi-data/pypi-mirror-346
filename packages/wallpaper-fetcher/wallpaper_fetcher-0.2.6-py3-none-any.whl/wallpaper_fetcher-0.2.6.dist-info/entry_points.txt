@@ -1,0 +1,3 @@
+[console_scripts]
+wallpaper-fetcher=wallpaper_fetcher.fetcher:cli
+
