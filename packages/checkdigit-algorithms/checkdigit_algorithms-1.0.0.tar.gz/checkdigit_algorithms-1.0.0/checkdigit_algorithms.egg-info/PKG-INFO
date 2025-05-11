@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: checkdigit-algorithms
+Version: 1.0.0
+Summary: Damm, Luhn and Verhoeff algorithms
+Author-email: "Luis A. Ochoa" <alberto.0x7c3@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/aochoae/checkdigit-algorithms-python
+Project-URL: Issues, https://github.com/aochoae/checkdigit-algorithms-python/issues
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Check digit algorithms
+
+Algorithms:
+
+* Damm algorithm
+* Luhn algorithm
+* Verhoeff algorithm
+
+## License
+
+Copyright 2025 Luis A. Ochoa
+
+This project is licensed under the MIT license.
+See [LICENSE](LICENSE) for the full license text.

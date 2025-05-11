@@ -1,0 +1,18 @@
+[project]
+name = "checkdigit-algorithms"
+version = "1.0.0"
+authors = [
+    { name="Luis A. Ochoa", email="alberto.0x7c3@gmail.com" }
+]
+description = "Damm, Luhn and Verhoeff algorithms"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/aochoae/checkdigit-algorithms-python"
+Issues = "https://github.com/aochoae/checkdigit-algorithms-python/issues"

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+checkdigit/__init__.py
+checkdigit/damm.py
+checkdigit/luhn.py
+checkdigit/verhoeff.py
+checkdigit_algorithms.egg-info/PKG-INFO
+checkdigit_algorithms.egg-info/SOURCES.txt
+checkdigit_algorithms.egg-info/dependency_links.txt
+checkdigit_algorithms.egg-info/top_level.txt
