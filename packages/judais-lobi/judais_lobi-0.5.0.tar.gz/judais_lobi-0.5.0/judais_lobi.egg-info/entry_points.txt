@@ -1,0 +1,3 @@
+[console_scripts]
+judais = core.cli:main_judais
+lobi = core.cli:main_lobi
