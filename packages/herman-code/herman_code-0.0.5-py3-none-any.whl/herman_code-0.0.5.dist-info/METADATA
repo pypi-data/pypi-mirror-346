@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: herman-code
+Version: 0.0.5
+Summary: A collection of utility code.
+Project-URL: Documentation, https://github.com/ChemGuy88/hermanCode#readme
+Project-URL: Issues, https://github.com/ChemGuy88/hermanCode/issues
+Project-URL: Source, https://github.com/ChemGuy88/hermanCode
+Author-email: Herman Franklin Autore <hf.autore@gmail.com>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE
+Keywords: Franklin,Herman,utility
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# README
+
+This is the Python package for Herman's Code, a utility suite.

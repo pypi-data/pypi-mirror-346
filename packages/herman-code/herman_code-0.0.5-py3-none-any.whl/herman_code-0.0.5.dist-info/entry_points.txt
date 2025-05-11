@@ -1,0 +1,2 @@
+[console_scripts]
+hcode = herman_code.scripts:hcode
