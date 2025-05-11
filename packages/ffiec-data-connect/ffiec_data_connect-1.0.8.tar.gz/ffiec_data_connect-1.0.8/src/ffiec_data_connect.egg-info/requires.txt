@@ -1,0 +1,6 @@
+zeep
+xmltodict
+requests
+pandas
+polars
+pyarrow
