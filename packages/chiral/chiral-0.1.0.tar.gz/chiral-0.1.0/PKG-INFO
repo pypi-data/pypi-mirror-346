@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: chiral
+Version: 0.1.0
+Summary: Python utilities I use across various projects.
+Author-email: Hart Traveller <ruling_fiction.0b@icloud.com>
+License-File: LICENSE
+Requires-Python: >=3.11
