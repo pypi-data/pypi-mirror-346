@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: pysessionmanager
+Version: 0.7.0
+Summary: A Python session management library with support for session timeouts, password-protected sessions, and persistent storage to files or databases. Suitable for web, GUI, and console applications. Provides functionality to create, update, delete, and validate sessions, with optional security and expiration controls. Ideal for managing user sessions in various types of Python projects.
+Author: Ahmad Al Dibo
+Author-email: ahmadaldibo212009@gmail.com
+License: MIT
+Keywords: session,beheer,python,gebruikers,tijd
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: hashlib
+Requires-Dist: datetime
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
