@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+msx_charset/__init__.py
+msx_charset/codec_base.py
+msx_charset/codec_br.py
+msx_charset/codec_intl.py
+msx_charset/codec_jp.py
+msx_charset/tests/__init__.py
+msx_charset/tests/test_charset_br.py
+msx_charset/tests/test_charset_intl.py
+msx_charset/tests/test_charset_jp.py
