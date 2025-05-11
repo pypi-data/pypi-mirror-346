@@ -1,0 +1,9 @@
+task_tracker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+task_tracker/cli.py,sha256=rt_WyAfdhROvkDIWJJfNom2jmsvTEYHcVwrF-JFQJ8o,2157
+task_tracker/manager.py,sha256=uIkQeNXuVHRCL8px_TfGEGB_I0AiAI0wrHYFjVebhbo,2998
+task_tracker/utils.py,sha256=ZGKtL0HL6zoGeEdHd-julBOh-rtBJT4MaHyk9sp3yZM,433
+daily_tasktrack-0.1.0.dist-info/METADATA,sha256=6tp4F1jzApvKuwOWXykE4Y0_cOOn59ZMuZ19KvnOdMs,2958
+daily_tasktrack-0.1.0.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+daily_tasktrack-0.1.0.dist-info/entry_points.txt,sha256=HfrchVQFEEyznv6upRExkeSA-Kw35S7J36kc2IZ4gc8,52
+daily_tasktrack-0.1.0.dist-info/top_level.txt,sha256=qVH1AZ-7fszXW_CwSlYMP-cRmzxwCRJMeUxhcewm_XA,13
+daily_tasktrack-0.1.0.dist-info/RECORD,,
