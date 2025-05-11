@@ -1,0 +1,90 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "strcs"
+dynamic = ["version"]
+description = "Wrapper to make it more convenient to make structure hooks for cattrs"
+readme = "README.rst"
+license = { text = "MIT" }
+requires-python = ">= 3.13"
+authors = [
+    { name = "Stephen Moore", email = "stephen@delfick.com" },
+]
+dependencies = [
+    "attrs>=22.2.0",
+    "cattrs>=22.2.0,<=23.2.3",
+]
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.13",
+  "Typing :: Typed",
+]
+
+[project.urls]
+repository = "https://github.com/delfick/strcs"
+changelog = "https://strcs.readthedocs.io/en/latest/strcs/changelog.html"
+docs = "https://strcs.readthedocs.io"
+
+[tool.uv]
+dev-dependencies = [
+    "tools",
+    "strcs_test_driver",
+]
+
+[tool.uv.sources]
+tools = { workspace = true }
+strcs-test-driver = { workspace = true }
+
+[tool.uv.workspace]
+members = ["tools", "helpers"]
+
+[tool.hatch.version]
+path = "strcs/version.py"
+
+[tool.hatch.build.targets.wheel]
+include = [
+    "/strcs",
+]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 99
+extend-exclude = [
+    ".DS_Store",
+    ".pytest_cache",
+    "tools/.python",
+    "tools/deps",
+    "__pycache__",
+]
+
+[tool.ruff.lint]
+select = [
+    "B008",  # mutable objects as function argument defaults
+    "B015",  # flake8-bugbear (useless-comparison)
+    "I",  # isort
+    "T20",  # flake8-print
+    "UP",  # pyupgrade
+    "RUF",
+    "F",
+]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"tests/**/*.py" = ["T201", "UP007"]
+"strcs/standard.py" = ["UP007"]
+
+[tool.mypy]
+ignore_missing_imports = true
+allow_redefinition = true
+exclude = '''(?x)(
+    .DS_Store
+    | .pytest_cache 
+    | __pycache__
+    | ^tools/.python
+    | ^tools/deps
+    )'''
