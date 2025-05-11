@@ -1,0 +1,12 @@
+[project]
+name = "iQore"              # Still lowercase — PyPI requires this
+version = "0.0.1"
+description = "iQore - Intelligence Beyond Limits - SDK Placeholder"
+authors = [{ name = "iQore Inc.", email = "team@iqore.com" }]
+readme = "README.md"
+requires-python = ">=3.8"
+
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

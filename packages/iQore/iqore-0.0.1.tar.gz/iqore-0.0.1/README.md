@@ -1,0 +1,70 @@
+# iQore SDK (Coming Soon)
+
+> 🔒 Secure. Optimized. Hybrid. The future of quantum-classical computing begins here.
+
+This SDK reserves the official `iQore` namespace and serves as a placeholder for the forthcoming **iQore Quantum Optimization Stack (iQD)** — a proprietary circuit enhancement layer built to accelerate quantum workloads across all sectors.
+
+---
+
+## 🔧 What is iQD?
+
+The `iQD` Engine is a deterministic optimizer that:
+
+* 📡 **Injects custom gate logic** into user circuits — boosting fidelity, entanglement depth, and resilience
+* 🧠 **Applies dynamic tensor control** to adapt circuits to backend-specific noise models
+
+---
+
+## 🔌 How It Will Work
+
+Once launched, developers will be able to:
+
+1. **Install the SDK**
+
+   ```bash
+   pip install iqore
+   ```
+
+2. **Authenticate using a secure token**
+
+3. **Optimize any Qiskit-compatible circuit**
+
+   ```python
+   from iQore import iQD
+
+   qc = QuantumCircuit(4)
+   qc.h(0)
+   qc.cx(0, 1)
+
+   iQD.optimize(qc, backend=backend, matrix=entropy_map)
+   ```
+
+---
+
+## 🚀 Planned Features in v0.1.0
+
+* 🔄 Local token validation and license enforcement
+* 📡 Encrypted remote execution of circuit optimization
+* 🧬 Fidelity-aware gate restructuring (iQD core)
+* 📊 Optional metrics reporting (TVD, coherence score, entanglement ratio)
+* 🔐 Tiered feature access (free, pro, enterprise)
+
+---
+
+## 📌 Why This Placeholder Exists
+
+This version contains no operational functionality and is not yet connected to iQore’s secure backend systems. It is published to:
+
+* Reserve the global `iQore` namespace on PyPI
+* Finalize packaging, build, and import conventions
+* Provide early visibility into the upcoming SDK
+
+> 🛠️ The production-grade optimizer and backend API are currently under development.
+
+---
+
+## 🌐 Learn More
+
+* Website: [https://www.iqore.com](https://www.iqore.com)
+* Email: [team@iqore.com](mailto:team@iqore.com)
+* Licensing & Tiers: Coming Soon

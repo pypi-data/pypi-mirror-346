@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+iQD/__init__.py
+iQD/api.py
+iQore.egg-info/PKG-INFO
+iQore.egg-info/SOURCES.txt
+iQore.egg-info/dependency_links.txt
+iQore.egg-info/top_level.txt
