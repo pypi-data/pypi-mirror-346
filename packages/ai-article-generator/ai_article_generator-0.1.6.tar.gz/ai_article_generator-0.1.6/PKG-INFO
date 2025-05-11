@@ -1,0 +1,116 @@
+Metadata-Version: 2.4
+Name: ai_article_generator
+Version: 0.1.6
+Summary: A Python library for generating articles using AI.
+Author-email: Ihor Tykhonenko <tykhonenkoigor@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: openai>=1.0.0
+Requires-Dist: httpx>=0.24.0
+
+# ai_article_generator
+
+A Python library for generating articles using AI. This library provides tools and utilities to automate the creation of articles, leveraging machine learning and natural language processing techniques.
+
+## Installation
+
+Install the library from PyPI:
+
+```bash
+pip install ai-article-generator
+```
+
+Or, for development, clone the repository and install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## API Key Setup
+
+You must create a `.env` file in your project directory with your OpenAI API key:
+
+```
+OPENAI_API_KEY=your-openai-api-key-here
+```
+
+This is required for the library to access the OpenAI API.
+
+## Usage
+
+Import and use the library in your Python code:
+
+```python
+from ai_article_generator.generator import ArticleGenerator
+```
+
+## Example Usage
+
+```python
+from ai_article_generator.generator import ArticleGenerator
+
+# Example instructions for article sections
+instructions = {
+    "Article Header": {
+        "instructions": "Write a header for a tech article about AI in journalism.",
+        "response_format": {"title": "Article Main Title", "subtitle": "Catchy Subtitle"},
+        "html_template": "<h1>{title}: {subtitle}</h1>",
+    },
+    "SEO Data": {
+        "instructions": "Generate an SEO title (around 60 characters) and meta description (around 155 characters) for an article about AI in journalism.",
+        "response_format": {
+            "seo_title": "SEO Optimized Title",
+            "meta_description": "Compelling meta description for search engines",
+        },
+        # No html_template here, so it will return the structured data as a dictionary
+    }
+}
+
+# Any additional data your sections might need
+additional_data = {"keywords": ["AI", "journalism", "technology"]}
+
+# Create the generator (article_type can be 'review', 'news', 'guide', 'feature', or 'generic')
+generator = ArticleGenerator(
+    instructions=instructions,
+    additional_data=additional_data
+)
+
+# Generate the article sections as HTML
+try:
+    generated_outputs = generator.generate() # Output can be HTML or structured data
+    for section_name, output_content in generated_outputs.items():
+        print(f"Section: {section_name}")
+        if isinstance(output_content, str): # HTML content
+            print(f"HTML Output:\\n{output_content}\\n")
+        elif isinstance(output_content, dict): # Structured data (e.g., SEO)
+            print("Structured Data Output:")
+            for key, value in output_content.items():
+                print(f"  {key}: {value}")
+            print("\\n")
+except Exception as e:
+    print(f"Error generating article: {e}")
+```
+
+## Arguments and Options
+
+The `ArticleGenerator` class accepts the following arguments:
+
+| Argument         | Required? | Default         | Description                                 |
+|------------------|-----------|-----------------|---------------------------------------------|
+| instructions     | Yes       | —               | Section instructions (dict)                 |
+| additional_data  | Yes       | —               | Extra data for sections (dict)              |
+| article_type     | No        | "generic"       | Type of article (affects system prompt)     |
+| system_prompt    | No        | None            | Custom system prompt                        |
+| model            | No        | "gpt-4o-mini"   | OpenAI model to use                         |
+
+### Example with optional fields
+
+```python
+generator = ArticleGenerator(
+    instructions=instructions,
+    additional_data=additional_data,
+    article_type="feature",      # optional
+    system_prompt=None,          # optional
+    model="gpt-4o-mini"          # optional
+)
+```
