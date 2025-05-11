@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: apache-skywalking
+Version: 1.2.0
+Summary: The Python Agent for Apache SkyWalking, which provides the native tracing/metrics/logging/profiling abilities for Python projects.
+Home-page: https://skywalking.apache.org/
+License: Apache-2.0
+Keywords: skywalking,tracing,metrics,logging,profiling,observability,distributed-tracing,apm,python
+Author: Apache Software Foundation
+Author-email: dev@skywalking.apache.org
+Maintainer: Apache SkyWalking Community
+Maintainer-email: dev@skywalking.apache.org
+Requires-Python: >=3.8,<=3.13
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development
+Classifier: Topic :: System :: Monitoring
+Provides-Extra: all
+Provides-Extra: async
+Provides-Extra: asynchttp
+Provides-Extra: asynckafka
+Provides-Extra: http
+Provides-Extra: kafka
+Provides-Extra: sync
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0) ; extra == "all" or extra == "async" or extra == "asynchttp"
+Requires-Dist: aiokafka (>=0.8.0,<0.9.0) ; extra == "all" or extra == "async" or extra == "asynckafka"
+Requires-Dist: grpcio
+Requires-Dist: grpcio-tools
+Requires-Dist: kafka-python ; extra == "all" or extra == "sync" or extra == "kafka"
+Requires-Dist: packaging
+Requires-Dist: psutil (<=5.9.5)
+Requires-Dist: requests (>=2.26.0) ; extra == "all" or extra == "sync" or extra == "http"
+Requires-Dist: uvloop (>=0.17.0,<0.18.0) ; extra == "all" or extra == "async" or extra == "asynchttp" or extra == "asynckafka"
+Requires-Dist: wrapt
+Project-URL: Bug Tracker, https://github.com/apache/skywalking/issues
+Project-URL: Documentation, https://skywalking.apache.org/docs/skywalking-python/next/readme/
+Project-URL: Repository, https://github.com/apache/skywalking-python
+Description-Content-Type: text/markdown
+
+# SkyWalking Python Agent
+
+<img src="http://skywalking.apache.org/assets/logo.svg" alt="Sky Walking logo" height="90px" align="right" />
+
+**SkyWalking-Python**: The Python Agent for Apache SkyWalking provides the native tracing/metrics/logging/profiling abilities for Python projects.
+
+**[SkyWalking](https://github.com/apache/skywalking)**: Application performance monitor tool for distributed systems, especially designed for microservices, cloud native and container-based (Kubernetes) architectures.
+
+
+[![GitHub stars](https://img.shields.io/github/stars/apache/skywalking-python.svg?style=for-the-badge&label=Stars&logo=github)](https://github.com/apache/skywalking-python)
+[![Twitter Follow](https://img.shields.io/twitter/follow/asfskywalking.svg?style=for-the-badge&label=Follow&logo=twitter)](https://twitter.com/AsfSkyWalking)
+
+![Release](https://img.shields.io/pypi/v/apache-skywalking)
+![Version](https://img.shields.io/pypi/pyversions/apache-skywalking)
+![Build](https://github.com/apache/skywalking-python/actions/workflows/CI.yaml/badge.svg?event=push)
+
+## Documentation
+
+- [Official documentation](https://skywalking.apache.org/docs/#PythonAgent)
+- [Blog](https://skywalking.apache.org/blog/2021-09-12-skywalking-python-profiling/) about the Python Agent Profiling Feature
+
+## Capabilities
+
+| Reporter  | Supported?      | Details                                                    | 
+|:----------|:----------------|:-----------------------------------------------------------|
+| Trace     | ✅ (default: ON) | Automatic instrumentation + Manual SDK                     |            
+| Log       | ✅ (default: ON) | Direct reporter only. (Tracing context in log planned)     |
+| Meter     | ✅ (default: ON) | Meter API + Automatic PVM metrics                          |
+| Event     | ❌ (Planned)     | Report lifecycle events of your awesome Python application |
+| Profiling | ✅ (default: ON) | Threading and Greenlet Profiler                            |
+
+## Installation Requirements
+
+SkyWalking Python Agent requires [Apache SkyWalking 8.0+](https://skywalking.apache.org/downloads/#SkyWalkingAPM) and Python 3.8+.
+
+> If you would like to try out the latest features that are not released yet, please refer to this [guide](docs/en/setup/faq/How-to-build-from-sources.md) to build from sources.
+
+## Live Demo
+- Find the [live demo](https://skywalking.apache.org/#demo) with Python agent on our website.
+- Follow the [showcase](https://skywalking.apache.org/docs/skywalking-showcase/next/readme/) to set up preview deployment quickly.
+
+## Contributing
+
+Before submitting a pull request or pushing a commit, please read our [contributing](CONTRIBUTING.md) and [developer guide](docs/en/contribution/Developer.md).
+
+## Contact Us
+* Mail list: **dev@skywalking.apache.org**. Mail to `dev-subscribe@skywalking.apache.org`, follow the reply to subscribe the mail list.
+* Send `Request to join SkyWalking slack` mail to the mail list(`dev@skywalking.apache.org`), we will invite you in.
+* Twitter, [ASFSkyWalking](https://twitter.com/AsfSkyWalking)
+* For Chinese speaker, send `[CN] Request to join SkyWalking slack` mail to the mail list(`dev@skywalking.apache.org`), we will invite you in.
+* [bilibili B站 视频](https://space.bilibili.com/390683219)
+
+## License
+Apache 2.0
+
