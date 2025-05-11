@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xmkckks"
+version = "0.0.2"
+description = "A package for xmkckks"
+authors = [
+    {name = "mmRoshani", email = "mohammadmojtabaroshani@outlook.com"}
+]
+license = {text = "MIT"}
+readme = "readme.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mmRoshani/xmkckks"
