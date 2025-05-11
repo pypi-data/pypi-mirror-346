@@ -1,0 +1,17 @@
+pydantic<3,>=2
+
+[async]
+aiohttp
+
+[schiene]
+requests
+
+[sync]
+requests
+
+[test]
+pytest
+pytest-asyncio
+tox
+requests
+aiohttp
