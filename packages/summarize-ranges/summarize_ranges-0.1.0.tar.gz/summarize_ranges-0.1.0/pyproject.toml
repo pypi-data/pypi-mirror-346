@@ -1,0 +1,45 @@
+[project]
+name = "summarize-ranges"
+version = "0.1.0"
+description = "Summarize contiguous ranges of integers found on standard input."
+readme = "README.md"
+authors = [
+    { name = "Terry Jones", email = "tcj25@cam.ac.uk" }
+]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = []
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.scripts]
+summarize-ranges = "summarize_ranges.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/terrycojones/summarize-ranges"
+"Bug Tracker" = "https://github.com/terrycojones/summarize-ranges/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "nox>=2025.5.1",
+    "pytest>=8.3.5",
+]
