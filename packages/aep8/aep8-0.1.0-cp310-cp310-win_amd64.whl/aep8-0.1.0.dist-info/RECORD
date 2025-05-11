@@ -1,0 +1,12 @@
+aep8/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aep8/_core.py,sha256=r957-L8Wn5jtd-Mf6ei5z5aTeCn-o2t3QX_uEmIhBpA,3334
+aep8/_irbem.cp310-win_amd64.dll.a,sha256=A7QO--SSunOaLuj65F2BfrF7NI0EwQd_4vCJ5p6qkWU,1532
+aep8/_irbem.cp310-win_amd64.pyd,sha256=WJiPbLGXN18aFHiO0abZ2jdigYoUTBcLeJqLm4hulmI,1497441
+aep8/__init__.py,sha256=eovVU1snitvLkS384jehgqEvN3DZrRK23mIClAZNbIQ,465
+aep8-0.1.0.dist-info/DELVEWHEEL,sha256=r5nIwPXKLg5yPy8wEDk1DNf9x3XAEuadM3RRDzgxRaQ,397
+aep8-0.1.0.dist-info/METADATA,sha256=FWv0hR__HF08PXzrZEJYiCDhpOXmvLfWYpb4lLIA3H0,2185
+aep8-0.1.0.dist-info/RECORD,,
+aep8-0.1.0.dist-info/WHEEL,sha256=1nIT8bOU3dBEtO1OHNUw1PB7s17JH9tAQ93SLqU9JNM,85
+aep8.libs/libgcc_s_seh-1-ee1284756a78496df719721d5ed594fa.dll,sha256=wHtI_eCN7I3dH_gTfLaeFTjPq6Ngak9H2OYsdx2suu4,76288
+aep8.libs/libquadmath-0-9d43588b3e77eaf53c0f312fad330ede.dll,sha256=mKNZO1gxaVgCWALDwG1lD7n2rfWQuSI21ne9j-mMsOA,334848
+aep8.libs/libwinpthread-1-e6ad06a123061cabf83aa417b565b171.dll,sha256=W77ySaDQDi0yxpnQu-ifcU6-uHKzmQpcvsyx2J9j5eg,52224
