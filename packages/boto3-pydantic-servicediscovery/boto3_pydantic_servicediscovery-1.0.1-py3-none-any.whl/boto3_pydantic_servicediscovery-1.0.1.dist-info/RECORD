@@ -1,0 +1,7 @@
+boto3_pydantic_servicediscovery/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_pydantic_servicediscovery/base_validator_model.py,sha256=C3teURdLR9HMNOC5LMFGGgdsm6Ks6OF0p5RnKw54er4,463
+boto3_pydantic_servicediscovery/servicediscovery_classes.py,sha256=ECrQ703JC5e3HH7jOgP1sGRTwcmXlG_aWB-HiCYiNvw,14855
+boto3_pydantic_servicediscovery/servicediscovery_constants.py,sha256=wSlmNTrZ2L2q-aK8LWNf-8_OPMMiGr4si48CdcJt1vs,8511
+boto3_pydantic_servicediscovery-1.0.1.dist-info/METADATA,sha256=wrX7MN2w28WgOJO8ZarBC3lMW8dsvpBpSMKj5BdeNjo,1447
+boto3_pydantic_servicediscovery-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+boto3_pydantic_servicediscovery-1.0.1.dist-info/RECORD,,
