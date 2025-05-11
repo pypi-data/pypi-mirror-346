@@ -1,0 +1,10 @@
+{
+  "required": [
+    "name",
+    "desc",
+    "version",
+    "cover",
+    "tags",
+    "endpoints"
+  ]
+}
