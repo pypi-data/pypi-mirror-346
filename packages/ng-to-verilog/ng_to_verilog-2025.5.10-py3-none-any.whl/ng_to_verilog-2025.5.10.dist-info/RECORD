@@ -1,0 +1,15 @@
+ng_to_verilog/__init__.py,sha256=ojKFisNbiVy2ZGh2qLdP5G-FhcGCV6aR9Q2lxQuOtEM,1349
+ng_to_verilog/export.py,sha256=6qcoSIklFpiQ3wfdsLN34MfXFFDg_4ldj7Jd12DhGMA,11997
+ng_to_verilog/load.py,sha256=UHK4lUy-YfaBYyG-aIaIuFf5Grp9kJr3r2VKCnmRcgg,3005
+ng_to_verilog/pins_ports_io.py,sha256=pQs_Z7BNwK9oXhnD37vzdvaJaIafLQ3gU9tKtYWeA50,9858
+ng_to_verilog/primitives.py,sha256=xKmlIt_IYg8cHgVNALM_tifKLPoUz6BRx7gOZG2RNeM,3663
+ng_to_verilog/settings.py,sha256=xnqcsZ34_LUy9j9cmeXcr3NkfSXO7rnEFXkyFBwv-6M,1018
+ng_to_verilog/util.py,sha256=AcDI2TnGO-09Y_3xfYNG20KqAnU8DWOUdqX6gRnFCMw,3048
+ng_to_verilog/resources/primitives.json,sha256=n_fQAT3psnlDsmo3hv9TXlfAiNucnSlKXx5eNuzom2Q,13552
+ng_to_verilog/templates/build.j2,sha256=IKpxaMO0WoX-pdyfa7VNskoZz9oB2yIqjWE4lGoo_vs,201
+ng_to_verilog/templates/verilogModule.j2,sha256=TirwJY2Qm92iqJOigpfn0nrEdAIzPcHWWqmBP0DVpYg,1578
+ng_to_verilog-2025.5.10.dist-info/licenses/LICENSE,sha256=2Ah4Ja6XmE64l_6ye0s4xBmbZKA7gLPLACurzesDk9Y,1089
+ng_to_verilog-2025.5.10.dist-info/METADATA,sha256=_mZ4pXpVGFna43x6FE4FWt9vmwa6XgSbeHLvZST3v_c,6048
+ng_to_verilog-2025.5.10.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+ng_to_verilog-2025.5.10.dist-info/top_level.txt,sha256=aIZXqXue1XQ6mqNpoHlT2Q0Igay0m5fvnSZcon-VXTY,14
+ng_to_verilog-2025.5.10.dist-info/RECORD,,
