@@ -1,0 +1,6 @@
+pillow
+tqdm
+requests
+zipfile
+selenium
+psutil
