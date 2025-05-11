@@ -1,0 +1,12 @@
+stream_web_provider/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stream_web_provider/application.py,sha256=Lvw0Terwx1HfCZAscVRetYQESS_wOsDt3vAkmE-AkfY,1925
+stream_web_provider/camera_stream.py,sha256=RXBYKeOwyafvvfRdu9_qmtUvN9MOZ4u9kjCnyAJx1Q4,3188
+stream_web_provider/main.py,sha256=AnWo34jjyHpPQ4haDHNHRmtC1uI1kTVvdP4Nnk1-NhY,129
+stream_web_provider/templates/connecting_camera.png,sha256=b6tNSfxpxPZKT5R7z-SE92E6WlLZ5Gm1UPuIdhcUKNY,26156
+stream_web_provider/templates/index.html,sha256=PXgr5TlzaNqCnQ1qKyYysZwtlxaQbWFKF8qODcXLuVI,830
+stream_web_provider/templates/stream_stopped.png,sha256=FCVC0IFSXODXoUGJRZKKBUVGO8hEMayNqlVFjPA2dWo,18195
+stream_web_provider-0.1.1.dist-info/entry_points.txt,sha256=TNTsmOO3DM8u-Ez2szg3OAsGtxdtozwuVkacNCIsa1U,69
+stream_web_provider-0.1.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+stream_web_provider-0.1.1.dist-info/METADATA,sha256=KGDSnrRmDXp80Oq2GZtn20PMuBQor9RCXG94HNxuBtU,2501
+stream_web_provider-0.1.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+stream_web_provider-0.1.1.dist-info/RECORD,,
