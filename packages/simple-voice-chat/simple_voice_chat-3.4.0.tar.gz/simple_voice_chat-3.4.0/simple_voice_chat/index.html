@@ -1,0 +1,2807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Voice Chat</title>
+    <!-- Include marked.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        html, body { /* Ensure full height */
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            padding: 20px; /* Keep padding */
+            box-sizing: border-box; /* Include padding in height */
+            height: 100%; /* Use full calculated height */
+        }
+
+        .container {
+            /* max-width: 800px; /* Removed to allow full width */
+            margin: 0 auto;
+            height: 100%; /* Use full parent height */
+            min-height: 350px; /* Added: Ensure minimum height for header + minimal chat */
+            display: flex;
+            flex-direction: column;
+            position: relative; /* Added for absolute positioning of children */
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column; /* Stack title and controls vertically */
+            align-items: center; /* Center items horizontally */
+            margin-bottom: 15px; /* Increased margin slightly */
+            padding: 0 10px;
+            gap: 10px; /* Gap between main row and options row */
+            width: 100%; /* Ensure header takes full width */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        .header-main-row { /* New: Wrapper for the top row items */
+            display: flex;
+            justify-content: space-between; /* Title left, controls+cost right */
+            align-items: center;
+            width: 100%;
+            gap: 15px; /* Gap between title and controls group */
+            flex-wrap: wrap; /* Allow wrapping if space is tight */
+            margin-bottom: 10px; /* Space below the main row */
+        }
+
+        .header .title-container {
+            display: flex;
+            align-items: baseline; /* Align baseline of title and version */
+            flex-shrink: 1; /* Allow title to shrink if needed */
+            min-width: 150px; /* Prevent title from becoming too small */
+            justify-content: center; /* Center the content (h2 and span) */
+            gap: 8px; /* Space between title and version */
+            /* Removed text-align, width, margin-bottom */
+        }
+
+        .header h2 {
+            margin: 0;
+            /* Removed flex-grow and margin-right from h2 */
+        }
+
+        .header .app-version { /* Style for the version span */
+            font-size: 0.7em; /* Smaller font size */
+            color: #888; /* Grey color */
+            font-weight: normal;
+        }
+
+
+        .header .controls-container {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Adjusted gap */
+            /* flex-shrink: 0; /* Removed: Allow controls container to shrink */
+            flex-wrap: wrap; /* Ensure controls wrap if needed */
+            /* Removed justify-content */
+        }
+
+        .controls-and-cost-container { /* New: Wrapper for cost and controls */
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Gap between cost display and controls */
+            flex-shrink: 0; /* Prevent this group from shrinking */
+            flex-wrap: wrap; /* Allow items inside to wrap */
+            justify-content: flex-end; /* Align items to the right */
+        }
+
+
+        .header #mute-button,
+        .header #clear-chat-button {
+            margin: 0;
+            white-space: nowrap;
+            /* Adjust padding for icon-only button */
+            padding: 12px; /* Make it square-ish */
+            min-width: 46px; /* Ensure minimum size matches height */
+            width: 46px; /* Fixed width */
+        }
+
+        .header #mute-area {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Restore original gap */
+            /* Removed grouping styles: border, padding, background, fixed height */
+        }
+
+        /* Removed .mic-control-group styles */
+
+
+        /* Styles for the new options row */
+        #options-row {
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px; /* Space above the options row */
+            flex-wrap: wrap; /* Allow wrapping if needed */
+            width: 100%; /* Take full width */
+            box-sizing: border-box;
+        }
+
+        /* Styles for select dropdowns (Model & Voice) */
+        .select-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .styled-select {
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-family: inherit;
+            font-size: 14px; /* Slightly smaller */
+            cursor: pointer;
+            min-width: 120px; /* Ensure minimum width */
+            max-width: 200px; /* Added: Limit maximum width */
+            height: 46px; /* Match button height */
+            box-sizing: border-box;
+            appearance: none; /* Remove default arrow */
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: .65em auto;
+            padding-right: 30px; /* Space for arrow */
+            transition: border-color 0.3s, opacity 0.3s; /* Added opacity transition */
+        }
+
+        .styled-select:hover {
+            border-color: #666;
+        }
+
+        .styled-select:focus {
+            outline: none;
+            border-color: #888;
+        }
+
+        .styled-select:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: #333;
+            border-color: #333;
+        }
+        /* End select dropdown styles */
+
+
+        .chat-container {
+            border: 1px solid #333;
+            padding: 20px;
+            /* height: 90%; Removed fixed height */
+            flex-grow: 1; /* Added: Allow chat container to fill remaining space */
+            border-radius: 25px; /* Added: Match button roundness */
+            min-height: 0; /* Added: Necessary for flex-grow in some browsers */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            width: 100%; /* Ensure full width */
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding: 10px;
+            user-select: text; /* Allow text selection */
+        }
+
+        /* Custom Scrollbar Styles for Webkit Browsers */
+        .chat-messages::-webkit-scrollbar {
+            width: 8px; /* Make scrollbar thinner */
+        }
+
+        .chat-messages::-webkit-scrollbar-track {
+            background: #1a1a1a; /* Dark background for the track */
+            border-radius: 4px;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb {
+            background-color: transparent; /* Make thumb transparent by default */
+            border-radius: 4px;
+            border: 2px solid transparent; /* Make border transparent too */
+            background-clip: padding-box; /* Ensure background respects padding */
+            transition: background-color 0.2s ease-in-out; /* Add transition for smooth appearance */
+        }
+
+        /* Show scrollbar thumb when hovering over the chat messages area */
+        .chat-messages:hover::-webkit-scrollbar-thumb {
+            background-color: #555; /* Dark grey for the thumb */
+            border: 2px solid #1a1a1a; /* Restore border */
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb:hover {
+            background-color: #777; /* Slightly lighter grey on hover (when thumb is visible) */
+        }
+
+        /* Apply similar styles to the main body scrollbar (horizontal and vertical) */
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            width: 8px; /* Width for vertical scrollbar */
+            height: 8px; /* Height for horizontal scrollbar */
+        }
+
+        html::-webkit-scrollbar-track,
+        body::-webkit-scrollbar-track {
+            background: #1a1a1a; /* Dark background for the track */
+            border-radius: 4px;
+        }
+
+        html::-webkit-scrollbar-thumb,
+        body::-webkit-scrollbar-thumb {
+            background-color: #555; /* Dark grey for the thumb */
+            border-radius: 4px;
+            border: 2px solid #1a1a1a; /* Match track background for border */
+            background-clip: padding-box;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        html::-webkit-scrollbar-thumb:hover,
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #777; /* Slightly lighter grey on hover */
+        }
+        /* End Body Scrollbar Styles */
+
+        .message-row {
+            display: flex;
+            margin-bottom: 20px; /* Moved from .message */
+            position: relative; /* For potential future use, not strictly needed for this change */
+        }
+
+        .message-row.user-row {
+            justify-content: flex-end;
+        }
+
+        .message-row.assistant-row {
+            justify-content: flex-start;
+        }
+
+        .message {
+            /* margin-bottom: 20px; */ /* Removed, now on .message-row */
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            max-width: 70%;
+            /* clear: both; */ /* Removed, flex handles layout */
+            position: relative; /* Keep for replay button positioning */
+        }
+
+        .message.user {
+            background-color: #2c2c2c;
+            /* float: right; */ /* Removed */
+            border-bottom-right-radius: 2px;
+            border: 1px solid #404040;
+        }
+
+        .message.assistant {
+            background-color: #262626;
+            /* float: left; */ /* Removed */
+            border-bottom-left-radius: 2px;
+            border: 1px solid #333;
+        }
+
+        .message.system { /* Style for system messages */
+            background-color: #202020; /* Slightly different background */
+            /* float: left; */ /* Removed, will be wrapped in assistant-row or its own row type if needed */
+            border-bottom-left-radius: 2px;
+            border: 1px solid #383838; /* Slightly different border */
+            font-style: italic; /* Italicize system messages */
+            opacity: 0.8; /* Make slightly less prominent */
+        }
+
+        /* Markdown specific styles */
+        .message p { margin: 0.5em 0; } /* Add some space between paragraphs */
+        .message ul, .message ol { margin: 0.5em 0 0.5em 2em; padding: 0; } /* Indent lists */
+        .message li { margin-bottom: 0.2em; }
+        .message code { background-color: #333; padding: 0.2em 0.4em; border-radius: 3px; font-family: monospace; }
+        .message pre { background-color: #1e1e1e; padding: 1em; border-radius: 5px; overflow-x: auto; font-family: monospace; }
+        .message pre code { background-color: transparent; padding: 0; border-radius: 0; }
+        .message blockquote { border-left: 3px solid #555; padding-left: 1em; margin-left: 0; color: #ccc; }
+        .message h1, .message h2, .message h3, .message h4, .message h5, .message h6 { margin-top: 1em; margin-bottom: 0.5em; }
+
+        /* Cost Display Styles (Now part of header flow) */
+        .cost-display {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            min-height: 46px; /* Match button height */
+            min-width: 120px; /* Keep minimum width */
+            flex-shrink: 0; /* Prevent cost display from shrinking */
+            cursor: pointer; /* Keep clickable for details */
+            transition: background-color 0.2s;
+            /* Removed position: fixed, top, right, z-index */
+            position: relative; /* Needed for absolute positioning of details? No, details are flex column */
+        }
+
+         .cost-display:hover {
+            background-color: #252525; /* Slight hover effect */
+        }
+
+        /* Style for the main visible total cost item */
+        .cost-display .cost-item#total-cost-item {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            width: 100%; /* Take full width */
+            justify-content: center; /* Center total cost */
+            margin-bottom: 4px; /* Space below total when details are hidden */
+        }
+
+        .cost-display .cost-label {
+            font-size: 11px;
+            opacity: 0.7;
+        }
+
+        .cost-display .cost-value {
+            font-weight: bold;
+            color: #4CAF50; /* Green color for total */
+        }
+
+        /* Container for detailed costs, hidden by default */
+        #cost-details {
+            display: none; /* Hidden by default */
+            flex-direction: column; /* Stack details vertically */
+            align-items: flex-start; /* Align details to the left */
+            gap: 2px; /* Small gap between detail lines */
+            width: 100%; /* Take full width */
+            margin-top: 6px; /* Space above details when shown */
+            border-top: 1px solid #333; /* Separator line */
+            padding-top: 6px; /* Space above first detail */
+        }
+
+        /* Style for individual detail items (LLM In, LLM Out, TTS) */
+        #cost-details .cost-item {
+            display: flex;
+            justify-content: space-between; /* Label left, value right */
+            width: 100%;
+            font-size: 11px; /* Smaller font for details */
+        }
+
+        #cost-details .cost-label {
+            opacity: 0.6; /* Slightly dimmer labels */
+        }
+
+        #cost-details .cost-value {
+            font-weight: normal; /* Normal weight for detail values */
+            color: #ccc; /* Lighter grey for detail values */
+            font-family: monospace; /* Monospace for alignment */
+        }
+        /* End Cost Display Styles */
+
+        /* Removed .controls CSS as the element is gone */
+
+        button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            font-family: inherit;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            border-radius: 25px; /* Add rounded corners */
+            height: 46px; /* Standard height */
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            border-width: 2px; /* Keep existing hover effect */
+            transform: scale(1.02);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+            border-width: 1px; /* Reset border width */
+        }
+
+
+        #audio-output {
+            display: none;
+        }
+
+        .icon-with-spinner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-width: 180px;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ffffff;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            flex-shrink: 0;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .pulse-circle {
+            width: 30px; /* Increased size */
+            height: 30px; /* Increased size */
+            border-radius: 50%;
+            background-color: red; /* Changed color to red */
+            opacity: 1; /* Keep fully opaque */
+            flex-shrink: 0;
+            /* Base scale set in JS, default to smaller size */
+            transform: scale(var(--audio-level, 0.8));
+            transition: transform 0.1s ease, background-color 0.2s ease; /* Add background-color transition */
+        }
+
+        .pulse-circle.muted { /* Style for muted state */
+            background-color: #666; /* Grey color when muted */
+            /* Hide the indicator when muted */
+            display: none;
+        }
+
+        /* Animation for message appearance */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px); /* Optional: slight slide up */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message-appear {
+            animation: fadeIn 0.3s ease-out forwards; /* Apply the animation */
+        }
+        /* End Animation */
+
+        /* Fix button layout */
+        button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            font-family: inherit;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .mute-toggle {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .mute-toggle svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* New styles for the indicator inside the mute button */
+        #mute-button .audio-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%; /* Adjust size relative to button */
+            height: 80%; /* Adjust size relative to button */
+            border-radius: 50%;
+            background-color: red;
+            opacity: var(--audio-level-opacity, 0); /* Controlled by JS */
+            transform: translate(-50%, -50%); /* Center it */
+            transition: opacity 0.1s ease;
+            z-index: 0; /* Behind the icon */
+        }
+
+        #mute-button.muted .audio-indicator {
+            opacity: 0 !important; /* Force hide when muted */
+        }
+
+        #mute-button .mute-toggle {
+            position: relative; /* Ensure icon is above indicator */
+            z-index: 1;
+        }
+        /* End new indicator styles */
+
+        /* Add styles for toast notifications */
+        .toast {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 16px 24px;
+            border-radius: 4px;
+            font-size: 14px;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .toast.error {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .toast.warning {
+            background-color: #ffd700;
+            color: black;
+        }
+
+        /* Helper class to visually hide labels but keep them accessible */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        /* End Voice Selection Styles */
+
+        /* Model selection styles */
+
+        /* Styles for the new Options button */
+        #options-button {
+            margin: 0;
+            white-space: nowrap;
+            padding: 12px; /* Square-ish */
+            min-width: 46px; /* Match height */
+            width: 46px; /* Fixed width */
+        }
+
+        /* Removed Custom Context Menu Styles */
+
+        /* Close Button Styles */
+        .close-button {
+            position: fixed; /* Position relative to the viewport */
+            top: 10px;
+            left: 10px;
+            width: 24px;
+            height: 24px;
+            background-color: #2a2a2a; /* Dark grey, matching other elements */
+            color: #fff;
+            border: none;
+            border-radius: 50%; /* Make it round */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1;
+            z-index: 1002; /* Ensure it's above context menu */
+            transition: background-color 0.2s;
+            padding: 0; /* Remove padding */
+            min-width: auto; /* Override min-width */
+            text-transform: none; /* Override text transform */
+            letter-spacing: normal; /* Override letter spacing */
+        }
+
+        .close-button:hover {
+            background-color: #444; /* Slightly lighter grey on hover */
+            transform: none; /* Override hover transform */
+            box-shadow: none; /* Override hover shadow */
+            border-width: 0; /* Override hover border */
+        }
+        /* End Close Button Styles */
+
+        /* Status Indicator Styles */
+        .status-indicator {
+            display: flex; /* Use flex for alignment */
+            align-items: center; /* Vertically center items */
+            justify-content: center; /* Horizontally center items */
+            gap: 8px; /* Space between spinner and text */
+            padding: 8px 15px; /* Padding */
+            /* Removed margin-bottom */
+            font-size: 14px; /* Font size */
+            color: #aaa; /* Text color */
+            background-color: #1a1a1a; /* Background similar to cost display */
+            border: 1px solid #2a2a2a; /* Border similar to cost display */
+            border-radius: 6px; /* Rounded corners */
+            /* Removed width: 100% */
+            box-sizing: border-box; /* Include padding in width */
+            height: 46px; /* Match button/cost display height */
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s ease-in-out; /* Smooth fade */
+            visibility: hidden; /* Ensure it doesn't take space when hidden */
+            flex-shrink: 0; /* Prevent shrinking */
+        }
+
+        .status-indicator.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .status-indicator .spinner {
+             /* Reuse existing spinner, adjust size if needed */
+             width: 16px;
+             height: 16px;
+             border-width: 2px; /* Match size */
+        }
+        /* End Status Indicator Styles */
+
+        /* Word Reveal Styles */
+        .reveal-word {
+            opacity: 0;
+            transition: opacity 0.15s ease-in-out; /* Smooth fade-in */
+            display: inline; /* Keep words inline */
+        }
+        .reveal-word.visible {
+            opacity: 1;
+        }
+        /* End Word Reveal Styles */
+
+        /* Replay Button Styles */
+        .message.assistant { /* Ensure .message.assistant still has position relative for the button */
+            position: relative;
+        }
+
+        .replay-button {
+            position: absolute;
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust for button height */
+            right: -40px; /* Position slightly to the right of the message bubble */
+            width: 36px; /* Increased size */
+            height: 36px; /* Increased size */
+            background-color: #333; /* Dark grey background */
+            color: #ccc; /* Light grey icon color */
+            border: 1px solid #444;
+            border-radius: 50%; /* Make it round */
+            cursor: pointer;
+            display: flex; /* Center icon */
+            align-items: center;
+            justify-content: center;
+            padding: 0; /* Remove default button padding */
+            opacity: 0; /* Hidden by default */
+            visibility: hidden; /* Hidden by default and not interactive */
+            transition: background-color 0.2s, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out; /* Updated transition */
+            z-index: 5; /* Ensure it's above message content */
+            /* Override general button styles */
+            min-width: auto;
+            text-transform: none;
+            letter-spacing: normal;
+            gap: 0;
+            font-size: 14px; /* Adjust icon size if needed */
+        }
+
+        .message-row.assistant-row:hover .replay-button { /* Changed selector */
+            opacity: 1; /* Show on parent row hover */
+            visibility: visible; /* Make interactive on parent row hover */
+        }
+
+        .replay-button:hover {
+            background-color: #444; /* Slightly lighter on hover */
+            color: #fff;
+            /* Override general button hover effects like scale, but maintain vertical centering */
+            transform: translateY(-50%); /* Maintain vertical centering */
+            box-shadow: none; /* Remove general button hover shadow */
+            border-width: 1px; /* Ensure border width remains consistent */
+        }
+
+        .replay-button svg {
+            width: 20px; /* Increased icon size */
+            height: 20px; /* Increased icon size */
+        }
+        /* End Replay Button Styles */
+
+        /* System Message Divider */
+        hr.system-divider {
+            border: none; /* Remove default border */
+            height: 1px; /* Set height */
+            background-color: #444; /* Color matching borders */
+            margin-top: 20px; /* Space above divider */
+            margin-bottom: 20px; /* Space below divider */
+            width: 90%; /* Make it slightly narrower than container */
+            margin-left: auto; /* Center it */
+            margin-right: auto;
+        }
+        /* End System Message Divider */
+
+        /* Style for 'Thinking' blockquotes */
+        .message.assistant blockquote {
+            border-left: 3px solid #888; /* Different border color */
+            color: #aaa; /* Dimmer text color */
+            background-color: #2a2a2a; /* Slightly different background */
+            padding: 0.5em 1em;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .message.assistant blockquote p { /* Ensure paragraphs inside blockquote have no extra margin */
+             margin: 0;
+        }
+        .message.assistant blockquote em { /* Style the 'Thinking:' part */
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Close Button -->
+    <button id="close-window-button" class="close-button" title="Close Application">&times;</button>
+    <!-- Add toast element after body opening tag -->
+    <div id="toast-notification" class="toast"></div> <!-- Renamed ID for clarity -->
+    <!-- Placeholder for system message from backend -->
+    <script id="system-message-data" type="application/json">__SYSTEM_MESSAGE_JSON__</script>
+    <!-- Placeholder for initial STT language from backend -->
+    <script id="stt-language-data" type="application/json">__STT_LANGUAGE_JSON__</script>
+    <!-- Placeholder for initial TTS speed from backend -->
+    <script id="tts-speed-data" type="application/json">__TTS_SPEED_JSON__</script>
+    <!-- Placeholder for startup timestamp from backend -->
+    <script id="startup-timestamp-data" type="application/json">__STARTUP_TIMESTAMP_STR__</script>
+    <!-- Placeholder for backend type -->
+    <script id="backend-type-data" type="application/json">__BACKEND_TYPE__</script>
+    <div class="container">
+        <div class="header">
+            <!-- New Main Row for Title, Cost, Controls -->
+            <div class="header-main-row">
+                <div class="title-container"> <!-- Container for title and version -->
+                    <h2>Simple Voice Chat</h2>
+                    <span class="app-version">v__APP_VERSION__</span> <!-- Version placeholder -->
+                </div>
+                <!-- New Wrapper for Cost Display and Controls -->
+                <div class="controls-and-cost-container">
+                    <!-- Cost Display (Moved Here) -->
+                    <div class="cost-display" id="cost-display" title="Click to toggle cost details">
+                        <!-- Always Visible: Total Cost -->
+                        <div class="cost-item" id="total-cost-item">
+                            <span class="cost-value" id="total-cost">$0.000000</span>
+                        </div>
+                        <!-- Hidden by default: Detailed Costs -->
+                        <div id="cost-details">
+                            <div class="cost-item">
+                                <span class="cost-label">LLM Input:</span>
+                                <span class="cost-value" id="input-cost">0.000000</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">LLM Output:</span>
+                                <span class="cost-value" id="output-cost">0.000000</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">TTS:</span>
+                                <span class="cost-value" id="tts-cost">0.000000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Cost Display -->
+                    <!-- Status Indicator Moved Here -->
+                    <div class="status-indicator" id="status-indicator">
+                        <div class="spinner" id="status-spinner" style="display: none;"></div>
+                        <span id="status-text"></span>
+                    </div>
+                    <!-- End Status Indicator -->
+                    <!-- Original Controls Container -->
+                    <div class="controls-container">
+                        <!-- Options Button (Icon Only) -->
+                        <button id="options-button" title="Show/Hide Options (Shift+S)"></button> <!-- Icon set by JS -->
+                        <!-- Clear Chat Button (Icon Only) -->
+                        <button id="clear-chat-button" title="Clear Chat History (Ctrl+R)"></button> <!-- Icon set by JS -->
+                        <!-- Mute Area now also contains the start button -->
+                        <div id="mute-area"> <!-- Removed initial display: none; JS will handle visibility -->
+                            <!-- Mute controls (initially hidden by JS) -->
+                            <!-- Removed pulse-circle div -->
+                            <button id="mute-button" title="Toggle Mute (M)" style="display: none;">
+                                <!-- Indicator span added inside the button -->
+                                <span class="audio-indicator"></span>
+                                <!-- Icon will be added here by JS -->
+                            </button>
+                        </div>
+                    </div>
+                    <!-- End Original Controls Container -->
+                </div>
+                <!-- End Controls and Cost Container -->
+            </div>
+            <!-- End Header Main Row -->
+
+            <!-- Options Row (Remains separate, below the main row) -->
+            <div id="options-row">
+                 <!-- Model Selection Input with Datalist -->
+                 <div class="select-container"> <!-- Reusing container for layout -->
+                    <label for="model-input" class="visually-hidden">Select Model:</label>
+                    <input type="text" id="model-input" list="model-suggestions" class="styled-select" placeholder="Type to search models..." title="Select the Large Language Model (LLM) for conversation."> <!-- Reusing styled-select class for now -->
+                    <datalist id="model-suggestions">
+                        <!-- Options will be populated by JS -->
+                    </datalist>
+                </div>
+                <!-- End Model Selection Input -->
+                <!-- Voice Selection Input with Datalist -->
+                <div class="select-container"> <!-- Reusing container for layout -->
+                   <label for="voice-input" class="visually-hidden">Select Voice:</label>
+                   <input type="text" id="voice-input" list="voice-suggestions" class="styled-select" placeholder="Type to search voices..." title="Select the Text-to-Speech (TTS) voice for the AI assistant."> <!-- Reusing styled-select class -->
+                   <datalist id="voice-suggestions">
+                       <!-- Options will be populated by JS -->
+                   </datalist>
+               </div>
+               <!-- End Voice Selection Input -->
+               <!-- STT Language Input -->
+               <div class="select-container"> <!-- Reusing container for layout -->
+                   <label for="stt-language-input" class="visually-hidden">STT Language:</label>
+                   <input type="text" id="stt-language-input" class="styled-select" placeholder="STT Language (e.g., en)" title="Specify the language for Speech-to-Text (STT). Leave blank for auto-detection."> <!-- Reusing styled-select class -->
+               </div>
+               <!-- End STT Language Input -->
+               <!-- TTS Speed Input -->
+               <div class="select-container"> <!-- Reusing container for layout -->
+                   <label for="tts-speed-input" class="visually-hidden">TTS Speed:</label>
+                   <input type="number" id="tts-speed-input" class="styled-select" placeholder="TTS Speed (0.1-4.0)" min="0.1" max="4.0" step="0.1" title="Adjust the Text-to-Speech (TTS) speed (0.1 to 4.0). 1.0 is normal speed."> <!-- Reusing styled-select class -->
+               </div>
+               <!-- End TTS Speed Input -->
+               <!-- Debug Button Removed -->
+           </div>
+           <!-- End Options Row -->
+       </div>
+
+        <div class="chat-container">
+            <div class="chat-messages" id="chat-messages"></div>
+            <!-- Status Indicator is now in the header -->
+        </div>
+        <!-- Removed empty controls div -->
+    </div>
+    <audio id="audio-output"></audio> <!-- For WebRTC stream -->
+    <audio id="tts-playback-audio"></audio> <!-- For TTS file playback (replay) -->
+
+    <!-- Removed Custom Context Menu HTML -->
+
+    <!-- Removed extra closing divs and duplicate audio tag -->
+
+    <script>
+        let peerConnection;
+        let webrtc_id;
+        let isMuted = false;
+        let selectedModel = ''; 
+        let selectedVoice = ""; 
+        let selectedSttLanguage = ""; 
+        let selectedTtsSpeed = 1.0; 
+        let startupTimestampStr = ""; 
+        let chatbotHistory = []; 
+        let cumulativeInputCost = 0.0; 
+        let cumulativeOutputCost = 0.0; 
+        let cumulativeTtsCost = 0.0; 
+        let cumulativeTotalCost = 0.0; 
+        let currentBackend = "classic"; // Default, will be replaced by backend injection
+
+        // --- WebRTC Setup State ---
+        let webRtcSetupRetryTimeout = null; 
+        const WEBRTC_SETUP_RETRY_DELAY = 1000; 
+
+        // --- UI Zoom State ---
+        let currentZoomLevel = 1.0; 
+        const zoomStep = 0.1; 
+        const minZoom = 0.5;  
+        const maxZoom = 2.0;  
+        const zoomLocalStorageKey = 'uiZoomLevel';
+
+        // --- Model Fuzzy Search State ---
+        let modelSearchQuery = '';
+        let modelSearchTimeout = null;
+        let allModelOptions = []; 
+        // --- End Model Fuzzy Search State ---
+
+        // --- Voice Fuzzy Search State ---
+        let voiceSearchQuery = '';
+        let voiceSearchTimeout = null;
+        let allVoiceOptions = []; 
+        // --- End Voice Fuzzy Search State ---
+
+
+        // --- UI Zoom Functions ---
+        function applyZoom(level) {
+            document.body.style.zoom = level;
+            console.debug(`Zoom level set to: ${level}`);
+        }
+
+        function loadZoomLevel() {
+            const savedZoom = localStorage.getItem(zoomLocalStorageKey);
+            if (savedZoom) {
+                const newZoom = parseFloat(savedZoom);
+                if (!isNaN(newZoom) && newZoom >= minZoom && newZoom <= maxZoom) {
+                    currentZoomLevel = newZoom;
+                }
+            }
+            applyZoom(currentZoomLevel);
+        }
+
+        function saveZoomLevel() {
+            localStorage.setItem(zoomLocalStorageKey, currentZoomLevel.toString());
+        }
+        // --- End UI Zoom Functions ---
+
+        const audioOutput = document.getElementById('audio-output'); 
+        const ttsPlaybackAudio = document.getElementById('tts-playback-audio'); 
+        const muteArea = document.getElementById('mute-area');
+        const muteButton = document.getElementById('mute-button');
+        const chatMessages = document.getElementById('chat-messages');
+        const modelInput = document.getElementById('model-input');
+        const modelSuggestions = document.getElementById('model-suggestions');
+        const voiceInput = document.getElementById('voice-input'); 
+        const voiceSuggestions = document.getElementById('voice-suggestions'); 
+        const sttLanguageInput = document.getElementById('stt-language-input'); 
+        const ttsSpeedInput = document.getElementById('tts-speed-input'); 
+        const optionsButton = document.getElementById('options-button'); 
+        const optionsRow = document.getElementById('options-row'); 
+        const clearChatButton = document.getElementById('clear-chat-button');
+        const statusIndicator = document.getElementById('status-indicator');
+        const statusSpinner = document.getElementById('status-spinner');
+        const statusText = document.getElementById('status-text'); 
+        const toastElement = document.getElementById('toast-notification'); 
+        const costDisplayContainer = document.getElementById('cost-display'); 
+        const costDetails = document.getElementById('cost-details'); 
+        let currentAudioQueue = []; 
+        let isReplaying = false; 
+
+        ttsPlaybackAudio.addEventListener('ended', () => {
+            console.log("TTS playback audio finished playing.");
+            if (isReplaying && currentAudioQueue.length > 0) {
+                playNextInQueue();
+            } else {
+                isReplaying = false; 
+                console.log("Replay sequence finished or queue empty.");
+            }
+        });
+
+        marked.setOptions({
+          breaks: true,
+          gfm: true 
+        });
+
+        let audioLevel = 0;
+        let animationFrame;
+        let audioContext, analyser, audioSource;
+        let notificationAudioContext; 
+
+        function renderSystemMessageUI(content) {
+            if (content && content.trim() !== '') {
+                const messageRow = document.createElement('div'); 
+                messageRow.classList.add('message-row', 'system-row'); 
+                messageRow.classList.add('assistant-row');
+
+
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message', 'system');
+                messageDiv.innerHTML = marked.parse(content);
+                messageRow.appendChild(messageDiv);
+                chatMessages.appendChild(messageRow);
+
+
+                const divider = document.createElement('hr');
+                divider.classList.add('system-divider');
+                chatMessages.appendChild(divider);
+            }
+        }
+
+        function playNotificationSound() {
+            try {
+                if (!notificationAudioContext) {
+                    notificationAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+                }
+
+                if (notificationAudioContext.state === 'suspended') {
+                    notificationAudioContext.resume();
+                }
+
+                const oscillator = notificationAudioContext.createOscillator();
+                const gainNode = notificationAudioContext.createGain();
+
+                oscillator.connect(gainNode);
+                gainNode.connect(notificationAudioContext.destination);
+
+                oscillator.type = 'sine'; 
+                oscillator.frequency.setValueAtTime(880, notificationAudioContext.currentTime); 
+                gainNode.gain.setValueAtTime(0.3, notificationAudioContext.currentTime); 
+                gainNode.gain.exponentialRampToValueAtTime(0.001, notificationAudioContext.currentTime + 0.3); 
+
+                oscillator.start(notificationAudioContext.currentTime);
+                oscillator.stop(notificationAudioContext.currentTime + 0.3); 
+                console.debug("Played notification sound.");
+
+            } catch (error) {
+                console.error("Error playing notification sound:", error);
+            }
+        }
+
+
+        function displayInitialSystemMessage() {
+            const systemMessageDataElement = document.getElementById('system-message-data');
+            if (systemMessageDataElement) {
+                try {
+                    const systemMessageContent = JSON.parse(systemMessageDataElement.textContent || '""');
+                    if (systemMessageContent && systemMessageContent.trim() !== '') {
+                        console.log("Processing initial system message.");
+                        renderSystemMessageUI(systemMessageContent); 
+                        scrollToBottom(); 
+
+                        if (!chatbotHistory.some(msg => msg.role === 'system' && msg.content === systemMessageContent)) {
+                             chatbotHistory.push({ role: 'system', content: systemMessageContent });
+                             console.debug("Added initial system message to chatbotHistory.");
+                        } else {
+                             console.debug("Initial system message already in chatbotHistory.");
+                        }
+                    } else {
+                        console.log("No initial system message content found.");
+                    }
+                } catch (error) {
+                    console.error("Error parsing system message data:", error);
+                }
+            } else {
+                console.warn("System message data element not found.");
+            }
+        }
+
+        const MODEL_PRICING = {};
+
+
+        const micIconSVG = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>`;
+
+        const micMutedIconSVG = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+            </svg>`;
+
+       const trashIconSVG = `
+           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <polyline points="3 6 5 6 21 6"></polyline>
+               <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+               <line x1="10" y1="11" x2="10" y2="17"></line>
+               <line x1="14" y1="11" x2="14" y2="17"></line>
+           </svg>`;
+
+        const debugIconSVG = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 10a4 4 0 0 0-8 0"></path>
+                <path d="M1.9 13.4a8 8 0 0 0 3.7 3.7"></path>
+                <path d="M8.6 22.1a8 8 0 0 0 6.8 0"></path>
+                <path d="M22.1 13.4a8 8 0 0 0-3.7-3.7"></path>
+                <path d="M15.4 1.9a8 8 0 0 0-6.8 0"></path>
+                <path d="M12 4v2"></path>
+                <path d="m6.6 7.4-1.4 1.4"></path>
+                <path d="M2 12h2"></path>
+                <path d="m6.6 16.6 1.4 1.4"></path>
+                <path d="M12 20v2"></path>
+                <path d="m17.4 16.6 1.4-1.4"></path>
+                <path d="M22 12h-2"></path>
+                <path d="m17.4 7.4-1.4-1.4"></path>
+            </svg>`;
+
+        const optionsIconSVG = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>`;
+
+        const replayIconSVG = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2v6h-6"></path>
+                <path d="M2.5 22v-6h6"></path>
+                <path d="M2 12a10 10 0 0 1 10-10c1.67 0 3.24.4 4.65 1.14"></path>
+                <path d="M22 12a10 10 0 0 1-10 10c-1.67 0-3.24-.4-4.65-1.14"></path>
+            </svg>`;
+
+        function initializeBackendType() {
+            const backendDataElement = document.getElementById('backend-type-data');
+            if (backendDataElement) {
+                try {
+                    currentBackend = JSON.parse(backendDataElement.textContent || '"classic"');
+                    console.log(`Initialized current backend: "${currentBackend}"`);
+                } catch (error) {
+                    console.error("Error parsing backend type data:", error);
+                    currentBackend = "classic"; // Fallback
+                }
+            } else {
+                console.warn("Backend type data element not found. Defaulting to 'classic'.");
+                currentBackend = "classic"; // Fallback
+            }
+        }
+
+
+        function updateButtonState() {
+            const isConnecting = peerConnection && (peerConnection.connectionState === 'connecting' || peerConnection.connectionState === 'new');
+            const isConnected = peerConnection && peerConnection.connectionState === 'connected';
+            const isDisconnected = !peerConnection || ['disconnected', 'failed', 'closed'].includes(peerConnection.connectionState);
+            const isClassicBackend = currentBackend === 'classic';
+
+            muteArea.style.display = 'flex';
+            muteArea.style.alignItems = 'center';
+            muteArea.style.justifyContent = 'center';
+            muteButton.style.display = isConnected ? 'inline-flex' : 'none';
+
+            // Enable/Disable controls based on connection state AND backend type
+            // For OpenAI backend, modelInput might list only realtime models or be simplified.
+            // `allModelOptions` is populated by `fetchAndPopulateModels` which gets backend-specific models.
+            modelInput.disabled = !isConnected || (currentBackend === 'openai' && (!allModelOptions || allModelOptions.length === 0 || !allModelOptions.some(opt => opt.value.includes('realtime'))));
+            voiceInput.disabled = !isConnected; // Voice input enabled if connected, specific voices populated by fetchAndPopulateVoices
+            sttLanguageInput.disabled = !isConnected; // STT language relevant for both
+            ttsSpeedInput.disabled = !isConnected || !isClassicBackend; // TTS Speed only for classic
+            clearChatButton.disabled = !isConnected;
+            optionsButton.disabled = !isConnected;
+
+
+            clearChatButton.style.display = isConnected ? 'inline-flex' : 'none';
+            optionsButton.style.display = isConnected ? 'inline-flex' : 'none';
+            costDisplayContainer.style.display = isConnected ? 'flex' : 'none';
+
+
+            if (isConnected) {
+                updateStatusIndicator('idle'); 
+
+                let indicatorSpan = muteButton.querySelector('.audio-indicator');
+                if (!indicatorSpan) {
+                    indicatorSpan = document.createElement('span');
+                    indicatorSpan.className = 'audio-indicator';
+                    muteButton.insertBefore(indicatorSpan, muteButton.firstChild);
+                } else {
+                    if (muteButton.firstChild !== indicatorSpan) {
+                        muteButton.insertBefore(indicatorSpan, muteButton.firstChild);
+                    }
+                }
+
+                const existingMicIcons = muteButton.querySelectorAll('.mute-toggle');
+                existingMicIcons.forEach(icon => icon.remove());
+
+                const micIcon = document.createElement('div');
+                micIcon.className = 'mute-toggle';
+                micIcon.innerHTML = isMuted ? micMutedIconSVG : micIconSVG;
+                muteButton.appendChild(micIcon);
+
+                if (isMuted) {
+                    muteButton.classList.add('muted');
+                } else {
+                    muteButton.classList.remove('muted');
+                }
+
+            } else { 
+                muteButton.style.display = 'none';
+                muteButton.classList.remove('muted'); 
+
+                modelInput.disabled = true;
+                voiceInput.disabled = true;
+                sttLanguageInput.disabled = true;
+                ttsSpeedInput.disabled = true; 
+                clearChatButton.disabled = true;
+                optionsButton.disabled = true;
+
+                clearChatButton.style.display = 'none';
+                optionsButton.style.display = 'none';
+                costDisplayContainer.style.display = 'none';
+
+                if (isConnecting) {
+                    updateStatusIndicator('connecting', 'Connecting...');
+                } else if (isDisconnected) {
+                    if (peerConnection && ['disconnected', 'failed', 'closed'].includes(peerConnection.connectionState)) {
+                        updateStatusIndicator('disconnected', 'Disconnected');
+                    } else {
+                         updateStatusIndicator('idle'); 
+                    }
+                }
+            }
+
+            muteButton.title = isMuted ? "Unmute (M)" : "Mute (M)";
+
+            if (isConnected) {
+                optionsButton.innerHTML = ''; 
+                const optionsIconEl = document.createElement('div'); // Renamed to avoid conflict
+                optionsIconEl.style.width = '20px'; 
+                optionsIconEl.style.height = '20px';
+                optionsIconEl.innerHTML = optionsIconSVG;
+                optionsButton.appendChild(optionsIconEl);
+
+                clearChatButton.innerHTML = ''; 
+                const trashIconEl = document.createElement('div'); // Renamed
+                trashIconEl.style.width = '20px'; 
+                trashIconEl.style.height = '20px';
+                trashIconEl.innerHTML = trashIconSVG;
+                clearChatButton.appendChild(trashIconEl);
+            } else {
+                optionsButton.innerHTML = '';
+                clearChatButton.innerHTML = '';
+            }
+            
+            // Hide/show options based on backend
+            if (currentBackend === 'openai') {
+                // Voice input parent element will be displayed by default if optionsRow is visible.
+                // fetchAndPopulateVoices will correctly populate it for OpenAI backend.
+                if (ttsSpeedInput.parentElement) ttsSpeedInput.parentElement.style.display = 'none';
+                // Cost display for OpenAI realtime
+                costDetails.style.display = 'none';
+                document.getElementById('input-cost').textContent = 'N/A';
+                document.getElementById('output-cost').textContent = 'N/A';
+                document.getElementById('tts-cost').textContent = 'N/A';
+                document.getElementById('total-cost').textContent = 'N/A (OpenAI Realtime)';
+            } else { // classic backend
+                if (voiceInput.parentElement) voiceInput.parentElement.style.display = 'flex';
+                if (ttsSpeedInput.parentElement) ttsSpeedInput.parentElement.style.display = 'flex';
+                // Cost display will be updated by cost_update events for classic
+            }
+        }
+
+
+        function toggleMute() {
+            if (!peerConnection || peerConnection.connectionState !== 'connected') return;
+
+            isMuted = !isMuted;
+            console.log("Mute toggled:", isMuted);
+
+            peerConnection.getSenders().forEach(sender => {
+                if (sender.track && sender.track.kind === 'audio') {
+                    sender.track.enabled = !isMuted;
+                    console.log(`Audio track ${sender.track.id} enabled: ${!isMuted}`);
+                }
+            });
+
+            if (isMuted) {
+                muteButton.classList.add('muted');
+            } else {
+                muteButton.classList.remove('muted');
+            }
+            if (!isMuted) {
+                playNotificationSound();
+            }
+            updateButtonState();
+        }
+
+        function setupAudioVisualization(stream) {
+            if (audioContext) { 
+                audioContext.close();
+            }
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            analyser = audioContext.createAnalyser();
+            try {
+                audioSource = audioContext.createMediaStreamSource(stream);
+                audioSource.connect(analyser);
+                analyser.fftSize = 64;
+                const dataArray = new Uint8Array(analyser.frequencyBinCount);
+
+                function updateAudioLevel() {
+                    if (!analyser) return; 
+                    analyser.getByteFrequencyData(dataArray);
+                    const average = Array.from(dataArray).reduce((a, b) => a + b, 0) / dataArray.length;
+                    const sensitivityFactor = 3.5; 
+                    audioLevel = Math.min(1, (average / 255) * sensitivityFactor);
+
+                    const indicatorSpan = muteButton.querySelector('.audio-indicator');
+                    if (indicatorSpan) {
+                        const minOpacity = 0.15; 
+                        const opacity = isMuted ? 0 : minOpacity + audioLevel * (1 - minOpacity);
+                        indicatorSpan.style.setProperty('--audio-level-opacity', opacity);
+                    }
+                    animationFrame = requestAnimationFrame(updateAudioLevel);
+                }
+                updateAudioLevel();
+            } catch (error) {
+                console.error("Error setting up audio source for visualization:", error);
+                showToast("Could not visualize audio.", "error");
+                if (audioContext) audioContext.close(); 
+                audioContext = null;
+            }
+        }
+
+        function updateStatusIndicator(status, message = '') {
+            if (!statusIndicator || !statusSpinner || !statusText) return;
+
+            if (status === 'idle' || !status) {
+                statusIndicator.classList.remove('visible');
+                statusSpinner.style.display = 'none';
+                statusText.textContent = '';
+            } else {
+                statusText.textContent = message || status; 
+                statusSpinner.style.display = (status === 'stt_processing' || status === 'llm_waiting' || status === 'tts_processing' || status === 'connecting') ? 'block' : 'none';
+                statusIndicator.classList.add('visible');
+            }
+             console.debug(`Status updated: ${status} - "${message}"`);
+        }
+
+
+        function showToast(message, type = 'error') { 
+            toastElement.textContent = message;
+            toastElement.className = `toast ${type}`; 
+            toastElement.style.display = 'block';
+
+            setTimeout(() => {
+                toastElement.style.display = 'none';
+            }, 5000);
+        }
+
+        async function setupWebRTC() {
+            updateStatusIndicator('connecting', 'Initializing...'); 
+
+            const config = __RTC_CONFIGURATION__;
+            if (!config) {
+                 console.warn("RTC Configuration is missing. Using default (may not work with TURN).");
+            }
+            try {
+                const RTCPeerConnection = window.RTCPeerConnection || window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
+                if (!RTCPeerConnection) {
+                    throw new ReferenceError("RTCPeerConnection is not supported by this browser/webview.");
+                }
+                peerConnection = new RTCPeerConnection(config);
+            } catch (error) {
+                console.error("Failed to create RTCPeerConnection:", error);
+                showToast("Failed to initialize connection. WebRTC might not be supported.", "error");
+                updateButtonState(); 
+                updateStatusIndicator('error', 'Connection Init Failed'); 
+                return; 
+            }
+
+            const timeoutId = setTimeout(() => {
+                showToast("Connection is taking longer than usual. Check network/VPN.", "warning");
+            }, 7000); 
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    audio: true
+                });
+
+                setupAudioVisualization(stream);
+
+                stream.getTracks().forEach(track => {
+                    try {
+                        peerConnection.addTrack(track, stream);
+                    } catch (trackError) {
+                         console.error(`Error adding track ${track.kind} (${track.id}):`, trackError);
+                    }
+                });
+
+                peerConnection.addEventListener('track', (evt) => {
+                    console.log("Received remote track:", evt.track.kind);
+                    if (evt.track.kind === 'audio' && audioOutput.srcObject !== evt.streams[0]) {
+                        console.log("Assigning remote audio stream to output element.");
+                        audioOutput.srcObject = evt.streams[0];
+                        audioOutput.play().catch(e => console.error("Audio play failed:", e));
+                    }
+                });
+
+                peerConnection.onicecandidate = ({ candidate }) => {
+                    if (candidate) {
+                        console.debug("Sending ICE candidate:", candidate.type, candidate.sdpMLineIndex);
+                        fetch('/webrtc/offer', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                candidate: candidate.toJSON(),
+                                webrtc_id: webrtc_id,
+                                type: "ice-candidate",
+                            })
+                        }).catch(iceError => console.error("Error sending ICE candidate:", iceError));
+                    } else {
+                        console.debug("All ICE candidates sent.");
+                    }
+                };
+
+                try {
+                    const dataChannel = peerConnection.createDataChannel('control');
+                    dataChannel.onmessage = (event) => {
+                        try {
+                            const eventJson = JSON.parse(event.data);
+                            console.log("Data channel message received:", eventJson);
+                            if (eventJson.type === "error") {
+                                showToast(`Server Error: ${eventJson.message}`, "error");
+                            }
+                        } catch (parseError) {
+                            console.warn("Received non-JSON message on data channel:", event.data);
+                        }
+                    };
+                    dataChannel.onerror = (error) => {
+                         console.error("Data channel error:", error);
+                    };
+                    dataChannel.onclose = () => {
+                         console.log("Data channel closed.");
+                    };
+                     dataChannel.onopen = () => {
+                         console.log("Data channel opened.");
+                     };
+                } catch (dcError) {
+                     console.error("Error creating data channel:", dcError);
+                }
+
+
+                const offer = await peerConnection.createOffer();
+                await peerConnection.setLocalDescription(offer);
+
+                peerConnection.addEventListener('connectionstatechange', () => {
+                    console.log('Connection state changed:', peerConnection.connectionState);
+                    clearTimeout(timeoutId); 
+
+                    if (peerConnection.connectionState === 'connected') {
+                        if (toastElement.classList.contains('warning')) {
+                             toastElement.style.display = 'none';
+                             toastElement.className = 'toast'; 
+                        }
+                        muteButton.addEventListener('click', toggleMute);
+                        sendInputHook();
+                        playNotificationSound(); // Play sound on successful connection
+                    } else if (['failed', 'closed', 'disconnected'].includes(peerConnection.connectionState)) {
+                         muteButton.removeEventListener('click', toggleMute);
+                         if (peerConnection.connectionState === 'failed') {
+                             showToast("Connection failed.", "error");
+                         } else if (peerConnection.connectionState === 'disconnected') {
+                             showToast("Connection lost.", "warning");
+                         }
+                         stop(); 
+                    }
+                    updateButtonState(); 
+                });
+
+                webrtc_id = Math.random().toString(36).substring(7);
+                console.log(`Generated WebRTC ID: ${webrtc_id}`);
+
+                const response = await fetch('/webrtc/offer', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sdp: peerConnection.localDescription.sdp,
+                        type: peerConnection.localDescription.type,
+                        webrtc_id: webrtc_id
+                    })
+                });
+
+                if (!response.ok) {
+                    let errorMsg = `Offer request failed: ${response.status}`;
+                    try {
+                        const errorData = await response.json();
+                        errorMsg += ` - ${errorData.detail || errorData.message || JSON.stringify(errorData)}`;
+                    } catch (e) { /* Ignore */ }
+                    throw new Error(errorMsg);
+                }
+
+                const serverResponse = await response.json();
+
+                if (serverResponse.status === 'failed') {
+                    const errorDetail = serverResponse.meta?.error || 'Unknown server error';
+                    const limit = serverResponse.meta?.limit;
+                    showToast(errorDetail === 'concurrency_limit_reached'
+                        ? `Too many connections. Limit: ${limit}`
+                        : `Server Error: ${errorDetail}`, "error");
+                    stop();
+                    return;
+                }
+
+                if (!serverResponse.sdp || !serverResponse.type) {
+                     throw new Error("Server response missing SDP or type");
+                }
+
+                await peerConnection.setRemoteDescription(serverResponse);
+                console.log("Remote description set successfully.");
+                setupEventSource();
+
+            } catch (err) {
+                clearTimeout(timeoutId); 
+                console.error('Error during WebRTC setup:', err);
+                updateStatusIndicator('idle'); 
+
+                let userMessage = 'Failed to establish connection. Please try again.';
+                if (err instanceof DOMException) {
+                    console.error(`DOMException: ${err.name} - ${err.message}`);
+                    if (err.name === 'NotFoundError' || err.name === 'DevicesNotFoundError') {
+                        userMessage = 'No microphone found. Retrying in 1 second...';
+                        showToast(userMessage, "warning"); 
+                        updateStatusIndicator('connecting', 'Mic not found, retrying...');
+                        if (webRtcSetupRetryTimeout) clearTimeout(webRtcSetupRetryTimeout);
+                        webRtcSetupRetryTimeout = setTimeout(setupWebRTC, WEBRTC_SETUP_RETRY_DELAY);
+                        return; 
+                    } else if (err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError') {
+                        userMessage = 'Microphone access denied. Please grant permission in browser settings.';
+                    } else if (err.name === 'OperationError') {
+                         userMessage = `Operation Error: ${err.message}. Try restarting the browser or device.`;
+                    } else {
+                        userMessage = `Microphone Access Error: ${err.name}. Check permissions/hardware.`;
+                    }
+                } else if (err.message.includes("Offer request failed")) {
+                    userMessage = `Connection setup failed: ${err.message.split(': ')[1]}`;
+                } else if (err.message.includes("Server response missing SDP")) {
+                     userMessage = "Received invalid response from server.";
+                }
+                showToast(userMessage, "error");
+                stop(); 
+            }
+        }
+
+        let eventSource = null; 
+
+        function formatCostDisplay(costValue) {
+            if (typeof costValue !== 'number' || isNaN(costValue)) {
+                return 'N/A'; 
+            }
+            let costString = costValue.toFixed(6);
+            if (Math.abs(costValue) < 1e-9) {
+                return '0.0';
+            }
+            costString = costString.replace(/(\.[0-9]*[1-9])0+$/, '$1'); 
+            costString = costString.replace(/\.0+$/, '.0'); 
+            return costString;
+        }
+
+
+        function setupEventSource() {
+            if (eventSource) {
+                eventSource.close(); 
+            }
+            console.log(`Setting up EventSource for webrtc_id: ${webrtc_id}`);
+            eventSource = new EventSource('/outputs?webrtc_id=' + webrtc_id);
+
+            eventSource.onmessage = (event) => {
+                console.warn("Received generic message event (should use named events):", event.data);
+                try {
+                    const eventJson = JSON.parse(event.data);
+                    handleEventData(eventJson); // Assuming handleEventData exists or is added
+                } catch (error) {
+                    console.error("Error processing generic SSE message:", error, "Raw data:", event.data);
+                }
+            };
+
+            eventSource.addEventListener("status_update", (event) => {
+                try {
+                    const eventJson = JSON.parse(event.data);
+                    console.log("Status update event received:", eventJson);
+                    updateStatusIndicator(eventJson.status, eventJson.message); 
+                } catch (error) {
+                    console.error("Error processing status_update event:", error, "Raw data:", event.data);
+                }
+            });
+
+            eventSource.addEventListener("cost_update", (event) => {
+                if (currentBackend === 'openai') {
+                    console.log("Cost update event received for OpenAI backend, but not processed.");
+                    document.getElementById('total-cost').textContent = 'N/A (OpenAI Realtime)';
+                    costDetails.style.display = 'none';
+                    return;
+                }
+                try {
+                    const eventJson = JSON.parse(event.data);
+                    console.log("Cost update event received:", eventJson);
+                    updateCostDisplay(eventJson.data); 
+                } catch (error) {
+                    console.error("Error processing cost_update event:", error, "Raw data:", event.data);
+                }
+            });
+
+            eventSource.addEventListener("chatbot_update", (event) => {
+                try {
+                    const eventJson = JSON.parse(event.data);
+                    console.log("Chatbot update event received:", eventJson);
+                    addMessage(eventJson.message.role, eventJson.message.content, true); 
+
+                    if (eventJson.message.role === 'assistant') {
+                         updateStatusIndicator('idle');
+                    }
+                } catch (error) {
+                    console.error("Error processing chatbot_update event:", error, "Raw data:", event.data);
+                     updateStatusIndicator('idle'); 
+                }
+            });
+
+            eventSource.addEventListener("text_chunk_update", (event) => {
+                try {
+                    const eventJson = JSON.parse(event.data);
+                    if (statusIndicator.classList.contains('visible') && statusText.textContent.includes('Waiting for AI')) {
+                         updateStatusIndicator('idle'); 
+                    }
+                    appendAssistantMessageChunk(eventJson.content); 
+                } catch (error) {
+                    console.error("Error processing text_chunk_update event:", error, "Raw data:", event.data);
+                     updateStatusIndicator('idle'); 
+                }
+            });
+
+             eventSource.addEventListener("error_event", (event) => { 
+                try {
+                    const eventJson = JSON.parse(event.data);
+                    console.error("Received error event from backend via SSE:", eventJson.message);
+                    showToast(`Backend Error: ${eventJson.message}`, "error");
+                } catch (error) {
+                    console.error("Error processing error_event:", error, "Raw data:", event.data);
+                }
+            });
+
+            eventSource.addEventListener("final_chatbot_state", (event) => {
+                try {
+                    const eventJson = JSON.parse(event.data);
+                    console.log("Final chatbot state event received:", eventJson);
+                    if (eventJson.history && Array.isArray(eventJson.history)) {
+                        // For OpenAI backend, history might be empty, client relies on its own build-up.
+                        // For classic backend, this is the definitive history.
+                        if (currentBackend === 'classic' || (currentBackend === 'openai' && eventJson.history.length > 0) ) {
+                             chatbotHistory = eventJson.history; 
+                             console.debug("Updated chatbotHistory from final_chatbot_state:", chatbotHistory);
+                        } else if (currentBackend === 'openai' && eventJson.history.length === 0) {
+                            console.debug("OpenAI backend: final_chatbot_state received with empty history. Client will use its locally constructed history for input_hook.");
+                        }
+
+
+                        const lastAssistantMsgIndex = chatbotHistory.slice().reverse().findIndex(msg => msg.role === 'assistant');
+                        if (lastAssistantMsgIndex !== -1) {
+                            const finalAssistantMsg = chatbotHistory[chatbotHistory.length - 1 - lastAssistantMsgIndex];
+                            const audioFiles = finalAssistantMsg.metadata?.tts_audio_file_paths;
+
+                            const messageDivs = chatMessages.querySelectorAll('.message.assistant');
+                            const lastMessageDiv = messageDivs[messageDivs.length - 1]; 
+
+                            if (lastMessageDiv && audioFiles && audioFiles.length > 0) {
+                                lastMessageDiv.dataset.audioFiles = JSON.stringify(audioFiles);
+                                console.debug(`Stored audio filenames on last assistant message div:`, audioFiles);
+                            } else if (lastMessageDiv) {
+                                console.debug("No audio files found in metadata for the last assistant message.");
+                                delete lastMessageDiv.dataset.audioFiles;
+                            }
+                        }
+                        sendInputHook();
+                    } else {
+                        console.warn("Received final_chatbot_state event without valid history array.");
+                    }
+                } catch (error) {
+                    console.error("Error processing final_chatbot_state event:", error, "Raw data:", event.data);
+                }
+            });
+
+
+            eventSource.onerror = (error) => {
+                console.error("EventSource error:", error);
+                if (eventSource.readyState === EventSource.CLOSED) {
+                    console.warn("EventSource connection closed.");
+                }
+            };
+
+             eventSource.onopen = () => {
+                 console.log("EventSource connection opened.");
+             };
+        }
+
+
+        function updateCostDisplay(costData) {
+            console.log("Received cost data for display:", costData); 
+
+            if (!costData || typeof costData !== 'object') {
+                console.error("Invalid or missing cost data received.");
+                document.getElementById('input-cost').textContent = 'Err';
+                // document.getElementById('cached-cost').textContent = 'Err'; // Removed
+                document.getElementById('output-cost').textContent = 'Err';
+                document.getElementById('tts-cost').textContent = 'Err'; 
+                document.getElementById('total-cost').textContent = 'Err';
+                return;
+            }
+
+            try {
+                let currentInputCost = 0.0;
+                let currentOutputCost = 0.0;
+                let currentTtsCost = 0.0; 
+                let calculationError = false;
+
+                if (costData.error) {
+                    console.warn(`Cost calculation error from backend: ${costData.error}`);
+                    document.getElementById('input-cost').textContent = 'N/A';
+                    // document.getElementById('cached-cost').textContent = 'N/A'; // Removed
+                    document.getElementById('output-cost').textContent = 'N/A';
+                    calculationError = true; 
+                } else {
+                    currentInputCost = parseFloat(costData.input_cost) || 0.0;
+                    currentOutputCost = parseFloat(costData.output_cost) || 0.0;
+
+                    cumulativeInputCost += currentInputCost;
+                    cumulativeOutputCost += currentOutputCost;
+
+                    document.getElementById('input-cost').textContent = formatCostDisplay(cumulativeInputCost);
+                    document.getElementById('output-cost').textContent = formatCostDisplay(cumulativeOutputCost);
+                }
+
+                currentTtsCost = parseFloat(costData.tts_cost) || 0.0;
+                cumulativeTtsCost += currentTtsCost;
+                document.getElementById('tts-cost').textContent = formatCostDisplay(cumulativeTtsCost);
+
+                if (calculationError) {
+                    document.getElementById('total-cost').textContent = 'Error';
+                } else {
+                    cumulativeTotalCost = cumulativeInputCost + cumulativeOutputCost + cumulativeTtsCost;
+                    document.getElementById('total-cost').textContent = '$' + formatCostDisplay(cumulativeTotalCost);
+                }
+                console.log(`Updated cumulative costs - Added LLM Input: $${currentInputCost.toFixed(6)}, LLM Output: $${currentOutputCost.toFixed(6)}, TTS: $${currentTtsCost.toFixed(6)} | New Total: $${cumulativeTotalCost.toFixed(6)} (Display: ${formatCostDisplay(cumulativeTotalCost)})`);
+            } catch (error) {
+                console.error("Unexpected error updating cost display:", error, costData);
+                document.getElementById('input-cost').textContent = 'Err';
+                // document.getElementById('cached-cost').textContent = 'Err'; // Removed
+                document.getElementById('output-cost').textContent = 'Err';
+                document.getElementById('tts-cost').textContent = 'Err';
+                document.getElementById('total-cost').textContent = 'Err';
+            }
+        }
+
+        function preprocessThinkTags(text) {
+            return text.replace(/<think>(.*?)<\/think>/gs, '\n> *Thinking: $1*\n');
+        }
+
+
+        function addMessage(role, content, isComplete = true) {
+            const messageRow = document.createElement('div');
+            messageRow.classList.add('message-row');
+            messageRow.classList.add(role === 'user' ? 'user-row' : 'assistant-row');
+            if (role === 'system') messageRow.classList.add('system-row'); 
+
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', role);
+
+            const contentSpan = document.createElement('span');
+            const processedContent = preprocessThinkTags(content);
+            contentSpan.innerHTML = marked.parse(processedContent);
+            messageDiv.appendChild(contentSpan);
+
+            if (role === 'assistant' && currentBackend === 'classic') { // Only add replay for classic backend
+                const replayButton = document.createElement('button');
+                replayButton.className = 'replay-button';
+                replayButton.title = 'Replay audio';
+                replayButton.innerHTML = replayIconSVG;
+                messageDiv.appendChild(replayButton); 
+            }
+
+            messageRow.appendChild(messageDiv);
+            chatMessages.appendChild(messageRow);
+
+            const existingTimeoutIds = JSON.parse(messageDiv.dataset.revealTimeouts || '[]');
+            existingTimeoutIds.forEach(clearTimeout);
+
+            const wordSpans = wrapWordsInSpans(contentSpan);
+            const timeoutIds = animateWords(wordSpans);
+            messageDiv.dataset.revealTimeouts = JSON.stringify(timeoutIds); 
+            scrollToBottom(); 
+
+            if (isComplete) {
+                // For OpenAI backend, chatbotHistory is primarily built from chatbot_update events.
+                // For classic backend, this was a way to push, but final_chatbot_state is more definitive.
+                // Let's ensure user messages are added to client-side history immediately for responsiveness,
+                // as they are confirmed by the client before sending to backend.
+                // Assistant messages will be added by chatbot_update from SSE.
+                if (role === 'user') {
+                    const lastMessage = chatbotHistory[chatbotHistory.length - 1];
+                    if (!lastMessage || !(lastMessage.role === role && lastMessage.content === content)) {
+                        chatbotHistory.push({ role, content, metadata: { timestamp: new Date().toISOString() } }); // Add basic metadata
+                        console.debug("User message added to client-side chatbotHistory:", { role, content });
+                    }
+                }
+                // For assistant messages, they are added via chatbot_update event which includes metadata.
+                // The final_chatbot_state event will provide the most accurate history from the backend for classic.
+                // For OpenAI backend, the client builds history from chatbot_update events.
+            }
+        }
+
+        function appendAssistantMessageChunk(chunkContent) {
+            let lastMessageRow = chatMessages.lastElementChild;
+            let lastMessageDiv; 
+            let contentSpan;
+            let replayButton;
+            let isNewMessage = false;
+
+            if (!lastMessageRow ||
+                !lastMessageRow.classList.contains('message-row') ||
+                !lastMessageRow.classList.contains('assistant-row') ||
+                !lastMessageRow.firstChild ||
+                !lastMessageRow.firstChild.classList.contains('message') ||
+                !lastMessageRow.firstChild.classList.contains('assistant')) {
+
+                lastMessageRow = document.createElement('div');
+                lastMessageRow.classList.add('message-row', 'assistant-row');
+                lastMessageDiv = document.createElement('div');
+                lastMessageDiv.classList.add('message', 'assistant');
+                contentSpan = document.createElement('span');
+                lastMessageDiv.appendChild(contentSpan);
+
+                if (currentBackend === 'classic') { // Only add replay for classic
+                    replayButton = document.createElement('button');
+                    replayButton.className = 'replay-button';
+                    replayButton.title = 'Replay audio';
+                    replayButton.innerHTML = replayIconSVG;
+                    lastMessageDiv.appendChild(replayButton);
+                }
+
+                lastMessageRow.appendChild(lastMessageDiv);
+                chatMessages.appendChild(lastMessageRow);
+                isNewMessage = true;
+            } else {
+                lastMessageDiv = lastMessageRow.firstChild; 
+                contentSpan = lastMessageDiv.querySelector('span:not(.reveal-word)'); 
+                if (!contentSpan && lastMessageDiv.childNodes.length > 0 && lastMessageDiv.childNodes[0].nodeType === Node.ELEMENT_NODE) {
+                    contentSpan = lastMessageDiv.childNodes[0];
+                }
+                if (currentBackend === 'classic') {
+                    replayButton = lastMessageDiv.querySelector('.replay-button');
+                }
+
+                if (!contentSpan) {
+                    console.warn("Could not find content span in existing assistant message. Recreating structure.");
+                    lastMessageDiv.innerHTML = ''; 
+                    contentSpan = document.createElement('span');
+                    lastMessageDiv.appendChild(contentSpan);
+                    if (currentBackend === 'classic') {
+                        if (!replayButton) {
+                            replayButton = document.createElement('button');
+                            replayButton.className = 'replay-button';
+                            replayButton.title = 'Replay audio';
+                            replayButton.innerHTML = replayIconSVG;
+                            lastMessageDiv.appendChild(replayButton);
+                        } else {
+                            lastMessageDiv.appendChild(replayButton); 
+                        }
+                    }
+                }
+                 if (currentBackend === 'classic' && !replayButton) {
+                    console.warn("Could not find replay button in existing assistant message. Adding one.");
+                    replayButton = document.createElement('button');
+                    replayButton.className = 'replay-button';
+                    replayButton.title = 'Replay audio';
+                    replayButton.innerHTML = replayIconSVG;
+                    lastMessageDiv.appendChild(replayButton);
+                }
+            }
+
+            const existingTimeoutIds = JSON.parse(lastMessageDiv.dataset.revealTimeouts || '[]');
+            existingTimeoutIds.forEach(clearTimeout);
+
+            const currentRawText = (lastMessageDiv.dataset.rawText || '') + chunkContent;
+            lastMessageDiv.dataset.rawText = currentRawText; 
+
+            const processedText = preprocessThinkTags(currentRawText);
+            contentSpan.innerHTML = marked.parse(processedText);
+
+            const wordSpans = wrapWordsInSpans(contentSpan); 
+            const animationDelay = isNewMessage ? 30 : 10;
+            const timeoutIds = animateWords(wordSpans, animationDelay);
+            lastMessageDiv.dataset.revealTimeouts = JSON.stringify(timeoutIds); 
+            scrollToBottom(); 
+        }
+
+        function scrollToBottom(conditional = false) {
+            const isScrolledToBottom = chatMessages.scrollHeight - chatMessages.clientHeight <= chatMessages.scrollTop + 30; 
+            if (!conditional || isScrolledToBottom) {
+                const lastMessage = chatMessages.lastElementChild;
+                if (lastMessage) {
+                    lastMessage.scrollIntoView({ behavior: 'instant', block: 'end' });
+                } else {
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+            }
+        }
+
+        function resetCumulativeCosts() {
+            cumulativeInputCost = 0.0;
+            cumulativeOutputCost = 0.0;
+            cumulativeTtsCost = 0.0; 
+            cumulativeTotalCost = 0.0;
+            document.getElementById('input-cost').textContent = formatCostDisplay(0.0);
+            document.getElementById('output-cost').textContent = formatCostDisplay(0.0);
+            document.getElementById('tts-cost').textContent = formatCostDisplay(0.0);
+            document.getElementById('total-cost').textContent = '$' + formatCostDisplay(0.0);
+            costDetails.style.display = 'none';
+            console.log("Cumulative costs reset.");
+        }
+
+
+        async function sendInputHook() {
+            if (!webrtc_id) {
+                console.warn("Cannot send input hook: webrtc_id is not set.");
+                return;
+            }
+            // Ensure chatbotHistory contains objects with role and content, and metadata if available
+            const historyToSend = chatbotHistory.map(msg => ({
+                role: msg.role,
+                content: msg.content,
+                metadata: msg.metadata || null // Ensure metadata is present or null
+            }));
+
+            console.debug("Sending input hook with history:", historyToSend);
+            try {
+                const response = await fetch('/input_hook', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        webrtc_id: webrtc_id,
+                        chatbot: historyToSend 
+                    })
+                });
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(`Input hook failed: ${response.status} - ${errorData.detail || errorData.message || 'Unknown error'}`);
+                }
+                console.debug("Input hook sent successfully.");
+            } catch (error) {
+                console.error("Error sending input hook:", error);
+            }
+        }
+
+
+        function stop() {
+            console.log('Stop function called.');
+            if (animationFrame) {
+                cancelAnimationFrame(animationFrame);
+                animationFrame = null;
+            }
+            if (audioContext) {
+                audioContext.close().catch(e => console.warn("Error closing AudioContext:", e));
+                audioContext = null;
+                analyser = null;
+                audioSource = null;
+            }
+             if (eventSource) {
+                eventSource.close();
+                eventSource = null;
+                console.log("EventSource closed.");
+            }
+            if (peerConnection) {
+                console.log('Closing PeerConnection...');
+                peerConnection.onicecandidate = null;
+                peerConnection.ontrack = null;
+                peerConnection.onconnectionstatechange = null;
+
+                if (peerConnection.sctp && peerConnection.sctp.transport) {
+                } else if (peerConnection.dataChannels) { 
+                     peerConnection.dataChannels.forEach(channel => channel.close());
+                }
+
+                if (peerConnection.getTransceivers) {
+                    peerConnection.getTransceivers().forEach(transceiver => {
+                        if (transceiver.stop) {
+                            try {
+                                transceiver.stop();
+                            } catch (e) {
+                                console.warn("Error stopping transceiver:", e);
+                            }
+                        }
+                        if (transceiver.sender && transceiver.sender.track) {
+                             transceiver.sender.track.stop();
+                        }
+                         if (transceiver.receiver && transceiver.receiver.track) {
+                             transceiver.receiver.track.stop();
+                        }
+                    });
+                }
+
+                if (peerConnection.getSenders) {
+                    peerConnection.getSenders().forEach(sender => {
+                        if (sender.track) {
+                            try {
+                                sender.track.stop();
+                            } catch (e) {
+                                console.warn("Error stopping sender track:", e);
+                            }
+                        }
+                    });
+                }
+                peerConnection.close();
+                console.log('PeerConnection closed.');
+                peerConnection = null; 
+            }
+
+            muteButton.removeEventListener('click', toggleMute);
+            updateButtonState(); 
+            audioLevel = 0;
+            const indicatorSpan = muteButton.querySelector('.audio-indicator');
+            if (indicatorSpan) {
+                indicatorSpan.style.setProperty('--audio-level-opacity', 0);
+            }
+            muteButton.classList.remove('muted'); 
+            updateStatusIndicator('idle'); 
+            console.log('Stop function finished.');
+        }
+
+        function wrapWordsInSpans(element) {
+            const spans = [];
+            const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+            let node;
+            const nodesToReplace = []; 
+
+            while (node = walker.nextNode()) {
+                if (node.parentNode.nodeName === 'SCRIPT' || node.parentNode.nodeName === 'STYLE' || !/\S/.test(node.nodeValue)) {
+                    continue;
+                }
+
+                const fragment = document.createDocumentFragment();
+                const wordsAndSpaces = node.nodeValue.split(/(\s+)/);
+
+                wordsAndSpaces.forEach(part => {
+                    if (/\S/.test(part)) { 
+                        const span = document.createElement('span');
+                        span.className = 'reveal-word';
+                        span.textContent = part;
+                        fragment.appendChild(span);
+                        spans.push(span); 
+                    } else if (part.length > 0) { 
+                        fragment.appendChild(document.createTextNode(part));
+                    }
+                });
+                nodesToReplace.push([node, fragment]);
+            }
+            nodesToReplace.forEach(([originalNode, fragment]) => {
+                originalNode.parentNode.replaceChild(fragment, originalNode);
+            });
+            return spans; 
+        }
+
+        function animateWords(spans, delayPerWord = 30) { 
+            let delay = 0;
+            const timeoutIds = []; 
+
+            spans.forEach(span => {
+                const timeoutId = setTimeout(() => {
+                    span.classList.add('visible');
+                }, delay);
+                timeoutIds.push(timeoutId);
+                delay += delayPerWord;
+            });
+            return timeoutIds;
+        }
+
+        function playNextInQueue() {
+            if (currentAudioQueue.length > 0) {
+                const audioFilename = currentAudioQueue.shift(); 
+                const audioUrl = `/tts_audio/${startupTimestampStr}/${audioFilename}`;
+                console.log(`Playing next in queue via ttsPlaybackAudio: ${audioUrl}`);
+                ttsPlaybackAudio.src = audioUrl;
+                ttsPlaybackAudio.play().catch(error => {
+                    console.error(`Error playing audio file ${audioFilename} via ttsPlaybackAudio:`, error);
+                    if (error.name === 'NotAllowedError') {
+                        showToast('Playback blocked by browser. Click anywhere on the page first.', 'warning');
+                    } else {
+                        showToast(`Error playing audio: ${error.message}`, 'error');
+                    }
+                    playNextInQueue();
+                });
+            } else {
+                isReplaying = false; 
+                console.log("Audio replay queue finished.");
+            }
+        }
+
+        function playAudioSequence(filenames) {
+            if (!filenames || filenames.length === 0) {
+                console.warn("No audio files provided for playback.");
+                return;
+            }
+            if (isReplaying) {
+                console.log("Already replaying, stopping previous TTS playback sequence.");
+                ttsPlaybackAudio.pause(); 
+                currentAudioQueue = []; 
+            }
+
+            console.log("Starting audio replay sequence for:", filenames);
+            currentAudioQueue = [...filenames]; 
+            isReplaying = true;
+            playNextInQueue(); 
+        }
+
+
+        chatMessages.addEventListener('click', (event) => {
+            const replayButton = event.target.closest('.replay-button');
+            if (replayButton && currentBackend === 'classic') { // Only enable for classic
+                const messageDiv = replayButton.closest('.message.assistant');
+                if (messageDiv && messageDiv.dataset.audioFiles) {
+                    try {
+                        const audioFiles = JSON.parse(messageDiv.dataset.audioFiles);
+                        if (Array.isArray(audioFiles) && audioFiles.length > 0) {
+                            console.log("Replay button clicked for message with audio files:", audioFiles);
+                            playAudioSequence(audioFiles);
+                        } else {
+                            console.warn("Replay button clicked, but no valid audio files found in data attribute.");
+                            showToast("No audio available for this message.", "warning");
+                        }
+                    } catch (error) {
+                        console.error("Error parsing audio files data attribute:", error);
+                        showToast("Error retrieving audio data.", "error");
+                    }
+                } else {
+                    console.warn("Replay button clicked, but parent message or audio data attribute not found.");
+                }
+            } else if (replayButton && currentBackend !== 'classic') {
+                showToast("Replay not available for this backend.", "warning");
+            }
+        });
+
+
+        optionsButton.addEventListener('click', () => {
+            const isHidden = optionsRow.style.display === 'none' || optionsRow.style.display === '';
+            optionsRow.style.display = isHidden ? 'flex' : 'none';
+            console.log(`Options row toggled: ${isHidden ? 'shown' : 'hidden'}`);
+        });
+
+        costDisplayContainer.addEventListener('click', () => {
+            if (currentBackend === 'openai') { // Don't toggle details for openai backend if N/A
+                showToast("Cost details not available for OpenAI Realtime backend.", "warning");
+                return;
+            }
+            const isHidden = costDetails.style.display === 'none' || costDetails.style.display === '';
+            costDetails.style.display = isHidden ? 'flex' : 'none'; 
+            console.log(`Cost details toggled: ${isHidden ? 'shown' : 'hidden'}`);
+        });
+
+
+        clearChatButton.addEventListener('click', async () => { 
+            console.log("Clear Chat button clicked.");
+            if (!confirm("Are you sure you want to clear the chat history and reset costs? This will start a new log file.")) {
+                console.log("Clear chat cancelled by user.");
+                return; 
+            }
+            console.log("User confirmed clear chat.");
+            chatMessages.innerHTML = '';
+            chatbotHistory = [];
+            resetCumulativeCosts();
+            displayInitialSystemMessage();
+            if (webrtc_id) {
+                await sendInputHook(); 
+            } else {
+                console.log("Skipping input hook on clear chat as connection was never established.");
+            }
+            try {
+                console.log("Requesting backend to reset chat log timestamp...");
+                const response = await fetch('/reset_chat_log', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                });
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.message || `Failed to reset log timestamp (${response.status})`);
+                }
+                const result = await response.json();
+                console.log(`Backend confirmed log timestamp reset to: ${result.new_timestamp}`);
+                showToast("Chat cleared. New log file started.", "warning"); 
+            } catch (error) {
+                console.error("Error resetting chat log timestamp:", error);
+                showToast(`Chat cleared, but failed to start new log file: ${error.message}`, "error");
+            }
+            scrollToBottom(); 
+        });
+
+
+        async function fetchAndPopulateModels() {
+            try {
+                const response = await fetch('/available_models');
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch models: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log("Available models data:", data);
+
+                if (!data.available || data.current === undefined) { 
+                     throw new Error("Invalid model data received from server.");
+                }
+
+                selectedModel = data.current; 
+                modelSuggestions.innerHTML = ''; 
+                modelInput.value = ''; 
+
+                data.available.sort();
+                allModelOptions = data.available.map(modelId => ({ value: modelId, text: modelId }));
+                console.log("Stored all model options:", allModelOptions);
+
+                allModelOptions.forEach(modelOption => {
+                    const option = document.createElement('option');
+                    option.value = modelOption.value;
+                    modelSuggestions.appendChild(option);
+                });
+
+                if (allModelOptions.some(opt => opt.value === selectedModel)) {
+                    modelInput.value = selectedModel; 
+                } else if (allModelOptions.length > 0) {
+                    console.warn(`Current model '${selectedModel}' not in available list. Selecting first available: '${allModelOptions[0].value}'`);
+                    selectedModel = allModelOptions[0].value;
+                    modelInput.value = selectedModel;
+                } else {
+                     console.error("No available models received from backend.");
+                     modelInput.placeholder = 'No models found';
+                     modelInput.disabled = true;
+                     return; 
+                }
+                modelInput.disabled = false; 
+                updateButtonState(); 
+            } catch (error) {
+                console.error('Error fetching available models:', error);
+                showToast('Failed to load available models.', 'error');
+                modelInput.placeholder = 'Error loading models';
+                modelInput.disabled = true;
+            }
+        }
+
+        function simpleFuzzyMatch(query, text) {
+            query = query.toLowerCase();
+            text = text.toLowerCase();
+            let queryIndex = 0;
+            let textIndex = 0;
+            let score = 0; 
+            let firstMatchIndex = -1;
+
+            while (queryIndex < query.length && textIndex < text.length) {
+                if (query[queryIndex] === text[textIndex]) {
+                    if (firstMatchIndex === -1) {
+                        firstMatchIndex = textIndex; 
+                    }
+                    score++;
+                    queryIndex++;
+                }
+                textIndex++;
+            }
+            if (queryIndex === query.length) {
+                return { score: score, firstMatchIndex: firstMatchIndex };
+            } else {
+                return { score: 0, firstMatchIndex: -1 }; 
+            }
+        }
+
+        function findBestFuzzyMatch(query, optionsList) {
+            if (!query) return null;
+            let bestMatch = null;
+            let highestScore = 0;
+            let bestFirstMatchIndex = Infinity;
+            optionsList.forEach(option => {
+                const matchResult = simpleFuzzyMatch(query, option.text);
+                if (matchResult.score > 0) {
+                    if (matchResult.score > highestScore ||
+                        (matchResult.score === highestScore && matchResult.firstMatchIndex < bestFirstMatchIndex))
+                    {
+                        highestScore = matchResult.score;
+                        bestFirstMatchIndex = matchResult.firstMatchIndex;
+                        bestMatch = option;
+                    }
+                }
+            });
+            return bestMatch;
+        }
+
+
+        async function fetchAndPopulateVoices() {
+            // Removed early return for OpenAI backend. 
+            // The /available_voices_tts endpoint handles returning appropriate voices.
+            try {
+                const response = await fetch('/available_voices_tts'); 
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch voices: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log("Available voices data:", data);
+
+                if (!data.available || data.current === undefined) { // current can be null
+                     throw new Error("Invalid voice data received from server.");
+                }
+
+                selectedVoice = data.current; 
+                voiceSuggestions.innerHTML = ''; 
+                voiceInput.value = ''; 
+
+                data.available.sort();
+                allVoiceOptions = data.available.map(voiceId => ({ value: voiceId, text: voiceId }));
+                console.log("Stored all voice options:", allVoiceOptions);
+
+                allVoiceOptions.forEach(voiceOption => {
+                    const option = document.createElement('option');
+                    option.value = voiceOption.value;
+                    voiceSuggestions.appendChild(option);
+                });
+
+                if (selectedVoice && allVoiceOptions.some(opt => opt.value === selectedVoice)) {
+                    voiceInput.value = selectedVoice; 
+                } else if (allVoiceOptions.length > 0) {
+                    console.warn(`Current voice '${selectedVoice}' not in available list or not set. Selecting first available: '${allVoiceOptions[0].value}'`);
+                    selectedVoice = allVoiceOptions[0].value;
+                    voiceInput.value = selectedVoice;
+                } else {
+                     console.error("No available voices received from backend.");
+                     voiceInput.placeholder = 'No voices found'; 
+                     voiceInput.disabled = true;
+                     return; 
+                }
+                voiceInput.disabled = false; 
+                updateButtonState(); 
+            } catch (error) {
+                console.error('Error fetching available voices:', error);
+                showToast('Failed to load available voices.', 'error');
+                voiceInput.placeholder = 'Error loading voices';
+                voiceInput.disabled = true;
+            }
+        }
+
+        function initializeSttLanguage() {
+            const sttLanguageDataElement = document.getElementById('stt-language-data');
+            let initialLanguage = ''; 
+            if (sttLanguageDataElement) {
+                try {
+                    initialLanguage = JSON.parse(sttLanguageDataElement.textContent || '""') || '';
+                } catch (error) {
+                    console.error("Error parsing initial STT language data:", error);
+                }
+            } else {
+                console.warn("STT language data element not found.");
+            }
+            selectedSttLanguage = initialLanguage; 
+            sttLanguageInput.value = initialLanguage; 
+            console.log(`Initialized STT language input with: "${selectedSttLanguage}"`);
+        }
+
+        function initializeTtsSpeed() {
+            if (currentBackend === 'openai') {
+                console.log("OpenAI backend: Disabling TTS speed input.");
+                ttsSpeedInput.disabled = true;
+                if(ttsSpeedInput.parentElement) ttsSpeedInput.parentElement.style.display = 'none';
+                ttsSpeedInput.value = ''; 
+                return;
+            }
+            const ttsSpeedDataElement = document.getElementById('tts-speed-data');
+            let initialSpeed = 1.0; 
+            if (ttsSpeedDataElement) {
+                try {
+                    const parsedSpeed = JSON.parse(ttsSpeedDataElement.textContent || '1.0');
+                    if (typeof parsedSpeed === 'number' && parsedSpeed >= 0.1 && parsedSpeed <= 4.0) {
+                        initialSpeed = parsedSpeed;
+                    } else {
+                         console.warn(`Invalid initial TTS speed data: ${parsedSpeed}. Using default 1.0.`);
+                    }
+                } catch (error) {
+                    console.error("Error parsing initial TTS speed data:", error);
+                }
+            } else {
+                console.warn("TTS speed data element not found.");
+            }
+            selectedTtsSpeed = initialSpeed; 
+            ttsSpeedInput.value = initialSpeed.toFixed(1); 
+            console.log(`Initialized TTS speed input with: "${selectedTtsSpeed}"`);
+        }
+
+
+        function initializeStartupTimestamp() {
+            const timestampDataElement = document.getElementById('startup-timestamp-data');
+            if (timestampDataElement) {
+                try {
+                    startupTimestampStr = JSON.parse(timestampDataElement.textContent || '""') || '';
+                    if (!startupTimestampStr) {
+                         console.error("Startup timestamp data is empty or invalid.");
+                         showToast("Error: Missing critical configuration (timestamp). Replay may fail.", "error");
+                    } else {
+                         console.log(`Initialized startup timestamp: "${startupTimestampStr}"`);
+                    }
+                } catch (error) {
+                    console.error("Error parsing startup timestamp data:", error);
+                    showToast("Error: Failed to parse configuration (timestamp). Replay may fail.", "error");
+                }
+            } else {
+                console.error("Startup timestamp data element not found.");
+                showToast("Error: Configuration element missing (timestamp). Replay may fail.", "error");
+            }
+        }
+        
+        // --- Initializations ---
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeBackendType();
+            initializeStartupTimestamp(); 
+            loadZoomLevel(); 
+            displayInitialSystemMessage(); 
+            
+            // These depend on backendType
+            fetchAndPopulateModels(); 
+            fetchAndPopulateVoices(); 
+            initializeSttLanguage(); 
+            initializeTtsSpeed(); 
+
+            updateButtonState(); 
+            updateStatusIndicator('idle'); 
+
+            // Start WebRTC connection last after UI is set up
+            setupWebRTC();
+        });
+        // --- End Initializations ---
+
+
+        voiceInput.addEventListener('change', async () => {
+            if (currentBackend === 'openai') return; // Voice selection not for OpenAI backend
+            const newVoice = voiceInput.value.trim(); 
+            const previousVoice = selectedVoice;
+            console.log(`Voice input changed to: ${newVoice}`);
+
+            const isValidVoice = allVoiceOptions.some(opt => opt.value === newVoice);
+            if (!isValidVoice) {
+                console.warn(`Invalid voice selected: "${newVoice}". Reverting.`);
+                showToast(`Voice "${newVoice}" not found. Please select from the list.`, 'warning');
+                voiceInput.value = previousVoice; 
+                return; 
+            }
+            if (newVoice === previousVoice) {
+                console.log("Voice selection hasn't changed. No action needed.");
+                return;
+            }
+            try {
+                const response = await fetch('/switch_voice', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ voice_name: newVoice }) 
+                });
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.message || `Failed to switch voice (${response.status})`);
+                }
+                const result = await response.json();
+                selectedVoice = newVoice; 
+                let message = `Switched to ${newVoice} voice. Change will apply to the next AI response.`;
+                showToast(message, "warning");
+            } catch (error) {
+                console.error('Error switching voice:', error);
+                showToast(`Error switching voice: ${error.message}`, 'error');
+                voiceInput.value = previousVoice;
+                selectedVoice = previousVoice;
+            } finally {
+                updateButtonState();
+            }
+        });
+
+
+        modelInput.addEventListener('change', async () => {
+            const newModelName = modelInput.value.trim(); 
+            const previousModelName = selectedModel; 
+            console.log(`Model input changed to: ${newModelName}`);
+
+            const isValidModel = allModelOptions.some(opt => opt.value === newModelName);
+            if (!isValidModel) {
+                console.warn(`Invalid model selected: "${newModelName}". Reverting.`);
+                showToast(`Model "${newModelName}" not found. Please select from the list.`, 'warning');
+                modelInput.value = previousModelName; 
+                return; 
+            }
+            if (newModelName === previousModelName) {
+                console.log("Model selection hasn't changed. No action needed.");
+                return;
+            }
+            try {
+                const response = await fetch('/switch_model', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ model_name: newModelName }) 
+                });
+                 if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({})); 
+                    throw new Error(errorData.message || `Failed to switch model (${response.status})`);
+                }
+                const result = await response.json();
+                selectedModel = newModelName; 
+                const message = `Switched to ${newModelName} model. Change will apply to the next AI response.`;
+                showToast(message, "warning");
+            } catch (error) {
+                console.error('Error switching models:', error);
+                showToast(`Error switching model: ${error.message}`, 'error');
+                modelInput.value = previousModelName;
+                selectedModel = previousModelName;
+            } finally {
+                 updateButtonState();
+            }
+        });
+
+        sttLanguageInput.addEventListener('change', async () => { 
+            const newLanguage = sttLanguageInput.value.trim(); 
+            const previousLanguage = selectedSttLanguage;
+            console.log(`STT Language input changed to: "${newLanguage}"`);
+
+            if (newLanguage === previousLanguage) {
+                console.log("STT Language hasn't changed. No action needed.");
+                return;
+            }
+            try {
+                const response = await fetch('/switch_stt_language', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ stt_language: newLanguage }) 
+                });
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.message || `Failed to switch STT language (${response.status})`);
+                }
+                const result = await response.json();
+                selectedSttLanguage = newLanguage; 
+                let message = newLanguage
+                    ? `STT language set to '${newLanguage}'. Change will apply to the next transcription.`
+                    : `STT language cleared (will use auto-detect). Change will apply to the next transcription.`;
+                showToast(message, "warning");
+            } catch (error) {
+                console.error('Error switching STT language:', error);
+                showToast(`Error setting STT language: ${error.message}`, 'error');
+                sttLanguageInput.value = previousLanguage;
+                selectedSttLanguage = previousLanguage;
+            } finally {
+                updateButtonState();
+            }
+        });
+
+        ttsSpeedInput.addEventListener('change', async () => { 
+            if (currentBackend === 'openai') return; // TTS speed not for OpenAI backend
+
+            const newSpeedStr = ttsSpeedInput.value;
+            let newSpeed;
+            try {
+                newSpeed = parseFloat(newSpeedStr);
+                if (isNaN(newSpeed) || newSpeed < 0.1 || newSpeed > 4.0) {
+                    throw new Error("Invalid speed value.");
+                }
+                newSpeed = parseFloat(newSpeed.toFixed(1));
+            } catch (error) {
+                console.warn(`Invalid TTS speed input: "${newSpeedStr}". Reverting.`);
+                showToast(`Invalid TTS speed. Must be between 0.1 and 4.0.`, 'warning');
+                ttsSpeedInput.value = selectedTtsSpeed.toFixed(1); 
+                return; 
+            }
+
+            const previousSpeed = selectedTtsSpeed;
+            console.log(`TTS Speed input changed to: "${newSpeed}"`);
+
+            if (newSpeed === previousSpeed) {
+                console.log("TTS Speed hasn't changed. No action needed.");
+                ttsSpeedInput.value = selectedTtsSpeed.toFixed(1);
+                return;
+            }
+            try {
+                const response = await fetch('/switch_tts_speed', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ tts_speed: newSpeed }) 
+                });
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.message || `Failed to switch TTS speed (${response.status})`);
+                }
+                const result = await response.json();
+                selectedTtsSpeed = newSpeed; 
+                ttsSpeedInput.value = selectedTtsSpeed.toFixed(1); 
+                let message = `TTS speed set to ${selectedTtsSpeed.toFixed(1)}. Change will apply to the next AI response.`;
+                showToast(message, "warning");
+            } catch (error) {
+                console.error('Error switching TTS speed:', error);
+                showToast(`Error setting TTS speed: ${error.message}`, 'error');
+                ttsSpeedInput.value = previousSpeed.toFixed(1);
+                selectedTtsSpeed = previousSpeed;
+            } finally {
+                updateButtonState();
+            }
+        });
+
+
+        modelInput.addEventListener('input', () => {
+            const query = modelInput.value.trim();
+            console.debug(`Input event: query="${query}"`);
+            clearTimeout(modelSearchTimeout);
+            modelSearchTimeout = setTimeout(() => {
+                if (query === '') {
+                    modelSuggestions.innerHTML = ''; 
+                    allModelOptions.forEach(modelOption => {
+                        const option = document.createElement('option');
+                        option.value = modelOption.value;
+                        modelSuggestions.appendChild(option);
+                    });
+                    console.debug("Input empty, showing all models in datalist.");
+                } else {
+                    console.debug(`Performing fuzzy search for: "${query}"`);
+                    const maxSuggestions = 15;
+                    const matches = allModelOptions
+                        .map(option => ({
+                            option,
+                            matchResult: simpleFuzzyMatch(query, option.text) 
+                        }))
+                        .filter(item => item.matchResult.score > 0) 
+                        .sort((a, b) => {
+                            if (b.matchResult.score !== a.matchResult.score) {
+                                return b.matchResult.score - a.matchResult.score;
+                            }
+                            return a.matchResult.firstMatchIndex - b.matchResult.firstMatchIndex;
+                        })
+                        .slice(0, maxSuggestions); 
+
+                    modelSuggestions.innerHTML = ''; 
+                    if (matches.length > 0) {
+                        console.debug("Top fuzzy matches:", matches.map(m => m.option.text));
+                        matches.forEach(match => {
+                            const option = document.createElement('option');
+                            option.value = match.option.value;
+                            modelSuggestions.appendChild(option);
+                        });
+                    } else {
+                        console.debug("No fuzzy matches found.");
+                    }
+                }
+            }, 150); 
+        });
+
+        modelInput.addEventListener('focus', () => {
+            modelInput.select(); 
+        });
+
+        voiceInput.addEventListener('input', () => {
+            if (currentBackend === 'openai') return;
+            const query = voiceInput.value.trim();
+            console.debug(`Voice input event: query="${query}"`);
+            clearTimeout(voiceSearchTimeout);
+            voiceSearchTimeout = setTimeout(() => {
+                if (query === '') {
+                    voiceSuggestions.innerHTML = '';
+                    allVoiceOptions.forEach(voiceOption => {
+                        const option = document.createElement('option');
+                        option.value = voiceOption.value;
+                        voiceSuggestions.appendChild(option);
+                    });
+                    console.debug("Voice input empty, showing all voices in datalist.");
+                } else {
+                    console.debug(`Performing fuzzy search for voice: "${query}"`);
+                    const maxSuggestions = 15;
+                    const matches = allVoiceOptions
+                        .map(option => ({
+                            option,
+                            matchResult: simpleFuzzyMatch(query, option.text)
+                        }))
+                        .filter(item => item.matchResult.score > 0)
+                        .sort((a, b) => {
+                            if (b.matchResult.score !== a.matchResult.score) {
+                                return b.matchResult.score - a.matchResult.score;
+                            }
+                            return a.matchResult.firstMatchIndex - b.matchResult.firstMatchIndex;
+                        })
+                        .slice(0, maxSuggestions);
+
+                    voiceSuggestions.innerHTML = '';
+                    if (matches.length > 0) {
+                        console.debug("Top voice fuzzy matches:", matches.map(m => m.option.text));
+                        matches.forEach(match => {
+                            const option = document.createElement('option');
+                            option.value = match.option.value;
+                            voiceSuggestions.appendChild(option);
+                        });
+                    } else {
+                        console.debug("No voice fuzzy matches found.");
+                    }
+                }
+            }, 150); 
+        });
+
+        voiceInput.addEventListener('focus', () => {
+            if (currentBackend === 'openai') return;
+            voiceInput.select(); 
+        });
+
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key.toLowerCase() === 'm' && !event.ctrlKey && !event.altKey && !event.metaKey) {
+                 if (peerConnection && peerConnection.connectionState === 'connected') {
+                    toggleMute();
+                 }
+            }
+            else if (event.ctrlKey && event.key.toLowerCase() === 'r' && !event.altKey && !event.metaKey) {
+                if (clearChatButton.style.display !== 'none' && !clearChatButton.disabled) {
+                    event.preventDefault(); 
+                    console.log("Shortcut: Ctrl+R triggered Clear Chat.");
+                    clearChatButton.click();
+                }
+            }
+            else if (event.shiftKey && event.key.toLowerCase() === 's' && !event.ctrlKey && !event.altKey && !event.metaKey) {
+                if (optionsButton.style.display !== 'none' && !optionsButton.disabled) {
+                    event.preventDefault(); 
+                    console.log("Shortcut: Shift+S triggered Options toggle.");
+                    optionsButton.click();
+                }
+            }
+        });
+
+        document.addEventListener('wheel', (event) => {
+            if (event.ctrlKey) {
+                event.preventDefault(); 
+                const delta = event.deltaY > 0 ? -zoomStep : zoomStep; 
+                let newZoomLevel = currentZoomLevel + delta;
+                newZoomLevel = Math.max(minZoom, Math.min(maxZoom, newZoomLevel));
+                newZoomLevel = parseFloat(newZoomLevel.toFixed(2)); 
+                if (newZoomLevel !== currentZoomLevel) {
+                    currentZoomLevel = newZoomLevel;
+                    applyZoom(currentZoomLevel);
+                    saveZoomLevel(); 
+                }
+            }
+        }, { passive: false }); 
+
+        const closeButton = document.getElementById('close-window-button');
+        if (closeButton) { 
+            closeButton.addEventListener('click', () => {
+                if (window.pywebview && window.pywebview.api && typeof window.pywebview.api.close === 'function') {
+                    console.log("Closing window via pywebview API.");
+                    try {
+                        window.pywebview.api.close();
+                    } catch (apiError) {
+                         console.error("Error calling pywebview close API:", apiError);
+                    }
+                } else {
+                    console.warn("pywebview API not found. Cannot close window programmatically.");
+                    showToast("Cannot close automatically. Please close the window manually.", "warning");
+                }
+            });
+        } else {
+            console.error("Close button element not found.");
+        }
+
+        window.addEventListener('beforeunload', (event) => {
+             console.log("beforeunload event triggered.");
+             if (peerConnection && peerConnection.connectionState !== 'closed') {
+                 stop(); 
+                 console.log("Cleaned up resources before unload.");
+             }
+        });
+
+        let heartbeatIntervalId = null;
+        const heartbeatIntervalMs = 5000; 
+
+        async function sendHeartbeat() {
+            try {
+                const payload = JSON.stringify({ timestamp: new Date().toISOString() });
+                if (navigator.sendBeacon) {
+                     navigator.sendBeacon('/heartbeat', payload);
+                } else {
+                    await fetch('/heartbeat', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: payload,
+                        keepalive: true 
+                    });
+                }
+            } catch (error) {
+                console.warn('Heartbeat failed:', error);
+            }
+        }
+        heartbeatIntervalId = setInterval(sendHeartbeat, heartbeatIntervalMs);
+        console.log("Heartbeat interval started.");
+
+        window.addEventListener('unload', () => {
+             console.log("unload event triggered. Attempting final heartbeat beacon.");
+             if (navigator.sendBeacon) {
+                 const payload = JSON.stringify({ timestamp: new Date().toISOString(), status: 'unloading' });
+                 navigator.sendBeacon('/heartbeat', payload); 
+             }
+             if (heartbeatIntervalId) {
+                 clearInterval(heartbeatIntervalId); 
+             }
+        }, false);
+
+    </script>
+</body>
+
+</html>
