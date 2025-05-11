@@ -1,0 +1,3 @@
+[console_scripts]
+betaseries = mindstorm.glm:betaseries
+betaseries-bids = mindstorm.glm:betaseries_bids

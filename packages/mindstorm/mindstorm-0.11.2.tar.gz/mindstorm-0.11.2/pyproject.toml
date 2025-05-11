@@ -1,0 +1,37 @@
+[project]
+name = "mindstorm"
+description = "Mindstorm: Advanced analysis of neuroimaging data"
+version = "0.11.2"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Neal W Morton", email = "mortonne@gmail.com"}
+]
+keywords = ["fmri", "psychology", "neuroscience", "RSA"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent"
+]
+urls = {project = "https://github.com/mortonne/mindstorm"}
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "seaborn>=0.13.0",
+    "pybids",
+    "nibabel",
+    "nilearn",
+    "scikit-learn",
+    "click",
+    "nipype",
+]
+
+[project.scripts]
+betaseries = "mindstorm.glm:betaseries"
+betaseries-bids = "mindstorm.glm:betaseries_bids"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
