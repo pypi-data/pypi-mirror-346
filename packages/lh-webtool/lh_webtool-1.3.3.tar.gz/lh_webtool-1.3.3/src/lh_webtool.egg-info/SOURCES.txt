@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/lh_webtool/__init__.py
+src/lh_webtool/crawler.py
+src/lh_webtool/hf_download.py
+src/lh_webtool/play_image_web.py
+src/lh_webtool.egg-info/PKG-INFO
+src/lh_webtool.egg-info/SOURCES.txt
+src/lh_webtool.egg-info/dependency_links.txt
+src/lh_webtool.egg-info/entry_points.txt
+src/lh_webtool.egg-info/requires.txt
+src/lh_webtool.egg-info/top_level.txt
+src/lh_webtool/templates/play_image.html

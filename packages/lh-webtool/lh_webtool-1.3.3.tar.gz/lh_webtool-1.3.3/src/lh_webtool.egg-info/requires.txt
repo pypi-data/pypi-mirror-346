@@ -1,0 +1,10 @@
+aiohttp
+lxml
+beautifulsoup4
+Flask
+lh_tool>=1.8.0
+pywebio==1.8.3
+
+[huggingface]
+huggingface-hub
+hf-transfer
