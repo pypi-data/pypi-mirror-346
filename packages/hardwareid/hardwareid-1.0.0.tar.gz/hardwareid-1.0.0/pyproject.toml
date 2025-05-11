@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hardwareid"
+version = "1.0.0"
+description = "Cross-platform hardware identification library"
+authors = [
+    {name = "Konstantin Gorshkov", email = "kostya_gorshkov_06@vk.com"},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["hwid", "hardware", "fingerprint", "cross-platform"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: System :: Hardware"
+]
+
+dependencies = [
+    "pywin32>=300; sys_platform == 'win32'",
+    "WMI==1.5.1; sys_platform == 'win32'",
+]
+
+[project.urls]
+Homepage = "https://github.com/kostya2023/hardwareid"

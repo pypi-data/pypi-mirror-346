@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+HardwareID/__init__.py
+HardwareID/core.py
+hardwareid.egg-info/PKG-INFO
+hardwareid.egg-info/SOURCES.txt
+hardwareid.egg-info/dependency_links.txt
+hardwareid.egg-info/requires.txt
+hardwareid.egg-info/top_level.txt
