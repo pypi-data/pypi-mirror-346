@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecosim2d"
+version = "0.1.0"
+description = "Ecosystem simulation toolbox in Python"
+authors = [
+    {name = "Anna Schleier"},
+    {name = "Anikó Vitos"},
+    {name = "Tamás Bence Tóth"},
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "imageio",
+  "Pillow",
+  "scipy",
+  "seaborn"
+]
+
+[tool.setuptools]
+packages = [
+    "core",
+    "logic",
+    "simulation",
+    "statistic_tools",
+    "visualizer"
+]
+
+[project.urls]
+Homepage = "https://github.com/schan45/ecosim"
+Documentation = "https://ecosim.readthedocs.io/"
