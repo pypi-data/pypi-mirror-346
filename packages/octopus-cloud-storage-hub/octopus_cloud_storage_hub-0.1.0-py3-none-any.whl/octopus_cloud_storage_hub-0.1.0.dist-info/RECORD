@@ -1,0 +1,12 @@
+app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/config.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/main.py,sha256=s1u_FiHTNFexwP3AQVektIJQqZNdv1WsfObQTcfbDZ8,357
+app/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/cli/main.py,sha256=w48cNeimPk25xYD6XnheLgJage6bwqA0cswcEQ8yfMU,1256
+app/handlers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/handlers/base_handler.py,sha256=A3Mq-T2VwTOSOGpJ1aEvcsNG1NJ72i7sKJiSyJG0FCc,773
+app/handlers/oss.py,sha256=VXpLufoMzJ4e_vArEr7qDvFQm4eKEQg17wHJZE2GDSg,1529
+octopus_cloud_storage_hub-0.1.0.dist-info/METADATA,sha256=Si2vEkhYefARI6HoKS-3c5-AN3-gtD_6ZP1oqQu6tKA,249
+octopus_cloud_storage_hub-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+octopus_cloud_storage_hub-0.1.0.dist-info/entry_points.txt,sha256=AkgQFNpFQKafCb_2Mlqa6WSdzfBThYqYaQnkqj5nbls,42
+octopus_cloud_storage_hub-0.1.0.dist-info/RECORD,,

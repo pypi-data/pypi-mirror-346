@@ -1,0 +1,2 @@
+[console_scripts]
+ocsh = app.cli.main:app
