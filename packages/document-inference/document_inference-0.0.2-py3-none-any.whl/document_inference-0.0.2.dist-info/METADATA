@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: document-inference
+Version: 0.0.2
+Summary: Internal Document Analysis Package
+Home-page: https://company-internal.example.com
+Author: Internal Team
+Author-email: dev@company.com
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+Private package accidentally exposed
