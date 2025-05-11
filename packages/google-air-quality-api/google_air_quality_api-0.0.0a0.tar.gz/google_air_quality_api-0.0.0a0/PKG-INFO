@@ -1,0 +1,65 @@
+Metadata-Version: 2.3
+Name: google_air_quality_api
+Version: 0.0.0a0
+Summary: MPython module to talk to Husqvarna Automower.
+License: MIT
+Keywords: Husqvarna,Automower,api,async,client
+Author: Thomas Peter Protzner
+Author-email: thomas.protzner@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: aiohttp (>=3.9.3,<4.0.0)
+Requires-Dist: mashumaro (>=3.12,<4.0)
+Project-URL: Documentation, https://github.com/Thomas55555/python-google-air-quality-api
+Project-URL: Homepage, https://github.com/Thomas55555/python-google-air-quality-api
+Project-URL: Issues, https://github.com/Thomas55555/aioautomower/issues
+Project-URL: Repository, https://github.com/Thomas55555/python-google-air-quality-api
+Description-Content-Type: text/markdown
+
+A python client library for Google Photos Library API.
+
+The Google Photos Library API allows your app to upload photos and videos to
+Google Photos. See [Google Photos APIs](https://developers.google.com/photos)
+for more details on how to integrate Google Photos with your application.
+
+This library does not currently support the [picker API](https://developers.google.com/photos/picker/guides/get-started-picker).
+
+See [Updates to the Google Photos APIs](https://developers.google.com/photos/support/updates) for
+additional detail on the latest changes to the API.
+
+## Background
+
+This is a thin wrapper around the API used for a very lightweight abstraction. The
+primary use case is for Home Assistant though can be used for other usages. This
+is redundant with Google Photos APIs however they are very generic. This library
+provides a simpler API that is easier to read, supports `asyncio`, and also
+includes content uploading APIs which don't have a standard client library.
+
+## Usage
+
+See the [API Documentation](https://allenporter.github.io/python-google-photos-library-api/) for more details.
+
+## Development
+
+Set up pre-requisites:
+
+```bash
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip3 install -r requirements_dev.txt
+```
+
+Run tests and view coverage:
+```bash
+$ py.test --cov-report=term-missing --cov=google_air_quality_api
+```
+
