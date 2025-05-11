@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: dockit-cli
+Version: 0.0.2
+Summary: A Docker management tool
+Author: theizekry
+License-Expression: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Requires-Dist: click
+Requires-Dist: docker
+Requires-Dist: rich
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+# Dockit CLI
+
+A Docker management tool for developers.
+
+## Installation
+
+```bash
+pip install dockit-cli
+```
+
+## Usage
+
+```bash
+dockit --help
+```
+
+## Features
+
+- Docker container management
+- Easy-to-use CLI interface
+- Rich terminal output
+
+## License
+
+MIT License
