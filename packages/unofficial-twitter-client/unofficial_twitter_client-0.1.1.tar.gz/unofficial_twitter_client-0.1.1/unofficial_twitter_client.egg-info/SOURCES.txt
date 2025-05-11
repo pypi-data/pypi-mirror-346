@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+unofficial_twitter_client/__init__.py
+unofficial_twitter_client/android.py
+unofficial_twitter_client/config.py
+unofficial_twitter_client/oauth.py
+unofficial_twitter_client/web.py
+unofficial_twitter_client.egg-info/PKG-INFO
+unofficial_twitter_client.egg-info/SOURCES.txt
+unofficial_twitter_client.egg-info/dependency_links.txt
+unofficial_twitter_client.egg-info/requires.txt
+unofficial_twitter_client.egg-info/top_level.txt
