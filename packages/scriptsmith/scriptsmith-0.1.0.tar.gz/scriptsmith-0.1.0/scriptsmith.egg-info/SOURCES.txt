@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+scriptsmith/__init__.py
+scriptsmith/config.py
+scriptsmith/main.py
+scriptsmith/setup.py
+scriptsmith/utils.py
+scriptsmith.egg-info/PKG-INFO
+scriptsmith.egg-info/SOURCES.txt
+scriptsmith.egg-info/dependency_links.txt
+scriptsmith.egg-info/entry_points.txt
+scriptsmith.egg-info/requires.txt
+scriptsmith.egg-info/top_level.txt
